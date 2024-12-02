@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__theme_manager_8cs_source" xml:lang="en-US">
+<title>ThemeManager.cs</title>
+<indexterm><primary>Managers/Singletons/ThemeManager.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__theme_manager_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__theme_manager_8cs_source_1l00002"/>00002 
+<anchor xml:id="__theme_manager_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__theme_manager_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__theme_manager_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_theme_data">ThemeData</link>;
+<anchor xml:id="__theme_manager_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__theme_manager_8cs_source_1l00007"/>00007 
+<anchor xml:id="__theme_manager_8cs_source_1l00008"/><link linkend="_namespace_theme_data">00008</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_theme_data">ThemeData</link>
+<anchor xml:id="__theme_manager_8cs_source_1l00009"/>00009 {
+<anchor xml:id="__theme_manager_8cs_source_1l00010"/><link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link>
+<anchor xml:id="__theme_manager_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a8cdf3509895d0d3a638631926a1a1d3a">BlobArena_Player</link>&#32;=&#32;0,
+<anchor xml:id="__theme_manager_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a8a844c1b7bed7252df722744f1eacd21">BlobArena_Enemy</link>&#32;=&#32;1,
+<anchor xml:id="__theme_manager_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a667c3ac0a5a548e4b4810ff2b464a9d1">AMMA_Player</link>&#32;=&#32;2,
+<anchor xml:id="__theme_manager_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a4057236a7e08b616da98aa883c8e9db3">AMMA_Enemy</link>&#32;=&#32;3
+<anchor xml:id="__theme_manager_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00017"/>00017 
+<anchor xml:id="__theme_manager_8cs_source_1l00018"/><link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">TextColours</link>
+<anchor xml:id="__theme_manager_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6a7991fce025fa185bfbc5a3590808c5ce">BlobArena</link>&#32;=&#32;0,
+<anchor xml:id="__theme_manager_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6a6cb2167799cc571f36007a9b89a6aa1a">AMMA</link>&#32;=&#32;1
+<anchor xml:id="__theme_manager_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00023"/>00023 }
+<anchor xml:id="__theme_manager_8cs_source_1l00024"/>00024 
+<anchor xml:id="__theme_manager_8cs_source_1l00029"/><link linkend="_class_theme_manager">00029</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_theme_manager">ThemeManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__theme_manager_8cs_source_1l00030"/>00030 {
+<anchor xml:id="__theme_manager_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Panel&#32;Colours&quot;</emphasis>)]
+<anchor xml:id="__theme_manager_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_BlobArenaPanelColourPlayer;
+<anchor xml:id="__theme_manager_8cs_source_1l00033"/>00033 
+<anchor xml:id="__theme_manager_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_BlobArenaPanelColourEnemy;
+<anchor xml:id="__theme_manager_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_AmmaPanelColourPlayer;
+<anchor xml:id="__theme_manager_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_AmmaPanelColourEnemy;
+<anchor xml:id="__theme_manager_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_NullColour&#32;=&#32;Color.magenta;
+<anchor xml:id="__theme_manager_8cs_source_1l00038"/>00038 
+<anchor xml:id="__theme_manager_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Text&#32;Colours&quot;</emphasis>)]
+<anchor xml:id="__theme_manager_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_BlobArenaTextColour;
+<anchor xml:id="__theme_manager_8cs_source_1l00041"/>00041 
+<anchor xml:id="__theme_manager_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Color&#32;m_AmmaTextColour;
+<anchor xml:id="__theme_manager_8cs_source_1l00043"/>00043 
+<anchor xml:id="__theme_manager_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;AMMA&#32;flags&quot;</emphasis>)]
+<anchor xml:id="__theme_manager_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;m_FlagSprites;
+<anchor xml:id="__theme_manager_8cs_source_1l00046"/>00046 
+<anchor xml:id="__theme_manager_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>[]&#32;m_FlagLut&#32;=&#32;{&#32;0,&#32;1,&#32;2,&#32;0,&#32;0,&#32;3&#32;};
+<anchor xml:id="__theme_manager_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;
+<anchor xml:id="__theme_manager_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_theme_manager">ThemeManager</link>&#32;m_Instance;
+<anchor xml:id="__theme_manager_8cs_source_1l00050"/><link linkend="_class_theme_manager_1ae27de71d8d8d8fd24b9cbfa7107b148d">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_theme_manager">ThemeManager</link>&#32;<link linkend="_class_theme_manager_1ae27de71d8d8d8fd24b9cbfa7107b148d">Instance</link>
+<anchor xml:id="__theme_manager_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">get</emphasis>
+<anchor xml:id="__theme_manager_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_Instance)
+<anchor xml:id="__theme_manager_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Theme&#32;Manager&#32;is&#32;NULL!&quot;</emphasis>);
+<anchor xml:id="__theme_manager_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_Instance;
+<anchor xml:id="__theme_manager_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00061"/>00061 
+<anchor xml:id="__theme_manager_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__theme_manager_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_Instance)
+<anchor xml:id="__theme_manager_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__theme_manager_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DontDestroyOnLoad(gameObject);
+<anchor xml:id="__theme_manager_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Instance&#32;!=&#32;<emphasis role="keyword">this</emphasis>)
+<anchor xml:id="__theme_manager_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__theme_manager_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__theme_manager_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00075"/>00075 
+<anchor xml:id="__theme_manager_8cs_source_1l00076"/><link linkend="_class_theme_manager_1abdb3a78c1fbf056f85a37a9596cb01d9">00076</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;<link linkend="_class_theme_manager_1abdb3a78c1fbf056f85a37a9596cb01d9">GetPanelColour</link>(<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link>&#32;panelColour)
+<anchor xml:id="__theme_manager_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(panelColour)
+<anchor xml:id="__theme_manager_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link>.BlobArena_Player:
+<anchor xml:id="__theme_manager_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_BlobArenaPanelColourPlayer;
+<anchor xml:id="__theme_manager_8cs_source_1l00082"/>00082 
+<anchor xml:id="__theme_manager_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link>.BlobArena_Enemy:
+<anchor xml:id="__theme_manager_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_BlobArenaPanelColourEnemy;
+<anchor xml:id="__theme_manager_8cs_source_1l00085"/>00085 
+<anchor xml:id="__theme_manager_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link>.AMMA_Player:
+<anchor xml:id="__theme_manager_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_AmmaPanelColourPlayer;
+<anchor xml:id="__theme_manager_8cs_source_1l00088"/>00088 
+<anchor xml:id="__theme_manager_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link>.AMMA_Enemy:
+<anchor xml:id="__theme_manager_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_AmmaPanelColourEnemy;
+<anchor xml:id="__theme_manager_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_NullColour;
+<anchor xml:id="__theme_manager_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00094"/>00094 
+<anchor xml:id="__theme_manager_8cs_source_1l00095"/><link linkend="_class_theme_manager_1a5a2e4750266ab148c1fadeb1db87cf31">00095</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;<link linkend="_class_theme_manager_1a5a2e4750266ab148c1fadeb1db87cf31">GetTextColour</link>(<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">TextColours</link>&#32;textColour)
+<anchor xml:id="__theme_manager_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(textColour)
+<anchor xml:id="__theme_manager_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">TextColours</link>.BlobArena:
+<anchor xml:id="__theme_manager_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_BlobArenaTextColour;
+<anchor xml:id="__theme_manager_8cs_source_1l00101"/>00101 
+<anchor xml:id="__theme_manager_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">TextColours</link>.AMMA:
+<anchor xml:id="__theme_manager_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_AmmaTextColour;
+<anchor xml:id="__theme_manager_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_NullColour;
+<anchor xml:id="__theme_manager_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00107"/>00107 
+<anchor xml:id="__theme_manager_8cs_source_1l00108"/><link linkend="_class_theme_manager_1a0bb854c0ce71f7b8ce974885b2fe3f1c">00108</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Sprite&#32;<link linkend="_class_theme_manager_1a0bb854c0ce71f7b8ce974885b2fe3f1c">GetFlagSprite</link>(<emphasis role="keywordtype">int</emphasis>&#32;index)
+<anchor xml:id="__theme_manager_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__theme_manager_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_Instance.m_FlagSprites[m_FlagLut[index&#32;%&#32;m_FlagLut.Length]];
+<anchor xml:id="__theme_manager_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__theme_manager_8cs_source_1l00112"/>00112 }
+</programlisting></section>

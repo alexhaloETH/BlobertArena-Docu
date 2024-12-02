@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__battle_page_card_stats_component_8cs_source" xml:lang="en-US">
+<title>BattlePageCardStatsComponent.cs</title>
+<indexterm><primary>UI/Pages/BattlePage/BattlePageCardStatsComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00008"/>00008 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00009"/><link linkend="_class_battle_page_card_stats_component">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_battle_page_card_stats_component">BattlePageCardStatsComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_battle_page_controller">BattlePageController</link>&#32;_battlePage;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00012"/>00012 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_blobertIdText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00015"/>00015 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00016"/><link linkend="_class_battle_page_card_stats_component_1ab73f8b1ee3531415852e65ea7303c0d1">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;SNSUsernameTextComponent&#32;<link linkend="_class_battle_page_card_stats_component_1ab73f8b1ee3531415852e65ea7303c0d1">_blobertOwnerText</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00017"/>00017 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_vitalityText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00020"/>00020 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_dexterityText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_luckText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_strengthText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00024"/>00024 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_hpText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00027"/>00027 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00028"/><link linkend="_class_battle_page_card_stats_component_1a077e6d1acd2f7124c89f6bd2d7b93d8d">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_slider_animator_component">SliderAnimatorComponent</link>&#32;<link linkend="_class_battle_page_card_stats_component_1a077e6d1acd2f7124c89f6bd2d7b93d8d">HealthSlider</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00029"/>00029 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_slider_animator_component">SliderAnimatorComponent</link>&#32;_expSlider;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00032"/>00032 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_currentLvText;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00034"/>00034 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;_typeImage;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00037"/>00037 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>&#32;_traitVisualizer;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00039"/>00039 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00040"/><link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">00040</link> &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_t_stats">TStats</link>&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00041"/>00041 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00042"/><link linkend="_class_battle_page_card_stats_component_1ae3343a707e4521d379c1f40c829d0f66">00042</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_interface_i_nft_type">INftType</link>&#32;<link linkend="_class_battle_page_card_stats_component_1ae3343a707e4521d379c1f40c829d0f66">BlobData</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00043"/><link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00044"/><link linkend="_class_battle_page_card_stats_component_1a443b6382aa467fdc2d42a84bfd6283b5">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_battle_page_card_stats_component_1a443b6382aa467fdc2d42a84bfd6283b5">IsSelf</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_maxHealth&#32;=&#32;0;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00046"/>00046 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00047"/><link linkend="_class_battle_page_card_stats_component_1a70ce8fe851f5dea7d67ffc0debe0a778">00047</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_card_stats_component_1a70ce8fe851f5dea7d67ffc0debe0a778">InitializeComponent</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link>)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.combatantId&#32;=&#32;<link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00050"/>00050 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobertTokenId&#32;=&#32;await&#32;CombatantDataModel.ManualQueryTokenIdFromCombatant(<link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link>);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobert&#32;=&#32;WorldDataModel.AllPlayableCharactersInTheGame[blobertTokenId.Hex()];
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00053"/>00053 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_blobertIdText.text&#32;=&#32;WorldDataModel.GetBlobertShortId(blobert.GetTokenId());
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00055"/>00055 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>&#32;=&#32;blobert.GetStats();
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00057"/>00057 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1ae3343a707e4521d379c1f40c829d0f66">BlobData</link>&#32;=&#32;blobert;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1ab73f8b1ee3531415852e65ea7303c0d1">_blobertOwnerText</link>.InitilizeComponent(blobert.GetOwner());
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00060"/>00060 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1a443b6382aa467fdc2d42a84bfd6283b5">IsSelf</link>&#32;=&#32;blobert.<link linkend="_interface_i_nft_type_1a64674a4b35f8d823646b4a804773eeb3">IsAddressOwner</link>(LocalDataModel.CurrentAccount.Address);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00062"/>00062 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetAmmaFighterFlag(blobert);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00064"/>00064 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1aa5fe35a0454a904ffd88c5a4d2302a7c">UpdateStatsFromChain</link>();
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00067"/>00067 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00068"/><link linkend="_class_battle_page_card_stats_component_1aa5fe35a0454a904ffd88c5a4d2302a7c">00068</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_card_stats_component_1aa5fe35a0454a904ffd88c5a4d2302a7c">UpdateStatsFromChain</link>()
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;newStats&#32;=&#32;await&#32;CombatantDataModel.ManualQueryCombatantState(<link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link>);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;baseStats&#32;=&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>&#32;=&#32;newStats.stats;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00073"/>00073 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1ad32533723e2bddf4c7dbeda60d4a1c51">SetHealth</link>(newStats.health,&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>.<link linkend="_struct_t_stats_1acc387fd57a284fe44ab21825fc9f72f5">vitality</link>);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00075"/>00075 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateStatText(_vitalityText,&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>.<link linkend="_struct_t_stats_1acc387fd57a284fe44ab21825fc9f72f5">vitality</link>,&#32;baseStats.vitality);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateStatText(_dexterityText,&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>.<link linkend="_struct_t_stats_1a584b61b6f6e01123bb2b95a1efddfe95">dexterity</link>,&#32;baseStats.dexterity);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateStatText(_luckText,&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>.<link linkend="_struct_t_stats_1a97a6263027a58f0884899764e6854047">luck</link>,&#32;baseStats.luck);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateStatText(_strengthText,&#32;<link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link>.<link linkend="_struct_t_stats_1ac6790d251879529e05afe4a8eae3e8e7">strength</link>,&#32;baseStats.strength);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00081"/>00081 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateStatText(TMP_Text&#32;textComponent,&#32;<emphasis role="keywordtype">int</emphasis>&#32;newStat,&#32;<emphasis role="keywordtype">int</emphasis>&#32;baseStat)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newStat&#32;&gt;&#32;baseStat)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.color&#32;=&#32;Color.green;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newStat&#32;&lt;&#32;baseStat)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.color&#32;=&#32;Color.red;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.color&#32;=&#32;Color.white;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.text&#32;=&#32;newStat.ToString();
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00098"/>00098 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculate&#32;health&#32;percentage</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00100"/>00100 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;<emphasis role="comment">//the&#32;issue&#32;currently&#32;is&#32;that&#32;the&#32;health&#32;sometimes&#32;is&#32;not&#32;the&#32;same&#32;as&#32;the&#32;one&#32;that&#32;the&#32;on&#32;chain&#32;has,&#32;alouthg&#32;this&#32;is&#32;normal&#32;if&#32;the&#32;user&#32;gains&#32;vitality&#32;for&#32;some&#32;reason&#32;the&#32;moment&#32;it&#32;stars&#32;the</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;<emphasis role="comment">//health&#32;is&#32;sometimes&#32;worng,&#32;so&#32;what&#32;we&#32;can&#32;do&#32;is&#32;check&#32;if&#32;the&#32;ehalth&#32;is&#32;ever&#32;more&#32;in</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00103"/><link linkend="_class_battle_page_card_stats_component_1ad32533723e2bddf4c7dbeda60d4a1c51">00103</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_card_stats_component_1ad32533723e2bddf4c7dbeda60d4a1c51">SetHealth</link>(<emphasis role="keywordtype">int</emphasis>&#32;health,&#32;<emphasis role="keywordtype">int</emphasis>&#32;vitality)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(vitality&#32;&gt;&#32;155)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_maxHealth&#32;=&#32;255;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_maxHealth&#32;=&#32;100&#32;+&#32;vitality;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00113"/>00113 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_hpText.text&#32;=&#32;health&#32;+&#32;<emphasis role="stringliteral">&quot;/&quot;</emphasis>&#32;+&#32;_maxHealth;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1a077e6d1acd2f7124c89f6bd2d7b93d8d">HealthSlider</link>.<link linkend="_class_slider_animator_component_1aab46ffcf51f6d19c9a593bd1923da1a8">SetMax</link>(_maxHealth);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_card_stats_component_1a077e6d1acd2f7124c89f6bd2d7b93d8d">HealthSlider</link>.<link linkend="_class_slider_animator_component_1af0b24bfb95a19af7b49f56371c02fef6">SetValue</link>(health,&#32;0.5f,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00118"/>00118 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00119"/><link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">00119</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>&#32;<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>()&#32;=&gt;&#32;_traitVisualizer;
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00120"/>00120 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetAmmaFighterFlag(in&#32;<link linkend="_interface_i_nft_type">INftType</link>&#32;blobert)
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;not&#32;an&#32;AMMA&#32;blobert,&#32;return</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(blobert.GetNftType()&#32;!=&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.AMMABlobs)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00125"/>00125 
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_typeImage.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;blobId&#32;=&#32;blobert.GetSeed().armour&#32;-&#32;51;&#32;<emphasis role="comment">//&#32;AMMA&#32;bloberts&#32;start&#32;from&#32;idx&#32;51,&#32;we&#32;need&#32;to&#32;convert&#32;to&#32;0&#32;based</emphasis>
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_typeImage.sprite&#32;=&#32;<link linkend="_class_theme_manager">ThemeManager</link>.<link linkend="_class_theme_manager_1a0bb854c0ce71f7b8ce974885b2fe3f1c">GetFlagSprite</link>(blobId);
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_card_stats_component_8cs_source_1l00130"/>00130 }
+</programlisting></section>

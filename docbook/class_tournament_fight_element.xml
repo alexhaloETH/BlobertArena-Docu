@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tournament_fight_element" xml:lang="en-US">
+<title>TournamentFightElement Class Reference</title>
+<indexterm><primary>TournamentFightElement</primary></indexterm>
+<para>Inheritance diagram for TournamentFightElement:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tournament_fight_element.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__tournament_fight_element_8cs_source_1l00004">4</link> of file <link linkend="__tournament_fight_element_8cs_source">TournamentFightElement.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__tournament_fight_element_8cs">TournamentFightElement.cs</link></section>
+</section>

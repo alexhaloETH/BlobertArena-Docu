@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_lobby_view_page_behaviour" xml:lang="en-US">
+<title>LobbyViewPageBehaviour Class Reference</title>
+<indexterm><primary>LobbyViewPageBehaviour</primary></indexterm>
+<para>
+
+<para>This is the lobby page, the user is only allowed here if the invite he sent or received has been accepted. </para>
+ 
+</para>
+<para>Inheritance diagram for LobbyViewPageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_lobby_view_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async void <link linkend="_class_lobby_view_page_behaviour_1a3424bfaee35e2d8408524568c898eae7">AdminStartGameCall</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_view_page_behaviour_1a5806af8fd056e0160832b4d329a27ace">OnChainTransactionCallbackFunctionSG</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_view_page_behaviour_1a9b3ac4fcf012f3db572ebdc0656e1e79">AdminLeaveLobby</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_view_page_behaviour_1ae499d1f72dcea821b9e8e70663af051d">OnChainTransactionCallbackFunctionALL</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_view_page_behaviour_1af5deebc360f61df64dd847e4f47b32e8">UserCloseLobby</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_view_page_behaviour_1a675876f2b2c3107e0d0a6bdc664ee2da">OnChainTransactionCallbackFunctionUCL</link> (string transactionHash)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This is the lobby page, the user is only allowed here if the invite he sent or received has been accepted. </para>
+
+
+
+<para>this is where the users now confront each other before the real battle starts or the countdown finishes</para>
+
+<para>This page has two modes, one for the admin of the game and on for the guest of the game, depending on which we show different buttons</para>
+
+<para>on enable the code should check if the game is in the correct state otherwise kick him back to the corresponding page, either the game page or main menu page </para>
+<para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00016">16</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_lobby_view_page_behaviour_1a9b3ac4fcf012f3db572ebdc0656e1e79"/><section>
+    <title>AdminLeaveLobby()</title>
+<indexterm><primary>AdminLeaveLobby</primary><secondary>LobbyViewPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyViewPageBehaviour</primary><secondary>AdminLeaveLobby</secondary></indexterm>
+<para><computeroutput>async void LobbyViewPageBehaviour.AdminLeaveLobby ( )</computeroutput></para><para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00143">143</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_view_page_behaviour_1a3424bfaee35e2d8408524568c898eae7"/><section>
+    <title>AdminStartGameCall()</title>
+<indexterm><primary>AdminStartGameCall</primary><secondary>LobbyViewPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyViewPageBehaviour</primary><secondary>AdminStartGameCall</secondary></indexterm>
+<para><computeroutput>async void LobbyViewPageBehaviour.AdminStartGameCall ( )</computeroutput></para><para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00129">129</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_view_page_behaviour_1ae499d1f72dcea821b9e8e70663af051d"/><section>
+    <title>OnChainTransactionCallbackFunctionALL()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionALL</primary><secondary>LobbyViewPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyViewPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionALL</secondary></indexterm>
+<para><computeroutput>void LobbyViewPageBehaviour.OnChainTransactionCallbackFunctionALL (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00152">152</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_view_page_behaviour_1a5806af8fd056e0160832b4d329a27ace"/><section>
+    <title>OnChainTransactionCallbackFunctionSG()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionSG</primary><secondary>LobbyViewPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyViewPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionSG</secondary></indexterm>
+<para><computeroutput>void LobbyViewPageBehaviour.OnChainTransactionCallbackFunctionSG (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00138">138</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_view_page_behaviour_1a675876f2b2c3107e0d0a6bdc664ee2da"/><section>
+    <title>OnChainTransactionCallbackFunctionUCL()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionUCL</primary><secondary>LobbyViewPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyViewPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionUCL</secondary></indexterm>
+<para><computeroutput>void LobbyViewPageBehaviour.OnChainTransactionCallbackFunctionUCL (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00166">166</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_view_page_behaviour_1af5deebc360f61df64dd847e4f47b32e8"/><section>
+    <title>UserCloseLobby()</title>
+<indexterm><primary>UserCloseLobby</primary><secondary>LobbyViewPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyViewPageBehaviour</primary><secondary>UserCloseLobby</secondary></indexterm>
+<para><computeroutput>async void LobbyViewPageBehaviour.UserCloseLobby ( )</computeroutput></para><para>
+Definition at line <link linkend="__lobby_view_page_behaviour_8cs_source_1l00157">157</link> of file <link linkend="__lobby_view_page_behaviour_8cs_source">LobbyViewPageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/LobbyView/<link linkend="__lobby_view_page_behaviour_8cs">LobbyViewPageBehaviour.cs</link></section>
+</section>

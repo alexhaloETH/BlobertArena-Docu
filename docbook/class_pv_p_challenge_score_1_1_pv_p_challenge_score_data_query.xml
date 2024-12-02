@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query" xml:lang="en-US">
+<title>PvPChallengeScore.PvPChallengeScoreDataQuery Class Reference</title>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary></indexterm>
+<para>Inheritance diagram for PvPChallengeScore.PvPChallengeScoreDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a65981b5cf0ace5cd82096f2da790f1d8">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a534276bc23eebac7240dc6a1312c25d6">player</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a9032625216934a59edf7860125782c0d">collection_address</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1add5899a7e0dc0d8490b67feb2720c9d4">token_high</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1ab81fa60f2d49fadca5f7fc3c9d3f7403">token_low</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1ab97019a717d86e307955c70d6f303645">wins</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a46b25f6c0be35d9811ecdbfcb5324201">losses</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1af37f04ad99a7520c38cd18802e4d5cbc">max_consecutive_wins</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1ab330aa338e3d9fd5e0ace49c74f752cb">current_consecutive_wins</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00167">167</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a65981b5cf0ace5cd82096f2da790f1d8"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00169">169</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a9032625216934a59edf7860125782c0d"/><section>
+    <title>collection_address</title>
+<indexterm><primary>collection_address</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>collection_address</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.collection_address = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00171">171</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1ab330aa338e3d9fd5e0ace49c74f752cb"/><section>
+    <title>current_consecutive_wins</title>
+<indexterm><primary>current_consecutive_wins</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>current_consecutive_wins</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.current_consecutive_wins = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00177">177</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a46b25f6c0be35d9811ecdbfcb5324201"/><section>
+    <title>losses</title>
+<indexterm><primary>losses</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>losses</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.losses = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00175">175</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1af37f04ad99a7520c38cd18802e4d5cbc"/><section>
+    <title>max_consecutive_wins</title>
+<indexterm><primary>max_consecutive_wins</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>max_consecutive_wins</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.max_consecutive_wins = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00176">176</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1a534276bc23eebac7240dc6a1312c25d6"/><section>
+    <title>player</title>
+<indexterm><primary>player</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>player</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.player = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00170">170</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1add5899a7e0dc0d8490b67feb2720c9d4"/><section>
+    <title>token_high</title>
+<indexterm><primary>token_high</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>token_high</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.token_high = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00172">172</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1ab81fa60f2d49fadca5f7fc3c9d3f7403"/><section>
+    <title>token_low</title>
+<indexterm><primary>token_low</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>token_low</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.token_low = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00173">173</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query_1ab97019a717d86e307955c70d6f303645"/><section>
+    <title>wins</title>
+<indexterm><primary>wins</primary><secondary>PvPChallengeScore.PvPChallengeScoreDataQuery</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore.PvPChallengeScoreDataQuery</primary><secondary>wins</secondary></indexterm>
+<para><computeroutput>string PvPChallengeScore.PvPChallengeScoreDataQuery.wins = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00174">174</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__pv_p_challenge_score_8gen_8cs">PvPChallengeScore.gen.cs</link></section>
+</section>

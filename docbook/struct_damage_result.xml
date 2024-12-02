@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_damage_result" xml:lang="en-US">
+<title>DamageResult Struct Reference</title>
+<indexterm><primary>DamageResult</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>byte <link linkend="_struct_damage_result_1a25f5571488aac10e2fbf120241388594">damage</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_damage_result_1a369049469d19c20cbf02602bf7e1ab7b">critical</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00018">18</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_damage_result_1a369049469d19c20cbf02602bf7e1ab7b"/><section>
+    <title>critical</title>
+<indexterm><primary>critical</primary><secondary>DamageResult</secondary></indexterm>
+<indexterm><primary>DamageResult</primary><secondary>critical</secondary></indexterm>
+<para><computeroutput>bool DamageResult.critical</computeroutput></para><para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00021">21</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_damage_result_1a25f5571488aac10e2fbf120241388594"/><section>
+    <title>damage</title>
+<indexterm><primary>damage</primary><secondary>DamageResult</secondary></indexterm>
+<indexterm><primary>DamageResult</primary><secondary>damage</secondary></indexterm>
+<para><computeroutput>byte DamageResult.damage</computeroutput></para><para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00020">20</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__attack_result_8cs">AttackResult.cs</link></section>
+</section>

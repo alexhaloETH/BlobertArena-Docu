@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_seed_data" xml:lang="en-US">
+<title>LogicLayer.SeedData Class Reference</title>
+<indexterm><primary>LogicLayer.SeedData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_seed_data_1a5d7167a1a6f93ce627c2da05e343e515">background</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_seed_data_1a0c6cac1151d2f150973308b8fc512753">armour</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_seed_data_1a9fb57bf77ab9105a9d06c0652fc1050f">jewelry</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_seed_data_1a3ab11b4b56fa5c5d06744b06885fbff8">mask</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_seed_data_1aaf9f8926bca60b7e9b0f01ab9c4aa539">weapon</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00107">107</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_seed_data_1a0c6cac1151d2f150973308b8fc512753"/><section>
+    <title>armour</title>
+<indexterm><primary>armour</primary><secondary>LogicLayer.SeedData</secondary></indexterm>
+<indexterm><primary>LogicLayer.SeedData</primary><secondary>armour</secondary></indexterm>
+<para><computeroutput>string LogicLayer.SeedData.armour<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00110">110</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_seed_data_1a5d7167a1a6f93ce627c2da05e343e515"/><section>
+    <title>background</title>
+<indexterm><primary>background</primary><secondary>LogicLayer.SeedData</secondary></indexterm>
+<indexterm><primary>LogicLayer.SeedData</primary><secondary>background</secondary></indexterm>
+<para><computeroutput>string LogicLayer.SeedData.background<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00109">109</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_seed_data_1a9fb57bf77ab9105a9d06c0652fc1050f"/><section>
+    <title>jewelry</title>
+<indexterm><primary>jewelry</primary><secondary>LogicLayer.SeedData</secondary></indexterm>
+<indexterm><primary>LogicLayer.SeedData</primary><secondary>jewelry</secondary></indexterm>
+<para><computeroutput>string LogicLayer.SeedData.jewelry<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00111">111</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_seed_data_1a3ab11b4b56fa5c5d06744b06885fbff8"/><section>
+    <title>mask</title>
+<indexterm><primary>mask</primary><secondary>LogicLayer.SeedData</secondary></indexterm>
+<indexterm><primary>LogicLayer.SeedData</primary><secondary>mask</secondary></indexterm>
+<para><computeroutput>string LogicLayer.SeedData.mask<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00112">112</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_seed_data_1aaf9f8926bca60b7e9b0f01ab9c4aa539"/><section>
+    <title>weapon</title>
+<indexterm><primary>weapon</primary><secondary>LogicLayer.SeedData</secondary></indexterm>
+<indexterm><primary>LogicLayer.SeedData</primary><secondary>weapon</secondary></indexterm>
+<para><computeroutput>string LogicLayer.SeedData.weapon<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00113">113</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

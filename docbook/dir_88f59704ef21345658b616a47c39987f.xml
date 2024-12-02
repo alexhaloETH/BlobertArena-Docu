@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_88f59704ef21345658b616a47c39987f" xml:lang="en-US">
+<title>UI/Components/BlobertData Directory Reference</title>
+<indexterm><primary>UI/Components/BlobertData Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_99e9fafdb525fc45006a428602ba4035">BlobDexComponents</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__character_stats_visualizer_component_8cs">CharacterStatsVisualizerComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__click_on_specific_trait_component_8cs">ClickOnSpecificTraitComponent.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

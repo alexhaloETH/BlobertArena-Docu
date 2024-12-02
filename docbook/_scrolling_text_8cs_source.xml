@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__scrolling_text_8cs_source" xml:lang="en-US">
+<title>ScrollingText.cs</title>
+<indexterm><primary>Misc/ScrollingText.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__scrolling_text_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__scrolling_text_8cs_source_1l00002"/>00002 
+<anchor xml:id="__scrolling_text_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__scrolling_text_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__scrolling_text_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__scrolling_text_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Assertions;
+<anchor xml:id="__scrolling_text_8cs_source_1l00007"/>00007 
+<anchor xml:id="__scrolling_text_8cs_source_1l00011"/><link linkend="_class_scrolling_text">00011</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_scrolling_text">ScrollingText</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__scrolling_text_8cs_source_1l00012"/>00012 {
+<anchor xml:id="__scrolling_text_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[Header&#32;(<emphasis role="stringliteral">&quot;Object&#32;references&quot;</emphasis>)]
+<anchor xml:id="__scrolling_text_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_Text;
+<anchor xml:id="__scrolling_text_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_TextRectTransform;
+<anchor xml:id="__scrolling_text_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;[Header&#32;(<emphasis role="stringliteral">&quot;Animation&#32;parameters&quot;</emphasis>)]
+<anchor xml:id="__scrolling_text_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[SerializeField,&#32;Range(0f,&#32;1f)]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;m_AnimationStartDelay&#32;=&#32;0.5f;
+<anchor xml:id="__scrolling_text_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[SerializeField,&#32;Range(0.5f,&#32;2f)]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;m_AnimationEndDelay&#32;=&#32;1.0f;
+<anchor xml:id="__scrolling_text_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[SerializeField,&#32;Range(25.0f,&#32;100.0f)]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;m_AnimationSpeed&#32;=&#32;50.0f;
+<anchor xml:id="__scrolling_text_8cs_source_1l00020"/>00020 
+<anchor xml:id="__scrolling_text_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;m_StartingWidth;
+<anchor xml:id="__scrolling_text_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;m_DeltaLength;
+<anchor xml:id="__scrolling_text_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_StartPos;
+<anchor xml:id="__scrolling_text_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_EndPos;
+<anchor xml:id="__scrolling_text_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;Coroutine&#32;m_AnimCoroutine;
+<anchor xml:id="__scrolling_text_8cs_source_1l00026"/>00026 
+<anchor xml:id="__scrolling_text_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__scrolling_text_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Text&#32;=&#32;GetComponentInChildren&lt;TMP_Text&gt;();
+<anchor xml:id="__scrolling_text_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Assert.IsNotNull(m_Text,&#32;$<emphasis role="stringliteral">&quot;Missing&#32;Text&#32;component&#32;in&#32;{name}&quot;</emphasis>);
+<anchor xml:id="__scrolling_text_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00032"/>00032 
+<anchor xml:id="__scrolling_text_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__scrolling_text_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_StartPos&#32;=&#32;m_TextRectTransform.localPosition;
+<anchor xml:id="__scrolling_text_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_StartingWidth&#32;=&#32;m_TextRectTransform.rect.width;
+<anchor xml:id="__scrolling_text_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetEndPosition();
+<anchor xml:id="__scrolling_text_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00039"/>00039 
+<anchor xml:id="__scrolling_text_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__scrolling_text_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopAnimation();
+<anchor xml:id="__scrolling_text_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00044"/>00044 
+<anchor xml:id="__scrolling_text_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetOverflow(<emphasis role="keywordtype">bool</emphasis>&#32;enable)
+<anchor xml:id="__scrolling_text_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enable)
+<anchor xml:id="__scrolling_text_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Text.overflowMode&#32;=&#32;TextOverflowModes.Masking;
+<anchor xml:id="__scrolling_text_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetRect(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__scrolling_text_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartAnimation();
+<anchor xml:id="__scrolling_text_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__scrolling_text_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Text.overflowMode&#32;=&#32;TextOverflowModes.Ellipsis;
+<anchor xml:id="__scrolling_text_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetRect(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__scrolling_text_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopAnimation();
+<anchor xml:id="__scrolling_text_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00060"/>00060 
+<anchor xml:id="__scrolling_text_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetRect(<emphasis role="keywordtype">bool</emphasis>&#32;isMasked)
+<anchor xml:id="__scrolling_text_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_TextRectTransform.sizeDelta&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector2(isMasked?&#32;m_StartingWidth&#32;:&#32;m_StartingWidth&#32;+&#32;m_DeltaLength,&#32;m_TextRectTransform.sizeDelta.y);
+<anchor xml:id="__scrolling_text_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00065"/>00065 
+<anchor xml:id="__scrolling_text_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;StartAnimation()
+<anchor xml:id="__scrolling_text_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_AnimCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!SetEndPosition())&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__scrolling_text_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_AnimCoroutine&#32;=&#32;StartCoroutine(ScrollAnimation());
+<anchor xml:id="__scrolling_text_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00073"/>00073 
+<anchor xml:id="__scrolling_text_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;StopAnimation()
+<anchor xml:id="__scrolling_text_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_AnimCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__scrolling_text_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopCoroutine(m_AnimCoroutine);
+<anchor xml:id="__scrolling_text_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_AnimCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__scrolling_text_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_TextRectTransform.localPosition&#32;=&#32;m_StartPos;
+<anchor xml:id="__scrolling_text_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00083"/>00083 
+<anchor xml:id="__scrolling_text_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;ScrollAnimation()
+<anchor xml:id="__scrolling_text_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WaitForSeconds&#32;startDelay&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(m_AnimationStartDelay);
+<anchor xml:id="__scrolling_text_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WaitForSeconds&#32;endDelay&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(m_AnimationEndDelay);
+<anchor xml:id="__scrolling_text_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__scrolling_text_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<emphasis role="keyword">true</emphasis>)
+<anchor xml:id="__scrolling_text_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;startDelay;
+<anchor xml:id="__scrolling_text_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(m_EndPos.x&#32;&lt;&#32;m_TextRectTransform.localPosition.x)
+<anchor xml:id="__scrolling_text_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_TextRectTransform.localPosition&#32;-=&#32;(m_TextRectTransform.right&#32;*&#32;(m_AnimationSpeed&#32;*&#32;Time.deltaTime));
+<anchor xml:id="__scrolling_text_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__scrolling_text_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_TextRectTransform.localPosition&#32;=&#32;m_EndPos;
+<anchor xml:id="__scrolling_text_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;endDelay;
+<anchor xml:id="__scrolling_text_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_TextRectTransform.localPosition&#32;=&#32;m_StartPos;
+<anchor xml:id="__scrolling_text_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00102"/>00102 
+<anchor xml:id="__scrolling_text_8cs_source_1l00103"/><link linkend="_class_scrolling_text_1aafbdccea203409b42d2e579de5910ded">00103</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scrolling_text_1aafbdccea203409b42d2e579de5910ded">OnCursorEnter</link>()
+<anchor xml:id="__scrolling_text_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetOverflow(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__scrolling_text_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00107"/>00107 
+<anchor xml:id="__scrolling_text_8cs_source_1l00108"/><link linkend="_class_scrolling_text_1ae7458d92c5f5807d4351b1bc29421c86">00108</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scrolling_text_1ae7458d92c5f5807d4351b1bc29421c86">OnCursorLeave</link>()
+<anchor xml:id="__scrolling_text_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetOverflow(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__scrolling_text_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00112"/>00112 
+<anchor xml:id="__scrolling_text_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;SetEndPosition()
+<anchor xml:id="__scrolling_text_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__scrolling_text_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DeltaLength&#32;=&#32;m_Text.preferredWidth&#32;-&#32;GetComponent&lt;RectTransform&gt;().rect.width;
+<anchor xml:id="__scrolling_text_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_DeltaLength&#32;&lt;=&#32;0)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EndPos&#32;=&#32;<emphasis role="keyword">new</emphasis>(m_StartPos.x&#32;-&#32;m_DeltaLength,&#32;m_StartPos.y,&#32;m_StartPos.z);
+<anchor xml:id="__scrolling_text_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__scrolling_text_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__scrolling_text_8cs_source_1l00120"/>00120 }
+</programlisting></section>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__skin_manager_8cs_source" xml:lang="en-US">
+<title>SkinManager.cs</title>
+<indexterm><primary>UI/Components/Skin/SkinManager.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__skin_manager_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__skin_manager_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__skin_manager_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__skin_manager_8cs_source_1l00004"/>00004 
+<anchor xml:id="__skin_manager_8cs_source_1l00005"/><link linkend="_class_skin_manager">00005</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_skin_manager">SkinManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__skin_manager_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__skin_manager_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_skin_manager">SkinManager</link>&#32;m_Instance;
+<anchor xml:id="__skin_manager_8cs_source_1l00008"/>00008 
+<anchor xml:id="__skin_manager_8cs_source_1l00009"/><link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_skin_manager">SkinManager</link>&#32;<link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link>
+<anchor xml:id="__skin_manager_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">get</emphasis>
+<anchor xml:id="__skin_manager_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_Instance)
+<anchor xml:id="__skin_manager_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Skin&#32;manager&#32;is&#32;NULL!&quot;</emphasis>);
+<anchor xml:id="__skin_manager_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_Instance;
+<anchor xml:id="__skin_manager_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00020"/>00020 
+<anchor xml:id="__skin_manager_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__skin_manager_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_Instance)
+<anchor xml:id="__skin_manager_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__skin_manager_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DontDestroyOnLoad(gameObject);
+<anchor xml:id="__skin_manager_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Instance&#32;!=&#32;<emphasis role="keyword">this</emphasis>)
+<anchor xml:id="__skin_manager_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__skin_manager_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__skin_manager_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00034"/>00034 
+<anchor xml:id="__skin_manager_8cs_source_1l00035"/><link linkend="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;delegate&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7">OnNewSkin</link>();
+<anchor xml:id="__skin_manager_8cs_source_1l00036"/>00036 
+<anchor xml:id="__skin_manager_8cs_source_1l00037"/><link linkend="_class_skin_manager_1ad4b8e9ddfe8c4c47452f1bda8fd84fe4">00037</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7">OnNewSkin</link>&#32;<link linkend="_class_skin_manager_1ad4b8e9ddfe8c4c47452f1bda8fd84fe4">NewSkin</link>;
+<anchor xml:id="__skin_manager_8cs_source_1l00038"/>00038 
+<anchor xml:id="__skin_manager_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Dictionary&#32;to&#32;store&#32;sprites&#32;using&#32;their&#32;names&#32;as&#32;keys</emphasis>
+<anchor xml:id="__skin_manager_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Dictionary&lt;string,&#32;Sprite&gt;&#32;spriteDictionary&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Dictionary&lt;string,&#32;Sprite&gt;();
+<anchor xml:id="__skin_manager_8cs_source_1l00041"/>00041 
+<anchor xml:id="__skin_manager_8cs_source_1l00042"/><link linkend="_class_skin_manager_1a22ded1d2541ffaa32613160289252684">00042</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_skin_manager_1a22ded1d2541ffaa32613160289252684">LoadedEntities</link>;
+<anchor xml:id="__skin_manager_8cs_source_1l00043"/>00043 
+<anchor xml:id="__skin_manager_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__skin_manager_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnGameEventChanged&#32;+=&#32;<link linkend="_class_skin_manager_1a388cedf30420666cd98f6ded87096c30">ChangeSkin</link>;
+<anchor xml:id="__skin_manager_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_skin_manager_1a388cedf30420666cd98f6ded87096c30">ChangeSkin</link>(LocalDataModel.GameTheme);
+<anchor xml:id="__skin_manager_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00049"/>00049 
+<anchor xml:id="__skin_manager_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetNameOfFolder(LocalDataModel.GameEvent&#32;type)
+<anchor xml:id="__skin_manager_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(type)
+<anchor xml:id="__skin_manager_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;LocalDataModel.GameEvent.Normal:
+<anchor xml:id="__skin_manager_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Normal&quot;</emphasis>;
+<anchor xml:id="__skin_manager_8cs_source_1l00056"/>00056 
+<anchor xml:id="__skin_manager_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;LocalDataModel.GameEvent.AMMA:
+<anchor xml:id="__skin_manager_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;AMMA&quot;</emphasis>;
+<anchor xml:id="__skin_manager_8cs_source_1l00059"/>00059 
+<anchor xml:id="__skin_manager_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__skin_manager_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Normal&quot;</emphasis>;
+<anchor xml:id="__skin_manager_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00064"/>00064 
+<anchor xml:id="__skin_manager_8cs_source_1l00065"/><link linkend="_class_skin_manager_1a388cedf30420666cd98f6ded87096c30">00065</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_skin_manager_1a388cedf30420666cd98f6ded87096c30">ChangeSkin</link>(LocalDataModel.GameEvent&#32;newTheme)
+<anchor xml:id="__skin_manager_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteDictionary.Clear();
+<anchor xml:id="__skin_manager_8cs_source_1l00068"/>00068 
+<anchor xml:id="__skin_manager_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LoadSpritesIntoDictionary($<emphasis role="stringliteral">&quot;TileMapsSkins/{GetNameOfFolder(LocalDataModel.CurrentGameEvent)}/Background&quot;</emphasis>);
+<anchor xml:id="__skin_manager_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LoadSpritesIntoDictionary($<emphasis role="stringliteral">&quot;TileMapsSkins/{GetNameOfFolder(LocalDataModel.CurrentGameEvent)}/tile_map_0&quot;</emphasis>);
+<anchor xml:id="__skin_manager_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LoadSpritesIntoDictionary($<emphasis role="stringliteral">&quot;TileMapsSkins/{GetNameOfFolder(LocalDataModel.CurrentGameEvent)}/tile_map_1&quot;</emphasis>);
+<anchor xml:id="__skin_manager_8cs_source_1l00072"/>00072 
+<anchor xml:id="__skin_manager_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_skin_manager_1ad4b8e9ddfe8c4c47452f1bda8fd84fe4">NewSkin</link>?.Invoke();
+<anchor xml:id="__skin_manager_8cs_source_1l00074"/>00074 
+<anchor xml:id="__skin_manager_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_skin_manager_1a22ded1d2541ffaa32613160289252684">LoadedEntities</link>&#32;=&#32;spriteDictionary.Count;
+<anchor xml:id="__skin_manager_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00077"/>00077 
+<anchor xml:id="__skin_manager_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;LoadSpritesIntoDictionary(<emphasis role="keywordtype">string</emphasis>&#32;path)
+<anchor xml:id="__skin_manager_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sprite[]&#32;sprites&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(path);
+<anchor xml:id="__skin_manager_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;sprite&#32;<emphasis role="keywordflow">in</emphasis>&#32;sprites)
+<anchor xml:id="__skin_manager_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteDictionary[sprite.name]&#32;=&#32;sprite;
+<anchor xml:id="__skin_manager_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00086"/>00086 
+<anchor xml:id="__skin_manager_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Method&#32;for&#32;listeners&#32;to&#32;get&#32;the&#32;sprite&#32;by&#32;name</emphasis>
+<anchor xml:id="__skin_manager_8cs_source_1l00088"/><link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">00088</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(<emphasis role="keywordtype">string</emphasis>&#32;spriteName)
+<anchor xml:id="__skin_manager_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(spriteDictionary.TryGetValue(spriteName,&#32;out&#32;Sprite&#32;sprite))
+<anchor xml:id="__skin_manager_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__skin_manager_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprite;
+<anchor xml:id="__skin_manager_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__skin_manager_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__skin_manager_8cs_source_1l00096"/>00096 }
+</programlisting></section>

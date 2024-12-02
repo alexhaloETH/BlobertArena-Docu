@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sound_combat_blob_arena" xml:lang="en-US">
+<title>SoundCombatBlobArena Class Reference</title>
+<indexterm><primary>SoundCombatBlobArena</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">AudioEffects.CombatBlobArena</link> <link linkend="_class_sound_combat_blob_arena_1adba520e400ee9d1c6492dc54d94f4695">Effect</link></para>
+</listitem>
+            <listitem><para>AudioClip <link linkend="_class_sound_combat_blob_arena_1a3edd37b851d50ed6e39996981c7630a2">Clip</link></para>
+</listitem>
+            <listitem><para>AudioSource <link linkend="_class_sound_combat_blob_arena_1aa6a8f65ec6b561db07f7cd32db1625f4">Source</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__sound_combat_blob_arena_8cs_source_1l00006">6</link> of file <link linkend="__sound_combat_blob_arena_8cs_source">SoundCombatBlobArena.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_sound_combat_blob_arena_1a3edd37b851d50ed6e39996981c7630a2"/><section>
+    <title>Clip</title>
+<indexterm><primary>Clip</primary><secondary>SoundCombatBlobArena</secondary></indexterm>
+<indexterm><primary>SoundCombatBlobArena</primary><secondary>Clip</secondary></indexterm>
+<para><computeroutput>AudioClip SoundCombatBlobArena.Clip</computeroutput></para><para>
+Definition at line <link linkend="__sound_combat_blob_arena_8cs_source_1l00009">9</link> of file <link linkend="__sound_combat_blob_arena_8cs_source">SoundCombatBlobArena.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_combat_blob_arena_1adba520e400ee9d1c6492dc54d94f4695"/><section>
+    <title>Effect</title>
+<indexterm><primary>Effect</primary><secondary>SoundCombatBlobArena</secondary></indexterm>
+<indexterm><primary>SoundCombatBlobArena</primary><secondary>Effect</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">AudioEffects.CombatBlobArena</link> SoundCombatBlobArena.Effect</computeroutput></para><para>
+Definition at line <link linkend="__sound_combat_blob_arena_8cs_source_1l00008">8</link> of file <link linkend="__sound_combat_blob_arena_8cs_source">SoundCombatBlobArena.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_combat_blob_arena_1aa6a8f65ec6b561db07f7cd32db1625f4"/><section>
+    <title>Source</title>
+<indexterm><primary>Source</primary><secondary>SoundCombatBlobArena</secondary></indexterm>
+<indexterm><primary>SoundCombatBlobArena</primary><secondary>Source</secondary></indexterm>
+<para><computeroutput>AudioSource SoundCombatBlobArena.Source</computeroutput></para><para>
+Definition at line <link linkend="__sound_combat_blob_arena_8cs_source_1l00012">12</link> of file <link linkend="__sound_combat_blob_arena_8cs_source">SoundCombatBlobArena.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Misc/<link linkend="__sound_combat_blob_arena_8cs">SoundCombatBlobArena.cs</link></section>
+</section>

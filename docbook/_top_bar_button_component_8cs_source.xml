@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__top_bar_button_component_8cs_source" xml:lang="en-US">
+<title>TopBarButtonComponent.cs</title>
+<indexterm><primary>UI/Components/TopBarButtonComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__top_bar_button_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00002"/>00002 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00003"/><link linkend="_class_top_bar_button_component">00003</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_top_bar_button_component">TopBarButtonComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00004"/>00004 {
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00005"/><link linkend="_class_top_bar_button_component_1a094e6d6ccc05451ef6d34432957d83e7">00005</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_top_bar_button_component">TopBarButtonComponent</link>&#32;<link linkend="_class_top_bar_button_component_1a094e6d6ccc05451ef6d34432957d83e7">Instance</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00006"/>00006 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject[]&#32;_topBarobjects&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GameObject[7];
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00008"/>00008 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_leftSideObject;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_rightSideObject;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00011"/>00011 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_dropdown_main_menu">DropdownMainMenu</link>&#32;m_DropdownMainMenu;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00014"/><link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a6222a1fb813893bee88128fa2a0ef37c">ArrowBack</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a5c9efb22b1843651d92b3da74c4d4bb5">ExitGamePopUp</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a45eb5db19c035c55642965187d5a297b">SettingsButton</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a8cfa2c85d367f92e56e91593ea817941">BugButton</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a1f4da964f8eab62e96e8cfe406e44364">Rules</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77af08a3a2446dc0da4285a9607561055e2">AccountSection</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a4cc2bf0c07a25c4376b99c057dde0577">SwitchGame</link>,
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a6ab9a295c00f945cf4881fd7667a0334">Spacer</link>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00025"/>00025 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_top_bar_button_component_1a094e6d6ccc05451ef6d34432957d83e7">Instance</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_top_bar_button_component_1a094e6d6ccc05451ef6d34432957d83e7">Instance</link>&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00037"/>00037 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;At&#32;start&#32;we&#32;cache&#32;the&#32;ref&#32;to&#32;the&#32;dropdown&#32;menu,&#32;and&#32;hide&#32;it&#32;if&#32;not&#32;NULL</emphasis>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownMainMenu&#32;=&#32;FindObjectOfType&lt;DropdownMainMenu&gt;(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownMainMenu?.<link linkend="_class_dropdown_main_menu_1a6fb17fea65433d9a7d4e8da78188c0f4">EnableDropdownMenu</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00044"/>00044 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;a&#32;dropdown&#32;menu&#32;is&#32;present&#32;(portrait&#32;mode&#32;only,&#32;not&#32;NULL),&#32;show&#32;it</emphasis>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownMainMenu?.<link linkend="_class_dropdown_main_menu_1a6fb17fea65433d9a7d4e8da78188c0f4">EnableDropdownMenu</link>();
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00050"/>00050 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;a&#32;dropdown&#32;menu&#32;is&#32;present&#32;(portrait&#32;mode&#32;only,&#32;not&#32;NULL),&#32;hide&#32;it</emphasis>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownMainMenu?.<link linkend="_class_dropdown_main_menu_1a6fb17fea65433d9a7d4e8da78188c0f4">EnableDropdownMenu</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00056"/>00056 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00057"/><link linkend="_class_top_bar_button_component_1a78192a7ec64c2f26c5f39167e43e3e04">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_top_bar_button_component_1a78192a7ec64c2f26c5f39167e43e3e04">ToggleObject</link>(<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link>&#32;item,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;show)
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_topBarobjects[(int)item].SetActive(show);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00061"/>00061 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00062"/><link linkend="_class_top_bar_button_component_1afd6764fdfc07635facdb399735b48b8b">00062</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;GameObject&#32;<link linkend="_class_top_bar_button_component_1afd6764fdfc07635facdb399735b48b8b">GetObject</link>(<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link>&#32;item)
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;_topBarobjects[(int)item];
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00066"/>00066 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00067"/><link linkend="_class_top_bar_button_component_1a44ad772c266cd935cb12b4e42f6b34ad">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_top_bar_button_component_1a44ad772c266cd935cb12b4e42f6b34ad">GetObjectState</link>(<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link>&#32;item)
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;_topBarobjects[(int)item].activeSelf;
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00071"/>00071 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00072"/><link linkend="_class_top_bar_button_component_1a1f40c1e1591ae5a5d2b393922cab77e0">00072</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_top_bar_button_component_1a1f40c1e1591ae5a5d2b393922cab77e0">MoveItem</link>(<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link>&#32;item,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;moveToLeft)
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(moveToLeft)
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_topBarobjects[(int)item].transform.SetParent(_leftSideObject.transform);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_topBarobjects[(int)item].transform.SetParent(_rightSideObject.transform);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00083"/>00083 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00084"/><link linkend="_class_top_bar_button_component_1aa9571b40028e67fab3cb0429263238df">00084</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_top_bar_button_component_1aa9571b40028e67fab3cb0429263238df">OnBugReportButtonPressed</link>()
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Application.OpenURL(<emphasis role="stringliteral">&quot;https://tally.so/r/mYzvx5&quot;</emphasis>);
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00088"/>00088 
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00089"/><link linkend="_class_top_bar_button_component_1a7c912b004c928a53bff0b47c2aeadada">00089</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_top_bar_button_component_1a7c912b004c928a53bff0b47c2aeadada">OnRefresh</link>()
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JavaScriptUtils.RefreshPage();
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__top_bar_button_component_8cs_source_1l00093"/>00093 }
+</programlisting></section>

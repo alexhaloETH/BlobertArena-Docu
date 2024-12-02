@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_pv_p_challenge_score" xml:lang="en-US">
+<title>PvPChallengeScore Class Reference</title>
+<indexterm><primary>PvPChallengeScore</primary></indexterm>
+<para>Inheritance diagram for PvPChallengeScore:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pv_p_challenge_score.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query">PvPChallengeScoreDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static async Task&lt; List&lt;(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> tokenId, int <link linkend="_class_pv_p_challenge_score_1a80493a9aab6b14ec58651aeca522ded0">wins</link>)&gt; &gt; <link linkend="_class_pv_p_challenge_score_1a1eb84f60170fac6d94f9c23ba9b0e0ba">QueryLeaderBoardForCollection</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> collectionAddress)</para>
+</listitem>
+            <listitem><para>static Dojo.Torii.? <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_pv_p_challenge_score_1a176ededf46ffb7f4362530534c38d69b">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? <link linkend="_class_pv_p_challenge_score_1a77bed693ea52f46396d9e5c07ed7d040">player</link>=null, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? collectionAddress=null, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? tokenHigh=null, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? tokenLow=null)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_score_1a77bed693ea52f46396d9e5c07ed7d040">player</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_score_1a5c940b1c0723b48b3486da7d211ca81d">collection_address</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_score_1ac462e3797154a21083aedc4bb7bcdafe">token_high</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_score_1aeab745385d691b88e5bae99426f368bb">token_low</link></para>
+</listitem>
+            <listitem><para>ulong <link linkend="_class_pv_p_challenge_score_1a80493a9aab6b14ec58651aeca522ded0">wins</link></para>
+</listitem>
+            <listitem><para>ulong <link linkend="_class_pv_p_challenge_score_1a971b33a0204720cb1371ea201e64473d">losses</link></para>
+</listitem>
+            <listitem><para>ulong <link linkend="_class_pv_p_challenge_score_1a7601ab43367571ac2d0173df4b8bba32">max_consecutive_wins</link></para>
+</listitem>
+            <listitem><para>ulong <link linkend="_class_pv_p_challenge_score_1a860c7b31330808dbb214514bdc1dba25">current_consecutive_wins</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_pv_p_challenge_score_1a97977334099f1eae5d6ab42b5a49ec73">PvPChallengeScoreGraphQlQueryFullString</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_pv_p_challenge_score_1aa0183c3118d210e8366411f8ef4cd49b">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_pv_p_challenge_score_1ae7123c60258c955669c0f0caf455b748">GraphQlHeader</link> = &quot;blobArenaPvPChallengeScoreModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00013">13</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_pv_p_challenge_score_1a176ededf46ffb7f4362530534c38d69b"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static Dojo.Torii.? <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> PvPChallengeScore.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? player = <computeroutput>null</computeroutput>
+, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? collectionAddress = <computeroutput>null</computeroutput>
+, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? tokenHigh = <computeroutput>null</computeroutput>
+, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>? tokenLow = <computeroutput>null</computeroutput>
+)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00105">105</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a1eb84f60170fac6d94f9c23ba9b0e0ba"/><section>
+    <title>QueryLeaderBoardForCollection()</title>
+<indexterm><primary>QueryLeaderBoardForCollection</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>QueryLeaderBoardForCollection</secondary></indexterm>
+<para><computeroutput>static async Task&lt; List&lt;(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> tokenId, int <link linkend="_class_pv_p_challenge_score_1a80493a9aab6b14ec58651aeca522ded0">wins</link>)&gt; &gt; PvPChallengeScore.QueryLeaderBoardForCollection (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> collectionAddress)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00044">44</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_pv_p_challenge_score_1a5c940b1c0723b48b3486da7d211ca81d"/><section>
+    <title>collection_address</title>
+<indexterm><primary>collection_address</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>collection_address</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeScore.collection_address</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00019">19</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a860c7b31330808dbb214514bdc1dba25"/><section>
+    <title>current_consecutive_wins</title>
+<indexterm><primary>current_consecutive_wins</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>current_consecutive_wins</secondary></indexterm>
+<para><computeroutput>ulong PvPChallengeScore.current_consecutive_wins</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00037">37</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1ae7123c60258c955669c0f0caf455b748"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string PvPChallengeScore.GraphQlHeader = &quot;blobArenaPvPChallengeScoreModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00165">165</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1aa0183c3118d210e8366411f8ef4cd49b"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string PvPChallengeScore.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PvPChallengeScore&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;player</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;collection_address</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;token_high</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;token_low</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wins</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;max_consecutive_wins</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_consecutive_wins</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00153">153</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a971b33a0204720cb1371ea201e64473d"/><section>
+    <title>losses</title>
+<indexterm><primary>losses</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>losses</secondary></indexterm>
+<para><computeroutput>ulong PvPChallengeScore.losses</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00031">31</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a7601ab43367571ac2d0173df4b8bba32"/><section>
+    <title>max_consecutive_wins</title>
+<indexterm><primary>max_consecutive_wins</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>max_consecutive_wins</secondary></indexterm>
+<para><computeroutput>ulong PvPChallengeScore.max_consecutive_wins</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00034">34</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a77bed693ea52f46396d9e5c07ed7d040"/><section>
+    <title>player</title>
+<indexterm><primary>player</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>player</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeScore.player</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00016">16</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a97977334099f1eae5d6ab42b5a49ec73"/><section>
+    <title>PvPChallengeScoreGraphQlQueryFullString</title>
+<indexterm><primary>PvPChallengeScoreGraphQlQueryFullString</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>PvPChallengeScoreGraphQlQueryFullString</secondary></indexterm>
+<para><computeroutput>readonly string PvPChallengeScore.PvPChallengeScoreGraphQlQueryFullString<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;blobArenaPvPChallengeScoreModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PvPChallengeScore&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;player</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;collection_address</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;token_high</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;token_low</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wins</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;max_consecutive_wins</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_consecutive_wins</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalCount</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00128">128</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1ac462e3797154a21083aedc4bb7bcdafe"/><section>
+    <title>token_high</title>
+<indexterm><primary>token_high</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>token_high</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeScore.token_high</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00022">22</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1aeab745385d691b88e5bae99426f368bb"/><section>
+    <title>token_low</title>
+<indexterm><primary>token_low</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>token_low</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeScore.token_low</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00025">25</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_score_1a80493a9aab6b14ec58651aeca522ded0"/><section>
+    <title>wins</title>
+<indexterm><primary>wins</primary><secondary>PvPChallengeScore</secondary></indexterm>
+<indexterm><primary>PvPChallengeScore</primary><secondary>wins</secondary></indexterm>
+<para><computeroutput>ulong PvPChallengeScore.wins</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_score_8gen_8cs_source_1l00028">28</link> of file <link linkend="__pv_p_challenge_score_8gen_8cs_source">PvPChallengeScore.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__pv_p_challenge_score_8gen_8cs">PvPChallengeScore.gen.cs</link></section>
+</section>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_i_damage" xml:lang="en-US">
+<title>IDamage Struct Reference</title>
+<indexterm><primary>IDamage</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>byte <link linkend="_struct_i_damage_1aa649dca18c93be2afa509c8a1d578bac">critical</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_struct_i_damage_1a93a941f631b5ccb8235bcbff4f214016">power</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00024">24</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_i_damage_1aa649dca18c93be2afa509c8a1d578bac"/><section>
+    <title>critical</title>
+<indexterm><primary>critical</primary><secondary>IDamage</secondary></indexterm>
+<indexterm><primary>IDamage</primary><secondary>critical</secondary></indexterm>
+<para><computeroutput>byte IDamage.critical</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00026">26</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_i_damage_1a93a941f631b5ccb8235bcbff4f214016"/><section>
+    <title>power</title>
+<indexterm><primary>power</primary><secondary>IDamage</secondary></indexterm>
+<indexterm><primary>IDamage</primary><secondary>power</secondary></indexterm>
+<para><computeroutput>byte IDamage.power</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00027">27</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__attack_8gen_8cs">Attack.gen.cs</link></section>
+</section>

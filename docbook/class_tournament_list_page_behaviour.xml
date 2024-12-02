@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tournament_list_page_behaviour" xml:lang="en-US">
+<title>TournamentListPageBehaviour Class Reference</title>
+<indexterm><primary>TournamentListPageBehaviour</primary></indexterm>
+<para>
+
+<para>Listing all the tournaments, the logic is allready all done i think this page is over maybe just give it a good look before. </para>
+ 
+</para>
+<para>Inheritance diagram for TournamentListPageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tournament_list_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_tournament_list_page_behaviour_1_1_data">Data</link></para>
+
+<para>Intermediate struct, holding the list of all the tournaments. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tournament_list_page_behaviour_1_1_querry_result">QuerryResult</link></para>
+
+<para><link linkend="_struct_tournament_list_page_behaviour_1_1_data">Data</link> class that matches the JSON format of the data on the backend server. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link></para>
+
+<para>Struct for the tournament data. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_tournament_list_page_behaviour_1a3c49fe8356b332b057aec0b71a05c4f7">StoreActiveTournamentData</link> (<link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link> data)</para>
+
+<para>Stores the date of the selected tournament from the list. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link> <link linkend="_class_tournament_list_page_behaviour_1aa0a3d88973ffdec9087afe8e530c6feb">GetActiveTournamentData</link> ()</para>
+
+<para>Returns the struct with the currently active tournament. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Listing all the tournaments, the logic is allready all done i think this page is over maybe just give it a good look before. </para>
+<para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00010">10</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tournament_list_page_behaviour_1aa0a3d88973ffdec9087afe8e530c6feb"/><section>
+    <title>GetActiveTournamentData()</title>
+<indexterm><primary>GetActiveTournamentData</primary><secondary>TournamentListPageBehaviour</secondary></indexterm>
+<indexterm><primary>TournamentListPageBehaviour</primary><secondary>GetActiveTournamentData</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link> TournamentListPageBehaviour.GetActiveTournamentData ( )</computeroutput></para><para>
+
+<para>Returns the struct with the currently active tournament. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00122">122</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_tournament_list_page_behaviour_1a3c49fe8356b332b057aec0b71a05c4f7"/><section>
+    <title>StoreActiveTournamentData()</title>
+<indexterm><primary>StoreActiveTournamentData</primary><secondary>TournamentListPageBehaviour</secondary></indexterm>
+<indexterm><primary>TournamentListPageBehaviour</primary><secondary>StoreActiveTournamentData</secondary></indexterm>
+<para><computeroutput>void TournamentListPageBehaviour.StoreActiveTournamentData (<link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link> data)</computeroutput></para><para>
+
+<para>Stores the date of the selected tournament from the list. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00113">113</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/<link linkend="__tournament_list_page_behaviour_8cs">TournamentListPageBehaviour.cs</link></section>
+</section>

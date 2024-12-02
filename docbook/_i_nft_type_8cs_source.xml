@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_nft_type_8cs_source" xml:lang="en-US">
+<title>INftType.cs</title>
+<indexterm><primary>LogicLayer/Interfaces/INftType.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__i_nft_type_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__i_nft_type_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__i_nft_type_8cs_source_1l00003"/>00003 
+<anchor xml:id="__i_nft_type_8cs_source_1l00004"/><link linkend="_interface_i_nft_type">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">interface&#32;</emphasis><link linkend="_interface_i_nft_type">INftType</link>
+<anchor xml:id="__i_nft_type_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__i_nft_type_8cs_source_1l00006"/><link linkend="_interface_i_nft_type_1a2abc488b33cbb624a9c00fc6efe8b974">00006</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_t_stats">TStats</link>&#32;<link linkend="_interface_i_nft_type_1a2abc488b33cbb624a9c00fc6efe8b974">GetStats</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00007"/>00007 
+<anchor xml:id="__i_nft_type_8cs_source_1l00008"/><link linkend="_interface_i_nft_type_1a7bd25912127182da857a5e7224d5d489">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;Item&gt;&#32;<link linkend="_interface_i_nft_type_1a7bd25912127182da857a5e7224d5d489">GetItems</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00009"/>00009 
+<anchor xml:id="__i_nft_type_8cs_source_1l00010"/><link linkend="_interface_i_nft_type_1aea8d4c717f7660add2e3d5c3920fd41a">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Dictionary&lt;string,&#32;List&lt;Attack&gt;&gt;&#32;<link linkend="_interface_i_nft_type_1aea8d4c717f7660add2e3d5c3920fd41a">GetAttackMapToTrait</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00011"/><link linkend="_interface_i_nft_type_1a042ec63cdfa6aa93bf8558bd9d1bc294">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Dictionary&lt;string,&#32;Item&gt;&#32;<link linkend="_interface_i_nft_type_1a042ec63cdfa6aa93bf8558bd9d1bc294">GetItemMapToTrait</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00012"/>00012 
+<anchor xml:id="__i_nft_type_8cs_source_1l00013"/><link linkend="_interface_i_nft_type_1abe085c5479f08c0ab55bad8027cda365">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;TokenTrait&#32;<link linkend="_interface_i_nft_type_1abe085c5479f08c0ab55bad8027cda365">GetTokenTrait</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00014"/>00014 
+<anchor xml:id="__i_nft_type_8cs_source_1l00015"/><link linkend="_interface_i_nft_type_1afa7bc1d87ec6484c21c78e686a876a99">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_seed">Seed</link>&#32;<link linkend="_interface_i_nft_type_1afa7bc1d87ec6484c21c78e686a876a99">GetSeed</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00016"/>00016 
+<anchor xml:id="__i_nft_type_8cs_source_1l00017"/><link linkend="_interface_i_nft_type_1a64c18169831c3928f539756915454d38">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_interface_i_nft_type_1a64c18169831c3928f539756915454d38">GetCustom</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00018"/>00018 
+<anchor xml:id="__i_nft_type_8cs_source_1l00019"/><link linkend="_interface_i_nft_type_1a460575e5ee67460688b562300c8e75aa">00019</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_interface_i_nft_type_1a460575e5ee67460688b562300c8e75aa">GetMaxHealth</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00020"/>00020 
+<anchor xml:id="__i_nft_type_8cs_source_1l00021"/><link linkend="_interface_i_nft_type_1a8b06e21a4892cbf5961568f4d118be3e">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_interface_i_nft_type_1a8b06e21a4892cbf5961568f4d118be3e">GetOwner</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00022"/>00022 
+<anchor xml:id="__i_nft_type_8cs_source_1l00023"/><link linkend="_interface_i_nft_type_1ad85fb13e00c2fed0e17d74131e957924">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_interface_i_nft_type_1ad85fb13e00c2fed0e17d74131e957924">GetTokenId</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00024"/>00024 
+<anchor xml:id="__i_nft_type_8cs_source_1l00025"/><link linkend="_interface_i_nft_type_1a64674a4b35f8d823646b4a804773eeb3">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_interface_i_nft_type_1a64674a4b35f8d823646b4a804773eeb3">IsAddressOwner</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;user);
+<anchor xml:id="__i_nft_type_8cs_source_1l00026"/>00026 
+<anchor xml:id="__i_nft_type_8cs_source_1l00027"/><link linkend="_interface_i_nft_type_1a38e8bce326427c4a3d7e35f69e7e7a5c">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link>&#32;<link linkend="_interface_i_nft_type_1a38e8bce326427c4a3d7e35f69e7e7a5c">GetNftType</link>();
+<anchor xml:id="__i_nft_type_8cs_source_1l00028"/>00028 
+<anchor xml:id="__i_nft_type_8cs_source_1l00029"/><link linkend="_interface_i_nft_type_1acad47123d95d62e5fcab1f88a895487c">00029</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;T&#32;<link linkend="_interface_i_nft_type_1acad47123d95d62e5fcab1f88a895487c">GetInstance&lt;T&gt;</link>()&#32;where&#32;T&#32;:&#32;<link linkend="_interface_i_nft_type">INftType</link>;
+<anchor xml:id="__i_nft_type_8cs_source_1l00030"/>00030 }
+</programlisting></section>

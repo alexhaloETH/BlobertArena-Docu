@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tournament_list_element" xml:lang="en-US">
+<title>TournamentListElement Class Reference</title>
+<indexterm><primary>TournamentListElement</primary></indexterm>
+<para>Inheritance diagram for TournamentListElement:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tournament_list_element.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_tournament_list_element_1aa8eabab514b53df743d30b9af3b55276">Initialize</link> (<link linkend="_class_tournament_list_page_behaviour">TournamentListPageBehaviour</link> parentPage, TournamentData data)</para>
+
+<para>Initialiser for the tournament label, populates it with data. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tournament_list_element_1a945b6fab8d85c0e69e8b831e9a45e5bc">ExploreTournamentButtonPressed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tournament_list_element_1ad3fd7190ab88820699baa3510170367c">JoinTournamentButtonPressed</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00006">6</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tournament_list_element_1a945b6fab8d85c0e69e8b831e9a45e5bc"/><section>
+    <title>ExploreTournamentButtonPressed()</title>
+<indexterm><primary>ExploreTournamentButtonPressed</primary><secondary>TournamentListElement</secondary></indexterm>
+<indexterm><primary>TournamentListElement</primary><secondary>ExploreTournamentButtonPressed</secondary></indexterm>
+<para><computeroutput>void TournamentListElement.ExploreTournamentButtonPressed ( )</computeroutput></para><para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00051">51</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+</section>
+<anchor xml:id="_class_tournament_list_element_1aa8eabab514b53df743d30b9af3b55276"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>TournamentListElement</secondary></indexterm>
+<indexterm><primary>TournamentListElement</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void TournamentListElement.Initialize (<link linkend="_class_tournament_list_page_behaviour">TournamentListPageBehaviour</link> parentPage, TournamentData data)</computeroutput></para><para>
+
+<para>Initialiser for the tournament label, populates it with data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>parentPage</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00036">36</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+</section>
+<anchor xml:id="_class_tournament_list_element_1ad3fd7190ab88820699baa3510170367c"/><section>
+    <title>JoinTournamentButtonPressed()</title>
+<indexterm><primary>JoinTournamentButtonPressed</primary><secondary>TournamentListElement</secondary></indexterm>
+<indexterm><primary>TournamentListElement</primary><secondary>JoinTournamentButtonPressed</secondary></indexterm>
+<para><computeroutput>void TournamentListElement.JoinTournamentButtonPressed ( )</computeroutput></para><para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00057">57</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__tournament_list_element_8cs">TournamentListElement.cs</link></section>
+</section>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__java_script_utils_8cs_source" xml:lang="en-US">
+<title>JavaScriptUtils.cs</title>
+<indexterm><primary>Managers/JavaScriptUtils.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__java_script_utils_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Runtime.InteropServices;
+<anchor xml:id="__java_script_utils_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__java_script_utils_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__java_script_utils_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__java_script_utils_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>AOT;
+<anchor xml:id="__java_script_utils_8cs_source_1l00006"/>00006 
+<anchor xml:id="__java_script_utils_8cs_source_1l00007"/>00007 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>JavaScriptUtils
+<anchor xml:id="__java_script_utils_8cs_source_1l00008"/>00008 {
+<anchor xml:id="__java_script_utils_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;CopyToClipboardImpl(<emphasis role="keywordtype">string</emphasis>&#32;text);
+<anchor xml:id="__java_script_utils_8cs_source_1l00011"/>00011 
+<anchor xml:id="__java_script_utils_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;CopyStringToClipboard(<emphasis role="keywordtype">string</emphasis>&#32;textToCopy)
+<anchor xml:id="__java_script_utils_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00014"/>00014 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CopyToClipboardImpl(textToCopy);
+<anchor xml:id="__java_script_utils_8cs_source_1l00016"/>00016 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GUIUtility.systemCopyBuffer&#32;=&#32;textToCopy;
+<anchor xml:id="__java_script_utils_8cs_source_1l00018"/>00018 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00019"/>00019 
+<anchor xml:id="__java_script_utils_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Copied:&#32;{textToCopy}&quot;</emphasis>);
+<anchor xml:id="__java_script_utils_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00022"/>00022 
+<anchor xml:id="__java_script_utils_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;PoseidonHash(<emphasis role="keywordtype">string</emphasis>[]&#32;arrayOfElements,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length);
+<anchor xml:id="__java_script_utils_8cs_source_1l00025"/>00025 
+<anchor xml:id="__java_script_utils_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ToggleFullscreen();
+<anchor xml:id="__java_script_utils_8cs_source_1l00028"/>00028 
+<anchor xml:id="__java_script_utils_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;PoseidonHashHelper(<emphasis role="keywordtype">string</emphasis>[]&#32;arrayOfElements)
+<anchor xml:id="__java_script_utils_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;PoseidonHash(arrayOfElements,&#32;arrayOfElements.Length);
+<anchor xml:id="__java_script_utils_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00033"/>00033 
+<anchor xml:id="__java_script_utils_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;RefreshPage();
+<anchor xml:id="__java_script_utils_8cs_source_1l00036"/>00036 
+<anchor xml:id="__java_script_utils_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OpenURL(<emphasis role="keywordtype">string</emphasis>&#32;url);
+<anchor xml:id="__java_script_utils_8cs_source_1l00039"/>00039 
+<anchor xml:id="__java_script_utils_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;LocalStorageSetItem(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;<emphasis role="keywordtype">string</emphasis>&#32;value);
+<anchor xml:id="__java_script_utils_8cs_source_1l00042"/>00042 
+<anchor xml:id="__java_script_utils_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;IntPtr&#32;LocalStorageGetItem(<emphasis role="keywordtype">string</emphasis>&#32;key);
+<anchor xml:id="__java_script_utils_8cs_source_1l00045"/>00045 
+<anchor xml:id="__java_script_utils_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;LocalStorageRemoveItem(<emphasis role="keywordtype">string</emphasis>&#32;key);
+<anchor xml:id="__java_script_utils_8cs_source_1l00048"/>00048 
+<anchor xml:id="__java_script_utils_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;LocalStorageFree(IntPtr&#32;ptr);
+<anchor xml:id="__java_script_utils_8cs_source_1l00051"/>00051 
+<anchor xml:id="__java_script_utils_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetItem(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;<emphasis role="keywordtype">string</emphasis>&#32;value)
+<anchor xml:id="__java_script_utils_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00054"/>00054 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalStorageSetItem(key,&#32;value);
+<anchor xml:id="__java_script_utils_8cs_source_1l00056"/>00056 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerPrefs.SetString(key,&#32;value);
+<anchor xml:id="__java_script_utils_8cs_source_1l00058"/>00058 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00060"/>00060 
+<anchor xml:id="__java_script_utils_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetItem(<emphasis role="keywordtype">string</emphasis>&#32;key)
+<anchor xml:id="__java_script_utils_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00063"/>00063 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntPtr&#32;ptr&#32;=&#32;LocalStorageGetItem(key);
+<anchor xml:id="__java_script_utils_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(ptr&#32;==&#32;IntPtr.Zero)
+<anchor xml:id="__java_script_utils_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__java_script_utils_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;value&#32;=&#32;Marshal.PtrToStringAnsi(ptr);
+<anchor xml:id="__java_script_utils_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalStorageFree(ptr);
+<anchor xml:id="__java_script_utils_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;value;
+<anchor xml:id="__java_script_utils_8cs_source_1l00070"/>00070 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;PlayerPrefs.GetString(key);
+<anchor xml:id="__java_script_utils_8cs_source_1l00072"/>00072 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00074"/>00074 
+<anchor xml:id="__java_script_utils_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;RemoveItem(<emphasis role="keywordtype">string</emphasis>&#32;key)
+<anchor xml:id="__java_script_utils_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00077"/>00077 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalStorageRemoveItem(key);
+<anchor xml:id="__java_script_utils_8cs_source_1l00079"/>00079 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerPrefs.DeleteKey(key);
+<anchor xml:id="__java_script_utils_8cs_source_1l00081"/>00081 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00083"/>00083 
+<anchor xml:id="__java_script_utils_8cs_source_1l00084"/>00084 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Fetching&#32;clipboard&#32;content</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00085"/>00085 
+<anchor xml:id="__java_script_utils_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Importing&#32;the&#32;external&#32;JavaScript&#32;function&#32;into&#32;Unity</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;[DllImport(<emphasis role="stringliteral">&quot;__Internal&quot;</emphasis>)]
+<anchor xml:id="__java_script_utils_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;GetClipboardContent(Action&lt;string&gt;&#32;callback);
+<anchor xml:id="__java_script_utils_8cs_source_1l00089"/>00089 
+<anchor xml:id="__java_script_utils_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Helper&#32;class&#32;to&#32;handle&#32;the&#32;callback&#32;from&#32;JavaScript</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00091"/><link linkend="_class_java_script_utils_1_1_clipboard_helper">00091</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_java_script_utils_1_1_clipboard_helper">ClipboardHelper</link>
+<anchor xml:id="__java_script_utils_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00093"/><link linkend="_class_java_script_utils_1_1_clipboard_helper_1a2ccc73cc43b399b0055e1f4ff4707ad2">00093</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;TaskCompletionSource&lt;string&gt;&#32;<link linkend="_class_java_script_utils_1_1_clipboard_helper_1a2ccc73cc43b399b0055e1f4ff4707ad2">Tcs</link>;
+<anchor xml:id="__java_script_utils_8cs_source_1l00094"/>00094 
+<anchor xml:id="__java_script_utils_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;callback&#32;method&#32;that&#32;Unity&#32;will&#32;call&#32;once&#32;the&#32;clipboard&#32;content&#32;is&#32;fetched</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[MonoPInvokeCallback(typeof(Action&lt;string&gt;))]
+<anchor xml:id="__java_script_utils_8cs_source_1l00097"/><link linkend="_class_java_script_utils_1_1_clipboard_helper_1a114215900b4553f48555e3a8ecc5967c">00097</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_java_script_utils_1_1_clipboard_helper_1a114215900b4553f48555e3a8ecc5967c">Callback</link>(<emphasis role="keywordtype">string</emphasis>&#32;result)
+<anchor xml:id="__java_script_utils_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_java_script_utils_1_1_clipboard_helper_1a2ccc73cc43b399b0055e1f4ff4707ad2">Tcs</link>.SetResult(result);&#32;<emphasis role="comment">//&#32;Complete&#32;the&#32;task&#32;with&#32;the&#32;clipboard&#32;content</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00102"/>00102 
+<anchor xml:id="__java_script_utils_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Method&#32;to&#32;fetch&#32;clipboard&#32;content&#32;asynchronously</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Task&lt;string&gt;&#32;FetchClipboardContentAsync()
+<anchor xml:id="__java_script_utils_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__java_script_utils_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClipboardHelper.Tcs&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;TaskCompletionSource&lt;string&gt;();&#32;<emphasis role="comment">//&#32;Create&#32;a&#32;new&#32;task</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00107"/>00107 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetClipboardContent(ClipboardHelper.Callback);&#32;<emphasis role="comment">//&#32;Call&#32;the&#32;JS&#32;function&#32;to&#32;get&#32;clipboard&#32;content</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ClipboardHelper.Tcs.Task;&#32;<emphasis role="comment">//&#32;Return&#32;the&#32;task&#32;that&#32;will&#32;complete&#32;once&#32;JS&#32;calls&#32;back</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00110"/>00110 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Task.FromResult(<emphasis role="stringliteral">&quot;&quot;</emphasis>);&#32;<emphasis role="comment">//&#32;Return&#32;an&#32;empty&#32;string&#32;for&#32;non-WebGL&#32;platforms&#32;(e.g.,&#32;in&#32;editor)</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00112"/>00112 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__java_script_utils_8cs_source_1l00114"/>00114 
+<anchor xml:id="__java_script_utils_8cs_source_1l00115"/>00115 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Fetching&#32;clipboard&#32;content</emphasis>
+<anchor xml:id="__java_script_utils_8cs_source_1l00116"/>00116 }
+</programlisting></section>

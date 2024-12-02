@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__speach_bubble_8cs" xml:lang="en-US">
+<title>Misc/SpeachBubble.cs File Reference</title>
+<indexterm><primary>Misc/SpeachBubble.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_speach_bubble">SpeachBubble</link></para>
+
+<para>Simple speach bubble script. After instantiation, the bubble is &quot;dormant&quot;, to start it, call either the <link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">OneShotInsult()</link> or <link linkend="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1">ContinousInsulting()</link> functions. To configure the lifetime and delay, use the <link linkend="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1">SetLifetimeAndDelay()</link> function before calling calling any of the starting functions. To stop the insults, call <link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble()</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

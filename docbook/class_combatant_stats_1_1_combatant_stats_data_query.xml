@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combatant_stats_1_1_combatant_stats_data_query" xml:lang="en-US">
+<title>CombatantStats.CombatantStatsDataQuery Class Reference</title>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary></indexterm>
+<para>Inheritance diagram for CombatantStats.CombatantStatsDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_combatant_stats_1_1_combatant_stats_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_combatant_stats_1_1_combatant_stats_data_query_1a54388e7715a94de6b6e0087cd83eae26">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_stats_1_1_combatant_stats_data_query_1af22aae3b7281e0279e4f8072753e5de2">id</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_stats_1_1_combatant_stats_data_query_1a0b108265dfe41a5e173a98723c90117a">attack</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_stats_1_1_combatant_stats_data_query_1ae20c97cd348625e6e2a3f25864b03131">defense</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_stats_1_1_combatant_stats_data_query_1ab44e058f12e893aed55030bc3254fa1c">speed</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_stats_1_1_combatant_stats_data_query_1a21876efcf48755dfb304d163f4612462">strength</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00067">67</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_combatant_stats_1_1_combatant_stats_data_query_1a54388e7715a94de6b6e0087cd83eae26"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>CombatantStats.CombatantStatsDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string CombatantStats.CombatantStatsDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00069">69</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_stats_1_1_combatant_stats_data_query_1a0b108265dfe41a5e173a98723c90117a"/><section>
+    <title>attack</title>
+<indexterm><primary>attack</primary><secondary>CombatantStats.CombatantStatsDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary><secondary>attack</secondary></indexterm>
+<para><computeroutput>string CombatantStats.CombatantStatsDataQuery.attack = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00071">71</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_stats_1_1_combatant_stats_data_query_1ae20c97cd348625e6e2a3f25864b03131"/><section>
+    <title>defense</title>
+<indexterm><primary>defense</primary><secondary>CombatantStats.CombatantStatsDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary><secondary>defense</secondary></indexterm>
+<para><computeroutput>string CombatantStats.CombatantStatsDataQuery.defense = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00072">72</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_stats_1_1_combatant_stats_data_query_1af22aae3b7281e0279e4f8072753e5de2"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>CombatantStats.CombatantStatsDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>string CombatantStats.CombatantStatsDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00070">70</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_stats_1_1_combatant_stats_data_query_1ab44e058f12e893aed55030bc3254fa1c"/><section>
+    <title>speed</title>
+<indexterm><primary>speed</primary><secondary>CombatantStats.CombatantStatsDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary><secondary>speed</secondary></indexterm>
+<para><computeroutput>string CombatantStats.CombatantStatsDataQuery.speed = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00073">73</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_stats_1_1_combatant_stats_data_query_1a21876efcf48755dfb304d163f4612462"/><section>
+    <title>strength</title>
+<indexterm><primary>strength</primary><secondary>CombatantStats.CombatantStatsDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantStats.CombatantStatsDataQuery</primary><secondary>strength</secondary></indexterm>
+<para><computeroutput>string CombatantStats.CombatantStatsDataQuery.strength = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00074">74</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__combatant_stats_8gen_8cs">CombatantStats.gen.cs</link></section>
+</section>

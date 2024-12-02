@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_actions_contract_1_1_reveal_attack_struct" xml:lang="en-US">
+<title>PvpActionsContract.RevealAttackStruct Struct Reference</title>
+<indexterm><primary>PvpActionsContract.RevealAttackStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a0164421e4df3d664f29424a5950a26cc">RevealAttackStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a0fc0c2adf65c5aa3dfed8b1532d02111">combatantId</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1aeb76c2d29f9dfa2b63cede5480804036">attack</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a75ff3b7b9fcf63ebbc13d669be7cac72">salt</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a2bbe62859f05396911c7d36d71f909ca">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a0fc0c2adf65c5aa3dfed8b1532d02111">combatantId</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1aeb76c2d29f9dfa2b63cede5480804036">attack</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a75ff3b7b9fcf63ebbc13d669be7cac72">salt</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a2bbe62859f05396911c7d36d71f909ca">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00212">212</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a0164421e4df3d664f29424a5950a26cc"/><section>
+    <title>RevealAttackStruct()</title>
+<indexterm><primary>RevealAttackStruct</primary><secondary>PvpActionsContract.RevealAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RevealAttackStruct</primary><secondary>RevealAttackStruct</secondary></indexterm>
+<para><computeroutput>PvpActionsContract.RevealAttackStruct.RevealAttackStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> attack, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> salt, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00219">219</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1aeb76c2d29f9dfa2b63cede5480804036"/><section>
+    <title>attack</title>
+<indexterm><primary>attack</primary><secondary>PvpActionsContract.RevealAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RevealAttackStruct</primary><secondary>attack</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.RevealAttackStruct.attack</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00215">215</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a0fc0c2adf65c5aa3dfed8b1532d02111"/><section>
+    <title>combatantId</title>
+<indexterm><primary>combatantId</primary><secondary>PvpActionsContract.RevealAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RevealAttackStruct</primary><secondary>combatantId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.RevealAttackStruct.combatantId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00214">214</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a2bbe62859f05396911c7d36d71f909ca"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpActionsContract.RevealAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RevealAttackStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpActionsContract.RevealAttackStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00217">217</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_reveal_attack_struct_1a75ff3b7b9fcf63ebbc13d669be7cac72"/><section>
+    <title>salt</title>
+<indexterm><primary>salt</primary><secondary>PvpActionsContract.RevealAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RevealAttackStruct</primary><secondary>salt</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.RevealAttackStruct.salt</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00216">216</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_actions_contract_8cs">PvpActionsContract.cs</link></section>
+</section>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__button_manager_battle_page_component_8cs_source" xml:lang="en-US">
+<title>ButtonManagerBattlePageComponent.cs</title>
+<indexterm><primary>UI/Components/ButtonManagerBattlePageComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>SimpleGraphQL;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00006"/>00006 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00007"/><link linkend="_class_button_manager_battle_page_component">00007</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_button_manager_battle_page_component">ButtonManagerBattlePageComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00008"/>00008 {
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_messageText;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00010"/>00010 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_battle_page_controller">BattlePageController</link>&#32;_battlePageController;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;List&lt;BaseButton&gt;&#32;_baseButtonList&#32;=&#32;<emphasis role="keyword">new</emphasis>();
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_buttonPrefab;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00014"/>00014 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[Space(15)]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Reveal&quot;</emphasis>)]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;_revealParentTransform;&#32;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00018"/>00018 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[Space(15)]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Attacks&quot;</emphasis>)]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;_commitAttackParent;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;_buttonParent;&#32;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00023"/>00023 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;[Space(15)]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Wait&quot;</emphasis>)]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00027"/>00027 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;_arrOfAttackMessages&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Choose&#32;your&#32;next&#32;move!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Time&#32;to&#32;strike!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;What&#32;will&#32;you&#32;do?&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Choose&#32;wisely!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Your&#32;move!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Choose&#32;your&#32;move!&quot;</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00032"/>00032 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;_arrOfRevealMessages&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Reveal&#32;your&#32;secrets!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Show&#32;your&#32;hand!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Reveal&#32;your&#32;move!&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Show&#32;your&#32;move!&quot;</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00037"/>00037 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;_arrOfMessagesWaiting&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Waiting&#32;for&#32;opponent&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Opponent&#32;is&#32;deciding&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Opponent&#32;is&#32;thinking&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Opponent&#32;is&#32;choosing&quot;</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00042"/>00042 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00043"/><link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6adcfafcb4323b102c7e204555d313ba0a">Attack</link>,
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a393c3f5ea8ad35c02691d507bdbb31b0">Reveal</link>,
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a0f68101772bd5397ef8eb1b632798652">Wait</link>,
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a62a5e490880a92eef74f167d9dc6dca0">Hide</link>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00050"/>00050 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00056"/><link linkend="_class_button_manager_battle_page_component_1a68ce90c827cba11aa638603406892301">00056</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a68ce90c827cba11aa638603406892301">GenerateButtons</link>(List&lt;Attack&gt;&#32;attacksList,&#32;<link linkend="_class_battle_page_controller">BattlePageController</link>&#32;battlePageController)
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//_battlePageBehaviour&#32;=&#32;battlePageBehaviour;</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00059"/>00059 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//foreach&#32;(Transform&#32;child&#32;in&#32;_buttonParent)</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;Destroy(child.gameObject);</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00064"/>00064 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//_baseButtonList.Clear();</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//for&#32;(int&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;attacksList.Count;&#32;i++)</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;obj&#32;=&#32;Instantiate(_buttonPrefab,&#32;_buttonParent);</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;baseButton&#32;=&#32;obj.GetComponent&lt;BaseButton&gt;();</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00070"/>00070 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;_baseButtonList.Add(baseButton);</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00072"/>00072 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;text&#32;=&#32;obj.GetComponentInChildren&lt;TMP_Text&gt;();</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;text.text&#32;=&#32;attacksList[i].dojoName.ToUpper();</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;button&#32;=&#32;obj.GetComponent&lt;Button&gt;();</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00076"/>00076 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;capturedIndex&#32;=&#32;i;&#32;</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;button.onClick.AddListener(()&#32;=&gt;&#32;battlePageBehaviour.CallToAttacks(capturedIndex));</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00081"/>00081 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00082"/><link linkend="_class_button_manager_battle_page_component_1a0b5edd47f5a53aa8c4d80f2dda5e563d">00082</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a0b5edd47f5a53aa8c4d80f2dda5e563d">SetAvailability</link>(List&lt;AvailableAttack&gt;&#32;availableAttacks)
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;availableAttacks.Count;&#32;i++)
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(!availableAttacks[i].available)</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;_baseButtonList[i].SetState(true,true);</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//else</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;_baseButtonList[i].SetState(false,&#32;true);</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00092"/>00092 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00097"/><link linkend="_class_button_manager_battle_page_component_1a2349697a129136895de2581c9d37bd11">00097</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a2349697a129136895de2581c9d37bd11">SetButtonsState</link>(<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link>&#32;gameState)
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(gameState)
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link>.Attack:
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_commitAttackParent.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_revealParentTransform.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_messageText.text&#32;=&#32;GetRandomMessage(_arrOfAttackMessages);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00106"/>00106 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link>.Reveal:
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_commitAttackParent.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_revealParentTransform.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_messageText.text&#32;=&#32;GetRandomMessage(_arrOfRevealMessages);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00112"/>00112 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link>.Wait:
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_commitAttackParent.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_revealParentTransform.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_messageText.text&#32;=&#32;GetRandomMessage(_arrOfMessagesWaiting);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00118"/>00118 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link>.Hide:
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_commitAttackParent.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_revealParentTransform.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_messageText.text&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;&#32;<emphasis role="comment">//&#32;Hide&#32;the&#32;message&#32;when&#32;in&#32;Hide&#32;state</emphasis>
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00126"/>00126 
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetRandomMessage(<emphasis role="keywordtype">string</emphasis>[]&#32;messages)
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;messages[<link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link>.Range(0,&#32;messages.Length)];
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__button_manager_battle_page_component_8cs_source_1l00136"/>00136 }
+</programlisting></section>

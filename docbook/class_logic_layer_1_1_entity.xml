@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_entity" xml:lang="en-US">
+<title>LogicLayer.Entity&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>LogicLayer.Entity&lt; T &gt;</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string[] <link linkend="_class_logic_layer_1_1_entity_1a71290634b1b2d543b890d8ec5a895339">Keys</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>T[] <link linkend="_class_logic_layer_1_1_entity_1a1e5464d2be1131808fbe7876ee2cff0c">Models</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>Type Constraints</title>
+<para><emphasis role="strong">T:<link linkend="_interface_logic_layer_1_1_i_data">IData</link></emphasis></para>
+</simplesect>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00164">164</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_entity_1a71290634b1b2d543b890d8ec5a895339"/><section>
+    <title>Keys</title>
+<indexterm><primary>Keys</primary><secondary>LogicLayer.Entity&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>LogicLayer.Entity&lt; T &gt;</primary><secondary>Keys</secondary></indexterm>
+<para><computeroutput>string [] <link linkend="_class_logic_layer_1_1_entity">LogicLayer.Entity</link>&lt; T &gt;.Keys<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00166">166</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_entity_1a1e5464d2be1131808fbe7876ee2cff0c"/><section>
+    <title>Models</title>
+<indexterm><primary>Models</primary><secondary>LogicLayer.Entity&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>LogicLayer.Entity&lt; T &gt;</primary><secondary>Models</secondary></indexterm>
+<para><computeroutput>T [] <link linkend="_class_logic_layer_1_1_entity">LogicLayer.Entity</link>&lt; T &gt;.<link linkend="_class_logic_layer_1_1_models">Models</link><computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00167">167</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

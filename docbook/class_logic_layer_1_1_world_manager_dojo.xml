@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_world_manager_dojo" xml:lang="en-US">
+<title>LogicLayer.WorldManagerDojo Class Reference</title>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary></indexterm>
+<para>Inheritance diagram for LogicLayer.WorldManagerDojo:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_logic_layer_1_1_world_manager_dojo.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async Task&lt; int &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a5866b4ab1494e09127ae59f772f16f8b">LoadData</link> ()</para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6">Entity</link> (string name)</para>
+</listitem>
+            <listitem><para>GameObject[] <link linkend="_class_logic_layer_1_1_world_manager_dojo_1ab2c764975a88915f63467f9a57527427">Entities</link> ()</para>
+</listitem>
+            <listitem><para>GameObject[] <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a416245ecb65c2e83591856974c6f4a8d">Entities&lt; T &gt;</link> ()</para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a3115b1f5d3039b0b806ce419e8c767b0">AddEntity</link> (string key)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a0ccfa3d3036a3a2e249d6dcecff6d083">RemoveEntity</link> (string key)</para>
+</listitem>
+            <listitem><para>async Task&lt; byte[]&gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a803bdd7f2e7d17e9028a7110a050ad2d">Publish</link> (TypedData typedData, Signature signature)</para>
+</listitem>
+            <listitem><para>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a95f3928d3aecc3fa4fe99591e167767b">FetchEntitiesByBatch</link> (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</para>
+</listitem>
+            <listitem><para>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a26d4f87794e0268f38fdd245ccfca9fd">StandardEntityFetch</link> (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_logic_layer_1_1_synchro_manager_dojo">SynchroManagerDojo</link> <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a40e3f19b5ccafc3151ae72b152a50e33">synchronizationMaster</link></para>
+</listitem>
+            <listitem><para>ToriiClient <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a5c7d19c97bc9d711197e0d94c3517c85">toriiClient</link></para>
+</listitem>
+            <listitem><para>ToriiWasmClient <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a4e6a9be4ddefa4a63d029b990fc7230c">wasmClient</link></para>
+</listitem>
+            <listitem><para>WorldManagerData <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a69fee369d5bfc8b953ce2c5541e917c2">dojoConfig</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00011">11</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a3115b1f5d3039b0b806ce419e8c767b0"/><section>
+    <title>AddEntity()</title>
+<indexterm><primary>AddEntity</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>AddEntity</secondary></indexterm>
+<para><computeroutput>GameObject LogicLayer.WorldManagerDojo.AddEntity (string key)</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00076">76</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1ab2c764975a88915f63467f9a57527427"/><section>
+    <title>Entities()</title>
+<indexterm><primary>Entities</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>Entities</secondary></indexterm>
+<para><computeroutput>GameObject[] LogicLayer.WorldManagerDojo.Entities ( )</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00060">60</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a416245ecb65c2e83591856974c6f4a8d"/><section>
+    <title>Entities&lt; T &gt;()</title>
+<indexterm><primary>Entities&lt; T &gt;</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>Entities&lt; T &gt;</secondary></indexterm>
+<para><computeroutput>GameObject[] <link linkend="_class_logic_layer_1_1_world_manager_dojo_1ab2c764975a88915f63467f9a57527427">LogicLayer.WorldManagerDojo.Entities</link>&lt; T &gt; ( )</computeroutput></para><simplesect><title>Type Constraints</title>
+<para><emphasis role="strong">T:Component</emphasis></para>
+</simplesect>
+<para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00067">67</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6"/><section>
+    <title>Entity()</title>
+<indexterm><primary>Entity</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>Entity</secondary></indexterm>
+<para><computeroutput>GameObject LogicLayer.WorldManagerDojo.Entity (string name)</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00047">47</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a95f3928d3aecc3fa4fe99591e167767b"/><section>
+    <title>FetchEntitiesByBatch()</title>
+<indexterm><primary>FetchEntitiesByBatch</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>FetchEntitiesByBatch</secondary></indexterm>
+<para><computeroutput>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; LogicLayer.WorldManagerDojo.FetchEntitiesByBatch (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00114">114</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a5866b4ab1494e09127ae59f772f16f8b"/><section>
+    <title>LoadData()</title>
+<indexterm><primary>LoadData</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>LoadData</secondary></indexterm>
+<para><computeroutput>async Task&lt; int &gt; LogicLayer.WorldManagerDojo.LoadData ( )</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00036">36</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a803bdd7f2e7d17e9028a7110a050ad2d"/><section>
+    <title>Publish()</title>
+<indexterm><primary>Publish</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>Publish</secondary></indexterm>
+<para><computeroutput>async Task&lt; byte[]&gt; LogicLayer.WorldManagerDojo.Publish (TypedData typedData, Signature signature)</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00104">104</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a0ccfa3d3036a3a2e249d6dcecff6d083"/><section>
+    <title>RemoveEntity()</title>
+<indexterm><primary>RemoveEntity</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>RemoveEntity</secondary></indexterm>
+<para><computeroutput>void LogicLayer.WorldManagerDojo.RemoveEntity (string key)</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00094">94</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a26d4f87794e0268f38fdd245ccfca9fd"/><section>
+    <title>StandardEntityFetch()</title>
+<indexterm><primary>StandardEntityFetch</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>StandardEntityFetch</secondary></indexterm>
+<para><computeroutput>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; LogicLayer.WorldManagerDojo.StandardEntityFetch (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00145">145</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a69fee369d5bfc8b953ce2c5541e917c2"/><section>
+    <title>dojoConfig</title>
+<indexterm><primary>dojoConfig</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>dojoConfig</secondary></indexterm>
+<para><computeroutput>WorldManagerData LogicLayer.WorldManagerDojo.dojoConfig</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00016">16</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a40e3f19b5ccafc3151ae72b152a50e33"/><section>
+    <title>synchronizationMaster</title>
+<indexterm><primary>synchronizationMaster</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>synchronizationMaster</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_synchro_manager_dojo">SynchroManagerDojo</link> LogicLayer.WorldManagerDojo.synchronizationMaster</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00013">13</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a5c7d19c97bc9d711197e0d94c3517c85"/><section>
+    <title>toriiClient</title>
+<indexterm><primary>toriiClient</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>toriiClient</secondary></indexterm>
+<para><computeroutput>ToriiClient LogicLayer.WorldManagerDojo.toriiClient</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00014">14</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a4e6a9be4ddefa4a63d029b990fc7230c"/><section>
+    <title>wasmClient</title>
+<indexterm><primary>wasmClient</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>wasmClient</secondary></indexterm>
+<para><computeroutput>ToriiWasmClient LogicLayer.WorldManagerDojo.wasmClient</computeroutput></para><para>
+Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00015">15</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Variants/<link linkend="__world_manager_dojo_8cs">WorldManagerDojo.cs</link></section>
+</section>

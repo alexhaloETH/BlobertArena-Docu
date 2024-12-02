@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_damage_data" xml:lang="en-US">
+<title>LogicLayer.DamageData Class Reference</title>
+<indexterm><primary>LogicLayer.DamageData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_damage_data_1af72ddf81b167ab8fb08f1656dc9d6200">power</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_damage_data_1aa29658f203dd78380a8c44d624329fd8">critical</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00134">134</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_damage_data_1aa29658f203dd78380a8c44d624329fd8"/><section>
+    <title>critical</title>
+<indexterm><primary>critical</primary><secondary>LogicLayer.DamageData</secondary></indexterm>
+<indexterm><primary>LogicLayer.DamageData</primary><secondary>critical</secondary></indexterm>
+<para><computeroutput>string LogicLayer.DamageData.critical<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00137">137</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_damage_data_1af72ddf81b167ab8fb08f1656dc9d6200"/><section>
+    <title>power</title>
+<indexterm><primary>power</primary><secondary>LogicLayer.DamageData</secondary></indexterm>
+<indexterm><primary>LogicLayer.DamageData</primary><secondary>power</secondary></indexterm>
+<para><computeroutput>string LogicLayer.DamageData.power<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00136">136</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

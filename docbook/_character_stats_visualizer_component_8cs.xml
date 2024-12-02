@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__character_stats_visualizer_component_8cs" xml:lang="en-US">
+<title>UI/Components/BlobertData/CharacterStatsVisualizerComponent.cs File Reference</title>
+<indexterm><primary>UI/Components/BlobertData/CharacterStatsVisualizerComponent.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_character_stats_visualizer_component">CharacterStatsVisualizerComponent</link></para>
+
+<para>This component is responsible for displaying the values of a Blobert in the UI. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

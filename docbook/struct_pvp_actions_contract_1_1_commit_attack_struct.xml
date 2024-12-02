@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_actions_contract_1_1_commit_attack_struct" xml:lang="en-US">
+<title>PvpActionsContract.CommitAttackStruct Struct Reference</title>
+<indexterm><primary>PvpActionsContract.CommitAttackStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1a5d934b7f1ef7a85a51da25c938e9e0eb">CommitAttackStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1a5848e9cb104805571c3874d1d1e6f95c">combatantId</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1afddbeb2adccd34923df64f828dd87375">hash</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1adf2767a2c3ad5301b703b323051e0133">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1a5848e9cb104805571c3874d1d1e6f95c">combatantId</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1afddbeb2adccd34923df64f828dd87375">hash</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct_1adf2767a2c3ad5301b703b323051e0133">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00198">198</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_commit_attack_struct_1a5d934b7f1ef7a85a51da25c938e9e0eb"/><section>
+    <title>CommitAttackStruct()</title>
+<indexterm><primary>CommitAttackStruct</primary><secondary>PvpActionsContract.CommitAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.CommitAttackStruct</primary><secondary>CommitAttackStruct</secondary></indexterm>
+<para><computeroutput>PvpActionsContract.CommitAttackStruct.CommitAttackStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> hash, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00204">204</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_commit_attack_struct_1a5848e9cb104805571c3874d1d1e6f95c"/><section>
+    <title>combatantId</title>
+<indexterm><primary>combatantId</primary><secondary>PvpActionsContract.CommitAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.CommitAttackStruct</primary><secondary>combatantId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.CommitAttackStruct.combatantId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00200">200</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_commit_attack_struct_1adf2767a2c3ad5301b703b323051e0133"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpActionsContract.CommitAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.CommitAttackStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpActionsContract.CommitAttackStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00202">202</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_commit_attack_struct_1afddbeb2adccd34923df64f828dd87375"/><section>
+    <title>hash</title>
+<indexterm><primary>hash</primary><secondary>PvpActionsContract.CommitAttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.CommitAttackStruct</primary><secondary>hash</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.CommitAttackStruct.hash</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00201">201</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_actions_contract_8cs">PvpActionsContract.cs</link></section>
+</section>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__lobby_main_menu_page_behaviour_8cs_source" xml:lang="en-US">
+<title>LobbyMainMenuPageBehaviour.cs</title>
+<indexterm><primary>UI/Pages/LobbyMainMenu/LobbyMainMenuPageBehaviour.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00001"/>00001 
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00004"/><link linkend="_class_lobby_main_menu_page_behaviour">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_lobby_main_menu_page_behaviour">LobbyMainMenuPageBehaviour</link>&#32;:&#32;<link linkend="_class_menu">Menu</link>
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>.<link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link>(<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>.LobbyBackground);
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_main_menu_page_behaviour_8cs_source_1l00010"/>00010 }
+</programlisting></section>

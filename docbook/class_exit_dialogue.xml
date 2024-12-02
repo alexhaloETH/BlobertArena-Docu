@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_exit_dialogue" xml:lang="en-US">
+<title>ExitDialogue Class Reference</title>
+<indexterm><primary>ExitDialogue</primary></indexterm>
+<para>
+
+<para>Manager class to the exit dialogue panel. </para>
+ 
+</para>
+<para>Inheritance diagram for ExitDialogue:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_exit_dialogue.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_exit_dialogue_1ad700c934ee7f41fb4aab14e5a2236219">OnStayButtonClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_exit_dialogue_1a2f94a91c7696e34db34b779e6ced5a34">OnLeaveButtonClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_exit_dialogue_1a3848008d38ed0dd2679e155bad76dd1b">OpenPanel</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manager class to the exit dialogue panel. </para>
+<para>
+Definition at line <link linkend="__exit_dialogue_8cs_source_1l00009">9</link> of file <link linkend="__exit_dialogue_8cs_source">ExitDialogue.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_exit_dialogue_1a2f94a91c7696e34db34b779e6ced5a34"/><section>
+    <title>OnLeaveButtonClicked()</title>
+<indexterm><primary>OnLeaveButtonClicked</primary><secondary>ExitDialogue</secondary></indexterm>
+<indexterm><primary>ExitDialogue</primary><secondary>OnLeaveButtonClicked</secondary></indexterm>
+<para><computeroutput>void ExitDialogue.OnLeaveButtonClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__exit_dialogue_8cs_source_1l00033">33</link> of file <link linkend="__exit_dialogue_8cs_source">ExitDialogue.cs</link>.</para>
+</section>
+<anchor xml:id="_class_exit_dialogue_1ad700c934ee7f41fb4aab14e5a2236219"/><section>
+    <title>OnStayButtonClicked()</title>
+<indexterm><primary>OnStayButtonClicked</primary><secondary>ExitDialogue</secondary></indexterm>
+<indexterm><primary>ExitDialogue</primary><secondary>OnStayButtonClicked</secondary></indexterm>
+<para><computeroutput>void ExitDialogue.OnStayButtonClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__exit_dialogue_8cs_source_1l00027">27</link> of file <link linkend="__exit_dialogue_8cs_source">ExitDialogue.cs</link>.</para>
+</section>
+<anchor xml:id="_class_exit_dialogue_1a3848008d38ed0dd2679e155bad76dd1b"/><section>
+    <title>OpenPanel()</title>
+<indexterm><primary>OpenPanel</primary><secondary>ExitDialogue</secondary></indexterm>
+<indexterm><primary>ExitDialogue</primary><secondary>OpenPanel</secondary></indexterm>
+<para><computeroutput>void ExitDialogue.OpenPanel ( )</computeroutput></para><para>
+Definition at line <link linkend="__exit_dialogue_8cs_source_1l00048">48</link> of file <link linkend="__exit_dialogue_8cs_source">ExitDialogue.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__exit_dialogue_8cs">ExitDialogue.cs</link></section>
+</section>

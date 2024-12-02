@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_top_bar_button_component" xml:lang="en-US">
+<title>TopBarButtonComponent Class Reference</title>
+<indexterm><primary>TopBarButtonComponent</primary></indexterm>
+<para>Inheritance diagram for TopBarButtonComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_top_bar_button_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> { <?linebreak?><link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a6222a1fb813893bee88128fa2a0ef37c">ArrowBack</link>
+, <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a5c9efb22b1843651d92b3da74c4d4bb5">ExitGamePopUp</link>
+, <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a45eb5db19c035c55642965187d5a297b">SettingsButton</link>
+, <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a8cfa2c85d367f92e56e91593ea817941">BugButton</link>
+, <?linebreak?><link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a1f4da964f8eab62e96e8cfe406e44364">Rules</link>
+, <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77af08a3a2446dc0da4285a9607561055e2">AccountSection</link>
+, <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a4cc2bf0c07a25c4376b99c057dde0577">SwitchGame</link>
+, <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a6ab9a295c00f945cf4881fd7667a0334">Spacer</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_top_bar_button_component_1a78192a7ec64c2f26c5f39167e43e3e04">ToggleObject</link> (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item, bool show)</para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_top_bar_button_component_1afd6764fdfc07635facdb399735b48b8b">GetObject</link> (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_top_bar_button_component_1a44ad772c266cd935cb12b4e42f6b34ad">GetObjectState</link> (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_top_bar_button_component_1a1f40c1e1591ae5a5d2b393922cab77e0">MoveItem</link> (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item, bool moveToLeft)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_top_bar_button_component_1aa9571b40028e67fab3cb0429263238df">OnBugReportButtonPressed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_top_bar_button_component_1a7c912b004c928a53bff0b47c2aeadada">OnRefresh</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_top_bar_button_component">TopBarButtonComponent</link> <link linkend="_class_top_bar_button_component_1a094e6d6ccc05451ef6d34432957d83e7">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00003">3</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77"/><section>
+    <title>TopBarItem</title>
+<indexterm><primary>TopBarItem</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>TopBarItem</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarButtonComponent.TopBarItem</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>ArrowBack</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>ArrowBack</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a6222a1fb813893bee88128fa2a0ef37c"/>ArrowBack</entry><entry></entry></row><row><entry><indexterm><primary>ExitGamePopUp</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>ExitGamePopUp</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a5c9efb22b1843651d92b3da74c4d4bb5"/>ExitGamePopUp</entry><entry></entry></row><row><entry><indexterm><primary>SettingsButton</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>SettingsButton</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a45eb5db19c035c55642965187d5a297b"/>SettingsButton</entry><entry></entry></row><row><entry><indexterm><primary>BugButton</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>BugButton</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a8cfa2c85d367f92e56e91593ea817941"/>BugButton</entry><entry></entry></row><row><entry><indexterm><primary>Rules</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>Rules</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a1f4da964f8eab62e96e8cfe406e44364"/>Rules</entry><entry></entry></row><row><entry><indexterm><primary>AccountSection</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>AccountSection</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77af08a3a2446dc0da4285a9607561055e2"/>AccountSection</entry><entry></entry></row><row><entry><indexterm><primary>SwitchGame</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>SwitchGame</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a4cc2bf0c07a25c4376b99c057dde0577"/>SwitchGame</entry><entry></entry></row><row><entry><indexterm><primary>Spacer</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>Spacer</secondary></indexterm>
+<anchor xml:id="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77a6ab9a295c00f945cf4881fd7667a0334"/>Spacer</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00014">14</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_top_bar_button_component_1afd6764fdfc07635facdb399735b48b8b"/><section>
+    <title>GetObject()</title>
+<indexterm><primary>GetObject</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>GetObject</secondary></indexterm>
+<para><computeroutput>GameObject TopBarButtonComponent.GetObject (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item)</computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00062">62</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_top_bar_button_component_1a44ad772c266cd935cb12b4e42f6b34ad"/><section>
+    <title>GetObjectState()</title>
+<indexterm><primary>GetObjectState</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>GetObjectState</secondary></indexterm>
+<para><computeroutput>bool TopBarButtonComponent.GetObjectState (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item)</computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00067">67</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_top_bar_button_component_1a1f40c1e1591ae5a5d2b393922cab77e0"/><section>
+    <title>MoveItem()</title>
+<indexterm><primary>MoveItem</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>MoveItem</secondary></indexterm>
+<para><computeroutput>void TopBarButtonComponent.MoveItem (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item, bool moveToLeft)</computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00072">72</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_top_bar_button_component_1aa9571b40028e67fab3cb0429263238df"/><section>
+    <title>OnBugReportButtonPressed()</title>
+<indexterm><primary>OnBugReportButtonPressed</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>OnBugReportButtonPressed</secondary></indexterm>
+<para><computeroutput>void TopBarButtonComponent.OnBugReportButtonPressed ( )</computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00084">84</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_top_bar_button_component_1a7c912b004c928a53bff0b47c2aeadada"/><section>
+    <title>OnRefresh()</title>
+<indexterm><primary>OnRefresh</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>OnRefresh</secondary></indexterm>
+<para><computeroutput>void TopBarButtonComponent.OnRefresh ( )</computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00089">89</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_top_bar_button_component_1a78192a7ec64c2f26c5f39167e43e3e04"/><section>
+    <title>ToggleObject()</title>
+<indexterm><primary>ToggleObject</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>ToggleObject</secondary></indexterm>
+<para><computeroutput>void TopBarButtonComponent.ToggleObject (<link linkend="_class_top_bar_button_component_1a8263f849a14f382736954c7d1b7f2a77">TopBarItem</link> item, bool show)</computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00057">57</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_top_bar_button_component_1a094e6d6ccc05451ef6d34432957d83e7"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>TopBarButtonComponent</secondary></indexterm>
+<indexterm><primary>TopBarButtonComponent</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_top_bar_button_component">TopBarButtonComponent</link> TopBarButtonComponent.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__top_bar_button_component_8cs_source_1l00005">5</link> of file <link linkend="__top_bar_button_component_8cs_source">TopBarButtonComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__top_bar_button_component_8cs">TopBarButtonComponent.cs</link></section>
+</section>

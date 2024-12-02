@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__base_button_skin_listener_8cs" xml:lang="en-US">
+<title>UI/Components/Skin/BaseButtonSkinListener.cs File Reference</title>
+<indexterm><primary>UI/Components/Skin/BaseButtonSkinListener.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_base_button_skin_listener">BaseButtonSkinListener</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_base_button_skin_listener_1_1_button_type">BaseButtonSkinListener.ButtonType</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

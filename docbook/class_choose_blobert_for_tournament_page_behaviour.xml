@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_choose_blobert_for_tournament_page_behaviour" xml:lang="en-US">
+<title>ChooseBlobertForTournamentPageBehaviour Class Reference</title>
+<indexterm><primary>ChooseBlobertForTournamentPageBehaviour</primary></indexterm>
+<para>
+
+<para>This first of all should connect to the blob dex component, then when the LFG button is pressed it should send the selected blobert to the tournament api, ofcourse the button shouold be disabled if the user hasnt selected a blobert. </para>
+ 
+</para>
+<para>Inheritance diagram for ChooseBlobertForTournamentPageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_choose_blobert_for_tournament_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>This first of all should connect to the blob dex component, then when the LFG button is pressed it should send the selected blobert to the tournament api, ofcourse the button shouold be disabled if the user hasnt selected a blobert. </para>
+
+
+
+<para>One thing that is overlooked right now its probably the neccessity of having a bool that shows ranked and arcade </para>
+<para>
+Definition at line <link linkend="__choose_blobert_for_tournament_page_behaviour_8cs_source_1l00012">12</link> of file <link linkend="__choose_blobert_for_tournament_page_behaviour_8cs_source">ChooseBlobertForTournamentPageBehaviour.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/SelectBlobPage/<link linkend="__choose_blobert_for_tournament_page_behaviour_8cs">ChooseBlobertForTournamentPageBehaviour.cs</link></section>
+</section>

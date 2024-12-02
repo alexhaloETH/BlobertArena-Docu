@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__tournament_model_8cs" xml:lang="en-US">
+<title>LogicLayer/ServerCommunication/TournamentModel.cs File Reference</title>
+<indexterm><primary>LogicLayer/ServerCommunication/TournamentModel.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">LogicLayer.TournamentModel</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

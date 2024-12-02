@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__combatant_info_8gen_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Models/CombatantInfo.gen.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Models/CombatantInfo.gen.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_u256">U256</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_combatant_info">CombatantInfo</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_combatant_info_1_1_combatant_info_data_query">CombatantInfo.CombatantInfoDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_base_button" xml:lang="en-US">
+<title>BaseButton Class Reference</title>
+<indexterm><primary>BaseButton</primary></indexterm>
+<para>Inheritance diagram for BaseButton:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_button.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link> { <link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479da53e1f4f9454816f580f86120b364276e">ResetAfterDelay</link>
+, <link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479da9169c0121d7b2dbe5091c4312409888b">InstantChange</link>
+, <link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479dafea564e9595262ede71176678ec3c8fe">AwaitCallback</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_base_button_1ad84a36ee72dbfd5f47f22144eb88d20b">OnPointerEnter</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a4207af7417fc33dbe175445069d9f215">OnPointerExit</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a5a5f926ecab0ac15e18c41fb95049afd">OnPointerDown</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a7c87149b3e8c9f3564178ea010e02add">OnPointerUp</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a9ee85ce3fb947ab07d29aca266270706">LockInteractable</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a35c627672b99c403fc1faf4a9eb289d2">UnlockInteractable</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a6186c87942f84fd912603aa63d6760ad">LockButton</link> (bool resetTexture=false)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452">RefreshImage</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_button_1a26ff7e284145f7d6842ac86763116c90">SetNewSprites</link> (<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4">BaseButtonSkinListener.ButtonColor</link> color)</para>
+</listitem>
+            <listitem><para>TMP_Text <link linkend="_class_base_button_1ae4a37b75f8b7a9656fb56ad2a32b0418">GetText</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Sprite <link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_base_button_1a09221a1eff401353f928f0e0651c827a">clickSprite</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_base_button_1a0a36c4caeefb861658a32e19fbb03585">delay</link> = 0.5f</para>
+</listitem>
+            <listitem><para><link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link> <link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">buttonBehavior</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link> = false</para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_base_button_1af1a2cf5ef568b21e77c43c7e77010ba0">onClickCalls</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__base_button_8cs_source_1l00009">9</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d"/><section>
+    <title>ButtonBehavior</title>
+<indexterm><primary>ButtonBehavior</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>ButtonBehavior</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">BaseButton.ButtonBehavior</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>ResetAfterDelay</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>ResetAfterDelay</secondary></indexterm>
+<anchor xml:id="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479da53e1f4f9454816f580f86120b364276e"/>ResetAfterDelay</entry><entry></entry></row><row><entry><indexterm><primary>InstantChange</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>InstantChange</secondary></indexterm>
+<anchor xml:id="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479da9169c0121d7b2dbe5091c4312409888b"/>InstantChange</entry><entry></entry></row><row><entry><indexterm><primary>AwaitCallback</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>AwaitCallback</secondary></indexterm>
+<anchor xml:id="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479dafea564e9595262ede71176678ec3c8fe"/>AwaitCallback</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__base_button_8cs_source_1l00011">11</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_base_button_1ae4a37b75f8b7a9656fb56ad2a32b0418"/><section>
+    <title>GetText()</title>
+<indexterm><primary>GetText</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>GetText</secondary></indexterm>
+<para><computeroutput>TMP_Text BaseButton.GetText ( )</computeroutput></para></section>
+<anchor xml:id="_class_base_button_1a6186c87942f84fd912603aa63d6760ad"/><section>
+    <title>LockButton()</title>
+<indexterm><primary>LockButton</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>LockButton</secondary></indexterm>
+<para><computeroutput>void BaseButton.LockButton (bool resetTexture = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00170">170</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a9ee85ce3fb947ab07d29aca266270706"/><section>
+    <title>LockInteractable()</title>
+<indexterm><primary>LockInteractable</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>LockInteractable</secondary></indexterm>
+<para><computeroutput>void BaseButton.LockInteractable ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00151">151</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a5a5f926ecab0ac15e18c41fb95049afd"/><section>
+    <title>OnPointerDown()</title>
+<indexterm><primary>OnPointerDown</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>OnPointerDown</secondary></indexterm>
+<para><computeroutput>void BaseButton.OnPointerDown ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00091">91</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1ad84a36ee72dbfd5f47f22144eb88d20b"/><section>
+    <title>OnPointerEnter()</title>
+<indexterm><primary>OnPointerEnter</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>OnPointerEnter</secondary></indexterm>
+<para><computeroutput>void BaseButton.OnPointerEnter ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00072">72</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a4207af7417fc33dbe175445069d9f215"/><section>
+    <title>OnPointerExit()</title>
+<indexterm><primary>OnPointerExit</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>OnPointerExit</secondary></indexterm>
+<para><computeroutput>void BaseButton.OnPointerExit ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00081">81</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a7c87149b3e8c9f3564178ea010e02add"/><section>
+    <title>OnPointerUp()</title>
+<indexterm><primary>OnPointerUp</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>OnPointerUp</secondary></indexterm>
+<para><computeroutput>void BaseButton.OnPointerUp ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00117">117</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452"/><section>
+    <title>RefreshImage()</title>
+<indexterm><primary>RefreshImage</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>RefreshImage</secondary></indexterm>
+<para><computeroutput>void BaseButton.RefreshImage ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00200">200</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a26ff7e284145f7d6842ac86763116c90"/><section>
+    <title>SetNewSprites()</title>
+<indexterm><primary>SetNewSprites</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>SetNewSprites</secondary></indexterm>
+<para><computeroutput>void BaseButton.SetNewSprites (<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4">BaseButtonSkinListener.ButtonColor</link> color)</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00225">225</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1ad2184a39482e6a6ba0f4005977cc8be5"/><section>
+    <title>UnlockButton()</title>
+<indexterm><primary>UnlockButton</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>UnlockButton</secondary></indexterm>
+<para><computeroutput>void BaseButton.UnlockButton ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00185">185</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a35c627672b99c403fc1faf4a9eb289d2"/><section>
+    <title>UnlockInteractable()</title>
+<indexterm><primary>UnlockInteractable</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>UnlockInteractable</secondary></indexterm>
+<para><computeroutput>void BaseButton.UnlockInteractable ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00156">156</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_base_button_1ac60e8bed89f769c1364b324c33af9305"/><section>
+    <title>buttonBehavior</title>
+<indexterm><primary>buttonBehavior</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>buttonBehavior</secondary></indexterm>
+<para><computeroutput><link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link> BaseButton.buttonBehavior</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00034">34</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a09221a1eff401353f928f0e0651c827a"/><section>
+    <title>clickSprite</title>
+<indexterm><primary>clickSprite</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>clickSprite</secondary></indexterm>
+<para><computeroutput>Sprite BaseButton.clickSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00029">29</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a0a36c4caeefb861658a32e19fbb03585"/><section>
+    <title>delay</title>
+<indexterm><primary>delay</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>delay</secondary></indexterm>
+<para><computeroutput>float BaseButton.delay = 0.5f</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00032">32</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a"/><section>
+    <title>hoverSprite</title>
+<indexterm><primary>hoverSprite</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>hoverSprite</secondary></indexterm>
+<para><computeroutput>Sprite BaseButton.hoverSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00028">28</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0"/><section>
+    <title>isLocked</title>
+<indexterm><primary>isLocked</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>isLocked</secondary></indexterm>
+<para><computeroutput>bool BaseButton.isLocked = false</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00037">37</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef"/><section>
+    <title>normalSprite</title>
+<indexterm><primary>normalSprite</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>normalSprite</secondary></indexterm>
+<para><computeroutput>Sprite BaseButton.normalSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00026">26</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_base_button_1af1a2cf5ef568b21e77c43c7e77010ba0"/><section>
+    <title>onClickCalls</title>
+<indexterm><primary>onClickCalls</primary><secondary>BaseButton</secondary></indexterm>
+<indexterm><primary>BaseButton</primary><secondary>onClickCalls</secondary></indexterm>
+<para><computeroutput>UnityEvent BaseButton.onClickCalls</computeroutput></para><para>
+Definition at line <link linkend="__base_button_8cs_source_1l00039">39</link> of file <link linkend="__base_button_8cs_source">BaseButton.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Button Types/<link linkend="__base_button_8cs">BaseButton.cs</link></section>
+</section>

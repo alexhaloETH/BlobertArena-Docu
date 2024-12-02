@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_in_lobby_ongoing_lobby_list_page_element" xml:lang="en-US">
+<title>InLobbyOngoingLobbyListPageElement Class Reference</title>
+<indexterm><primary>InLobbyOngoingLobbyListPageElement</primary></indexterm>
+<para>Inheritance diagram for InLobbyOngoingLobbyListPageElement:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_in_lobby_ongoing_lobby_list_page_element.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async void <link linkend="_class_in_lobby_ongoing_lobby_list_page_element_1a6563ae3102ba1938c9e71fa1ec2b8949">InitializeElement</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> battleId, <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> parent)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_in_lobby_ongoing_lobby_list_page_element_1ab35722ea74b92325e0abe55db66bc7cb">GoToPage</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link><simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> <link linkend="_class_in_lobby_ongoing_lobby_list_page_element_1aa5981b76bbe0efd0e0292511972f72fd">parentPage</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_in_lobby_ongoing_lobby_list_page_element_1a8c01b8ecd7f3215cf9942d33bbc8004b">challengeId</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00008">8</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_in_lobby_ongoing_lobby_list_page_element_1ab35722ea74b92325e0abe55db66bc7cb"/><section>
+    <title>GoToPage()</title>
+<indexterm><primary>GoToPage</primary><secondary>InLobbyOngoingLobbyListPageElement</secondary></indexterm>
+<indexterm><primary>InLobbyOngoingLobbyListPageElement</primary><secondary>GoToPage</secondary></indexterm>
+<para><computeroutput>void InLobbyOngoingLobbyListPageElement.GoToPage ( )</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00075">75</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_ongoing_lobby_list_page_element_1a6563ae3102ba1938c9e71fa1ec2b8949"/><section>
+    <title>InitializeElement()</title>
+<indexterm><primary>InitializeElement</primary><secondary>InLobbyOngoingLobbyListPageElement</secondary></indexterm>
+<indexterm><primary>InLobbyOngoingLobbyListPageElement</primary><secondary>InitializeElement</secondary></indexterm>
+<para><computeroutput>async void InLobbyOngoingLobbyListPageElement.InitializeElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> battleId, <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> parent)</computeroutput></para><para>
+Implements <link linkend="_interface_i_lobby_list_element_1a951b1b770ff776454bf9e8a4c74abd54">ILobbyListElement</link>.</para>
+<para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00035">35</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_in_lobby_ongoing_lobby_list_page_element_1a8c01b8ecd7f3215cf9942d33bbc8004b"/><section>
+    <title>challengeId</title>
+<indexterm><primary>challengeId</primary><secondary>InLobbyOngoingLobbyListPageElement</secondary></indexterm>
+<indexterm><primary>InLobbyOngoingLobbyListPageElement</primary><secondary>challengeId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> InLobbyOngoingLobbyListPageElement.challengeId<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_i_lobby_list_element_1a919833e81c2d7531dfe6df14cdf88d80">ILobbyListElement</link>.</para>
+<para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00011">11</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_ongoing_lobby_list_page_element_1aa5981b76bbe0efd0e0292511972f72fd"/><section>
+    <title>parentPage</title>
+<indexterm><primary>parentPage</primary><secondary>InLobbyOngoingLobbyListPageElement</secondary></indexterm>
+<indexterm><primary>InLobbyOngoingLobbyListPageElement</primary><secondary>parentPage</secondary></indexterm>
+<para><computeroutput><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> InLobbyOngoingLobbyListPageElement.parentPage<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_i_lobby_list_element_1abf08a8c2cd56cf491210634c439899cd">ILobbyListElement</link>.</para>
+<para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00010">10</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/LobbyListPage/<link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs">InLobbyOngoingLobbyListPageElement.cs</link></section>
+</section>

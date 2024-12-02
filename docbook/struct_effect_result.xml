@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_effect_result" xml:lang="en-US">
+<title>EffectResult Struct Reference</title>
+<indexterm><primary>EffectResult</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Target <link linkend="_struct_effect_result_1a9ac20cc424ff6c8f5d4a34865ee2995b">target</link></para>
+</listitem>
+            <listitem><para>AffectResult <link linkend="_struct_effect_result_1abd4f035d0371f7d1bd87ae392ba87c6d">affect</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00026">26</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_effect_result_1abd4f035d0371f7d1bd87ae392ba87c6d"/><section>
+    <title>affect</title>
+<indexterm><primary>affect</primary><secondary>EffectResult</secondary></indexterm>
+<indexterm><primary>EffectResult</primary><secondary>affect</secondary></indexterm>
+<para><computeroutput>AffectResult EffectResult.affect</computeroutput></para><para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00029">29</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_effect_result_1a9ac20cc424ff6c8f5d4a34865ee2995b"/><section>
+    <title>target</title>
+<indexterm><primary>target</primary><secondary>EffectResult</secondary></indexterm>
+<indexterm><primary>EffectResult</primary><secondary>target</secondary></indexterm>
+<para><computeroutput>Target EffectResult.target</computeroutput></para><para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00028">28</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__attack_result_8cs">AttackResult.cs</link></section>
+</section>

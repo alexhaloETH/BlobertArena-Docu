@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__game_background_component_8cs_source" xml:lang="en-US">
+<title>GameBackgroundComponent.cs</title>
+<indexterm><primary>UI/Components/Skin/GameBackgroundComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__game_background_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__game_background_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__game_background_component_8cs_source_1l00003"/>00003 
+<anchor xml:id="__game_background_component_8cs_source_1l00004"/><link linkend="_class_game_background_component">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game_background_component">GameBackgroundComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__game_background_component_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__game_background_component_8cs_source_1l00006"/><link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">00006</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_game_background_component">GameBackgroundComponent</link>&#32;<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00007"/>00007 
+<anchor xml:id="__game_background_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;backgroundImage;
+<anchor xml:id="__game_background_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;backgroundSprites;
+<anchor xml:id="__game_background_component_8cs_source_1l00010"/>00010 
+<anchor xml:id="__game_background_component_8cs_source_1l00011"/><link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>
+<anchor xml:id="__game_background_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa080912d475bb3b2654d1d445a765bc95">EntranceArena</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa5205b1bc5b53d008f069e3563744a66b">EntranceArenaTournament</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfaf57a86033bdfec2815802b0dc9ae4527">FightArena</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfae02b89857b91a11b8be92fca409827ba">Leaderboard</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfae69d13f13be28775383d1beee0d8692d">LobbyBackground</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa64bfd0e5b16568ed18a424b52abd9894">StartPage</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfab381d8cebad9bf25731d6cbba09d7f75">TournamentsMenu</link>,
+<anchor xml:id="__game_background_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfaf9a248765642fd014f96f8bafd2117de">TournamentsView</link>
+<anchor xml:id="__game_background_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00022"/>00022 
+<anchor xml:id="__game_background_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>&#32;_currentBackgroundImage;
+<anchor xml:id="__game_background_component_8cs_source_1l00024"/>00024 
+<anchor xml:id="__game_background_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__game_background_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__game_background_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__game_background_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__game_background_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__game_background_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00036"/>00036 
+<anchor xml:id="__game_background_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__game_background_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SkinManager.Instance.NewSkin&#32;+=&#32;<link linkend="_class_game_background_component_1af70b341f98f4d215cd581989a91b5abe">ChangeOfSkinDetected</link>;
+<anchor xml:id="__game_background_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00041"/>00041 
+<anchor xml:id="__game_background_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__game_background_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SkinManager.Instance.NewSkin&#32;-=&#32;<link linkend="_class_game_background_component_1af70b341f98f4d215cd581989a91b5abe">ChangeOfSkinDetected</link>;
+<anchor xml:id="__game_background_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00046"/>00046 
+<anchor xml:id="__game_background_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="comment">//make&#32;this&#32;a&#32;component&#32;on&#32;its&#32;own&#32;per&#32;image&#32;or&#32;put&#32;it&#32;straight&#32;in&#32;the&#32;menu&#32;comp&#32;&#32;&#32;TODO</emphasis>
+<anchor xml:id="__game_background_component_8cs_source_1l00048"/><link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link>(<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>&#32;image)
+<anchor xml:id="__game_background_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_currentBackgroundImage&#32;=&#32;image;
+<anchor xml:id="__game_background_component_8cs_source_1l00051"/>00051 
+<anchor xml:id="__game_background_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;spriteName&#32;=&#32;backgroundSprites[(int)image]?.name;
+<anchor xml:id="__game_background_component_8cs_source_1l00053"/>00053 
+<anchor xml:id="__game_background_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sprite&#32;=&#32;<link linkend="_class_skin_manager">SkinManager</link>.<link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link>.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(spriteName);
+<anchor xml:id="__game_background_component_8cs_source_1l00055"/>00055 
+<anchor xml:id="__game_background_component_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;backgroundImage.sprite&#32;=&#32;sprite;
+<anchor xml:id="__game_background_component_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00058"/>00058 
+<anchor xml:id="__game_background_component_8cs_source_1l00059"/><link linkend="_class_game_background_component_1a153d5366bb27bc550adabb7419be4bd2">00059</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>&#32;<link linkend="_class_game_background_component_1a153d5366bb27bc550adabb7419be4bd2">GetBackgroundImage</link>()
+<anchor xml:id="__game_background_component_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;_currentBackgroundImage;
+<anchor xml:id="__game_background_component_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00063"/>00063 
+<anchor xml:id="__game_background_component_8cs_source_1l00064"/><link linkend="_class_game_background_component_1af70b341f98f4d215cd581989a91b5abe">00064</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_background_component_1af70b341f98f4d215cd581989a91b5abe">ChangeOfSkinDetected</link>()
+<anchor xml:id="__game_background_component_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_background_component_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link>(_currentBackgroundImage);
+<anchor xml:id="__game_background_component_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_background_component_8cs_source_1l00068"/>00068 }
+</programlisting></section>

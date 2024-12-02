@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__lobby_view_page_behaviour_8cs" xml:lang="en-US">
+<title>UI/Pages/LobbyView/LobbyViewPageBehaviour.cs File Reference</title>
+<indexterm><primary>UI/Pages/LobbyView/LobbyViewPageBehaviour.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_lobby_view_page_behaviour">LobbyViewPageBehaviour</link></para>
+
+<para>This is the lobby page, the user is only allowed here if the invite he sent or received has been accepted. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

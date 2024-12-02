@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__battle_page_controller_8cs" xml:lang="en-US">
+<title>UI/Pages/BattlePage/BattlePageController.cs File Reference</title>
+<indexterm><primary>UI/Pages/BattlePage/BattlePageController.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_battle_page_controller">BattlePageController</link></para>
+
+<para>flow of one round </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_battle_page_controller_1_1_attack_availability">BattlePageController.AttackAvailability</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

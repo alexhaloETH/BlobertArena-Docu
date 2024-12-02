@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tournament_list_page_behaviour_1_1_querry_result" xml:lang="en-US">
+<title>TournamentListPageBehaviour.QuerryResult Class Reference</title>
+<indexterm><primary>TournamentListPageBehaviour.QuerryResult</primary></indexterm>
+<para>
+
+<para><link linkend="_struct_tournament_list_page_behaviour_1_1_data">Data</link> class that matches the JSON format of the data on the backend server. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_tournament_list_page_behaviour_1_1_querry_result_1ac8f47a7d5ceb070feaca2d73365b944b">success</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_tournament_list_page_behaviour_1_1_data">Data</link> <link linkend="_class_tournament_list_page_behaviour_1_1_querry_result_1a563c8f0a3971ecb30cd9ac77463cce0c">data</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_tournament_list_page_behaviour_1_1_querry_result_1a4aa7a034f0b50c97823af0cd0b65b938">error</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_struct_tournament_list_page_behaviour_1_1_data">Data</link> class that matches the JSON format of the data on the backend server. </para>
+<para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00046">46</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_tournament_list_page_behaviour_1_1_querry_result_1a563c8f0a3971ecb30cd9ac77463cce0c"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>TournamentListPageBehaviour.QuerryResult</secondary></indexterm>
+<indexterm><primary>TournamentListPageBehaviour.QuerryResult</primary><secondary>data</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_tournament_list_page_behaviour_1_1_data">Data</link> TournamentListPageBehaviour.QuerryResult.data</computeroutput></para><para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00049">49</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_tournament_list_page_behaviour_1_1_querry_result_1a4aa7a034f0b50c97823af0cd0b65b938"/><section>
+    <title>error</title>
+<indexterm><primary>error</primary><secondary>TournamentListPageBehaviour.QuerryResult</secondary></indexterm>
+<indexterm><primary>TournamentListPageBehaviour.QuerryResult</primary><secondary>error</secondary></indexterm>
+<para><computeroutput>string TournamentListPageBehaviour.QuerryResult.error</computeroutput></para><para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00050">50</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_tournament_list_page_behaviour_1_1_querry_result_1ac8f47a7d5ceb070feaca2d73365b944b"/><section>
+    <title>success</title>
+<indexterm><primary>success</primary><secondary>TournamentListPageBehaviour.QuerryResult</secondary></indexterm>
+<indexterm><primary>TournamentListPageBehaviour.QuerryResult</primary><secondary>success</secondary></indexterm>
+<para><computeroutput>bool TournamentListPageBehaviour.QuerryResult.success</computeroutput></para><para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00048">48</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/<link linkend="__tournament_list_page_behaviour_8cs">TournamentListPageBehaviour.cs</link></section>
+</section>

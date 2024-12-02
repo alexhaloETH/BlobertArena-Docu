@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_base_button_skin_listener_1_1_button_type" xml:lang="en-US">
+<title>BaseButtonSkinListener.ButtonType Struct Reference</title>
+<indexterm><primary>BaseButtonSkinListener.ButtonType</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Sprite <link linkend="_struct_base_button_skin_listener_1_1_button_type_1ad83cbdb422f21c0eb695c04d286e6eae">defaultSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_struct_base_button_skin_listener_1_1_button_type_1aeb0c8cb9839629843cd38e0e12a35c03">clickedSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_struct_base_button_skin_listener_1_1_button_type_1a504f5f49521b2eb6c7e3c3e2d90c46a6">hoverSprite</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00016">16</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_base_button_skin_listener_1_1_button_type_1aeb0c8cb9839629843cd38e0e12a35c03"/><section>
+    <title>clickedSprite</title>
+<indexterm><primary>clickedSprite</primary><secondary>BaseButtonSkinListener.ButtonType</secondary></indexterm>
+<indexterm><primary>BaseButtonSkinListener.ButtonType</primary><secondary>clickedSprite</secondary></indexterm>
+<para><computeroutput>Sprite BaseButtonSkinListener.ButtonType.clickedSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00019">19</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_base_button_skin_listener_1_1_button_type_1ad83cbdb422f21c0eb695c04d286e6eae"/><section>
+    <title>defaultSprite</title>
+<indexterm><primary>defaultSprite</primary><secondary>BaseButtonSkinListener.ButtonType</secondary></indexterm>
+<indexterm><primary>BaseButtonSkinListener.ButtonType</primary><secondary>defaultSprite</secondary></indexterm>
+<para><computeroutput>Sprite BaseButtonSkinListener.ButtonType.defaultSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00018">18</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_base_button_skin_listener_1_1_button_type_1a504f5f49521b2eb6c7e3c3e2d90c46a6"/><section>
+    <title>hoverSprite</title>
+<indexterm><primary>hoverSprite</primary><secondary>BaseButtonSkinListener.ButtonType</secondary></indexterm>
+<indexterm><primary>BaseButtonSkinListener.ButtonType</primary><secondary>hoverSprite</secondary></indexterm>
+<para><computeroutput>Sprite BaseButtonSkinListener.ButtonType.hoverSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00020">20</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__base_button_skin_listener_8cs">BaseButtonSkinListener.cs</link></section>
+</section>

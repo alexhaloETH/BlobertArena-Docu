@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blobert_utils_8cs_source" xml:lang="en-US">
+<title>BlobertUtils.cs</title>
+<indexterm><primary>Managers/Statics/BlobertUtils.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__blobert_utils_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__blobert_utils_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Newtonsoft.Json.Linq;
+<anchor xml:id="__blobert_utils_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>SimpleGraphQL;
+<anchor xml:id="__blobert_utils_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>StarkSharp.StarkCurve.Extensions;
+<anchor xml:id="__blobert_utils_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__blobert_utils_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>System.Globalization;
+<anchor xml:id="__blobert_utils_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>System.Linq;
+<anchor xml:id="__blobert_utils_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>System.Numerics;
+<anchor xml:id="__blobert_utils_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>System.Security.Cryptography;
+<anchor xml:id="__blobert_utils_8cs_source_1l00011"/>00011 <emphasis role="keyword">using&#32;</emphasis>System.Text.RegularExpressions;
+<anchor xml:id="__blobert_utils_8cs_source_1l00012"/>00012 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__blobert_utils_8cs_source_1l00013"/>00013 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00014"/>00014 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__blobert_utils_8cs_source_1l00015"/>00015 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Networking;
+<anchor xml:id="__blobert_utils_8cs_source_1l00016"/>00016 
+<anchor xml:id="__blobert_utils_8cs_source_1l00017"/>00017 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>BlobertUtils
+<anchor xml:id="__blobert_utils_8cs_source_1l00018"/>00018 {
+<anchor xml:id="__blobert_utils_8cs_source_1l00019"/>00019 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Address&#32;Actions</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00020"/>00020 
+<anchor xml:id="__blobert_utils_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;ShortenAddress(<emphasis role="keywordtype">string</emphasis>&#32;address)
+<anchor xml:id="__blobert_utils_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;address.Substring(0,&#32;6)&#32;+&#32;<emphasis role="stringliteral">&quot;...&quot;</emphasis>&#32;+&#32;address.Substring(address.Length&#32;-&#32;4);
+<anchor xml:id="__blobert_utils_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00031"/>00031 
+<anchor xml:id="__blobert_utils_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;IsValidTransactionHash(<emphasis role="keywordtype">string</emphasis>&#32;hash,&#32;List&lt;string&gt;&#32;hashesToAvoid)
+<anchor xml:id="__blobert_utils_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hashesToAvoid.Contains(hash))
+<anchor xml:id="__blobert_utils_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00044"/>00044 
+<anchor xml:id="__blobert_utils_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;the&#32;string&#32;length&#32;is&#32;exactly&#32;64&#32;characters</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hash.Length&#32;!=&#32;64)
+<anchor xml:id="__blobert_utils_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00050"/>00050 
+<anchor xml:id="__blobert_utils_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Regular&#32;expression&#32;to&#32;check&#32;if&#32;the&#32;string&#32;contains&#32;only&#32;hexadecimal&#32;characters&#32;(0-9,&#32;a-f,&#32;A-f)</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Regex&#32;hexRegex&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Regex(<emphasis role="stringliteral">&quot;^[0-9a-fA-F]+$&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00053"/>00053 
+<anchor xml:id="__blobert_utils_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Return&#32;true&#32;if&#32;the&#32;string&#32;matches&#32;the&#32;regex&#32;pattern,&#32;otherwise&#32;false</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;hexRegex.IsMatch(hash);
+<anchor xml:id="__blobert_utils_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00057"/>00057 
+<anchor xml:id="__blobert_utils_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;List&lt;string&gt;&gt;&#32;GetStarknetIdsFromAddress(<emphasis role="keywordtype">string</emphasis>&#32;address)
+<anchor xml:id="__blobert_utils_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;url&#32;=&#32;$<emphasis role="stringliteral">&quot;https://api.starknet.id/addr_to_full_ids?addr={address}&quot;</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00067"/>00067 
+<anchor xml:id="__blobert_utils_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">using&#32;</emphasis>UnityWebRequest&#32;request&#32;=&#32;UnityWebRequest.Get(url);
+<anchor xml:id="__blobert_utils_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;asyncOperation&#32;=&#32;request.SendWebRequest();
+<anchor xml:id="__blobert_utils_8cs_source_1l00070"/>00070 
+<anchor xml:id="__blobert_utils_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!asyncOperation.isDone)
+<anchor xml:id="__blobert_utils_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;Task.Yield();
+<anchor xml:id="__blobert_utils_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00075"/>00075 
+<anchor xml:id="__blobert_utils_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(request.result&#32;!=&#32;UnityWebRequest.Result.Success)
+<anchor xml:id="__blobert_utils_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;Exception($<emphasis role="stringliteral">&quot;Error:&#32;{request.responseCode}&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00080"/>00080 
+<anchor xml:id="__blobert_utils_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;responseBody&#32;=&#32;request.downloadHandler.text;
+<anchor xml:id="__blobert_utils_8cs_source_1l00082"/>00082 
+<anchor xml:id="__blobert_utils_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;json&#32;=&#32;JObject.Parse(responseBody);
+<anchor xml:id="__blobert_utils_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;domains&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;string&gt;();
+<anchor xml:id="__blobert_utils_8cs_source_1l00085"/>00085 
+<anchor xml:id="__blobert_utils_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;<emphasis role="keywordtype">id</emphasis>&#32;<emphasis role="keywordflow">in</emphasis>&#32;json[<emphasis role="stringliteral">&quot;full_ids&quot;</emphasis>])
+<anchor xml:id="__blobert_utils_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>[<emphasis role="stringliteral">&quot;domain&quot;</emphasis>]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__blobert_utils_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;domain&#32;=&#32;<emphasis role="keywordtype">id</emphasis>[<emphasis role="stringliteral">&quot;domain&quot;</emphasis>].ToString();
+<anchor xml:id="__blobert_utils_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;domains.Add(domain);
+<anchor xml:id="__blobert_utils_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00094"/>00094 
+<anchor xml:id="__blobert_utils_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;domains;
+<anchor xml:id="__blobert_utils_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00097"/>00097 
+<anchor xml:id="__blobert_utils_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;string&gt;&#32;GetAddressFromStarknetIds(<emphasis role="keywordtype">string</emphasis>&#32;domain)
+<anchor xml:id="__blobert_utils_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;url&#32;=&#32;$<emphasis role="stringliteral">&quot;https://api.starknet.id/domain_to_addr?domain={domain}&quot;</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00101"/>00101 
+<anchor xml:id="__blobert_utils_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">using&#32;</emphasis>UnityWebRequest&#32;request&#32;=&#32;UnityWebRequest.Get(url);
+<anchor xml:id="__blobert_utils_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;asyncOperation&#32;=&#32;request.SendWebRequest();
+<anchor xml:id="__blobert_utils_8cs_source_1l00104"/>00104 
+<anchor xml:id="__blobert_utils_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!asyncOperation.isDone)
+<anchor xml:id="__blobert_utils_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;Task.Yield();
+<anchor xml:id="__blobert_utils_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00109"/>00109 
+<anchor xml:id="__blobert_utils_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(request.result&#32;!=&#32;UnityWebRequest.Result.Success)
+<anchor xml:id="__blobert_utils_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(request.responseCode&#32;==&#32;400)
+<anchor xml:id="__blobert_utils_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__blobert_utils_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;Exception($<emphasis role="stringliteral">&quot;Error:&#32;{request.error}&#32;(Code:&#32;{request.responseCode})&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00118"/>00118 
+<anchor xml:id="__blobert_utils_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;responseBody&#32;=&#32;request.downloadHandler.text;
+<anchor xml:id="__blobert_utils_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;json&#32;=&#32;JObject.Parse(responseBody);
+<anchor xml:id="__blobert_utils_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;address&#32;=&#32;json[<emphasis role="stringliteral">&quot;addr&quot;</emphasis>]?.ToString();
+<anchor xml:id="__blobert_utils_8cs_source_1l00122"/>00122 
+<anchor xml:id="__blobert_utils_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;address;
+<anchor xml:id="__blobert_utils_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00125"/>00125 
+<anchor xml:id="__blobert_utils_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;(<emphasis role="keywordtype">string</emphasis>&#32;address,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;successes)&gt;&#32;QuerySNSIds(<emphasis role="keywordtype">string</emphasis>&#32;username,&#32;<emphasis role="keywordtype">int</emphasis>&#32;domainindex&#32;=&#32;3)
+<anchor xml:id="__blobert_utils_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;username&#32;=&#32;CleanSNSUsername(username);
+<anchor xml:id="__blobert_utils_8cs_source_1l00129"/>00129 
+<anchor xml:id="__blobert_utils_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;quickMatch&#32;=&#32;await&#32;QuickFightModel.GetWalletFromUsernameAsync(username);
+<anchor xml:id="__blobert_utils_8cs_source_1l00131"/>00131 
+<anchor xml:id="__blobert_utils_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(quickMatch&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__blobert_utils_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(quickMatch,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00136"/>00136 
+<anchor xml:id="__blobert_utils_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;address&#32;=&#32;await&#32;JSInteropManager.GetAddressFromUsernameAsync(username,&#32;<emphasis role="stringliteral">&quot;https://api.cartridge.gg/x/starknet/mainnet&quot;</emphasis>,&#32;<link linkend="_class_ui_reference_manager">UiReferenceManager</link>.<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>.<link linkend="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142">gameManager</link>.<link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</link>.chainId,&#32;domainindex);
+<anchor xml:id="__blobert_utils_8cs_source_1l00138"/>00138 
+<anchor xml:id="__blobert_utils_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(address&#32;==&#32;<emphasis role="stringliteral">&quot;0x0&quot;</emphasis>)
+<anchor xml:id="__blobert_utils_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(address,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(address,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00148"/>00148 
+<anchor xml:id="__blobert_utils_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;CleanSNSUsername(<emphasis role="keywordtype">string</emphasis>&#32;input)
+<anchor xml:id="__blobert_utils_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;dotIndex&#32;=&#32;input.IndexOf(<emphasis role="charliteral">&apos;.&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00152"/>00152 
+<anchor xml:id="__blobert_utils_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dotIndex&#32;!=&#32;-1)
+<anchor xml:id="__blobert_utils_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;input.Substring(0,&#32;dotIndex);
+<anchor xml:id="__blobert_utils_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00157"/>00157 
+<anchor xml:id="__blobert_utils_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;input;
+<anchor xml:id="__blobert_utils_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00160"/>00160 
+<anchor xml:id="__blobert_utils_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;Address0sFix(<emphasis role="keywordtype">string</emphasis>&#32;inputHash)
+<anchor xml:id="__blobert_utils_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;requiredLength&#32;=&#32;66;
+<anchor xml:id="__blobert_utils_8cs_source_1l00169"/>00169 
+<anchor xml:id="__blobert_utils_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!inputHash.StartsWith(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>))
+<anchor xml:id="__blobert_utils_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;inputHash&#32;=&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;inputHash;
+<anchor xml:id="__blobert_utils_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00174"/>00174 
+<anchor xml:id="__blobert_utils_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;missingZeros&#32;=&#32;requiredLength&#32;-&#32;inputHash.Length;
+<anchor xml:id="__blobert_utils_8cs_source_1l00176"/>00176 
+<anchor xml:id="__blobert_utils_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(missingZeros&#32;&gt;&#32;0)
+<anchor xml:id="__blobert_utils_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;inputHash&#32;=&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;<emphasis role="keyword">new</emphasis>&#32;string(<emphasis role="charliteral">&apos;0&apos;</emphasis>,&#32;missingZeros)&#32;+&#32;inputHash.Substring(2);
+<anchor xml:id="__blobert_utils_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00181"/>00181 
+<anchor xml:id="__blobert_utils_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;inputHash;
+<anchor xml:id="__blobert_utils_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00184"/>00184 
+<anchor xml:id="__blobert_utils_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;TakeOutUnderScore(<emphasis role="keywordtype">string</emphasis>&#32;input,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;capitalize)
+<anchor xml:id="__blobert_utils_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">string</emphasis>.IsNullOrEmpty(input))
+<anchor xml:id="__blobert_utils_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__blobert_utils_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00197"/>00197 
+<anchor xml:id="__blobert_utils_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;startsWithUnderscore&#32;=&#32;input.StartsWith(<emphasis role="stringliteral">&quot;_&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;words&#32;=&#32;input.Split(<emphasis role="charliteral">&apos;_&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00200"/>00200 
+<anchor xml:id="__blobert_utils_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;words.Length;&#32;i++)
+<anchor xml:id="__blobert_utils_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(capitalize)
+<anchor xml:id="__blobert_utils_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;words[i]&#32;=&#32;CultureInfo.CurrentCulture.TextInfo.ToTitleCase(words[i].ToLower());
+<anchor xml:id="__blobert_utils_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00208"/>00208 
+<anchor xml:id="__blobert_utils_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;result&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Join(<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>,&#32;words);
+<anchor xml:id="__blobert_utils_8cs_source_1l00210"/>00210 
+<anchor xml:id="__blobert_utils_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(startsWithUnderscore)
+<anchor xml:id="__blobert_utils_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<emphasis role="stringliteral">&quot;_&quot;</emphasis>&#32;+&#32;result.TrimStart();
+<anchor xml:id="__blobert_utils_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00215"/>00215 
+<anchor xml:id="__blobert_utils_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+<anchor xml:id="__blobert_utils_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00218"/>00218 
+<anchor xml:id="__blobert_utils_8cs_source_1l00219"/>00219 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Address&#32;Actions</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00220"/>00220 
+<anchor xml:id="__blobert_utils_8cs_source_1l00221"/>00221 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Mathematical&#32;Operations</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00222"/>00222 
+<anchor xml:id="__blobert_utils_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;emptyFieldElement&#32;=&#32;<emphasis role="stringliteral">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00224"/>00224 
+<anchor xml:id="__blobert_utils_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;BigIntToHex(BigInteger&#32;bigInt)
+<anchor xml:id="__blobert_utils_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;bigInt.ToString(<emphasis role="stringliteral">&quot;X&quot;</emphasis>).ToLower();
+<anchor xml:id="__blobert_utils_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00229"/>00229 
+<anchor xml:id="__blobert_utils_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;BigInteger&#32;NumberToBigint(<emphasis role="keywordtype">int</emphasis>&#32;number,&#32;<emphasis role="keywordtype">int</emphasis>&#32;decimalLength&#32;=&#32;18)
+<anchor xml:id="__blobert_utils_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BigInteger&#32;result&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;BigInteger(number)&#32;*&#32;BigInteger.Pow(10,&#32;decimalLength);
+<anchor xml:id="__blobert_utils_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+<anchor xml:id="__blobert_utils_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00241"/>00241 
+<anchor xml:id="__blobert_utils_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;decimal&#32;BigIntToDecimal(BigInteger&#32;bigInt,&#32;<emphasis role="keywordtype">int</emphasis>&#32;decimalPlaces&#32;=&#32;2)
+<anchor xml:id="__blobert_utils_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;decimal&#32;result&#32;=&#32;(decimal)(bigInt&#32;/&#32;BigInteger.Pow(10,&#32;18));
+<anchor xml:id="__blobert_utils_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;Math.Round(result,&#32;decimalPlaces);
+<anchor xml:id="__blobert_utils_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+<anchor xml:id="__blobert_utils_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(Exception&#32;ex)
+<anchor xml:id="__blobert_utils_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Console.WriteLine($<emphasis role="stringliteral">&quot;An&#32;error&#32;occurred:&#32;{ex.Message}&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00262"/>00262 
+<anchor xml:id="__blobert_utils_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;<emphasis role="comment">//pretyy&#32;sure&#32;this&#32;is&#32;broken</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;BigInteger&#32;HexToBigInteger(<emphasis role="keywordtype">string</emphasis>&#32;hexString)
+<anchor xml:id="__blobert_utils_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hexString.StartsWith(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>,&#32;StringComparison.OrdinalIgnoreCase))
+<anchor xml:id="__blobert_utils_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hexString&#32;=&#32;hexString.Substring(2);
+<anchor xml:id="__blobert_utils_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00275"/>00275 
+<anchor xml:id="__blobert_utils_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hexString&#32;=&#32;hexString.TrimStart(<emphasis role="charliteral">&apos;0&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;bytes&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>[hexString.Length&#32;/&#32;2&#32;+&#32;hexString.Length&#32;%&#32;2];
+<anchor xml:id="__blobert_utils_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;index&#32;=&#32;0;&#32;index&#32;&lt;&#32;bytes.Length;&#32;index++)
+<anchor xml:id="__blobert_utils_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;byteValue&#32;=&#32;hexString.Length&#32;%&#32;2&#32;!=&#32;0&#32;&amp;&amp;&#32;index&#32;==&#32;0
+<anchor xml:id="__blobert_utils_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;hexString.Substring(0,&#32;1)
+<anchor xml:id="__blobert_utils_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;hexString.Substring(index&#32;*&#32;2&#32;-&#32;(hexString.Length&#32;%&#32;2&#32;==&#32;0&#32;?&#32;0&#32;:&#32;1),&#32;2);
+<anchor xml:id="__blobert_utils_8cs_source_1l00283"/>00283 
+<anchor xml:id="__blobert_utils_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytes[bytes.Length&#32;-&#32;index&#32;-&#32;1]&#32;=&#32;Convert.ToByte(byteValue,&#32;16);
+<anchor xml:id="__blobert_utils_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00286"/>00286 
+<anchor xml:id="__blobert_utils_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;BigInteger(bytes.Concat(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;{&#32;0&#32;}).ToArray());
+<anchor xml:id="__blobert_utils_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00289"/>00289 
+<anchor xml:id="__blobert_utils_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;BigInteger&#32;HexToBigInt(<emphasis role="keywordtype">string</emphasis>&#32;hexValue)
+<anchor xml:id="__blobert_utils_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hexValue.StartsWith(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>))
+<anchor xml:id="__blobert_utils_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hexValue&#32;=&#32;hexValue.Substring(2);
+<anchor xml:id="__blobert_utils_8cs_source_1l00294"/>00294 
+<anchor xml:id="__blobert_utils_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;BigInteger.Parse(hexValue,&#32;<link linkend="_namespace_system">System</link>.Globalization.NumberStyles.HexNumber);
+<anchor xml:id="__blobert_utils_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00297"/>00297 
+<anchor xml:id="__blobert_utils_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;(<emphasis role="keywordtype">string</emphasis>&#32;firstHalf,&#32;<emphasis role="keywordtype">string</emphasis>&#32;lastHalf)&#32;GetFirstAndLastU128(<emphasis role="keywordtype">string</emphasis>&#32;hex)
+<anchor xml:id="__blobert_utils_8cs_source_1l00304"/>00304 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hex&#32;=&#32;hex.PadLeft(64,&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00306"/>00306 
+<anchor xml:id="__blobert_utils_8cs_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;firstHalf&#32;=&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;hex.Substring(0,&#32;32).TrimStart(<emphasis role="charliteral">&apos;0&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00308"/>00308 
+<anchor xml:id="__blobert_utils_8cs_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;lastHalf&#32;=&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;hex.Substring(hex.Length&#32;-&#32;32).TrimStart(<emphasis role="charliteral">&apos;0&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00310"/>00310 
+<anchor xml:id="__blobert_utils_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(firstHalf,&#32;lastHalf);
+<anchor xml:id="__blobert_utils_8cs_source_1l00312"/>00312 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00313"/>00313 
+<anchor xml:id="__blobert_utils_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;ConvertTo256BitHex(<emphasis role="keywordtype">string</emphasis>&#32;input)
+<anchor xml:id="__blobert_utils_8cs_source_1l00320"/>00320 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Remove&#32;the&#32;&quot;0x&quot;&#32;prefix&#32;if&#32;it&#32;exists</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(input.StartsWith(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>))
+<anchor xml:id="__blobert_utils_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;input&#32;=&#32;input.Substring(2);
+<anchor xml:id="__blobert_utils_8cs_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00326"/>00326 
+<anchor xml:id="__blobert_utils_8cs_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;the&#32;hex&#32;string&#32;to&#32;a&#32;byte&#32;array</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;bytes&#32;=&#32;Enumerable.Range(0,&#32;input.Length&#32;/&#32;2)
+<anchor xml:id="__blobert_utils_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.Select(x&#32;=&gt;&#32;Convert.ToByte(input.Substring(x&#32;*&#32;2,&#32;2),&#32;16))
+<anchor xml:id="__blobert_utils_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.ToArray();
+<anchor xml:id="__blobert_utils_8cs_source_1l00331"/>00331 
+<anchor xml:id="__blobert_utils_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ensure&#32;the&#32;byte&#32;array&#32;is&#32;32&#32;bytes&#32;(256&#32;bits)&#32;long</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;paddedBytes&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>[32];
+<anchor xml:id="__blobert_utils_8cs_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Buffer.BlockCopy(bytes,&#32;0,&#32;paddedBytes,&#32;32&#32;-&#32;bytes.Length,&#32;bytes.Length);
+<anchor xml:id="__blobert_utils_8cs_source_1l00335"/>00335 
+<anchor xml:id="__blobert_utils_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;back&#32;to&#32;hex&#32;string</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;result&#32;=&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;BitConverter.ToString(paddedBytes).Replace(<emphasis role="stringliteral">&quot;-&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>).ToLower();
+<anchor xml:id="__blobert_utils_8cs_source_1l00338"/>00338 
+<anchor xml:id="__blobert_utils_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+<anchor xml:id="__blobert_utils_8cs_source_1l00340"/>00340 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00341"/>00341 
+<anchor xml:id="__blobert_utils_8cs_source_1l00342"/>00342 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Mathematical&#32;Operations</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00343"/>00343 
+<anchor xml:id="__blobert_utils_8cs_source_1l00344"/>00344 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;added&#32;on</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00345"/>00345 
+<anchor xml:id="__blobert_utils_8cs_source_1l00346"/>00346 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;high,&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;low)&#32;SplitU256ToU128(<emphasis role="keywordtype">string</emphasis>&#32;hexValue)
+<anchor xml:id="__blobert_utils_8cs_source_1l00347"/>00347 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ensure&#32;the&#32;hex&#32;string&#32;is&#32;exactly&#32;64&#32;characters&#32;(256&#32;bits).</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hexValue.StartsWith(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>))
+<anchor xml:id="__blobert_utils_8cs_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hexValue&#32;=&#32;hexValue.Substring(2);&#32;<emphasis role="comment">//&#32;Remove&#32;&quot;0x&quot;&#32;prefix&#32;if&#32;present.</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00353"/>00353 
+<anchor xml:id="__blobert_utils_8cs_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hexValue.Length&#32;!=&#32;64)
+<anchor xml:id="__blobert_utils_8cs_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentException(<emphasis role="stringliteral">&quot;Hex&#32;value&#32;must&#32;be&#32;exactly&#32;64&#32;characters&#32;(32&#32;bytes)&#32;long.&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00358"/>00358 
+<anchor xml:id="__blobert_utils_8cs_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Split&#32;the&#32;hex&#32;string&#32;into&#32;high&#32;and&#32;low&#32;128-bit&#32;segments.</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;highHex&#32;=&#32;hexValue.Substring(0,&#32;32);&#32;<emphasis role="comment">//&#32;First&#32;32&#32;chars&#32;(16&#32;bytes)&#32;for&#32;high&#32;128&#32;bits</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;lowHex&#32;=&#32;hexValue.Substring(32,&#32;32);&#32;&#32;<emphasis role="comment">//&#32;Last&#32;32&#32;chars&#32;(16&#32;bytes)&#32;for&#32;low&#32;128&#32;bits</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00362"/>00362 
+<anchor xml:id="__blobert_utils_8cs_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;the&#32;hex&#32;strings&#32;to&#32;UInt128&#32;values.</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;high&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;highHex);
+<anchor xml:id="__blobert_utils_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;low&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;lowHex);
+<anchor xml:id="__blobert_utils_8cs_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(high,&#32;low);
+<anchor xml:id="__blobert_utils_8cs_source_1l00367"/>00367 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00368"/>00368 
+<anchor xml:id="__blobert_utils_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;JoinU128ToU252(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;high,&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;low)
+<anchor xml:id="__blobert_utils_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Get&#32;the&#32;hex&#32;strings&#32;without&#32;the&#32;&quot;0x&quot;&#32;prefix&#32;and&#32;pad&#32;them&#32;to&#32;32&#32;characters.</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;highHex&#32;=&#32;high.Hex().Replace(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>).Substring(32,&#32;32);
+<anchor xml:id="__blobert_utils_8cs_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;lowHex&#32;=&#32;low.Hex().Replace(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>).Substring(32,&#32;32);
+<anchor xml:id="__blobert_utils_8cs_source_1l00374"/>00374 
+<anchor xml:id="__blobert_utils_8cs_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Concatenate&#32;high&#32;and&#32;low&#32;hex&#32;parts.</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;combinedHex&#32;=&#32;highHex&#32;+&#32;lowHex;
+<anchor xml:id="__blobert_utils_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Return&#32;as&#32;a&#32;new&#32;FieldElement&#32;with&#32;&quot;0x&quot;&#32;prefix&#32;for&#32;a&#32;252-bit&#32;hex&#32;value.</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;combinedHex);
+<anchor xml:id="__blobert_utils_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00380"/>00380 
+<anchor xml:id="__blobert_utils_8cs_source_1l00381"/>00381 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;ConvertToTwosComplement(BigInteger&#32;number)
+<anchor xml:id="__blobert_utils_8cs_source_1l00382"/>00382 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;the&#32;number&#32;is&#32;negative</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(number&#32;&gt;=&#32;0)
+<anchor xml:id="__blobert_utils_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;BigIntToHex(number);
+<anchor xml:id="__blobert_utils_8cs_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00388"/>00388 
+<anchor xml:id="__blobert_utils_8cs_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BigInteger&#32;positiveNumber&#32;=&#32;BigInteger.Abs(number);
+<anchor xml:id="__blobert_utils_8cs_source_1l00390"/>00390 
+<anchor xml:id="__blobert_utils_8cs_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;bitLength&#32;=&#32;(int)Math.Ceiling(positiveNumber.GetBitLength()&#32;/&#32;8.0)&#32;*&#32;8;
+<anchor xml:id="__blobert_utils_8cs_source_1l00392"/>00392 
+<anchor xml:id="__blobert_utils_8cs_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BigInteger&#32;twoComplement&#32;=&#32;(BigInteger.One&#32;&lt;&lt;&#32;bitLength)&#32;-&#32;positiveNumber;
+<anchor xml:id="__blobert_utils_8cs_source_1l00394"/>00394 
+<anchor xml:id="__blobert_utils_8cs_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;twoComplement.ToString(<emphasis role="stringliteral">&quot;x&quot;</emphasis>).Substring(1);
+<anchor xml:id="__blobert_utils_8cs_source_1l00396"/>00396 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00397"/>00397 
+<anchor xml:id="__blobert_utils_8cs_source_1l00398"/>00398 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;unsafe&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;PoseidonHash(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;array)
+<anchor xml:id="__blobert_utils_8cs_source_1l00399"/>00399 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00400"/>00400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(array&#32;==&#32;<emphasis role="keyword">null</emphasis>&#32;||&#32;array.Length&#32;==&#32;0)
+<anchor xml:id="__blobert_utils_8cs_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00402"/>00402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentException(<emphasis role="stringliteral">&quot;Input&#32;array&#32;cannot&#32;be&#32;null&#32;or&#32;empty&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00403"/>00403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00404"/>00404 
+<anchor xml:id="__blobert_utils_8cs_source_1l00405"/>00405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;FieldElement&#32;array&#32;to&#32;dojo_bindings.dojo.FieldElement&#32;array</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dojo_bindings.dojo.FieldElement[]&#32;dojoArray&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;dojo_bindings.dojo.FieldElement[array.Length];
+<anchor xml:id="__blobert_utils_8cs_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;array.Length;&#32;i++)
+<anchor xml:id="__blobert_utils_8cs_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dojoArray[i]&#32;=&#32;array[i].Inner;
+<anchor xml:id="__blobert_utils_8cs_source_1l00410"/>00410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00411"/>00411 
+<anchor xml:id="__blobert_utils_8cs_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Get&#32;the&#32;length&#32;of&#32;the&#32;array</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UIntPtr&#32;length&#32;=&#32;(UIntPtr)dojoArray.Length;
+<anchor xml:id="__blobert_utils_8cs_source_1l00414"/>00414 
+<anchor xml:id="__blobert_utils_8cs_source_1l00415"/>00415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Fixed&#32;statement&#32;to&#32;get&#32;the&#32;pointer&#32;to&#32;the&#32;array</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fixed&#32;(dojo_bindings.dojo.FieldElement*&#32;arrayPtr&#32;=&#32;dojoArray)
+<anchor xml:id="__blobert_utils_8cs_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00418"/>00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Call&#32;the&#32;poseidon_hash&#32;function</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dojo_bindings.dojo.FieldElement&#32;result&#32;=&#32;dojo_bindings.dojo.poseidon_hash(arrayPtr,&#32;length);
+<anchor xml:id="__blobert_utils_8cs_source_1l00420"/>00420 
+<anchor xml:id="__blobert_utils_8cs_source_1l00421"/>00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;the&#32;result&#32;back&#32;to&#32;FieldElement&#32;and&#32;return&#32;it</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(result);
+<anchor xml:id="__blobert_utils_8cs_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00424"/>00424 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00425"/>00425 
+<anchor xml:id="__blobert_utils_8cs_source_1l00426"/>00426 &#32;&#32;&#32;&#32;<emphasis role="comment">//make&#32;a&#32;function&#32;that&#32;given&#32;any&#32;hex&#32;it&#32;returns&#32;it&#32;to&#32;66&#32;total&#32;characters&#32;by&#32;adding&#32;0&#32;after&#32;the&#32;0x&#32;if&#32;necessary</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00427"/>00427 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;FormatToStarkNetAddress(<emphasis role="keywordtype">string</emphasis>&#32;hex)
+<anchor xml:id="__blobert_utils_8cs_source_1l00428"/>00428 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hex.StartsWith(<emphasis role="stringliteral">&quot;0x&quot;</emphasis>))
+<anchor xml:id="__blobert_utils_8cs_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hex&#32;=&#32;hex.Substring(2);
+<anchor xml:id="__blobert_utils_8cs_source_1l00432"/>00432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00433"/>00433 
+<anchor xml:id="__blobert_utils_8cs_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hex.Length&#32;&lt;&#32;64)
+<anchor xml:id="__blobert_utils_8cs_source_1l00435"/>00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00436"/>00436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hex&#32;=&#32;hex.PadLeft(64,&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00437"/>00437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00438"/>00438 
+<anchor xml:id="__blobert_utils_8cs_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;hex;
+<anchor xml:id="__blobert_utils_8cs_source_1l00440"/>00440 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00441"/>00441 
+<anchor xml:id="__blobert_utils_8cs_source_1l00442"/>00442 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;FieldElementToSpan(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;fieldElement)
+<anchor xml:id="__blobert_utils_8cs_source_1l00443"/>00443 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;last16Bytes&#32;=&#32;fieldElement.Inner.data.Slice(16,&#32;16).ToArray();
+<anchor xml:id="__blobert_utils_8cs_source_1l00445"/>00445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;last16Bytes;
+<anchor xml:id="__blobert_utils_8cs_source_1l00446"/>00446 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00447"/>00447 
+<anchor xml:id="__blobert_utils_8cs_source_1l00448"/>00448 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetRandomFeltInHex()
+<anchor xml:id="__blobert_utils_8cs_source_1l00449"/>00449 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;randomBytes&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>[28];
+<anchor xml:id="__blobert_utils_8cs_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">using</emphasis>&#32;(var&#32;rng&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;RNGCryptoServiceProvider())
+<anchor xml:id="__blobert_utils_8cs_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rng.GetBytes(randomBytes);
+<anchor xml:id="__blobert_utils_8cs_source_1l00454"/>00454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00455"/>00455 
+<anchor xml:id="__blobert_utils_8cs_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;randomBytes[0]&#32;&amp;=&#32;0x0F;
+<anchor xml:id="__blobert_utils_8cs_source_1l00457"/>00457 
+<anchor xml:id="__blobert_utils_8cs_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BigInteger&#32;felt&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;BigInteger(randomBytes,&#32;isUnsigned:&#32;<emphasis role="keyword">true</emphasis>,&#32;isBigEndian:&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00459"/>00459 
+<anchor xml:id="__blobert_utils_8cs_source_1l00460"/>00460 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;0x&quot;</emphasis>&#32;+&#32;felt.ToString(<emphasis role="stringliteral">&quot;X&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00461"/>00461 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00462"/>00462 
+<anchor xml:id="__blobert_utils_8cs_source_1l00463"/>00463 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;string&gt;&#32;QueryAccountsForAddress(<emphasis role="keywordtype">string</emphasis>&#32;username)
+<anchor xml:id="__blobert_utils_8cs_source_1l00464"/>00464 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00465"/>00465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;<emphasis role="stringliteral">$@&quot;</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00466"/>00466 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;query&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00467"/>00467 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;accounts&#32;(</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00468"/>00468 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;where:&#32;{{username:&#32;&quot;&quot;{username}&quot;&quot;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00469"/>00469 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00470"/>00470 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00471"/>00471 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00472"/>00472 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;controllers&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00473"/>00473 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00474"/>00474 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00475"/>00475 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;address</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00476"/>00476 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00477"/>00477 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00478"/>00478 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00479"/>00479 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00480"/>00480 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00481"/>00481 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00482"/>00482 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}&quot;</emphasis>;
+<anchor xml:id="__blobert_utils_8cs_source_1l00483"/>00483 
+<anchor xml:id="__blobert_utils_8cs_source_1l00484"/>00484 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(DojoEntitiesStorage.worldManagerData&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__blobert_utils_8cs_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00486"/>00486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;WorldManagerData&#32;is&#32;null&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00487"/>00487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__blobert_utils_8cs_source_1l00488"/>00488 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00489"/>00489 
+<anchor xml:id="__blobert_utils_8cs_source_1l00490"/>00490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GraphQLClient($<emphasis role="stringliteral">&quot;https://api.cartridge.gg/query&quot;</emphasis>);
+<anchor xml:id="__blobert_utils_8cs_source_1l00491"/>00491 
+<anchor xml:id="__blobert_utils_8cs_source_1l00492"/>00492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Request
+<anchor xml:id="__blobert_utils_8cs_source_1l00493"/>00493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00494"/>00494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;=&#32;queryString,
+<anchor xml:id="__blobert_utils_8cs_source_1l00495"/>00495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__blobert_utils_8cs_source_1l00496"/>00496 
+<anchor xml:id="__blobert_utils_8cs_source_1l00497"/>00497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);
+<anchor xml:id="__blobert_utils_8cs_source_1l00498"/>00498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);
+<anchor xml:id="__blobert_utils_8cs_source_1l00499"/>00499 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);
+<anchor xml:id="__blobert_utils_8cs_source_1l00500"/>00500 
+<anchor xml:id="__blobert_utils_8cs_source_1l00501"/>00501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;edges&#32;=&#32;jsonObj[<emphasis role="stringliteral">&quot;Data&quot;</emphasis>][<emphasis role="stringliteral">&quot;accounts&quot;</emphasis>][<emphasis role="stringliteral">&quot;edges&quot;</emphasis>];
+<anchor xml:id="__blobert_utils_8cs_source_1l00502"/>00502 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;addressList&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;string&gt;();
+<anchor xml:id="__blobert_utils_8cs_source_1l00503"/>00503 
+<anchor xml:id="__blobert_utils_8cs_source_1l00504"/>00504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;edge&#32;<emphasis role="keywordflow">in</emphasis>&#32;edges)
+<anchor xml:id="__blobert_utils_8cs_source_1l00505"/>00505 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00506"/>00506 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;controllers&#32;=&#32;edge[<emphasis role="stringliteral">&quot;node&quot;</emphasis>][<emphasis role="stringliteral">&quot;controllers&quot;</emphasis>][<emphasis role="stringliteral">&quot;edges&quot;</emphasis>];
+<anchor xml:id="__blobert_utils_8cs_source_1l00507"/>00507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;controller&#32;<emphasis role="keywordflow">in</emphasis>&#32;controllers)
+<anchor xml:id="__blobert_utils_8cs_source_1l00508"/>00508 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_utils_8cs_source_1l00509"/>00509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;address&#32;=&#32;(string)controller[<emphasis role="stringliteral">&quot;node&quot;</emphasis>][<emphasis role="stringliteral">&quot;address&quot;</emphasis>];
+<anchor xml:id="__blobert_utils_8cs_source_1l00510"/>00510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;address;
+<anchor xml:id="__blobert_utils_8cs_source_1l00511"/>00511 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00512"/>00512 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00513"/>00513 
+<anchor xml:id="__blobert_utils_8cs_source_1l00514"/>00514 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__blobert_utils_8cs_source_1l00515"/>00515 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_utils_8cs_source_1l00516"/>00516 
+<anchor xml:id="__blobert_utils_8cs_source_1l00517"/>00517 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;added&#32;on</emphasis>
+<anchor xml:id="__blobert_utils_8cs_source_1l00518"/>00518 }
+</programlisting></section>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data" xml:lang="en-US">
+<title>LogicLayer.WorldDataModel.AttackAnimData Struct Reference</title>
+<indexterm><primary>LogicLayer.WorldDataModel.AttackAnimData</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a0766c2151995d7e425911f742363952a">AttackAnimData</link> (string <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a72ba070c9c5f8097aa27bc89e8251f1a">fileName</link>, int <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1ac75330273867c7125c6c3c1839fc29d4">row</link>, int <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a7298d7f5fc4f20c3c5bcf67d40dc33c4">impactFrame</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a72ba070c9c5f8097aa27bc89e8251f1a">fileName</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1ac75330273867c7125c6c3c1839fc29d4">row</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a7298d7f5fc4f20c3c5bcf67d40dc33c4">impactFrame</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00040">40</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a0766c2151995d7e425911f742363952a"/><section>
+    <title>AttackAnimData()</title>
+<indexterm><primary>AttackAnimData</primary><secondary>LogicLayer.WorldDataModel.AttackAnimData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.AttackAnimData</primary><secondary>AttackAnimData</secondary></indexterm>
+<para><computeroutput>LogicLayer.WorldDataModel.AttackAnimData.AttackAnimData (string fileName, int row, int impactFrame)</computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00046">46</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a72ba070c9c5f8097aa27bc89e8251f1a"/><section>
+    <title>fileName</title>
+<indexterm><primary>fileName</primary><secondary>LogicLayer.WorldDataModel.AttackAnimData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.AttackAnimData</primary><secondary>fileName</secondary></indexterm>
+<para><computeroutput>string LogicLayer.WorldDataModel.AttackAnimData.fileName</computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00042">42</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1a7298d7f5fc4f20c3c5bcf67d40dc33c4"/><section>
+    <title>impactFrame</title>
+<indexterm><primary>impactFrame</primary><secondary>LogicLayer.WorldDataModel.AttackAnimData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.AttackAnimData</primary><secondary>impactFrame</secondary></indexterm>
+<para><computeroutput>int LogicLayer.WorldDataModel.AttackAnimData.impactFrame</computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00044">44</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data_1ac75330273867c7125c6c3c1839fc29d4"/><section>
+    <title>row</title>
+<indexterm><primary>row</primary><secondary>LogicLayer.WorldDataModel.AttackAnimData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.AttackAnimData</primary><secondary>row</secondary></indexterm>
+<para><computeroutput>int LogicLayer.WorldDataModel.AttackAnimData.row</computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00043">43</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Managers/<link linkend="__world_data_model_8cs">WorldDataModel.cs</link></section>
+</section>

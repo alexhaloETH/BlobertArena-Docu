@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pvp_actions_contract_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Transactions/PvpActionsContract.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Transactions/PvpActionsContract.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">PvpActionsContract</emphasis></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_attack_struct">PvpActionsContract.AttackStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct">PvpActionsContract.SendInviteStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_rescind_invite_struct">PvpActionsContract.RescindInviteStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_respond_invite_struct">PvpActionsContract.RespondInviteStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_rescind_response_struct">PvpActionsContract.RescindResponseStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_reject_invite_struct">PvpActionsContract.RejectInviteStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_reject_response_struct">PvpActionsContract.RejectResponseStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_accept_response_struct">PvpActionsContract.AcceptResponseStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_commit_attack_struct">PvpActionsContract.CommitAttackStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_reveal_attack_struct">PvpActionsContract.RevealAttackStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_run_round_struct">PvpActionsContract.RunRoundStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_forfeit_struct">PvpActionsContract.ForfeitStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct">PvpActionsContract.KickInactivePlayerStruct</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

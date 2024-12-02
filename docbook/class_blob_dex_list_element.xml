@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blob_dex_list_element" xml:lang="en-US">
+<title>BlobDexListElement Class Reference</title>
+<indexterm><primary>BlobDexListElement</primary></indexterm>
+<para>Inheritance diagram for BlobDexListElement:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blob_dex_list_element.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60">BlobDexListElementState</link> { <link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60ac841881b7f65d9e69aa9c932ca4427c8">SELECTED</link>
+, <link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60a88559a0cfd8250c9d65970cc145c92d4">OFF</link>
+, <link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60a90651ebea9a35ec4e018c8157492e17c">ON</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blob_dex_list_element_1abec8067199a1706fdec4c4c3c7c0311e">SetBackGroundImage</link> (<link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60">BlobDexListElementState</link> state)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blob_dex_list_element_1a91a4b88d716f59f29dad116ffe951834">InitilizeComponent</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, Action&lt; <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> &gt; callback)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blob_dex_list_element_1a144b4e494c3355e6e27c4f73f3d1fe02">OnClick</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blob_dex_list_element_8cs_source_1l00009">9</link> of file <link linkend="__blob_dex_list_element_8cs_source">BlobDexListElement.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60"/><section>
+    <title>BlobDexListElementState</title>
+<indexterm><primary>BlobDexListElementState</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>BlobDexListElementState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60">BlobDexListElement.BlobDexListElementState</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SELECTED</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>SELECTED</secondary></indexterm>
+<anchor xml:id="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60ac841881b7f65d9e69aa9c932ca4427c8"/>SELECTED</entry><entry></entry></row><row><entry><indexterm><primary>OFF</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>OFF</secondary></indexterm>
+<anchor xml:id="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60a88559a0cfd8250c9d65970cc145c92d4"/>OFF</entry><entry></entry></row><row><entry><indexterm><primary>ON</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>ON</secondary></indexterm>
+<anchor xml:id="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60a90651ebea9a35ec4e018c8157492e17c"/>ON</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blob_dex_list_element_8cs_source_1l00020">20</link> of file <link linkend="__blob_dex_list_element_8cs_source">BlobDexListElement.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blob_dex_list_element_1a91a4b88d716f59f29dad116ffe951834"/><section>
+    <title>InitilizeComponent()</title>
+<indexterm><primary>InitilizeComponent</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>InitilizeComponent</secondary></indexterm>
+<para><computeroutput>void BlobDexListElement.InitilizeComponent (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, Action&lt; <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> &gt; callback)</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_element_8cs_source_1l00045">45</link> of file <link linkend="__blob_dex_list_element_8cs_source">BlobDexListElement.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_element_1a144b4e494c3355e6e27c4f73f3d1fe02"/><section>
+    <title>OnClick()</title>
+<indexterm><primary>OnClick</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>OnClick</secondary></indexterm>
+<para><computeroutput>void BlobDexListElement.OnClick ( )</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_element_8cs_source_1l00068">68</link> of file <link linkend="__blob_dex_list_element_8cs_source">BlobDexListElement.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_element_1abec8067199a1706fdec4c4c3c7c0311e"/><section>
+    <title>SetBackGroundImage()</title>
+<indexterm><primary>SetBackGroundImage</primary><secondary>BlobDexListElement</secondary></indexterm>
+<indexterm><primary>BlobDexListElement</primary><secondary>SetBackGroundImage</secondary></indexterm>
+<para><computeroutput>void BlobDexListElement.SetBackGroundImage (<link linkend="_class_blob_dex_list_element_1a58c84087ee52685f58edabdf4d7a6d60">BlobDexListElementState</link> state)</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_element_8cs_source_1l00027">27</link> of file <link linkend="__blob_dex_list_element_8cs_source">BlobDexListElement.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__blob_dex_list_element_8cs">BlobDexListElement.cs</link></section>
+</section>

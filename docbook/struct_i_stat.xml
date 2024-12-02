@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_i_stat" xml:lang="en-US">
+<title>IStat Struct Reference</title>
+<indexterm><primary>IStat</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>StatTypes <link linkend="_struct_i_stat_1a8aee4cef027a4b4e9b88556f80dc0c9d">stat</link></para>
+</listitem>
+            <listitem><para>sbyte <link linkend="_struct_i_stat_1a90d1f1fb746b487be8d78634138f6528">amount</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00048">48</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_i_stat_1a90d1f1fb746b487be8d78634138f6528"/><section>
+    <title>amount</title>
+<indexterm><primary>amount</primary><secondary>IStat</secondary></indexterm>
+<indexterm><primary>IStat</primary><secondary>amount</secondary></indexterm>
+<para><computeroutput>sbyte IStat.amount</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00051">51</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_i_stat_1a8aee4cef027a4b4e9b88556f80dc0c9d"/><section>
+    <title>stat</title>
+<indexterm><primary>stat</primary><secondary>IStat</secondary></indexterm>
+<indexterm><primary>IStat</primary><secondary>stat</secondary></indexterm>
+<para><computeroutput>StatTypes IStat.stat</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00050">50</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__attack_8gen_8cs">Attack.gen.cs</link></section>
+</section>

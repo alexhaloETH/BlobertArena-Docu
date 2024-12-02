@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__insults_data_8cs_source" xml:lang="en-US">
+<title>InsultsData.cs</title>
+<indexterm><primary>Misc/InsultsData.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__insults_data_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__insults_data_8cs_source_1l00002"/>00002 
+<anchor xml:id="__insults_data_8cs_source_1l00003"/>00003 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>InsultsData
+<anchor xml:id="__insults_data_8cs_source_1l00004"/>00004 {
+<anchor xml:id="__insults_data_8cs_source_1l00005"/>00005 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;InsultType
+<anchor xml:id="__insults_data_8cs_source_1l00006"/>00006 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Weakness&#32;=&#32;0,
+<anchor xml:id="__insults_data_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Appearance&#32;=&#32;1,
+<anchor xml:id="__insults_data_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Intelligence&#32;=&#32;2,
+<anchor xml:id="__insults_data_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Efforts&#32;=&#32;3,
+<anchor xml:id="__insults_data_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Hints&#32;=&#32;4
+<anchor xml:id="__insults_data_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__insults_data_8cs_source_1l00013"/>00013 
+<anchor xml:id="__insults_data_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;m_insultsWeakness&#32;=&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Did&#32;your&#32;parents&#32;meet&#32;at&#32;a&#32;failure&#32;convention?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&apos;ve&#32;seen&#32;slugs&#32;with&#32;more&#32;fight&#32;than&#32;you.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;hit&#32;like&#32;a&#32;pillow...with&#32;feathers.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;strategy&#32;is&#32;as&#32;flimsy&#32;as&#32;your&#32;sword&#32;arm.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&#32;didn’t&#32;know&#32;they&#32;allowed&#32;jesters&#32;in&#32;the&#32;tournament.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;must&#32;train&#32;in&#32;the&#32;art&#32;of&#32;flailing&#32;aimlessly.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;your&#32;armor&#32;made&#32;of&#32;paper?&#32;It&#32;looks&#32;so&#32;fragile.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Were&#32;you&#32;aiming&#32;for&#32;my&#32;sympathy&#32;with&#32;that&#32;move?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&#32;didn’t&#32;think&#32;anyone&#32;could&#32;miss&#32;that&#32;badly.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;goblin&#32;wouldn&apos;t&#32;be&#32;this&#32;clumsy.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I’ve&#32;seen&#32;better&#32;battle&#32;tactics&#32;from&#32;a&#32;squirrel.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;battle&#32;plan&#32;is&#32;about&#32;as&#32;solid&#32;as&#32;jelly.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Were&#32;you&#32;trained&#32;by&#32;a&#32;blindfolded&#32;chicken?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;A&#32;blind&#32;bat&#32;would&#32;have&#32;a&#32;better&#32;chance&#32;against&#32;me.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;call&#32;that&#32;an&#32;attack?&#32;My&#32;grandma&#32;could&#32;do&#32;better!&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;rock&#32;could&#32;dodge&#32;your&#32;moves.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&#32;see&#32;your&#32;confidence&#32;is&#32;as&#32;misplaced&#32;as&#32;your&#32;aim.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&apos;ve&#32;encountered&#32;walls&#32;with&#32;more&#32;combat&#32;sense.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;fight&#32;like&#32;you’re&#32;holding&#32;a&#32;spoon,&#32;not&#32;a&#32;sword.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;that&#32;all&#32;you&apos;ve&#32;got?&#32;My&#32;nap&#32;was&#32;more&#32;exciting.&quot;</emphasis>
+<anchor xml:id="__insults_data_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;}&#32;;
+<anchor xml:id="__insults_data_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;m_insultsAppearance&#32;=&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;look&#32;like&#32;an&#32;orc&#32;that&#32;fell&#32;into&#32;a&#32;cauldron&#32;of&#32;ugly.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Did&#32;you&#32;get&#32;your&#32;fashion&#32;sense&#32;from&#32;a&#32;troll?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;face&#32;could&#32;curdle&#32;milk.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&apos;ve&#32;seen&#32;goblins&#32;with&#32;better&#32;grooming&#32;habits.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You’re&#32;a&#32;walking&#32;advertisement&#32;for&#32;poor&#32;hygiene.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Did&#32;you&#32;crawl&#32;out&#32;of&#32;a&#32;swamp,&#32;or&#32;do&#32;you&#32;just&#32;smell&#32;like&#32;one?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;that&#32;a&#32;helmet,&#32;or&#32;is&#32;your&#32;head&#32;naturally&#32;that&#32;misshapen?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;armor&#32;looks&#32;like&#32;it&#32;was&#32;forged&#32;by&#32;blind&#32;dwarves.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;look&#32;like&#32;something&#32;a&#32;dragon&#32;would&#32;spit&#32;out.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;your&#32;reflection&#32;scared&#32;of&#32;you&#32;too?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I’ve&#32;seen&#32;scarecrows&#32;with&#32;more&#32;charisma.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;have&#32;the&#32;grace&#32;of&#32;a&#32;drunken&#32;ogre.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Did&#32;you&#32;get&#32;that&#32;face&#32;at&#32;a&#32;discount?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;look&#32;like&#32;the&#32;result&#32;of&#32;a&#32;bad&#32;spell.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I’ve&#32;seen&#32;better&#32;skin&#32;on&#32;a&#32;toad.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You’re&#32;uglier&#32;than&#32;a&#32;goblin’s&#32;backside.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;look&#32;like&#32;you&#32;belong&#32;in&#32;a&#32;dungeon,&#32;not&#32;on&#32;a&#32;battlefield.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;presence&#32;is&#32;an&#32;insult&#32;to&#32;my&#32;eyes.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;could&#32;frighten&#32;a&#32;banshee&#32;with&#32;that&#32;face.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;mimic&#32;would&#32;refuse&#32;to&#32;copy&#32;your&#32;look.&quot;</emphasis>
+<anchor xml:id="__insults_data_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__insults_data_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;m_insultsIntelligence&#32;=&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;your&#32;brain&#32;as&#32;rusty&#32;as&#32;your&#32;armor?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Were&#32;you&#32;born&#32;stupid,&#32;or&#32;did&#32;you&#32;train&#32;hard&#32;for&#32;it?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&#32;didn’t&#32;know&#32;rocks&#32;could&#32;be&#32;this&#32;dumb.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Do&#32;you&#32;think&#32;with&#32;that&#32;empty&#32;helmet&#32;of&#32;yours?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;strategy&#32;is&#32;as&#32;sharp&#32;as&#32;a&#32;spoon.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;thinking&#32;something&#32;you’re&#32;capable&#32;of?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You’re&#32;one&#32;spell&#32;short&#32;of&#32;a&#32;full&#32;spellbook.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;must&#32;have&#32;been&#32;dropped&#32;on&#32;your&#32;head...&#32;several&#32;times.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;troll&#32;could&#32;outwit&#32;you.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;think&#32;so&#32;slow,&#32;I&#32;could&#32;take&#32;a&#32;nap.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;intelligence&#32;is&#32;as&#32;lacking&#32;as&#32;your&#32;battle&#32;skills.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Did&#32;you&#32;get&#32;lost&#32;in&#32;thought,&#32;or&#32;did&#32;you&#32;never&#32;arrive?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I’ve&#32;seen&#32;slimes&#32;with&#32;more&#32;intellect.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;magical&#32;mushroom&#32;could&#32;outsmart&#32;you.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Do&#32;you&#32;need&#32;a&#32;map&#32;to&#32;find&#32;your&#32;own&#32;brain?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Did&#32;you&#32;forget&#32;to&#32;equip&#32;intelligence&#32;before&#32;this&#32;fight?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;wit&#32;is&#32;as&#32;dull&#32;as&#32;your&#32;blade.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You&#32;couldn’t&#32;outthink&#32;a&#32;bag&#32;of&#32;potatoes.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;brain&#32;must&#32;be&#32;on&#32;vacation.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;pixie&#32;could&#32;confuse&#32;you.&quot;</emphasis>
+<anchor xml:id="__insults_data_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__insults_data_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;m_insultsEfforts&#32;=&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Was&#32;that&#32;supposed&#32;to&#32;impress&#32;me?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;If&#32;you’re&#32;trying&#32;to&#32;lose,&#32;you’re&#32;doing&#32;a&#32;fantastic&#32;job.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You’re&#32;about&#32;as&#32;effective&#32;as&#32;a&#32;broken&#32;wand.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&apos;ve&#32;seen&#32;bards&#32;perform&#32;better&#32;under&#32;pressure.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;efforts&#32;are&#32;as&#32;pathetic&#32;as&#32;your&#32;skills.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;That&#32;was&#32;the&#32;most&#32;pitiful&#32;attempt&#32;I’ve&#32;ever&#32;seen.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;If&#32;that’s&#32;your&#32;best,&#32;you&#32;should&#32;retire&#32;now.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&#32;could&#32;fight&#32;you&#32;with&#32;one&#32;hand&#32;tied&#32;and&#32;still&#32;win.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;your&#32;plan&#32;to&#32;bore&#32;me&#32;to&#32;death?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;attacks&#32;are&#32;as&#32;weak&#32;as&#32;your&#32;resolve.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;You’re&#32;really&#32;making&#32;this&#32;too&#32;easy&#32;for&#32;me.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Are&#32;you&#32;sure&#32;you&apos;re&#32;even&#32;trying?&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;That&#32;effort&#32;was&#32;about&#32;as&#32;useful&#32;as&#32;a&#32;wet&#32;scroll.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;If&#32;you&#32;tried&#32;any&#32;less,&#32;you’d&#32;be&#32;standing&#32;still.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Even&#32;a&#32;novice&#32;could&#32;do&#32;better.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&apos;ve&#32;seen&#32;children&#32;fight&#32;with&#32;more&#32;skill.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Is&#32;this&#32;a&#32;training&#32;exercise&#32;for&#32;me?&#32;It&#32;sure&#32;feels&#32;like&#32;it.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Your&#32;performance&#32;is&#32;as&#32;underwhelming&#32;as&#32;a&#32;cold&#32;soup.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Are&#32;you&#32;practicing&#32;losing?&#32;You’re&#32;getting&#32;good&#32;at&#32;it.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;I&#32;expected&#32;more&#32;from&#32;a&#32;sack&#32;of&#32;potatoes.&quot;</emphasis>
+<anchor xml:id="__insults_data_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__insults_data_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;m_hints&#32;=&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Spam&#32;Attack:&#32;Works&#32;50%&#32;of&#32;the&#32;time,&#32;every&#32;time.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Fighting&#32;Strategy?&#32;Overrated.&#32;Hit&#32;hard,&#32;hit&#32;fast,&#32;and&#32;hope&#32;for&#32;the&#32;best.&quot;</emphasis>,
+<anchor xml:id="__insults_data_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Always&#32;dress&#32;cool:&#32;it&#32;doesn&apos;t&#32;matter&#32;what&#32;you&#32;do&#32;when&#32;you&#32;look&#32;fabulous!&quot;</emphasis>
+<anchor xml:id="__insults_data_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__insults_data_8cs_source_1l00107"/>00107 
+<anchor xml:id="__insults_data_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetInsult(InsultType&#32;level,&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx)
+<anchor xml:id="__insults_data_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(level)
+<anchor xml:id="__insults_data_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Weakness:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsWeakness[idx];
+<anchor xml:id="__insults_data_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Appearance:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsAppearance[idx];
+<anchor xml:id="__insults_data_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Intelligence:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsIntelligence[idx];
+<anchor xml:id="__insults_data_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Efforts:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsEfforts[idx];
+<anchor xml:id="__insults_data_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Hints:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_hints[idx];
+<anchor xml:id="__insults_data_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__insults_data_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__insults_data_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__insults_data_8cs_source_1l00120"/>00120 
+<anchor xml:id="__insults_data_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetInsultArrayLength(InsultType&#32;level)
+<anchor xml:id="__insults_data_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(level)
+<anchor xml:id="__insults_data_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__insults_data_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Weakness:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsWeakness.Length;
+<anchor xml:id="__insults_data_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Appearance:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsAppearance.Length;
+<anchor xml:id="__insults_data_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Intelligence:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsIntelligence.Length;
+<anchor xml:id="__insults_data_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Efforts:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_insultsEfforts.Length;
+<anchor xml:id="__insults_data_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;InsultType.Hints:&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_hints.Length;
+<anchor xml:id="__insults_data_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+<anchor xml:id="__insults_data_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__insults_data_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__insults_data_8cs_source_1l00133"/>00133 }
+</programlisting></section>

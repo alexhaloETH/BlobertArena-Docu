@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_95ea9f9966951e9102837051efa6298d" xml:lang="en-US">
+<title>UI/Components/AnimationComponents Directory Reference</title>
+<indexterm><primary>UI/Components/AnimationComponents Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__amma_animation_controller_8cs">AmmaAnimationController.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__blobert_animation_controller_8cs">BlobertAnimationController.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__character_animation_manager_8cs">CharacterAnimationManager.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

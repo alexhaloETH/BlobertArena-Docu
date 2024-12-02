@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_lobby_list_element_8cs" xml:lang="en-US">
+<title>UI/Interfaces/ILobbyListElement.cs File Reference</title>
+<indexterm><primary>UI/Interfaces/ILobbyListElement.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>interface <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

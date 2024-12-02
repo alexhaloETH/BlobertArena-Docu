@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_animation_data_editor" xml:lang="en-US">
+<title>AnimationDataEditor Class Reference</title>
+<indexterm><primary>AnimationDataEditor</primary></indexterm>
+<para>Inheritance diagram for AnimationDataEditor:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_animation_data_editor.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_animation_data_editor_1a1c9615cd170c1767aa89ec212b54ba08">OnInspectorGUI</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__animation_data_editor_8cs_source_1l00005">5</link> of file <link linkend="__animation_data_editor_8cs_source">AnimationDataEditor.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_animation_data_editor_1a1c9615cd170c1767aa89ec212b54ba08"/><section>
+    <title>OnInspectorGUI()</title>
+<indexterm><primary>OnInspectorGUI</primary><secondary>AnimationDataEditor</secondary></indexterm>
+<indexterm><primary>AnimationDataEditor</primary><secondary>OnInspectorGUI</secondary></indexterm>
+<para><computeroutput>override void AnimationDataEditor.OnInspectorGUI ( )</computeroutput></para><para>
+Definition at line <link linkend="__animation_data_editor_8cs_source_1l00024">24</link> of file <link linkend="__animation_data_editor_8cs_source">AnimationDataEditor.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Editor/<link linkend="__animation_data_editor_8cs">AnimationDataEditor.cs</link></section>
+</section>

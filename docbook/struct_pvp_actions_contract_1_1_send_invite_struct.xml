@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct" xml:lang="en-US">
+<title>PvpActionsContract.SendInviteStruct Struct Reference</title>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a6f754b218b9d1c5abbb69d0f2a32de7b">SendInviteStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a0a11ba1e26e16096d8924f2fea025084">receiver</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1abb642edf4800bdd84e89a4905e22687e">collectionAddress</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1aff3733d3fcaeb743eeef4a0ead942493">tokenId</link>, List&lt; <link linkend="_struct_pvp_actions_contract_1_1_attack_struct">AttackStruct</link> &gt; <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a444ea559f4c93f30c9d3aa6653bb1205">attacks</link>, UInt64 <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a495d391bbf06a40c100742e2fa998243">phaseTime</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a9057495bcd155ba1fd37a52bc977cb5b">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a0a11ba1e26e16096d8924f2fea025084">receiver</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1abb642edf4800bdd84e89a4905e22687e">collectionAddress</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1aff3733d3fcaeb743eeef4a0ead942493">tokenId</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1ab6e07f52fa2e24a6689de4be83251dbb">emptyFieldElement</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a58c240d8e228567d1f98ec7068585f9f">elements</link></para>
+</listitem>
+            <listitem><para>List&lt; <link linkend="_struct_pvp_actions_contract_1_1_attack_struct">AttackStruct</link> &gt; <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a444ea559f4c93f30c9d3aa6653bb1205">attacks</link></para>
+</listitem>
+            <listitem><para>UInt64 <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a495d391bbf06a40c100742e2fa998243">phaseTime</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a9057495bcd155ba1fd37a52bc977cb5b">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00088">88</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1a6f754b218b9d1c5abbb69d0f2a32de7b"/><section>
+    <title>SendInviteStruct()</title>
+<indexterm><primary>SendInviteStruct</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>SendInviteStruct</secondary></indexterm>
+<para><computeroutput>PvpActionsContract.SendInviteStruct.SendInviteStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> receiver, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> collectionAddress, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> tokenId, List&lt; <link linkend="_struct_pvp_actions_contract_1_1_attack_struct">AttackStruct</link> &gt; attacks, UInt64 phaseTime, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00099">99</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1a444ea559f4c93f30c9d3aa6653bb1205"/><section>
+    <title>attacks</title>
+<indexterm><primary>attacks</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>attacks</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_struct_pvp_actions_contract_1_1_attack_struct">AttackStruct</link>&gt; PvpActionsContract.SendInviteStruct.attacks</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00095">95</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1abb642edf4800bdd84e89a4905e22687e"/><section>
+    <title>collectionAddress</title>
+<indexterm><primary>collectionAddress</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>collectionAddress</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.SendInviteStruct.collectionAddress</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00091">91</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1a58c240d8e228567d1f98ec7068585f9f"/><section>
+    <title>elements</title>
+<indexterm><primary>elements</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>elements</secondary></indexterm>
+<para><computeroutput>int PvpActionsContract.SendInviteStruct.elements</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00094">94</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1ab6e07f52fa2e24a6689de4be83251dbb"/><section>
+    <title>emptyFieldElement</title>
+<indexterm><primary>emptyFieldElement</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>emptyFieldElement</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.SendInviteStruct.emptyFieldElement</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00093">93</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1a9057495bcd155ba1fd37a52bc977cb5b"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpActionsContract.SendInviteStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00097">97</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1a495d391bbf06a40c100742e2fa998243"/><section>
+    <title>phaseTime</title>
+<indexterm><primary>phaseTime</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>phaseTime</secondary></indexterm>
+<para><computeroutput>UInt64 PvpActionsContract.SendInviteStruct.phaseTime</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00096">96</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1a0a11ba1e26e16096d8924f2fea025084"/><section>
+    <title>receiver</title>
+<indexterm><primary>receiver</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>receiver</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.SendInviteStruct.receiver</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00090">90</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_send_invite_struct_1aff3733d3fcaeb743eeef4a0ead942493"/><section>
+    <title>tokenId</title>
+<indexterm><primary>tokenId</primary><secondary>PvpActionsContract.SendInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.SendInviteStruct</primary><secondary>tokenId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.SendInviteStruct.tokenId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00092">92</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_actions_contract_8cs">PvpActionsContract.cs</link></section>
+</section>

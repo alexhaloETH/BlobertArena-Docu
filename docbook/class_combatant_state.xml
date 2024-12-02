@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combatant_state" xml:lang="en-US">
+<title>CombatantState Class Reference</title>
+<indexterm><primary>CombatantState</primary></indexterm>
+<para>Inheritance diagram for CombatantState:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_combatant_state.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_combatant_state_1_1_combatant_state_data_query">CombatantStateDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override async void <link linkend="_class_combatant_state_1affcb69ca9f92c65469d121006038b6b2">OnUpdate</link> (Model model)</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_combatant_state_1ad2eeb8705f63162cac51da72a8880215">FetchCombatantStateAsync</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_combatant_state_1a4b58caac5d7d83634667e9945ea63d97">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_combatant_state_1ae0eec5355e999028d7ecb55d383c6e71">id</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_combatant_state_1ae0eec5355e999028d7ecb55d383c6e71">id</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_class_combatant_state_1a6e3f29d07e156b16bceee9645201ffc3">health</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_class_combatant_state_1ae678c30d37d39fc92a6cd4760e3be5fe">stun_chance</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_t_stats">TStats</link> <link linkend="_class_combatant_state_1a6faf1bac8cef442cef00c679b55ca65e">stats</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_combatant_state_1a981c48b3940f6fb6d6822e2454f84f01">GraphQlQueryFull</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_combatant_state_1ad7bfdd0d6a82d7ec89152d334aa46358">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_combatant_state_1a064ff96c4e384b88882f1524d2aae69e">GraphQlHeader</link> = &quot;blobArenaCombatantStateModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00023">23</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_combatant_state_1ad2eeb8705f63162cac51da72a8880215"/><section>
+    <title>FetchCombatantStateAsync()</title>
+<indexterm><primary>FetchCombatantStateAsync</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>FetchCombatantStateAsync</secondary></indexterm>
+<para><computeroutput>async Task CombatantState.FetchCombatantStateAsync ( )</computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00085">85</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1a4b58caac5d7d83634667e9945ea63d97"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> CombatantState.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_combatant_state_1affcb69ca9f92c65469d121006038b6b2"/><section>
+    <title>OnUpdate()</title>
+<indexterm><primary>OnUpdate</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>OnUpdate</secondary></indexterm>
+<para><computeroutput>override async void CombatantState.OnUpdate (Model model)</computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00037">37</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_combatant_state_1a064ff96c4e384b88882f1524d2aae69e"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string CombatantState.GraphQlHeader = &quot;blobArenaCombatantStateModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00075">75</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1a981c48b3940f6fb6d6822e2454f84f01"/><section>
+    <title>GraphQlQueryFull</title>
+<indexterm><primary>GraphQlQueryFull</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>GraphQlQueryFull</secondary></indexterm>
+<para><computeroutput>readonly string CombatantState.GraphQlQueryFull<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaCombatantStateModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_CombatantState&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;health</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stun_chance</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00047">47</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1ad7bfdd0d6a82d7ec89152d334aa46358"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string CombatantState.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_CombatantState&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;health</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stun_chance</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00067">67</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1a6e3f29d07e156b16bceee9645201ffc3"/><section>
+    <title>health</title>
+<indexterm><primary>health</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>health</secondary></indexterm>
+<para><computeroutput>byte CombatantState.health</computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00029">29</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1ae0eec5355e999028d7ecb55d383c6e71"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>id</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantState.id</computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00026">26</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1a6faf1bac8cef442cef00c679b55ca65e"/><section>
+    <title>stats</title>
+<indexterm><primary>stats</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>stats</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_t_stats">TStats</link> CombatantState.stats</computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00035">35</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1ae678c30d37d39fc92a6cd4760e3be5fe"/><section>
+    <title>stun_chance</title>
+<indexterm><primary>stun_chance</primary><secondary>CombatantState</secondary></indexterm>
+<indexterm><primary>CombatantState</primary><secondary>stun_chance</secondary></indexterm>
+<para><computeroutput>byte CombatantState.stun_chance</computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00032">32</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__combatant_state_8gen_8cs">CombatantState.gen.cs</link></section>
+</section>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__leader_board_page_behaviour_8cs" xml:lang="en-US">
+<title>UI/Pages/LeaderBoardPageBehaviour.cs File Reference</title>
+<indexterm><primary>UI/Pages/LeaderBoardPageBehaviour.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_leader_board_page_behaviour">LeaderBoardPageBehaviour</link></para>
+
+<para>This page is done, the only thing that is theoretically missing is that when the user clicks on one of the Bloberts it should show the informations of that blobert, that component is still not implemented. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

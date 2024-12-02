@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_battle_page_card_stats_component" xml:lang="en-US">
+<title>BattlePageCardStatsComponent Class Reference</title>
+<indexterm><primary>BattlePageCardStatsComponent</primary></indexterm>
+<para>Inheritance diagram for BattlePageCardStatsComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_battle_page_card_stats_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async Task <link linkend="_class_battle_page_card_stats_component_1a70ce8fe851f5dea7d67ffc0debe0a778">InitializeComponent</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link>)</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_battle_page_card_stats_component_1aa5fe35a0454a904ffd88c5a4d2302a7c">UpdateStatsFromChain</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_card_stats_component_1ad32533723e2bddf4c7dbeda60d4a1c51">SetHealth</link> (int health, int vitality)</para>
+</listitem>
+            <listitem><para><link linkend="_class_character_animation_manager">CharacterAnimationManager</link> <link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>SNSUsernameTextComponent <link linkend="_class_battle_page_card_stats_component_1ab73f8b1ee3531415852e65ea7303c0d1">_blobertOwnerText</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_slider_animator_component">SliderAnimatorComponent</link> <link linkend="_class_battle_page_card_stats_component_1a077e6d1acd2f7124c89f6bd2d7b93d8d">HealthSlider</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_t_stats">TStats</link> <link linkend="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44">Stats</link></para>
+</listitem>
+            <listitem><para><link linkend="_interface_i_nft_type">INftType</link> <link linkend="_class_battle_page_card_stats_component_1ae3343a707e4521d379c1f40c829d0f66">BlobData</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2">combatantId</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_battle_page_card_stats_component_1a443b6382aa467fdc2d42a84bfd6283b5">IsSelf</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00009">9</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152"/><section>
+    <title>GetTraitVisualizer()</title>
+<indexterm><primary>GetTraitVisualizer</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>GetTraitVisualizer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_character_animation_manager">CharacterAnimationManager</link> BattlePageCardStatsComponent.GetTraitVisualizer ( )</computeroutput></para></section>
+<anchor xml:id="_class_battle_page_card_stats_component_1a70ce8fe851f5dea7d67ffc0debe0a778"/><section>
+    <title>InitializeComponent()</title>
+<indexterm><primary>InitializeComponent</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>InitializeComponent</secondary></indexterm>
+<para><computeroutput>async Task BattlePageCardStatsComponent.InitializeComponent (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00047">47</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1ad32533723e2bddf4c7dbeda60d4a1c51"/><section>
+    <title>SetHealth()</title>
+<indexterm><primary>SetHealth</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>SetHealth</secondary></indexterm>
+<para><computeroutput>void BattlePageCardStatsComponent.SetHealth (int health, int vitality)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00103">103</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1aa5fe35a0454a904ffd88c5a4d2302a7c"/><section>
+    <title>UpdateStatsFromChain()</title>
+<indexterm><primary>UpdateStatsFromChain</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>UpdateStatsFromChain</secondary></indexterm>
+<para><computeroutput>async Task BattlePageCardStatsComponent.UpdateStatsFromChain ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00068">68</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_battle_page_card_stats_component_1ab73f8b1ee3531415852e65ea7303c0d1"/><section>
+    <title>_blobertOwnerText</title>
+<indexterm><primary>_blobertOwnerText</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>_blobertOwnerText</secondary></indexterm>
+<para><computeroutput>SNSUsernameTextComponent BattlePageCardStatsComponent._blobertOwnerText</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00016">16</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1ae3343a707e4521d379c1f40c829d0f66"/><section>
+    <title>BlobData</title>
+<indexterm><primary>BlobData</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>BlobData</secondary></indexterm>
+<para><computeroutput><link linkend="_interface_i_nft_type">INftType</link> BattlePageCardStatsComponent.BlobData</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00042">42</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1a461dd820074d8b43db410c8c577c05d2"/><section>
+    <title>combatantId</title>
+<indexterm><primary>combatantId</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>combatantId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> BattlePageCardStatsComponent.combatantId</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00043">43</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1a077e6d1acd2f7124c89f6bd2d7b93d8d"/><section>
+    <title>HealthSlider</title>
+<indexterm><primary>HealthSlider</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>HealthSlider</secondary></indexterm>
+<para><computeroutput><link linkend="_class_slider_animator_component">SliderAnimatorComponent</link> BattlePageCardStatsComponent.HealthSlider</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00028">28</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1a443b6382aa467fdc2d42a84bfd6283b5"/><section>
+    <title>IsSelf</title>
+<indexterm><primary>IsSelf</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>IsSelf</secondary></indexterm>
+<para><computeroutput>bool BattlePageCardStatsComponent.IsSelf</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00044">44</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_card_stats_component_1a30b10e2aa014737e8465f9402755ff44"/><section>
+    <title>Stats</title>
+<indexterm><primary>Stats</primary><secondary>BattlePageCardStatsComponent</secondary></indexterm>
+<indexterm><primary>BattlePageCardStatsComponent</primary><secondary>Stats</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_t_stats">TStats</link> BattlePageCardStatsComponent.Stats</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_card_stats_component_8cs_source_1l00040">40</link> of file <link linkend="__battle_page_card_stats_component_8cs_source">BattlePageCardStatsComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/BattlePage/<link linkend="__battle_page_card_stats_component_8cs">BattlePageCardStatsComponent.cs</link></section>
+</section>

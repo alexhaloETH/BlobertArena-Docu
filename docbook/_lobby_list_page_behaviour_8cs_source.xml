@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__lobby_list_page_behaviour_8cs_source" xml:lang="en-US">
+<title>LobbyListPageBehaviour.cs</title>
+<indexterm><primary>UI/Pages/LobbyView/LobbyListPageBehaviour.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>StarkSharp.Rpc.Modules.Transactions.Hash;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>System.Linq;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00008"/>00008 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00014"/><link linkend="_class_lobby_list_page_behaviour">00014</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link>&#32;:&#32;<link linkend="_class_menu">Menu</link>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00015"/>00015 {
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;sorting&#32;=&#32;15;&#32;&#32;&#32;<emphasis role="comment">//4&#32;bits&#32;&#32;&#32;&#32;1111&#32;=</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00017"/>00017 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Object&#32;References&quot;</emphasis>)]
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_sentInvitePrefab;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00021"/>00021 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_receivedInvitePrefab;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_lobbyPrefab;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_onGoingGamePrefab;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00025"/>00025 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_toggle_component">ToggleComponent</link>[]&#32;_sortingCheckboxes;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_filterObject;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00028"/>00028 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;_prefabParent;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00030"/>00030 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Menu&#32;References&quot;</emphasis>)]
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_menu">Menu</link>&#32;_battlePage;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00034"/>00034 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_menu">Menu</link>&#32;_lobbyPage;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_menu_manager">MenuManager</link>&#32;_menuManager;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00037"/>00037 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;blob&#32;dex&quot;</emphasis>)]
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_blobDexComp;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00041"/>00041 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Dictionary&lt;string,&#32;GameObject&gt;&#32;_gameIdToObjectElementMap&#32;=&#32;<emphasis role="keyword">new</emphasis>();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00043"/>00043 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>.<link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link>(<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>.LobbyBackground);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00047"/>00047 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnChoosenBlobertChanged&#32;+=&#32;<link linkend="_class_lobby_list_page_behaviour_1a20e4727c2fd6238a2eac1649ce4c733c">ChangedSelectedBlob</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GamesDataModel.OnChallengeInviteAddedOrRemoved&#32;+=&#32;<link linkend="_class_lobby_list_page_behaviour_1ae5fef42a35d9e628c5a0be30d1543721">AddGameEvent</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GamesDataModel.OnGameStatusUpdatedOrAdd&#32;+=&#32;<link linkend="_class_lobby_list_page_behaviour_1a1c48f78efb6d9ec3a9abdb25eb2a2dc3">UpdateGameEvent</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00051"/>00051 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ResetData();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetButtonState();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00054"/>00054 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//foreach&#32;(var&#32;challenge&#32;in&#32;GamesDataModel._allChallengeInvite.Values)</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;isAMMA&#32;=&#32;await&#32;CombatantDataModel.IsCombatantAMMA(challenge.combatant);</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00058"/>00058 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;if&#32;((LocalDataModel.CurrentGameEvent&#32;==&#32;LocalDataModel.GameEvent.Normal&#32;&amp;&amp;&#32;isAMMA)&#32;||</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(LocalDataModel.CurrentGameEvent&#32;!=&#32;LocalDataModel.GameEvent.Normal&#32;&amp;&amp;&#32;!isAMMA))</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;continue;</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00064"/>00064 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;GamesDataModel._gameStatusDict.TryGetValue(challenge.id.Hex(),&#32;out&#32;var&#32;cachedState)</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;cachedState</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;await&#32;GamesDataModel.GetGameStatus(challenge.id);</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00068"/>00068 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;SpawnGameElement(challenge.id,&#32;state);</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00071"/>00071 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;challenge&#32;<emphasis role="keywordflow">in</emphasis>&#32;GamesDataModel._allChallengeInvite.Values.ToList())
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;isAMMA&#32;=&#32;await&#32;CombatantDataModel.IsCombatantAMMA(challenge.combatant);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00075"/>00075 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((LocalDataModel.CurrentGameEvent&#32;==&#32;LocalDataModel.GameEvent.Normal&#32;&amp;&amp;&#32;isAMMA)&#32;||
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(LocalDataModel.CurrentGameEvent&#32;!=&#32;LocalDataModel.GameEvent.Normal&#32;&amp;&amp;&#32;!isAMMA))
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00081"/>00081 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;GamesDataModel._gameStatusDict.TryGetValue(challenge.id.Hex(),&#32;out&#32;var&#32;cachedState)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;cachedState
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;await&#32;GamesDataModel.GetGameStatus(challenge.id);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00085"/>00085 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a">SpawnGameElement</link>(challenge.id,&#32;state);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00088"/>00088 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ResetData()
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Transform&#32;child&#32;<emphasis role="keywordflow">in</emphasis>&#32;_prefabParent)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(child.gameObject);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00095"/>00095 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Clear();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00099"/>00099 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnChoosenBlobertChanged&#32;-=&#32;<link linkend="_class_lobby_list_page_behaviour_1a20e4727c2fd6238a2eac1649ce4c733c">ChangedSelectedBlob</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GamesDataModel.OnChallengeInviteAddedOrRemoved&#32;-=&#32;<link linkend="_class_lobby_list_page_behaviour_1ae5fef42a35d9e628c5a0be30d1543721">AddGameEvent</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GamesDataModel.OnGameStatusUpdatedOrAdd&#32;-=&#32;<link linkend="_class_lobby_list_page_behaviour_1a1c48f78efb6d9ec3a9abdb25eb2a2dc3">UpdateGameEvent</link>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00105"/>00105 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Clear();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00107"/>00107 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_blobDexComp&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_blobDexComp.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00110"/>00110 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Transform&#32;child&#32;<emphasis role="keywordflow">in</emphasis>&#32;_prefabParent)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(child.gameObject);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00116"/>00116 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00117"/>00117 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Event&#32;and&#32;Game&#32;Handling</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00118"/>00118 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00119"/><link linkend="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a">00119</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a">SpawnGameElement</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;gameId,&#32;GamesDataModel.GameStatus&#32;state)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(state)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GamesDataModel.GameStatus.Invite:
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00124"/>00124 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link>.<link linkend="_class_pv_p_challenge_invite_1a37ff87293492214926603604314af93c">IsAdminOfGame</link>(GamesDataModel._allChallengeInvite[gameId.Hex()],&#32;LocalDataModel.CurrentAccount.Address))
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sentInvite&#32;=&#32;Instantiate(_sentInvitePrefab,&#32;_prefabParent);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sentInvite.transform.SetAsFirstSibling();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sentInvite.GetComponent&lt;<link linkend="_class_inv_sent_on_going_lobby_list_page_element">InvSentOnGoingLobbyListPageElement</link>&gt;().InitializeElement(gameId,&#32;<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Add(gameId.Hex(),&#32;sentInvite);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;receivedInvite&#32;=&#32;Instantiate(_receivedInvitePrefab,&#32;_prefabParent);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;receivedInvite.transform.SetAsFirstSibling();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;receivedInvite.GetComponent&lt;<link linkend="_class_received_inv_lobby_list_page_element">ReceivedInvLobbyListPageElement</link>&gt;().InitializeElement(gameId,&#32;<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Add(gameId.Hex(),&#32;receivedInvite);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00139"/>00139 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00141"/>00141 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GamesDataModel.GameStatus.Lobby:
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;lobby&#32;=&#32;Instantiate(_lobbyPrefab,&#32;_prefabParent);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lobby.transform.SetAsFirstSibling();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lobby.GetComponent&lt;<link linkend="_class_in_lobby_ongoing_lobby_list_page_element">InLobbyOngoingLobbyListPageElement</link>&gt;().InitializeElement(gameId,&#32;<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Add(gameId.Hex(),&#32;lobby);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00148"/>00148 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GamesDataModel.GameStatus.Game:
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;onGoingGame&#32;=&#32;Instantiate(_onGoingGamePrefab,&#32;_prefabParent);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;onGoingGame.transform.SetAsFirstSibling();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;onGoingGame.GetComponent&lt;<link linkend="_class_on_going_battle_lobby_list_page_elemenet">OnGoingBattleLobbyListPageElemenet</link>&gt;().InitializeElement(gameId,&#32;<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Add(gameId.Hex(),&#32;onGoingGame);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00157"/>00157 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00158"/><link linkend="_class_lobby_list_page_behaviour_1ae5fef42a35d9e628c5a0be30d1543721">00158</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1ae5fef42a35d9e628c5a0be30d1543721">AddGameEvent</link>(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link>&#32;invite)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;await&#32;GamesDataModel.GetGameStatus(invite.<link linkend="_class_pv_p_challenge_invite_1a41e01ed1d242a401931f6b47c8512ac7">id</link>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a">SpawnGameElement</link>(invite.<link linkend="_class_pv_p_challenge_invite_1a41e01ed1d242a401931f6b47c8512ac7">id</link>,&#32;state);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00163"/>00163 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00164"/><link linkend="_class_lobby_list_page_behaviour_1a1c48f78efb6d9ec3a9abdb25eb2a2dc3">00164</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a1c48f78efb6d9ec3a9abdb25eb2a2dc3">UpdateGameEvent</link>(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;GamesDataModel.GameStatus&#32;gameStatus)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!_gameIdToObjectElementMap.ContainsKey(key))&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00167"/>00167 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(_gameIdToObjectElementMap[key]);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Remove(key);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00170"/>00170 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a">SpawnGameElement</link>(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(key),&#32;gameStatus);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00173"/>00173 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00174"/>00174 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Event&#32;and&#32;Game&#32;Handling</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00175"/>00175 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00176"/>00176 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Interaction</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00177"/>00177 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00178"/><link linkend="_class_lobby_list_page_behaviour_1a20e4727c2fd6238a2eac1649ce4c733c">00178</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a20e4727c2fd6238a2eac1649ce4c733c">ChangedSelectedBlob</link>(<emphasis role="keywordtype">string</emphasis>&#32;blobId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.ChoosenBlobert&#32;=&#32;blobId;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00182"/>00182 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00183"/><link linkend="_class_lobby_list_page_behaviour_1accb9cb526363994ead1276a4c46b6b20">00183</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1accb9cb526363994ead1276a4c46b6b20">GoToPage</link>(<emphasis role="keywordtype">int</emphasis>&#32;index)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(index)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;0:
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_menuManager.<link linkend="_class_menu_manager_1a93307896152357fc2ea7c248e107aff2">OpenMenu</link>(_lobbyPage);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00190"/>00190 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_menuManager.<link linkend="_class_menu_manager_1a93307896152357fc2ea7c248e107aff2">OpenMenu</link>(_battlePage);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00196"/>00196 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00197"/><link linkend="_class_lobby_list_page_behaviour_1a8dfacc175137882be32e983c9bef3015">00197</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a8dfacc175137882be32e983c9bef3015">SetActiveBlobDex</link>(<emphasis role="keywordtype">bool</emphasis>&#32;setActive)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>.<link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link>(<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>.LobbyBackground);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00200"/>00200 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(setActive)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_blobDexComp.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_blobDexComp.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00210"/>00210 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00211"/><link linkend="_class_lobby_list_page_behaviour_1a161bc73017786c30947ecda163db7e9b">00211</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a161bc73017786c30947ecda163db7e9b">DeleteObject</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;gameId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(_gameIdToObjectElementMap[gameId.Hex()]);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gameIdToObjectElementMap.Remove(gameId.Hex());
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00216"/>00216 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00217"/>00217 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Interaction</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00218"/>00218 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00219"/>00219 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Sorting</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00220"/>00220 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00221"/><link linkend="_class_lobby_list_page_behaviour_1a811dfd95b6130901e554624924452b9a">00221</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a811dfd95b6130901e554624924452b9a">SortMenuToggle</link>(<emphasis role="keywordtype">bool</emphasis>&#32;state)&#32;=&gt;&#32;_filterObject.gameObject.SetActive(state);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00222"/>00222 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00223"/><link linkend="_class_lobby_list_page_behaviour_1ad19574f0477f6097a45940b5d9c2016f">00223</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1ad19574f0477f6097a45940b5d9c2016f">SortingToggle</link>(<emphasis role="keywordtype">int</emphasis>&#32;bit)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sorting&#32;^=&#32;(1&#32;&lt;&lt;&#32;bit);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00226"/>00226 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetButtonState();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetStateOfObjects();
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00230"/>00230 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;<emphasis role="comment">//sent</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;<emphasis role="comment">//received</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;<emphasis role="comment">//lobby</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00234"/>00234 &#32;&#32;&#32;&#32;<emphasis role="comment">//fight</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00235"/>00235 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetButtonState()
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sorting&#32;&amp;&#32;1)&#32;==&#32;0)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[0].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[0].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00246"/>00246 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sorting&#32;&amp;&#32;2)&#32;==&#32;0)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[1].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[1].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00255"/>00255 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sorting&#32;&amp;&#32;4)&#32;==&#32;0)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[2].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[2].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00264"/>00264 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sorting&#32;&amp;&#32;8)&#32;==&#32;0)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[3].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_sortingCheckboxes[3].<link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00274"/>00274 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetStateOfObjects()
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;game&#32;<emphasis role="keywordflow">in</emphasis>&#32;_gameIdToObjectElementMap)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;GamesDataModel._gameStatusDict.TryGetValue(game.Key,&#32;out&#32;var&#32;cachedState)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;cachedState
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;await&#32;GamesDataModel.GetGameStatus(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(game.Key));
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00282"/>00282 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(state&#32;==&#32;GamesDataModel.GameStatus.Invite)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link>.<link linkend="_class_pv_p_challenge_invite_1a37ff87293492214926603604314af93c">IsAdminOfGame</link>(GamesDataModel._allChallengeInvite[<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(game.Key).Hex()],&#32;LocalDataModel.CurrentAccount.Address))
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;game.Value.SetActive((sorting&#32;&amp;&#32;1)&#32;==&#32;0);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;game.Value.SetActive((sorting&#32;&amp;&#32;2)&#32;==&#32;0);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(state&#32;==&#32;GamesDataModel.GameStatus.Lobby)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;game.Value.SetActive((sorting&#32;&amp;&#32;4)&#32;==&#32;0);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(state&#32;==&#32;GamesDataModel.GameStatus.Game)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;game.Value.SetActive((sorting&#32;&amp;&#32;8)&#32;==&#32;0);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00304"/>00304 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00305"/>00305 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Sorting</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00306"/>00306 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00307"/>00307 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Chain&#32;Calls</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00308"/>00308 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00309"/><link linkend="_class_lobby_list_page_behaviour_1a7613db7e405ab8ef24d1dc4e76bc3d96">00309</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a7613db7e405ab8ef24d1dc4e76bc3d96">SayNoToInvite</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;challengeId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00310"/>00310 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;dataStruct&#32;=&#32;PvpActionsContract.RejectInvite(challengeId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00312"/>00312 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(dataStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00314"/>00314 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionSN&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00316"/>00316 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00317"/>00317 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00318"/><link linkend="_class_lobby_list_page_behaviour_1a34f1220de8b0605e6a402e8c1e18f1c6">00318</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a34f1220de8b0605e6a402e8c1e18f1c6">OnChainTransactionCallbackFunctionSN</link>(<emphasis role="keywordtype">string</emphasis>&#32;response)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Transaction&#32;hash&#32;callback:&#32;&quot;</emphasis>&#32;+&#32;response);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00322"/>00322 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;<emphasis role="comment">//0x3c2def85aef1312d14ede5f511674bd7</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00324"/><link linkend="_class_lobby_list_page_behaviour_1ac147c3e3e437d7e0e33338f18eed0332">00324</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1ac147c3e3e437d7e0e33338f18eed0332">SayYesToInvite</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;challengeId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00325"/>00325 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;dataStruct&#32;=&#32;PvpActionsContract.RespondInvite(
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;challengeId,
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(LocalDataModel.ChoosenBlobert),
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WorldDataModel.GenerateAttackStructFromCharacter(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(LocalDataModel.ChoosenBlobert)),
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoEntitiesStorage.worldManagerData.pvpActions
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00332"/>00332 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(dataStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00334"/>00334 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionSY&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00337"/>00337 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00338"/><link linkend="_class_lobby_list_page_behaviour_1a358d928da408ab668a59adbb0b207747">00338</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a358d928da408ab668a59adbb0b207747">OnChainTransactionCallbackFunctionSY</link>(<emphasis role="keywordtype">string</emphasis>&#32;response)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Transaction&#32;hash&#32;callback:&#32;&quot;</emphasis>&#32;+&#32;response);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00341"/>00341 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00342"/>00342 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00343"/><link linkend="_class_lobby_list_page_behaviour_1ae5df6dadeb8ef9db5c488350db86e228">00343</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1ae5df6dadeb8ef9db5c488350db86e228">CancelSentInvite</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;challengeId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00344"/>00344 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;dataStruct&#32;=&#32;PvpActionsContract.RevokeInvite(challengeId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00346"/>00346 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(dataStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00348"/>00348 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionCSI&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00350"/>00350 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00351"/>00351 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00352"/><link linkend="_class_lobby_list_page_behaviour_1a4bb9fa47fe82982da6e76d2ea891c3f3">00352</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a4bb9fa47fe82982da6e76d2ea891c3f3">OnChainTransactionCallbackFunctionCSI</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00353"/>00353 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Transaction&#32;hash&#32;callback:&#32;&quot;</emphasis>&#32;+&#32;transactionHash);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00355"/>00355 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00356"/>00356 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00357"/><link linkend="_class_lobby_list_page_behaviour_1aee6c0eb42fb78a7b909e6957f2e95617">00357</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1aee6c0eb42fb78a7b909e6957f2e95617">AdminStartGameCall</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;challengeId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00358"/>00358 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Starting&#32;game&quot;</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00360"/>00360 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;dataStruct&#32;=&#32;PvpActionsContract.AcceptResponse(challengeId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00362"/>00362 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(dataStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00364"/>00364 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionSG&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00366"/>00366 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00367"/>00367 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00368"/><link linkend="_class_lobby_list_page_behaviour_1a91e89497d249fed6c98b5d6434d13058">00368</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a91e89497d249fed6c98b5d6434d13058">OnChainTransactionCallbackFunctionSG</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Transaction&#32;hash&#32;callback:&#32;&quot;</emphasis>&#32;+&#32;transactionHash);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00372"/>00372 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00373"/><link linkend="_class_lobby_list_page_behaviour_1a2c6c76319d6624187e9e7fc4753a9591">00373</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a2c6c76319d6624187e9e7fc4753a9591">AdminLeaveLobby</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;challengeId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00374"/>00374 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;dataStruct&#32;=&#32;PvpActionsContract.RejectResponse(challengeId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00376"/>00376 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(dataStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00378"/>00378 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionALL&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00380"/>00380 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00381"/>00381 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00382"/><link linkend="_class_lobby_list_page_behaviour_1a0626658b95081ded08f0155a5013863a">00382</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a0626658b95081ded08f0155a5013863a">OnChainTransactionCallbackFunctionALL</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00383"/>00383 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Transaction&#32;hash&#32;callback:&#32;&quot;</emphasis>&#32;+&#32;transactionHash);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00386"/>00386 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00387"/><link linkend="_class_lobby_list_page_behaviour_1a9eece0d1cfb7c6dc29afd4c7ac166b93">00387</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1a9eece0d1cfb7c6dc29afd4c7ac166b93">UserCloseLobby</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;challengeId)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00388"/>00388 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;dataStruct&#32;=&#32;PvpActionsContract.RevokeResponse(challengeId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00390"/>00390 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(dataStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00392"/>00392 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionUCL&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00394"/>00394 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00395"/>00395 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00396"/><link linkend="_class_lobby_list_page_behaviour_1ad3369a3282122c6498fa5bf80592746c">00396</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_lobby_list_page_behaviour_1ad3369a3282122c6498fa5bf80592746c">OnChainTransactionCallbackFunctionUCL</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00397"/>00397 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Transaction&#32;hash&#32;callback:&#32;&quot;</emphasis>&#32;+&#32;transactionHash);
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00399"/>00399 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00400"/>00400 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00401"/>00401 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Chain&#32;Calls</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00402"/>00402 
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00403"/>00403 &#32;&#32;&#32;&#32;<emphasis role="comment">//get&#32;the&#32;callback&#32;to&#32;work</emphasis>
+<anchor xml:id="__lobby_list_page_behaviour_8cs_source_1l00404"/>00404 }
+</programlisting></section>

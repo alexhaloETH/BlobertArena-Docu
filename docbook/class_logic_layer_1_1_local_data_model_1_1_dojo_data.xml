@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_local_data_model_1_1_dojo_data" xml:lang="en-US">
+<title>LogicLayer.LocalDataModel.DojoData Class Reference</title>
+<indexterm><primary>LogicLayer.LocalDataModel.DojoData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a604fb179a8650e492ed4b53b0d88e6ec">gameId</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1af1e7eb04a8803bf85ec780486c76fa4e">committedHash</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a36aefdb7af734d8978c83e5d46fa94b0">lastAttack</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a373a84f2154aefc1e52f4765cf8014ba">randomSalt</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a7f795512a83f79cfe1f6fd1ab43bab8a">roundNum</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00359">359</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1af1e7eb04a8803bf85ec780486c76fa4e"/><section>
+    <title>committedHash</title>
+<indexterm><primary>committedHash</primary><secondary>LogicLayer.LocalDataModel.DojoData</secondary></indexterm>
+<indexterm><primary>LogicLayer.LocalDataModel.DojoData</primary><secondary>committedHash</secondary></indexterm>
+<para><computeroutput>string LogicLayer.LocalDataModel.DojoData.committedHash</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00362">362</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a604fb179a8650e492ed4b53b0d88e6ec"/><section>
+    <title>gameId</title>
+<indexterm><primary>gameId</primary><secondary>LogicLayer.LocalDataModel.DojoData</secondary></indexterm>
+<indexterm><primary>LogicLayer.LocalDataModel.DojoData</primary><secondary>gameId</secondary></indexterm>
+<para><computeroutput>string LogicLayer.LocalDataModel.DojoData.gameId</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00361">361</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a36aefdb7af734d8978c83e5d46fa94b0"/><section>
+    <title>lastAttack</title>
+<indexterm><primary>lastAttack</primary><secondary>LogicLayer.LocalDataModel.DojoData</secondary></indexterm>
+<indexterm><primary>LogicLayer.LocalDataModel.DojoData</primary><secondary>lastAttack</secondary></indexterm>
+<para><computeroutput>string LogicLayer.LocalDataModel.DojoData.lastAttack</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00363">363</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a373a84f2154aefc1e52f4765cf8014ba"/><section>
+    <title>randomSalt</title>
+<indexterm><primary>randomSalt</primary><secondary>LogicLayer.LocalDataModel.DojoData</secondary></indexterm>
+<indexterm><primary>LogicLayer.LocalDataModel.DojoData</primary><secondary>randomSalt</secondary></indexterm>
+<para><computeroutput>string LogicLayer.LocalDataModel.DojoData.randomSalt</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00364">364</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_1a7f795512a83f79cfe1f6fd1ab43bab8a"/><section>
+    <title>roundNum</title>
+<indexterm><primary>roundNum</primary><secondary>LogicLayer.LocalDataModel.DojoData</secondary></indexterm>
+<indexterm><primary>LogicLayer.LocalDataModel.DojoData</primary><secondary>roundNum</secondary></indexterm>
+<para><computeroutput>string LogicLayer.LocalDataModel.DojoData.roundNum</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00365">365</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Managers/<link linkend="__local_data_model_8cs">LocalDataModel.cs</link></section>
+</section>

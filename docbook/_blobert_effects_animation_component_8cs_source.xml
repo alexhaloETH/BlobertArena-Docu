@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blobert_effects_animation_component_8cs_source" xml:lang="en-US">
+<title>BlobertEffectsAnimationComponent.cs</title>
+<indexterm><primary>UI/Components/BlobertEffectsAnimationComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00004"/>00004 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00005"/><link linkend="_class_blobert_effects_animation_component">00005</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_blobert_effects_animation_component">BlobertEffectsAnimationComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;[SerializeField]&#32;Sprite[]&#32;_sprites;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;[SerializeField]&#32;Image&#32;_image;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00009"/>00009 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00010"/><link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0abd2b7e5f85a6ea65065c4ebc6d7c95bb">Fire</link>,
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a358cfe58715d680d9ab09f82e4010cbc">Slash</link>,
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a2e8bc6bdf3e8ead6cb8c6465b6afd781">Toxic</link>,
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a1e409a9070b570ccae471e56683b371e">Debuf</link>,
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0abc93fd0fa19ed26b6adf8293ada55404">Smoke</link>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00018"/>00018 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00019"/><link linkend="_class_blobert_effects_animation_component_1ada8bce9f2847d297473acf27685341cd">00019</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1ada8bce9f2847d297473acf27685341cd">animate</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;<emphasis role="comment">//&#32;Public&#32;boolean&#32;to&#32;control&#32;continuous&#32;animation</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;animationSpeed&#32;=&#32;0.2f;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeSinceLastFrame&#32;=&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentFrame&#32;=&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentAnimationLength&#32;=&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentStartingIndex&#32;=&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isPlaying&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00026"/>00026 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;For&#32;the&#32;timer&#32;and&#32;random&#32;spawning</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;randomAnimationTimer&#32;=&#32;0f;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;randomAnimationInterval&#32;=&#32;10f;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00030"/>00030 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>&#32;currentAnimationType;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00032"/>00032 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Update()
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;animation&#32;should&#32;be&#32;running&#32;and&#32;handle&#32;frame&#32;updates</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isPlaying)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeSinceLastFrame&#32;+=&#32;Time.deltaTime;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(timeSinceLastFrame&#32;&gt;=&#32;animationSpeed)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeSinceLastFrame&#32;=&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RunAnimation();
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00045"/>00045 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;random&#32;animation&#32;triggering</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;randomAnimationTimer&#32;+=&#32;Time.deltaTime;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(randomAnimationTimer&#32;&gt;=&#32;randomAnimationInterval&#32;&amp;&amp;&#32;!isPlaying&#32;&amp;&amp;&#32;!<link linkend="_class_blobert_effects_animation_component_1ada8bce9f2847d297473acf27685341cd">animate</link>)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Playing&#32;random&#32;effect&quot;</emphasis>);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Randomly&#32;select&#32;a&#32;new&#32;effect</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>&#32;randomEffect&#32;=&#32;(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>)<link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link>.Range(0,&#32;<link linkend="_namespace_system">System</link>.Enum.GetValues(typeof(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>)).Length);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00053"/>00053 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Play&#32;the&#32;random&#32;effect&#32;once</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1aa4ab844c8797d86db220ed441bbeb713">PlayAnimationOnce</link>(randomEffect);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00056"/>00056 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Reset&#32;the&#32;timer</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;randomAnimationTimer&#32;=&#32;0f;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00060"/>00060 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Continue&#32;playing&#32;animations&#32;automatically&#32;if&#32;animate&#32;is&#32;true</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!isPlaying&#32;&amp;&amp;&#32;<link linkend="_class_blobert_effects_animation_component_1ada8bce9f2847d297473acf27685341cd">animate</link>)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayNextRandomAnimation();
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00067"/>00067 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RunAnimation()
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(currentFrame&#32;&gt;=&#32;currentAnimationLength)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Animation&#32;finished,&#32;clear&#32;the&#32;image&#32;and&#32;stop&#32;playing</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_image.sprite&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;isPlaying&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00077"/>00077 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;the&#32;sprite&#32;for&#32;the&#32;current&#32;frame</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_image.sprite&#32;=&#32;_sprites[currentStartingIndex&#32;+&#32;currentFrame];
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00080"/>00080 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Move&#32;to&#32;the&#32;next&#32;frame</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentFrame++;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00084"/>00084 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00085"/><link linkend="_class_blobert_effects_animation_component_1aa4ab844c8797d86db220ed441bbeb713">00085</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1aa4ab844c8797d86db220ed441bbeb713">PlayAnimationOnce</link>(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>&#32;type)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isPlaying)&#32;<emphasis role="keywordflow">return</emphasis>;&#32;<emphasis role="comment">//&#32;Prevent&#32;starting&#32;a&#32;new&#32;animation&#32;while&#32;one&#32;is&#32;playing</emphasis>
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00088"/>00088 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Playing&#32;animation&#32;once&quot;</emphasis>);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentAnimationType&#32;=&#32;type;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentAnimationLength&#32;=&#32;<link linkend="_class_blobert_effects_animation_component_1a8818da7da393513e68380446672c12b9">GetAnimationLength</link>(type);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentStartingIndex&#32;=&#32;<link linkend="_class_blobert_effects_animation_component_1adb1af8a50b21672405ffa04a32ee54ed">GetStartingIndex</link>(type);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentFrame&#32;=&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;isPlaying&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00096"/>00096 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;PlayNextRandomAnimation()
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>&#32;randomEffect&#32;=&#32;(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>)<link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link>.Range(0,&#32;<link linkend="_namespace_system">System</link>.Enum.GetValues(typeof(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>)).Length);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_effects_animation_component_1aa4ab844c8797d86db220ed441bbeb713">PlayAnimationOnce</link>(randomEffect);
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00102"/>00102 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00103"/><link linkend="_class_blobert_effects_animation_component_1a8818da7da393513e68380446672c12b9">00103</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1a8818da7da393513e68380446672c12b9">GetAnimationLength</link>(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>&#32;type)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(type)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Fire:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Slash:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;9;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Toxic:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;14;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Debuf:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;16;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Smoke:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;9;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00121"/>00121 
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00122"/><link linkend="_class_blobert_effects_animation_component_1adb1af8a50b21672405ffa04a32ee54ed">00122</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1adb1af8a50b21672405ffa04a32ee54ed">GetStartingIndex</link>(<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>&#32;type)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(type)
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Fire:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Slash:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Toxic:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;17;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Debuf:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;31;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link>.Smoke:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;47;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_effects_animation_component_8cs_source_1l00140"/>00140 }
+</programlisting></section>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blob_hints_8cs_source" xml:lang="en-US">
+<title>BlobHints.cs</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__blob_hints_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__blob_hints_8cs_source_1l00002"/>00002 
+<anchor xml:id="__blob_hints_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__blob_hints_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__blob_hints_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Assertions;
+<anchor xml:id="__blob_hints_8cs_source_1l00006"/>00006 
+<anchor xml:id="__blob_hints_8cs_source_1l00007"/><link linkend="_class_blob_hints">00007</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_blob_hints">BlobHints</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__blob_hints_8cs_source_1l00008"/>00008 {
+<anchor xml:id="__blob_hints_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_speach_bubble">SpeachBubble</link>&#32;m_Fumetto;
+<anchor xml:id="__blob_hints_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_HintButton;
+<anchor xml:id="__blob_hints_8cs_source_1l00011"/>00011 
+<anchor xml:id="__blob_hints_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Start&#32;is&#32;called&#32;before&#32;the&#32;first&#32;frame&#32;update</emphasis>
+<anchor xml:id="__blob_hints_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__blob_hints_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_hints_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Assert.IsNotNull(m_Fumetto,&#32;$<emphasis role="stringliteral">&quot;Speach&#32;bubble&#32;object&#32;is&#32;not&#32;assigned&#32;to&#32;{name}&quot;</emphasis>);
+<anchor xml:id="__blob_hints_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_hints_8cs_source_1l00017"/>00017 
+<anchor xml:id="__blob_hints_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__blob_hints_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_hints_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopAllCoroutines();
+<anchor xml:id="__blob_hints_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_HintButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__blob_hints_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_hints_8cs_source_1l00023"/>00023 
+<anchor xml:id="__blob_hints_8cs_source_1l00027"/><link linkend="_class_blob_hints_1ad009938cab8a7bffc538aea1eff7fa11">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_blob_hints_1ad009938cab8a7bffc538aea1eff7fa11">OnHintButtonClick</link>()
+<anchor xml:id="__blob_hints_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_hints_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Fumetto.<link linkend="_class_speach_bubble_1a572238141cf8895589995393db4be7e3">IsBubbleActive</link>())&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__blob_hints_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Fumetto.<link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">OneShotInsult</link>(InsultsData.InsultType.Hints);
+<anchor xml:id="__blob_hints_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(ButtonDisable());
+<anchor xml:id="__blob_hints_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_hints_8cs_source_1l00033"/>00033 
+<anchor xml:id="__blob_hints_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;ButtonDisable()
+<anchor xml:id="__blob_hints_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_hints_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_HintButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__blob_hints_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitUntil(()&#32;=&gt;&#32;!m_Fumetto.<link linkend="_class_speach_bubble_1a572238141cf8895589995393db4be7e3">IsBubbleActive</link>());
+<anchor xml:id="__blob_hints_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_HintButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__blob_hints_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_hints_8cs_source_1l00040"/>00040 }
+</programlisting></section>

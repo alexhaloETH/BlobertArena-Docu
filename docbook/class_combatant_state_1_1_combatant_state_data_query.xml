@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combatant_state_1_1_combatant_state_data_query" xml:lang="en-US">
+<title>CombatantState.CombatantStateDataQuery Class Reference</title>
+<indexterm><primary>CombatantState.CombatantStateDataQuery</primary></indexterm>
+<para>Inheritance diagram for CombatantState.CombatantStateDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_combatant_state_1_1_combatant_state_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_combatant_state_1_1_combatant_state_data_query_1a788cba7e1f9aba7c2a6de7ab3db4c98b">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_state_1_1_combatant_state_data_query_1a2b52c40f5c42cc0cbc5a8d7819fcff8a">id</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_state_1_1_combatant_state_data_query_1af752a8349394815d94256edd6c1ceda9">health</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_combatant_state_1_1_combatant_state_data_query_1a7635c76df9d740df04373e90ac045a0d">stun_chance</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00077">77</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1a788cba7e1f9aba7c2a6de7ab3db4c98b"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string CombatantState.CombatantStateDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00079">79</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1af752a8349394815d94256edd6c1ceda9"/><section>
+    <title>health</title>
+<indexterm><primary>health</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>health</secondary></indexterm>
+<para><computeroutput>string CombatantState.CombatantStateDataQuery.health = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00081">81</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1a2b52c40f5c42cc0cbc5a8d7819fcff8a"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>string CombatantState.CombatantStateDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00080">80</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1a7635c76df9d740df04373e90ac045a0d"/><section>
+    <title>stun_chance</title>
+<indexterm><primary>stun_chance</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
+<indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>stun_chance</secondary></indexterm>
+<para><computeroutput>string CombatantState.CombatantStateDataQuery.stun_chance = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00082">82</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__combatant_state_8gen_8cs">CombatantState.gen.cs</link></section>
+</section>

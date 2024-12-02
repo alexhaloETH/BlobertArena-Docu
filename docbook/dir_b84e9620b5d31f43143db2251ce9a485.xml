@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b84e9620b5d31f43143db2251ce9a485" xml:lang="en-US">
+<title>UI/Components/Button Types Directory Reference</title>
+<indexterm><primary>UI/Components/Button Types Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__base_button_8cs">BaseButton.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combat_bag_button_8cs">CombatBagButton.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__mouse_interaction_component_8cs">MouseInteractionComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__switch_component_8cs">SwitchComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__toggle_component_8cs">ToggleComponent.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

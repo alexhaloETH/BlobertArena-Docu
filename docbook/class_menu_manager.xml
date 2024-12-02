@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_menu_manager" xml:lang="en-US">
+<title>MenuManager Class Reference</title>
+<indexterm><primary>MenuManager</primary></indexterm>
+<para>Inheritance diagram for MenuManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_menu_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_menu_manager_1a93307896152357fc2ea7c248e107aff2">OpenMenu</link> (<link linkend="_class_menu">Menu</link> menu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_manager_1a79aa90cfbbb6561b37fe49e2c88c84b5">CloseLastPage</link> (bool openLast=true)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_manager_1a9adecab612d11d9bddc122bb98a4195a">ClearStack</link> (bool closeAll)</para>
+</listitem>
+            <listitem><para><link linkend="_class_menu">Menu</link> <link linkend="_class_menu_manager_1adb507ae8d08bda9faf1ce05f7163d6ea">GetCurrentMenu</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_menu">Menu</link> <link linkend="_class_menu_manager_1a49f324784bf38fe3c9147067880c94e0">InitialMenu</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_menu">Menu</link> <link linkend="_class_menu_manager_1aee0c5f47dfb4014243430eb18dd53c6b">StandardMenu</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>Action&lt; <link linkend="_class_menu">Menu</link> &gt; <link linkend="_class_menu_manager_1a8d83470bc8c1298840b10ed958bd9dd1">OnMenuChanged</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00009">9</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_menu_manager_1a9adecab612d11d9bddc122bb98a4195a"/><section>
+    <title>ClearStack()</title>
+<indexterm><primary>ClearStack</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>ClearStack</secondary></indexterm>
+<para><computeroutput>void MenuManager.ClearStack (bool closeAll)</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00095">95</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_manager_1a79aa90cfbbb6561b37fe49e2c88c84b5"/><section>
+    <title>CloseLastPage()</title>
+<indexterm><primary>CloseLastPage</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>CloseLastPage</secondary></indexterm>
+<para><computeroutput>void MenuManager.CloseLastPage (bool openLast = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00061">61</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_manager_1adb507ae8d08bda9faf1ce05f7163d6ea"/><section>
+    <title>GetCurrentMenu()</title>
+<indexterm><primary>GetCurrentMenu</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>GetCurrentMenu</secondary></indexterm>
+<para><computeroutput><link linkend="_class_menu">Menu</link> MenuManager.GetCurrentMenu ( )</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00110">110</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_manager_1a93307896152357fc2ea7c248e107aff2"/><section>
+    <title>OpenMenu()</title>
+<indexterm><primary>OpenMenu</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>OpenMenu</secondary></indexterm>
+<para><computeroutput>void MenuManager.OpenMenu (<link linkend="_class_menu">Menu</link> menu)</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00036">36</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_menu_manager_1a49f324784bf38fe3c9147067880c94e0"/><section>
+    <title>InitialMenu</title>
+<indexterm><primary>InitialMenu</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>InitialMenu</secondary></indexterm>
+<para><computeroutput><link linkend="_class_menu">Menu</link> MenuManager.InitialMenu</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00014">14</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_manager_1aee0c5f47dfb4014243430eb18dd53c6b"/><section>
+    <title>StandardMenu</title>
+<indexterm><primary>StandardMenu</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>StandardMenu</secondary></indexterm>
+<para><computeroutput><link linkend="_class_menu">Menu</link> MenuManager.StandardMenu</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00017">17</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_menu_manager_1a8d83470bc8c1298840b10ed958bd9dd1"/><section>
+    <title>OnMenuChanged</title>
+<indexterm><primary>OnMenuChanged</primary><secondary>MenuManager</secondary></indexterm>
+<indexterm><primary>MenuManager</primary><secondary>OnMenuChanged</secondary></indexterm>
+<para><computeroutput>Action&lt;<link linkend="_class_menu">Menu</link>&gt; MenuManager.OnMenuChanged</computeroutput></para><para>
+Definition at line <link linkend="__menu_manager_8cs_source_1l00019">19</link> of file <link linkend="__menu_manager_8cs_source">MenuManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/<link linkend="__menu_manager_8cs">MenuManager.cs</link></section>
+</section>

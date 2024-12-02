@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_rules_page_behaviour" xml:lang="en-US">
+<title>RulesPageBehaviour Class Reference</title>
+<indexterm><primary>RulesPageBehaviour</primary></indexterm>
+<para>
+
+<para>Class to define the general behaviour of the Rules page. </para>
+ 
+</para>
+<para>Inheritance diagram for RulesPageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_rules_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Class to define the general behaviour of the Rules page. </para>
+<para>
+Definition at line <link linkend="__rules_page_behaviour_8cs_source_1l00009">9</link> of file <link linkend="__rules_page_behaviour_8cs_source">RulesPageBehaviour.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/RulesPage/<link linkend="__rules_page_behaviour_8cs">RulesPageBehaviour.cs</link></section>
+</section>

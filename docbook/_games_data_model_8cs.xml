@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__games_data_model_8cs" xml:lang="en-US">
+<title>LogicLayer/Managers/GamesDataModel.cs File Reference</title>
+<indexterm><primary>LogicLayer/Managers/GamesDataModel.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">LogicLayer.GamesDataModel</emphasis></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_logic_layer_1_1_games_data_model_1_1_query_compiled_data">LogicLayer.GamesDataModel.QueryCompiledData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

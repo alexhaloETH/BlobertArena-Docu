@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_last_mint" xml:lang="en-US">
+<title>LastMint Class Reference</title>
+<indexterm><primary>LastMint</primary></indexterm>
+<para>Inheritance diagram for LastMint:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_last_mint.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_last_mint_1_1_last_mint_data_query">LastMintDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_last_mint_1a94884780cd6ba7d153e9dabdd5776f1a">player</link></para>
+</listitem>
+            <listitem><para>ulong <link linkend="_class_last_mint_1a5cb2b779835a04fcad8a3036db5b02fe">timestamp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_last_mint_1a614dc7358448da3eaf647e9f9590c05f">GraphQlQueryFull</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_last_mint_1a5e7d619e15efe5b33c1b3f3ab36ed6f4">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_last_mint_1a6ab806aea5bf5046ba22f189b756b4da">GraphQlHeader</link> = &quot;blobArenaLastMintModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00005">5</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_last_mint_1a6ab806aea5bf5046ba22f189b756b4da"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>LastMint</secondary></indexterm>
+<indexterm><primary>LastMint</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string LastMint.GraphQlHeader = &quot;blobArenaLastMintModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00046">46</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_last_mint_1a614dc7358448da3eaf647e9f9590c05f"/><section>
+    <title>GraphQlQueryFull</title>
+<indexterm><primary>GraphQlQueryFull</primary><secondary>LastMint</secondary></indexterm>
+<indexterm><primary>LastMint</primary><secondary>GraphQlQueryFull</secondary></indexterm>
+<para><computeroutput>readonly string LastMint.GraphQlQueryFull<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaLastMintModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_LastMint&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;player</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timestamp</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00020">20</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_last_mint_1a5e7d619e15efe5b33c1b3f3ab36ed6f4"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>LastMint</secondary></indexterm>
+<indexterm><primary>LastMint</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string LastMint.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_LastMint&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;player</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timestamp</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00039">39</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_last_mint_1a94884780cd6ba7d153e9dabdd5776f1a"/><section>
+    <title>player</title>
+<indexterm><primary>player</primary><secondary>LastMint</secondary></indexterm>
+<indexterm><primary>LastMint</primary><secondary>player</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> LastMint.player</computeroutput></para><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00008">8</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_last_mint_1a5cb2b779835a04fcad8a3036db5b02fe"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>LastMint</secondary></indexterm>
+<indexterm><primary>LastMint</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>ulong LastMint.timestamp</computeroutput></para><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00011">11</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__last_mint_8gen_8cs">LastMint.gen.cs</link></section>
+</section>

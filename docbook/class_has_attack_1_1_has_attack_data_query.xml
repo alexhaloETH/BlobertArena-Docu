@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_has_attack_1_1_has_attack_data_query" xml:lang="en-US">
+<title>HasAttack.HasAttackDataQuery Class Reference</title>
+<indexterm><primary>HasAttack.HasAttackDataQuery</primary></indexterm>
+<para>Inheritance diagram for HasAttack.HasAttackDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_has_attack_1_1_has_attack_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_has_attack_1_1_has_attack_data_query_1a0cd29c3f88a12c8db91b3ee6aaec159d">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_has_attack_1_1_has_attack_data_query_1aef7bd4fa58b9d8658bde20d4fe5a36bc">item_id</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_has_attack_1_1_has_attack_data_query_1acb8250cfd1296c81b44a33c54e25ae89">attack_id</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_has_attack_1_1_has_attack_data_query_1aa8450be1ff709626cc615671b2e919e9">has</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00064">64</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_has_attack_1_1_has_attack_data_query_1a0cd29c3f88a12c8db91b3ee6aaec159d"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>HasAttack.HasAttackDataQuery</secondary></indexterm>
+<indexterm><primary>HasAttack.HasAttackDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string HasAttack.HasAttackDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00066">66</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+</section>
+<anchor xml:id="_class_has_attack_1_1_has_attack_data_query_1acb8250cfd1296c81b44a33c54e25ae89"/><section>
+    <title>attack_id</title>
+<indexterm><primary>attack_id</primary><secondary>HasAttack.HasAttackDataQuery</secondary></indexterm>
+<indexterm><primary>HasAttack.HasAttackDataQuery</primary><secondary>attack_id</secondary></indexterm>
+<para><computeroutput>string HasAttack.HasAttackDataQuery.attack_id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00068">68</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+</section>
+<anchor xml:id="_class_has_attack_1_1_has_attack_data_query_1aa8450be1ff709626cc615671b2e919e9"/><section>
+    <title>has</title>
+<indexterm><primary>has</primary><secondary>HasAttack.HasAttackDataQuery</secondary></indexterm>
+<indexterm><primary>HasAttack.HasAttackDataQuery</primary><secondary>has</secondary></indexterm>
+<para><computeroutput>string HasAttack.HasAttackDataQuery.has = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00069">69</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+</section>
+<anchor xml:id="_class_has_attack_1_1_has_attack_data_query_1aef7bd4fa58b9d8658bde20d4fe5a36bc"/><section>
+    <title>item_id</title>
+<indexterm><primary>item_id</primary><secondary>HasAttack.HasAttackDataQuery</secondary></indexterm>
+<indexterm><primary>HasAttack.HasAttackDataQuery</primary><secondary>item_id</secondary></indexterm>
+<para><computeroutput>string HasAttack.HasAttackDataQuery.item_id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00067">67</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__has_attack_8cs">HasAttack.cs</link></section>
+</section>

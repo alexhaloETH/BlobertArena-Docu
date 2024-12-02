@@ -1,0 +1,999 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__battle_page_controller_8cs_source" xml:lang="en-US">
+<title>BattlePageController.cs</title>
+<indexterm><primary>UI/Pages/BattlePage/BattlePageController.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__battle_page_controller_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>static&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00009"/>00009 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00023"/>00023 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00024"/><link linkend="_class_battle_page_controller">00024</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_battle_page_controller">BattlePageController</link>&#32;:&#32;<link linkend="_class_menu">Menu</link>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00025"/>00025 {
+<anchor xml:id="__battle_page_controller_8cs_source_1l00026"/><link linkend="_class_battle_page_controller_1a5cbe4f8c72d7e1898c187a75daad3f30">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;AttackAvailability&gt;&#32;<link linkend="_class_battle_page_controller_1a5cbe4f8c72d7e1898c187a75daad3f30">AttacksLoaded</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00027"/>00027 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00028"/><link linkend="_struct_battle_page_controller_1_1_attack_availability">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;:&#32;IEquatable&lt;AttackAvailability&gt;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00030"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">00030</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">Attack</link>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">Attack</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00031"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567">00031</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567">Availability</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00032"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb">RoundUntil</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00033"/>00033 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00034"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1a3affdfa35553ac2372bc0a5f4190794d">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a3affdfa35553ac2372bc0a5f4190794d">Equals</link>(<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;other)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">Attack</link>.Equals(other.<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">Attack</link>)&#32;&amp;&amp;&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567">Availability</link>&#32;==&#32;other.Availability&#32;&amp;&amp;&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb">RoundUntil</link>&#32;==&#32;other.<link linkend="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb">RoundUntil</link>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00038"/>00038 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00039"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1a65ceefbe71c0ad9f4a2955c1a45a42b7">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a65ceefbe71c0ad9f4a2955c1a45a42b7">Equals</link>(<emphasis role="keywordtype">object</emphasis>&#32;obj)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;obj&#32;is&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;other&#32;&amp;&amp;&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a3affdfa35553ac2372bc0a5f4190794d">Equals</link>(other);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00043"/>00043 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00044"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1ab9b7cf938c0cc27602d8fc5353be400d">00044</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ab9b7cf938c0cc27602d8fc5353be400d">GetHashCode</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;HashCode.Combine(<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">Attack</link>,&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567">Availability</link>,&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb">RoundUntil</link>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00048"/>00048 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00049"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1ad5f07d2f2c2d693cfdd208ab3b8d88c4">00049</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1ad5f07d2f2c2d693cfdd208ab3b8d88c4">operator ==</link>(<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;left,&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;right)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;left.<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a3affdfa35553ac2372bc0a5f4190794d">Equals</link>(right);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00053"/>00053 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00054"/><link linkend="_struct_battle_page_controller_1_1_attack_availability_1a9306581bc9d2eadc8f05f487b86a4dce">00054</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability_1a9306581bc9d2eadc8f05f487b86a4dce">operator !=</link>(<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;left,&#32;<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&#32;right)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;!(left&#32;==&#32;right);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00059"/>00059 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00060"/>00060 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Chain&#32;Models&#32;and&#32;data</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00061"/>00061 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;[Space(40)]
+<anchor xml:id="__battle_page_controller_8cs_source_1l00063"/><link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">00063</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_commitment">Commitment</link>[]&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_commitment">Commitment</link>[2];&#32;<emphasis role="comment">//0&#32;is&#32;player&#32;self&#32;and&#32;1&#32;is&#32;opponent</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00064"/>00064 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00065"/><link linkend="_class_battle_page_controller_1acd6c7f4477e1a327dbc0a7240520e0ca">00065</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>[]&#32;<link linkend="_class_battle_page_controller_1acd6c7f4477e1a327dbc0a7240520e0ca">attacks</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>[4];
+<anchor xml:id="__battle_page_controller_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;_salts&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[4];
+<anchor xml:id="__battle_page_controller_8cs_source_1l00067"/><link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_planned_attack">PlannedAttack</link>[]&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_planned_attack">PlannedAttack</link>[2];
+<anchor xml:id="__battle_page_controller_8cs_source_1l00068"/>00068 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00069"/><link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">00069</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00070"/>00070 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00071"/><link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">00071</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[2];
+<anchor xml:id="__battle_page_controller_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;_combatId;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00073"/>00073 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;DojoData&#32;_dojoData&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00075"/>00075 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00076"/>00076 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Chain&#32;Models&#32;and&#32;data</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00077"/>00077 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00078"/><link linkend="_class_battle_page_controller_1ac2b5890d8918815b656c55ccf1424e8e">00078</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1ac2b5890d8918815b656c55ccf1424e8e">SetDojoData</link>(DojoData&#32;dojoData)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dojoData&#32;=&#32;dojoData;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00082"/>00082 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00083"/>00083 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;UiComponents</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00084"/>00084 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00085"/><link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">00085</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_battle_page_card_stats_component">BattlePageCardStatsComponent</link>[]&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>;&#32;<emphasis role="comment">//&#32;stays</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00086"/><link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">00086</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>[]&#32;<link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link>;&#32;&#32;<emphasis role="comment">//&#32;stays</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00087"/>00087 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00088"/><link linkend="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b">00088</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b">BattlePageDataSection</link>&#32;<link linkend="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b">BattlePageDataSection</link>;&#32;<emphasis role="comment">//can&#32;go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00089"/><link linkend="_class_battle_page_controller_1aff0f37cdf90816dfe0b5707bb5cdddea">00089</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_battle_page_controller_1aff0f37cdf90816dfe0b5707bb5cdddea">BattlePageFullLengthComponent</link>&#32;<link linkend="_class_battle_page_controller_1aff0f37cdf90816dfe0b5707bb5cdddea">BattlePageFullLengthComponent</link>;&#32;&#32;<emphasis role="comment">//can&#32;go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00090"/><link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">00090</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_choice_section_battle_page">ChoiceSectionBattlePage</link>&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>;&#32;&#32;<emphasis role="comment">//can&#32;go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00091"/>00091 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00092"/>00092 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;UiComponents</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00093"/>00093 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="comment">//ui&#32;references</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00095"/>00095 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Game&#32;UI&#32;reference&quot;</emphasis>)]
+<anchor xml:id="__battle_page_controller_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;[SerializeField]
+<anchor xml:id="__battle_page_controller_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_BattleUi;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00099"/>00099 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="comment">//can&#32;go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00101"/>00101 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00102"/>00102 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;&gt;&gt;&#32;Pre-battle&#32;animation&#32;stuff&#32;&lt;&lt;</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00103"/>00103 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;[Space(30)]
+<anchor xml:id="__battle_page_controller_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_PlayerBlobStartPos;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00106"/>00106 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_PlayerStatsStartPos;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00108"/>00108 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_EnemyBlobStartPos;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_EnemyStatsStartPos;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00111"/>00111 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_ChoiceSelectionStartPos;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00113"/>00113 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_PlayerBlobTransform;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_PlayerStatsTransform;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00116"/>00116 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_EnemyBlobTransform;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_EnemyStatsTransform;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00119"/>00119 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_ChoiceSelection;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00121"/>00121 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00122"/>00122 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;&gt;&gt;&#32;Pre-battle&#32;animation&#32;stuff&#32;&lt;&lt;</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00123"/>00123 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="comment">//stay</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00125"/>00125 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00126"/>00126 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;States</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00127"/>00127 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;[Space(30)]
+<anchor xml:id="__battle_page_controller_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_isLocked&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00130"/>00130 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;gameHasEnded&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00132"/><link linkend="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544">00132</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;uint&#32;<link linkend="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544">RoundNumber</link>&#32;=&#32;1;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isOwner&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00134"/>00134 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00135"/><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">00135</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadacef4507fecb9cce7b6c0c294cb936e">CommitAttack</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaeb8ab7d98634514cc61c2b0a0c8d93a2">Stunned</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aad0f2e5376298c880665077b565ffd7dd">Locked</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aabcf2ed01f87c5c22be81405063f8804b">WaitingForEnemyToCommit</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaf92cb63ec3603fc08101d78d5633969b">RevealAttack</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaf90b8f79c662ea07880ba5579c3383b6">WaitingForEnemyToReveal</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aabed43647a5fe62cc2caa520c89b3f721">RunRoundCallWait</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aa074b963ee1212c6c60c7badc08d221ba">RoundOutcomeFirst</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aa3713f0785f4494e927f3bf54d9b10435">RoundOutcomeSecond</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadae60449f24ec4477da2727041120a64">EndOfBattle</link>,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00148"/>00148 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00149"/><link linkend="_class_battle_page_controller_1a017e72fb68b42ae28d821235b6f79e09">00149</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;Action&lt;BattleState&gt;&#32;<link linkend="_class_battle_page_controller_1a017e72fb68b42ae28d821235b6f79e09">OnBattleStateChanged</link>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00150"/>00150 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00151"/><link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">00151</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>&#32;<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;=&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00152"/>00152 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00153"/><link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">00153</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>&#32;newState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gameHasEnded)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00158"/>00158 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gameHasEnded&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00160"/>00160 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(state&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.EndOfBattle)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">HardSetBattleState</link>(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.EndOfBattle);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00167"/>00167 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;the&#32;new&#32;state&#32;is&#32;{newState}&#32;and&#32;the&#32;current&#32;one&#32;is&#32;{CurrentState}&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;==&#32;newState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00171"/>00171 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newState&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.EndOfBattle)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//ToggleBattleUi(false);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptedStateChange(newState);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00178"/>00178 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;is&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RevealAttack&#32;or&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.WaitingForEnemyToReveal&#32;or&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RunRoundCallWait)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;&amp;&#32;newState&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptedStateChange(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RoundOutcomeFirst);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dojoData&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Transitioned&#32;to&#32;RoundOutcomeSelf&#32;as&#32;chain&#32;reset&#32;was&#32;detected.&#32;Current&#32;State:&#32;{CurrentState}&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00187"/>00187 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.WaitingForEnemyToReveal&#32;&amp;&amp;&#32;newState&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RevealAttack)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptedStateChange(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RevealAttack);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00193"/>00193 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newState&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;_salts.Length;&#32;i++)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_salts[i]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(BlobertUtils.GetRandomFeltInHex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00201"/>00201 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newState&#32;&lt;=&#32;<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00203"/>00203 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptedStateChange(newState);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00206"/>00206 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00207"/><link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">00207</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">HardSetBattleState</link>(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>&#32;newState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;the&#32;new&#32;state&#32;is&#32;the&#32;same&#32;as&#32;the&#32;current&#32;state</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;==&#32;newState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00212"/>00212 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newState&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.EndOfBattle)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;the&#32;current&#32;state&#32;is&#32;the&#32;outcome&#32;states&#32;we&#32;are&#32;not&#32;allowed&#32;to&#32;go&#32;into&#32;the&#32;new&#32;state</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;is&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RoundOutcomeFirst&#32;or&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RoundOutcomeSecond)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Cannot&#32;transition&#32;to&#32;EndOfBattle&#32;from&#32;RoundOutcome&#32;states&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gameHasEnded&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00222"/>00222 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//ToggleBattleUi(false);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptedStateChange(newState);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00227"/>00227 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newState&#32;==&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;_salts.Length;&#32;i++)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_salts[i]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(BlobertUtils.GetRandomFeltInHex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00235"/>00235 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;new&#32;state&#32;and&#32;invoke&#32;the&#32;event</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptedStateChange(newState);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;this&#32;is&#32;a&#32;call&#32;from&#32;the&#32;HardSetBattleState&#32;function&#32;and&#32;the&#32;state&#32;right&#32;now&#32;is&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00240"/>00240 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;AcceptedStateChange(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>&#32;newState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>&#32;=&#32;newState;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a017e72fb68b42ae28d821235b6f79e09">OnBattleStateChanged</link>?.Invoke(newState);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00246"/>00246 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00247"/>00247 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;States</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00248"/>00248 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetInitialPositionsAnimation();&#32;&#32;<emphasis role="comment">//go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00252"/>00252 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;_salts.Length;&#32;i++)&#32;&#32;&#32;<emphasis role="comment">//stay</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_salts[i]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(BlobertUtils.GetRandomFeltInHex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00258"/>00258 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;Update()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.D))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Debugging&#32;of&#32;the&#32;whole&#32;state&#32;of&#32;this&#32;combat&#32;is&#32;beginning&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00265"/>00265 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Combatant&#32;Ids:&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0].Hex()&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1].Hex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00267"/>00267 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Commitment&#32;0:&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0].<emphasis role="keywordtype">id</emphasis>.Hex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Commitment&#32;0:&#32;null&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00277"/>00277 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Commitment&#32;1:&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1].<emphasis role="keywordtype">id</emphasis>.Hex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Commitment&#32;1:&#32;null&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00286"/>00286 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Planned&#32;Attack&#32;0:&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0].<emphasis role="keywordtype">id</emphasis>.Hex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Planned&#32;Attack&#32;0:&#32;null&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00296"/>00296 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Planned&#32;Attack&#32;1:&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1].<emphasis role="keywordtype">id</emphasis>.Hex());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Planned&#32;Attack&#32;1:&#32;null&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00305"/>00305 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;The&#32;current&#32;state&#32;of&#32;the&#32;combat&#32;{EvaluteOnChainState()}&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00308"/>00308 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;LoadCombatantStateSelf&#32;=&#32;await&#32;CombatantDataModel.ManualQueryCombatantState(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;combatant&#32;0:&#32;health:&quot;</emphasis>&#32;+&#32;LoadCombatantStateSelf.health&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;stun:&quot;</emphasis>&#32;+
+<anchor xml:id="__battle_page_controller_8cs_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LoadCombatantStateSelf.stunChance);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;LoadCombatantStateEnemy&#32;=&#32;await&#32;CombatantDataModel.ManualQueryCombatantState(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&#32;combatant&#32;1:&#32;health:&quot;</emphasis>&#32;+&#32;LoadCombatantStateEnemy.health&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;stun:&quot;</emphasis>&#32;+
+<anchor xml:id="__battle_page_controller_8cs_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LoadCombatantStateEnemy.stunChance);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00316"/>00316 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;loadStateOfAttacksSelf&#32;=
+<anchor xml:id="__battle_page_controller_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;CombatantDataModel.LoadStateOfAttacksForCombatant(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Attacks&#32;of&#32;combatant&#32;0&#32;count&#32;is&#32;&quot;</emphasis>&#32;+&#32;loadStateOfAttacksSelf.Count);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;attack&#32;<emphasis role="keywordflow">in</emphasis>&#32;loadStateOfAttacksSelf)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00324"/>00324 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;round&#32;outcomes:&#32;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(uint&#32;i&#32;=&#32;1;&#32;i&#32;&lt;&#32;CombatState.round&#32;+&#32;1;&#32;i++)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;roundOutcomeSelf&#32;=&#32;await&#32;AttackResult.GetAttackResultSDKQuery(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(i));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;roundOutcomeEnemy&#32;=
+<anchor xml:id="__battle_page_controller_8cs_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;AttackResult.GetAttackResultSDKQuery(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1],&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(i));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00332"/>00332 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Round&#32;&quot;</emphasis>&#32;+&#32;i&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;outcomes:&#32;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Debug.Log(&quot;Self:&#32;&quot;&#32;+&#32;roundOutcomeSelf.attack_id.Hex()&#32;+&#32;&quot;&#32;damage:&quot;&#32;+&#32;roundOutcomeSelf.damage&#32;+</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;&#32;effect:&#32;&quot;&#32;+&#32;roundOutcomeSelf.effect);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Debug.Log(&quot;Enemy:&#32;&quot;&#32;+&#32;roundOutcomeEnemy.attack_id.Hex()&#32;+&#32;&quot;&#32;damage:&quot;&#32;+&#32;roundOutcomeEnemy.damage&#32;+</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;&#32;effect:&quot;&#32;+&#32;roundOutcomeEnemy.effect);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00341"/>00341 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.S))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(isOwner);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(CombatantDataModel.BitsToWaitState(
+<anchor xml:id="__battle_page_controller_8cs_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatantDataModel.GetCommitmentState(<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0],&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1])));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(CombatantDataModel.BitsToWaitState(
+<anchor xml:id="__battle_page_controller_8cs_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatantDataModel.GetPlannedAttackState(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0],&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1])));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00349"/>00349 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;The&#32;current&#32;state&#32;of&#32;the&#32;combat&#32;{EvaluteOnChainState()}&#32;adn&#32;this&#32;si&#32;for&#32;the&#32;ui&#32;{CurrentState}&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a017e72fb68b42ae28d821235b6f79e09">OnBattleStateChanged</link>?.Invoke(<link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00353"/>00353 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.X))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a6335c3ce029649e704532a59f5a7041e">CallToForfeit</link>();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//HardSetBattleState(BattleState.EndOfBattle);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00359"/>00359 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.G))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_dojoData&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;no&#32;dojo&#32;data&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00367"/>00367 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(_dojoData.randomSalt);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(_dojoData.committedHash);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(_dojoData.roundNum);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(_dojoData.gameId);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(_dojoData.lastAttack);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00374"/>00374 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.V))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">HardSetBattleState</link>(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.EndOfBattle);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00380"/>00380 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00381"/>00381 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00382"/>00382 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link>.<link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link>(<link linkend="_class_game_background_component">GameBackgroundComponent</link>.<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link>.FightArena);&#32;<emphasis role="comment">//stay</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00384"/>00384 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetUpCombatantsAnimation();&#32;<emphasis role="comment">//go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00386"/>00386 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;InitialLoadOfData();&#32;&#32;<emphasis role="comment">//stay</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00388"/>00388 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayStartOfBattleAnimation();&#32;&#32;<emphasis role="comment">//go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00390"/>00390 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;localGameData&#32;=&#32;FetchGameData(_combatId,&#32;CurrentAccount.Address,&#32;(<emphasis role="keywordtype">int</emphasis>)<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round);&#32;&#32;<emphasis role="comment">//satay</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00392"/>00392 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;isOwner&#32;=&#32;<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link>.<link linkend="_class_pv_p_challenge_invite_1a37ff87293492214926603604314af93c">IsAdminOfGame</link>(GamesDataModel._allChallengeInvite[<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.id.Hex()],&#32;LocalDataModel.CurrentAccount.Address);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00394"/>00394 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gameHasEnded&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00396"/>00396 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(localGameData&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ac2b5890d8918815b656c55ccf1424e8e">SetDojoData</link>(localGameData);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00399"/>00399 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00400"/>00400 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00401"/>00401 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00402"/>00402 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00403"/>00403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">HardSetBattleState</link>(<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00404"/>00404 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dojoData&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00405"/>00405 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00406"/>00406 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00407"/>00407 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Animation</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00408"/>00408 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00409"/>00409 &#32;&#32;&#32;&#32;<emphasis role="comment">//all&#32;go</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00410"/>00410 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;PlayStartOfBattleAnimation()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00411"/>00411 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.moveLocalX(m_PlayerBlobTransform.gameObject,&#32;m_PlayerBlobStartPos.x,&#32;0.6f)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseOutCubic();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00414"/>00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.moveLocalX(m_EnemyBlobTransform.gameObject,&#32;m_EnemyBlobStartPos.x,&#32;0.6f)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00415"/>00415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseOutCubic();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.moveLocalX(m_PlayerStatsTransform.gameObject,&#32;m_PlayerStatsStartPos.x,&#32;0.6f)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseOutCubic()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00418"/>00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setDelay(0.3f);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.moveLocalX(m_EnemyStatsTransform.gameObject,&#32;m_EnemyStatsStartPos.x,&#32;0.6f)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00420"/>00420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseOutCubic()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00421"/>00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setDelay(0.3f);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.IsDesktopUi())
+<anchor xml:id="__battle_page_controller_8cs_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00424"/>00424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.moveLocalY(m_ChoiceSelection.gameObject,&#32;m_ChoiceSelectionStartPos.y,&#32;0.6f)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00425"/>00425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseOutCubic()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setDelay(0.6f);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00427"/>00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00428"/>00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.moveLocalX(m_ChoiceSelection.gameObject,&#32;m_ChoiceSelectionStartPos.x,&#32;0.6f)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseOutCubic()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00432"/>00432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setDelay(0.6f);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00433"/>00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00434"/>00434 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00435"/>00435 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00436"/>00436 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ResetBloberts()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00437"/>00437 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00438"/>00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Resetting&#32;positions</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00440"/>00440 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTraitAnimationComponents[0].transform.localPosition&#32;=&#32;m_PlayerBlobStartPos;</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00441"/>00441 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTraitAnimationComponents[1].transform.localPosition&#32;=&#32;m_EnemyBlobStartPos;</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00442"/>00442 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00443"/>00443 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Resetting&#32;transparency</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00445"/>00445 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00446"/>00446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;blobert&#32;<emphasis role="keywordflow">in</emphasis>&#32;<link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00447"/>00447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00448"/>00448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;images&#32;=&#32;blobert.gameObject.GetComponentsInChildren&lt;Image&gt;();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;image&#32;<emphasis role="keywordflow">in</emphasis>&#32;images)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;image.color&#32;=&#32;Color.white;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00454"/>00454 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00455"/>00455 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00459"/>00459 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetUpCombatantsAnimation()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00460"/>00460 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00461"/>00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isDesktop&#32;=&#32;LocalDataModel.IsDesktopUi();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00462"/>00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;halfWindowWidth&#32;=&#32;isDesktop&#32;?&#32;960&#32;:&#32;300;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00463"/>00463 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00464"/>00464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerBlobTransform&#32;=&#32;<link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link>[0].gameObject.GetComponent&lt;RectTransform&gt;();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00465"/>00465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerStatsTransform&#32;=&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].gameObject.GetComponent&lt;RectTransform&gt;();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00466"/>00466 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00467"/>00467 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyBlobTransform&#32;=&#32;<link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link>[1].gameObject.GetComponent&lt;RectTransform&gt;();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00468"/>00468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyStatsTransform&#32;=&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].gameObject.GetComponent&lt;RectTransform&gt;();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00469"/>00469 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00470"/>00470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;playerPosDelta&#32;=&#32;-halfWindowWidth&#32;-&#32;m_PlayerBlobTransform.localPosition.x&#32;-&#32;m_PlayerBlobTransform.rect.width;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00471"/>00471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;enemyPosDelta&#32;=&#32;halfWindowWidth&#32;-&#32;m_EnemyBlobTransform.localPosition.x&#32;+&#32;m_EnemyBlobTransform.rect.width;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00472"/>00472 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00473"/>00473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;choiceSelDelta&#32;=&#32;isDesktop&#32;?&#32;m_ChoiceSelectionStartPos.y&#32;-&#32;360.0f&#32;:&#32;m_ChoiceSelectionStartPos.x&#32;-&#32;600.0f;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00474"/>00474 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00475"/>00475 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerBlobTransform.localPosition&#32;+=&#32;m_PlayerBlobTransform.right&#32;*&#32;playerPosDelta;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00476"/>00476 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerStatsTransform.localPosition&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3(
+<anchor xml:id="__battle_page_controller_8cs_source_1l00477"/>00477 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerBlobTransform.localPosition.x,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00478"/>00478 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerStatsTransform.localPosition.y,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00479"/>00479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerStatsTransform.localPosition.z);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00480"/>00480 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00481"/>00481 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyBlobTransform.localPosition&#32;+=&#32;m_EnemyBlobTransform.right&#32;*&#32;enemyPosDelta;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00482"/>00482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyStatsTransform.localPosition&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3(
+<anchor xml:id="__battle_page_controller_8cs_source_1l00483"/>00483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyBlobTransform.localPosition.x,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00484"/>00484 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyStatsTransform.localPosition.y,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyStatsTransform.localPosition.z);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00486"/>00486 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00487"/>00487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_ChoiceSelection.localPosition&#32;+=&#32;(isDesktop&#32;?&#32;m_ChoiceSelection.up&#32;:&#32;m_ChoiceSelection.right)&#32;*&#32;choiceSelDelta;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00488"/>00488 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00489"/>00489 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00490"/><link linkend="_class_battle_page_controller_1a634b7a86a2182c86a19c0fe577a30cad">00490</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a634b7a86a2182c86a19c0fe577a30cad">ToggleBattleUi</link>(<emphasis role="keywordtype">bool</emphasis>&#32;toggle)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00491"/>00491 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00492"/>00492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_BattleUi.gameObject.SetActive(toggle);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00493"/>00493 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00494"/>00494 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00495"/>00495 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetInitialPositionsAnimation()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00496"/>00496 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00497"/>00497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerBlobStartPos&#32;=&#32;<link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link>[0].transform.localPosition;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00498"/>00498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PlayerStatsStartPos&#32;=&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].transform.localPosition;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00499"/>00499 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00500"/>00500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyBlobStartPos&#32;=&#32;<link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link>[1].transform.localPosition;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00501"/>00501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_EnemyStatsStartPos&#32;=&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].transform.localPosition;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00502"/>00502 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00503"/>00503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_ChoiceSelectionStartPos&#32;=&#32;m_ChoiceSelection.transform.localPosition;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00504"/>00504 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00505"/>00505 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00506"/>00506 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Animation</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00507"/>00507 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00508"/>00508 &#32;&#32;&#32;&#32;<emphasis role="comment">//the&#32;goal&#32;is&#32;to&#32;wait&#32;ofr&#32;the&#32;combats&#32;state&#32;to&#32;show&#32;thats&#32;when&#32;i&#32;can&#32;do&#32;the&#32;end,&#32;right&#32;now&#32;we&#32;are&#32;setting&#32;the&#32;end&#32;battle&#32;by&#32;hard&#32;setting&#32;it&#32;which&#32;is&#32;skipping&#32;the&#32;end&#32;combat,&#32;so&#32;what&#32;if&#32;we&#32;cache&#32;the&#32;next&#32;state</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00509"/>00509 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;what&#32;we&#32;can&#32;do&#32;ins&#32;if&#32;we&#32;are&#32;oin&#32;the&#32;outcome&#32;states&#32;we&#32;are&#32;not&#32;allowed&#32;to&#32;go&#32;into&#32;the&#32;new&#32;state</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00510"/>00510 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00514"/>00514 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;Task&#32;InitialLoadOfData()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00515"/>00515 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00516"/>00516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ResetData();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00517"/>00517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_combatId&#32;=&#32;ChoosenGameId;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00518"/>00518 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00519"/>00519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a634b7a86a2182c86a19c0fe577a30cad">ToggleBattleUi</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00520"/>00520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ResetBloberts();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00521"/>00521 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00522"/>00522 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;gameData&#32;=&#32;await&#32;GamesDataModel.GetCurrentGameData(_combatId);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00523"/>00523 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>&#32;=&#32;gameData.combatState;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00524"/>00524 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatState.OnUpdateCombatState&#32;+=&#32;ListenerForCombatState;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00525"/>00525 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;this&#32;is&#32;the&#32;combat&#32;state&#32;&quot;</emphasis>&#32;+&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00526"/>00526 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544">RoundNumber</link>&#32;=&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00527"/>00527 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00528"/>00528 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//UI&#32;loading</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00529"/>00529 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;UiLoading(gameData);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00530"/>00530 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00531"/>00531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a5cbe4f8c72d7e1898c187a75daad3f30">AttacksLoaded</link>&#32;=&#32;await&#32;CombatantDataModel.LoadStateOfAttacksForCombatant(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00532"/>00532 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00533"/>00533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab209234c101f1c3f7a52f323f579d422">SetPlannedAttacks</link>();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00534"/>00534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetCommitments();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00535"/>00535 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00536"/>00536 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">HardSetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00537"/>00537 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00538"/>00538 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b">BattlePageDataSection</link>.InitializeComponent();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00539"/>00539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1aff0f37cdf90816dfe0b5707bb5cdddea">BattlePageFullLengthComponent</link>.InitializeComponent();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00540"/>00540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1a7016ed97d96ad361952081294f2845a0">InitializeComponet</link>();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00541"/>00541 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00542"/>00542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00543"/>00543 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00544"/>00544 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ResetData()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00545"/>00545 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00546"/>00546 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00547"/>00547 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00548"/>00548 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00549"/>00549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00550"/>00550 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00551"/>00551 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00552"/>00552 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00553"/>00553 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00554"/>00554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00555"/>00555 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00556"/>00556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;async&#32;Task&#32;UiLoading(GamesDataModel.QueryCompiledData&#32;gameData)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00557"/>00557 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00558"/>00558 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;combatantData&#32;=&#32;await&#32;GamesDataModel.GetSelfAndEnemyCombatant(gameData,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00559"/>00559 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]&#32;=&#32;combatantData.self;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00560"/>00560 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]&#32;=&#32;combatantData.enemy;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00561"/>00561 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00562"/>00562 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].<link linkend="_class_battle_page_card_stats_component_1a70ce8fe851f5dea7d67ffc0debe0a778">InitializeComponent</link>(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00563"/>00563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobSelf&#32;=&#32;(ArcadeBlobert)<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].BlobData;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00564"/>00564 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00565"/>00565 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(blobSelf.GetNftType()&#32;==&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.AMMABlobs)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00566"/>00566 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>().<link linkend="_class_character_animation_manager_1a2f29ca8a16c04ce2e5da159e4d9127c0">InitializeComponent</link>(<emphasis role="keyword">new</emphasis>&#32;List&lt;CharacterAnimationManager.TextureFunctionInput&gt;()&#32;{&#32;<link linkend="_class_amma_animation_controller">AmmaAnimationController</link>.<link linkend="_class_amma_animation_controller_1ac46bf878ba0436c64bd96df5ccc14269">GetTextureFunctionInput</link>(<link linkend="_class_a_m_m_a_blobert">AMMABlobert</link>.<link linkend="_class_a_m_m_a_blobert_1a54ed22adbc91fed044712d858cd9c32a">GetFighterIdFromCustomValue</link>(blobSelf.GetInstance&lt;ArcadeBlobert&gt;().custom_id),&#32;<link linkend="_class_amma_animation_controller">AmmaAnimationController</link>.<link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AMMAAnimationState</link>.IdleB)&#32;},&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.AMMABlobs);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00567"/>00567 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00568"/>00568 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>().<link linkend="_class_character_animation_manager_1a2f29ca8a16c04ce2e5da159e4d9127c0">InitializeComponent</link>(BlobertAnimationController.GetTextureFunctionInput(blobSelf.GetTokenTrait(),&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertAnimationController.AnimationDataTraitBlobert(BlobertAnimationController.AnimationDirection.Back,&#32;BlobertAnimationController.AnimationFace.Left,&#32;BlobertAnimationController.AnimationState.Idle1,&#32;BlobertAnimationController.BehaviourState.Default)),&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.ArcadeBlobs);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00569"/>00569 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00570"/>00570 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[0].<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>().<link linkend="_class_character_animation_manager_1a0287f2fa1b12da154b7452ebf37d47a0">PauseAnimation</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00571"/>00571 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00573"/>00573 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00574"/>00574 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].<link linkend="_class_battle_page_card_stats_component_1a70ce8fe851f5dea7d67ffc0debe0a778">InitializeComponent</link>(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00575"/>00575 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobEnemy&#32;=&#32;(ArcadeBlobert)<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].BlobData;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00576"/>00576 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00577"/>00577 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(blobEnemy.GetNftType()&#32;==&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.AMMABlobs)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00578"/>00578 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>().<link linkend="_class_character_animation_manager_1a2f29ca8a16c04ce2e5da159e4d9127c0">InitializeComponent</link>(<emphasis role="keyword">new</emphasis>&#32;List&lt;CharacterAnimationManager.TextureFunctionInput&gt;()&#32;{&#32;<link linkend="_class_amma_animation_controller">AmmaAnimationController</link>.<link linkend="_class_amma_animation_controller_1ac46bf878ba0436c64bd96df5ccc14269">GetTextureFunctionInput</link>(<link linkend="_class_a_m_m_a_blobert">AMMABlobert</link>.<link linkend="_class_a_m_m_a_blobert_1a54ed22adbc91fed044712d858cd9c32a">GetFighterIdFromCustomValue</link>(blobEnemy.GetInstance&lt;ArcadeBlobert&gt;().custom_id),&#32;<link linkend="_class_amma_animation_controller">AmmaAnimationController</link>.<link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AMMAAnimationState</link>.IdleFL)&#32;},&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.AMMABlobs);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00579"/>00579 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00580"/>00580 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>().<link linkend="_class_character_animation_manager_1a2f29ca8a16c04ce2e5da159e4d9127c0">InitializeComponent</link>(BlobertAnimationController.GetTextureFunctionInput(blobEnemy.GetTokenTrait(),&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertAnimationController.AnimationDataTraitBlobert(BlobertAnimationController.AnimationDirection.Front,&#32;BlobertAnimationController.AnimationFace.Left,&#32;BlobertAnimationController.AnimationState.Idle1,&#32;BlobertAnimationController.BehaviourState.Default)),&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.ArcadeBlobs);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00581"/>00581 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00582"/>00582 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link>[1].<link linkend="_class_battle_page_card_stats_component_1a2cb9c16750b08f4188a8db149bcef152">GetTraitVisualizer</link>().<link linkend="_class_character_animation_manager_1a0287f2fa1b12da154b7452ebf37d47a0">PauseAnimation</link>(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00583"/>00583 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00584"/>00584 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//BlobDexComponents[0].LoadCombatant(CombatantIds[0]);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00585"/>00585 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//BlobDexComponents[1].LoadCombatant(CombatantIds[1]);</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00586"/>00586 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00587"/>00587 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b">BattlePageDataSection</link>.InitializeComponent();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00588"/>00588 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00589"/>00589 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00590"/>00590 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00595"/><link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">00595</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>&#32;<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00596"/>00596 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00597"/>00597 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;currentStatus&#32;=&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00598"/>00598 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00599"/>00599 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.phase&#32;is&#32;Phase.Ended)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00600"/>00600 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00601"/>00601 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.EndOfBattle;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00602"/>00602 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00603"/>00603 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00604"/>00604 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;commitmentState&#32;=&#32;CombatantDataModel.BitsToWaitState(CombatantDataModel.GetCommitmentState(<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0],&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00605"/>00605 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;plannedAttacksState&#32;=&#32;CombatantDataModel.BitsToWaitState(CombatantDataModel.GetPlannedAttackState(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0],&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00606"/>00606 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00607"/>00607 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(commitmentState&#32;==&#32;CombatantDataModel.WaitState.BothDone)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00608"/>00608 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00609"/>00609 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(plannedAttacksState&#32;==&#32;CombatantDataModel.WaitState.BothDone)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00610"/>00610 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00611"/>00611 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RunRoundCallWait;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00612"/>00612 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00613"/>00613 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isOwner)&#32;&#32;<emphasis role="comment">//if&#32;i&#32;am&#32;the&#32;owner&#32;i&#32;want&#32;to&#32;wait&#32;until&#32;the&#32;other&#32;guy&#32;as&#32;done&#32;something</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00614"/>00614 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00615"/>00615 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(plannedAttacksState&#32;is&#32;CombatantDataModel.WaitState.EnemyWaiting)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00616"/>00616 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00617"/>00617 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RevealAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00618"/>00618 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00619"/>00619 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00620"/>00620 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(plannedAttacksState&#32;is&#32;CombatantDataModel.WaitState.BothNothing&#32;or&#32;CombatantDataModel.WaitState.SelfWaiting)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00621"/>00621 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00622"/>00622 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.WaitingForEnemyToReveal;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00623"/>00623 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00624"/>00624 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00625"/>00625 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00626"/>00626 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00627"/>00627 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(plannedAttacksState&#32;is&#32;CombatantDataModel.WaitState.EnemyWaiting&#32;or&#32;CombatantDataModel.WaitState.BothNothing)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00628"/>00628 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00629"/>00629 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.RevealAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00630"/>00630 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00631"/>00631 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00632"/>00632 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(plannedAttacksState&#32;is&#32;CombatantDataModel.WaitState.SelfWaiting)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00633"/>00633 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00634"/>00634 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.WaitingForEnemyToReveal;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00635"/>00635 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00636"/>00636 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00637"/>00637 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00638"/>00638 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00639"/>00639 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(commitmentState&#32;==&#32;CombatantDataModel.WaitState.SelfWaiting)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00640"/>00640 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00641"/>00641 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.WaitingForEnemyToCommit;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00642"/>00642 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00643"/>00643 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00644"/>00644 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(commitmentState&#32;is&#32;CombatantDataModel.WaitState.BothNothing&#32;or&#32;CombatantDataModel.WaitState.EnemyWaiting)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00645"/>00645 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00646"/>00646 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>.CommitAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00647"/>00647 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00648"/>00648 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00649"/>00649 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;this&#32;is&#32;at&#32;the&#32;end&#32;of&#32;the&#32;evaluating&#32;chain&#32;&quot;</emphasis>&#32;+&#32;currentStatus);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00650"/>00650 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;currentStatus;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00651"/>00651 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00652"/>00652 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00653"/>00653 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Utils</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00654"/>00654 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00659"/><link linkend="_class_battle_page_controller_1a67e2cd0fe1c646eae908ddf93a739691">00659</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">EndOfBattle.Outcomes</link>&#32;<link linkend="_class_battle_page_controller_1a67e2cd0fe1c646eae908ddf93a739691">GetBattleOutcome</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00660"/>00660 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00661"/>00661 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.phase&#32;is&#32;Phase.Ended&#32;ended)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00662"/>00662 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00663"/>00663 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(ended.value.Hex()&#32;==&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0].Hex())&#32;?&#32;EndOfBattle.Outcomes.PlayerWon&#32;:&#32;<link linkend="_class_end_of_battle">EndOfBattle</link>.<link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">Outcomes</link>.PlayerLost;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00664"/>00664 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00665"/>00665 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00666"/>00666 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_end_of_battle">EndOfBattle</link>.<link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">Outcomes</link>.None;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00667"/>00667 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00668"/>00668 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00669"/>00669 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Utils</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00670"/>00670 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00671"/>00671 &#32;&#32;&#32;&#32;<emphasis role="comment">//everything&#32;below&#32;here&#32;can&#32;be&#32;ignored</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00672"/>00672 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00673"/>00673 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Chain&#32;calls</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00674"/>00674 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00675"/><link linkend="_class_battle_page_controller_1a9e39cd4507d21b9bff16ff4ca24405f3">00675</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_controller_1a9e39cd4507d21b9bff16ff4ca24405f3">CallToAttacks</link>(Attack&#32;attack,&#32;<emphasis role="keywordtype">int</emphasis>&#32;index)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00676"/>00676 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00677"/>00677 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_dojoData&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00678"/>00678 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="comment">//wtf</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00679"/>00679 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_dojoData.roundNum&#32;==&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round.ToString())
+<anchor xml:id="__battle_page_controller_8cs_source_1l00680"/>00680 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00681"/>00681 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;There&#32;is&#32;currently&#32;a&#32;dojo&#32;data&#32;loaded;&#32;this&#32;means&#32;the&#32;transaction&#32;is&#32;still&#32;going,&#32;and&#32;committing&#32;something&#32;else&#32;is&#32;locked.&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00682"/>00682 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00683"/>00683 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00684"/>00684 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00685"/>00685 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00686"/>00686 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00687"/>00687 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;hash&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;attack.id,&#32;_salts[index]&#32;});
+<anchor xml:id="__battle_page_controller_8cs_source_1l00688"/>00688 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00689"/>00689 &#32;&#32;&#32;&#32;var&#32;hash&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[2]&#32;{&#32;attack.id.Hex(),&#32;_salts[index].Hex()&#32;}));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00690"/>00690 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00691"/>00691 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00692"/>00692 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00693"/>00693 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00694"/>00694 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;attackStruct&#32;=&#32;PvpActionsContract.CommitAttack(
+<anchor xml:id="__battle_page_controller_8cs_source_1l00695"/>00695 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],
+<anchor xml:id="__battle_page_controller_8cs_source_1l00696"/>00696 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hash,
+<anchor xml:id="__battle_page_controller_8cs_source_1l00697"/>00697 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoEntitiesStorage.worldManagerData.pvpActions
+<anchor xml:id="__battle_page_controller_8cs_source_1l00698"/>00698 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00699"/>00699 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00700"/>00700 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(attackStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00701"/>00701 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00702"/>00702 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionC&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00703"/>00703 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00704"/>00704 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;newData&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;DojoData();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00705"/>00705 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newData.randomSalt&#32;=&#32;_salts[index].Hex();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00706"/>00706 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newData.committedHash&#32;=&#32;hash.Hex();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00707"/>00707 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newData.lastAttack&#32;=&#32;attack.id.Hex();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00708"/>00708 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newData.gameId&#32;=&#32;ChoosenGameId.Hex();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00709"/>00709 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newData.roundNum&#32;=&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round.ToString();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00710"/>00710 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00711"/>00711 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1ac2b5890d8918815b656c55ccf1424e8e">SetDojoData</link>(newData);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00712"/>00712 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SaveGameData(newData);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00713"/>00713 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;this&#32;is&#32;setting&#32;the&#32;round&#32;numbder&#32;in&#32;the&#32;transaction&#32;calls&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00714"/>00714 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544">RoundNumber</link>&#32;=&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00715"/>00715 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00716"/>00716 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">true</emphasis>,&#32;$<emphasis role="stringliteral">&quot;YOU&#32;WILL&#32;USE&#32;{WorldDataModel.AllAttacksDict[_dojoData.lastAttack].dojoName.ToUpper()}&#32;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00717"/>00717 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00718"/>00718 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(Exception&#32;ex)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00719"/>00719 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00720"/>00720 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;An&#32;error&#32;occurred:&#32;{ex.Message}&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00721"/>00721 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00722"/>00722 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00723"/>00723 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00724"/>00724 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00725"/>00725 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00726"/><link linkend="_class_battle_page_controller_1a927653e16828428b2d77d992acf04a07">00726</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a927653e16828428b2d77d992acf04a07">OnChainTransactionCallbackFunctionC</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00727"/>00727 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00728"/>00728 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(transactionHash&#32;is&#32;<emphasis role="stringliteral">&quot;User&#32;abort&quot;</emphasis>&#32;or&#32;<emphasis role="stringliteral">&quot;Execute&#32;failed&quot;</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00729"/>00729 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00730"/>00730 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;you&#32;aborted&#32;therefore&#32;i&#32;delete&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00731"/>00731 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00732"/>00732 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dojoData&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00733"/>00733 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00734"/>00734 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;unlock</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00735"/>00735 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00736"/>00736 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00737"/>00737 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;you&#32;accepted&#32;therefore&#32;i&#32;lock&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00738"/>00738 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00739"/>00739 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">true</emphasis>,&#32;$<emphasis role="stringliteral">&quot;YOU&#32;WILL&#32;USE&#32;{WorldDataModel.AllAttacksDict[_dojoData.lastAttack].dojoName.ToUpper()}&#32;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00740"/>00740 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00741"/>00741 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;<link linkend="_class_ui_reference_manager">UiReferenceManager</link>.<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>.<link linkend="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142">gameManager</link>.<link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">provider</link>.WaitForTransaction(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(transactionHash));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00742"/>00742 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00743"/>00743 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//unlock</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00744"/>00744 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00745"/>00745 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00746"/>00746 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00747"/><link linkend="_class_battle_page_controller_1aac4dc02c21e8ac30c9fbe1926181d7a9">00747</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_controller_1aac4dc02c21e8ac30c9fbe1926181d7a9">CallToReveal</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00748"/>00748 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00749"/>00749 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00750"/>00750 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00751"/>00751 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">true</emphasis>,&#32;<emphasis role="stringliteral">&quot;EXECUTING&#32;YOUR&#32;MOVE&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00752"/>00752 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00753"/>00753 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_dojoData&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00754"/>00754 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00755"/>00755 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;There&#32;is&#32;no&#32;data&#32;to&#32;reveal&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00756"/>00756 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00757"/>00757 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00758"/>00758 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00759"/>00759 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;revealStruct&#32;=&#32;PvpActionsContract.RevealAttack(
+<anchor xml:id="__battle_page_controller_8cs_source_1l00760"/>00760 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],
+<anchor xml:id="__battle_page_controller_8cs_source_1l00761"/>00761 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(_dojoData.lastAttack),
+<anchor xml:id="__battle_page_controller_8cs_source_1l00762"/>00762 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(_dojoData.randomSalt),
+<anchor xml:id="__battle_page_controller_8cs_source_1l00763"/>00763 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoEntitiesStorage.worldManagerData.pvpActions
+<anchor xml:id="__battle_page_controller_8cs_source_1l00764"/>00764 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00765"/>00765 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00766"/>00766 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(revealStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00767"/>00767 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00768"/>00768 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;gameState&#32;=&#32;CombatantDataModel.BitsToWaitState(CombatantDataModel.GetPlannedAttackState(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0],&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00769"/>00769 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00770"/>00770 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gameState&#32;==&#32;CombatantDataModel.WaitState.EnemyWaiting)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00771"/>00771 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00772"/>00772 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(PvpActionsContract.RunRound(_combatId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00773"/>00773 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00774"/>00774 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00775"/>00775 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionR&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00776"/>00776 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00777"/>00777 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;this&#32;is&#32;setting&#32;the&#32;round&#32;numbder&#32;in&#32;the&#32;reveal&#32;transaction&#32;calls&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00778"/>00778 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544">RoundNumber</link>&#32;=&#32;<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>.round;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00779"/>00779 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00780"/>00780 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(Exception&#32;e)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00781"/>00781 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00782"/>00782 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00783"/>00783 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(e);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00784"/>00784 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00785"/>00785 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00786"/>00786 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00787"/><link linkend="_class_battle_page_controller_1a48e545c71a56135c796cf8d981e0ef1e">00787</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a48e545c71a56135c796cf8d981e0ef1e">OnChainTransactionCallbackFunctionR</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00788"/>00788 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00789"/>00789 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(transactionHash&#32;is&#32;<emphasis role="stringliteral">&quot;User&#32;abort&quot;</emphasis>&#32;or&#32;<emphasis role="stringliteral">&quot;Execute&#32;failed&quot;</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00790"/>00790 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00791"/>00791 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;you&#32;aborted&#32;therefore&#32;i&#32;delete&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00792"/>00792 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00793"/>00793 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00794"/>00794 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;unlock</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00795"/>00795 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00796"/>00796 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00797"/>00797 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;you&#32;accepted&#32;therefore&#32;i&#32;lock&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00798"/>00798 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00799"/>00799 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//lock</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00800"/>00800 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">true</emphasis>,&#32;<emphasis role="stringliteral">&quot;BRACE&#32;YOURSELVES&#32;FOR&#32;THE&#32;IMPACT!&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00801"/>00801 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00802"/>00802 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;await&#32;<link linkend="_class_ui_reference_manager">UiReferenceManager</link>.<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>.<link linkend="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142">gameManager</link>.<link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">provider</link>.WaitForTransaction(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(transactionHash));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00803"/>00803 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00804"/>00804 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//unlock</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00805"/>00805 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link>.<link linkend="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8">OnWaitingForTransaction</link>(<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00806"/>00806 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00807"/>00807 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00808"/><link linkend="_class_battle_page_controller_1a2f89544974bf48366cbed57407fa134a">00808</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a2f89544974bf48366cbed57407fa134a">NonAsyncCallToForfeit</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00809"/>00809 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00810"/>00810 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a6335c3ce029649e704532a59f5a7041e">CallToForfeit</link>();
+<anchor xml:id="__battle_page_controller_8cs_source_1l00811"/>00811 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00812"/>00812 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00813"/><link linkend="_class_battle_page_controller_1a6335c3ce029649e704532a59f5a7041e">00813</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_controller_1a6335c3ce029649e704532a59f5a7041e">CallToForfeit</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00814"/>00814 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00815"/>00815 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;forfeitStruct&#32;=&#32;PvpActionsContract.Forfeit(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00816"/>00816 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00817"/>00817 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(forfeitStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00818"/>00818 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00819"/>00819 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionF&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00820"/>00820 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00821"/>00821 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00822"/><link linkend="_class_battle_page_controller_1a754efdd89affd78e6f62edaa9a4e05db">00822</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a754efdd89affd78e6f62edaa9a4e05db">OnChainTransactionCallbackFunctionF</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00823"/>00823 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00824"/>00824 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00825"/>00825 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00826"/><link linkend="_class_battle_page_controller_1af820e9918e5f2b984377aa4d82b24362">00826</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_controller_1af820e9918e5f2b984377aa4d82b24362">CallToRunRound</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00827"/>00827 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00828"/>00828 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;runRoundStruct&#32;=&#32;PvpActionsContract.RunRound(_combatId,&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00829"/>00829 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00830"/>00830 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(runRoundStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00831"/>00831 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00832"/>00832 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionRR&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00833"/>00833 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00834"/>00834 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00835"/><link linkend="_class_battle_page_controller_1a4d0eb0c8b966e2f66cf4a28d719792c6">00835</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a4d0eb0c8b966e2f66cf4a28d719792c6">OnChainTransactionCallbackFunctionRR</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00836"/>00836 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00837"/>00837 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;callback&#32;as&#32;needed</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00838"/>00838 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00839"/>00839 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00840"/><link linkend="_class_battle_page_controller_1a628a44895750ab5049c886d2bdeb8b54">00840</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_battle_page_controller_1a628a44895750ab5049c886d2bdeb8b54">CallToKick</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00841"/>00841 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00842"/>00842 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;kickStruct&#32;=&#32;PvpActionsContract.KickInactivePlayer(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0],&#32;DojoEntitiesStorage.worldManagerData.pvpActions);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00843"/>00843 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00844"/>00844 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(kickStruct,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00845"/>00845 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00846"/>00846 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainTransactionCallbackFunctionK&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__battle_page_controller_8cs_source_1l00847"/>00847 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00848"/>00848 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00849"/><link linkend="_class_battle_page_controller_1a4f743b53321b925fb0c5a6579428226e">00849</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1a4f743b53321b925fb0c5a6579428226e">OnChainTransactionCallbackFunctionK</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00850"/>00850 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00851"/>00851 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;callback&#32;as&#32;needed</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00852"/>00852 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00853"/>00853 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00854"/>00854 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Chain&#32;calls</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00855"/>00855 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00856"/>00856 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Ignore&#32;this</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00857"/>00857 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00858"/>00858 &#32;&#32;&#32;&#32;<emphasis role="comment">//I&#32;would&#32;completely&#32;ignore&#32;this,&#32;unfortunately&#32;there&#32;is&#32;an&#32;issue&#32;with&#32;the&#32;SDK&#32;querys&#32;and&#32;i&#32;had&#32;to&#32;do&#32;a&#32;bit&#32;of&#32;a&#32;workaround&#32;for&#32;some&#32;stuff</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00859"/>00859 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;this&#32;will&#32;be&#32;deleted&#32;in&#32;the&#32;future</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00860"/>00860 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00861"/>00861 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ListenerForCombatState(<link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link>&#32;combatState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00862"/>00862 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00863"/>00863 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this.CombatState&#32;!=&#32;combatState)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00864"/>00864 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00865"/>00865 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00866"/>00866 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00867"/>00867 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00868"/>00868 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00869"/>00869 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00870"/>00870 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ListenerForCommitment(<link linkend="_class_commitment">Commitment</link>&#32;commitment)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00871"/>00871 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00872"/>00872 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00873"/>00873 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(new&#32;FieldElement[]&#32;{&#32;CombatantIds[0]&#32;});</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00874"/>00874 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00875"/>00875 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;new&#32;FieldElement(JavaScriptUtils.PoseidonHashHelper(new&#32;string[1]&#32;{&#32;CombatantIds[0].Hex()&#32;}));</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00876"/>00876 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00877"/>00877 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00878"/>00878 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00879"/>00879 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(new&#32;FieldElement[]&#32;{&#32;CombatantIds[1]&#32;});</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00880"/>00880 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00881"/>00881 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;new&#32;FieldElement(JavaScriptUtils.PoseidonHashHelper(new&#32;string[1]&#32;{&#32;CombatantIds[1].Hex()&#32;}));</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00882"/>00882 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00883"/>00883 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00884"/>00884 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00885"/>00885 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00886"/>00886 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00887"/>00887 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ListenerForPlannedAttacks(<link linkend="_class_planned_attack">PlannedAttack</link>&#32;plannedAttack)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00888"/>00888 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00889"/>00889 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]&#32;!=&#32;plannedAttack.<link linkend="_class_planned_attack_1aa6327ebd2aa6458ec0205b9a91fc5de1">id</link>&#32;&amp;&amp;&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]&#32;!=&#32;plannedAttack.<link linkend="_class_planned_attack_1aa6327ebd2aa6458ec0205b9a91fc5de1">id</link>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00890"/>00890 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00891"/>00891 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00892"/>00892 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00893"/>00893 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00894"/>00894 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00895"/>00895 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00896"/>00896 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetCommitments()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00897"/>00897 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00898"/>00898 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00899"/>00899 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]&#32;});
+<anchor xml:id="__battle_page_controller_8cs_source_1l00900"/>00900 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00901"/>00901 &#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[1]&#32;{&#32;CombatantIds[0].Hex()&#32;}));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00902"/>00902 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00903"/>00903 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00904"/>00904 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00905"/>00905 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]&#32;});
+<anchor xml:id="__battle_page_controller_8cs_source_1l00906"/>00906 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00907"/>00907 &#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[1]&#32;{&#32;CombatantIds[1].Hex()&#32;}));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00908"/>00908 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00909"/>00909 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00910"/>00910 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CombatantDataModel.combatantHashedToCommitmentMap.TryGetValue(selfCombatantIdPH.Hex(),&#32;out&#32;var&#32;selfCommitment))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00911"/>00911 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00912"/>00912 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;=&#32;selfCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00913"/>00913 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0].<link linkend="_class_commitment_1a18b4e53d6b1a953d96526e5f9dbcb970">OnUpdateCommitment</link>&#32;+=&#32;ListenerForCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00914"/>00914 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00915"/>00915 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00916"/>00916 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00917"/>00917 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00918"/>00918 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00919"/>00919 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00920"/>00920 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CombatantDataModel.combatantHashedToCommitmentMap.TryGetValue(enemyCombatantIdPH.Hex(),&#32;out&#32;var&#32;enemyCommitment))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00921"/>00921 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00922"/>00922 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;=&#32;enemyCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00923"/>00923 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1].<link linkend="_class_commitment_1a18b4e53d6b1a953d96526e5f9dbcb970">OnUpdateCommitment</link>&#32;+=&#32;ListenerForCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00924"/>00924 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00925"/>00925 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00926"/>00926 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00927"/>00927 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00928"/>00928 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00929"/>00929 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00930"/>00930 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;==&#32;<emphasis role="keyword">null</emphasis>&#32;||&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00931"/>00931 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00932"/>00932 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatantDataModel.OnCommitmentAdded&#32;+=&#32;WaitForCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00933"/>00933 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00934"/>00934 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00935"/>00935 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00936"/>00936 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;WaitForCommitment(<emphasis role="keywordtype">string</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>,&#32;<link linkend="_class_commitment">Commitment</link>&#32;commitment)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00937"/>00937 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00938"/>00938 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00939"/>00939 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0]&#32;});
+<anchor xml:id="__battle_page_controller_8cs_source_1l00940"/>00940 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00941"/>00941 &#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[1]&#32;{&#32;CombatantIds[0].Hex()&#32;}));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00942"/>00942 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00943"/>00943 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00944"/>00944 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00945"/>00945 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1]&#32;});
+<anchor xml:id="__battle_page_controller_8cs_source_1l00946"/>00946 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00947"/>00947 &#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[1]&#32;{&#32;CombatantIds[1].Hex()&#32;}));
+<anchor xml:id="__battle_page_controller_8cs_source_1l00948"/>00948 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00949"/>00949 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00950"/>00950 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>&#32;==&#32;selfCombatantIdPH.Hex())
+<anchor xml:id="__battle_page_controller_8cs_source_1l00951"/>00951 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00952"/>00952 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;=&#32;commitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00953"/>00953 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0].<link linkend="_class_commitment_1a18b4e53d6b1a953d96526e5f9dbcb970">OnUpdateCommitment</link>&#32;+=&#32;ListenerForCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00954"/>00954 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00955"/>00955 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00956"/>00956 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>&#32;==&#32;enemyCombatantIdPH.Hex())
+<anchor xml:id="__battle_page_controller_8cs_source_1l00957"/>00957 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00958"/>00958 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;=&#32;commitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00959"/>00959 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1].<link linkend="_class_commitment_1a18b4e53d6b1a953d96526e5f9dbcb970">OnUpdateCommitment</link>&#32;+=&#32;ListenerForCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00960"/>00960 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l00961"/>00961 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00962"/>00962 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00963"/>00963 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;both&#32;commitments&#32;are&#32;set,&#32;unsubscribe&#32;from&#32;the&#32;event</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00964"/>00964 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[0]&#32;!=&#32;<emphasis role="keyword">null</emphasis>&#32;&amp;&amp;&#32;<link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link>[1]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00965"/>00965 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00966"/>00966 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatantDataModel.OnCommitmentAdded&#32;-=&#32;WaitForCommitment;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00967"/>00967 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00968"/>00968 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00969"/>00969 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00970"/><link linkend="_class_battle_page_controller_1ab209234c101f1c3f7a52f323f579d422">00970</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_battle_page_controller_1ab209234c101f1c3f7a52f323f579d422">SetPlannedAttacks</link>()
+<anchor xml:id="__battle_page_controller_8cs_source_1l00971"/>00971 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00972"/>00972 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_combatant_data_model">CombatantDataModel</link>.combatantToPlannedAttackMap.TryGetValue(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0].Hex(),&#32;out&#32;var&#32;selfPlannedAttack))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00973"/>00973 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00974"/>00974 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;=&#32;selfPlannedAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00975"/>00975 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0].<link linkend="_class_planned_attack_1a481fd618e57881ee95aaa2c5952fe200">OnUpdatePlannedAttack</link>&#32;+=&#32;ListenerForPlannedAttacks;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00976"/>00976 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00977"/>00977 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00978"/>00978 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00979"/>00979 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00980"/>00980 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00981"/>00981 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00982"/>00982 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_combatant_data_model">CombatantDataModel</link>.combatantToPlannedAttackMap.TryGetValue(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1].Hex(),&#32;out&#32;var&#32;enemyPlannedAttack))
+<anchor xml:id="__battle_page_controller_8cs_source_1l00983"/>00983 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00984"/>00984 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;=&#32;enemyPlannedAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00985"/>00985 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1].<link linkend="_class_planned_attack_1a481fd618e57881ee95aaa2c5952fe200">OnUpdatePlannedAttack</link>&#32;+=&#32;ListenerForPlannedAttacks;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00986"/>00986 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00987"/>00987 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l00988"/>00988 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00989"/>00989 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00990"/>00990 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00991"/>00991 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00992"/>00992 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;==&#32;<emphasis role="keyword">null</emphasis>&#32;||&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00993"/>00993 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l00994"/>00994 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatantDataModel.OnPlannedAttackAdded&#32;+=&#32;WaitForPlannedAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l00995"/>00995 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00996"/>00996 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l00997"/>00997 
+<anchor xml:id="__battle_page_controller_8cs_source_1l00998"/>00998 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;WaitForPlannedAttack(<emphasis role="keywordtype">string</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>,&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;plannedAttack)
+<anchor xml:id="__battle_page_controller_8cs_source_1l00999"/>00999 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l01000"/>01000 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;the&#32;id&#32;is&#32;equal&#32;to&#32;any&#32;of&#32;the&#32;combatants</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l01001"/>01001 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[0].Hex()&#32;==&#32;<emphasis role="keywordtype">id</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l01002"/>01002 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l01003"/>01003 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;=&#32;plannedAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l01004"/>01004 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0].<link linkend="_class_planned_attack_1a481fd618e57881ee95aaa2c5952fe200">OnUpdatePlannedAttack</link>&#32;+=&#32;ListenerForPlannedAttacks;
+<anchor xml:id="__battle_page_controller_8cs_source_1l01005"/>01005 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l01006"/>01006 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l01007"/>01007 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link>[1].Hex()&#32;==&#32;<emphasis role="keywordtype">id</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l01008"/>01008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l01009"/>01009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;=&#32;plannedAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l01010"/>01010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1].<link linkend="_class_planned_attack_1a481fd618e57881ee95aaa2c5952fe200">OnUpdatePlannedAttack</link>&#32;+=&#32;ListenerForPlannedAttacks;
+<anchor xml:id="__battle_page_controller_8cs_source_1l01011"/>01011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link>(<link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link>());
+<anchor xml:id="__battle_page_controller_8cs_source_1l01012"/>01012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l01013"/>01013 
+<anchor xml:id="__battle_page_controller_8cs_source_1l01014"/>01014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;both&#32;places&#32;in&#32;the&#32;array&#32;are&#32;full&#32;then&#32;we&#32;can&#32;remove&#32;the&#32;event</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l01015"/>01015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[0]&#32;!=&#32;<emphasis role="keyword">null</emphasis>&#32;&amp;&amp;&#32;<link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link>[1]&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__battle_page_controller_8cs_source_1l01016"/>01016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__battle_page_controller_8cs_source_1l01017"/>01017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CombatantDataModel.OnPlannedAttackAdded&#32;-=&#32;WaitForPlannedAttack;
+<anchor xml:id="__battle_page_controller_8cs_source_1l01018"/>01018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l01019"/>01019 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__battle_page_controller_8cs_source_1l01020"/>01020 
+<anchor xml:id="__battle_page_controller_8cs_source_1l01021"/>01021 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Ignore&#32;this</emphasis>
+<anchor xml:id="__battle_page_controller_8cs_source_1l01022"/>01022 }
+</programlisting></section>

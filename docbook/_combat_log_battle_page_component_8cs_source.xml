@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__combat_log_battle_page_component_8cs_source" xml:lang="en-US">
+<title>CombatLogBattlePageComponent.cs</title>
+<indexterm><primary>UI/Components/BattlePageComponents/CombatLogBattlePageComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00005"/>00005 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00006"/><link linkend="_class_combat_log_battle_page_component">00006</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_combat_log_battle_page_component">CombatLogBattlePageComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;ScrollRect&#32;scrollRect;&#32;<emphasis role="comment">//&#32;The&#32;ScrollView&#32;component</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;logContentParent;&#32;<emphasis role="comment">//&#32;The&#32;parent&#32;transform&#32;where&#32;individual&#32;log&#32;entries&#32;are&#32;added</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;aggregatedLogText;&#32;<emphasis role="comment">//&#32;The&#32;TMP_Text&#32;component&#32;for&#32;aggregated&#32;older&#32;logs</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;logEntryPrefab;&#32;<emphasis role="comment">//&#32;Prefab&#32;for&#32;individual&#32;log&#32;entries</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxIndividualEntries&#32;=&#32;20;&#32;<emphasis role="comment">//&#32;Maximum&#32;number&#32;of&#32;individual&#32;entries&#32;before&#32;aggregation</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00013"/>00013 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;List&lt;string&gt;&#32;individualLogEntries&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;string&gt;();
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;aggregatedLog&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00016"/>00016 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aggregatedLogText.text&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00021"/>00021 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00026"/><link linkend="_class_combat_log_battle_page_component_1ad4d319be83396d5eef379c6845a1c46c">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_combat_log_battle_page_component_1ad4d319be83396d5eef379c6845a1c46c">AddLogEntry</link>(<emphasis role="keywordtype">string</emphasis>&#32;logEntry)
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(individualLogEntries.Count&#32;&gt;=&#32;maxIndividualEntries)
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AggregateLogEntries();
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00032"/>00032 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;individualLogEntries.Add(logEntry);
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00034"/>00034 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GameObject&#32;newLogEntry&#32;=&#32;Instantiate(logEntryPrefab,&#32;logContentParent);
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TMP_Text&#32;logEntryText&#32;=&#32;newLogEntry.GetComponent&lt;TMP_Text&gt;();
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(logEntryText&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;logEntryText.text&#32;=&#32;logEntry;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00041"/>00041 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Automatically&#32;scroll&#32;to&#32;the&#32;bottom&#32;to&#32;show&#32;the&#32;latest&#32;entry</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Canvas.ForceUpdateCanvases();
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scrollRect.verticalNormalizedPosition&#32;=&#32;0;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00046"/>00046 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;AggregateLogEntries()
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<emphasis role="keywordtype">string</emphasis>&#32;entry&#32;<emphasis role="keywordflow">in</emphasis>&#32;individualLogEntries)
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aggregatedLog&#32;+=&#32;entry&#32;+&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aggregatedLogText.text&#32;=&#32;aggregatedLog;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;individualLogEntries.Clear();
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00058"/>00058 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Optionally,&#32;remove&#32;all&#32;individual&#32;log&#32;entry&#32;UI&#32;elements</emphasis>
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Transform&#32;child&#32;<emphasis role="keywordflow">in</emphasis>&#32;logContentParent)
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(child.gameObject);
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00065"/>00065 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00069"/><link linkend="_class_combat_log_battle_page_component_1addb270c5d2a1f375b58ca7539727fb28">00069</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_combat_log_battle_page_component_1addb270c5d2a1f375b58ca7539727fb28">ClearLog</link>()
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;individualLogEntries.Clear();
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aggregatedLog&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aggregatedLogText.text&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00074"/>00074 
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Transform&#32;child&#32;<emphasis role="keywordflow">in</emphasis>&#32;logContentParent)
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(child.gameObject);
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__combat_log_battle_page_component_8cs_source_1l00080"/>00080 }
+</programlisting></section>

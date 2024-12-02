@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__synchro_manager_dojo_8cs_source" xml:lang="en-US">
+<title>SynchroManagerDojo.cs</title>
+<indexterm><primary>LogicLayer/Dojo/Variants/SynchroManagerDojo.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__synchro_manager_dojo_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Torii;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Linq;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Events;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>System.Reflection;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00011"/>00011 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00012"/><link linkend="_namespace_logic_layer">00012</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00013"/>00013 {
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00014"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_logic_layer_1_1_synchro_manager_dojo">SynchroManagerDojo</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00016"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">00016</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_logic_layer_1_1_world_manager_dojo">WorldManagerDojo</link>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00017"/>00017 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Maximum&#32;number&#32;of&#32;entities&#32;to&#32;synchronize</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00019"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a05a7a5946fac494d5e488f481ab66d86">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;uint&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a05a7a5946fac494d5e488f481ab66d86">limit</link>&#32;=&#32;100;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00020"/>00020 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;entities&#32;that&#32;get&#32;synchronized</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;ModelInstance[]&#32;_models;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00023"/>00023 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Returns&#32;all&#32;of&#32;the&#32;model&#32;definitions</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00025"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">00025</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;ModelInstance[]&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>&#32;=&gt;&#32;_models&#32;??=&#32;LoadModels();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00026"/>00026 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00027"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a31ebc4289bdfa652bd05ee6e3e14deb8">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;UnityEvent&lt;List&lt;GameObject&gt;&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a31ebc4289bdfa652bd05ee6e3e14deb8">OnSynchronized</link>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00028"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a2b3e701f2099ff28895d09104f9b068f">00028</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;UnityEvent&lt;GameObject&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a2b3e701f2099ff28895d09104f9b068f">OnEntitySpawned</link>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00029"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a73c7b04de0474ee3aa63733beb9ed031">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;UnityEvent&lt;ModelInstance&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a73c7b04de0474ee3aa63733beb9ed031">OnEventMessage</link>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00030"/>00030 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Custom&#32;Synchro&#32;setup&quot;</emphasis>)]
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00033"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ade45791e9961fe1803d9367c7e77b71d">00033</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ade45791e9961fe1803d9367c7e77b71d">CreateNewWhenUpdated</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00034"/>00034 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00035"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aa412728d6088cdd4802c82be4a68c559">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aa412728d6088cdd4802c82be4a68c559">EntitiesToUpdate</link>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;HashSet&lt;string&gt;&#32;nameOfModelsToUpdate&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;HashSet&lt;string&gt;();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00037"/>00037 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Awake&#32;is&#32;called&#32;when&#32;the&#32;script&#32;instance&#32;is&#32;being&#32;loaded.</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;model&#32;<emphasis role="keywordflow">in</emphasis>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;model.enabled&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00045"/>00045 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entity&#32;<emphasis role="keywordflow">in</emphasis>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aa412728d6088cdd4802c82be4a68c559">EntitiesToUpdate</link>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;nameOfModelsToUpdate.Add(entity);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00051"/>00051 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00052"/>00052 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Standard&#32;dojo&#32;calls</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00053"/>00053 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00054"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ab1d1f375ff1985ef31e0994663b61610">00054</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&lt;int&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ab1d1f375ff1985ef31e0994663b61610">SynchronizeEntities</link>()
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00056"/>00056 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entities&#32;=&#32;await&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a4e6a9be4ddefa4a63d029b990fc7230c">wasmClient</link>.Entities(<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a69fee369d5bfc8b953ce2c5541e917c2">dojoConfig</link>.query);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00058"/>00058 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entities&#32;=&#32;await&#32;Task.Run(()&#32;=&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a5c7d19c97bc9d711197e0d94c3517c85">toriiClient</link>.Entities(<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a69fee369d5bfc8b953ce2c5541e917c2">dojoConfig</link>.query));
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00060"/>00060 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00061"/>00061 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entityGameObjects&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;GameObject&gt;();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entity&#32;<emphasis role="keywordflow">in</emphasis>&#32;entities)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entityGameObjects.Add(<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">SpawnEntity</link>(entity.HashedKeys,&#32;entity.Models.Values.ToArray()));
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00067"/>00067 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a31ebc4289bdfa652bd05ee6e3e14deb8">OnSynchronized</link>?.Invoke(entityGameObjects);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;entities.Count;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00071"/>00071 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Spawn&#32;an&#32;entity&#32;in&#32;the&#32;world&#32;if&#32;its&#32;not&#32;there</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00073"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">00073</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;GameObject&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">SpawnEntity</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;hashedKeys,&#32;Model[]&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;ent&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6">Entity</link>(hashedKeys.Hex());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00076"/>00076 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(ent&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HandleEntityUpdate(hashedKeys,&#32;entityModels);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ent.gameObject;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00082"/>00082 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entityGameObject&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a3115b1f5d3039b0b806ce419e8c767b0">AddEntity</link>(hashedKeys.Hex());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00084"/>00084 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialize&#32;each&#32;one&#32;of&#32;the&#32;entity&#32;models</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entityModel&#32;<emphasis role="keywordflow">in</emphasis>&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;parts&#32;=&#32;entityModel.Name.Split(<emphasis role="charliteral">&apos;-&apos;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;name&#32;=&#32;parts[1];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00090"/>00090 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;we&#32;have&#32;a&#32;model&#32;definition&#32;for&#32;this&#32;entity&#32;model</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;model&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>.FirstOrDefault(m&#32;=&gt;&#32;m.GetType().Name&#32;==&#32;name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Debug.LogWarning($&quot;Model&#32;{entityModel.Name}&#32;not&#32;found&quot;);</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00098"/>00098 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;the&#32;model&#32;component&#32;to&#32;the&#32;entity</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;component&#32;=&#32;(ModelInstance)entityGameObject.AddComponent(model.GetType());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;component.Initialize(entityModel);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00103"/>00103 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a2b3e701f2099ff28895d09104f9b068f">OnEntitySpawned</link>?.Invoke(entityGameObject);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;entityGameObject;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00107"/>00107 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Called&#32;when&#32;there&#32;is&#32;an&#32;entity&#32;being&#32;updated&#32;on&#32;the&#32;torii/chain&#32;side</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleEntityUpdate(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;hashedKeys,&#32;Model[]&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entity&#32;=&#32;GameObject.Find(hashedKeys.Hex());&#32;<emphasis role="comment">//get&#32;the&#32;entity&#32;by&#32;name</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00112"/>00112 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(entity&#32;==&#32;<emphasis role="keyword">null</emphasis>&#32;&amp;&amp;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ade45791e9961fe1803d9367c7e77b71d">CreateNewWhenUpdated</link>)&#32;&#32;&#32;<emphasis role="comment">//create&#32;a&#32;new&#32;entity&#32;if&#32;it&#32;doesn&apos;t&#32;exist</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">SpawnEntity</link>(hashedKeys,&#32;entityModels);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00118"/>00118 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;each&#32;one&#32;of&#32;the&#32;entity&#32;models&#32;scripts</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entityModel&#32;<emphasis role="keywordflow">in</emphasis>&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;parts&#32;=&#32;entityModel.Name.Split(<emphasis role="charliteral">&apos;-&apos;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;@<emphasis role="keyword">namespace&#32;</emphasis>=&#32;parts[0];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;name&#32;=&#32;parts[1];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00125"/>00125 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;component&#32;=&#32;entity.GetComponent(name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00127"/>00127 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(component&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;decouple?</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;model&#32;=&#32;models.FirstOrDefault(m&#32;=&gt;&#32;m.GetType().Name&#32;==&#32;name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning($<emphasis role="stringliteral">&quot;Model&#32;{entityModel.Name}&#32;not&#32;found&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00137"/>00137 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;component&#32;=&#32;(ModelInstance)entity.AddComponent(model.GetType());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00140"/>00140 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;update&#32;component&#32;with&#32;new&#32;model&#32;data</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ModelInstance)component).OnUpdate(entityModel);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00145"/>00145 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00146"/>00146 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;Standard&#32;dojo&#32;calls</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00147"/>00147 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00148"/>00148 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Custom&#32;dojo&#32;calls</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00149"/>00149 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00150"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a4a0c6bea46b427f7a5ecd1b6aa344879">00150</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&lt;int&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a4a0c6bea46b427f7a5ecd1b6aa344879">SynchronizeEntitiesCustom</link>(<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;query)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00152"/>00152 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entities&#32;=&#32;await&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a4e6a9be4ddefa4a63d029b990fc7230c">wasmClient</link>.Entities(query);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00154"/>00154 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entities&#32;=&#32;await&#32;Task.Run(()&#32;=&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a5c7d19c97bc9d711197e0d94c3517c85">toriiClient</link>.Entities(query));
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00156"/>00156 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00157"/>00157 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entityGameObjects&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;GameObject&gt;();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entity&#32;<emphasis role="keywordflow">in</emphasis>&#32;entities)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entityGameObjects.Add(<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">SpawnEntity</link>(entity.HashedKeys,&#32;entity.Models.Values.ToArray()));
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00163"/>00163 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a31ebc4289bdfa652bd05ee6e3e14deb8">OnSynchronized</link>?.Invoke(entityGameObjects);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;entities.Count;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00167"/>00167 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00168"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1afc54c7087e49770326e6dd0e675386f1">00168</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;GameObject&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1afc54c7087e49770326e6dd0e675386f1">SpawnEntityCustom</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;hashedKeys,&#32;Model[]&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;there&#32;are&#32;any&#32;valid&#32;models&#32;to&#32;spawn&#32;before&#32;creating&#32;the&#32;entity</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;hasValidModel&#32;=&#32;entityModels.Any(entityModel&#32;=&gt;&#32;nameOfModelsToUpdate.Contains(entityModel.Name.Split(<emphasis role="charliteral">&apos;-&apos;</emphasis>)[1]));
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!hasValidModel)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;No&#32;valid&#32;models&#32;found&#32;to&#32;spawn&#32;the&#32;entity.&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00177"/>00177 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;the&#32;entity&#32;to&#32;the&#32;world.</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entityGameObject&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0c03999fab93bfb00bd7f7d1fe4a7ffc">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a3115b1f5d3039b0b806ce419e8c767b0">AddEntity</link>(hashedKeys.Hex());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00180"/>00180 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entityModel&#32;<emphasis role="keywordflow">in</emphasis>&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;name&#32;=&#32;entityModel.Name.Split(<emphasis role="charliteral">&apos;-&apos;</emphasis>)[1];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00184"/>00184 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Only&#32;spawn&#32;if&#32;the&#32;name&#32;is&#32;in&#32;the&#32;hashset</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!nameOfModelsToUpdate.Contains(name))
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00188"/>00188 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;we&#32;have&#32;a&#32;model&#32;definition&#32;for&#32;this&#32;entity&#32;model</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;model&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>.FirstOrDefault(m&#32;=&gt;&#32;m.GetType().Name&#32;==&#32;name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00191"/>00191 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning($<emphasis role="stringliteral">&quot;Model&#32;{entityModel.Name}&#32;not&#32;found&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00197"/>00197 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;the&#32;model&#32;component&#32;to&#32;the&#32;entity</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;component&#32;=&#32;(ModelInstance)entityGameObject.AddComponent(model.GetType());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;component.Initialize(entityModel);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00202"/>00202 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a2b3e701f2099ff28895d09104f9b068f">OnEntitySpawned</link>?.Invoke(entityGameObject);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;entityGameObject;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00206"/>00206 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleEntityUpdateCustom(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;hashedKeys,&#32;Model[]&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entityModel&#32;<emphasis role="keywordflow">in</emphasis>&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(entityModel.Name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;the&#32;name&#32;is&#32;in&#32;this&#32;format&#32;blob_arena-PvPChallengeInvite&#32;then&#32;get&#32;the&#32;last&#32;section</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;nameOfClass&#32;=&#32;entityModel.Name.Split(<emphasis role="charliteral">&apos;-&apos;</emphasis>)[1];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00219"/>00219 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;the&#32;name&#32;is&#32;in&#32;the&#32;hashset&#32;then&#32;update&#32;the&#32;entity</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!nameOfModelsToUpdate.Contains(nameOfClass))
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00225"/>00225 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;entity&#32;=&#32;GameObject.Find(hashedKeys.Hex());&#32;<emphasis role="comment">//get&#32;the&#32;entity&#32;by&#32;name</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00227"/>00227 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(entity&#32;==&#32;<emphasis role="keyword">null</emphasis>&#32;&amp;&amp;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ade45791e9961fe1803d9367c7e77b71d">CreateNewWhenUpdated</link>)&#32;&#32;&#32;<emphasis role="comment">//create&#32;a&#32;new&#32;entity&#32;if&#32;it&#32;doesn&apos;t&#32;exist</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">SpawnEntity</link>(hashedKeys,&#32;entityModels);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00233"/>00233 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;component&#32;=&#32;entity.GetComponent(nameOfClass);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00235"/>00235 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(component&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;model&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>.FirstOrDefault(m&#32;=&gt;&#32;m.GetType().Name&#32;==&#32;nameOfClass);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning($<emphasis role="stringliteral">&quot;Model&#32;{entityModel.Name}&#32;not&#32;found&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00244"/>00244 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;component&#32;=&#32;(ModelInstance)entity.AddComponent(model.GetType());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00247"/>00247 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ModelInstance)component).OnUpdate(entityModel);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00251"/>00251 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00252"/>00252 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;Custom&#32;dojo&#32;calls</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00253"/>00253 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleEventMessage(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;hashedKeys,&#32;Model[]&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;event&#32;picked&#32;up&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00257"/>00257 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entityModel&#32;<emphasis role="keywordflow">in</emphasis>&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(entityModel.Name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00261"/>00261 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;model&#32;=&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>.FirstOrDefault(m&#32;=&gt;&#32;m.GetType().Name&#32;==&#32;entityModel.Name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning($<emphasis role="stringliteral">&quot;Model&#32;{entityModel.Name}&#32;not&#32;found&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00268"/>00268 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;model.OnUpdate(entityModel);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a73c7b04de0474ee3aa63733beb9ed031">OnEventMessage</link>?.Invoke(model);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00273"/>00273 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00274"/>00274 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Not&#32;Touch</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00275"/>00275 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Register&#32;our&#32;entity&#32;callbacks</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00277"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0a357d8730940fe39c799c6918a9aab8">00277</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a0a357d8730940fe39c799c6918a9aab8">RegisterEntityCallbacks</link>()
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ToriiEvents.Instance.OnEntityUpdated&#32;+=&#32;HandleEntityUpdate;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00281"/>00281 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Register&#32;event&#32;message&#32;callbacks</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00283"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ace384b7b40f3d6fe003b57480a304b35">00283</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1ace384b7b40f3d6fe003b57480a304b35">RegisterEventMessageCallbacks</link>()
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ToriiEvents.Instance.OnEventMessageUpdated&#32;+=&#32;HandleEventMessage;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00287"/>00287 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;ModelInstance[]&#32;LoadModels()
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;List&lt;ModelInstance&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00291"/>00291 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Assembly[]&#32;assemblies&#32;=&#32;AppDomain.CurrentDomain.GetAssemblies();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00293"/>00293 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Assembly&#32;assembly&#32;<emphasis role="keywordflow">in</emphasis>&#32;assemblies)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;modelTypes&#32;=&#32;assembly.GetTypes()
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.Where(t&#32;=&gt;&#32;typeof(ModelInstance).IsAssignableFrom(t)&#32;&amp;&amp;&#32;!t.IsAbstract);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00298"/>00298 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Type&#32;modelType&#32;<emphasis role="keywordflow">in</emphasis>&#32;modelTypes)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>.Add((ModelInstance)gameObject.AddComponent(modelType));
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00304"/>00304 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1aff52e23d2a66397ad6183fe168ab4d7d">models</link>.ToArray();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00307"/>00307 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00308"/>00308 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;Not&#32;Touch</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00309"/>00309 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00310"/>00310 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Utils</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00311"/>00311 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00312"/><link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a938d49b24a5724339921fd4a86b52f7a">00312</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;ModelInstance&gt;&#32;<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a938d49b24a5724339921fd4a86b52f7a">GetScriptsFromQueryResult</link>(Model[]&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scripts&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;ModelInstance&gt;();
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entityModel&#32;<emphasis role="keywordflow">in</emphasis>&#32;entityModels)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;parts&#32;=&#32;entityModel.Name.Split(<emphasis role="charliteral">&apos;-&apos;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;@<emphasis role="keyword">namespace&#32;</emphasis>=&#32;parts[0];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;name&#32;=&#32;parts[1];
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00320"/>00320 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;model&#32;=&#32;models.FirstOrDefault(m&#32;=&gt;&#32;m.GetType().Name&#32;==&#32;name);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00322"/>00322 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning($<emphasis role="stringliteral">&quot;Model&#32;{entityModel.Name}&#32;not&#32;found&quot;</emphasis>);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00328"/>00328 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scriptInstance&#32;=&#32;(ModelInstance)Activator.CreateInstance(model.GetType());
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scriptInstance.Initialize(entityModel);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00331"/>00331 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scripts.Add(scriptInstance);
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;scripts;
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00336"/>00336 
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00337"/>00337 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;Utils</emphasis>
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00338"/>00338 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__synchro_manager_dojo_8cs_source_1l00339"/>00339 }
+</programlisting></section>

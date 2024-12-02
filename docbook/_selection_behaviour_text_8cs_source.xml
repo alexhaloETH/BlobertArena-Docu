@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__selection_behaviour_text_8cs_source" xml:lang="en-US">
+<title>SelectionBehaviourText.cs</title>
+<indexterm><primary>UI/Components/SelectionBehaviourText.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__selection_behaviour_text_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00005"/>00005 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00006"/><link linkend="_interface_i_selection_behaviour">00006</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">interface&#32;</emphasis><link linkend="_interface_i_selection_behaviour">ISelectionBehaviour</link>
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00008"/><link linkend="_interface_i_selection_behaviour_1a5142a80fd1d853a5c4afcd3b6a4e4e55">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_interface_i_selection_behaviour_1a5142a80fd1d853a5c4afcd3b6a4e4e55">active</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00009"/><link linkend="_interface_i_selection_behaviour_1a67e3a4e3b53eacf1b7e7a9303ec5f5ce">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_interface_i_selection_behaviour_1a67e3a4e3b53eacf1b7e7a9303ec5f5ce">selected</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00010"/><link linkend="_interface_i_selection_behaviour_1a2a5a3a4f752d3496d09a8cb802e2bfa0">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_interface_i_selection_behaviour_1a2a5a3a4f752d3496d09a8cb802e2bfa0">OnSelected</link>();
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00011"/><link linkend="_interface_i_selection_behaviour_1ac6368493b1a7e8c81490f021efa1099e">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_interface_i_selection_behaviour_1ac6368493b1a7e8c81490f021efa1099e">OnDeselected</link>();
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00012"/>00012 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00013"/><link linkend="_interface_i_selection_behaviour_1a4684f2570b5ab7a92a85ee64351eb9cf">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_interface_i_selection_behaviour_1a4684f2570b5ab7a92a85ee64351eb9cf">OnManualSelect</link>();
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00014"/>00014 }
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00015"/>00015 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00016"/><link linkend="_class_selection_behaviour_text">00016</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_selection_behaviour_text">SelectionBehaviourText</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00017"/>00017 {
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00018"/>00018 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00019"/><link linkend="_class_selection_behaviour_text_1a62feaed6a1da6b5dcc3ef2266dd6a446">00019</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a62feaed6a1da6b5dcc3ef2266dd6a446">_additionTextBefore</link>&#32;=&#32;<emphasis role="stringliteral">&quot;&gt;&#32;&quot;</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00020"/><link linkend="_class_selection_behaviour_text_1a279406c50bab9a1c0753d5ccbe93d483">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a279406c50bab9a1c0753d5ccbe93d483">_additionTextAfter</link>&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;_defaultText&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00022"/>00022 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;textComponent;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00024"/>00024 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00025"/><link linkend="_class_selection_behaviour_text_1a86216b93b5565b7469a581eeefac45dc">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a86216b93b5565b7469a581eeefac45dc">selected</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00026"/><link linkend="_class_selection_behaviour_text_1ad374bdd958cc11470ff75202b42d58c0">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1ad374bdd958cc11470ff75202b42d58c0">active</link>&#32;&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00027"/>00027 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00028"/><link linkend="_class_selection_behaviour_text_1ae7944f67d966b2a080332acf9f830987">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;<link linkend="_class_selection_behaviour_text_1ae7944f67d966b2a080332acf9f830987">normalColour</link>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00029"/><link linkend="_class_selection_behaviour_text_1a9ef66302a3994dd98eeaff0ecf78510e">00029</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;<link linkend="_class_selection_behaviour_text_1a9ef66302a3994dd98eeaff0ecf78510e">deactiveColour</link>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00030"/>00030 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(textComponent&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent&#32;=&#32;gameObject.GetComponent&lt;TMP_Text&gt;();
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_defaultText&#32;=&#32;textComponent.text;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00038"/>00038 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_selection_behaviour_text_1a86216b93b5565b7469a581eeefac45dc">selected</link>)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_selection_behaviour_text_1a224cb3ee714aab40a010f0e3684e1a94">OnDeselected</link>();
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00046"/>00046 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00047"/><link linkend="_class_selection_behaviour_text_1a838ee531b76e01ec98d6500c2d225803">00047</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a838ee531b76e01ec98d6500c2d225803">SetDefaultText</link>(<emphasis role="keywordtype">string</emphasis>&#32;text)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_defaultText&#32;=&#32;text;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00051"/>00051 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00052"/><link linkend="_class_selection_behaviour_text_1a975f4be0cf0a1350b11e1d18fcc2c66d">00052</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a975f4be0cf0a1350b11e1d18fcc2c66d">OnSelected</link>()
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_class_selection_behaviour_text_1ad374bdd958cc11470ff75202b42d58c0">active</link>)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00056"/>00056 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_selection_behaviour_text_1a86216b93b5565b7469a581eeefac45dc">selected</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.text&#32;=&#32;<link linkend="_class_selection_behaviour_text_1a62feaed6a1da6b5dcc3ef2266dd6a446">_additionTextBefore</link>&#32;+&#32;textComponent.text&#32;+&#32;<link linkend="_class_selection_behaviour_text_1a279406c50bab9a1c0753d5ccbe93d483">_additionTextAfter</link>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00060"/>00060 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00061"/><link linkend="_class_selection_behaviour_text_1a224cb3ee714aab40a010f0e3684e1a94">00061</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a224cb3ee714aab40a010f0e3684e1a94">OnDeselected</link>()
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_class_selection_behaviour_text_1ad374bdd958cc11470ff75202b42d58c0">active</link>)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00065"/>00065 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_selection_behaviour_text_1a86216b93b5565b7469a581eeefac45dc">selected</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00067"/>00067 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(textComponent&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;1&quot;</emphasis>);
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00070"/>00070 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_defaultText&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;2&quot;</emphasis>);
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00073"/>00073 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.text&#32;=&#32;_defaultText;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00076"/>00076 
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00077"/><link linkend="_class_selection_behaviour_text_1a1c676b728592d0edc8bbc17f0de49e9c">00077</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_selection_behaviour_text_1a1c676b728592d0edc8bbc17f0de49e9c">SetState</link>(<emphasis role="keywordtype">bool</emphasis>&#32;setActive)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(setActive)
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.color&#32;=&#32;<link linkend="_class_selection_behaviour_text_1ae7944f67d966b2a080332acf9f830987">normalColour</link>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_selection_behaviour_text_1ad374bdd958cc11470ff75202b42d58c0">active</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textComponent.color&#32;=&#32;<link linkend="_class_selection_behaviour_text_1a9ef66302a3994dd98eeaff0ecf78510e">deactiveColour</link>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_selection_behaviour_text_1ad374bdd958cc11470ff75202b42d58c0">active</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__selection_behaviour_text_8cs_source_1l00090"/>00090 }
+</programlisting></section>

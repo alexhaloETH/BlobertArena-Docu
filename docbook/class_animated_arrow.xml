@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_animated_arrow" xml:lang="en-US">
+<title>AnimatedArrow Class Reference</title>
+<indexterm><primary>AnimatedArrow</primary></indexterm>
+<para>
+
+<para>Class for an animated arrow that can be parameterised. </para>
+ 
+</para>
+<para>Inheritance diagram for AnimatedArrow:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_animated_arrow.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Class for an animated arrow that can be parameterised. </para>
+<para>
+Definition at line <link linkend="__animated_arrow_8cs_source_1l00008">8</link> of file <link linkend="__animated_arrow_8cs_source">AnimatedArrow.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__animated_arrow_8cs">AnimatedArrow.cs</link></section>
+</section>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_login_to_main_menu_page_behaviour" xml:lang="en-US">
+<title>LoginToMainMenuPageBehaviour Class Reference</title>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary></indexterm>
+<para>Inheritance diagram for LoginToMainMenuPageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_login_to_main_menu_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76a">State</link> { <link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76aae1e55b59e9a43fa1dafaee1ad8347c43">StaticQuestionMark</link>
+, <link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76aaece18447c9568f004b51a78b988c2ab0">MovingQuestionMark</link>
+, <link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76aa22d16c6faf8665809bfeefc1a8674366">BlobDex</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_login_to_main_menu_page_behaviour_1a9b5c7abfa3499776f8448a323724e9a9">SetState</link> (<link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76a">State</link> state)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_login_to_main_menu_page_behaviour_1a2908985bfbd5dfe634008a16387643be">MintBlobButtonCall</link> ()</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_login_to_main_menu_page_behaviour_1a5241e5720f866a11e7357bfc7db6cd81">OnChainCallBackMintBlob</link> (string transactionHash)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00026">26</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76a"/><section>
+    <title>State</title>
+<indexterm><primary>State</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>State</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76a">LoginToMainMenuPageBehaviour.State</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>StaticQuestionMark</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>StaticQuestionMark</secondary></indexterm>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76aae1e55b59e9a43fa1dafaee1ad8347c43"/>StaticQuestionMark</entry><entry></entry></row><row><entry><indexterm><primary>MovingQuestionMark</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>MovingQuestionMark</secondary></indexterm>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76aaece18447c9568f004b51a78b988c2ab0"/>MovingQuestionMark</entry><entry></entry></row><row><entry><indexterm><primary>BlobDex</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>BlobDex</secondary></indexterm>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76aa22d16c6faf8665809bfeefc1a8674366"/>BlobDex</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00036">36</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a2908985bfbd5dfe634008a16387643be"/><section>
+    <title>MintBlobButtonCall()</title>
+<indexterm><primary>MintBlobButtonCall</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>MintBlobButtonCall</secondary></indexterm>
+<para><computeroutput>void LoginToMainMenuPageBehaviour.MintBlobButtonCall ( )</computeroutput></para><para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00160">160</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a5241e5720f866a11e7357bfc7db6cd81"/><section>
+    <title>OnChainCallBackMintBlob()</title>
+<indexterm><primary>OnChainCallBackMintBlob</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>OnChainCallBackMintBlob</secondary></indexterm>
+<para><computeroutput>async void LoginToMainMenuPageBehaviour.OnChainCallBackMintBlob (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00215">215</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_login_to_main_menu_page_behaviour_1a9b5c7abfa3499776f8448a323724e9a9"/><section>
+    <title>SetState()</title>
+<indexterm><primary>SetState</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
+<indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>SetState</secondary></indexterm>
+<para><computeroutput>void LoginToMainMenuPageBehaviour.SetState (<link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76a">State</link> state)</computeroutput></para><para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00066">66</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/LoginToMainMenu/<link linkend="__login_to_main_menu_page_behaviour_8cs">LoginToMainMenuPageBehaviour.cs</link></section>
+</section>

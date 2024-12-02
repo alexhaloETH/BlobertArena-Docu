@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blob_dex_list_component" xml:lang="en-US">
+<title>BlobDexListComponent Class Reference</title>
+<indexterm><primary>BlobDexListComponent</primary></indexterm>
+<para>Inheritance diagram for BlobDexListComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blob_dex_list_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blob_dex_list_component_1a2952bc478d2c8b3613e9af7e2d744415">CreateListElement</link> (<link linkend="_interface_i_nft_type">INftType</link> blob)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blob_dex_list_component_1a393cf2f4efd1229b5aaf28cfc0fefdab">OnListElementClicked</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blob_dex_list_component_1af6e7c6a6f6ab7c44746de2f353227120">OnClickForSelect</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blob_dex_list_component_1af9aabc0bf988bf0ceb766c2648eb4f93">ToggleListSection</link> (bool open)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blob_dex_list_component_1ab0b724450b780652c381203a2bd4934a">CallForDeletionOfBlobDexListElement</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_blob_dex_list_component_1a602b7989267cdb73a5d17a735a49666f">_currentBlobertId</link> = null</para>
+</listitem>
+            <listitem><para>UnityEvent&lt; <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> &gt; <link linkend="_class_blob_dex_list_component_1a4e74be305353f3dcdc9ec91be30536e5">OnBlobSelected</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00008">8</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blob_dex_list_component_1ab0b724450b780652c381203a2bd4934a"/><section>
+    <title>CallForDeletionOfBlobDexListElement()</title>
+<indexterm><primary>CallForDeletionOfBlobDexListElement</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>CallForDeletionOfBlobDexListElement</secondary></indexterm>
+<para><computeroutput>void BlobDexListComponent.CallForDeletionOfBlobDexListElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00133">133</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_component_1a2952bc478d2c8b3613e9af7e2d744415"/><section>
+    <title>CreateListElement()</title>
+<indexterm><primary>CreateListElement</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>CreateListElement</secondary></indexterm>
+<para><computeroutput>void BlobDexListComponent.CreateListElement (<link linkend="_interface_i_nft_type">INftType</link> blob)</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00075">75</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_component_1af6e7c6a6f6ab7c44746de2f353227120"/><section>
+    <title>OnClickForSelect()</title>
+<indexterm><primary>OnClickForSelect</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>OnClickForSelect</secondary></indexterm>
+<para><computeroutput>void BlobDexListComponent.OnClickForSelect ( )</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00107">107</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_component_1a393cf2f4efd1229b5aaf28cfc0fefdab"/><section>
+    <title>OnListElementClicked()</title>
+<indexterm><primary>OnListElementClicked</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>OnListElementClicked</secondary></indexterm>
+<para><computeroutput>void BlobDexListComponent.OnListElementClicked (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00083">83</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_component_1af9aabc0bf988bf0ceb766c2648eb4f93"/><section>
+    <title>ToggleListSection()</title>
+<indexterm><primary>ToggleListSection</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>ToggleListSection</secondary></indexterm>
+<para><computeroutput>void BlobDexListComponent.ToggleListSection (bool open)</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00116">116</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_blob_dex_list_component_1a602b7989267cdb73a5d17a735a49666f"/><section>
+    <title>_currentBlobertId</title>
+<indexterm><primary>_currentBlobertId</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>_currentBlobertId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> BlobDexListComponent._currentBlobertId = null</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00025">25</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blob_dex_list_component_1a4e74be305353f3dcdc9ec91be30536e5"/><section>
+    <title>OnBlobSelected</title>
+<indexterm><primary>OnBlobSelected</primary><secondary>BlobDexListComponent</secondary></indexterm>
+<indexterm><primary>BlobDexListComponent</primary><secondary>OnBlobSelected</secondary></indexterm>
+<para><computeroutput>UnityEvent&lt;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&gt; BlobDexListComponent.OnBlobSelected</computeroutput></para><para>
+Definition at line <link linkend="__blob_dex_list_component_8cs_source_1l00027">27</link> of file <link linkend="__blob_dex_list_component_8cs_source">BlobDexListComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__blob_dex_list_component_8cs">BlobDexListComponent.cs</link></section>
+</section>

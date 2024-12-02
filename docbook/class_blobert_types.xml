@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_types" xml:lang="en-US">
+<title>BlobertTypes Class Reference</title>
+<indexterm><primary>BlobertTypes</primary></indexterm>
+<para>Inheritance diagram for BlobertTypes:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_types.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_blobert_types_1_1_stats">Stats</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_blobert_types_1_1_traits">Traits</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link> { <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94a3fa2a5dad5a6f96d200b46769ecbea8b">ArcadeBlobs</link>
+, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94a5044f047239e26fe087d9a0622a2ca3f">WalletBlobs</link>
+, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94abe759a8b41c9e9b22718e4d3d85d3cc6">AMMABlobs</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link> { <?linebreak?><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a8ab7b3f922dcbea814209decbc6571ed">Amulet</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a464e6b4dd4ced26e662ca7b3ffc6a597">BronzeRing</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a5fc07109766f6e991e269ab24c301172">GoldRing</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3ae1bda4ac1fa8da51314b66510c193c0e">Necklace</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3afc8fafa4a08e1eadb5cb079ce41ee8fa">Pendant</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a2c4fe7b4205d24452845f9300759caa5">PlatinumRing</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a0700d493074b3d6915ac0bc3ba6875ff">SilverRing</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a0eb606d7ef043eac2dd833009a77e8a1">TitaniumRing</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a4a36b982473acc9f42b10f9d518b46a8">WarriorsPendant</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3acae1c4ce40df65d518545173bb98b379">CommandersMedallion</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3acdd4d940aaf1fcabfc07ed4bcf5d2373">VictoryBand</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a2f5ee614fbfd2c8dca73f07e747e609e">LoneStarPendant</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3ac69221865a39c97d21e6702c44bf547d">ShieldAmulet</link>
+, <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3abc69b5cc6cb30c6221d68bfc68235e19">SpeedAmulet</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link> { <?linebreak?><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdad2d1122c9ccfb732f244a6422c5c32f6">SheepsWool</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda3c7da7911da83ebff1a0297a56d478b1">Kigurumi</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda4face8d580e285eec37cb2accfcfdae5">DivineRobeDark</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdacfeddd9a3fb4edb34b29e8ffe594d6fe">DivineRobe</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda683e9d68f54b10b460a4dd264e5974db">DojoRobe</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda67d4b5f4ac46ee9f476ff91ef03d1dab">HolyChestplate</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda8766b3227f84143a34103f6e1c07d2f6">DemonHusk</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda97b04bd5b15f16185359d3af8ba34bfb">LeatherArmour</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda6daf5134aa610774ea154708eebad9ae">LeopardSkin</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda14894a07d36c879a78e8c2211cd82764">LinenRobe</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda91b612eb91c5433523b004ae73553c45">LordsArmor</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaf411d69c161668b2f4254e168ca3bfda">SecretTattoo</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda8c03e115ed5bd919086178d8ecf1e75c">Chainmail</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdac5e80c666b224f12edf02cba1b9dc7bb">Suit</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaef83ce4ad78ce759c19e9f5ffd480ae0">Underpants</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda57619d6e093f4d0d8eb6dfa5828ffb69">WenShirt</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda19af1c979fc6301a34483b572427ce7c">WsbTankTop</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdacc1add722aba4edc7aa32a046df163a2">Brigandine</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda6078ada5c254c016c6eb9a7920695598">SurcoatMail</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaf4ffdbfaa45366d2d38b0caa94c30d7e">BrigandineChainmail</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdafb709700c4586de474342f4e1f61cf17">CrusadersSurcoatPlate</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdac0cb4d691334185b79bfeaa8bc409db1">GambesonSteelGreaves</link>
+, <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda4ed223a2c62112a92d51b1bae16ea21e">BrigandineSteelPlates</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link> { <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac66243231687ec739ddfa7a2e6bb1844">Blobert</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba136de6de72514772b9302d4776e5c3d2">Doge</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae7b28ceae09038a480b26cfc4dc159bb">Dojo</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bab0ac723d11524af93721c779a422d3b7">Ducks</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baf1cd318e412b5f7226e5f377a9544ff7">Kevin</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac543796e779ab2bf41e4c663ca9b08c5">Milady</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae885d567f57b0f87333c25f7f3a1e381">Pepe</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba70d66924f584b34384d08157aae6f5f2">Pudgy</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba192478d7b816101d73101abc65d2bda0">_3dGlasses</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba7bc663fdadbcde5d4c2cefceaedc9576">_1337Skulls</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba7e3cfe3b2d34782cb324bb9469aec8b7">AncientHelm</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba51534a3170d5912c466d45c89e48225e">Bane</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baa6c3b0e9bffcd8851f3b42a547d91cc6">BraavosHelm</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bacdc45ad63c953df3fe05e83f7d41e951">Bulbhead</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae7d670d6d7e7c001150b2b3de1870666">DealWithItGlasses</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bacd662651de7e098f5357f0a6cd3721fd">DemonCrown</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba89fd851c5c804917962c9683d5f1bff8">DivineHood</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba5d8d7885c1e95565cc02cf0515b29732">Ekubo</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba16504cdb4c039bf79ef409a61b127488">HyperlootCrown</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba0b470f0d6605231247ae2397a2f3fd53">InfluenceHelmet</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba3ee744b8bb786c066eda3c9d2b6feca1">LordsHelm</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba341c7c6677ca97cae29c723e2e597ae0">Nostrahat</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bad177fda1f7be9639faaeffebbb34dcdc">NounsGlasses</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba528f6bff5829d0ec48af0647bb62841f">PopeHat</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba629d50b1addf15b6038807548e691739">TaprootWizardHat</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baaeab9f7f46fb3ddccf690b4356905161">WifHat</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba244e0587e6526202194128474176f9af">BarbuteHelm</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba6e6618000078b8c5d50bd742733dfe53">BarredGreatHelm</link>
+, <?linebreak?><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac3205559569714b30a2cbbc8fb16e8bc">ChainmailCoif</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba05e4bb20182653e76fb88c69c1047aab">GreatBascinetHelm</link>
+, <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae91b3ee7c280a4c24a1c3bcb603061a9">GreatHelm</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link> { <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76afe3ceec404fe63c48cb7c43f6792e738">AlgorithmicAegis</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aaf18ca6549a01db7860261a651a5d153">ArgentShield</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a830554cd421136b17e00bf6b7e030fe4">Balloons</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a2b4ef824eff25f5c31c999197d66f6cd">BannerOfAnger</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae7bb27c23c0ee0beba4d030e347f3887">BannerOfBrilliance</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a49fa58896d73221bf288c83641fad2eb">BannerOfDetection</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76adbb892cc45c3677f1454cbdc3bb34760">BannerOfEnlightenment</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aa548461c7369acbccfebf60dcdb22e08">BannerOfFury</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76acd6faa99a531279307d491e4946e7ecc">BannerOfGiants</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a2f3a48832b08e7a6006a730b53144ee8">BannerOfPerfection</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a3fa45c1149cff973fac58f6db502d066">BannerOfPower</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af1b44a21fc4b8c2642a4cb06afa28564">BannerOfProtection</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a94f29895953f97c28416044f82dc7e1f">BannerOfRage</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76afa7820698fab3ce04ad075198e981795">BannerOfReflection</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a1539c2db1f5ed7cba82484fae9f34ddb">BannerOfSkill</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ad23f95207b79bf69815f1638e685ae61">BannerOfTheFox</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6e43829b0ba24b8388960558e2ec9102">BannerOfTheTwins</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a4c5663ab2127bd7a8f152ae70d69c245">BannerOfTitans</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af31ccc5e6aecc38cb393cea129440e95">BannerOfTonyHawk</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9657f4fe55c19f49874480970202329d">BannerOfVitriol</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6ff29916f99fff9d2494d28e721ae77e">Banner</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a8e5a0cbec2cf652328707930005f4f82">Briq</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76acc84fa821011b93c1f935268e5560c2e">Calculator</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9d9089928ac194cece80f6cc91912333">DevvingForTheDistracted</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ab198009ea5a8474d3cf7bc15ce2bb01c">DiamondHands</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a066c6ff31b0ed4f7d4454aa534be0fce">DopeUzi</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6d95e8c0407e835ba0de60823088287c">GhostWand</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a737525f382c7be0b252e4b2b47911461">Grimoire</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aeddbca960d656b83657b656bddfabf86">GrugsClub</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aafecfc49e383b0d7891e5825cb95cf43">JediswapSaber</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aa542482c08a8fdcbf2eb8afd219aeca3">Katana</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae53cf784374eb0817873d808f344866b">LordsBanner</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a60330e49e739cb4022c77ca944904809">LsHasNoChill</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ac802d372f1432f58131401c5fd55dd91">Mandolin</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae44bb80d43be5fcf35e2c3399b194638">SignIso</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9ed6034dc4fd31fdad68e472777b763e">SignatureBanner</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aaa1e919691cba43a25e400d12635ddc6">SithswapSaber</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a1c1ad4ae57a528c98c80666849f4eeec">Spaghetti</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a0cc5a9c37a75a8dc3b3a55ca5e16be81">Squid</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ace5567db5f0cd4e3a449e65412796759">StarkMagic</link>
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae0805217f5efc7377e245902d6ae24b5">StarkShield</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a0d369c3587726c5773c938b6a53e7b9b">Stool</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a15318a45530312134286bfbd33a2c0c8">Warhammer</link>
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9685a9d53189e2c6c15543cbe1e4ca86">BroadswordPunchShield</link> = 51
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a7ab9878fb42670e8f53a267eded279de">FalchionBuckler</link> = 52
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a59f564c0322d43947566cf09bcaa532a">SaberBuckler</link> = 53
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a302f78cb167b79df7d05fbc3d99bad9d">ArmingSwordPunchShield</link> = 54
+, <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af2a9889ee3ce7237328fa10884779e04">BattleAxeBuckler</link> = 55
+, <?linebreak?><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a796242a1f014583a2a7ffe093410b5ef">RapierBuckler</link> = 56
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link> { <?linebreak?><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dad2d26e7908c1ba9b1abfa44239120c68">AvnuBlue</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da9594eec95be70e7b1710f730fdda33d9">Blue</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986daff8b18253886ae991555725ca131fb74">CryptsAndCaverns</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da80ce82f95ec3510a65d1c930b928c490">FibrousFrame</link>
+, <?linebreak?><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dad382816a3cbeed082c9e216e7392eed1">Green</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da0b95e26c1f72933d2e9114579f0a538c">Holo</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da909cea0c97058cfe2e3ea8d675cb08e1">Orange</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dab9ba865fec061c9706d2fd7ce49c0cc7">Purple</link>
+, <?linebreak?><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da627456f51df1dce2c7d36b43b44a6293">RealmsDark</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da1201c633271df04be95c0f4c71690dab">Realms</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da6d507931f6814a782dbf6252392ac12d">Terraforms</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da9a00f06ec09419edf80a3f0e205fa086">Tulip</link>
+, <?linebreak?><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986daf75d91cdd36b85cc4a8dfeca4f24fa14">USA</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da8f7bc810927ffe7a473bcf25595238ca">UnitedKingdom</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da94880bda83bda77c5692876700711f15">Poland</link>
+, <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da8dbb07a18d46f63d8b3c8994d5ccc351">Mexico</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static string <link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">TraitJewelryToFileName</link> (<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link> trait)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">TraitArmourToFileName</link> (<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link> trait)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">TraitMaskToFileName</link> (<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link> trait)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">TraitWeaponToFileName</link> (<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link> trait)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_blobert_types_1a357e55dfcb84203cab218dc3de5a285a">TraitBackgroundToFileName</link> (<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link> background)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00004">4</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd"/><section>
+    <title>Armour</title>
+<indexterm><primary>Armour</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Armour</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">BlobertTypes.Armour</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SheepsWool</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SheepsWool</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdad2d1122c9ccfb732f244a6422c5c32f6"/>SheepsWool</entry><entry></entry></row><row><entry><indexterm><primary>Kigurumi</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Kigurumi</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda3c7da7911da83ebff1a0297a56d478b1"/>Kigurumi</entry><entry></entry></row><row><entry><indexterm><primary>DivineRobeDark</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DivineRobeDark</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda4face8d580e285eec37cb2accfcfdae5"/>DivineRobeDark</entry><entry></entry></row><row><entry><indexterm><primary>DivineRobe</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DivineRobe</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdacfeddd9a3fb4edb34b29e8ffe594d6fe"/>DivineRobe</entry><entry></entry></row><row><entry><indexterm><primary>DojoRobe</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DojoRobe</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda683e9d68f54b10b460a4dd264e5974db"/>DojoRobe</entry><entry></entry></row><row><entry><indexterm><primary>HolyChestplate</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>HolyChestplate</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda67d4b5f4ac46ee9f476ff91ef03d1dab"/>HolyChestplate</entry><entry></entry></row><row><entry><indexterm><primary>DemonHusk</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DemonHusk</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda8766b3227f84143a34103f6e1c07d2f6"/>DemonHusk</entry><entry></entry></row><row><entry><indexterm><primary>LeatherArmour</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LeatherArmour</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda97b04bd5b15f16185359d3af8ba34bfb"/>LeatherArmour</entry><entry></entry></row><row><entry><indexterm><primary>LeopardSkin</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LeopardSkin</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda6daf5134aa610774ea154708eebad9ae"/>LeopardSkin</entry><entry></entry></row><row><entry><indexterm><primary>LinenRobe</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LinenRobe</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda14894a07d36c879a78e8c2211cd82764"/>LinenRobe</entry><entry></entry></row><row><entry><indexterm><primary>LordsArmor</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LordsArmor</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda91b612eb91c5433523b004ae73553c45"/>LordsArmor</entry><entry></entry></row><row><entry><indexterm><primary>SecretTattoo</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SecretTattoo</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaf411d69c161668b2f4254e168ca3bfda"/>SecretTattoo</entry><entry></entry></row><row><entry><indexterm><primary>Chainmail</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Chainmail</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda8c03e115ed5bd919086178d8ecf1e75c"/>Chainmail</entry><entry></entry></row><row><entry><indexterm><primary>Suit</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Suit</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdac5e80c666b224f12edf02cba1b9dc7bb"/>Suit</entry><entry></entry></row><row><entry><indexterm><primary>Underpants</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Underpants</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaef83ce4ad78ce759c19e9f5ffd480ae0"/>Underpants</entry><entry></entry></row><row><entry><indexterm><primary>WenShirt</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>WenShirt</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda57619d6e093f4d0d8eb6dfa5828ffb69"/>WenShirt</entry><entry></entry></row><row><entry><indexterm><primary>WsbTankTop</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>WsbTankTop</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda19af1c979fc6301a34483b572427ce7c"/>WsbTankTop</entry><entry></entry></row><row><entry><indexterm><primary>Brigandine</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Brigandine</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdacc1add722aba4edc7aa32a046df163a2"/>Brigandine</entry><entry></entry></row><row><entry><indexterm><primary>SurcoatMail</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SurcoatMail</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda6078ada5c254c016c6eb9a7920695598"/>SurcoatMail</entry><entry></entry></row><row><entry><indexterm><primary>BrigandineChainmail</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BrigandineChainmail</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaf4ffdbfaa45366d2d38b0caa94c30d7e"/>BrigandineChainmail</entry><entry></entry></row><row><entry><indexterm><primary>CrusadersSurcoatPlate</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>CrusadersSurcoatPlate</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdafb709700c4586de474342f4e1f61cf17"/>CrusadersSurcoatPlate</entry><entry></entry></row><row><entry><indexterm><primary>GambesonSteelGreaves</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>GambesonSteelGreaves</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdac0cb4d691334185b79bfeaa8bc409db1"/>GambesonSteelGreaves</entry><entry></entry></row><row><entry><indexterm><primary>BrigandineSteelPlates</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BrigandineSteelPlates</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda4ed223a2c62112a92d51b1bae16ea21e"/>BrigandineSteelPlates</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00097">97</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d"/><section>
+    <title>Background</title>
+<indexterm><primary>Background</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Background</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">BlobertTypes.Background</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>AvnuBlue</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>AvnuBlue</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dad2d26e7908c1ba9b1abfa44239120c68"/>AvnuBlue</entry><entry></entry></row><row><entry><indexterm><primary>Blue</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Blue</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da9594eec95be70e7b1710f730fdda33d9"/>Blue</entry><entry></entry></row><row><entry><indexterm><primary>CryptsAndCaverns</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>CryptsAndCaverns</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986daff8b18253886ae991555725ca131fb74"/>CryptsAndCaverns</entry><entry></entry></row><row><entry><indexterm><primary>FibrousFrame</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>FibrousFrame</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da80ce82f95ec3510a65d1c930b928c490"/>FibrousFrame</entry><entry></entry></row><row><entry><indexterm><primary>Green</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Green</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dad382816a3cbeed082c9e216e7392eed1"/>Green</entry><entry></entry></row><row><entry><indexterm><primary>Holo</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Holo</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da0b95e26c1f72933d2e9114579f0a538c"/>Holo</entry><entry></entry></row><row><entry><indexterm><primary>Orange</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Orange</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da909cea0c97058cfe2e3ea8d675cb08e1"/>Orange</entry><entry></entry></row><row><entry><indexterm><primary>Purple</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Purple</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dab9ba865fec061c9706d2fd7ce49c0cc7"/>Purple</entry><entry></entry></row><row><entry><indexterm><primary>RealmsDark</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>RealmsDark</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da627456f51df1dce2c7d36b43b44a6293"/>RealmsDark</entry><entry></entry></row><row><entry><indexterm><primary>Realms</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Realms</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da1201c633271df04be95c0f4c71690dab"/>Realms</entry><entry></entry></row><row><entry><indexterm><primary>Terraforms</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Terraforms</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da6d507931f6814a782dbf6252392ac12d"/>Terraforms</entry><entry></entry></row><row><entry><indexterm><primary>Tulip</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Tulip</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da9a00f06ec09419edf80a3f0e205fa086"/>Tulip</entry><entry></entry></row><row><entry><indexterm><primary>USA</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>USA</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986daf75d91cdd36b85cc4a8dfeca4f24fa14"/>USA</entry><entry></entry></row><row><entry><indexterm><primary>UnitedKingdom</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>UnitedKingdom</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da8f7bc810927ffe7a473bcf25595238ca"/>UnitedKingdom</entry><entry></entry></row><row><entry><indexterm><primary>Poland</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Poland</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da94880bda83bda77c5692876700711f15"/>Poland</entry><entry></entry></row><row><entry><indexterm><primary>Mexico</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Mexico</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da8dbb07a18d46f63d8b3c8994d5ccc351"/>Mexico</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00560">560</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3"/><section>
+    <title>Jewelry</title>
+<indexterm><primary>Jewelry</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Jewelry</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">BlobertTypes.Jewelry</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Amulet</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Amulet</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a8ab7b3f922dcbea814209decbc6571ed"/>Amulet</entry><entry></entry></row><row><entry><indexterm><primary>BronzeRing</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BronzeRing</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a464e6b4dd4ced26e662ca7b3ffc6a597"/>BronzeRing</entry><entry></entry></row><row><entry><indexterm><primary>GoldRing</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>GoldRing</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a5fc07109766f6e991e269ab24c301172"/>GoldRing</entry><entry></entry></row><row><entry><indexterm><primary>Necklace</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Necklace</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3ae1bda4ac1fa8da51314b66510c193c0e"/>Necklace</entry><entry></entry></row><row><entry><indexterm><primary>Pendant</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Pendant</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3afc8fafa4a08e1eadb5cb079ce41ee8fa"/>Pendant</entry><entry></entry></row><row><entry><indexterm><primary>PlatinumRing</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>PlatinumRing</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a2c4fe7b4205d24452845f9300759caa5"/>PlatinumRing</entry><entry></entry></row><row><entry><indexterm><primary>SilverRing</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SilverRing</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a0700d493074b3d6915ac0bc3ba6875ff"/>SilverRing</entry><entry></entry></row><row><entry><indexterm><primary>TitaniumRing</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TitaniumRing</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a0eb606d7ef043eac2dd833009a77e8a1"/>TitaniumRing</entry><entry></entry></row><row><entry><indexterm><primary>WarriorsPendant</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>WarriorsPendant</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a4a36b982473acc9f42b10f9d518b46a8"/>WarriorsPendant</entry><entry></entry></row><row><entry><indexterm><primary>CommandersMedallion</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>CommandersMedallion</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3acae1c4ce40df65d518545173bb98b379"/>CommandersMedallion</entry><entry></entry></row><row><entry><indexterm><primary>VictoryBand</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>VictoryBand</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3acdd4d940aaf1fcabfc07ed4bcf5d2373"/>VictoryBand</entry><entry></entry></row><row><entry><indexterm><primary>LoneStarPendant</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LoneStarPendant</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a2f5ee614fbfd2c8dca73f07e747e609e"/>LoneStarPendant</entry><entry></entry></row><row><entry><indexterm><primary>ShieldAmulet</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>ShieldAmulet</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3ac69221865a39c97d21e6702c44bf547d"/>ShieldAmulet</entry><entry></entry></row><row><entry><indexterm><primary>SpeedAmulet</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SpeedAmulet</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3abc69b5cc6cb30c6221d68bfc68235e19"/>SpeedAmulet</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00024">24</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b"/><section>
+    <title>Mask</title>
+<indexterm><primary>Mask</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Mask</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">BlobertTypes.Mask</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Blobert</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Blobert</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac66243231687ec739ddfa7a2e6bb1844"/>Blobert</entry><entry></entry></row><row><entry><indexterm><primary>Doge</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Doge</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba136de6de72514772b9302d4776e5c3d2"/>Doge</entry><entry></entry></row><row><entry><indexterm><primary>Dojo</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Dojo</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae7b28ceae09038a480b26cfc4dc159bb"/>Dojo</entry><entry></entry></row><row><entry><indexterm><primary>Ducks</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Ducks</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bab0ac723d11524af93721c779a422d3b7"/>Ducks</entry><entry></entry></row><row><entry><indexterm><primary>Kevin</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Kevin</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baf1cd318e412b5f7226e5f377a9544ff7"/>Kevin</entry><entry></entry></row><row><entry><indexterm><primary>Milady</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Milady</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac543796e779ab2bf41e4c663ca9b08c5"/>Milady</entry><entry></entry></row><row><entry><indexterm><primary>Pepe</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Pepe</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae885d567f57b0f87333c25f7f3a1e381"/>Pepe</entry><entry></entry></row><row><entry><indexterm><primary>Pudgy</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Pudgy</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba70d66924f584b34384d08157aae6f5f2"/>Pudgy</entry><entry></entry></row><row><entry><indexterm><primary>_3dGlasses</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>_3dGlasses</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba192478d7b816101d73101abc65d2bda0"/>_3dGlasses</entry><entry></entry></row><row><entry><indexterm><primary>_1337Skulls</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>_1337Skulls</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba7bc663fdadbcde5d4c2cefceaedc9576"/>_1337Skulls</entry><entry></entry></row><row><entry><indexterm><primary>AncientHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>AncientHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba7e3cfe3b2d34782cb324bb9469aec8b7"/>AncientHelm</entry><entry></entry></row><row><entry><indexterm><primary>Bane</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Bane</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba51534a3170d5912c466d45c89e48225e"/>Bane</entry><entry></entry></row><row><entry><indexterm><primary>BraavosHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BraavosHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baa6c3b0e9bffcd8851f3b42a547d91cc6"/>BraavosHelm</entry><entry></entry></row><row><entry><indexterm><primary>Bulbhead</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Bulbhead</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bacdc45ad63c953df3fe05e83f7d41e951"/>Bulbhead</entry><entry></entry></row><row><entry><indexterm><primary>DealWithItGlasses</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DealWithItGlasses</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae7d670d6d7e7c001150b2b3de1870666"/>DealWithItGlasses</entry><entry></entry></row><row><entry><indexterm><primary>DemonCrown</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DemonCrown</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bacd662651de7e098f5357f0a6cd3721fd"/>DemonCrown</entry><entry></entry></row><row><entry><indexterm><primary>DivineHood</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DivineHood</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba89fd851c5c804917962c9683d5f1bff8"/>DivineHood</entry><entry></entry></row><row><entry><indexterm><primary>Ekubo</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Ekubo</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba5d8d7885c1e95565cc02cf0515b29732"/>Ekubo</entry><entry></entry></row><row><entry><indexterm><primary>HyperlootCrown</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>HyperlootCrown</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba16504cdb4c039bf79ef409a61b127488"/>HyperlootCrown</entry><entry></entry></row><row><entry><indexterm><primary>InfluenceHelmet</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>InfluenceHelmet</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba0b470f0d6605231247ae2397a2f3fd53"/>InfluenceHelmet</entry><entry></entry></row><row><entry><indexterm><primary>LordsHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LordsHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba3ee744b8bb786c066eda3c9d2b6feca1"/>LordsHelm</entry><entry></entry></row><row><entry><indexterm><primary>Nostrahat</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Nostrahat</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba341c7c6677ca97cae29c723e2e597ae0"/>Nostrahat</entry><entry></entry></row><row><entry><indexterm><primary>NounsGlasses</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>NounsGlasses</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bad177fda1f7be9639faaeffebbb34dcdc"/>NounsGlasses</entry><entry></entry></row><row><entry><indexterm><primary>PopeHat</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>PopeHat</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba528f6bff5829d0ec48af0647bb62841f"/>PopeHat</entry><entry></entry></row><row><entry><indexterm><primary>TaprootWizardHat</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TaprootWizardHat</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba629d50b1addf15b6038807548e691739"/>TaprootWizardHat</entry><entry></entry></row><row><entry><indexterm><primary>WifHat</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>WifHat</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baaeab9f7f46fb3ddccf690b4356905161"/>WifHat</entry><entry></entry></row><row><entry><indexterm><primary>BarbuteHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BarbuteHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba244e0587e6526202194128474176f9af"/>BarbuteHelm</entry><entry></entry></row><row><entry><indexterm><primary>BarredGreatHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BarredGreatHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba6e6618000078b8c5d50bd742733dfe53"/>BarredGreatHelm</entry><entry></entry></row><row><entry><indexterm><primary>ChainmailCoif</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>ChainmailCoif</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac3205559569714b30a2cbbc8fb16e8bc"/>ChainmailCoif</entry><entry></entry></row><row><entry><indexterm><primary>GreatBascinetHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>GreatBascinetHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba05e4bb20182653e76fb88c69c1047aab"/>GreatBascinetHelm</entry><entry></entry></row><row><entry><indexterm><primary>GreatHelm</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>GreatHelm</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae91b3ee7c280a4c24a1c3bcb603061a9"/>GreatHelm</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00206">206</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94"/><section>
+    <title>NFTTypes</title>
+<indexterm><primary>NFTTypes</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>NFTTypes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>ArcadeBlobs</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>ArcadeBlobs</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94a3fa2a5dad5a6f96d200b46769ecbea8b"/>ArcadeBlobs</entry><entry></entry></row><row><entry><indexterm><primary>WalletBlobs</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>WalletBlobs</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94a5044f047239e26fe087d9a0622a2ca3f"/>WalletBlobs</entry><entry></entry></row><row><entry><indexterm><primary>AMMABlobs</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>AMMABlobs</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94abe759a8b41c9e9b22718e4d3d85d3cc6"/>AMMABlobs</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00006">6</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76"/><section>
+    <title>Weapon</title>
+<indexterm><primary>Weapon</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Weapon</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">BlobertTypes.Weapon</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>AlgorithmicAegis</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>AlgorithmicAegis</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76afe3ceec404fe63c48cb7c43f6792e738"/>AlgorithmicAegis</entry><entry></entry></row><row><entry><indexterm><primary>ArgentShield</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>ArgentShield</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aaf18ca6549a01db7860261a651a5d153"/>ArgentShield</entry><entry></entry></row><row><entry><indexterm><primary>Balloons</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Balloons</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a830554cd421136b17e00bf6b7e030fe4"/>Balloons</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfAnger</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfAnger</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a2b4ef824eff25f5c31c999197d66f6cd"/>BannerOfAnger</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfBrilliance</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfBrilliance</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae7bb27c23c0ee0beba4d030e347f3887"/>BannerOfBrilliance</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfDetection</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfDetection</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a49fa58896d73221bf288c83641fad2eb"/>BannerOfDetection</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfEnlightenment</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfEnlightenment</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76adbb892cc45c3677f1454cbdc3bb34760"/>BannerOfEnlightenment</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfFury</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfFury</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aa548461c7369acbccfebf60dcdb22e08"/>BannerOfFury</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfGiants</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfGiants</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76acd6faa99a531279307d491e4946e7ecc"/>BannerOfGiants</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfPerfection</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfPerfection</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a2f3a48832b08e7a6006a730b53144ee8"/>BannerOfPerfection</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfPower</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfPower</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a3fa45c1149cff973fac58f6db502d066"/>BannerOfPower</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfProtection</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfProtection</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af1b44a21fc4b8c2642a4cb06afa28564"/>BannerOfProtection</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfRage</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfRage</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a94f29895953f97c28416044f82dc7e1f"/>BannerOfRage</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfReflection</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfReflection</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76afa7820698fab3ce04ad075198e981795"/>BannerOfReflection</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfSkill</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfSkill</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a1539c2db1f5ed7cba82484fae9f34ddb"/>BannerOfSkill</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfTheFox</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfTheFox</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ad23f95207b79bf69815f1638e685ae61"/>BannerOfTheFox</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfTheTwins</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfTheTwins</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6e43829b0ba24b8388960558e2ec9102"/>BannerOfTheTwins</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfTitans</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfTitans</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a4c5663ab2127bd7a8f152ae70d69c245"/>BannerOfTitans</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfTonyHawk</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfTonyHawk</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af31ccc5e6aecc38cb393cea129440e95"/>BannerOfTonyHawk</entry><entry></entry></row><row><entry><indexterm><primary>BannerOfVitriol</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BannerOfVitriol</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9657f4fe55c19f49874480970202329d"/>BannerOfVitriol</entry><entry></entry></row><row><entry><indexterm><primary>Banner</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Banner</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6ff29916f99fff9d2494d28e721ae77e"/>Banner</entry><entry></entry></row><row><entry><indexterm><primary>Briq</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Briq</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a8e5a0cbec2cf652328707930005f4f82"/>Briq</entry><entry></entry></row><row><entry><indexterm><primary>Calculator</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Calculator</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76acc84fa821011b93c1f935268e5560c2e"/>Calculator</entry><entry></entry></row><row><entry><indexterm><primary>DevvingForTheDistracted</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DevvingForTheDistracted</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9d9089928ac194cece80f6cc91912333"/>DevvingForTheDistracted</entry><entry></entry></row><row><entry><indexterm><primary>DiamondHands</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DiamondHands</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ab198009ea5a8474d3cf7bc15ce2bb01c"/>DiamondHands</entry><entry></entry></row><row><entry><indexterm><primary>DopeUzi</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>DopeUzi</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a066c6ff31b0ed4f7d4454aa534be0fce"/>DopeUzi</entry><entry></entry></row><row><entry><indexterm><primary>GhostWand</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>GhostWand</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6d95e8c0407e835ba0de60823088287c"/>GhostWand</entry><entry></entry></row><row><entry><indexterm><primary>Grimoire</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Grimoire</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a737525f382c7be0b252e4b2b47911461"/>Grimoire</entry><entry></entry></row><row><entry><indexterm><primary>GrugsClub</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>GrugsClub</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aeddbca960d656b83657b656bddfabf86"/>GrugsClub</entry><entry></entry></row><row><entry><indexterm><primary>JediswapSaber</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>JediswapSaber</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aafecfc49e383b0d7891e5825cb95cf43"/>JediswapSaber</entry><entry></entry></row><row><entry><indexterm><primary>Katana</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Katana</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aa542482c08a8fdcbf2eb8afd219aeca3"/>Katana</entry><entry></entry></row><row><entry><indexterm><primary>LordsBanner</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LordsBanner</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae53cf784374eb0817873d808f344866b"/>LordsBanner</entry><entry></entry></row><row><entry><indexterm><primary>LsHasNoChill</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>LsHasNoChill</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a60330e49e739cb4022c77ca944904809"/>LsHasNoChill</entry><entry></entry></row><row><entry><indexterm><primary>Mandolin</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Mandolin</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ac802d372f1432f58131401c5fd55dd91"/>Mandolin</entry><entry></entry></row><row><entry><indexterm><primary>SignIso</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SignIso</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae44bb80d43be5fcf35e2c3399b194638"/>SignIso</entry><entry></entry></row><row><entry><indexterm><primary>SignatureBanner</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SignatureBanner</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9ed6034dc4fd31fdad68e472777b763e"/>SignatureBanner</entry><entry></entry></row><row><entry><indexterm><primary>SithswapSaber</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SithswapSaber</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aaa1e919691cba43a25e400d12635ddc6"/>SithswapSaber</entry><entry></entry></row><row><entry><indexterm><primary>Spaghetti</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Spaghetti</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a1c1ad4ae57a528c98c80666849f4eeec"/>Spaghetti</entry><entry></entry></row><row><entry><indexterm><primary>Squid</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Squid</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a0cc5a9c37a75a8dc3b3a55ca5e16be81"/>Squid</entry><entry></entry></row><row><entry><indexterm><primary>StarkMagic</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>StarkMagic</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ace5567db5f0cd4e3a449e65412796759"/>StarkMagic</entry><entry></entry></row><row><entry><indexterm><primary>StarkShield</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>StarkShield</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae0805217f5efc7377e245902d6ae24b5"/>StarkShield</entry><entry></entry></row><row><entry><indexterm><primary>Stool</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Stool</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a0d369c3587726c5773c938b6a53e7b9b"/>Stool</entry><entry></entry></row><row><entry><indexterm><primary>Warhammer</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>Warhammer</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a15318a45530312134286bfbd33a2c0c8"/>Warhammer</entry><entry></entry></row><row><entry><indexterm><primary>BroadswordPunchShield</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BroadswordPunchShield</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9685a9d53189e2c6c15543cbe1e4ca86"/>BroadswordPunchShield</entry><entry></entry></row><row><entry><indexterm><primary>FalchionBuckler</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>FalchionBuckler</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a7ab9878fb42670e8f53a267eded279de"/>FalchionBuckler</entry><entry></entry></row><row><entry><indexterm><primary>SaberBuckler</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>SaberBuckler</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a59f564c0322d43947566cf09bcaa532a"/>SaberBuckler</entry><entry></entry></row><row><entry><indexterm><primary>ArmingSwordPunchShield</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>ArmingSwordPunchShield</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a302f78cb167b79df7d05fbc3d99bad9d"/>ArmingSwordPunchShield</entry><entry></entry></row><row><entry><indexterm><primary>BattleAxeBuckler</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>BattleAxeBuckler</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af2a9889ee3ce7237328fa10884779e04"/>BattleAxeBuckler</entry><entry></entry></row><row><entry><indexterm><primary>RapierBuckler</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>RapierBuckler</secondary></indexterm>
+<anchor xml:id="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a796242a1f014583a2a7ffe093410b5ef"/>RapierBuckler</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00347">347</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc"/><section>
+    <title>TraitArmourToFileName()</title>
+<indexterm><primary>TraitArmourToFileName</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TraitArmourToFileName</secondary></indexterm>
+<para><computeroutput>static string BlobertTypes.TraitArmourToFileName (<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link> trait)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00127">127</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a357e55dfcb84203cab218dc3de5a285a"/><section>
+    <title>TraitBackgroundToFileName()</title>
+<indexterm><primary>TraitBackgroundToFileName</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TraitBackgroundToFileName</secondary></indexterm>
+<para><computeroutput>static string BlobertTypes.TraitBackgroundToFileName (<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link> background)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00581">581</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47"/><section>
+    <title>TraitJewelryToFileName()</title>
+<indexterm><primary>TraitJewelryToFileName</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TraitJewelryToFileName</secondary></indexterm>
+<para><computeroutput>static string BlobertTypes.TraitJewelryToFileName (<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link> trait)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00045">45</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a70e507e009c112857f37f9715506b167"/><section>
+    <title>TraitMaskToFileName()</title>
+<indexterm><primary>TraitMaskToFileName</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TraitMaskToFileName</secondary></indexterm>
+<para><computeroutput>static string BlobertTypes.TraitMaskToFileName (<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link> trait)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00244">244</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f"/><section>
+    <title>TraitWeaponToFileName()</title>
+<indexterm><primary>TraitWeaponToFileName</primary><secondary>BlobertTypes</secondary></indexterm>
+<indexterm><primary>BlobertTypes</primary><secondary>TraitWeaponToFileName</secondary></indexterm>
+<para><computeroutput>static string BlobertTypes.TraitWeaponToFileName (<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link> trait)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00403">403</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Statics/<link linkend="__blobert_types_8cs">BlobertTypes.cs</link></section>
+</section>

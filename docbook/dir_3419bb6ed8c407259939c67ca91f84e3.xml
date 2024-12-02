@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_3419bb6ed8c407259939c67ca91f84e3" xml:lang="en-US">
+<title>UI/Elements Directory Reference</title>
+<indexterm><primary>UI/Elements Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_0006b64610f1c9f693ee4de33ff63f5f">LobbyListPage</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__animated_arrow_8cs">AnimatedArrow.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__dropdown_main_menu_8cs">DropdownMainMenu.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__exit_dialogue_8cs">ExitDialogue.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__leader_board_ranking_element_8cs">LeaderBoardRankingElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__notification_element_8cs">NotificationElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__open_to_invite_8cs">OpenToInvite.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__player_tournament_viewer_element_8cs">PlayerTournamentViewerElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__profile_panel_8cs">ProfilePanel.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__settings_panel_8cs">SettingsPanel.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__tournament_fight_element_8cs">TournamentFightElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__tournament_list_element_8cs">TournamentListElement.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

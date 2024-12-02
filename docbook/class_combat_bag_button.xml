@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combat_bag_button" xml:lang="en-US">
+<title>CombatBagButton Class Reference</title>
+<indexterm><primary>CombatBagButton</primary></indexterm>
+<para>Inheritance diagram for CombatBagButton:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_combat_bag_button.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_combat_bag_button_1a52b2b108a7a4e1ca907ba4be5317563c">OnButtonClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_bag_button_1a868fa62dcf68ed0739baf74dc35b22c6">OnButtonHovered</link> (bool hovered)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_bag_button_1ae72fc25659c15c39bf9dedf60343bb81">OnAttackButtonSelected</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_bag_button_1a4b6392daf12cf921f37bde7497e838d3">OnAttackButtonDeselected</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combat_bag_button_8cs_source_1l00005">5</link> of file <link linkend="__combat_bag_button_8cs_source">CombatBagButton.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_combat_bag_button_1a4b6392daf12cf921f37bde7497e838d3"/><section>
+    <title>OnAttackButtonDeselected()</title>
+<indexterm><primary>OnAttackButtonDeselected</primary><secondary>CombatBagButton</secondary></indexterm>
+<indexterm><primary>CombatBagButton</primary><secondary>OnAttackButtonDeselected</secondary></indexterm>
+<para><computeroutput>void CombatBagButton.OnAttackButtonDeselected ( )</computeroutput></para><para>
+Definition at line <link linkend="__combat_bag_button_8cs_source_1l00040">40</link> of file <link linkend="__combat_bag_button_8cs_source">CombatBagButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_bag_button_1ae72fc25659c15c39bf9dedf60343bb81"/><section>
+    <title>OnAttackButtonSelected()</title>
+<indexterm><primary>OnAttackButtonSelected</primary><secondary>CombatBagButton</secondary></indexterm>
+<indexterm><primary>CombatBagButton</primary><secondary>OnAttackButtonSelected</secondary></indexterm>
+<para><computeroutput>void CombatBagButton.OnAttackButtonSelected ( )</computeroutput></para><para>
+Definition at line <link linkend="__combat_bag_button_8cs_source_1l00033">33</link> of file <link linkend="__combat_bag_button_8cs_source">CombatBagButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_bag_button_1a52b2b108a7a4e1ca907ba4be5317563c"/><section>
+    <title>OnButtonClicked()</title>
+<indexterm><primary>OnButtonClicked</primary><secondary>CombatBagButton</secondary></indexterm>
+<indexterm><primary>CombatBagButton</primary><secondary>OnButtonClicked</secondary></indexterm>
+<para><computeroutput>void CombatBagButton.OnButtonClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__combat_bag_button_8cs_source_1l00022">22</link> of file <link linkend="__combat_bag_button_8cs_source">CombatBagButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_bag_button_1a868fa62dcf68ed0739baf74dc35b22c6"/><section>
+    <title>OnButtonHovered()</title>
+<indexterm><primary>OnButtonHovered</primary><secondary>CombatBagButton</secondary></indexterm>
+<indexterm><primary>CombatBagButton</primary><secondary>OnButtonHovered</secondary></indexterm>
+<para><computeroutput>void CombatBagButton.OnButtonHovered (bool hovered)</computeroutput></para><para>
+Definition at line <link linkend="__combat_bag_button_8cs_source_1l00028">28</link> of file <link linkend="__combat_bag_button_8cs_source">CombatBagButton.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Button Types/<link linkend="__combat_bag_button_8cs">CombatBagButton.cs</link></section>
+</section>

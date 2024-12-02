@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__build_script_8cs_source" xml:lang="en-US">
+<title>BuildScript.cs</title>
+<indexterm><primary>Editor/BuildScript.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__build_script_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEditor;
+<anchor xml:id="__build_script_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__build_script_8cs_source_1l00003"/>00003 
+<anchor xml:id="__build_script_8cs_source_1l00004"/><link linkend="_class_build_script">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_build_script">BuildScript</link>
+<anchor xml:id="__build_script_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__build_script_8cs_source_1l00006"/><link linkend="_class_build_script_1a330e0e165cf1e58601729a4e6a319532">00006</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_build_script_1a330e0e165cf1e58601729a4e6a319532">BuildWebGL</link>()
+<anchor xml:id="__build_script_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__build_script_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;buildPath&#32;=&#32;<emphasis role="stringliteral">&quot;Builds/WebGL&quot;</emphasis>;
+<anchor xml:id="__build_script_8cs_source_1l00009"/>00009 
+<anchor xml:id="__build_script_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;args&#32;=&#32;<link linkend="_namespace_system">System</link>.Environment.GetCommandLineArgs();
+<anchor xml:id="__build_script_8cs_source_1l00011"/>00011 
+<anchor xml:id="__build_script_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Look&#32;for&#32;the&#32;build&#32;path&#32;argument</emphasis>
+<anchor xml:id="__build_script_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;args.Length;&#32;i++)
+<anchor xml:id="__build_script_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__build_script_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(args[i]&#32;==&#32;<emphasis role="stringliteral">&quot;-buildPath&quot;</emphasis>&#32;&amp;&amp;&#32;i&#32;+&#32;1&#32;&lt;&#32;args.Length)
+<anchor xml:id="__build_script_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__build_script_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;buildPath&#32;=&#32;args[i&#32;+&#32;1];
+<anchor xml:id="__build_script_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__build_script_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__build_script_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__build_script_8cs_source_1l00021"/>00021 
+<anchor xml:id="__build_script_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;scenes&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Assets/Bloberts/Scenes/BlobertArena.unity&quot;</emphasis>&#32;};
+<anchor xml:id="__build_script_8cs_source_1l00023"/>00023 
+<anchor xml:id="__build_script_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BuildPipeline.BuildPlayer(scenes,&#32;buildPath,&#32;BuildTarget.WebGL,&#32;BuildOptions.None);
+<anchor xml:id="__build_script_8cs_source_1l00025"/>00025 
+<anchor xml:id="__build_script_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Build&#32;completed&#32;successfully&#32;to:&#32;{buildPath}&quot;</emphasis>);
+<anchor xml:id="__build_script_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__build_script_8cs_source_1l00028"/>00028 }
+</programlisting></section>

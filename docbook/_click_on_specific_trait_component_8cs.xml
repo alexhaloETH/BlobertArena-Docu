@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__click_on_specific_trait_component_8cs" xml:lang="en-US">
+<title>UI/Components/BlobertData/ClickOnSpecificTraitComponent.cs File Reference</title>
+<indexterm><primary>UI/Components/BlobertData/ClickOnSpecificTraitComponent.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_click_on_specific_trait_component">ClickOnSpecificTraitComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

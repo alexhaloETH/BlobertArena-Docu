@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_lobby_list_page_behaviour" xml:lang="en-US">
+<title>LobbyListPageBehaviour Class Reference</title>
+<indexterm><primary>LobbyListPageBehaviour</primary></indexterm>
+<para>
+
+<para>This should list all of the lobbies in their current states also should be able to update in real time. </para>
+ 
+</para>
+<para>Inheritance diagram for LobbyListPageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_lobby_list_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a">SpawnGameElement</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> gameId, GamesDataModel.GameStatus state)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1ae5fef42a35d9e628c5a0be30d1543721">AddGameEvent</link> (string key, <link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a1c48f78efb6d9ec3a9abdb25eb2a2dc3">UpdateGameEvent</link> (string key, GamesDataModel.GameStatus gameStatus)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a20e4727c2fd6238a2eac1649ce4c733c">ChangedSelectedBlob</link> (string blobId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1accb9cb526363994ead1276a4c46b6b20">GoToPage</link> (int index)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a8dfacc175137882be32e983c9bef3015">SetActiveBlobDex</link> (bool setActive)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a161bc73017786c30947ecda163db7e9b">DeleteObject</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> gameId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a811dfd95b6130901e554624924452b9a">SortMenuToggle</link> (bool state)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1ad19574f0477f6097a45940b5d9c2016f">SortingToggle</link> (int bit)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1a7613db7e405ab8ef24d1dc4e76bc3d96">SayNoToInvite</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a34f1220de8b0605e6a402e8c1e18f1c6">OnChainTransactionCallbackFunctionSN</link> (string response)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1ac147c3e3e437d7e0e33338f18eed0332">SayYesToInvite</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a358d928da408ab668a59adbb0b207747">OnChainTransactionCallbackFunctionSY</link> (string response)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1ae5df6dadeb8ef9db5c488350db86e228">CancelSentInvite</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a4bb9fa47fe82982da6e76d2ea891c3f3">OnChainTransactionCallbackFunctionCSI</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1aee6c0eb42fb78a7b909e6957f2e95617">AdminStartGameCall</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a91e89497d249fed6c98b5d6434d13058">OnChainTransactionCallbackFunctionSG</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1a2c6c76319d6624187e9e7fc4753a9591">AdminLeaveLobby</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1a0626658b95081ded08f0155a5013863a">OnChainTransactionCallbackFunctionALL</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_lobby_list_page_behaviour_1a9eece0d1cfb7c6dc29afd4c7ac166b93">UserCloseLobby</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_lobby_list_page_behaviour_1ad3369a3282122c6498fa5bf80592746c">OnChainTransactionCallbackFunctionUCL</link> (string transactionHash)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This should list all of the lobbies in their current states also should be able to update in real time. </para>
+
+
+
+<para>all the logic for this should be moved to the logic layer and should only receives updates from events </para>
+<para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00014">14</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_lobby_list_page_behaviour_1ae5fef42a35d9e628c5a0be30d1543721"/><section>
+    <title>AddGameEvent()</title>
+<indexterm><primary>AddGameEvent</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>AddGameEvent</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.AddGameEvent (string key, <link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00158">158</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a2c6c76319d6624187e9e7fc4753a9591"/><section>
+    <title>AdminLeaveLobby()</title>
+<indexterm><primary>AdminLeaveLobby</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>AdminLeaveLobby</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.AdminLeaveLobby (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00373">373</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1aee6c0eb42fb78a7b909e6957f2e95617"/><section>
+    <title>AdminStartGameCall()</title>
+<indexterm><primary>AdminStartGameCall</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>AdminStartGameCall</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.AdminStartGameCall (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00357">357</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1ae5df6dadeb8ef9db5c488350db86e228"/><section>
+    <title>CancelSentInvite()</title>
+<indexterm><primary>CancelSentInvite</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>CancelSentInvite</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.CancelSentInvite (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00343">343</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a20e4727c2fd6238a2eac1649ce4c733c"/><section>
+    <title>ChangedSelectedBlob()</title>
+<indexterm><primary>ChangedSelectedBlob</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>ChangedSelectedBlob</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.ChangedSelectedBlob (string blobId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00178">178</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a161bc73017786c30947ecda163db7e9b"/><section>
+    <title>DeleteObject()</title>
+<indexterm><primary>DeleteObject</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>DeleteObject</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.DeleteObject (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> gameId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00211">211</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1accb9cb526363994ead1276a4c46b6b20"/><section>
+    <title>GoToPage()</title>
+<indexterm><primary>GoToPage</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>GoToPage</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.GoToPage (int index)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00183">183</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a0626658b95081ded08f0155a5013863a"/><section>
+    <title>OnChainTransactionCallbackFunctionALL()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionALL</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionALL</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.OnChainTransactionCallbackFunctionALL (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00382">382</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a4bb9fa47fe82982da6e76d2ea891c3f3"/><section>
+    <title>OnChainTransactionCallbackFunctionCSI()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionCSI</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionCSI</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.OnChainTransactionCallbackFunctionCSI (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00352">352</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a91e89497d249fed6c98b5d6434d13058"/><section>
+    <title>OnChainTransactionCallbackFunctionSG()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionSG</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionSG</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.OnChainTransactionCallbackFunctionSG (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00368">368</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a34f1220de8b0605e6a402e8c1e18f1c6"/><section>
+    <title>OnChainTransactionCallbackFunctionSN()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionSN</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionSN</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.OnChainTransactionCallbackFunctionSN (string response)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00318">318</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a358d928da408ab668a59adbb0b207747"/><section>
+    <title>OnChainTransactionCallbackFunctionSY()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionSY</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionSY</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.OnChainTransactionCallbackFunctionSY (string response)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00338">338</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1ad3369a3282122c6498fa5bf80592746c"/><section>
+    <title>OnChainTransactionCallbackFunctionUCL()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionUCL</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>OnChainTransactionCallbackFunctionUCL</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.OnChainTransactionCallbackFunctionUCL (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00396">396</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a7613db7e405ab8ef24d1dc4e76bc3d96"/><section>
+    <title>SayNoToInvite()</title>
+<indexterm><primary>SayNoToInvite</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>SayNoToInvite</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.SayNoToInvite (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00309">309</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1ac147c3e3e437d7e0e33338f18eed0332"/><section>
+    <title>SayYesToInvite()</title>
+<indexterm><primary>SayYesToInvite</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>SayYesToInvite</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.SayYesToInvite (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00324">324</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a8dfacc175137882be32e983c9bef3015"/><section>
+    <title>SetActiveBlobDex()</title>
+<indexterm><primary>SetActiveBlobDex</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>SetActiveBlobDex</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.SetActiveBlobDex (bool setActive)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00197">197</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1ad19574f0477f6097a45940b5d9c2016f"/><section>
+    <title>SortingToggle()</title>
+<indexterm><primary>SortingToggle</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>SortingToggle</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.SortingToggle (int bit)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00223">223</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a811dfd95b6130901e554624924452b9a"/><section>
+    <title>SortMenuToggle()</title>
+<indexterm><primary>SortMenuToggle</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>SortMenuToggle</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.SortMenuToggle (bool state)</computeroutput></para></section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a4b75b15ae9c4be59a81464671d19556a"/><section>
+    <title>SpawnGameElement()</title>
+<indexterm><primary>SpawnGameElement</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>SpawnGameElement</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.SpawnGameElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> gameId, GamesDataModel.GameStatus state)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00119">119</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a1c48f78efb6d9ec3a9abdb25eb2a2dc3"/><section>
+    <title>UpdateGameEvent()</title>
+<indexterm><primary>UpdateGameEvent</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>UpdateGameEvent</secondary></indexterm>
+<para><computeroutput>void LobbyListPageBehaviour.UpdateGameEvent (string key, GamesDataModel.GameStatus gameStatus)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00164">164</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_lobby_list_page_behaviour_1a9eece0d1cfb7c6dc29afd4c7ac166b93"/><section>
+    <title>UserCloseLobby()</title>
+<indexterm><primary>UserCloseLobby</primary><secondary>LobbyListPageBehaviour</secondary></indexterm>
+<indexterm><primary>LobbyListPageBehaviour</primary><secondary>UserCloseLobby</secondary></indexterm>
+<para><computeroutput>async void LobbyListPageBehaviour.UserCloseLobby (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId)</computeroutput></para><para>
+Definition at line <link linkend="__lobby_list_page_behaviour_8cs_source_1l00387">387</link> of file <link linkend="__lobby_list_page_behaviour_8cs_source">LobbyListPageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/LobbyView/<link linkend="__lobby_list_page_behaviour_8cs">LobbyListPageBehaviour.cs</link></section>
+</section>

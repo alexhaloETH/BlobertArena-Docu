@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_wallet_selector" xml:lang="en-US">
+<title>WalletSelector Class Reference</title>
+<indexterm><primary>WalletSelector</primary></indexterm>
+<para>
+
+<para>Class to manage the drop down wallet selector object. </para>
+ 
+</para>
+<para>Inheritance diagram for WalletSelector:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_wallet_selector.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0ba">WalletType</link> { <link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0baaff348f109bf581d37c90c393f0b87f9f">Cartridge</link> = 0
+, <link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0baac74b501b607a81f3311cee40f13453ef">Starknet</link> = 1
+, <link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0baa19be6c1d12a0a7211c5ee26817f873f5">Braavos</link> = 2
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0ba">WalletType</link> <link linkend="_class_wallet_selector_1a1be120006354db2701a99222347539db">GetCurrentWallet</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wallet_selector_1a4a1aebe82f62a470cc55f523fa8ea559">OnPointerClick</link> (PointerEventData eventData)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class to manage the drop down wallet selector object. </para>
+<para>
+Definition at line <link linkend="__wallet_selector_8cs_source_1l00009">9</link> of file <link linkend="__wallet_selector_8cs_source">WalletSelector.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0ba"/><section>
+    <title>WalletType</title>
+<indexterm><primary>WalletType</primary><secondary>WalletSelector</secondary></indexterm>
+<indexterm><primary>WalletSelector</primary><secondary>WalletType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0ba">WalletSelector.WalletType</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Cartridge</primary><secondary>WalletSelector</secondary></indexterm>
+<indexterm><primary>WalletSelector</primary><secondary>Cartridge</secondary></indexterm>
+<anchor xml:id="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0baaff348f109bf581d37c90c393f0b87f9f"/>Cartridge</entry><entry></entry></row><row><entry><indexterm><primary>Starknet</primary><secondary>WalletSelector</secondary></indexterm>
+<indexterm><primary>WalletSelector</primary><secondary>Starknet</secondary></indexterm>
+<anchor xml:id="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0baac74b501b607a81f3311cee40f13453ef"/>Starknet</entry><entry></entry></row><row><entry><indexterm><primary>Braavos</primary><secondary>WalletSelector</secondary></indexterm>
+<indexterm><primary>WalletSelector</primary><secondary>Braavos</secondary></indexterm>
+<anchor xml:id="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0baa19be6c1d12a0a7211c5ee26817f873f5"/>Braavos</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__wallet_selector_8cs_source_1l00011">11</link> of file <link linkend="__wallet_selector_8cs_source">WalletSelector.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_wallet_selector_1a1be120006354db2701a99222347539db"/><section>
+    <title>GetCurrentWallet()</title>
+<indexterm><primary>GetCurrentWallet</primary><secondary>WalletSelector</secondary></indexterm>
+<indexterm><primary>WalletSelector</primary><secondary>GetCurrentWallet</secondary></indexterm>
+<para><computeroutput><link linkend="_class_wallet_selector_1aa5f5af3ebfa358f5241a4e9bee4df0ba">WalletType</link> WalletSelector.GetCurrentWallet ( )</computeroutput></para><para>
+Definition at line <link linkend="__wallet_selector_8cs_source_1l00053">53</link> of file <link linkend="__wallet_selector_8cs_source">WalletSelector.cs</link>.</para>
+</section>
+<anchor xml:id="_class_wallet_selector_1a4a1aebe82f62a470cc55f523fa8ea559"/><section>
+    <title>OnPointerClick()</title>
+<indexterm><primary>OnPointerClick</primary><secondary>WalletSelector</secondary></indexterm>
+<indexterm><primary>WalletSelector</primary><secondary>OnPointerClick</secondary></indexterm>
+<para><computeroutput>void WalletSelector.OnPointerClick (PointerEventData eventData)</computeroutput></para><para>
+Definition at line <link linkend="__wallet_selector_8cs_source_1l00058">58</link> of file <link linkend="__wallet_selector_8cs_source">WalletSelector.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__wallet_selector_8cs">WalletSelector.cs</link></section>
+</section>

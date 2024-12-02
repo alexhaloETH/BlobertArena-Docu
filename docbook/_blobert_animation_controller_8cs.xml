@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blobert_animation_controller_8cs" xml:lang="en-US">
+<title>UI/Components/AnimationComponents/BlobertAnimationController.cs File Reference</title>
+<indexterm><primary>UI/Components/AnimationComponents/BlobertAnimationController.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">BlobertAnimationController</emphasis></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">BlobertAnimationController.AnimationDataTraitBlobert</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link> = System.Random</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b"/><section>
+    <title>Random</title>
+<indexterm><primary>Random</primary><secondary>BlobertAnimationController.cs</secondary></indexterm>
+<indexterm><primary>BlobertAnimationController.cs</primary><secondary>Random</secondary></indexterm>
+<para><computeroutput>using <link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link> = System.Random</computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00005">5</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+</section>
+</section>

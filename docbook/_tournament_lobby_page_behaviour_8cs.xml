@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__tournament_lobby_page_behaviour_8cs" xml:lang="en-US">
+<title>UI/Pages/TournamentLobbyPageBehaviour.cs File Reference</title>
+<indexterm><primary>UI/Pages/TournamentLobbyPageBehaviour.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_tournament_lobby_page_behaviour">TournamentLobbyPageBehaviour</link></para>
+
+<para>This shouldnt exist, this is the same as the otherlobby page just the background and some other basic stuff is changed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

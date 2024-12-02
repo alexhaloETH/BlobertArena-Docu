@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sound_vocals" xml:lang="en-US">
+<title>SoundVocals Class Reference</title>
+<indexterm><primary>SoundVocals</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">AudioEffects.Vocals</link> <link linkend="_class_sound_vocals_1a56c4412a2521475524aaa4421df10965">Vocal</link></para>
+</listitem>
+            <listitem><para>AudioClip <link linkend="_class_sound_vocals_1a6ee596cd2564ea387258c01113cc93b3">Clip</link></para>
+</listitem>
+            <listitem><para>AudioSource <link linkend="_class_sound_vocals_1a453b5f621c631c469aa0281680168b39">Source</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__sound_vocals_8cs_source_1l00006">6</link> of file <link linkend="__sound_vocals_8cs_source">SoundVocals.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_sound_vocals_1a6ee596cd2564ea387258c01113cc93b3"/><section>
+    <title>Clip</title>
+<indexterm><primary>Clip</primary><secondary>SoundVocals</secondary></indexterm>
+<indexterm><primary>SoundVocals</primary><secondary>Clip</secondary></indexterm>
+<para><computeroutput>AudioClip SoundVocals.Clip</computeroutput></para><para>
+Definition at line <link linkend="__sound_vocals_8cs_source_1l00009">9</link> of file <link linkend="__sound_vocals_8cs_source">SoundVocals.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_vocals_1a453b5f621c631c469aa0281680168b39"/><section>
+    <title>Source</title>
+<indexterm><primary>Source</primary><secondary>SoundVocals</secondary></indexterm>
+<indexterm><primary>SoundVocals</primary><secondary>Source</secondary></indexterm>
+<para><computeroutput>AudioSource SoundVocals.Source</computeroutput></para><para>
+Definition at line <link linkend="__sound_vocals_8cs_source_1l00012">12</link> of file <link linkend="__sound_vocals_8cs_source">SoundVocals.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_vocals_1a56c4412a2521475524aaa4421df10965"/><section>
+    <title>Vocal</title>
+<indexterm><primary>Vocal</primary><secondary>SoundVocals</secondary></indexterm>
+<indexterm><primary>SoundVocals</primary><secondary>Vocal</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">AudioEffects.Vocals</link> SoundVocals.Vocal</computeroutput></para><para>
+Definition at line <link linkend="__sound_vocals_8cs_source_1l00008">8</link> of file <link linkend="__sound_vocals_8cs_source">SoundVocals.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Misc/<link linkend="__sound_vocals_8cs">SoundVocals.cs</link></section>
+</section>

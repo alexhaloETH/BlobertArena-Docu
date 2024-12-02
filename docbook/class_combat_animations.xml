@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combat_animations" xml:lang="en-US">
+<title>CombatAnimations Class Reference</title>
+<indexterm><primary>CombatAnimations</primary></indexterm>
+<para>Inheritance diagram for CombatAnimations:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_combat_animations.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdb">AnimationTypes</link> { <link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdbae599161956d626eda4cb0a5ffb85271c">Idle</link> = 0
+, <link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdba27e9c0d7972e999a5bbe094c4cede584">Stun</link> = 1
+, <link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdba1b5cbfa80e024bc4420b5a2af0e6fc79">Shaken</link> = 2
+, <link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdbacc3b72d79006b9b02571c1974f08244d">Angry</link> = 3
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadb">BlobertTraits</link> { <link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba4a18312b5b75f549d5551e5912ad6ebf">Mask</link> = 0
+, <link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba865800a9e29599ad35eadc572c4ff5a6">Armour</link> = 1
+, <link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba565631402af79df42f22a117b0d6f1a5">Jewelry</link> = 2
+, <link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba18c83669920215a818638ad0e5421e4b">Weapon</link> = 3
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_combat_animations_1aa0dd294d2ad6969316ac803ae7f07ee5">PlayAnimation</link> (<link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdb">AnimationTypes</link> animationType, bool forcePlay=false)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_animations_1a0e58e8ed3ce8b11f30df3b5fc2bcf0e0">ToggleAuraEffect</link> (bool toggle)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_animations_1a5a6a6dd7a2e06dc18349a330fd91b152">ToggleStunEffect</link> (bool toggle)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_animations_1ac1864f28311165dd3b5cbd90c2538240">UpdateTilemaps</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_animations_1a3e7290fb0581dff9ff3710bca65bfd03">SetStartingTile</link> (<link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadb">BlobertTraits</link> trait, int tileIndex)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_animations_1aede355fcf45ce1b4447a2be2a6c58b7f">SetTileDelta</link> (int delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_animations_1a80cddf805d6a40f03ec404721e051995">IncrementFrameDelta</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00005">5</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdb"/><section>
+    <title>AnimationTypes</title>
+<indexterm><primary>AnimationTypes</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>AnimationTypes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdb">CombatAnimations.AnimationTypes</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Idle</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Idle</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdbae599161956d626eda4cb0a5ffb85271c"/>Idle</entry><entry></entry></row><row><entry><indexterm><primary>Stun</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Stun</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdba27e9c0d7972e999a5bbe094c4cede584"/>Stun</entry><entry></entry></row><row><entry><indexterm><primary>Shaken</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Shaken</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdba1b5cbfa80e024bc4420b5a2af0e6fc79"/>Shaken</entry><entry></entry></row><row><entry><indexterm><primary>Angry</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Angry</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdbacc3b72d79006b9b02571c1974f08244d"/>Angry</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00007">7</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadb"/><section>
+    <title>BlobertTraits</title>
+<indexterm><primary>BlobertTraits</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>BlobertTraits</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadb">CombatAnimations.BlobertTraits</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Mask</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Mask</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba4a18312b5b75f549d5551e5912ad6ebf"/>Mask</entry><entry></entry></row><row><entry><indexterm><primary>Armour</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Armour</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba865800a9e29599ad35eadc572c4ff5a6"/>Armour</entry><entry></entry></row><row><entry><indexterm><primary>Jewelry</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Jewelry</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba565631402af79df42f22a117b0d6f1a5"/>Jewelry</entry><entry></entry></row><row><entry><indexterm><primary>Weapon</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>Weapon</secondary></indexterm>
+<anchor xml:id="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadba18c83669920215a818638ad0e5421e4b"/>Weapon</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00015">15</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_combat_animations_1a80cddf805d6a40f03ec404721e051995"/><section>
+    <title>IncrementFrameDelta()</title>
+<indexterm><primary>IncrementFrameDelta</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>IncrementFrameDelta</secondary></indexterm>
+<para><computeroutput>void CombatAnimations.IncrementFrameDelta ( )</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00210">210</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1aa0dd294d2ad6969316ac803ae7f07ee5"/><section>
+    <title>PlayAnimation()</title>
+<indexterm><primary>PlayAnimation</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>PlayAnimation</secondary></indexterm>
+<para><computeroutput>bool CombatAnimations.PlayAnimation (<link linkend="_class_combat_animations_1ae8ea60cc0266b3d632806d114ea02fdb">AnimationTypes</link> animationType, bool forcePlay = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00092">92</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1a3e7290fb0581dff9ff3710bca65bfd03"/><section>
+    <title>SetStartingTile()</title>
+<indexterm><primary>SetStartingTile</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>SetStartingTile</secondary></indexterm>
+<para><computeroutput>void CombatAnimations.SetStartingTile (<link linkend="_class_combat_animations_1abec35ed3f011b525b65168a8e4bbdadb">BlobertTraits</link> trait, int tileIndex)</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00199">199</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1aede355fcf45ce1b4447a2be2a6c58b7f"/><section>
+    <title>SetTileDelta()</title>
+<indexterm><primary>SetTileDelta</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>SetTileDelta</secondary></indexterm>
+<para><computeroutput>void CombatAnimations.SetTileDelta (int delta)</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00204">204</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1a0e58e8ed3ce8b11f30df3b5fc2bcf0e0"/><section>
+    <title>ToggleAuraEffect()</title>
+<indexterm><primary>ToggleAuraEffect</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>ToggleAuraEffect</secondary></indexterm>
+<para><computeroutput>void CombatAnimations.ToggleAuraEffect (bool toggle)</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00166">166</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1a5a6a6dd7a2e06dc18349a330fd91b152"/><section>
+    <title>ToggleStunEffect()</title>
+<indexterm><primary>ToggleStunEffect</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>ToggleStunEffect</secondary></indexterm>
+<para><computeroutput>void CombatAnimations.ToggleStunEffect (bool toggle)</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00171">171</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_animations_1ac1864f28311165dd3b5cbd90c2538240"/><section>
+    <title>UpdateTilemaps()</title>
+<indexterm><primary>UpdateTilemaps</primary><secondary>CombatAnimations</secondary></indexterm>
+<indexterm><primary>CombatAnimations</primary><secondary>UpdateTilemaps</secondary></indexterm>
+<para><computeroutput>void CombatAnimations.UpdateTilemaps ( )</computeroutput></para><para>
+Definition at line <link linkend="__combat_animations_8cs_source_1l00176">176</link> of file <link linkend="__combat_animations_8cs_source">CombatAnimations.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+<link linkend="__combat_animations_8cs">CombatAnimations.cs</link></section>
+</section>

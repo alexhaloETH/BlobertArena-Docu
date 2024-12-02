@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_bf713d775dff6520089cbe377979acea" xml:lang="en-US">
+<title>UI/Pages/SendInvite Directory Reference</title>
+<indexterm><primary>UI/Pages/SendInvite Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__send_invite_page_behaviour_8cs">SendInvitePageBehaviour.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

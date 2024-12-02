@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_menu" xml:lang="en-US">
+<title>Menu Class Reference</title>
+<indexterm><primary>Menu</primary></indexterm>
+<para>Inheritance diagram for Menu:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_menu.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__menu_8cs_source_1l00003">3</link> of file <link linkend="__menu_8cs_source">Menu.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_menu_1a15daf00810e65859923cc5e30147b840"/><section>
+    <title>Close()</title>
+<indexterm><primary>Close</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>Close</secondary></indexterm>
+<para><computeroutput>virtual void Menu.Close ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__menu_8cs_source_1l00015">15</link> of file <link linkend="__menu_8cs_source">Menu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_1a70dee27069171493755a9a9a52fce15c"/><section>
+    <title>Open()</title>
+<indexterm><primary>Open</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>Open</secondary></indexterm>
+<para><computeroutput>virtual void Menu.Open ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__menu_8cs_source_1l00009">9</link> of file <link linkend="__menu_8cs_source">Menu.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_menu_1a723939c7a0b7722ac226634e132c71b6"/><section>
+    <title>MenuName</title>
+<indexterm><primary>MenuName</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>MenuName</secondary></indexterm>
+<para><computeroutput>string Menu.MenuName = &quot;&quot;</computeroutput></para><para>
+Definition at line <link linkend="__menu_8cs_source_1l00007">7</link> of file <link linkend="__menu_8cs_source">Menu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_1ae111044c97e3a295f702dce3f6186b69"/><section>
+    <title>open</title>
+<indexterm><primary>open</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>open</secondary></indexterm>
+<para><computeroutput>bool Menu.open</computeroutput></para><para>
+Definition at line <link linkend="__menu_8cs_source_1l00005">5</link> of file <link linkend="__menu_8cs_source">Menu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_menu_1a7552b33addd9704b62183b04e5580d6a"/><section>
+    <title>returnable</title>
+<indexterm><primary>returnable</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>returnable</secondary></indexterm>
+<para><computeroutput>bool Menu.returnable = true</computeroutput></para><para>
+Definition at line <link linkend="__menu_8cs_source_1l00006">6</link> of file <link linkend="__menu_8cs_source">Menu.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/<link linkend="__menu_8cs">Menu.cs</link></section>
+</section>

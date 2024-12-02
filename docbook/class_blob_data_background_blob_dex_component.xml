@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blob_data_background_blob_dex_component" xml:lang="en-US">
+<title>BlobDataBackgroundBlobDexComponent Class Reference</title>
+<indexterm><primary>BlobDataBackgroundBlobDexComponent</primary></indexterm>
+<para>
+
+<para>Sets the background of the blob data component. </para>
+ 
+</para>
+<para>Inheritance diagram for BlobDataBackgroundBlobDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blob_data_background_blob_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link> { <link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806">Self</link>
+, <link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e">Enemy</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">SetBackground</link> (<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link> type)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Sets the background of the blob data component. </para>
+<para>
+Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00007">7</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2"/><section>
+    <title>BackgroundType</title>
+<indexterm><primary>BackgroundType</primary><secondary>BlobDataBackgroundBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobDataBackgroundBlobDexComponent</primary><secondary>BackgroundType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BlobDataBackgroundBlobDexComponent.BackgroundType</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Self</primary><secondary>BlobDataBackgroundBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobDataBackgroundBlobDexComponent</primary><secondary>Self</secondary></indexterm>
+<anchor xml:id="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806"/>Self</entry><entry></entry></row><row><entry><indexterm><primary>Enemy</primary><secondary>BlobDataBackgroundBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobDataBackgroundBlobDexComponent</primary><secondary>Enemy</secondary></indexterm>
+<anchor xml:id="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e"/>Enemy</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00009">9</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d"/><section>
+    <title>SetBackground()</title>
+<indexterm><primary>SetBackground</primary><secondary>BlobDataBackgroundBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobDataBackgroundBlobDexComponent</primary><secondary>SetBackground</secondary></indexterm>
+<para><computeroutput>void BlobDataBackgroundBlobDexComponent.SetBackground (<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link> type)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00035">35</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__blob_data_background_blob_dex_component_8cs">BlobDataBackgroundBlobDexComponent.cs</link></section>
+</section>

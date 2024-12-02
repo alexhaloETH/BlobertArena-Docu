@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__quick_leader_board_component_8cs_source" xml:lang="en-US">
+<title>QuickLeaderBoardComponent.cs</title>
+<indexterm><primary>UI/Components/QuickLeaderBoard/QuickLeaderBoardComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__quick_leader_board_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Linq;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>static&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00007"/>00007 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00008"/><link linkend="_class_quick_leader_board_component">00008</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_quick_leader_board_component">QuickLeaderBoardComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00009"/>00009 {
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00010"/><link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_quick_leadear_board_element">QuickLeadearBoardElement</link>[]&#32;<link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link>;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00011"/>00011 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_PanelStartPos;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;m_PanelHiddenPos;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00014"/>00014 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PanelStartPos&#32;=&#32;transform.localPosition;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_PanelHiddenPos&#32;=&#32;transform.localPosition&#32;+&#32;(transform.right&#32;*&#32;gameObject.GetComponent&lt;RectTransform&gt;().rect.width&#32;*&#32;2);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00020"/>00020 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ToggleQuickLeaderboardPanel(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00024"/>00024 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;leaderBoardPlacement&#32;=&#32;(await&#32;<link linkend="_class_pv_p_challenge_score">PvPChallengeScore</link>.<link linkend="_class_pv_p_challenge_score_1a1eb84f60170fac6d94f9c23ba9b0e0ba">QueryLeaderBoardForCollection</link>(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(<emphasis role="stringliteral">&quot;0x41dfa4244f54a075ad9f42768aa54879f496aefabc661cc11b8c5bdec215640&quot;</emphasis>))).ToList();
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00026"/>00026 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;positionIndex&#32;=&#32;0;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;leaderBoardPlacement.Count&#32;&amp;&amp;&#32;positionIndex&#32;&lt;&#32;<link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link>.Length;&#32;i++)
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobertData&#32;=&#32;(ArcadeBlobert)WorldDataModel.AllPlayableCharactersInTheGame[leaderBoardPlacement[i].tokenId.Hex()];
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00031"/>00031 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link>[positionIndex].<link linkend="_class_quick_leadear_board_element_1a18010faa506db9abce51dbc11e220b92">InitializeElement</link>(blobertData,&#32;leaderBoardPlacement[i].Item2);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link>[positionIndex].gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;positionIndex++;
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00036"/>00036 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(positionIndex&#32;&lt;&#32;1)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00038"/>00038 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;positionIndex;&#32;j&#32;&lt;&#32;<link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link>.Length;&#32;j++)
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link>[j].gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00043"/>00043 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ToggleQuickLeaderboardPanel(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00046"/>00046 
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ToggleQuickLeaderboardPanel(<emphasis role="keywordtype">bool</emphasis>&#32;toggle)
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;transform.localPosition&#32;=&#32;(toggle&#32;?&#32;m_PanelStartPos&#32;:&#32;m_PanelHiddenPos);
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__quick_leader_board_component_8cs_source_1l00051"/>00051 }
+</programlisting></section>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_quick_leader_board_component" xml:lang="en-US">
+<title>QuickLeaderBoardComponent Class Reference</title>
+<indexterm><primary>QuickLeaderBoardComponent</primary></indexterm>
+<para>Inheritance diagram for QuickLeaderBoardComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_quick_leader_board_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_quick_leadear_board_element">QuickLeadearBoardElement</link>[] <link linkend="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd">positions</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00008">8</link> of file <link linkend="__quick_leader_board_component_8cs_source">QuickLeaderBoardComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_quick_leader_board_component_1a8932242d05f6c0d5e5bc29c634ac8abd"/><section>
+    <title>positions</title>
+<indexterm><primary>positions</primary><secondary>QuickLeaderBoardComponent</secondary></indexterm>
+<indexterm><primary>QuickLeaderBoardComponent</primary><secondary>positions</secondary></indexterm>
+<para><computeroutput><link linkend="_class_quick_leadear_board_element">QuickLeadearBoardElement</link> [] QuickLeaderBoardComponent.positions</computeroutput></para><para>
+Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00010">10</link> of file <link linkend="__quick_leader_board_component_8cs_source">QuickLeaderBoardComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/QuickLeaderBoard/<link linkend="__quick_leader_board_component_8cs">QuickLeaderBoardComponent.cs</link></section>
+</section>

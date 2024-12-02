@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_audio_manager" xml:lang="en-US">
+<title>AudioManager Class Reference</title>
+<indexterm><primary>AudioManager</primary></indexterm>
+<para>
+
+<para>Manager class for both music and audio effects (SINGLETON) </para>
+ 
+</para>
+<para>Inheritance diagram for AudioManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_audio_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034">PlayMusic</link> (<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">AudioEffects.Music</link> clip, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">AudioEffects.Music</link> loopAudio=<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfab50339a10e1de285ac99d4c3990b8693">AudioEffects.Music.NONE</link>)</para>
+
+<para>Playing the music provided by the first parameter. If a second parameter is provided, once the first clip is done playing, the second clip will start immediately. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audio_manager_1add05f438dc5539268686059b3515afa2">SetMusicVolume</link> (float volume)</para>
+
+<para>Sets the music volume (0-100) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audio_manager_1a991b1f8c657562e6581bb3269673ef61">SetEffectsVolume</link> (float volume)</para>
+
+<para>Sets the effects volume (0-100) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5">PlayEffect</link> (<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">AudioEffects.Effects</link> effect)</para>
+
+<para>Plays a one-shot <link linkend="_class_sound">Sound</link> <link linkend="_struct_effect">Effect</link>. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a8e228a27a7585498802ae37c4ebf6e77">PlayVocal</link> (<link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">AudioEffects.Vocals</link> vocal)</para>
+
+<para>Plays a one-shot Vocal effect. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a757c769ea35a476dfcf6c36799f97524">PlayCombatCommon</link> (<link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770ee">AudioEffects.CombatCommon</link> effect)</para>
+
+<para>Plays a one-shot Common Combat effect. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a52d45840e617a16e41c00f546312bcf8">PlayCombatSpecial</link> (<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">AudioEffects.CombatSpecial</link> effect)</para>
+
+<para>Plays a one-shot Special (AMMA) Combat effect. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1adeee63c2f8187e7219adadd594965d84">PlayCombatBlobArena</link> (<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">AudioEffects.CombatBlobArena</link> effect)</para>
+
+<para>Plays a one-shot BlobArena Combat effect. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a9cee78cace2f158331e2efce4897ebda">PlayCombatBlobArena</link> (int index)</para>
+
+<para>Plays a one-shot BlobArena Combat effect. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a77dc0e04f1f6cbf4eaf2fc38aeb4cc11">MuteVolume</link> ()</para>
+
+<para>Mute/Unmute all audio. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a5042c01c2fec5d64e707886f1b949511">OnMainMenuStartGamePressed</link> ()</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_audio_manager_1a98db96b858551653d96a1e2a2e01ada5">OnThemeSwitchButtonPressed</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_audio_manager">AudioManager</link> <link linkend="_class_audio_manager_1af96f8bc4f9a0ad3f1a63a028bb31f790">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">MusicVolume</link> = 0.75f<computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link> = 0.75f<computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manager class for both music and audio effects (SINGLETON) </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00139">139</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_audio_manager_1a77dc0e04f1f6cbf4eaf2fc38aeb4cc11"/><section>
+    <title>MuteVolume()</title>
+<indexterm><primary>MuteVolume</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>MuteVolume</secondary></indexterm>
+<para><computeroutput>static void AudioManager.MuteVolume ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Mute/Unmute all audio. </para>
+</para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00403">403</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a5042c01c2fec5d64e707886f1b949511"/><section>
+    <title>OnMainMenuStartGamePressed()</title>
+<indexterm><primary>OnMainMenuStartGamePressed</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>OnMainMenuStartGamePressed</secondary></indexterm>
+<para><computeroutput>static void AudioManager.OnMainMenuStartGamePressed ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00437">437</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a98db96b858551653d96a1e2a2e01ada5"/><section>
+    <title>OnThemeSwitchButtonPressed()</title>
+<indexterm><primary>OnThemeSwitchButtonPressed</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>OnThemeSwitchButtonPressed</secondary></indexterm>
+<para><computeroutput>static void AudioManager.OnThemeSwitchButtonPressed ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00447">447</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1adeee63c2f8187e7219adadd594965d84"/><section>
+    <title>PlayCombatBlobArena()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>PlayCombatBlobArena</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayCombatBlobArena</secondary></indexterm>
+<para><computeroutput>static void AudioManager.PlayCombatBlobArena (<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">AudioEffects.CombatBlobArena</link> effect)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Plays a one-shot BlobArena Combat effect. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>effect</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00320">320</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a9cee78cace2f158331e2efce4897ebda"/><section>
+    <title>PlayCombatBlobArena()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>PlayCombatBlobArena</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayCombatBlobArena</secondary></indexterm>
+<para><computeroutput>static void AudioManager.PlayCombatBlobArena (int index)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Plays a one-shot BlobArena Combat effect. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00329">329</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a757c769ea35a476dfcf6c36799f97524"/><section>
+    <title>PlayCombatCommon()</title>
+<indexterm><primary>PlayCombatCommon</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayCombatCommon</secondary></indexterm>
+<para><computeroutput>static void AudioManager.PlayCombatCommon (<link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770ee">AudioEffects.CombatCommon</link> effect)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Plays a one-shot Common Combat effect. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>effect</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00302">302</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a52d45840e617a16e41c00f546312bcf8"/><section>
+    <title>PlayCombatSpecial()</title>
+<indexterm><primary>PlayCombatSpecial</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayCombatSpecial</secondary></indexterm>
+<para><computeroutput>static void AudioManager.PlayCombatSpecial (<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">AudioEffects.CombatSpecial</link> effect)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Plays a one-shot Special (AMMA) Combat effect. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>effect</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00311">311</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5"/><section>
+    <title>PlayEffect()</title>
+<indexterm><primary>PlayEffect</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayEffect</secondary></indexterm>
+<para><computeroutput>static void AudioManager.PlayEffect (<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">AudioEffects.Effects</link> effect)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Plays a one-shot <link linkend="_class_sound">Sound</link> <link linkend="_struct_effect">Effect</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>effect</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00284">284</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034"/><section>
+    <title>PlayMusic()</title>
+<indexterm><primary>PlayMusic</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayMusic</secondary></indexterm>
+<para><computeroutput>void AudioManager.PlayMusic (<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">AudioEffects.Music</link> clip, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">AudioEffects.Music</link> loopAudio = <computeroutput><link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfab50339a10e1de285ac99d4c3990b8693">AudioEffects::Music::NONE</link></computeroutput>
+)</computeroutput></para><para>
+
+<para>Playing the music provided by the first parameter. If a second parameter is provided, once the first clip is done playing, the second clip will start immediately. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clip</entry><entry>
+<para>The first audio clip to play</para>
+</entry>
+                            </row>
+                            <row>
+<entry>loopAudio</entry><entry>
+<para>Optional, the second clip to play once the first is over</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00271">271</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a8e228a27a7585498802ae37c4ebf6e77"/><section>
+    <title>PlayVocal()</title>
+<indexterm><primary>PlayVocal</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>PlayVocal</secondary></indexterm>
+<para><computeroutput>static void AudioManager.PlayVocal (<link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">AudioEffects.Vocals</link> vocal)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Plays a one-shot Vocal effect. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>vocal</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00293">293</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a991b1f8c657562e6581bb3269673ef61"/><section>
+    <title>SetEffectsVolume()</title>
+<indexterm><primary>SetEffectsVolume</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>SetEffectsVolume</secondary></indexterm>
+<para><computeroutput>void AudioManager.SetEffectsVolume (float volume)</computeroutput></para><para>
+
+<para>Sets the effects volume (0-100) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>volume</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00368">368</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1add05f438dc5539268686059b3515afa2"/><section>
+    <title>SetMusicVolume()</title>
+<indexterm><primary>SetMusicVolume</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>SetMusicVolume</secondary></indexterm>
+<para><computeroutput>void AudioManager.SetMusicVolume (float volume)</computeroutput></para><para>
+
+<para>Sets the music volume (0-100) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>volume</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00352">352</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7"/><section>
+    <title>EffectsVolume</title>
+<indexterm><primary>EffectsVolume</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>EffectsVolume</secondary></indexterm>
+<para><computeroutput>float AudioManager.EffectsVolume = 0.75f<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00178">178</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1af96f8bc4f9a0ad3f1a63a028bb31f790"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_audio_manager">AudioManager</link> AudioManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00143">143</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df"/><section>
+    <title>MusicVolume</title>
+<indexterm><primary>MusicVolume</primary><secondary>AudioManager</secondary></indexterm>
+<indexterm><primary>AudioManager</primary><secondary>MusicVolume</secondary></indexterm>
+<para><computeroutput>float AudioManager.MusicVolume = 0.75f<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00177">177</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Singletons/<link linkend="__audio_manager_8cs">AudioManager.cs</link></section>
+</section>

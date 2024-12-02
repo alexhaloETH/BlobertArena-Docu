@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pvp_admin_actions_contract_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Transactions/PvpAdminActionsContract.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Transactions/PvpAdminActionsContract.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">PvpAdminActionsContract</emphasis></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct">PvpAdminActionsContract.CreateChallengeStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pvp_admin_actions_contract_1_1_set_winner_struct">PvpAdminActionsContract.SetWinnerStruct</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

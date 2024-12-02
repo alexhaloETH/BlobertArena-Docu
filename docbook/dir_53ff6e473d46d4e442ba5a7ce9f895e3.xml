@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_53ff6e473d46d4e442ba5a7ce9f895e3" xml:lang="en-US">
+<title>UI Directory Reference</title>
+<indexterm><primary>UI Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_f9e71e1ea53db1e9c2609977e47ae656">Components</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_3419bb6ed8c407259939c67ca91f84e3">Elements</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_752681c7d19d65e3cb085c5b723ef8d6">Interfaces</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_3deb23fbdb8641c71368a3fb1bae8163">Pages</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__menu_8cs">Menu.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__menu_manager_8cs">MenuManager.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__typewriter_8cs">Typewriter.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ui_state_manager_8cs">UiStateManager.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

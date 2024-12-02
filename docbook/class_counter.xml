@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_counter" xml:lang="en-US">
+<title>Counter Class Reference</title>
+<indexterm><primary>Counter</primary></indexterm>
+<para>
+
+<para>Class to manage a simple counter object. </para>
+ 
+</para>
+<para>Inheritance diagram for Counter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_counter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_counter_1a426e89971a6cb4e98284d38b67bdf4b8">OnMinusButtonClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_counter_1a4a40ee860a57bf4800efd1e152d78946">OnPlusButtonClicked</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_counter_1a1d9298c008e0921983ad1a378f0b8708">SetMinMaxValues</link> (int min, int max)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class to manage a simple counter object. </para>
+<para>
+Definition at line <link linkend="__counter_8cs_source_1l00010">10</link> of file <link linkend="__counter_8cs_source">Counter.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_counter_1a426e89971a6cb4e98284d38b67bdf4b8"/><section>
+    <title>OnMinusButtonClicked()</title>
+<indexterm><primary>OnMinusButtonClicked</primary><secondary>Counter</secondary></indexterm>
+<indexterm><primary>Counter</primary><secondary>OnMinusButtonClicked</secondary></indexterm>
+<para><computeroutput>void Counter.OnMinusButtonClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__counter_8cs_source_1l00044">44</link> of file <link linkend="__counter_8cs_source">Counter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_counter_1a4a40ee860a57bf4800efd1e152d78946"/><section>
+    <title>OnPlusButtonClicked()</title>
+<indexterm><primary>OnPlusButtonClicked</primary><secondary>Counter</secondary></indexterm>
+<indexterm><primary>Counter</primary><secondary>OnPlusButtonClicked</secondary></indexterm>
+<para><computeroutput>void Counter.OnPlusButtonClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__counter_8cs_source_1l00050">50</link> of file <link linkend="__counter_8cs_source">Counter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_counter_1a1d9298c008e0921983ad1a378f0b8708"/><section>
+    <title>SetMinMaxValues()</title>
+<indexterm><primary>SetMinMaxValues</primary><secondary>Counter</secondary></indexterm>
+<indexterm><primary>Counter</primary><secondary>SetMinMaxValues</secondary></indexterm>
+<para><computeroutput>bool Counter.SetMinMaxValues (int min, int max)</computeroutput></para><para>
+Definition at line <link linkend="__counter_8cs_source_1l00056">56</link> of file <link linkend="__counter_8cs_source">Counter.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__counter_8cs">Counter.cs</link></section>
+</section>

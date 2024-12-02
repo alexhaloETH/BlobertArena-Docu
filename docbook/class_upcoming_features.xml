@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_upcoming_features" xml:lang="en-US">
+<title>UpcomingFeatures Class Reference</title>
+<indexterm><primary>UpcomingFeatures</primary></indexterm>
+<para>
+
+<para>Manager class for the upcoming features game object. </para>
+ 
+</para>
+<para>Inheritance diagram for UpcomingFeatures:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_upcoming_features.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_upcoming_features_1a15cfeb6063601d7b4072d86be22bdbba">OnHeaderClicked</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manager class for the upcoming features game object. </para>
+<para>
+Definition at line <link linkend="__upcoming_features_8cs_source_1l00008">8</link> of file <link linkend="__upcoming_features_8cs_source">UpcomingFeatures.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_upcoming_features_1a15cfeb6063601d7b4072d86be22bdbba"/><section>
+    <title>OnHeaderClicked()</title>
+<indexterm><primary>OnHeaderClicked</primary><secondary>UpcomingFeatures</secondary></indexterm>
+<indexterm><primary>UpcomingFeatures</primary><secondary>OnHeaderClicked</secondary></indexterm>
+<para><computeroutput>void UpcomingFeatures.OnHeaderClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__upcoming_features_8cs_source_1l00039">39</link> of file <link linkend="__upcoming_features_8cs_source">UpcomingFeatures.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+<link linkend="__upcoming_features_8cs">UpcomingFeatures.cs</link></section>
+</section>

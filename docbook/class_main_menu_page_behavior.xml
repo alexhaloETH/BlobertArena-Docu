@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_main_menu_page_behavior" xml:lang="en-US">
+<title>MainMenuPageBehavior Class Reference</title>
+<indexterm><primary>MainMenuPageBehavior</primary></indexterm>
+<para>
+
+<para>Page that contains the 4 buttons, not much to do here, here we should for now load all the attacks of the characters, we do this because we know that when then game gets to the main menu theoeretically all the models should be loaded. </para>
+ 
+</para>
+<para>Inheritance diagram for MainMenuPageBehavior:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_main_menu_page_behavior.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_main_menu_page_behavior_1af075bf08fb000a1e87a040e9c2a27584">ToggleAboutPage</link> (bool toggle)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Page that contains the 4 buttons, not much to do here, here we should for now load all the attacks of the characters, we do this because we know that when then game gets to the main menu theoeretically all the models should be loaded. </para>
+
+
+
+<para>in the figma there is a leaderboard component, that should be called here </para>
+<para>
+Definition at line <link linkend="__main_menu_page_behavior_8cs_source_1l00013">13</link> of file <link linkend="__main_menu_page_behavior_8cs_source">MainMenuPageBehavior.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_main_menu_page_behavior_1af075bf08fb000a1e87a040e9c2a27584"/><section>
+    <title>ToggleAboutPage()</title>
+<indexterm><primary>ToggleAboutPage</primary><secondary>MainMenuPageBehavior</secondary></indexterm>
+<indexterm><primary>MainMenuPageBehavior</primary><secondary>ToggleAboutPage</secondary></indexterm>
+<para><computeroutput>void MainMenuPageBehavior.ToggleAboutPage (bool toggle)</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_page_behavior_8cs_source_1l00058">58</link> of file <link linkend="__main_menu_page_behavior_8cs_source">MainMenuPageBehavior.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/MainMenu/<link linkend="__main_menu_page_behavior_8cs">MainMenuPageBehavior.cs</link></section>
+</section>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_dojo_contract_communication_1_1_transaction_result" xml:lang="en-US">
+<title>DojoContractCommunication.TransactionResult Class Reference</title>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> { <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ea2d13df6f8b5e4c5af9f87e0dc39df69d">Pending</link>
+, <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ea505a83f220c02df2f85c3810cd9ceb38">Success</link>
+, <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ead7c8c85bf79bbe1b7188497c32c3b0ca">Failed</link>
+, <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ead37b1f6c0512e2118cee17fea015b699">Rejected</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a967ee9126777bf949c28d0c06a13fb1b">TransactionResult</link> (string transactionHash, <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> status, string entrypoint, string message)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a789c68f71c43d7747faf99ef9bcd5ae3">UpdateState</link> (<link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> status)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1acda9f44d30db8dcf36d0929ce056fd85">UpdateMessage</link> (string message)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a2e2fb47c942982af27dc1957b5adec3d">UpdateEntrypoint</link> (string entrypoint)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1acee4d6124fe5906c6fc273d09af65919">UpdateTransactionHash</link> (string transactionHash)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a274b29f427076c5da211bec4a648c57c">TransactionHash</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a5390ebac8af977502964a155048240ec">Status</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a50d615a6b5446417e43abec2fef0f413">Entrypoint</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a9e232476cccb11e2e373fde1e1074b26">Message</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00026">26</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e"/><section>
+    <title>StatusTransaction</title>
+<indexterm><primary>StatusTransaction</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>StatusTransaction</secondary></indexterm>
+<para><computeroutput>enum DojoContractCommunication.TransactionResult.StatusTransaction</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Pending</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Pending</secondary></indexterm>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ea2d13df6f8b5e4c5af9f87e0dc39df69d"/>Pending</entry><entry></entry></row><row><entry><indexterm><primary>Success</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Success</secondary></indexterm>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ea505a83f220c02df2f85c3810cd9ceb38"/>Success</entry><entry></entry></row><row><entry><indexterm><primary>Failed</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Failed</secondary></indexterm>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ead7c8c85bf79bbe1b7188497c32c3b0ca"/>Failed</entry><entry></entry></row><row><entry><indexterm><primary>Rejected</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Rejected</secondary></indexterm>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8ead37b1f6c0512e2118cee17fea015b699"/>Rejected</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00028">28</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a967ee9126777bf949c28d0c06a13fb1b"/><section>
+    <title>TransactionResult()</title>
+<indexterm><primary>TransactionResult</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>TransactionResult</secondary></indexterm>
+<para><computeroutput>DojoContractCommunication.TransactionResult.TransactionResult (string transactionHash, <link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> status, string entrypoint, string message)</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00041">41</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a2e2fb47c942982af27dc1957b5adec3d"/><section>
+    <title>UpdateEntrypoint()</title>
+<indexterm><primary>UpdateEntrypoint</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>UpdateEntrypoint</secondary></indexterm>
+<para><computeroutput>void DojoContractCommunication.TransactionResult.UpdateEntrypoint (string entrypoint)</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00060">60</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1acda9f44d30db8dcf36d0929ce056fd85"/><section>
+    <title>UpdateMessage()</title>
+<indexterm><primary>UpdateMessage</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>UpdateMessage</secondary></indexterm>
+<para><computeroutput>void DojoContractCommunication.TransactionResult.UpdateMessage (string message)</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00055">55</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a789c68f71c43d7747faf99ef9bcd5ae3"/><section>
+    <title>UpdateState()</title>
+<indexterm><primary>UpdateState</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>UpdateState</secondary></indexterm>
+<para><computeroutput>void DojoContractCommunication.TransactionResult.UpdateState (<link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> status)</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00050">50</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1acee4d6124fe5906c6fc273d09af65919"/><section>
+    <title>UpdateTransactionHash()</title>
+<indexterm><primary>UpdateTransactionHash</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>UpdateTransactionHash</secondary></indexterm>
+<para><computeroutput>void DojoContractCommunication.TransactionResult.UpdateTransactionHash (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00065">65</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a50d615a6b5446417e43abec2fef0f413"/><section>
+    <title>Entrypoint</title>
+<indexterm><primary>Entrypoint</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Entrypoint</secondary></indexterm>
+<para><computeroutput>string DojoContractCommunication.TransactionResult.Entrypoint<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00038">38</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a9e232476cccb11e2e373fde1e1074b26"/><section>
+    <title>Message</title>
+<indexterm><primary>Message</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Message</secondary></indexterm>
+<para><computeroutput>string DojoContractCommunication.TransactionResult.Message<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00039">39</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a5390ebac8af977502964a155048240ec"/><section>
+    <title>Status</title>
+<indexterm><primary>Status</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>Status</secondary></indexterm>
+<para><computeroutput><link linkend="_class_dojo_contract_communication_1_1_transaction_result_1a7cb0db9bc0e3776235e0cc2af5cdfd8e">StatusTransaction</link> DojoContractCommunication.TransactionResult.Status<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00037">37</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_transaction_result_1a274b29f427076c5da211bec4a648c57c"/><section>
+    <title>TransactionHash</title>
+<indexterm><primary>TransactionHash</primary><secondary>DojoContractCommunication.TransactionResult</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.TransactionResult</primary><secondary>TransactionHash</secondary></indexterm>
+<para><computeroutput>string DojoContractCommunication.TransactionResult.TransactionHash<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00036">36</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Generated/<link linkend="__dojo_contract_caller_8cs">DojoContractCaller.cs</link></section>
+</section>

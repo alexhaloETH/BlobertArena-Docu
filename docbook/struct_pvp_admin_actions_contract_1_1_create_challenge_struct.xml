@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct" xml:lang="en-US">
+<title>PvpAdminActionsContract.CreateChallengeStruct Struct Reference</title>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a6e109d2bc165fd5009b76b0741f115de">CreateChallengeStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1af058f8e758161a98a82236c07b2d6999">collectionAddressA</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a2ce619411e571456c9c7a8b7dc14a8bf">collectionAddressB</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a2c6e9af4471051f54f8fb55dd2af2e7e">playerA</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a09f2d67c4685d9756cd769b1cde4b874">playerB</link>, ModelInstance.U256 <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1aeb45701a1698cb2308ac5c1d68dd56e2">tokenAId</link>, ModelInstance.U256 <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1abe8b88ebd48b4b22245b017cacce4192">tokenBId</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a106d372ca02274778714432782110d6c">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1af058f8e758161a98a82236c07b2d6999">collectionAddressA</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a2ce619411e571456c9c7a8b7dc14a8bf">collectionAddressB</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a2c6e9af4471051f54f8fb55dd2af2e7e">playerA</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a09f2d67c4685d9756cd769b1cde4b874">playerB</link></para>
+</listitem>
+            <listitem><para>ModelInstance.U256 <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1aeb45701a1698cb2308ac5c1d68dd56e2">tokenAId</link></para>
+</listitem>
+            <listitem><para>ModelInstance.U256 <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1abe8b88ebd48b4b22245b017cacce4192">tokenBId</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a106d372ca02274778714432782110d6c">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00029">29</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a6e109d2bc165fd5009b76b0741f115de"/><section>
+    <title>CreateChallengeStruct()</title>
+<indexterm><primary>CreateChallengeStruct</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>CreateChallengeStruct</secondary></indexterm>
+<para><computeroutput>PvpAdminActionsContract.CreateChallengeStruct.CreateChallengeStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> collectionAddressA, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> collectionAddressB, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> playerA, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> playerB, ModelInstance.U256 tokenAId, ModelInstance.U256 tokenBId, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00039">39</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1af058f8e758161a98a82236c07b2d6999"/><section>
+    <title>collectionAddressA</title>
+<indexterm><primary>collectionAddressA</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>collectionAddressA</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpAdminActionsContract.CreateChallengeStruct.collectionAddressA</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00031">31</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a2ce619411e571456c9c7a8b7dc14a8bf"/><section>
+    <title>collectionAddressB</title>
+<indexterm><primary>collectionAddressB</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>collectionAddressB</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpAdminActionsContract.CreateChallengeStruct.collectionAddressB</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00032">32</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a106d372ca02274778714432782110d6c"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpAdminActionsContract.CreateChallengeStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00037">37</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a2c6e9af4471051f54f8fb55dd2af2e7e"/><section>
+    <title>playerA</title>
+<indexterm><primary>playerA</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>playerA</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpAdminActionsContract.CreateChallengeStruct.playerA</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00033">33</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1a09f2d67c4685d9756cd769b1cde4b874"/><section>
+    <title>playerB</title>
+<indexterm><primary>playerB</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>playerB</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpAdminActionsContract.CreateChallengeStruct.playerB</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00034">34</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1aeb45701a1698cb2308ac5c1d68dd56e2"/><section>
+    <title>tokenAId</title>
+<indexterm><primary>tokenAId</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>tokenAId</secondary></indexterm>
+<para><computeroutput>ModelInstance.U256 PvpAdminActionsContract.CreateChallengeStruct.tokenAId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00035">35</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_create_challenge_struct_1abe8b88ebd48b4b22245b017cacce4192"/><section>
+    <title>tokenBId</title>
+<indexterm><primary>tokenBId</primary><secondary>PvpAdminActionsContract.CreateChallengeStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.CreateChallengeStruct</primary><secondary>tokenBId</secondary></indexterm>
+<para><computeroutput>ModelInstance.U256 PvpAdminActionsContract.CreateChallengeStruct.tokenBId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00036">36</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_admin_actions_contract_8cs">PvpAdminActionsContract.cs</link></section>
+</section>

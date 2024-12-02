@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__game_manager_8cs_source" xml:lang="en-US">
+<title>GameManager.cs</title>
+<indexterm><primary>Managers/GameManager.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__game_manager_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo;
+<anchor xml:id="__game_manager_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__game_manager_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__game_manager_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__game_manager_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__game_manager_8cs_source_1l00007"/>00007 
+<anchor xml:id="__game_manager_8cs_source_1l00008"/>00008 <emphasis role="comment">//&#32;Fix&#32;to&#32;use&#32;Records&#32;in&#32;Unity&#32;ref.&#32;https://stackoverflow.com/a/73100830</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00009"/><link linkend="_namespace_system">00009</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_system_1_1_runtime_1_1_compiler_services">System.Runtime.CompilerServices</link>
+<anchor xml:id="__game_manager_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__game_manager_8cs_source_1l00011"/>00011 }
+<anchor xml:id="__game_manager_8cs_source_1l00012"/>00012 
+<anchor xml:id="__game_manager_8cs_source_1l00013"/>00013 <emphasis role="comment">//pretty&#32;sure&#32;this&#32;is&#32;all&#32;not&#32;neeeded&#32;as&#32;we&#32;dont&#32;use&#32;the&#32;init&#32;entityt&#32;and&#32;other&#32;stuff&#32;from&#32;here</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00014"/>00014 
+<anchor xml:id="__game_manager_8cs_source_1l00015"/><link linkend="_class_game_manager">00015</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game_manager">GameManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__game_manager_8cs_source_1l00016"/>00016 {
+<anchor xml:id="__game_manager_8cs_source_1l00017"/><link linkend="_class_game_manager_1a662ac5f31e7f3b02bcbf3048b3792cec">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_logic_layer_1_1_world_manager_dojo">WorldManagerDojo</link>&#32;<link linkend="_class_game_manager_1a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00018"/><link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;WorldManagerData&#32;<link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00019"/>00019 
+<anchor xml:id="__game_manager_8cs_source_1l00020"/><link linkend="_class_game_manager_1ab87cba9c2ebf1176617ceda64c086ffd">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;BurnerManager&#32;<link linkend="_class_game_manager_1ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Dictionary&lt;FieldElement,&#32;string&gt;&#32;spawnedAccounts&#32;=&#32;<emphasis role="keyword">new</emphasis>();
+<anchor xml:id="__game_manager_8cs_source_1l00022"/>00022 
+<anchor xml:id="__game_manager_8cs_source_1l00023"/><link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;JsonRpcClient&#32;<link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">provider</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00024"/><link linkend="_class_game_manager_1acdc8f7e9d474ad4e8f1c8e61e6bac320">00024</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Account&#32;<link linkend="_class_game_manager_1acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00025"/>00025 
+<anchor xml:id="__game_manager_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__game_manager_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UiReferenceManager.instance.gameManager&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__game_manager_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00030"/>00030 
+<anchor xml:id="__game_manager_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__game_manager_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">provider</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;JsonRpcClient(<link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</link>.rpcUrl);
+<anchor xml:id="__game_manager_8cs_source_1l00034"/>00034 
+<anchor xml:id="__game_manager_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_manager_1a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1a40e3f19b5ccafc3151ae72b152a50e33">synchronizationMaster</link>.<link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a2b3e701f2099ff28895d09104f9b068f">OnEntitySpawned</link>.AddListener(InitEntity);
+<anchor xml:id="__game_manager_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;entity&#32;<emphasis role="keywordflow">in</emphasis>&#32;<link linkend="_class_game_manager_1a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</link>.<link linkend="_class_logic_layer_1_1_world_manager_dojo_1ab2c764975a88915f63467f9a57527427">Entities</link>())
+<anchor xml:id="__game_manager_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitEntity(entity);
+<anchor xml:id="__game_manager_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00040"/>00040 
+<anchor xml:id="__game_manager_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(DojoEntitiesStorage.worldManagerData.environmentType&#32;==&#32;EnvironmentType.TESTNET&#32;||&#32;DojoEntitiesStorage.worldManagerData.environmentType&#32;==&#32;EnvironmentType.MAINNET)
+<anchor xml:id="__game_manager_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__game_manager_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00045"/>00045 
+<anchor xml:id="__game_manager_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_manager_1acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Account(<link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">provider</link>,&#32;<emphasis role="keyword">new</emphasis>&#32;SigningKey(<link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</link>.masterPrivateKey),&#32;<link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</link>.masterAddress);
+<anchor xml:id="__game_manager_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_manager_1ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;BurnerManager(<link linkend="_class_game_manager_1ae34504f8f3a9fa1de8d8632f6ede11a8">provider</link>,&#32;<link linkend="_class_game_manager_1acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</link>);
+<anchor xml:id="__game_manager_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00049"/>00049 
+<anchor xml:id="__game_manager_8cs_source_1l00050"/><link linkend="_class_game_manager_1a001f71f831c910b2a0276fa12bbdf457">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&lt;Account&gt;&#32;<link linkend="_class_game_manager_1a001f71f831c910b2a0276fa12bbdf457">CreateBurner</link>()
+<anchor xml:id="__game_manager_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;burner&#32;=&#32;await&#32;<link linkend="_class_game_manager_1ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</link>.DeployBurner();
+<anchor xml:id="__game_manager_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.CurrentAccount&#32;=&#32;burner;
+<anchor xml:id="__game_manager_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;burner;
+<anchor xml:id="__game_manager_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00056"/>00056 
+<anchor xml:id="__game_manager_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="comment">//pretty&#32;sure&#32;this&#32;is&#32;not&#32;needed</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitEntity(GameObject&#32;entity)
+<anchor xml:id="__game_manager_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;account&#32;<emphasis role="keywordflow">in</emphasis>&#32;spawnedAccounts)
+<anchor xml:id="__game_manager_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(account.Value&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__game_manager_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spawnedAccounts[account.Key]&#32;=&#32;entity.name;
+<anchor xml:id="__game_manager_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__game_manager_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00069"/>00069 }
+</programlisting></section>

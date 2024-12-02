@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pv_p_challenge_response_8gen_8cs_source" xml:lang="en-US">
+<title>PvPChallengeResponse.gen.cs</title>
+<indexterm><primary>LogicLayer/Dojo/Models/PvPChallengeResponse.gen.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Generated&#32;by&#32;dojo-bindgen&#32;on&#32;Fri,&#32;28&#32;Jun&#32;2024&#32;10:26:12&#32;+0000.&#32;Do&#32;not&#32;modify&#32;this&#32;file&#32;manually.</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>Dojo.Torii;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>static&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_games_data_model">GamesDataModel</link>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00007"/>00007 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00008"/>00008 <emphasis role="comment">//&#32;Model&#32;definition&#32;for&#32;`blob_arena::models::pvp::PvPChallengeResponse`&#32;model</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00009"/><link linkend="_class_pv_p_challenge_response">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_pv_p_challenge_response">PvPChallengeResponse</link>&#32;:&#32;ModelInstance
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;id&quot;</emphasis>)]
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00012"/><link linkend="_class_pv_p_challenge_response_1a39e4bfd85531d5014f269aca987e7f18">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_pv_p_challenge_response_1a39e4bfd85531d5014f269aca987e7f18">id</link>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00013"/>00013 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;combatant&quot;</emphasis>)]
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00015"/><link linkend="_class_pv_p_challenge_response_1a12782e736c228538036c14a26b59071b">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_pv_p_challenge_response_1a12782e736c228538036c14a26b59071b">combatant</link>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00016"/>00016 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;open&quot;</emphasis>)]
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00018"/><link linkend="_class_pv_p_challenge_response_1a42e83c8f28b1f68a1bdf03fb8178038f">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_pv_p_challenge_response_1a42e83c8f28b1f68a1bdf03fb8178038f">open</link>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00019"/>00019 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00020"/><link linkend="_class_pv_p_challenge_response_1a592249650a030935328402e4aa401f5e">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_pv_p_challenge_response_1a592249650a030935328402e4aa401f5e">OnUpdate</link>(Model&#32;model)
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;base.OnUpdate(model);
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_pv_p_challenge_response_1ad948768bf0479b000e002b4e88f894d7">SetStatus</link>(<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00025"/>00025 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00026"/><link linkend="_class_pv_p_challenge_response_1a47a708b1861f652c0ad9d966256789f4">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;<link linkend="_class_pv_p_challenge_response_1a47a708b1861f652c0ad9d966256789f4">KeyQuery</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<emphasis role="keywordtype">id</emphasis>)&#32;=&gt;&#32;<link linkend="_class_query_helper">QueryHelper</link>.<link linkend="_class_query_helper_1af7ca5c42433dbc2e03ce22e0618a4d64">CreateKeysModelQuery</link>(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;<emphasis role="keywordtype">id</emphasis>&#32;},&#32;dojo_bindings.dojo.PatternMatching.FixedLen,&#32;<emphasis role="stringliteral">&quot;blob_arena-PvPChallengeResponse&quot;</emphasis>);
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00027"/>00027 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00028"/>00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Utils</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00029"/>00029 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00030"/><link linkend="_class_pv_p_challenge_response_1ad948768bf0479b000e002b4e88f894d7">00030</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;GameStatus&#32;<link linkend="_class_pv_p_challenge_response_1ad948768bf0479b000e002b4e88f894d7">SetStatus</link>(<link linkend="_class_pv_p_challenge_response">PvPChallengeResponse</link>&#32;response)
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_gameStatusDict.ContainsKey(response.<link linkend="_class_pv_p_challenge_response_1a39e4bfd85531d5014f269aca987e7f18">id</link>.Hex()))
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;_gameStatusDict[response.<link linkend="_class_pv_p_challenge_response_1a39e4bfd85531d5014f269aca987e7f18">id</link>.Hex()];&#32;&#32;<emphasis role="comment">//if&#32;the&#32;state&#32;is&#32;either&#32;lobby&#32;game&#32;ended&#32;or&#32;exited&#32;then&#32;early&#32;return</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00035"/>00035 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(state)
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GameStatus.Game:
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GameStatus.Ended:
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GameStatus.Exited:
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;state;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00044"/>00044 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(response.<link linkend="_class_pv_p_challenge_response_1a42e83c8f28b1f68a1bdf03fb8178038f">open</link>)
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateGameStatus(response.<link linkend="_class_pv_p_challenge_response_1a39e4bfd85531d5014f269aca987e7f18">id</link>.Hex(),&#32;GameStatus.Lobby);
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GameStatus.Lobby;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateGameStatus(response.<link linkend="_class_pv_p_challenge_response_1a39e4bfd85531d5014f269aca987e7f18">id</link>.Hex(),&#32;GameStatus.Exited);
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GameStatus.Exited;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00056"/>00056 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00057"/>00057 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Utils</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00058"/>00058 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00059"/>00059 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Graphql&#32;Query&#32;templates</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00060"/>00060 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00061"/><link linkend="_class_pv_p_challenge_response_1a72d26146ef111a35dfec09e82c153a1b">00061</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_pv_p_challenge_response_1a72d26146ef111a35dfec09e82c153a1b">GraphQlQueryFull</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00062"/>00062 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;blobArenaPvPChallengeResponseModels&#32;arguments&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00063"/>00063 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00064"/>00064 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00065"/>00065 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00066"/>00066 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00067"/>00067 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00068"/>00068 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PvPChallengeResponse&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00069"/>00069 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00070"/>00070 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatant</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00071"/>00071 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;open</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00072"/>00072 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00073"/>00073 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00074"/>00074 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00075"/>00075 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00076"/>00076 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00077"/>00077 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalCount</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00078"/>00078 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00079"/>00079 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00080"/>00080 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00081"/>00081 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00082"/><link linkend="_class_pv_p_challenge_response_1abf3fd10d2b14a940c3cf57c6d659db90">00082</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_pv_p_challenge_response_1abf3fd10d2b14a940c3cf57c6d659db90">GraphQlQueryOnSection</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00083"/>00083 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PvPChallengeResponse&#32;{</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00084"/>00084 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00085"/>00085 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatant</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00086"/>00086 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;open</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00087"/>00087 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00088"/>00088 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00089"/>00089 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00090"/><link linkend="_class_pv_p_challenge_response_1a835d2eb31038fe85458b20fe89e89156">00090</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_pv_p_challenge_response_1a835d2eb31038fe85458b20fe89e89156">GraphQlHeader</link>&#32;=&#32;<emphasis role="stringliteral">&quot;blobArenaPvPChallengeResponseModels&quot;</emphasis>;
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00091"/>00091 
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00092"/>00092 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Graphql&#32;Query&#32;templates</emphasis>
+<anchor xml:id="__pv_p_challenge_response_8gen_8cs_source_1l00093"/>00093 }
+</programlisting></section>

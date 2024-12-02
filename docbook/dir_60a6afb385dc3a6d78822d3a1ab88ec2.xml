@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_60a6afb385dc3a6d78822d3a1ab88ec2" xml:lang="en-US">
+<title>UI/Components/Skin Directory Reference</title>
+<indexterm><primary>UI/Components/Skin Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__base_button_skin_listener_8cs">BaseButtonSkinListener.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__game_background_component_8cs">GameBackgroundComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__i_skin_listener_8cs">ISkinListener.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__skin_listener_component_8cs">SkinListenerComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__skin_manager_8cs">SkinManager.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__switch_skin_listener_8cs">SwitchSkinListener.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__toggle_skin_component_8cs">ToggleSkinComponent.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

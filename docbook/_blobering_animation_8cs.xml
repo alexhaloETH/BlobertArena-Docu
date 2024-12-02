@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blobering_animation_8cs" xml:lang="en-US">
+<title>UI/Components/BloberingAnimation.cs File Reference</title>
+<indexterm><primary>UI/Components/BloberingAnimation.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_blobering_animation">BloberingAnimation</link></para>
+
+<para>Blobering animation class to create the hovering question mark effect, and the text ellipses. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

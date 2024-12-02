@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_logic_layer_1_1_world_data_model_1_1_item_data" xml:lang="en-US">
+<title>LogicLayer.WorldDataModel.ItemData Struct Reference</title>
+<indexterm><primary>LogicLayer.WorldDataModel.ItemData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_item_data_1a7d70f21d56a8d66d0ba491f6bb9af2ca">blobert_trait</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_item_data_1a725181e0d809d88972cfe0e7881304d7">item_id</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_logic_layer_1_1_world_data_model_1_1_item_data_1a34ab45a70c8877b94fd709a60913e5b5">blobert_trait_id</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00855">855</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_item_data_1a7d70f21d56a8d66d0ba491f6bb9af2ca"/><section>
+    <title>blobert_trait</title>
+<indexterm><primary>blobert_trait</primary><secondary>LogicLayer.WorldDataModel.ItemData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.ItemData</primary><secondary>blobert_trait</secondary></indexterm>
+<para><computeroutput>string LogicLayer.WorldDataModel.ItemData.blobert_trait<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00857">857</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_item_data_1a34ab45a70c8877b94fd709a60913e5b5"/><section>
+    <title>blobert_trait_id</title>
+<indexterm><primary>blobert_trait_id</primary><secondary>LogicLayer.WorldDataModel.ItemData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.ItemData</primary><secondary>blobert_trait_id</secondary></indexterm>
+<para><computeroutput>int LogicLayer.WorldDataModel.ItemData.blobert_trait_id<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00859">859</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_world_data_model_1_1_item_data_1a725181e0d809d88972cfe0e7881304d7"/><section>
+    <title>item_id</title>
+<indexterm><primary>item_id</primary><secondary>LogicLayer.WorldDataModel.ItemData</secondary></indexterm>
+<indexterm><primary>LogicLayer.WorldDataModel.ItemData</primary><secondary>item_id</secondary></indexterm>
+<para><computeroutput>string LogicLayer.WorldDataModel.ItemData.item_id<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__world_data_model_8cs_source_1l00858">858</link> of file <link linkend="__world_data_model_8cs_source">WorldDataModel.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Managers/<link linkend="__world_data_model_8cs">WorldDataModel.cs</link></section>
+</section>

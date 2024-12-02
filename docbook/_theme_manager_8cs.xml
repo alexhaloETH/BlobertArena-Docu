@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__theme_manager_8cs" xml:lang="en-US">
+<title>Managers/Singletons/ThemeManager.cs File Reference</title>
+<indexterm><primary>Managers/Singletons/ThemeManager.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_theme_manager">ThemeManager</link></para>
+
+<para>Theme manager for different colours and graphics that appears in the different themes, to help with staying consistent with colouring of various graphical elements (SINGLETON) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_theme_data">ThemeData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">ThemeData.PanelColours</link> { <link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a8cdf3509895d0d3a638631926a1a1d3a">ThemeData.BlobArena_Player</link> = 0
+, <link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a8a844c1b7bed7252df722744f1eacd21">ThemeData.BlobArena_Enemy</link> = 1
+, <link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a667c3ac0a5a548e4b4810ff2b464a9d1">ThemeData.AMMA_Player</link> = 2
+, <link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254a4057236a7e08b616da98aa883c8e9db3">ThemeData.AMMA_Enemy</link> = 3
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">ThemeData.TextColours</link> { <link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6a7991fce025fa185bfbc5a3590808c5ce">ThemeData.BlobArena</link> = 0
+, <link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6a6cb2167799cc571f36007a9b89a6aa1a">ThemeData.AMMA</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

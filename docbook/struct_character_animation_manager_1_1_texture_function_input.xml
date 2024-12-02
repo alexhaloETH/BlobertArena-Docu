@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_character_animation_manager_1_1_texture_function_input" xml:lang="en-US">
+<title>CharacterAnimationManager.TextureFunctionInput Struct Reference</title>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_character_animation_manager_1_1_texture_function_input_1ad063be8940a5771c5610c3f6555322b4">TextureFunctionInput</link> (Texture texture, string name, int startIndex, int length)</para>
+</listitem>
+            <listitem><para><link linkend="_struct_character_animation_manager_1_1_texture_function_input_1ab35f1cb53d1223db5c9969fc96c39810">TextureFunctionInput</link> (List&lt; Sprite &gt; sprites, int length)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>readonly Texture <link linkend="_struct_character_animation_manager_1_1_texture_function_input_1af65ae581a285e2d23186d6b80b3ea65e">Texture</link></para>
+</listitem>
+            <listitem><para>readonly string <link linkend="_struct_character_animation_manager_1_1_texture_function_input_1a4d4dfeecc18fab75db8bed585e58a483">Name</link></para>
+</listitem>
+            <listitem><para>readonly int <link linkend="_struct_character_animation_manager_1_1_texture_function_input_1a5053b170f4a2ca4268b65f5c961f20d6">StartIndex</link></para>
+</listitem>
+            <listitem><para>readonly int <link linkend="_struct_character_animation_manager_1_1_texture_function_input_1aadc584e7562fe05d24d56f19fb66f27d">Length</link></para>
+</listitem>
+            <listitem><para>readonly List&lt; Sprite &gt; <link linkend="_struct_character_animation_manager_1_1_texture_function_input_1afaacabaf9985850e15fdbbaa8a686135">Sprites</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00010">10</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1ad063be8940a5771c5610c3f6555322b4"/><section>
+    <title>TextureFunctionInput()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TextureFunctionInput</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>TextureFunctionInput</secondary></indexterm>
+<para><computeroutput>CharacterAnimationManager.TextureFunctionInput.TextureFunctionInput (Texture texture, string name, int startIndex, int length)</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00019">19</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1ab35f1cb53d1223db5c9969fc96c39810"/><section>
+    <title>TextureFunctionInput()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TextureFunctionInput</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>TextureFunctionInput</secondary></indexterm>
+<para><computeroutput>CharacterAnimationManager.TextureFunctionInput.TextureFunctionInput (List&lt; Sprite &gt; sprites, int length)</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00039">39</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1aadc584e7562fe05d24d56f19fb66f27d"/><section>
+    <title>Length</title>
+<indexterm><primary>Length</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>Length</secondary></indexterm>
+<para><computeroutput>readonly int CharacterAnimationManager.TextureFunctionInput.Length</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00015">15</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1a4d4dfeecc18fab75db8bed585e58a483"/><section>
+    <title>Name</title>
+<indexterm><primary>Name</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>readonly string CharacterAnimationManager.TextureFunctionInput.Name</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00013">13</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1afaacabaf9985850e15fdbbaa8a686135"/><section>
+    <title>Sprites</title>
+<indexterm><primary>Sprites</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>Sprites</secondary></indexterm>
+<para><computeroutput>readonly List&lt;Sprite&gt; CharacterAnimationManager.TextureFunctionInput.Sprites</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00016">16</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1a5053b170f4a2ca4268b65f5c961f20d6"/><section>
+    <title>StartIndex</title>
+<indexterm><primary>StartIndex</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>StartIndex</secondary></indexterm>
+<para><computeroutput>readonly int CharacterAnimationManager.TextureFunctionInput.StartIndex</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00014">14</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_character_animation_manager_1_1_texture_function_input_1af65ae581a285e2d23186d6b80b3ea65e"/><section>
+    <title>Texture</title>
+<indexterm><primary>Texture</primary><secondary>CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TextureFunctionInput</primary><secondary>Texture</secondary></indexterm>
+<para><computeroutput>readonly Texture CharacterAnimationManager.TextureFunctionInput.Texture</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00012">12</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__character_animation_manager_8cs">CharacterAnimationManager.cs</link></section>
+</section>

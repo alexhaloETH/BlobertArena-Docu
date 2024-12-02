@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ui_state_manager" xml:lang="en-US">
+<title>UiStateManager Class Reference</title>
+<indexterm><primary>UiStateManager</primary></indexterm>
+<para>Inheritance diagram for UiStateManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ui_state_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async void <link linkend="_class_ui_state_manager_1a17386cc3a99f51bdf7fcc37ca5b2a477">Start</link> ()</para>
+</listitem>
+            <listitem><para>IEnumerator <link linkend="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a">CaptureAndDownload</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc">CallFullScreen</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_state_manager_1a6daaf609b4e4b3639c5db9b6e01fd820">CallInteractOnDisabledObject</link> (string gameObjectName, string parameter)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_game_manager">GameManager</link> <link linkend="_class_ui_state_manager_1afe9b3694a87e358cb4134c50285cf5e4">gameManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_ui_state_manager">UiStateManager</link> <link linkend="_class_ui_state_manager_1a02f486ab1511544504af7ade8f76e35f">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00006">6</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc"/><section>
+    <title>CallFullScreen()</title>
+<indexterm><primary>CallFullScreen</primary><secondary>UiStateManager</secondary></indexterm>
+<indexterm><primary>UiStateManager</primary><secondary>CallFullScreen</secondary></indexterm>
+<para><computeroutput>void UiStateManager.CallFullScreen ( )</computeroutput></para><para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00185">185</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_state_manager_1a6daaf609b4e4b3639c5db9b6e01fd820"/><section>
+    <title>CallInteractOnDisabledObject()</title>
+<indexterm><primary>CallInteractOnDisabledObject</primary><secondary>UiStateManager</secondary></indexterm>
+<indexterm><primary>UiStateManager</primary><secondary>CallInteractOnDisabledObject</secondary></indexterm>
+<para><computeroutput>void UiStateManager.CallInteractOnDisabledObject (string gameObjectName, string parameter)</computeroutput></para><para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00191">191</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a"/><section>
+    <title>CaptureAndDownload()</title>
+<indexterm><primary>CaptureAndDownload</primary><secondary>UiStateManager</secondary></indexterm>
+<indexterm><primary>UiStateManager</primary><secondary>CaptureAndDownload</secondary></indexterm>
+<para><computeroutput>IEnumerator UiStateManager.CaptureAndDownload ( )</computeroutput></para><para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00163">163</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_state_manager_1a17386cc3a99f51bdf7fcc37ca5b2a477"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>UiStateManager</secondary></indexterm>
+<indexterm><primary>UiStateManager</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>async void UiStateManager.Start ( )</computeroutput></para><para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00027">27</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_ui_state_manager_1afe9b3694a87e358cb4134c50285cf5e4"/><section>
+    <title>gameManager</title>
+<indexterm><primary>gameManager</primary><secondary>UiStateManager</secondary></indexterm>
+<indexterm><primary>UiStateManager</primary><secondary>gameManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_game_manager">GameManager</link> UiStateManager.gameManager</computeroutput></para><para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00011">11</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_ui_state_manager_1a02f486ab1511544504af7ade8f76e35f"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>UiStateManager</secondary></indexterm>
+<indexterm><primary>UiStateManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_ui_state_manager">UiStateManager</link> UiStateManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00008">8</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/<link linkend="__ui_state_manager_8cs">UiStateManager.cs</link></section>
+</section>

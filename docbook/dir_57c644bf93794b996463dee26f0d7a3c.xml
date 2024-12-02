@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_57c644bf93794b996463dee26f0d7a3c" xml:lang="en-US">
+<title>UI/Pages/BattlePage Directory Reference</title>
+<indexterm><primary>UI/Pages/BattlePage Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__battle_page_card_stats_component_8cs">BattlePageCardStatsComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__battle_page_controller_8cs">BattlePageController.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__choice_section_battle_page_8cs">ChoiceSectionBattlePage.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__end_of_battle_8cs">EndOfBattle.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

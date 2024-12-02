@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__notification_component_manager_8cs" xml:lang="en-US">
+<title>UI/Components/NotificationComponentManager.cs File Reference</title>
+<indexterm><primary>UI/Components/NotificationComponentManager.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_notification_component_manager">NotificationComponentManager</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_notification_component_manager_1_1_button_struct">NotificationComponentManager.ButtonStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_notification_component_manager_1_1_notification_object_setup">NotificationComponentManager.NotificationObjectSetup</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

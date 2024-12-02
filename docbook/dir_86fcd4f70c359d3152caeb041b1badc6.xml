@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_86fcd4f70c359d3152caeb041b1badc6" xml:lang="en-US">
+<title>LogicLayer Directory Reference</title>
+<indexterm><primary>LogicLayer Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_c90d3e004d0fa7ba46ead50800f8eb50">Dojo</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_d58671999346ac7fc1253c5c842798ba">Interfaces</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_2a345db79b7317e68ef2002bb74e0736">Managers</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_ca21257ddb67209234e04be6e8fa8930">ServerCommunication</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__fetch_blobert_wallet_data_8cs">FetchBlobertWalletData.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__query_manager_8cs">QueryManager.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__wallet_blobert_8cs">WalletBlobert.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_query_helper" xml:lang="en-US">
+<title>QueryHelper Class Reference</title>
+<indexterm><primary>QueryHelper</primary></indexterm>
+<para>Inheritance diagram for QueryHelper:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_query_helper.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_query_helper_1af7ca5c42433dbc2e03ce22e0618a4d64">CreateKeysModelQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[] keys, dojo.PatternMatching pattern, string modelName, uint limit=1000, uint offset=0)</para>
+
+<para>Fixed len all the keys are given var len not all of them are given. </para>
+</listitem>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_query_helper_1a95ea08d0ddef7db031b486192f2999ae">CreateMemberClauseQuery</link> (string model, string member, dojo.ComparisonOperator operator_, Primitive value, uint limit=1000, uint offset=0)</para>
+</listitem>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_query_helper_1a31696192245cf6c83f5e4542feee64b2">CreateCompositeClauseQuery</link> (dojo.LogicalOperator operator_, Clause[] clauses, uint limit=1000, uint offset=0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_helper_8cs_source_1l00006">6</link> of file <link linkend="__query_helper_8cs_source">QueryHelper.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_query_helper_1a31696192245cf6c83f5e4542feee64b2"/><section>
+    <title>CreateCompositeClauseQuery()</title>
+<indexterm><primary>CreateCompositeClauseQuery</primary><secondary>QueryHelper</secondary></indexterm>
+<indexterm><primary>QueryHelper</primary><secondary>CreateCompositeClauseQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> QueryHelper.CreateCompositeClauseQuery (dojo.LogicalOperator operator_, Clause[] clauses, uint limit = <computeroutput>1000</computeroutput>
+, uint offset = <computeroutput>0</computeroutput>
+)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_helper_8cs_source_1l00043">43</link> of file <link linkend="__query_helper_8cs_source">QueryHelper.cs</link>.</para>
+</section>
+<anchor xml:id="_class_query_helper_1af7ca5c42433dbc2e03ce22e0618a4d64"/><section>
+    <title>CreateKeysModelQuery()</title>
+<indexterm><primary>CreateKeysModelQuery</primary><secondary>QueryHelper</secondary></indexterm>
+<indexterm><primary>QueryHelper</primary><secondary>CreateKeysModelQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> QueryHelper.CreateKeysModelQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[] keys, dojo.PatternMatching pattern, string modelName, uint limit = <computeroutput>1000</computeroutput>
+, uint offset = <computeroutput>0</computeroutput>
+)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Fixed len all the keys are given var len not all of them are given. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>keys</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>pattern</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>modelName</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>limit</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>offset</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__query_helper_8cs_source_1l00017">17</link> of file <link linkend="__query_helper_8cs_source">QueryHelper.cs</link>.</para>
+</section>
+<anchor xml:id="_class_query_helper_1a95ea08d0ddef7db031b486192f2999ae"/><section>
+    <title>CreateMemberClauseQuery()</title>
+<indexterm><primary>CreateMemberClauseQuery</primary><secondary>QueryHelper</secondary></indexterm>
+<indexterm><primary>QueryHelper</primary><secondary>CreateMemberClauseQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> QueryHelper.CreateMemberClauseQuery (string model, string member, dojo.ComparisonOperator operator_, Primitive value, uint limit = <computeroutput>1000</computeroutput>
+, uint offset = <computeroutput>0</computeroutput>
+)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_helper_8cs_source_1l00032">32</link> of file <link linkend="__query_helper_8cs_source">QueryHelper.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/<link linkend="__query_helper_8cs">QueryHelper.cs</link></section>
+</section>

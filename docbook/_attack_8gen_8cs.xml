@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__attack_8gen_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Models/Attack.gen.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Models/Attack.gen.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_byte_array">ByteArray</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_damage">IDamage</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_effect">Effect</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_field_layout">FieldLayout</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_stat">IStat</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_stats_i8">StatsI8</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

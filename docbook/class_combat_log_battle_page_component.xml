@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combat_log_battle_page_component" xml:lang="en-US">
+<title>CombatLogBattlePageComponent Class Reference</title>
+<indexterm><primary>CombatLogBattlePageComponent</primary></indexterm>
+<para>Inheritance diagram for CombatLogBattlePageComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_combat_log_battle_page_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_combat_log_battle_page_component_1ad4d319be83396d5eef379c6845a1c46c">AddLogEntry</link> (string logEntry)</para>
+
+<para>Adds a new log entry to the combat log. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_combat_log_battle_page_component_1addb270c5d2a1f375b58ca7539727fb28">ClearLog</link> ()</para>
+
+<para>Clears all entries from the combat log. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combat_log_battle_page_component_8cs_source_1l00006">6</link> of file <link linkend="__combat_log_battle_page_component_8cs_source">CombatLogBattlePageComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_combat_log_battle_page_component_1ad4d319be83396d5eef379c6845a1c46c"/><section>
+    <title>AddLogEntry()</title>
+<indexterm><primary>AddLogEntry</primary><secondary>CombatLogBattlePageComponent</secondary></indexterm>
+<indexterm><primary>CombatLogBattlePageComponent</primary><secondary>AddLogEntry</secondary></indexterm>
+<para><computeroutput>void CombatLogBattlePageComponent.AddLogEntry (string logEntry)</computeroutput></para><para>
+
+<para>Adds a new log entry to the combat log. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>logEntry</entry><entry>
+<para>The text of the log entry to add.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__combat_log_battle_page_component_8cs_source_1l00026">26</link> of file <link linkend="__combat_log_battle_page_component_8cs_source">CombatLogBattlePageComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_combat_log_battle_page_component_1addb270c5d2a1f375b58ca7539727fb28"/><section>
+    <title>ClearLog()</title>
+<indexterm><primary>ClearLog</primary><secondary>CombatLogBattlePageComponent</secondary></indexterm>
+<indexterm><primary>CombatLogBattlePageComponent</primary><secondary>ClearLog</secondary></indexterm>
+<para><computeroutput>void CombatLogBattlePageComponent.ClearLog ( )</computeroutput></para><para>
+
+<para>Clears all entries from the combat log. </para>
+</para>
+<para>
+Definition at line <link linkend="__combat_log_battle_page_component_8cs_source_1l00069">69</link> of file <link linkend="__combat_log_battle_page_component_8cs_source">CombatLogBattlePageComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BattlePageComponents/<link linkend="__combat_log_battle_page_component_8cs">CombatLogBattlePageComponent.cs</link></section>
+</section>

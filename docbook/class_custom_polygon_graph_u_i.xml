@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_custom_polygon_graph_u_i" xml:lang="en-US">
+<title>CustomPolygonGraphUI Class Reference</title>
+<indexterm><primary>CustomPolygonGraphUI</primary></indexterm>
+<para>Inheritance diagram for CustomPolygonGraphUI:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_custom_polygon_graph_u_i.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_custom_polygon_graph_u_i_1ad1889f69b173ecd364c10b7158974526">InitializeComponent</link> (List&lt;(int value, int max)&gt; stats)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Material <link linkend="_class_custom_polygon_graph_u_i_1ab238aec04604fea32aaba0af6fe03756">polygonMaterial</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_custom_polygon_graph_u_i_1a08c7ea1ce7b3006b4f0bc391e8b81582">radius</link> = 50f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__custom_mesh_polygon_u_i_8cs_source_1l00005">5</link> of file <link linkend="__custom_mesh_polygon_u_i_8cs_source">CustomMeshPolygonUI.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_custom_polygon_graph_u_i_1ad1889f69b173ecd364c10b7158974526"/><section>
+    <title>InitializeComponent()</title>
+<indexterm><primary>InitializeComponent</primary><secondary>CustomPolygonGraphUI</secondary></indexterm>
+<indexterm><primary>CustomPolygonGraphUI</primary><secondary>InitializeComponent</secondary></indexterm>
+<para><computeroutput>void CustomPolygonGraphUI.InitializeComponent (List&lt;(int value, int max)&gt; stats)</computeroutput></para><para>
+Definition at line <link linkend="__custom_mesh_polygon_u_i_8cs_source_1l00010">10</link> of file <link linkend="__custom_mesh_polygon_u_i_8cs_source">CustomMeshPolygonUI.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_custom_polygon_graph_u_i_1ab238aec04604fea32aaba0af6fe03756"/><section>
+    <title>polygonMaterial</title>
+<indexterm><primary>polygonMaterial</primary><secondary>CustomPolygonGraphUI</secondary></indexterm>
+<indexterm><primary>CustomPolygonGraphUI</primary><secondary>polygonMaterial</secondary></indexterm>
+<para><computeroutput>Material CustomPolygonGraphUI.polygonMaterial</computeroutput></para><para>
+Definition at line <link linkend="__custom_mesh_polygon_u_i_8cs_source_1l00007">7</link> of file <link linkend="__custom_mesh_polygon_u_i_8cs_source">CustomMeshPolygonUI.cs</link>.</para>
+</section>
+<anchor xml:id="_class_custom_polygon_graph_u_i_1a08c7ea1ce7b3006b4f0bc391e8b81582"/><section>
+    <title>radius</title>
+<indexterm><primary>radius</primary><secondary>CustomPolygonGraphUI</secondary></indexterm>
+<indexterm><primary>CustomPolygonGraphUI</primary><secondary>radius</secondary></indexterm>
+<para><computeroutput>float CustomPolygonGraphUI.radius = 50f</computeroutput></para><para>
+Definition at line <link linkend="__custom_mesh_polygon_u_i_8cs_source_1l00008">8</link> of file <link linkend="__custom_mesh_polygon_u_i_8cs_source">CustomMeshPolygonUI.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__custom_mesh_polygon_u_i_8cs">CustomMeshPolygonUI.cs</link></section>
+</section>

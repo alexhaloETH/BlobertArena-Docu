@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct" xml:lang="en-US">
+<title>PvpActionsContract.KickInactivePlayerStruct Struct Reference</title>
+<indexterm><primary>PvpActionsContract.KickInactivePlayerStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a9781045f5a50308b17636a5c6261f2a8">KickInactivePlayerStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a18ca86d498cd5d3a3d68d678d9f94c1d">combatantId</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a951740e61b5b5bba69a1a3e752032bed">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a18ca86d498cd5d3a3d68d678d9f94c1d">combatantId</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a951740e61b5b5bba69a1a3e752032bed">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00252">252</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a9781045f5a50308b17636a5c6261f2a8"/><section>
+    <title>KickInactivePlayerStruct()</title>
+<indexterm><primary>KickInactivePlayerStruct</primary><secondary>PvpActionsContract.KickInactivePlayerStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.KickInactivePlayerStruct</primary><secondary>KickInactivePlayerStruct</secondary></indexterm>
+<para><computeroutput>PvpActionsContract.KickInactivePlayerStruct.KickInactivePlayerStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00257">257</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a18ca86d498cd5d3a3d68d678d9f94c1d"/><section>
+    <title>combatantId</title>
+<indexterm><primary>combatantId</primary><secondary>PvpActionsContract.KickInactivePlayerStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.KickInactivePlayerStruct</primary><secondary>combatantId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.KickInactivePlayerStruct.combatantId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00254">254</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_kick_inactive_player_struct_1a951740e61b5b5bba69a1a3e752032bed"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpActionsContract.KickInactivePlayerStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.KickInactivePlayerStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpActionsContract.KickInactivePlayerStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00255">255</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_actions_contract_8cs">PvpActionsContract.cs</link></section>
+</section>

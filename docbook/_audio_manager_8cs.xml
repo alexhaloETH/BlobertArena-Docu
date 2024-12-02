@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__audio_manager_8cs" xml:lang="en-US">
+<title>Managers/Singletons/AudioManager.cs File Reference</title>
+<indexterm><primary>Managers/Singletons/AudioManager.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_audio_manager">AudioManager</link></para>
+
+<para>Manager class for both music and audio effects (SINGLETON) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_audio_effects">AudioEffects</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">AudioEffects.Music</link> { <?linebreak?><link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfae20b43683ca50e429f54c17e33365804">AudioEffects.BA_MenuPreRoll</link> = 0
+, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfaa1fdef6b35f3795206fdc55933ede239">AudioEffects.BA_MenuLoop</link> = 1
+, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfa498b3ff676cc1cfbc30cb572d5de2da4">AudioEffects.AMMA_MenuPreRoll</link> = 2
+, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfa5006dabb8767003c15663532bae77375">AudioEffects.AMMA_MenuLoop</link> = 3
+, <?linebreak?><link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfa356cefe47eeb6b82787d60c988fc65a4">AudioEffects.ThemeSwitch</link> = 4
+, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfabc08f05e6af9f4a799648465fe268c20">AudioEffects.CatchThemAll</link> = 5
+, <link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfab50339a10e1de285ac99d4c3990b8693">AudioEffects.NONE</link> = 6
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">AudioEffects.Effects</link> { <?linebreak?><link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a3a87e91f9f32928086b2104e639ab79f">AudioEffects.ButtonSwap</link> = 0
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a3c5e288fa847191396575098c8bbcfed">AudioEffects.ButtonClick</link> = 1
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168ae9bb76209c30bf6ed77529c2d4c6d441">AudioEffects.CrowdBoo</link> = 2
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a73e2f353b9bb0f7c0744dd888fc3df6d">AudioEffects.CrowdHappy</link> = 3
+, <?linebreak?><link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a4345dbf48e7143351370c639bae78fbc">AudioEffects.EndGong</link> = 4
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168aa4e56a483788fe3961097de3df845adc">AudioEffects.OpponentDefeat</link> = 5
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a5118a233e01640699d78dbc50acfdc2a">AudioEffects.StartBell</link> = 6
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a96d008db67fc0b5551a926842bbb6a71">AudioEffects.Notification</link> = 7
+, <?linebreak?><link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a1f5c647d9066bc9e350b70aa2d16aec4">AudioEffects.Victory</link> = 8
+, <link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a570e9d24849e2161b5a969599fb03446">AudioEffects.Defeat</link> = 9
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">AudioEffects.Vocals</link> { <link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1bac3ea68d2c04f695448fb23c606afd666">AudioEffects.StartFight</link> = 0
+, <link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1ba4201701dc07015afdab9afa1b3d60dc8">AudioEffects.FighterOne</link> = 1
+, <link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1badccab139bc90253fa41414d4c60c7e89">AudioEffects.FighterTwo</link> = 2
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770ee">AudioEffects.CombatCommon</link> { <link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770eea62c8a2522be2668b5452181d07dd8964">AudioEffects.Hurt</link> = 0
+, <link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770eea90b6cb59eae89a7fd77271caec9b33bc">AudioEffects.SwordSlash</link> = 1
+, <link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770eea39a6def3b04240c5c14d938c9034791f">AudioEffects.ShieldPunch</link> = 2
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">AudioEffects.CombatSpecial</link> { <?linebreak?><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a3fa766b8e25ab50825b525cd906807bc">AudioEffects.Harrigan_AxeAttack</link> = 0
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171afa53b4eeb9094bba2d7ef8e7f1a04cb5">AudioEffects.Harrigan_Grind</link> = 1
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171aae043708a2ee2ed47613c55b5b00fe27">AudioEffects.Harrigan_ShieldPunch</link> = 2
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a98d3a558d2a697c12d6e1ab1a03d9583">AudioEffects.Harrigan_SpecialMove</link> = 3
+, <?linebreak?><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a800007a3b9cc841221a4ef9bf1a22a09">AudioEffects.Jones_LowKick</link> = 4
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a68f1b935289de5db12b9421b27571690">AudioEffects.Jones_SpecialMove</link> = 5
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a54fa0ea56fbe9b9dab890bb29a489213">AudioEffects.Jones_SwordSlash</link> = 6
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171adf748c767603d8e7f9ca0ada22716446">AudioEffects.Penedo_SpecialMove</link> = 7
+, <?linebreak?><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a56bcf32c1e771c16b17b9acb49e988cb">AudioEffects.Skinner_Grapple</link> = 8
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a0b158faaf4c645bfa820746f2c14e986">AudioEffects.Skinner_SpecialAttack</link> = 9
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a6b73d382c83a2fe2e77ba4d26db156be">AudioEffects.Studencki_SpecialAttack</link> = 10
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a6fe544d1b8114eb7ae749f278a0b6d32">AudioEffects.Studencki_SwordDance</link> = 11
+, <?linebreak?><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a5aec5105785db2be0afa14ff9d69d861">AudioEffects.Winter_Grind</link> = 12
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171aaafc0046cb22e9cc4abc90dd173f9dde">AudioEffects.Winter_GroundAndPound</link> = 13
+, <link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a388db80eb3aebd2e13a64813a608bcd7">AudioEffects.Winter_SpecialAttack</link> = 14
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">AudioEffects.CombatBlobArena</link> { <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a66e9440b3fee40e455db1ad2661784a9">AudioEffects.BinaryBash</link> = 0
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89afd62604f27cf19f9f7a777553750fc8c">AudioEffects.Algorithmic</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a467901d61d5803f8d5f0843eafd7df81">AudioEffects.ArgentCrush</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a2adeca85ec90e8efee433e70908ccf81">AudioEffects.BalloonBombardment</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aeedbec3bcc1eb901c435980983f28ae3">AudioEffects.InflatableExplosion</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a602c49fac420fcdf49d987aea787e4df">AudioEffects.FuryLash</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad8152c1d426a26e3c38e01edc30aa58d">AudioEffects.BannerJavelin</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad0cbfc7315d08e1384230ca234541bb0">AudioEffects.BlindingRadiance</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a5d30ed28e7a3324b91dc8867eddedceb">AudioEffects.KeenEye</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89acabe276d048ad6cf21b67cd20ea6d09a">AudioEffects.TrueSight</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a823435ee926011a86c5913687a2c4b04">AudioEffects.WisdomEdge</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a66720a7f014cba173f173331891fffa4">AudioEffects.DivineInsight</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89acb06e1152c80649fc4591e0a2d2928a3">AudioEffects.ColossalImpact</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a8a9ba4c116d3905d681edb45b2c45ad5">AudioEffects.GiantHammer</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a706d63f0ea6cf389ac7699403864a85b">AudioEffects.PerfectStrike</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a007b9550c302ec5b44450fd31a41fcaa">AudioEffects.ForcefulBlow</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a5710f331d4173562032d6cb5c8e3c028">AudioEffects.UltimateBurn</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a650d6d8fe4cebadab8e75344001d1f55">AudioEffects.ShieldingBash</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a7cd4e5980fba92b71a71942137a6184c">AudioEffects.GuardianBlow</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab5ce3085def216d36c50650aa2078264">AudioEffects.SavageBlow</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a0cd41d4dd0405570076b530df5296bc2">AudioEffects.MirrorSmash</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a59d6a2928f9a71e6532548b52d560497">AudioEffects.MasterfulBlow</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad38198b4a77d560c8f6b84da140a7da2">AudioEffects.DeceptiveSlice</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a997cddceb37a4683e376fa6e8c473c2c">AudioEffects.SwiftSlice</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a88490319b11d0128d54f357914bdc787">AudioEffects.GargantuanBlow</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a98d2d73ab60ba7f332632d137b64df6d">AudioEffects.SkateSlam</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a11d54aac3b44db62f7f4fad2ee939a27">AudioEffects.KickFlip</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a114969aa2bc3d8c53efc140095d98fa0">AudioEffects.CorrosiveHit</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aab0967940a93bff96e4f99cb156b501b">AudioEffects.AcidicStrike</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a8595da8b2ba2910a1046ac07e861436b">AudioEffects.BladeSwipe</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a549812c0738f611627d5fdd8ee1fc8f8">AudioEffects.SaberStorm</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89afe9f6e4315515cb5fc14e5fe08072c05">AudioEffects.BriqBash</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89afd58eda83c4047691a2c124df7cb5578">AudioEffects.BriqAvalanche</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab4e3745d1e0455a28c6d67a0f576b51b">AudioEffects.CalculatedCrush</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aaecc99c011f99df3072efc0a7c8b7212">AudioEffects.QuantumSingularity</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab5441440a200ebf41309c3a50d0d8acf">AudioEffects.BulletBlast</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a4e1d43a511ea541c3a82c8a97a7c2b34">AudioEffects.BulletBarrage</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a5d8784b9cdb9a7f370c4eb53bed4c302">AudioEffects.DesperationToss</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a072ca26e7213d801c261d2428d1654bf">AudioEffects.PhantomPulse</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a1cc157892c97cd7984bb8f49a9508463">AudioEffects.PhantomBlast</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a4f6258eeaad7676db926ba79daf1af5d">AudioEffects.ArcaneAssault</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab4eaf6bcb5f84170be6ecb9980cf94a6">AudioEffects.DarkDevastation</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a057461ec5f431dec22947ea95c5ef138">AudioEffects.Spellstorm</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aed51bb870c11298b8ecb5381e8b16ae5">AudioEffects.GrugCrush</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89af69a43286262e739959718abf56cd7c2">AudioEffects.GrugSmash</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a56acffe467ae031844242a1df44fd688">AudioEffects.EarthquakeHammer</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a4aa447104c5fec3bfddc5e90c683c86c">AudioEffects.SaberSlash</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a6f98c48ad5065d37f434fe2b6c74d29e">AudioEffects.SithStrike</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a0f7bf842aa6ebdbc10b03c132f113f36">AudioEffects.DragonFury</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a504b72a68048e897e37920a3936ea258">AudioEffects.ChillStrike</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a396db3786d40c20002a5998f31a8eb5f">AudioEffects.IceColdCrush</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a46ecd9d4641a7ed37800d383ad6df8c5">AudioEffects.DarkSlash</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a922909332a41f17665f06e2eb7a418af">AudioEffects.ForceSurge</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab8c2fa556dbca8dc39bab4f7d823d177">AudioEffects.StoolToss</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a45cfeb1dfa8b9d99afce59a8f78d94e0">AudioEffects.MagicBlast</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a3eb0158cfacb0adf0996c34282e7570a">AudioEffects.ArcaneAnnihilation</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a17af5f2a25dd10ddbd1266597d3ee19e">AudioEffects.CairoBurst</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ae9bf37890b564df11c17ddb2f09169dd">AudioEffects.ShieldBash</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad632e5b9639380630ce16b866c1f4ddc">AudioEffects.CairoBlast</link>
+, <link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a07141f71d8bc882a0e732a1155e9a39d">AudioEffects.HammerStrike</link>
+, <?linebreak?><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a9b1a2ac0a207f84fa15ce862c764537b">AudioEffects.WarhammerWreck</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_character_animation_manager_1_1_tween_callback_system" xml:lang="en-US">
+<title>CharacterAnimationManager.TweenCallbackSystem Class Reference</title>
+<indexterm><primary>CharacterAnimationManager.TweenCallbackSystem</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_character_animation_manager_1_1_tween_callback_system_1a1b4055bc8e26d6a520e17754a65cd52a">TweenCallbackSystem</link> (int frameNum, Action functionCallback)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_character_animation_manager_1_1_tween_callback_system_1afc567c66e081ff8eadf024df6a52e01f">frameNum</link></para>
+</listitem>
+            <listitem><para>Action <link linkend="_class_character_animation_manager_1_1_tween_callback_system_1a19a6db280619a1bbd00b98c4be31f646">functionCallback</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00059">59</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_character_animation_manager_1_1_tween_callback_system_1a1b4055bc8e26d6a520e17754a65cd52a"/><section>
+    <title>TweenCallbackSystem()</title>
+<indexterm><primary>TweenCallbackSystem</primary><secondary>CharacterAnimationManager.TweenCallbackSystem</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TweenCallbackSystem</primary><secondary>TweenCallbackSystem</secondary></indexterm>
+<para><computeroutput>CharacterAnimationManager.TweenCallbackSystem.TweenCallbackSystem (int frameNum, Action functionCallback)</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00064">64</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_character_animation_manager_1_1_tween_callback_system_1afc567c66e081ff8eadf024df6a52e01f"/><section>
+    <title>frameNum</title>
+<indexterm><primary>frameNum</primary><secondary>CharacterAnimationManager.TweenCallbackSystem</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TweenCallbackSystem</primary><secondary>frameNum</secondary></indexterm>
+<para><computeroutput>int CharacterAnimationManager.TweenCallbackSystem.frameNum</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00061">61</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_character_animation_manager_1_1_tween_callback_system_1a19a6db280619a1bbd00b98c4be31f646"/><section>
+    <title>functionCallback</title>
+<indexterm><primary>functionCallback</primary><secondary>CharacterAnimationManager.TweenCallbackSystem</secondary></indexterm>
+<indexterm><primary>CharacterAnimationManager.TweenCallbackSystem</primary><secondary>functionCallback</secondary></indexterm>
+<para><computeroutput>Action CharacterAnimationManager.TweenCallbackSystem.functionCallback</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00062">62</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__character_animation_manager_8cs">CharacterAnimationManager.cs</link></section>
+</section>

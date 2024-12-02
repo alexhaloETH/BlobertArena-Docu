@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__menu_8cs_source" xml:lang="en-US">
+<title>Menu.cs</title>
+<indexterm><primary>UI/Menu.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__menu_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__menu_8cs_source_1l00002"/>00002 
+<anchor xml:id="__menu_8cs_source_1l00003"/><link linkend="_class_menu">00003</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_menu">Menu</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__menu_8cs_source_1l00004"/>00004 {
+<anchor xml:id="__menu_8cs_source_1l00005"/><link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">00005</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link>;
+<anchor xml:id="__menu_8cs_source_1l00006"/><link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">00006</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__menu_8cs_source_1l00007"/><link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link>&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__menu_8cs_source_1l00008"/>00008 
+<anchor xml:id="__menu_8cs_source_1l00009"/><link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link>()
+<anchor xml:id="__menu_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__menu_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__menu_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__menu_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_8cs_source_1l00014"/>00014 
+<anchor xml:id="__menu_8cs_source_1l00015"/><link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link>()
+<anchor xml:id="__menu_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__menu_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__menu_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__menu_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_8cs_source_1l00020"/>00020 
+<anchor xml:id="__menu_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;public&#32;virtual&#32;void&#32;DebugPage()</emphasis>
+<anchor xml:id="__menu_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__menu_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//is&#32;there&#32;a&#32;wayb&#32;to&#32;get&#32;the&#32;name&#32;of&#32;the&#32;class&#32;that&#32;is&#32;inheriting&#32;this&#32;class?</emphasis>
+<anchor xml:id="__menu_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(&quot;Debugging&#32;&quot;&#32;+&#32;this.GetType().Name);</emphasis>
+<anchor xml:id="__menu_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__menu_8cs_source_1l00026"/>00026 }
+</programlisting></section>

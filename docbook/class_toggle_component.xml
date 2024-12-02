@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_toggle_component" xml:lang="en-US">
+<title>ToggleComponent Class Reference</title>
+<indexterm><primary>ToggleComponent</primary></indexterm>
+<para>Inheritance diagram for ToggleComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_toggle_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_toggle_component_1a8f113949d342477339bdd27336b4bbd8">OnPointerClick</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403">SetToggleState</link> (bool state)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_toggle_component_1a1e1bdcaa860ca6acc300ca60bcc47a82">OnSkinChange</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Sprite <link linkend="_class_toggle_component_1a8afc581c9a60bb6f2a48dbb1299eb956">defaultSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_toggle_component_1ad6cb330d5868032b97f4d368b9661198">clickedSprite</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__toggle_component_8cs_source_1l00006">6</link> of file <link linkend="__toggle_component_8cs_source">ToggleComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_toggle_component_1a8f113949d342477339bdd27336b4bbd8"/><section>
+    <title>OnPointerClick()</title>
+<indexterm><primary>OnPointerClick</primary><secondary>ToggleComponent</secondary></indexterm>
+<indexterm><primary>ToggleComponent</primary><secondary>OnPointerClick</secondary></indexterm>
+<para><computeroutput>void ToggleComponent.OnPointerClick ( )</computeroutput></para><para>
+Definition at line <link linkend="__toggle_component_8cs_source_1l00051">51</link> of file <link linkend="__toggle_component_8cs_source">ToggleComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_toggle_component_1a1e1bdcaa860ca6acc300ca60bcc47a82"/><section>
+    <title>OnSkinChange()</title>
+<indexterm><primary>OnSkinChange</primary><secondary>ToggleComponent</secondary></indexterm>
+<indexterm><primary>ToggleComponent</primary><secondary>OnSkinChange</secondary></indexterm>
+<para><computeroutput>void ToggleComponent.OnSkinChange ( )</computeroutput></para><para>
+Definition at line <link linkend="__toggle_component_8cs_source_1l00083">83</link> of file <link linkend="__toggle_component_8cs_source">ToggleComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_toggle_component_1a3229fb93f121b7f8485f2827b9263403"/><section>
+    <title>SetToggleState()</title>
+<indexterm><primary>SetToggleState</primary><secondary>ToggleComponent</secondary></indexterm>
+<indexterm><primary>ToggleComponent</primary><secondary>SetToggleState</secondary></indexterm>
+<para><computeroutput>void ToggleComponent.SetToggleState (bool state)</computeroutput></para><para>
+Definition at line <link linkend="__toggle_component_8cs_source_1l00073">73</link> of file <link linkend="__toggle_component_8cs_source">ToggleComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_toggle_component_1ad6cb330d5868032b97f4d368b9661198"/><section>
+    <title>clickedSprite</title>
+<indexterm><primary>clickedSprite</primary><secondary>ToggleComponent</secondary></indexterm>
+<indexterm><primary>ToggleComponent</primary><secondary>clickedSprite</secondary></indexterm>
+<para><computeroutput>Sprite ToggleComponent.clickedSprite</computeroutput></para><para>
+Definition at line <link linkend="__toggle_component_8cs_source_1l00019">19</link> of file <link linkend="__toggle_component_8cs_source">ToggleComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_toggle_component_1a8afc581c9a60bb6f2a48dbb1299eb956"/><section>
+    <title>defaultSprite</title>
+<indexterm><primary>defaultSprite</primary><secondary>ToggleComponent</secondary></indexterm>
+<indexterm><primary>ToggleComponent</primary><secondary>defaultSprite</secondary></indexterm>
+<para><computeroutput>Sprite ToggleComponent.defaultSprite</computeroutput></para><para>
+Definition at line <link linkend="__toggle_component_8cs_source_1l00014">14</link> of file <link linkend="__toggle_component_8cs_source">ToggleComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Button Types/<link linkend="__toggle_component_8cs">ToggleComponent.cs</link></section>
+</section>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_last_mint_1_1_last_mint_data_query" xml:lang="en-US">
+<title>LastMint.LastMintDataQuery Class Reference</title>
+<indexterm><primary>LastMint.LastMintDataQuery</primary></indexterm>
+<para>Inheritance diagram for LastMint.LastMintDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_last_mint_1_1_last_mint_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_last_mint_1_1_last_mint_data_query_1ab43b36b10f9ec57559b4ef3fe93c7aa9">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_last_mint_1_1_last_mint_data_query_1ade7ca77d7593df6df181d52734be04c4">player</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_last_mint_1_1_last_mint_data_query_1a491cca27bb4842566607617a14f867be">timestamp</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00048">48</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_last_mint_1_1_last_mint_data_query_1ab43b36b10f9ec57559b4ef3fe93c7aa9"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>LastMint.LastMintDataQuery</secondary></indexterm>
+<indexterm><primary>LastMint.LastMintDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string LastMint.LastMintDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00050">50</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_last_mint_1_1_last_mint_data_query_1ade7ca77d7593df6df181d52734be04c4"/><section>
+    <title>player</title>
+<indexterm><primary>player</primary><secondary>LastMint.LastMintDataQuery</secondary></indexterm>
+<indexterm><primary>LastMint.LastMintDataQuery</primary><secondary>player</secondary></indexterm>
+<para><computeroutput>string LastMint.LastMintDataQuery.player = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00051">51</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_last_mint_1_1_last_mint_data_query_1a491cca27bb4842566607617a14f867be"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>LastMint.LastMintDataQuery</secondary></indexterm>
+<indexterm><primary>LastMint.LastMintDataQuery</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>string LastMint.LastMintDataQuery.timestamp = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00052">52</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__last_mint_8gen_8cs">LastMint.gen.cs</link></section>
+</section>

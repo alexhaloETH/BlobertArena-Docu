@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_switch_skin_listener" xml:lang="en-US">
+<title>SwitchSkinListener Class Reference</title>
+<indexterm><primary>SwitchSkinListener</primary></indexterm>
+<para>Inheritance diagram for SwitchSkinListener:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_switch_skin_listener.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Sprite <link linkend="_class_switch_skin_listener_1a5da77097e0400e253600d8e2b96f9d2e">onSelectedImageStateOne</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_switch_skin_listener_1a89155420512ac1e46e650d6e4a2a3bd8">offSelectedImageStateOne</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_switch_skin_listener_1a487bcdff938e4250881ed04f560ceeb3">onSelectedImageStateTwo</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_switch_skin_listener_1a4253e7f7dd78843d176f43ffb8c12888">offSelectedImageStateTwo</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_skin_manager">SkinManager</link> <link linkend="_class_switch_skin_listener_1a078d6f3c86d3e6351506e24c20807980">skinManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__switch_skin_listener_8cs_source_1l00004">4</link> of file <link linkend="__switch_skin_listener_8cs_source">SwitchSkinListener.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_switch_skin_listener_1a89155420512ac1e46e650d6e4a2a3bd8"/><section>
+    <title>offSelectedImageStateOne</title>
+<indexterm><primary>offSelectedImageStateOne</primary><secondary>SwitchSkinListener</secondary></indexterm>
+<indexterm><primary>SwitchSkinListener</primary><secondary>offSelectedImageStateOne</secondary></indexterm>
+<para><computeroutput>Sprite SwitchSkinListener.offSelectedImageStateOne</computeroutput></para><para>
+Definition at line <link linkend="__switch_skin_listener_8cs_source_1l00011">11</link> of file <link linkend="__switch_skin_listener_8cs_source">SwitchSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_skin_listener_1a4253e7f7dd78843d176f43ffb8c12888"/><section>
+    <title>offSelectedImageStateTwo</title>
+<indexterm><primary>offSelectedImageStateTwo</primary><secondary>SwitchSkinListener</secondary></indexterm>
+<indexterm><primary>SwitchSkinListener</primary><secondary>offSelectedImageStateTwo</secondary></indexterm>
+<para><computeroutput>Sprite SwitchSkinListener.offSelectedImageStateTwo</computeroutput></para><para>
+Definition at line <link linkend="__switch_skin_listener_8cs_source_1l00016">16</link> of file <link linkend="__switch_skin_listener_8cs_source">SwitchSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_skin_listener_1a5da77097e0400e253600d8e2b96f9d2e"/><section>
+    <title>onSelectedImageStateOne</title>
+<indexterm><primary>onSelectedImageStateOne</primary><secondary>SwitchSkinListener</secondary></indexterm>
+<indexterm><primary>SwitchSkinListener</primary><secondary>onSelectedImageStateOne</secondary></indexterm>
+<para><computeroutput>Sprite SwitchSkinListener.onSelectedImageStateOne</computeroutput></para><para>
+Definition at line <link linkend="__switch_skin_listener_8cs_source_1l00009">9</link> of file <link linkend="__switch_skin_listener_8cs_source">SwitchSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_skin_listener_1a487bcdff938e4250881ed04f560ceeb3"/><section>
+    <title>onSelectedImageStateTwo</title>
+<indexterm><primary>onSelectedImageStateTwo</primary><secondary>SwitchSkinListener</secondary></indexterm>
+<indexterm><primary>SwitchSkinListener</primary><secondary>onSelectedImageStateTwo</secondary></indexterm>
+<para><computeroutput>Sprite SwitchSkinListener.onSelectedImageStateTwo</computeroutput></para><para>
+Definition at line <link linkend="__switch_skin_listener_8cs_source_1l00014">14</link> of file <link linkend="__switch_skin_listener_8cs_source">SwitchSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_skin_listener_1a078d6f3c86d3e6351506e24c20807980"/><section>
+    <title>skinManager</title>
+<indexterm><primary>skinManager</primary><secondary>SwitchSkinListener</secondary></indexterm>
+<indexterm><primary>SwitchSkinListener</primary><secondary>skinManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_skin_manager">SkinManager</link> SwitchSkinListener.skinManager</computeroutput></para><para>
+Definition at line <link linkend="__switch_skin_listener_8cs_source_1l00018">18</link> of file <link linkend="__switch_skin_listener_8cs_source">SwitchSkinListener.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__switch_skin_listener_8cs">SwitchSkinListener.cs</link></section>
+</section>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__last_mint_8gen_8cs_source" xml:lang="en-US">
+<title>LastMint.gen.cs</title>
+<indexterm><primary>LogicLayer/Dojo/Models/LastMint.gen.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__last_mint_8gen_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00004"/>00004 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00005"/><link linkend="_class_last_mint">00005</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_last_mint">LastMint</link>&#32;:&#32;ModelInstance
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;player&quot;</emphasis>)]
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00008"/><link linkend="_class_last_mint_1a94884780cd6ba7d153e9dabdd5776f1a">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_last_mint_1a94884780cd6ba7d153e9dabdd5776f1a">player</link>;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00009"/>00009 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;timestamp&quot;</emphasis>)]
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00011"/><link linkend="_class_last_mint_1a5cb2b779835a04fcad8a3036db5b02fe">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;ulong&#32;<link linkend="_class_last_mint_1a5cb2b779835a04fcad8a3036db5b02fe">timestamp</link>;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00012"/>00012 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00017"/>00017 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00018"/>00018 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Graphql&#32;templates</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00019"/>00019 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00020"/><link linkend="_class_last_mint_1a614dc7358448da3eaf647e9f9590c05f">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_last_mint_1a614dc7358448da3eaf647e9f9590c05f">GraphQlQueryFull</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00021"/>00021 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaLastMintModels&#32;arguments&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00022"/>00022 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00023"/>00023 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00024"/>00024 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00025"/>00025 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00026"/>00026 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00027"/>00027 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00028"/>00028 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_LastMint&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00029"/>00029 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;player</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00030"/>00030 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timestamp</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00031"/>00031 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00032"/>00032 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00033"/>00033 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00034"/>00034 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00035"/>00035 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00036"/>00036 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00037"/>00037 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00038"/>00038 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00039"/><link linkend="_class_last_mint_1a5e7d619e15efe5b33c1b3f3ab36ed6f4">00039</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_last_mint_1a5e7d619e15efe5b33c1b3f3ab36ed6f4">GraphQlQueryOnSection</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00040"/>00040 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_LastMint&#32;{</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00041"/>00041 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;player</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00042"/>00042 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timestamp</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00043"/>00043 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00044"/>00044 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00045"/>00045 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00046"/><link linkend="_class_last_mint_1a6ab806aea5bf5046ba22f189b756b4da">00046</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_last_mint_1a6ab806aea5bf5046ba22f189b756b4da">GraphQlHeader</link>&#32;=&#32;<emphasis role="stringliteral">&quot;blobArenaLastMintModels&quot;</emphasis>;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00047"/>00047 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00048"/><link linkend="_class_last_mint_1_1_last_mint_data_query">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_last_mint_1_1_last_mint_data_query">LastMintDataQuery</link>&#32;:&#32;<link linkend="_interface_logic_layer_1_1_i_data">IData</link>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00050"/><link linkend="_class_last_mint_1_1_last_mint_data_query_1ab43b36b10f9ec57559b4ef3fe93c7aa9">00050</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_last_mint_1_1_last_mint_data_query_1ab43b36b10f9ec57559b4ef3fe93c7aa9">__typename</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00051"/><link linkend="_class_last_mint_1_1_last_mint_data_query_1ade7ca77d7593df6df181d52734be04c4">00051</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_last_mint_1_1_last_mint_data_query_1ade7ca77d7593df6df181d52734be04c4">player</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00052"/><link linkend="_class_last_mint_1_1_last_mint_data_query_1a491cca27bb4842566607617a14f867be">00052</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_last_mint_1_1_last_mint_data_query_1a491cca27bb4842566607617a14f867be">timestamp</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00054"/>00054 
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00055"/>00055 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Graphql&#32;templates</emphasis>
+<anchor xml:id="__last_mint_8gen_8cs_source_1l00056"/>00056 }
+</programlisting></section>

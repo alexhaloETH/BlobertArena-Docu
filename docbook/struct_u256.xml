@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_u256" xml:lang="en-US">
+<title>U256 Struct Reference</title>
+<indexterm><primary>U256</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_u256_1af79732293b6e31bc89cddb12d1141be5">low</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_u256_1a915799afb4962ce54f4ba340cf9a2014">high</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00011">11</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_u256_1a915799afb4962ce54f4ba340cf9a2014"/><section>
+    <title>high</title>
+<indexterm><primary>high</primary><secondary>U256</secondary></indexterm>
+<indexterm><primary>U256</primary><secondary>high</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> U256.high</computeroutput></para><para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00014">14</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_u256_1af79732293b6e31bc89cddb12d1141be5"/><section>
+    <title>low</title>
+<indexterm><primary>low</primary><secondary>U256</secondary></indexterm>
+<indexterm><primary>U256</primary><secondary>low</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> U256.low</computeroutput></para><para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00013">13</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__combatant_info_8gen_8cs">CombatantInfo.gen.cs</link></section>
+</section>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_battle_page_controller_1_1_attack_availability" xml:lang="en-US">
+<title>BattlePageController.AttackAvailability Struct Reference</title>
+<indexterm><primary>BattlePageController.AttackAvailability</primary></indexterm>
+<para>Inheritance diagram for BattlePageController.AttackAvailability:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_battle_page_controller_1_1_attack_availability.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_battle_page_controller_1_1_attack_availability_1a3affdfa35553ac2372bc0a5f4190794d">Equals</link> (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> other)</para>
+</listitem>
+            <listitem><para>override bool <link linkend="_struct_battle_page_controller_1_1_attack_availability_1a65ceefbe71c0ad9f4a2955c1a45a42b7">Equals</link> (object obj)</para>
+</listitem>
+            <listitem><para>override int <link linkend="_struct_battle_page_controller_1_1_attack_availability_1ab9b7cf938c0cc27602d8fc5353be400d">GetHashCode</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_struct_battle_page_controller_1_1_attack_availability_1ad5f07d2f2c2d693cfdd208ab3b8d88c4">operator==</link> (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> left, <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> right)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_struct_battle_page_controller_1_1_attack_availability_1a9306581bc9d2eadc8f05f487b86a4dce">operator!=</link> (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> left, <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> right)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>Attack <link linkend="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28">Attack</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567">Availability</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb">RoundUntil</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00028">28</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a3affdfa35553ac2372bc0a5f4190794d"/><section>
+    <title>Equals()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Equals</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Equals</secondary></indexterm>
+<para><computeroutput>bool BattlePageController.AttackAvailability.Equals (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> other)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00034">34</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a65ceefbe71c0ad9f4a2955c1a45a42b7"/><section>
+    <title>Equals()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Equals</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Equals</secondary></indexterm>
+<para><computeroutput>override bool BattlePageController.AttackAvailability.Equals (object obj)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00039">39</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1ab9b7cf938c0cc27602d8fc5353be400d"/><section>
+    <title>GetHashCode()</title>
+<indexterm><primary>GetHashCode</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>GetHashCode</secondary></indexterm>
+<para><computeroutput>override int BattlePageController.AttackAvailability.GetHashCode ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00044">44</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a9306581bc9d2eadc8f05f487b86a4dce"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>static bool BattlePageController.AttackAvailability.operator!= (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> left, <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> right)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00054">54</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1ad5f07d2f2c2d693cfdd208ab3b8d88c4"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>static bool BattlePageController.AttackAvailability.operator== (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> left, <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> right)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00049">49</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1ae5dd9976ef258b987ee22d893184bd28"/><section>
+    <title>Attack</title>
+<indexterm><primary>Attack</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Attack</secondary></indexterm>
+<para><computeroutput>Attack BattlePageController.AttackAvailability.Attack<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00030">30</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567"/><section>
+    <title>Availability</title>
+<indexterm><primary>Availability</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Availability</secondary></indexterm>
+<para><computeroutput>bool BattlePageController.AttackAvailability.Availability<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00031">31</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb"/><section>
+    <title>RoundUntil</title>
+<indexterm><primary>RoundUntil</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
+<indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>RoundUntil</secondary></indexterm>
+<para><computeroutput>int BattlePageController.AttackAvailability.RoundUntil<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00032">32</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Pages/BattlePage/<link linkend="__battle_page_controller_8cs">BattlePageController.cs</link></section>
+</section>

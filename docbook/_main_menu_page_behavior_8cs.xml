@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__main_menu_page_behavior_8cs" xml:lang="en-US">
+<title>UI/Pages/MainMenu/MainMenuPageBehavior.cs File Reference</title>
+<indexterm><primary>UI/Pages/MainMenu/MainMenuPageBehavior.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_main_menu_page_behavior">MainMenuPageBehavior</link></para>
+
+<para>Page that contains the 4 buttons, not much to do here, here we should for now load all the attacks of the characters, we do this because we know that when then game gets to the main menu theoeretically all the models should be loaded. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

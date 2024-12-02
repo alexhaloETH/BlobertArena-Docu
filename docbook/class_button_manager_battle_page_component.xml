@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_button_manager_battle_page_component" xml:lang="en-US">
+<title>ButtonManagerBattlePageComponent Class Reference</title>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary></indexterm>
+<para>Inheritance diagram for ButtonManagerBattlePageComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_button_manager_battle_page_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link> { <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6adcfafcb4323b102c7e204555d313ba0a">Attack</link>
+, <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a393c3f5ea8ad35c02691d507bdbb31b0">Reveal</link>
+, <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a0f68101772bd5397ef8eb1b632798652">Wait</link>
+, <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a62a5e490880a92eef74f167d9dc6dca0">Hide</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_button_manager_battle_page_component_1a68ce90c827cba11aa638603406892301">GenerateButtons</link> (List&lt; <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6adcfafcb4323b102c7e204555d313ba0a">Attack</link> &gt; attacksList, <link linkend="_class_battle_page_controller">BattlePageController</link> battlePageController)</para>
+
+<para>Generates buttons for available attacks and sets them up in the UI. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_button_manager_battle_page_component_1a0b5edd47f5a53aa8c4d80f2dda5e563d">SetAvailability</link> (List&lt; <link linkend="_class_available_attack">AvailableAttack</link> &gt; availableAttacks)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_button_manager_battle_page_component_1a2349697a129136895de2581c9d37bd11">SetButtonsState</link> (<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link> gameState)</para>
+
+<para>Sets the UI elements and message text based on the current game state. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__button_manager_battle_page_component_8cs_source_1l00007">7</link> of file <link linkend="__button_manager_battle_page_component_8cs_source">ButtonManagerBattlePageComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6"/><section>
+    <title>GameState</title>
+<indexterm><primary>GameState</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>GameState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">ButtonManagerBattlePageComponent.GameState</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Attack</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>Attack</secondary></indexterm>
+<anchor xml:id="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6adcfafcb4323b102c7e204555d313ba0a"/>Attack</entry><entry></entry></row><row><entry><indexterm><primary>Reveal</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>Reveal</secondary></indexterm>
+<anchor xml:id="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a393c3f5ea8ad35c02691d507bdbb31b0"/>Reveal</entry><entry></entry></row><row><entry><indexterm><primary>Wait</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>Wait</secondary></indexterm>
+<anchor xml:id="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a0f68101772bd5397ef8eb1b632798652"/>Wait</entry><entry></entry></row><row><entry><indexterm><primary>Hide</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>Hide</secondary></indexterm>
+<anchor xml:id="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6a62a5e490880a92eef74f167d9dc6dca0"/>Hide</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__button_manager_battle_page_component_8cs_source_1l00043">43</link> of file <link linkend="__button_manager_battle_page_component_8cs_source">ButtonManagerBattlePageComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_button_manager_battle_page_component_1a68ce90c827cba11aa638603406892301"/><section>
+    <title>GenerateButtons()</title>
+<indexterm><primary>GenerateButtons</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>GenerateButtons</secondary></indexterm>
+<para><computeroutput>void ButtonManagerBattlePageComponent.GenerateButtons (List&lt; <link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6adcfafcb4323b102c7e204555d313ba0a">Attack</link> &gt; attacksList, <link linkend="_class_battle_page_controller">BattlePageController</link> battlePageController)</computeroutput></para><para>
+
+<para>Generates buttons for available attacks and sets them up in the UI. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>attacksList</entry><entry>
+<para>List of available attacks.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>battlePageBehaviour</entry><entry>
+<para>Reference to the BattlePageBehaviour to assign actions to buttons.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__button_manager_battle_page_component_8cs_source_1l00056">56</link> of file <link linkend="__button_manager_battle_page_component_8cs_source">ButtonManagerBattlePageComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_button_manager_battle_page_component_1a0b5edd47f5a53aa8c4d80f2dda5e563d"/><section>
+    <title>SetAvailability()</title>
+<indexterm><primary>SetAvailability</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>SetAvailability</secondary></indexterm>
+<para><computeroutput>void ButtonManagerBattlePageComponent.SetAvailability (List&lt; <link linkend="_class_available_attack">AvailableAttack</link> &gt; availableAttacks)</computeroutput></para><para>
+Definition at line <link linkend="__button_manager_battle_page_component_8cs_source_1l00082">82</link> of file <link linkend="__button_manager_battle_page_component_8cs_source">ButtonManagerBattlePageComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_button_manager_battle_page_component_1a2349697a129136895de2581c9d37bd11"/><section>
+    <title>SetButtonsState()</title>
+<indexterm><primary>SetButtonsState</primary><secondary>ButtonManagerBattlePageComponent</secondary></indexterm>
+<indexterm><primary>ButtonManagerBattlePageComponent</primary><secondary>SetButtonsState</secondary></indexterm>
+<para><computeroutput>void ButtonManagerBattlePageComponent.SetButtonsState (<link linkend="_class_button_manager_battle_page_component_1a74d28a8245d8c76dbe8d3a5cd90d82b6">GameState</link> gameState)</computeroutput></para><para>
+
+<para>Sets the UI elements and message text based on the current game state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gameState</entry><entry>
+<para>The current state of the game.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__button_manager_battle_page_component_8cs_source_1l00097">97</link> of file <link linkend="__button_manager_battle_page_component_8cs_source">ButtonManagerBattlePageComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__button_manager_battle_page_component_8cs">ButtonManagerBattlePageComponent.cs</link></section>
+</section>

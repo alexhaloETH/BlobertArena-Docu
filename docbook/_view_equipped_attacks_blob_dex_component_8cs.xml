@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__view_equipped_attacks_blob_dex_component_8cs" xml:lang="en-US">
+<title>UI/Components/BlobertData/BlobDexComponents/ViewEquippedAttacksBlobDexComponent.cs File Reference</title>
+<indexterm><primary>UI/Components/BlobertData/BlobDexComponents/ViewEquippedAttacksBlobDexComponent.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_view_equipped_attacks_blob_dex_component">ViewEquippedAttacksBlobDexComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> = Dojo.Starknet.FieldElement</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399"/><section>
+    <title>FieldElement</title>
+<indexterm><primary>FieldElement</primary><secondary>ViewEquippedAttacksBlobDexComponent.cs</secondary></indexterm>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent.cs</primary><secondary>FieldElement</secondary></indexterm>
+<para><computeroutput>using <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> = Dojo.Starknet.FieldElement</computeroutput></para><para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00006">6</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+</section>
+</section>

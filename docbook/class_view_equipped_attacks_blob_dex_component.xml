@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_view_equipped_attacks_blob_dex_component" xml:lang="en-US">
+<title>ViewEquippedAttacksBlobDexComponent Class Reference</title>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent</primary></indexterm>
+<para>Inheritance diagram for ViewEquippedAttacksBlobDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_view_equipped_attacks_blob_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_view_equipped_attacks_blob_dex_component_1a5e3785d451ddf7e3de667616e1a21bf9">InitilizeComponentBlobert</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, <link linkend="_class_blob_data_manager_blob_dex_component">BlobDataManagerBlobDexComponent</link> parentObject)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_view_equipped_attacks_blob_dex_component_1a463663a73342a3c933447491e5ede2e5">InitilizeComponentForCombatant</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_view_equipped_attacks_blob_dex_component_1ad14745506ec2d071602f09eb48eed0e1">SetCharacterTraitVisualizerPosition</link> (bool isNoAttacks)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_view_equipped_attacks_blob_dex_component_1a0fe47545aeceb9bbc71fd99d45f90ce1">OnPaginationClick</link> (int direction)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_view_equipped_attacks_blob_dex_component_1ae2d85127564c9c3acce3f5c73ef5774f">StartEquipButtonCall</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00008">8</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_view_equipped_attacks_blob_dex_component_1a5e3785d451ddf7e3de667616e1a21bf9"/><section>
+    <title>InitilizeComponentBlobert()</title>
+<indexterm><primary>InitilizeComponentBlobert</primary><secondary>ViewEquippedAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent</primary><secondary>InitilizeComponentBlobert</secondary></indexterm>
+<para><computeroutput>void ViewEquippedAttacksBlobDexComponent.InitilizeComponentBlobert (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, <link linkend="_class_blob_data_manager_blob_dex_component">BlobDataManagerBlobDexComponent</link> parentObject)</computeroutput></para><para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00035">35</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_view_equipped_attacks_blob_dex_component_1a463663a73342a3c933447491e5ede2e5"/><section>
+    <title>InitilizeComponentForCombatant()</title>
+<indexterm><primary>InitilizeComponentForCombatant</primary><secondary>ViewEquippedAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent</primary><secondary>InitilizeComponentForCombatant</secondary></indexterm>
+<para><computeroutput>async void ViewEquippedAttacksBlobDexComponent.InitilizeComponentForCombatant (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</computeroutput></para><para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00086">86</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_view_equipped_attacks_blob_dex_component_1a0fe47545aeceb9bbc71fd99d45f90ce1"/><section>
+    <title>OnPaginationClick()</title>
+<indexterm><primary>OnPaginationClick</primary><secondary>ViewEquippedAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent</primary><secondary>OnPaginationClick</secondary></indexterm>
+<para><computeroutput>void ViewEquippedAttacksBlobDexComponent.OnPaginationClick (int direction)</computeroutput></para><para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00159">159</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_view_equipped_attacks_blob_dex_component_1ad14745506ec2d071602f09eb48eed0e1"/><section>
+    <title>SetCharacterTraitVisualizerPosition()</title>
+<indexterm><primary>SetCharacterTraitVisualizerPosition</primary><secondary>ViewEquippedAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent</primary><secondary>SetCharacterTraitVisualizerPosition</secondary></indexterm>
+<para><computeroutput>void ViewEquippedAttacksBlobDexComponent.SetCharacterTraitVisualizerPosition (bool isNoAttacks)</computeroutput></para><para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00149">149</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_view_equipped_attacks_blob_dex_component_1ae2d85127564c9c3acce3f5c73ef5774f"/><section>
+    <title>StartEquipButtonCall()</title>
+<indexterm><primary>StartEquipButtonCall</primary><secondary>ViewEquippedAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>ViewEquippedAttacksBlobDexComponent</primary><secondary>StartEquipButtonCall</secondary></indexterm>
+<para><computeroutput>void ViewEquippedAttacksBlobDexComponent.StartEquipButtonCall ( )</computeroutput></para><para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00173">173</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__view_equipped_attacks_blob_dex_component_8cs">ViewEquippedAttacksBlobDexComponent.cs</link></section>
+</section>

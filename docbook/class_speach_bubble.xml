@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_speach_bubble" xml:lang="en-US">
+<title>SpeachBubble Class Reference</title>
+<indexterm><primary>SpeachBubble</primary></indexterm>
+<para>
+
+<para>Simple speach bubble script. After instantiation, the bubble is &quot;dormant&quot;, to start it, call either the <link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">OneShotInsult()</link> or <link linkend="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1">ContinousInsulting()</link> functions. To configure the lifetime and delay, use the <link linkend="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1">SetLifetimeAndDelay()</link> function before calling calling any of the starting functions. To stop the insults, call <link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble()</link>. </para>
+ 
+</para>
+<para>Inheritance diagram for SpeachBubble:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_speach_bubble.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link> { <link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8a7d6b2c383a185634db46ebdaa1aa3830">BubbleToRight</link> = 0
+, <link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8a83cb75141ecf2d1cb0e98a056c0f5222">BubbleToLeft</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1">SetLifetimeAndDelay</link> (int lifetime, int delay)</para>
+
+<para>Setting of both lifetime and delay of the bubble, takes effect only if there is no insulting is happening. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">OneShotInsult</link> (InsultType insultType)</para>
+
+<para>Gives a one shot insult, once the lifetime is over, the bubble disappears. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1">ContinousInsulting</link> (InsultType insultType)</para>
+
+<para>Starts a continous insulting of a given insult type. To stop it, call ResetBubble. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_speach_bubble_1a96cc40d086d837b54aba27f3fa7d76a5">DestroyBubble</link> ()</para>
+
+<para>Destroys the speach bubble. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble</link> ()</para>
+
+<para>Stop all insults and resets the speach bubble. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_speach_bubble_1a2813b8f035297864b490f04c38d96960">SetBubbleFacing</link> (<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link> facing)</para>
+
+<para>Sets and updates the facing of the bubble. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_speach_bubble_1a572238141cf8895589995393db4be7e3">IsBubbleActive</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Simple speach bubble script. After instantiation, the bubble is &quot;dormant&quot;, to start it, call either the <link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">OneShotInsult()</link> or <link linkend="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1">ContinousInsulting()</link> functions. To configure the lifetime and delay, use the <link linkend="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1">SetLifetimeAndDelay()</link> function before calling calling any of the starting functions. To stop the insults, call <link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble()</link>. </para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00014">14</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8"/><section>
+    <title>BubbleFacing</title>
+<indexterm><primary>BubbleFacing</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>BubbleFacing</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">SpeachBubble.BubbleFacing</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BubbleToRight</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>BubbleToRight</secondary></indexterm>
+<anchor xml:id="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8a7d6b2c383a185634db46ebdaa1aa3830"/>BubbleToRight</entry><entry></entry></row><row><entry><indexterm><primary>BubbleToLeft</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>BubbleToLeft</secondary></indexterm>
+<anchor xml:id="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8a83cb75141ecf2d1cb0e98a056c0f5222"/>BubbleToLeft</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00016">16</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1"/><section>
+    <title>ContinousInsulting()</title>
+<indexterm><primary>ContinousInsulting</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>ContinousInsulting</secondary></indexterm>
+<para><computeroutput>void SpeachBubble.ContinousInsulting (InsultType insultType)</computeroutput></para><para>
+
+<para>Starts a continous insulting of a given insult type. To stop it, call ResetBubble. </para>
+</para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00074">74</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<anchor xml:id="_class_speach_bubble_1a96cc40d086d837b54aba27f3fa7d76a5"/><section>
+    <title>DestroyBubble()</title>
+<indexterm><primary>DestroyBubble</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>DestroyBubble</secondary></indexterm>
+<para><computeroutput>void SpeachBubble.DestroyBubble ( )</computeroutput></para><para>
+
+<para>Destroys the speach bubble. </para>
+</para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00085">85</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<anchor xml:id="_class_speach_bubble_1a572238141cf8895589995393db4be7e3"/><section>
+    <title>IsBubbleActive()</title>
+<indexterm><primary>IsBubbleActive</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>IsBubbleActive</secondary></indexterm>
+<para><computeroutput>bool SpeachBubble.IsBubbleActive ( )</computeroutput></para><para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00122">122</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<anchor xml:id="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795"/><section>
+    <title>OneShotInsult()</title>
+<indexterm><primary>OneShotInsult</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>OneShotInsult</secondary></indexterm>
+<para><computeroutput>void SpeachBubble.OneShotInsult (InsultType insultType)</computeroutput></para><para>
+
+<para>Gives a one shot insult, once the lifetime is over, the bubble disappears. </para>
+</para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00058">58</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<anchor xml:id="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19"/><section>
+    <title>ResetBubble()</title>
+<indexterm><primary>ResetBubble</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>ResetBubble</secondary></indexterm>
+<para><computeroutput>void SpeachBubble.ResetBubble ( )</computeroutput></para><para>
+
+<para>Stop all insults and resets the speach bubble. </para>
+</para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00100">100</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<anchor xml:id="_class_speach_bubble_1a2813b8f035297864b490f04c38d96960"/><section>
+    <title>SetBubbleFacing()</title>
+<indexterm><primary>SetBubbleFacing</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>SetBubbleFacing</secondary></indexterm>
+<para><computeroutput>void SpeachBubble.SetBubbleFacing (<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link> facing)</computeroutput></para><para>
+
+<para>Sets and updates the facing of the bubble. </para>
+</para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00116">116</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<anchor xml:id="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1"/><section>
+    <title>SetLifetimeAndDelay()</title>
+<indexterm><primary>SetLifetimeAndDelay</primary><secondary>SpeachBubble</secondary></indexterm>
+<indexterm><primary>SpeachBubble</primary><secondary>SetLifetimeAndDelay</secondary></indexterm>
+<para><computeroutput>void SpeachBubble.SetLifetimeAndDelay (int lifetime, int delay)</computeroutput></para><para>
+
+<para>Setting of both lifetime and delay of the bubble, takes effect only if there is no insulting is happening. </para>
+</para>
+<para>
+Definition at line <link linkend="__speach_bubble_8cs_source_1l00048">48</link> of file <link linkend="__speach_bubble_8cs_source">SpeachBubble.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Misc/<link linkend="__speach_bubble_8cs">SpeachBubble.cs</link></section>
+</section>

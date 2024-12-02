@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_end_of_battle" xml:lang="en-US">
+<title>EndOfBattle Class Reference</title>
+<indexterm><primary>EndOfBattle</primary></indexterm>
+<para>
+
+<para>The manager of the End of Battle sequence. </para>
+ 
+</para>
+<para>Inheritance diagram for EndOfBattle:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_end_of_battle.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">Outcomes</link> { <link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014aa85b95017d0792ca611434d181515722">PlayerWon</link> = 0
+, <link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014ad659ddf649677b51ffdef64377a75575">PlayerLost</link> = 1
+, <link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014a6adf97f83acf6453d4a6a4b1070f3754">None</link> = 2
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async void <link linkend="_class_end_of_battle_1a92cc1551ce8ee898383db5ec4c8cf1b4">CreateInvitation</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_end_of_battle_1ae2edfd53803669825a74230a45ae9ffe">OnChainCallbackSendInvite</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_end_of_battle_1a27355845ea769716816ef1df151869b7">MakeTweet</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Action&lt; bool &gt; <link linkend="_class_end_of_battle_1a619d50ffaac4d3ad86cd1b08fe75b089">OnXpBarDone</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The manager of the End of Battle sequence. </para>
+<para>
+Definition at line <link linkend="__end_of_battle_8cs_source_1l00023">23</link> of file <link linkend="__end_of_battle_8cs_source">EndOfBattle.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014"/><section>
+    <title>Outcomes</title>
+<indexterm><primary>Outcomes</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>Outcomes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">EndOfBattle.Outcomes</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>PlayerWon</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>PlayerWon</secondary></indexterm>
+<anchor xml:id="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014aa85b95017d0792ca611434d181515722"/>PlayerWon</entry><entry></entry></row><row><entry><indexterm><primary>PlayerLost</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>PlayerLost</secondary></indexterm>
+<anchor xml:id="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014ad659ddf649677b51ffdef64377a75575"/>PlayerLost</entry><entry></entry></row><row><entry><indexterm><primary>None</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>None</secondary></indexterm>
+<anchor xml:id="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014a6adf97f83acf6453d4a6a4b1070f3754"/>None</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__end_of_battle_8cs_source_1l00035">35</link> of file <link linkend="__end_of_battle_8cs_source">EndOfBattle.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_end_of_battle_1a92cc1551ce8ee898383db5ec4c8cf1b4"/><section>
+    <title>CreateInvitation()</title>
+<indexterm><primary>CreateInvitation</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>CreateInvitation</secondary></indexterm>
+<para><computeroutput>async void EndOfBattle.CreateInvitation ( )</computeroutput></para><para>
+Definition at line <link linkend="__end_of_battle_8cs_source_1l00342">342</link> of file <link linkend="__end_of_battle_8cs_source">EndOfBattle.cs</link>.</para>
+</section>
+<anchor xml:id="_class_end_of_battle_1a27355845ea769716816ef1df151869b7"/><section>
+    <title>MakeTweet()</title>
+<indexterm><primary>MakeTweet</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>MakeTweet</secondary></indexterm>
+<para><computeroutput>void EndOfBattle.MakeTweet ( )</computeroutput></para><para>
+Definition at line <link linkend="__end_of_battle_8cs_source_1l00423">423</link> of file <link linkend="__end_of_battle_8cs_source">EndOfBattle.cs</link>.</para>
+</section>
+<anchor xml:id="_class_end_of_battle_1ae2edfd53803669825a74230a45ae9ffe"/><section>
+    <title>OnChainCallbackSendInvite()</title>
+<indexterm><primary>OnChainCallbackSendInvite</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>OnChainCallbackSendInvite</secondary></indexterm>
+<para><computeroutput>void EndOfBattle.OnChainCallbackSendInvite (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__end_of_battle_8cs_source_1l00415">415</link> of file <link linkend="__end_of_battle_8cs_source">EndOfBattle.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_end_of_battle_1a619d50ffaac4d3ad86cd1b08fe75b089"/><section>
+    <title>OnXpBarDone</title>
+<indexterm><primary>OnXpBarDone</primary><secondary>EndOfBattle</secondary></indexterm>
+<indexterm><primary>EndOfBattle</primary><secondary>OnXpBarDone</secondary></indexterm>
+<para><computeroutput>Action&lt;bool&gt; EndOfBattle.OnXpBarDone</computeroutput></para><para>
+Definition at line <link linkend="__end_of_battle_8cs_source_1l00095">95</link> of file <link linkend="__end_of_battle_8cs_source">EndOfBattle.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/BattlePage/<link linkend="__end_of_battle_8cs">EndOfBattle.cs</link></section>
+</section>

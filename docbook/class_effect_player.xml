@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_effect_player" xml:lang="en-US">
+<title>EffectPlayer Class Reference</title>
+<indexterm><primary>EffectPlayer</primary></indexterm>
+<para>
+
+<para>Simple animation player script, it plays the provided sprites in order, then destroys the holding game object. The purpose is to allow ourselves creating several animation prefabs that play a one shot animation in a fire and forget style. </para>
+ 
+</para>
+<para>Inheritance diagram for EffectPlayer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_effect_player.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Simple animation player script, it plays the provided sprites in order, then destroys the holding game object. The purpose is to allow ourselves creating several animation prefabs that play a one shot animation in a fire and forget style. </para>
+<para>
+Definition at line <link linkend="__effect_player_8cs_source_1l00014">14</link> of file <link linkend="__effect_player_8cs_source">EffectPlayer.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+<link linkend="__effect_player_8cs">EffectPlayer.cs</link></section>
+</section>

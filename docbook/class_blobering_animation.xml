@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobering_animation" xml:lang="en-US">
+<title>BloberingAnimation Class Reference</title>
+<indexterm><primary>BloberingAnimation</primary></indexterm>
+<para>
+
+<para>Blobering animation class to create the hovering question mark effect, and the text ellipses. </para>
+ 
+</para>
+<para>Inheritance diagram for BloberingAnimation:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobering_animation.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobering_animation_1ab53ffe2ee0333751169cfc46870d213c">StarAllAnimations</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Blobering animation class to create the hovering question mark effect, and the text ellipses. </para>
+<para>
+Definition at line <link linkend="__blobering_animation_8cs_source_1l00011">11</link> of file <link linkend="__blobering_animation_8cs_source">BloberingAnimation.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobering_animation_1ab53ffe2ee0333751169cfc46870d213c"/><section>
+    <title>StarAllAnimations()</title>
+<indexterm><primary>StarAllAnimations</primary><secondary>BloberingAnimation</secondary></indexterm>
+<indexterm><primary>BloberingAnimation</primary><secondary>StarAllAnimations</secondary></indexterm>
+<para><computeroutput>void BloberingAnimation.StarAllAnimations ( )</computeroutput></para><para>
+Definition at line <link linkend="__blobering_animation_8cs_source_1l00041">41</link> of file <link linkend="__blobering_animation_8cs_source">BloberingAnimation.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__blobering_animation_8cs">BloberingAnimation.cs</link></section>
+</section>

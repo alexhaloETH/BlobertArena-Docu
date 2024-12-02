@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_mouse_interaction_component" xml:lang="en-US">
+<title>MouseInteractionComponent Class Reference</title>
+<indexterm><primary>MouseInteractionComponent</primary></indexterm>
+<para>Inheritance diagram for MouseInteractionComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mouse_interaction_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_mouse_interaction_component_1aeef7ff92dd25f3efbfb10befd1d4ec5b">OnPointerClick</link> (PointerEventData eventData)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mouse_interaction_component_1a0d4cf3aa0130e50339b2e056a346516a">OnPointerDown</link> (PointerEventData eventData)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mouse_interaction_component_1ab06bc642c210ba73a9cb944efefb1e2a">OnPointerUp</link> (PointerEventData eventData)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mouse_interaction_component_1a7e2ca34db50bccca9db00a13a128ec0f">OnPointerEnter</link> (PointerEventData eventData)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mouse_interaction_component_1a7556e797837a1cc7b307711a5f70db67">OnPointerExit</link> (PointerEventData eventData)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_mouse_interaction_component_1a8e6589a348c5d8b2c2139092a58c8858">PointerIsOver</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_mouse_interaction_component_1aaa8e41d3c3edd721207484a5cdde15df">PointerIsDown</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_mouse_interaction_component_1a8f9463cb806bad1f97c7cb50a1e6cedc">InteractableHover</link> = true</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_mouse_interaction_component_1a8886058ef96a5edfc519a72c97341abc">InteractableClickB</link> = true</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00008">8</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_mouse_interaction_component_1aeef7ff92dd25f3efbfb10befd1d4ec5b"/><section>
+    <title>OnPointerClick()</title>
+<indexterm><primary>OnPointerClick</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>OnPointerClick</secondary></indexterm>
+<para><computeroutput>void MouseInteractionComponent.OnPointerClick (PointerEventData eventData)</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00039">39</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1a0d4cf3aa0130e50339b2e056a346516a"/><section>
+    <title>OnPointerDown()</title>
+<indexterm><primary>OnPointerDown</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>OnPointerDown</secondary></indexterm>
+<para><computeroutput>void MouseInteractionComponent.OnPointerDown (PointerEventData eventData)</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00057">57</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1a7e2ca34db50bccca9db00a13a128ec0f"/><section>
+    <title>OnPointerEnter()</title>
+<indexterm><primary>OnPointerEnter</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>OnPointerEnter</secondary></indexterm>
+<para><computeroutput>void MouseInteractionComponent.OnPointerEnter (PointerEventData eventData)</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00071">71</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1a7556e797837a1cc7b307711a5f70db67"/><section>
+    <title>OnPointerExit()</title>
+<indexterm><primary>OnPointerExit</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>OnPointerExit</secondary></indexterm>
+<para><computeroutput>void MouseInteractionComponent.OnPointerExit (PointerEventData eventData)</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00082">82</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1ab06bc642c210ba73a9cb944efefb1e2a"/><section>
+    <title>OnPointerUp()</title>
+<indexterm><primary>OnPointerUp</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>OnPointerUp</secondary></indexterm>
+<para><computeroutput>void MouseInteractionComponent.OnPointerUp (PointerEventData eventData)</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00064">64</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_mouse_interaction_component_1a8886058ef96a5edfc519a72c97341abc"/><section>
+    <title>InteractableClickB</title>
+<indexterm><primary>InteractableClickB</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>InteractableClickB</secondary></indexterm>
+<para><computeroutput>bool MouseInteractionComponent.InteractableClickB = true</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00027">27</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1a8f9463cb806bad1f97c7cb50a1e6cedc"/><section>
+    <title>InteractableHover</title>
+<indexterm><primary>InteractableHover</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>InteractableHover</secondary></indexterm>
+<para><computeroutput>bool MouseInteractionComponent.InteractableHover = true</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00026">26</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1aaa8e41d3c3edd721207484a5cdde15df"/><section>
+    <title>PointerIsDown</title>
+<indexterm><primary>PointerIsDown</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>PointerIsDown</secondary></indexterm>
+<para><computeroutput>bool MouseInteractionComponent.PointerIsDown = false</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00025">25</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_mouse_interaction_component_1a8e6589a348c5d8b2c2139092a58c8858"/><section>
+    <title>PointerIsOver</title>
+<indexterm><primary>PointerIsOver</primary><secondary>MouseInteractionComponent</secondary></indexterm>
+<indexterm><primary>MouseInteractionComponent</primary><secondary>PointerIsOver</secondary></indexterm>
+<para><computeroutput>bool MouseInteractionComponent.PointerIsOver = false</computeroutput></para><para>
+Definition at line <link linkend="__mouse_interaction_component_8cs_source_1l00024">24</link> of file <link linkend="__mouse_interaction_component_8cs_source">MouseInteractionComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Button Types/<link linkend="__mouse_interaction_component_8cs">MouseInteractionComponent.cs</link></section>
+</section>

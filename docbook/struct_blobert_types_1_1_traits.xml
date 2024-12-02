@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_blobert_types_1_1_traits" xml:lang="en-US">
+<title>BlobertTypes.Traits Struct Reference</title>
+<indexterm><primary>BlobertTypes.Traits</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link> <link linkend="_struct_blobert_types_1_1_traits_1a623dd23a2baa6dd916af536db69c4982">background</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link> <link linkend="_struct_blobert_types_1_1_traits_1aedec855b9c2c7229343408a5f4c2b766">armour</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link> <link linkend="_struct_blobert_types_1_1_traits_1aa450b9b681f5932aa0d00200d9785e4b">mask</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link> <link linkend="_struct_blobert_types_1_1_traits_1abad6acf5c8e1ff98bd4ed5e0d221b50e">jewelry</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link> <link linkend="_struct_blobert_types_1_1_traits_1a53b130aa7f1b1c02b537dd36ac1c77d0">weapon</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00014">14</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_blobert_types_1_1_traits_1aedec855b9c2c7229343408a5f4c2b766"/><section>
+    <title>armour</title>
+<indexterm><primary>armour</primary><secondary>BlobertTypes.Traits</secondary></indexterm>
+<indexterm><primary>BlobertTypes.Traits</primary><secondary>armour</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link> BlobertTypes.Traits.armour</computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00017">17</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_types_1_1_traits_1a623dd23a2baa6dd916af536db69c4982"/><section>
+    <title>background</title>
+<indexterm><primary>background</primary><secondary>BlobertTypes.Traits</secondary></indexterm>
+<indexterm><primary>BlobertTypes.Traits</primary><secondary>background</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link> BlobertTypes.Traits.background</computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00016">16</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_types_1_1_traits_1abad6acf5c8e1ff98bd4ed5e0d221b50e"/><section>
+    <title>jewelry</title>
+<indexterm><primary>jewelry</primary><secondary>BlobertTypes.Traits</secondary></indexterm>
+<indexterm><primary>BlobertTypes.Traits</primary><secondary>jewelry</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link> BlobertTypes.Traits.jewelry</computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00019">19</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_types_1_1_traits_1aa450b9b681f5932aa0d00200d9785e4b"/><section>
+    <title>mask</title>
+<indexterm><primary>mask</primary><secondary>BlobertTypes.Traits</secondary></indexterm>
+<indexterm><primary>BlobertTypes.Traits</primary><secondary>mask</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link> BlobertTypes.Traits.mask</computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00018">18</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_types_1_1_traits_1a53b130aa7f1b1c02b537dd36ac1c77d0"/><section>
+    <title>weapon</title>
+<indexterm><primary>weapon</primary><secondary>BlobertTypes.Traits</secondary></indexterm>
+<indexterm><primary>BlobertTypes.Traits</primary><secondary>weapon</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link> BlobertTypes.Traits.weapon</computeroutput></para><para>
+Definition at line <link linkend="__blobert_types_8cs_source_1l00020">20</link> of file <link linkend="__blobert_types_8cs_source">BlobertTypes.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Managers/Statics/<link linkend="__blobert_types_8cs">BlobertTypes.cs</link></section>
+</section>

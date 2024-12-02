@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_d58671999346ac7fc1253c5c842798ba" xml:lang="en-US">
+<title>LogicLayer/Interfaces Directory Reference</title>
+<indexterm><primary>LogicLayer/Interfaces Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__i_nft_type_8cs">INftType.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

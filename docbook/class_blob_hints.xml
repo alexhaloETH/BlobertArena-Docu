@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blob_hints" xml:lang="en-US">
+<title>BlobHints Class Reference</title>
+<indexterm><primary>BlobHints</primary></indexterm>
+<para>Inheritance diagram for BlobHints:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blob_hints.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blob_hints_1ad009938cab8a7bffc538aea1eff7fa11">OnHintButtonClick</link> ()</para>
+
+<para>Showing a new hint in a speech bubble. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blob_hints_8cs_source_1l00007">7</link> of file <link linkend="__blob_hints_8cs_source">BlobHints.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blob_hints_1ad009938cab8a7bffc538aea1eff7fa11"/><section>
+    <title>OnHintButtonClick()</title>
+<indexterm><primary>OnHintButtonClick</primary><secondary>BlobHints</secondary></indexterm>
+<indexterm><primary>BlobHints</primary><secondary>OnHintButtonClick</secondary></indexterm>
+<para><computeroutput>void BlobHints.OnHintButtonClick ( )</computeroutput></para><para>
+
+<para>Showing a new hint in a speech bubble. </para>
+</para>
+<para>
+Definition at line <link linkend="__blob_hints_8cs_source_1l00027">27</link> of file <link linkend="__blob_hints_8cs_source">BlobHints.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+<link linkend="__blob_hints_8cs">BlobHints.cs</link></section>
+</section>

@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_typewriter" xml:lang="en-US">
+<title>Typewriter Class Reference</title>
+<indexterm><primary>Typewriter</primary></indexterm>
+<para>
+
+<para>Add this function to any GameObject that has a TMP_Text component, and then call the <link linkend="_class_typewriter_1a804822a1567a06e38b45491a717c8c9f">SetTextToType()</link> function. </para>
+ 
+</para>
+<para>Inheritance diagram for Typewriter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_typewriter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_typewriter_1a804822a1567a06e38b45491a717c8c9f">SetTextToType</link> (string text, Action callback=null)</para>
+
+<para>Sets a string that will be typed according to the set typing speed. An optional callback Action can be specified that will be executed once the typing is over. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_typewriter_1ac91239c236e40828b9f326a7ac7ce4d6">StartWaitingTextAnimation</link> ()</para>
+
+<para>Starts the waiting animation that will create an animated ellipses at the end of the text. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_typewriter_1acd7809464fc6aeee8719c7fae15ae4a3">StopWaitingTextAnimation</link> (bool keepText=true)</para>
+
+<para>Stops the waiting animation, also either keeps (default) or discards the text. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_typewriter_1ad769c3323f0413b48a6a19634d8a1b7f">SkipTyping</link> ()</para>
+
+<para>Skips the typewriting animation, revealing the full text. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_typewriter_1acd7c7115a1189fff9e5453e6540c3a05">IsTyping</link> ()</para>
+
+<para>Returns the typing state. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_typewriter_1a6546b15c2a91fc79312cc1993d5d5d27">ClearText</link> ()</para>
+
+<para>Removes the end of text object (if any) and clears the text. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_typewriter_1a50e24abcfe2f39cde9428103ccb1a89e">PlaceObjectAtTheEndOfText</link> ()</para>
+
+<para>Places the object referenced in the class at the end of the text. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Add this function to any GameObject that has a TMP_Text component, and then call the <link linkend="_class_typewriter_1a804822a1567a06e38b45491a717c8c9f">SetTextToType()</link> function. </para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00011">11</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_typewriter_1a6546b15c2a91fc79312cc1993d5d5d27"/><section>
+    <title>ClearText()</title>
+<indexterm><primary>ClearText</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>ClearText</secondary></indexterm>
+<para><computeroutput>void Typewriter.ClearText ( )</computeroutput></para><para>
+
+<para>Removes the end of text object (if any) and clears the text. </para>
+</para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00107">107</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_typewriter_1acd7c7115a1189fff9e5453e6540c3a05"/><section>
+    <title>IsTyping()</title>
+<indexterm><primary>IsTyping</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>IsTyping</secondary></indexterm>
+<para><computeroutput>bool Typewriter.IsTyping ( )</computeroutput></para><para>
+
+<para>Returns the typing state. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True - Typing / False - Not typing</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00099">99</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_typewriter_1a50e24abcfe2f39cde9428103ccb1a89e"/><section>
+    <title>PlaceObjectAtTheEndOfText()</title>
+<indexterm><primary>PlaceObjectAtTheEndOfText</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>PlaceObjectAtTheEndOfText</secondary></indexterm>
+<para><computeroutput>void Typewriter.PlaceObjectAtTheEndOfText ( )</computeroutput></para><para>
+
+<para>Places the object referenced in the class at the end of the text. </para>
+</para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00178">178</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_typewriter_1a804822a1567a06e38b45491a717c8c9f"/><section>
+    <title>SetTextToType()</title>
+<indexterm><primary>SetTextToType</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>SetTextToType</secondary></indexterm>
+<para><computeroutput>void Typewriter.SetTextToType (string text, Action callback = <computeroutput>null</computeroutput>
+)</computeroutput></para><para>
+
+<para>Sets a string that will be typed according to the set typing speed. An optional callback Action can be specified that will be executed once the typing is over. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>text</entry><entry>
+<para>The text that will be typed</para>
+</entry>
+                            </row>
+                            <row>
+<entry>callback</entry><entry>
+<para>The action that will be executed once the typing is over</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00044">44</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_typewriter_1ad769c3323f0413b48a6a19634d8a1b7f"/><section>
+    <title>SkipTyping()</title>
+<indexterm><primary>SkipTyping</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>SkipTyping</secondary></indexterm>
+<para><computeroutput>void Typewriter.SkipTyping ( )</computeroutput></para><para>
+
+<para>Skips the typewriting animation, revealing the full text. </para>
+</para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00089">89</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_typewriter_1ac91239c236e40828b9f326a7ac7ce4d6"/><section>
+    <title>StartWaitingTextAnimation()</title>
+<indexterm><primary>StartWaitingTextAnimation</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>StartWaitingTextAnimation</secondary></indexterm>
+<para><computeroutput>void Typewriter.StartWaitingTextAnimation ( )</computeroutput></para><para>
+
+<para>Starts the waiting animation that will create an animated ellipses at the end of the text. </para>
+</para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00066">66</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<anchor xml:id="_class_typewriter_1acd7809464fc6aeee8719c7fae15ae4a3"/><section>
+    <title>StopWaitingTextAnimation()</title>
+<indexterm><primary>StopWaitingTextAnimation</primary><secondary>Typewriter</secondary></indexterm>
+<indexterm><primary>Typewriter</primary><secondary>StopWaitingTextAnimation</secondary></indexterm>
+<para><computeroutput>void Typewriter.StopWaitingTextAnimation (bool keepText = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Stops the waiting animation, also either keeps (default) or discards the text. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>keepText</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__typewriter_8cs_source_1l00077">77</link> of file <link linkend="__typewriter_8cs_source">Typewriter.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/<link linkend="__typewriter_8cs">Typewriter.cs</link></section>
+</section>

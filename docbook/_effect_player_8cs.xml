@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__effect_player_8cs" xml:lang="en-US">
+<title>EffectPlayer.cs File Reference</title>
+<indexterm><primary>EffectPlayer.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_effect_player">EffectPlayer</link></para>
+
+<para>Simple animation player script, it plays the provided sprites in order, then destroys the holding game object. The purpose is to allow ourselves creating several animation prefabs that play a one shot animation in a fire and forget style. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

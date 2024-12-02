@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blobert_types_8cs_source" xml:lang="en-US">
+<title>BlobertTypes.cs</title>
+<indexterm><primary>Managers/Statics/BlobertTypes.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__blobert_types_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__blobert_types_8cs_source_1l00003"/>00003 
+<anchor xml:id="__blobert_types_8cs_source_1l00004"/><link linkend="_class_blobert_types">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_blobert_types">BlobertTypes</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__blobert_types_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__blobert_types_8cs_source_1l00006"/><link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">00006</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94a3fa2a5dad5a6f96d200b46769ecbea8b">ArcadeBlobs</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94a5044f047239e26fe087d9a0622a2ca3f">WalletBlobs</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94abe759a8b41c9e9b22718e4d3d85d3cc6">AMMABlobs</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00012"/>00012 
+<anchor xml:id="__blobert_types_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00014"/><link linkend="_struct_blobert_types_1_1_traits">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_blobert_types_1_1_traits">Traits</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00016"/><link linkend="_struct_blobert_types_1_1_traits_1a623dd23a2baa6dd916af536db69c4982">00016</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>&#32;<link linkend="_struct_blobert_types_1_1_traits_1a623dd23a2baa6dd916af536db69c4982">background</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00017"/><link linkend="_struct_blobert_types_1_1_traits_1aedec855b9c2c7229343408a5f4c2b766">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>&#32;<link linkend="_struct_blobert_types_1_1_traits_1aedec855b9c2c7229343408a5f4c2b766">armour</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00018"/><link linkend="_struct_blobert_types_1_1_traits_1aa450b9b681f5932aa0d00200d9785e4b">00018</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>&#32;<link linkend="_struct_blobert_types_1_1_traits_1aa450b9b681f5932aa0d00200d9785e4b">mask</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00019"/><link linkend="_struct_blobert_types_1_1_traits_1abad6acf5c8e1ff98bd4ed5e0d221b50e">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>&#32;<link linkend="_struct_blobert_types_1_1_traits_1abad6acf5c8e1ff98bd4ed5e0d221b50e">jewelry</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00020"/><link linkend="_struct_blobert_types_1_1_traits_1a53b130aa7f1b1c02b537dd36ac1c77d0">00020</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>&#32;<link linkend="_struct_blobert_types_1_1_traits_1a53b130aa7f1b1c02b537dd36ac1c77d0">weapon</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00022"/>00022 
+<anchor xml:id="__blobert_types_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00024"/><link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">00024</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a8ab7b3f922dcbea814209decbc6571ed">Amulet</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a464e6b4dd4ced26e662ca7b3ffc6a597">BronzeRing</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a5fc07109766f6e991e269ab24c301172">GoldRing</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3ae1bda4ac1fa8da51314b66510c193c0e">Necklace</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3afc8fafa4a08e1eadb5cb079ce41ee8fa">Pendant</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a2c4fe7b4205d24452845f9300759caa5">PlatinumRing</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a0700d493074b3d6915ac0bc3ba6875ff">SilverRing</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a0eb606d7ef043eac2dd833009a77e8a1">TitaniumRing</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00034"/>00034 
+<anchor xml:id="__blobert_types_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//added&#32;on</emphasis>
+<anchor xml:id="__blobert_types_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a4a36b982473acc9f42b10f9d518b46a8">WarriorsPendant</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00037"/>00037 
+<anchor xml:id="__blobert_types_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3acae1c4ce40df65d518545173bb98b379">CommandersMedallion</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3acdd4d940aaf1fcabfc07ed4bcf5d2373">VictoryBand</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3a2f5ee614fbfd2c8dca73f07e747e609e">LoneStarPendant</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3ac69221865a39c97d21e6702c44bf547d">ShieldAmulet</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3abc69b5cc6cb30c6221d68bfc68235e19">SpeedAmulet</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00044"/>00044 
+<anchor xml:id="__blobert_types_8cs_source_1l00045"/><link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">TraitJewelryToFileName</link>(<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>&#32;trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.Amulet:
+<anchor xml:id="__blobert_types_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;amulet&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00051"/>00051 
+<anchor xml:id="__blobert_types_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.BronzeRing:
+<anchor xml:id="__blobert_types_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;bronze_ring&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00054"/>00054 
+<anchor xml:id="__blobert_types_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.GoldRing:
+<anchor xml:id="__blobert_types_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;gold_ring&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00057"/>00057 
+<anchor xml:id="__blobert_types_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.Necklace:
+<anchor xml:id="__blobert_types_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;necklace&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00060"/>00060 
+<anchor xml:id="__blobert_types_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.Pendant:
+<anchor xml:id="__blobert_types_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;pendant&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00063"/>00063 
+<anchor xml:id="__blobert_types_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.PlatinumRing:
+<anchor xml:id="__blobert_types_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;platinum_ring&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00066"/>00066 
+<anchor xml:id="__blobert_types_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.SilverRing:
+<anchor xml:id="__blobert_types_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;silver_ring&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00069"/>00069 
+<anchor xml:id="__blobert_types_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.TitaniumRing:
+<anchor xml:id="__blobert_types_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;titanium_ring&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00072"/>00072 
+<anchor xml:id="__blobert_types_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.WarriorsPendant:
+<anchor xml:id="__blobert_types_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;warriors_pendant&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00075"/>00075 
+<anchor xml:id="__blobert_types_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.CommandersMedallion:
+<anchor xml:id="__blobert_types_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;commanders_medallion&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00078"/>00078 
+<anchor xml:id="__blobert_types_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.VictoryBand:
+<anchor xml:id="__blobert_types_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;victory_band&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00081"/>00081 
+<anchor xml:id="__blobert_types_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.LoneStarPendant:
+<anchor xml:id="__blobert_types_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;lone_star_pendant&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00084"/>00084 
+<anchor xml:id="__blobert_types_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.ShieldAmulet:
+<anchor xml:id="__blobert_types_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;shield_amulet&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00087"/>00087 
+<anchor xml:id="__blobert_types_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>.SpeedAmulet:
+<anchor xml:id="__blobert_types_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;speed_amulet&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00090"/>00090 
+<anchor xml:id="__blobert_types_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_types_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00095"/>00095 
+<anchor xml:id="__blobert_types_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00097"/><link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">00097</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdad2d1122c9ccfb732f244a6422c5c32f6">SheepsWool</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda3c7da7911da83ebff1a0297a56d478b1">Kigurumi</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda4face8d580e285eec37cb2accfcfdae5">DivineRobeDark</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdacfeddd9a3fb4edb34b29e8ffe594d6fe">DivineRobe</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda683e9d68f54b10b460a4dd264e5974db">DojoRobe</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda67d4b5f4ac46ee9f476ff91ef03d1dab">HolyChestplate</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda8766b3227f84143a34103f6e1c07d2f6">DemonHusk</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda97b04bd5b15f16185359d3af8ba34bfb">LeatherArmour</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda6daf5134aa610774ea154708eebad9ae">LeopardSkin</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda14894a07d36c879a78e8c2211cd82764">LinenRobe</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda91b612eb91c5433523b004ae73553c45">LordsArmor</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaf411d69c161668b2f4254e168ca3bfda">SecretTattoo</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda8c03e115ed5bd919086178d8ecf1e75c">Chainmail</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdac5e80c666b224f12edf02cba1b9dc7bb">Suit</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaef83ce4ad78ce759c19e9f5ffd480ae0">Underpants</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda57619d6e093f4d0d8eb6dfa5828ffb69">WenShirt</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda19af1c979fc6301a34483b572427ce7c">WsbTankTop</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00116"/>00116 
+<anchor xml:id="__blobert_types_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//added&#32;on</emphasis>
+<anchor xml:id="__blobert_types_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdacc1add722aba4edc7aa32a046df163a2">Brigandine</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00119"/>00119 
+<anchor xml:id="__blobert_types_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda6078ada5c254c016c6eb9a7920695598">SurcoatMail</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdaf4ffdbfaa45366d2d38b0caa94c30d7e">BrigandineChainmail</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdafb709700c4586de474342f4e1f61cf17">CrusadersSurcoatPlate</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cdac0cb4d691334185b79bfeaa8bc409db1">GambesonSteelGreaves</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cda4ed223a2c62112a92d51b1bae16ea21e">BrigandineSteelPlates</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00126"/>00126 
+<anchor xml:id="__blobert_types_8cs_source_1l00127"/><link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">00127</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">TraitArmourToFileName</link>(<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>&#32;trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.SheepsWool:
+<anchor xml:id="__blobert_types_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;sheeps_wool&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00133"/>00133 
+<anchor xml:id="__blobert_types_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.Kigurumi:
+<anchor xml:id="__blobert_types_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;kigurumi&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00136"/>00136 
+<anchor xml:id="__blobert_types_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.DivineRobeDark:
+<anchor xml:id="__blobert_types_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;divine_robe_dark&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00139"/>00139 
+<anchor xml:id="__blobert_types_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.DivineRobe:
+<anchor xml:id="__blobert_types_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;divine_robe&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00142"/>00142 
+<anchor xml:id="__blobert_types_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.DojoRobe:
+<anchor xml:id="__blobert_types_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;dojo_robe&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00145"/>00145 
+<anchor xml:id="__blobert_types_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.HolyChestplate:
+<anchor xml:id="__blobert_types_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;holy_chestplate&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00148"/>00148 
+<anchor xml:id="__blobert_types_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.DemonHusk:
+<anchor xml:id="__blobert_types_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;demon_husk&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00151"/>00151 
+<anchor xml:id="__blobert_types_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.LeatherArmour:
+<anchor xml:id="__blobert_types_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;leather_armour&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00154"/>00154 
+<anchor xml:id="__blobert_types_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.LeopardSkin:
+<anchor xml:id="__blobert_types_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;leopard_skin&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00157"/>00157 
+<anchor xml:id="__blobert_types_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.LinenRobe:
+<anchor xml:id="__blobert_types_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;linen_robe&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00160"/>00160 
+<anchor xml:id="__blobert_types_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.LordsArmor:
+<anchor xml:id="__blobert_types_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;lords_armor&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00163"/>00163 
+<anchor xml:id="__blobert_types_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.SecretTattoo:
+<anchor xml:id="__blobert_types_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;secret_tattoo&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00166"/>00166 
+<anchor xml:id="__blobert_types_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.Chainmail:
+<anchor xml:id="__blobert_types_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;chainmail&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00169"/>00169 
+<anchor xml:id="__blobert_types_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.Suit:
+<anchor xml:id="__blobert_types_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;suit&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00172"/>00172 
+<anchor xml:id="__blobert_types_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.Underpants:
+<anchor xml:id="__blobert_types_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;underpants&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00175"/>00175 
+<anchor xml:id="__blobert_types_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.WenShirt:
+<anchor xml:id="__blobert_types_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;wen_shirt&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00178"/>00178 
+<anchor xml:id="__blobert_types_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.WsbTankTop:
+<anchor xml:id="__blobert_types_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;wsb_tank_top&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00181"/>00181 
+<anchor xml:id="__blobert_types_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.Brigandine:
+<anchor xml:id="__blobert_types_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;brigandine&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00184"/>00184 
+<anchor xml:id="__blobert_types_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.SurcoatMail:
+<anchor xml:id="__blobert_types_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;surcoat_mail&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00187"/>00187 
+<anchor xml:id="__blobert_types_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.BrigandineChainmail:
+<anchor xml:id="__blobert_types_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;brigandine_chainmail&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00190"/>00190 
+<anchor xml:id="__blobert_types_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.CrusadersSurcoatPlate:
+<anchor xml:id="__blobert_types_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;crusaders_surcoat_plate&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00193"/>00193 
+<anchor xml:id="__blobert_types_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.GambesonSteelGreaves:
+<anchor xml:id="__blobert_types_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;gambeson_steel_greaves&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00196"/>00196 
+<anchor xml:id="__blobert_types_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>.BrigandineSteelPlates:
+<anchor xml:id="__blobert_types_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;brigandine_steel_plates&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00199"/>00199 
+<anchor xml:id="__blobert_types_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_types_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00204"/>00204 
+<anchor xml:id="__blobert_types_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00206"/><link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">00206</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac66243231687ec739ddfa7a2e6bb1844">Blobert</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba136de6de72514772b9302d4776e5c3d2">Doge</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae7b28ceae09038a480b26cfc4dc159bb">Dojo</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bab0ac723d11524af93721c779a422d3b7">Ducks</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baf1cd318e412b5f7226e5f377a9544ff7">Kevin</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac543796e779ab2bf41e4c663ca9b08c5">Milady</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae885d567f57b0f87333c25f7f3a1e381">Pepe</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba70d66924f584b34384d08157aae6f5f2">Pudgy</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba192478d7b816101d73101abc65d2bda0">_3dGlasses</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba7bc663fdadbcde5d4c2cefceaedc9576">_1337Skulls</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba7e3cfe3b2d34782cb324bb9469aec8b7">AncientHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba51534a3170d5912c466d45c89e48225e">Bane</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baa6c3b0e9bffcd8851f3b42a547d91cc6">BraavosHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bacdc45ad63c953df3fe05e83f7d41e951">Bulbhead</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae7d670d6d7e7c001150b2b3de1870666">DealWithItGlasses</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bacd662651de7e098f5357f0a6cd3721fd">DemonCrown</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba89fd851c5c804917962c9683d5f1bff8">DivineHood</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba5d8d7885c1e95565cc02cf0515b29732">Ekubo</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba16504cdb4c039bf79ef409a61b127488">HyperlootCrown</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba0b470f0d6605231247ae2397a2f3fd53">InfluenceHelmet</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba3ee744b8bb786c066eda3c9d2b6feca1">LordsHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba341c7c6677ca97cae29c723e2e597ae0">Nostrahat</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bad177fda1f7be9639faaeffebbb34dcdc">NounsGlasses</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba528f6bff5829d0ec48af0647bb62841f">PopeHat</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba629d50b1addf15b6038807548e691739">TaprootWizardHat</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1baaeab9f7f46fb3ddccf690b4356905161">WifHat</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00234"/>00234 
+<anchor xml:id="__blobert_types_8cs_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//added&#32;on</emphasis>
+<anchor xml:id="__blobert_types_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba244e0587e6526202194128474176f9af">BarbuteHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00237"/>00237 
+<anchor xml:id="__blobert_types_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba6e6618000078b8c5d50bd742733dfe53">BarredGreatHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bac3205559569714b30a2cbbc8fb16e8bc">ChainmailCoif</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1ba05e4bb20182653e76fb88c69c1047aab">GreatBascinetHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1bae91b3ee7c280a4c24a1c3bcb603061a9">GreatHelm</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00243"/>00243 
+<anchor xml:id="__blobert_types_8cs_source_1l00244"/><link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">00244</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">TraitMaskToFileName</link>(<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>&#32;trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Blobert:
+<anchor xml:id="__blobert_types_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;blobert&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00250"/>00250 
+<anchor xml:id="__blobert_types_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Doge:
+<anchor xml:id="__blobert_types_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;doge&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00253"/>00253 
+<anchor xml:id="__blobert_types_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Dojo:
+<anchor xml:id="__blobert_types_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;dojo&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00256"/>00256 
+<anchor xml:id="__blobert_types_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Ducks:
+<anchor xml:id="__blobert_types_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;ducks&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00259"/>00259 
+<anchor xml:id="__blobert_types_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Kevin:
+<anchor xml:id="__blobert_types_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;kevin&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00262"/>00262 
+<anchor xml:id="__blobert_types_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Milady:
+<anchor xml:id="__blobert_types_8cs_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;milady&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00265"/>00265 
+<anchor xml:id="__blobert_types_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Pepe:
+<anchor xml:id="__blobert_types_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;pepe&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00268"/>00268 
+<anchor xml:id="__blobert_types_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Pudgy:
+<anchor xml:id="__blobert_types_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;pudgy&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00271"/>00271 
+<anchor xml:id="__blobert_types_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>._3dGlasses:
+<anchor xml:id="__blobert_types_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;3d_glasses&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00274"/>00274 
+<anchor xml:id="__blobert_types_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>._1337Skulls:
+<anchor xml:id="__blobert_types_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;1337_skulls&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00277"/>00277 
+<anchor xml:id="__blobert_types_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.AncientHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;ancient_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00280"/>00280 
+<anchor xml:id="__blobert_types_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Bane:
+<anchor xml:id="__blobert_types_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;bane&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00283"/>00283 
+<anchor xml:id="__blobert_types_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.BraavosHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;braavos_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00286"/>00286 
+<anchor xml:id="__blobert_types_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Bulbhead:
+<anchor xml:id="__blobert_types_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;bulbhead&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00289"/>00289 
+<anchor xml:id="__blobert_types_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.DealWithItGlasses:
+<anchor xml:id="__blobert_types_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;deal_with_it_glasses&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00292"/>00292 
+<anchor xml:id="__blobert_types_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.DemonCrown:
+<anchor xml:id="__blobert_types_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;demon_crown&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00295"/>00295 
+<anchor xml:id="__blobert_types_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.DivineHood:
+<anchor xml:id="__blobert_types_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;divine_hood&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00298"/>00298 
+<anchor xml:id="__blobert_types_8cs_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Ekubo:
+<anchor xml:id="__blobert_types_8cs_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;ekubo&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00301"/>00301 
+<anchor xml:id="__blobert_types_8cs_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.HyperlootCrown:
+<anchor xml:id="__blobert_types_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;hyperloot_crown&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00304"/>00304 
+<anchor xml:id="__blobert_types_8cs_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.InfluenceHelmet:
+<anchor xml:id="__blobert_types_8cs_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;influence_helmet&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00307"/>00307 
+<anchor xml:id="__blobert_types_8cs_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.LordsHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;lords_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00310"/>00310 
+<anchor xml:id="__blobert_types_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.Nostrahat:
+<anchor xml:id="__blobert_types_8cs_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;nostrahat&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00313"/>00313 
+<anchor xml:id="__blobert_types_8cs_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.NounsGlasses:
+<anchor xml:id="__blobert_types_8cs_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;nouns_glasses&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00316"/>00316 
+<anchor xml:id="__blobert_types_8cs_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.PopeHat:
+<anchor xml:id="__blobert_types_8cs_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;pope_hat&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00319"/>00319 
+<anchor xml:id="__blobert_types_8cs_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.TaprootWizardHat:
+<anchor xml:id="__blobert_types_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;taproot_wizard_hat&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00322"/>00322 
+<anchor xml:id="__blobert_types_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.WifHat:
+<anchor xml:id="__blobert_types_8cs_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;wif_hat&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00325"/>00325 
+<anchor xml:id="__blobert_types_8cs_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.BarbuteHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;barbute_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00328"/>00328 
+<anchor xml:id="__blobert_types_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.BarredGreatHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;barred_great_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00331"/>00331 
+<anchor xml:id="__blobert_types_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.ChainmailCoif:
+<anchor xml:id="__blobert_types_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;chainmail_coif&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00334"/>00334 
+<anchor xml:id="__blobert_types_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.GreatBascinetHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;great_bascinet_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00337"/>00337 
+<anchor xml:id="__blobert_types_8cs_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>.GreatHelm:
+<anchor xml:id="__blobert_types_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;great_helm&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00340"/>00340 
+<anchor xml:id="__blobert_types_8cs_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_types_8cs_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00344"/>00344 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00345"/>00345 
+<anchor xml:id="__blobert_types_8cs_source_1l00346"/>00346 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00347"/><link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">00347</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00348"/>00348 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76afe3ceec404fe63c48cb7c43f6792e738">AlgorithmicAegis</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aaf18ca6549a01db7860261a651a5d153">ArgentShield</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a830554cd421136b17e00bf6b7e030fe4">Balloons</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a2b4ef824eff25f5c31c999197d66f6cd">BannerOfAnger</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae7bb27c23c0ee0beba4d030e347f3887">BannerOfBrilliance</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a49fa58896d73221bf288c83641fad2eb">BannerOfDetection</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76adbb892cc45c3677f1454cbdc3bb34760">BannerOfEnlightenment</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aa548461c7369acbccfebf60dcdb22e08">BannerOfFury</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76acd6faa99a531279307d491e4946e7ecc">BannerOfGiants</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a2f3a48832b08e7a6006a730b53144ee8">BannerOfPerfection</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a3fa45c1149cff973fac58f6db502d066">BannerOfPower</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af1b44a21fc4b8c2642a4cb06afa28564">BannerOfProtection</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a94f29895953f97c28416044f82dc7e1f">BannerOfRage</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76afa7820698fab3ce04ad075198e981795">BannerOfReflection</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a1539c2db1f5ed7cba82484fae9f34ddb">BannerOfSkill</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ad23f95207b79bf69815f1638e685ae61">BannerOfTheFox</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6e43829b0ba24b8388960558e2ec9102">BannerOfTheTwins</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a4c5663ab2127bd7a8f152ae70d69c245">BannerOfTitans</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af31ccc5e6aecc38cb393cea129440e95">BannerOfTonyHawk</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9657f4fe55c19f49874480970202329d">BannerOfVitriol</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6ff29916f99fff9d2494d28e721ae77e">Banner</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a8e5a0cbec2cf652328707930005f4f82">Briq</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76acc84fa821011b93c1f935268e5560c2e">Calculator</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9d9089928ac194cece80f6cc91912333">DevvingForTheDistracted</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ab198009ea5a8474d3cf7bc15ce2bb01c">DiamondHands</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a066c6ff31b0ed4f7d4454aa534be0fce">DopeUzi</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a6d95e8c0407e835ba0de60823088287c">GhostWand</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a737525f382c7be0b252e4b2b47911461">Grimoire</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aeddbca960d656b83657b656bddfabf86">GrugsClub</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aafecfc49e383b0d7891e5825cb95cf43">JediswapSaber</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aa542482c08a8fdcbf2eb8afd219aeca3">Katana</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae53cf784374eb0817873d808f344866b">LordsBanner</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a60330e49e739cb4022c77ca944904809">LsHasNoChill</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ac802d372f1432f58131401c5fd55dd91">Mandolin</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae44bb80d43be5fcf35e2c3399b194638">SignIso</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9ed6034dc4fd31fdad68e472777b763e">SignatureBanner</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76aaa1e919691cba43a25e400d12635ddc6">SithswapSaber</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a1c1ad4ae57a528c98c80666849f4eeec">Spaghetti</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a0cc5a9c37a75a8dc3b3a55ca5e16be81">Squid</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00388"/>00388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ace5567db5f0cd4e3a449e65412796759">StarkMagic</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76ae0805217f5efc7377e245902d6ae24b5">StarkShield</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00390"/>00390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a0d369c3587726c5773c938b6a53e7b9b">Stool</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a15318a45530312134286bfbd33a2c0c8">Warhammer</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00392"/>00392 
+<anchor xml:id="__blobert_types_8cs_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//added&#32;on</emphasis>
+<anchor xml:id="__blobert_types_8cs_source_1l00394"/>00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a9685a9d53189e2c6c15543cbe1e4ca86">BroadswordPunchShield</link>&#32;=&#32;51,
+<anchor xml:id="__blobert_types_8cs_source_1l00395"/>00395 
+<anchor xml:id="__blobert_types_8cs_source_1l00396"/>00396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a7ab9878fb42670e8f53a267eded279de">FalchionBuckler</link>&#32;=&#32;52,
+<anchor xml:id="__blobert_types_8cs_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a59f564c0322d43947566cf09bcaa532a">SaberBuckler</link>&#32;=&#32;53,
+<anchor xml:id="__blobert_types_8cs_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a302f78cb167b79df7d05fbc3d99bad9d">ArmingSwordPunchShield</link>&#32;=&#32;54,
+<anchor xml:id="__blobert_types_8cs_source_1l00399"/>00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76af2a9889ee3ce7237328fa10884779e04">BattleAxeBuckler</link>&#32;=&#32;55,
+<anchor xml:id="__blobert_types_8cs_source_1l00400"/>00400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76a796242a1f014583a2a7ffe093410b5ef">RapierBuckler</link>&#32;=&#32;56,
+<anchor xml:id="__blobert_types_8cs_source_1l00401"/>00401 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00402"/>00402 
+<anchor xml:id="__blobert_types_8cs_source_1l00403"/><link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">00403</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">TraitWeaponToFileName</link>(<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>&#32;trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00404"/>00404 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00405"/>00405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(trait)
+<anchor xml:id="__blobert_types_8cs_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.AlgorithmicAegis:
+<anchor xml:id="__blobert_types_8cs_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;algorithmic_aegis&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00409"/>00409 
+<anchor xml:id="__blobert_types_8cs_source_1l00410"/>00410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.ArgentShield:
+<anchor xml:id="__blobert_types_8cs_source_1l00411"/>00411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;argent_shield&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00412"/>00412 
+<anchor xml:id="__blobert_types_8cs_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Balloons:
+<anchor xml:id="__blobert_types_8cs_source_1l00414"/>00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;balloons&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00415"/>00415 
+<anchor xml:id="__blobert_types_8cs_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfAnger:
+<anchor xml:id="__blobert_types_8cs_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_anger&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00418"/>00418 
+<anchor xml:id="__blobert_types_8cs_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfBrilliance:
+<anchor xml:id="__blobert_types_8cs_source_1l00420"/>00420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_brilliance&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00421"/>00421 
+<anchor xml:id="__blobert_types_8cs_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfDetection:
+<anchor xml:id="__blobert_types_8cs_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_detection&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00424"/>00424 
+<anchor xml:id="__blobert_types_8cs_source_1l00425"/>00425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfEnlightenment:
+<anchor xml:id="__blobert_types_8cs_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_enlightenment&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00427"/>00427 
+<anchor xml:id="__blobert_types_8cs_source_1l00428"/>00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfFury:
+<anchor xml:id="__blobert_types_8cs_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_fury&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00430"/>00430 
+<anchor xml:id="__blobert_types_8cs_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfGiants:
+<anchor xml:id="__blobert_types_8cs_source_1l00432"/>00432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_giants&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00433"/>00433 
+<anchor xml:id="__blobert_types_8cs_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfPerfection:
+<anchor xml:id="__blobert_types_8cs_source_1l00435"/>00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_perfection&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00436"/>00436 
+<anchor xml:id="__blobert_types_8cs_source_1l00437"/>00437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfPower:
+<anchor xml:id="__blobert_types_8cs_source_1l00438"/>00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_power&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00439"/>00439 
+<anchor xml:id="__blobert_types_8cs_source_1l00440"/>00440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfProtection:
+<anchor xml:id="__blobert_types_8cs_source_1l00441"/>00441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_protection&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00442"/>00442 
+<anchor xml:id="__blobert_types_8cs_source_1l00443"/>00443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfRage:
+<anchor xml:id="__blobert_types_8cs_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_rage&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00445"/>00445 
+<anchor xml:id="__blobert_types_8cs_source_1l00446"/>00446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfReflection:
+<anchor xml:id="__blobert_types_8cs_source_1l00447"/>00447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_reflection&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00448"/>00448 
+<anchor xml:id="__blobert_types_8cs_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfSkill:
+<anchor xml:id="__blobert_types_8cs_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_skill&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00451"/>00451 
+<anchor xml:id="__blobert_types_8cs_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfTheFox:
+<anchor xml:id="__blobert_types_8cs_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_the_fox&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00454"/>00454 
+<anchor xml:id="__blobert_types_8cs_source_1l00455"/>00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfTheTwins:
+<anchor xml:id="__blobert_types_8cs_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_the_twins&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00457"/>00457 
+<anchor xml:id="__blobert_types_8cs_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfTitans:
+<anchor xml:id="__blobert_types_8cs_source_1l00459"/>00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_titans&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00460"/>00460 
+<anchor xml:id="__blobert_types_8cs_source_1l00461"/>00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfTonyHawk:
+<anchor xml:id="__blobert_types_8cs_source_1l00462"/>00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_tony_hawk&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00463"/>00463 
+<anchor xml:id="__blobert_types_8cs_source_1l00464"/>00464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BannerOfVitriol:
+<anchor xml:id="__blobert_types_8cs_source_1l00465"/>00465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner_of_vitriol&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00466"/>00466 
+<anchor xml:id="__blobert_types_8cs_source_1l00467"/>00467 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Banner:
+<anchor xml:id="__blobert_types_8cs_source_1l00468"/>00468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;banner&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00469"/>00469 
+<anchor xml:id="__blobert_types_8cs_source_1l00470"/>00470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Briq:
+<anchor xml:id="__blobert_types_8cs_source_1l00471"/>00471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;briq&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00472"/>00472 
+<anchor xml:id="__blobert_types_8cs_source_1l00473"/>00473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Calculator:
+<anchor xml:id="__blobert_types_8cs_source_1l00474"/>00474 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;calculator&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00475"/>00475 
+<anchor xml:id="__blobert_types_8cs_source_1l00476"/>00476 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.DevvingForTheDistracted:
+<anchor xml:id="__blobert_types_8cs_source_1l00477"/>00477 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;devving_for_the_distracted&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00478"/>00478 
+<anchor xml:id="__blobert_types_8cs_source_1l00479"/>00479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.DiamondHands:
+<anchor xml:id="__blobert_types_8cs_source_1l00480"/>00480 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;diamond_hands&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00481"/>00481 
+<anchor xml:id="__blobert_types_8cs_source_1l00482"/>00482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.DopeUzi:
+<anchor xml:id="__blobert_types_8cs_source_1l00483"/>00483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;dope_uzi&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00484"/>00484 
+<anchor xml:id="__blobert_types_8cs_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.GhostWand:
+<anchor xml:id="__blobert_types_8cs_source_1l00486"/>00486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;ghost_wand&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00487"/>00487 
+<anchor xml:id="__blobert_types_8cs_source_1l00488"/>00488 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Grimoire:
+<anchor xml:id="__blobert_types_8cs_source_1l00489"/>00489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;grimoire&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00490"/>00490 
+<anchor xml:id="__blobert_types_8cs_source_1l00491"/>00491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.GrugsClub:
+<anchor xml:id="__blobert_types_8cs_source_1l00492"/>00492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;grugs_club&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00493"/>00493 
+<anchor xml:id="__blobert_types_8cs_source_1l00494"/>00494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.JediswapSaber:
+<anchor xml:id="__blobert_types_8cs_source_1l00495"/>00495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;jediswap_saber&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00496"/>00496 
+<anchor xml:id="__blobert_types_8cs_source_1l00497"/>00497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Katana:
+<anchor xml:id="__blobert_types_8cs_source_1l00498"/>00498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;katana&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00499"/>00499 
+<anchor xml:id="__blobert_types_8cs_source_1l00500"/>00500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.LordsBanner:
+<anchor xml:id="__blobert_types_8cs_source_1l00501"/>00501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;lords_banner&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00502"/>00502 
+<anchor xml:id="__blobert_types_8cs_source_1l00503"/>00503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.LsHasNoChill:
+<anchor xml:id="__blobert_types_8cs_source_1l00504"/>00504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;ls_has_no_chill&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00505"/>00505 
+<anchor xml:id="__blobert_types_8cs_source_1l00506"/>00506 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Mandolin:
+<anchor xml:id="__blobert_types_8cs_source_1l00507"/>00507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;mandolin&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00508"/>00508 
+<anchor xml:id="__blobert_types_8cs_source_1l00509"/>00509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.SignIso:
+<anchor xml:id="__blobert_types_8cs_source_1l00510"/>00510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;sign_iso&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00511"/>00511 
+<anchor xml:id="__blobert_types_8cs_source_1l00512"/>00512 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.SignatureBanner:
+<anchor xml:id="__blobert_types_8cs_source_1l00513"/>00513 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;signature_banner&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00514"/>00514 
+<anchor xml:id="__blobert_types_8cs_source_1l00515"/>00515 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.SithswapSaber:
+<anchor xml:id="__blobert_types_8cs_source_1l00516"/>00516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;sithswap_saber&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00517"/>00517 
+<anchor xml:id="__blobert_types_8cs_source_1l00518"/>00518 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Spaghetti:
+<anchor xml:id="__blobert_types_8cs_source_1l00519"/>00519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;spaghetti&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00520"/>00520 
+<anchor xml:id="__blobert_types_8cs_source_1l00521"/>00521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Squid:
+<anchor xml:id="__blobert_types_8cs_source_1l00522"/>00522 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;squid&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00523"/>00523 
+<anchor xml:id="__blobert_types_8cs_source_1l00524"/>00524 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.StarkMagic:
+<anchor xml:id="__blobert_types_8cs_source_1l00525"/>00525 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;stark_magic&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00526"/>00526 
+<anchor xml:id="__blobert_types_8cs_source_1l00527"/>00527 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.StarkShield:
+<anchor xml:id="__blobert_types_8cs_source_1l00528"/>00528 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;stark_shield&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00529"/>00529 
+<anchor xml:id="__blobert_types_8cs_source_1l00530"/>00530 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Stool:
+<anchor xml:id="__blobert_types_8cs_source_1l00531"/>00531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;stool&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00532"/>00532 
+<anchor xml:id="__blobert_types_8cs_source_1l00533"/>00533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.Warhammer:
+<anchor xml:id="__blobert_types_8cs_source_1l00534"/>00534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;warhammer&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00535"/>00535 
+<anchor xml:id="__blobert_types_8cs_source_1l00536"/>00536 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BroadswordPunchShield:
+<anchor xml:id="__blobert_types_8cs_source_1l00537"/>00537 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;broadsword_punch_shield&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00538"/>00538 
+<anchor xml:id="__blobert_types_8cs_source_1l00539"/>00539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.FalchionBuckler:
+<anchor xml:id="__blobert_types_8cs_source_1l00540"/>00540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;falchion_buckler&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00541"/>00541 
+<anchor xml:id="__blobert_types_8cs_source_1l00542"/>00542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.SaberBuckler:
+<anchor xml:id="__blobert_types_8cs_source_1l00543"/>00543 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;saber_buckler&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00544"/>00544 
+<anchor xml:id="__blobert_types_8cs_source_1l00545"/>00545 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.ArmingSwordPunchShield:
+<anchor xml:id="__blobert_types_8cs_source_1l00546"/>00546 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;arming_sword_punch_shield&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00547"/>00547 
+<anchor xml:id="__blobert_types_8cs_source_1l00548"/>00548 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.BattleAxeBuckler:
+<anchor xml:id="__blobert_types_8cs_source_1l00549"/>00549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;battle_axe_buckler&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00550"/>00550 
+<anchor xml:id="__blobert_types_8cs_source_1l00551"/>00551 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>.RapierBuckler:
+<anchor xml:id="__blobert_types_8cs_source_1l00552"/>00552 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;rapier_buckler&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00553"/>00553 
+<anchor xml:id="__blobert_types_8cs_source_1l00554"/>00554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_types_8cs_source_1l00555"/>00555 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00556"/>00556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00557"/>00557 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00558"/>00558 
+<anchor xml:id="__blobert_types_8cs_source_1l00559"/>00559 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00560"/><link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">00560</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00561"/>00561 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00562"/>00562 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dad2d26e7908c1ba9b1abfa44239120c68">AvnuBlue</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00563"/>00563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da9594eec95be70e7b1710f730fdda33d9">Blue</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00564"/>00564 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986daff8b18253886ae991555725ca131fb74">CryptsAndCaverns</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00565"/>00565 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da80ce82f95ec3510a65d1c930b928c490">FibrousFrame</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00566"/>00566 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dad382816a3cbeed082c9e216e7392eed1">Green</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00567"/>00567 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da0b95e26c1f72933d2e9114579f0a538c">Holo</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00568"/>00568 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da909cea0c97058cfe2e3ea8d675cb08e1">Orange</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00569"/>00569 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986dab9ba865fec061c9706d2fd7ce49c0cc7">Purple</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00570"/>00570 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da627456f51df1dce2c7d36b43b44a6293">RealmsDark</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00571"/>00571 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da1201c633271df04be95c0f4c71690dab">Realms</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00572"/>00572 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da6d507931f6814a782dbf6252392ac12d">Terraforms</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00573"/>00573 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da9a00f06ec09419edf80a3f0e205fa086">Tulip</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00574"/>00574 
+<anchor xml:id="__blobert_types_8cs_source_1l00575"/>00575 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986daf75d91cdd36b85cc4a8dfeca4f24fa14">USA</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00576"/>00576 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da8f7bc810927ffe7a473bcf25595238ca">UnitedKingdom</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00577"/>00577 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da94880bda83bda77c5692876700711f15">Poland</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00578"/>00578 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986da8dbb07a18d46f63d8b3c8994d5ccc351">Mexico</link>,
+<anchor xml:id="__blobert_types_8cs_source_1l00579"/>00579 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00580"/>00580 
+<anchor xml:id="__blobert_types_8cs_source_1l00581"/><link linkend="_class_blobert_types_1a357e55dfcb84203cab218dc3de5a285a">00581</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_blobert_types_1a357e55dfcb84203cab218dc3de5a285a">TraitBackgroundToFileName</link>(<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>&#32;background)
+<anchor xml:id="__blobert_types_8cs_source_1l00582"/>00582 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00583"/>00583 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(background)
+<anchor xml:id="__blobert_types_8cs_source_1l00584"/>00584 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00585"/>00585 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.AvnuBlue:
+<anchor xml:id="__blobert_types_8cs_source_1l00586"/>00586 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;avnu_blue&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00587"/>00587 
+<anchor xml:id="__blobert_types_8cs_source_1l00588"/>00588 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Blue:
+<anchor xml:id="__blobert_types_8cs_source_1l00589"/>00589 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;blue&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00590"/>00590 
+<anchor xml:id="__blobert_types_8cs_source_1l00591"/>00591 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.CryptsAndCaverns:
+<anchor xml:id="__blobert_types_8cs_source_1l00592"/>00592 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;crypts_and_caverns&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00593"/>00593 
+<anchor xml:id="__blobert_types_8cs_source_1l00594"/>00594 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.FibrousFrame:
+<anchor xml:id="__blobert_types_8cs_source_1l00595"/>00595 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;fibrous_frame&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00596"/>00596 
+<anchor xml:id="__blobert_types_8cs_source_1l00597"/>00597 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Green:
+<anchor xml:id="__blobert_types_8cs_source_1l00598"/>00598 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;green&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00599"/>00599 
+<anchor xml:id="__blobert_types_8cs_source_1l00600"/>00600 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Holo:
+<anchor xml:id="__blobert_types_8cs_source_1l00601"/>00601 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;holo&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00602"/>00602 
+<anchor xml:id="__blobert_types_8cs_source_1l00603"/>00603 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Orange:
+<anchor xml:id="__blobert_types_8cs_source_1l00604"/>00604 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;orange&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00605"/>00605 
+<anchor xml:id="__blobert_types_8cs_source_1l00606"/>00606 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Purple:
+<anchor xml:id="__blobert_types_8cs_source_1l00607"/>00607 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;purple&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00608"/>00608 
+<anchor xml:id="__blobert_types_8cs_source_1l00609"/>00609 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.RealmsDark:
+<anchor xml:id="__blobert_types_8cs_source_1l00610"/>00610 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;realms_dark&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00611"/>00611 
+<anchor xml:id="__blobert_types_8cs_source_1l00612"/>00612 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Realms:
+<anchor xml:id="__blobert_types_8cs_source_1l00613"/>00613 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;realms&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00614"/>00614 
+<anchor xml:id="__blobert_types_8cs_source_1l00615"/>00615 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Terraforms:
+<anchor xml:id="__blobert_types_8cs_source_1l00616"/>00616 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;terraforms&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00617"/>00617 
+<anchor xml:id="__blobert_types_8cs_source_1l00618"/>00618 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Tulip:
+<anchor xml:id="__blobert_types_8cs_source_1l00619"/>00619 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;tulip&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00620"/>00620 
+<anchor xml:id="__blobert_types_8cs_source_1l00621"/>00621 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.USA:
+<anchor xml:id="__blobert_types_8cs_source_1l00622"/>00622 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;usa&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00623"/>00623 
+<anchor xml:id="__blobert_types_8cs_source_1l00624"/>00624 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.UnitedKingdom:
+<anchor xml:id="__blobert_types_8cs_source_1l00625"/>00625 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;united_kingdom&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00626"/>00626 
+<anchor xml:id="__blobert_types_8cs_source_1l00627"/>00627 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Poland:
+<anchor xml:id="__blobert_types_8cs_source_1l00628"/>00628 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;poland&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00629"/>00629 
+<anchor xml:id="__blobert_types_8cs_source_1l00630"/>00630 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blobert_types_1ac87f9c0324ba8a13481b3dbbb359986d">Background</link>.Mexico:
+<anchor xml:id="__blobert_types_8cs_source_1l00631"/>00631 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;mexico&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00632"/>00632 
+<anchor xml:id="__blobert_types_8cs_source_1l00633"/>00633 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_types_8cs_source_1l00634"/>00634 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="__blobert_types_8cs_source_1l00635"/>00635 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00636"/>00636 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00637"/>00637 
+<anchor xml:id="__blobert_types_8cs_source_1l00638"/>00638 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__blobert_types_8cs_source_1l00639"/><link linkend="_struct_blobert_types_1_1_stats">00639</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_blobert_types_1_1_stats">Stats</link>
+<anchor xml:id="__blobert_types_8cs_source_1l00640"/>00640 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_types_8cs_source_1l00641"/><link linkend="_struct_blobert_types_1_1_stats_1a1016afeaa2fafedf4f07efa01f405e39">00641</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1a1016afeaa2fafedf4f07efa01f405e39">attack</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00642"/><link linkend="_struct_blobert_types_1_1_stats_1a943f0ed1108fa1896cf694cd0d9f09a9">00642</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1a943f0ed1108fa1896cf694cd0d9f09a9">defense</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00643"/><link linkend="_struct_blobert_types_1_1_stats_1abff62bb01f57fd3878fb5364a0ac1611">00643</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1abff62bb01f57fd3878fb5364a0ac1611">speed</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00644"/><link linkend="_struct_blobert_types_1_1_stats_1a482008a1181b182393bc89eaaa480261">00644</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1a482008a1181b182393bc89eaaa480261">strength</link>;
+<anchor xml:id="__blobert_types_8cs_source_1l00645"/>00645 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_types_8cs_source_1l00646"/>00646 }
+</programlisting></section>

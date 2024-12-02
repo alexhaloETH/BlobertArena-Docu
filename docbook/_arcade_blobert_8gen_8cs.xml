@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__arcade_blobert_8gen_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Models/ArcadeBlobert.gen.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Models/ArcadeBlobert.gen.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_seed">Seed</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link> = Dojo.Starknet.Enum</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>ArcadeBlobert.gen.cs</secondary></indexterm>
+<indexterm><primary>ArcadeBlobert.gen.cs</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>typedef Dojo Starknet <link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link> <link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link> = Dojo.Starknet.Enum</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00010">10</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+</section>
+</section>

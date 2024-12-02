@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__speach_bubble_8cs_source" xml:lang="en-US">
+<title>SpeachBubble.cs</title>
+<indexterm><primary>Misc/SpeachBubble.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__speach_bubble_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__speach_bubble_8cs_source_1l00002"/>00002 
+<anchor xml:id="__speach_bubble_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__speach_bubble_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__speach_bubble_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__speach_bubble_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>static&#32;InsultsData;
+<anchor xml:id="__speach_bubble_8cs_source_1l00007"/>00007 
+<anchor xml:id="__speach_bubble_8cs_source_1l00014"/><link linkend="_class_speach_bubble">00014</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_speach_bubble">SpeachBubble</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__speach_bubble_8cs_source_1l00015"/>00015 {
+<anchor xml:id="__speach_bubble_8cs_source_1l00016"/><link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link>
+<anchor xml:id="__speach_bubble_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8a7d6b2c383a185634db46ebdaa1aa3830">BubbleToRight</link>&#32;=&#32;0,&#32;&#32;<emphasis role="comment">//&#32;Bubble&#32;is&#32;on&#32;the&#32;right,&#32;speaker&#32;is&#32;on&#32;the&#32;left</emphasis>
+<anchor xml:id="__speach_bubble_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8a83cb75141ecf2d1cb0e98a056c0f5222">BubbleToLeft</link>&#32;=&#32;1&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bubble&#32;is&#32;on&#32;the&#32;left,&#32;speaker&#32;is&#32;on&#32;the&#32;right</emphasis>
+<anchor xml:id="__speach_bubble_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00021"/>00021 
+<anchor xml:id="__speach_bubble_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[Header&#32;(<emphasis role="stringliteral">&quot;Object&#32;references&quot;</emphasis>)]
+<anchor xml:id="__speach_bubble_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_speachBubbleRect;
+<anchor xml:id="__speach_bubble_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_insultText;
+<anchor xml:id="__speach_bubble_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;CanvasGroup&#32;m_canvasGroup;
+<anchor xml:id="__speach_bubble_8cs_source_1l00026"/>00026 
+<anchor xml:id="__speach_bubble_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;[Header&#32;(<emphasis role="stringliteral">&quot;Settings&quot;</emphasis>)]
+<anchor xml:id="__speach_bubble_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link>&#32;m_bubbleFacing&#32;=&#32;<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link>.BubbleToRight;
+<anchor xml:id="__speach_bubble_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;[SerializeField,&#32;Range(1,&#32;10)]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;m_speachLifetime&#32;=&#32;5;
+<anchor xml:id="__speach_bubble_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;[SerializeField,&#32;Range(1,&#32;60)]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;m_speachDelay&#32;=&#32;25;
+<anchor xml:id="__speach_bubble_8cs_source_1l00031"/>00031 
+<anchor xml:id="__speach_bubble_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;Coroutine&#32;m_continousCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;Coroutine&#32;m_oneShotCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;m_bubbleIsSet&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;m_continousInsulting&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;m_bubbleFacingRight&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3(1,&#32;1,&#32;1);
+<anchor xml:id="__speach_bubble_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;m_bubbleFacingLeft&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3(-1,&#32;1,&#32;1);
+<anchor xml:id="__speach_bubble_8cs_source_1l00038"/>00038 
+<anchor xml:id="__speach_bubble_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__speach_bubble_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_canvasGroup.alpha&#32;=&#32;0;
+<anchor xml:id="__speach_bubble_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ApplyBubbleFacing();
+<anchor xml:id="__speach_bubble_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00044"/>00044 
+<anchor xml:id="__speach_bubble_8cs_source_1l00048"/><link linkend="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_speach_bubble_1ab4d5a973e03afb1a0814eea05fe2d7d1">SetLifetimeAndDelay</link>(<emphasis role="keywordtype">int</emphasis>&#32;lifetime,&#32;<emphasis role="keywordtype">int</emphasis>&#32;delay)
+<anchor xml:id="__speach_bubble_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_bubbleIsSet)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_speachLifetime&#32;=&#32;lifetime;
+<anchor xml:id="__speach_bubble_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_speachDelay&#32;=&#32;delay;
+<anchor xml:id="__speach_bubble_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00054"/>00054 
+<anchor xml:id="__speach_bubble_8cs_source_1l00058"/><link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">00058</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_speach_bubble_1a61fdfbb068cdad7013e8856081ca6795">OneShotInsult</link>(InsultType&#32;insultType)
+<anchor xml:id="__speach_bubble_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_bubbleIsSet)&#32;{<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_bubbleIsSet&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxInsultIndex&#32;=&#32;GetInsultArrayLength(insultType);
+<anchor xml:id="__speach_bubble_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(maxInsultIndex&#32;&lt;&#32;1)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_canvasGroup.alpha&#32;=&#32;1;
+<anchor xml:id="__speach_bubble_8cs_source_1l00065"/>00065 
+<anchor xml:id="__speach_bubble_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_insultText.SetText(GetInsult(insultType,&#32;UnityEngine.Random.Range(0,&#32;maxInsultIndex)));
+<anchor xml:id="__speach_bubble_8cs_source_1l00067"/>00067 
+<anchor xml:id="__speach_bubble_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_oneShotCoroutine&#32;=&#32;StartCoroutine(OneShotCoroutine());
+<anchor xml:id="__speach_bubble_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00070"/>00070 
+<anchor xml:id="__speach_bubble_8cs_source_1l00074"/><link linkend="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1">00074</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_speach_bubble_1a2d07dc56abd8833df633d7552fab05f1">ContinousInsulting</link>(InsultType&#32;insultType)
+<anchor xml:id="__speach_bubble_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(GetInsultArrayLength(insultType)&#32;&lt;&#32;1&#32;||&#32;m_bubbleIsSet)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_bubbleIsSet&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_continousInsulting&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_continousCoroutine&#32;=&#32;StartCoroutine(ContinousInsultsCoroutine(insultType));
+<anchor xml:id="__speach_bubble_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00081"/>00081 
+<anchor xml:id="__speach_bubble_8cs_source_1l00085"/><link linkend="_class_speach_bubble_1a96cc40d086d837b54aba27f3fa7d76a5">00085</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_speach_bubble_1a96cc40d086d837b54aba27f3fa7d76a5">DestroyBubble</link>()
+<anchor xml:id="__speach_bubble_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_continousCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>&#32;||&#32;m_oneShotCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__speach_bubble_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopAllCoroutines();
+<anchor xml:id="__speach_bubble_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_continousCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_oneShotCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00093"/>00093 
+<anchor xml:id="__speach_bubble_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__speach_bubble_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00096"/>00096 
+<anchor xml:id="__speach_bubble_8cs_source_1l00100"/><link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">00100</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble</link>()
+<anchor xml:id="__speach_bubble_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_canvasGroup.alpha&#32;=&#32;0;
+<anchor xml:id="__speach_bubble_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_bubbleIsSet&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_continousInsulting&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_continousCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>&#32;||&#32;m_oneShotCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__speach_bubble_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopAllCoroutines();
+<anchor xml:id="__speach_bubble_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_continousCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_oneShotCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00112"/>00112 
+<anchor xml:id="__speach_bubble_8cs_source_1l00116"/><link linkend="_class_speach_bubble_1a2813b8f035297864b490f04c38d96960">00116</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_speach_bubble_1a2813b8f035297864b490f04c38d96960">SetBubbleFacing</link>(<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link>&#32;facing)
+<anchor xml:id="__speach_bubble_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_bubbleFacing&#32;=&#32;facing;
+<anchor xml:id="__speach_bubble_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ApplyBubbleFacing();
+<anchor xml:id="__speach_bubble_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00121"/>00121 
+<anchor xml:id="__speach_bubble_8cs_source_1l00122"/><link linkend="_class_speach_bubble_1a572238141cf8895589995393db4be7e3">00122</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_speach_bubble_1a572238141cf8895589995393db4be7e3">IsBubbleActive</link>()
+<anchor xml:id="__speach_bubble_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_canvasGroup.alpha&#32;&gt;&#32;0;
+<anchor xml:id="__speach_bubble_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00126"/>00126 
+<anchor xml:id="__speach_bubble_8cs_source_1l00127"/>00127 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;&gt;&gt;&gt;&#32;Private&#32;functions&#32;&lt;&lt;&lt;</emphasis>
+<anchor xml:id="__speach_bubble_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ApplyBubbleFacing()
+<anchor xml:id="__speach_bubble_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_speachBubbleRect.localScale&#32;=&#32;(m_bubbleFacing&#32;==&#32;<link linkend="_class_speach_bubble_1a400cb15857aaac11da9e8b6b598edfd8">BubbleFacing</link>.BubbleToRight)&#32;?&#32;m_bubbleFacingRight&#32;:&#32;m_bubbleFacingLeft;
+<anchor xml:id="__speach_bubble_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00132"/>00132 
+<anchor xml:id="__speach_bubble_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;ContinousInsultsCoroutine(InsultType&#32;insultType)
+<anchor xml:id="__speach_bubble_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxInsultIndex&#32;=&#32;GetInsultArrayLength(insultType);
+<anchor xml:id="__speach_bubble_8cs_source_1l00136"/>00136 
+<anchor xml:id="__speach_bubble_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="__speach_bubble_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_insultText.SetText(GetInsult(insultType,&#32;UnityEngine.Random.Range(0,&#32;maxInsultIndex)));
+<anchor xml:id="__speach_bubble_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_canvasGroup.alpha&#32;=&#32;1;
+<anchor xml:id="__speach_bubble_8cs_source_1l00141"/>00141 
+<anchor xml:id="__speach_bubble_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(m_speachLifetime);
+<anchor xml:id="__speach_bubble_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_canvasGroup.alpha&#32;=&#32;0;
+<anchor xml:id="__speach_bubble_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_continousInsulting)&#32;{&#32;<emphasis role="keywordflow">break</emphasis>;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00145"/>00145 
+<anchor xml:id="__speach_bubble_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(m_speachDelay);
+<anchor xml:id="__speach_bubble_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(m_continousInsulting);
+<anchor xml:id="__speach_bubble_8cs_source_1l00148"/>00148 
+<anchor xml:id="__speach_bubble_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble</link>();
+<anchor xml:id="__speach_bubble_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00152"/>00152 
+<anchor xml:id="__speach_bubble_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;OneShotCoroutine()
+<anchor xml:id="__speach_bubble_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__speach_bubble_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(m_speachLifetime);
+<anchor xml:id="__speach_bubble_8cs_source_1l00156"/>00156 
+<anchor xml:id="__speach_bubble_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_speach_bubble_1a1089ce1202165d1683d19d121738ab19">ResetBubble</link>();
+<anchor xml:id="__speach_bubble_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__speach_bubble_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__speach_bubble_8cs_source_1l00160"/>00160 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion</emphasis>
+<anchor xml:id="__speach_bubble_8cs_source_1l00161"/>00161 }
+</programlisting></section>

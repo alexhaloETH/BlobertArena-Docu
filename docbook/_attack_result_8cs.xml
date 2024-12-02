@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__attack_result_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Models/AttackResult.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Models/AttackResult.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_damage_result">DamageResult</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_effect_result">EffectResult</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> = Dojo.Torii.Query</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="__attack_result_8cs_1a680846c413970a24b7783196259823ae"/><section>
+    <title>Query</title>
+<indexterm><primary>Query</primary><secondary>AttackResult.cs</secondary></indexterm>
+<indexterm><primary>AttackResult.cs</primary><secondary>Query</secondary></indexterm>
+<para><computeroutput>typedef Dojo Torii <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> = Dojo.Torii.Query</computeroutput></para><para>
+Definition at line <link linkend="__attack_result_8cs_source_1l00014">14</link> of file <link linkend="__attack_result_8cs_source">AttackResult.cs</link>.</para>
+</section>
+</section>
+</section>

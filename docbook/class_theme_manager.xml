@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_theme_manager" xml:lang="en-US">
+<title>ThemeManager Class Reference</title>
+<indexterm><primary>ThemeManager</primary></indexterm>
+<para>
+
+<para>Theme manager for different colours and graphics that appears in the different themes, to help with staying consistent with colouring of various graphical elements (SINGLETON) </para>
+ 
+</para>
+<para>Inheritance diagram for ThemeManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_theme_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Color <link linkend="_class_theme_manager_1abdb3a78c1fbf056f85a37a9596cb01d9">GetPanelColour</link> (<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link> panelColour)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_theme_manager_1a5a2e4750266ab148c1fadeb1db87cf31">GetTextColour</link> (<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">TextColours</link> textColour)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static Sprite <link linkend="_class_theme_manager_1a0bb854c0ce71f7b8ce974885b2fe3f1c">GetFlagSprite</link> (int index)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_theme_manager">ThemeManager</link> <link linkend="_class_theme_manager_1ae27de71d8d8d8fd24b9cbfa7107b148d">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Theme manager for different colours and graphics that appears in the different themes, to help with staying consistent with colouring of various graphical elements (SINGLETON) </para>
+<para>
+Definition at line <link linkend="__theme_manager_8cs_source_1l00029">29</link> of file <link linkend="__theme_manager_8cs_source">ThemeManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_theme_manager_1a0bb854c0ce71f7b8ce974885b2fe3f1c"/><section>
+    <title>GetFlagSprite()</title>
+<indexterm><primary>GetFlagSprite</primary><secondary>ThemeManager</secondary></indexterm>
+<indexterm><primary>ThemeManager</primary><secondary>GetFlagSprite</secondary></indexterm>
+<para><computeroutput>static Sprite ThemeManager.GetFlagSprite (int index)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__theme_manager_8cs_source_1l00108">108</link> of file <link linkend="__theme_manager_8cs_source">ThemeManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_theme_manager_1abdb3a78c1fbf056f85a37a9596cb01d9"/><section>
+    <title>GetPanelColour()</title>
+<indexterm><primary>GetPanelColour</primary><secondary>ThemeManager</secondary></indexterm>
+<indexterm><primary>ThemeManager</primary><secondary>GetPanelColour</secondary></indexterm>
+<para><computeroutput>Color ThemeManager.GetPanelColour (<link linkend="_namespace_theme_data_1aaca17bebf70a340c01148ae5934f5254">PanelColours</link> panelColour)</computeroutput></para><para>
+Definition at line <link linkend="__theme_manager_8cs_source_1l00076">76</link> of file <link linkend="__theme_manager_8cs_source">ThemeManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_theme_manager_1a5a2e4750266ab148c1fadeb1db87cf31"/><section>
+    <title>GetTextColour()</title>
+<indexterm><primary>GetTextColour</primary><secondary>ThemeManager</secondary></indexterm>
+<indexterm><primary>ThemeManager</primary><secondary>GetTextColour</secondary></indexterm>
+<para><computeroutput>Color ThemeManager.GetTextColour (<link linkend="_namespace_theme_data_1afbd629f8f133a4947d5a9242dc172cc6">TextColours</link> textColour)</computeroutput></para><para>
+Definition at line <link linkend="__theme_manager_8cs_source_1l00095">95</link> of file <link linkend="__theme_manager_8cs_source">ThemeManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_theme_manager_1ae27de71d8d8d8fd24b9cbfa7107b148d"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>ThemeManager</secondary></indexterm>
+<indexterm><primary>ThemeManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_theme_manager">ThemeManager</link> ThemeManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__theme_manager_8cs_source_1l00050">50</link> of file <link linkend="__theme_manager_8cs_source">ThemeManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Singletons/<link linkend="__theme_manager_8cs">ThemeManager.cs</link></section>
+</section>

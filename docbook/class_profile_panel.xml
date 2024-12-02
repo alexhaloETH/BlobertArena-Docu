@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_profile_panel" xml:lang="en-US">
+<title>ProfilePanel Class Reference</title>
+<indexterm><primary>ProfilePanel</primary></indexterm>
+<para>
+
+<para>Manager class to the player profile panel (wallet / username) </para>
+ 
+</para>
+<para>Inheritance diagram for ProfilePanel:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_profile_panel.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link> (string userName)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link> (Account walletAddress)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link> (LocalDataModel.ConnectionMethod walletType)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1a2e5f86c261c88f84f355e8f9dd07b7c6">OnOpenPanelClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1ae3390ff964145f3de2617e71c3cd93a4">OnOpenPanelForPortraitMode</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1a5ae31afc4be4544a1ed4f3a6db691de2">OnClosePanelClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1abe2ba46fb6c7f6c9b6df35326ab73114">OnCopyAddressClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1afaa775354e1ac420fbbe4d14c9025e2a">OnLogoutClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">OnLoginClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1ac50274de9b5a095c74973d7bd1fb759c">OnYesClicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_profile_panel_1a14d19f7515ac5160dbfe330bc02446fb">OnNoClicked</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link> = false<computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manager class to the player profile panel (wallet / username) </para>
+<para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00015">15</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_profile_panel_1a5ae31afc4be4544a1ed4f3a6db691de2"/><section>
+    <title>OnClosePanelClicked()</title>
+<indexterm><primary>OnClosePanelClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnClosePanelClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnClosePanelClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00122">122</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1abe2ba46fb6c7f6c9b6df35326ab73114"/><section>
+    <title>OnCopyAddressClicked()</title>
+<indexterm><primary>OnCopyAddressClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnCopyAddressClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnCopyAddressClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00129">129</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43"/><section>
+    <title>OnLoginClicked()</title>
+<indexterm><primary>OnLoginClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnLoginClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnLoginClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00144">144</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1afaa775354e1ac420fbbe4d14c9025e2a"/><section>
+    <title>OnLogoutClicked()</title>
+<indexterm><primary>OnLogoutClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnLogoutClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnLogoutClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00134">134</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1a14d19f7515ac5160dbfe330bc02446fb"/><section>
+    <title>OnNoClicked()</title>
+<indexterm><primary>OnNoClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnNoClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnNoClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00162">162</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1a2e5f86c261c88f84f355e8f9dd07b7c6"/><section>
+    <title>OnOpenPanelClicked()</title>
+<indexterm><primary>OnOpenPanelClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnOpenPanelClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnOpenPanelClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00109">109</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1ae3390ff964145f3de2617e71c3cd93a4"/><section>
+    <title>OnOpenPanelForPortraitMode()</title>
+<indexterm><primary>OnOpenPanelForPortraitMode</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnOpenPanelForPortraitMode</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnOpenPanelForPortraitMode ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00116">116</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1ac50274de9b5a095c74973d7bd1fb759c"/><section>
+    <title>OnYesClicked()</title>
+<indexterm><primary>OnYesClicked</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>OnYesClicked</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.OnYesClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00153">153</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4"/><section>
+    <title>SetUsername()</title>
+<indexterm><primary>SetUsername</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>SetUsername</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.SetUsername (string userName)</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00070">70</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2"/><section>
+    <title>SetWalletAddress()</title>
+<indexterm><primary>SetWalletAddress</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>SetWalletAddress</secondary></indexterm>
+<para><computeroutput>async void ProfilePanel.SetWalletAddress (Account walletAddress)</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00077">77</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4"/><section>
+    <title>SetWalletType()</title>
+<indexterm><primary>SetWalletType</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>SetWalletType</secondary></indexterm>
+<para><computeroutput>void ProfilePanel.SetWalletType (LocalDataModel.ConnectionMethod walletType)</computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00101">101</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698"/><section>
+    <title>IsOpen</title>
+<indexterm><primary>IsOpen</primary><secondary>ProfilePanel</secondary></indexterm>
+<indexterm><primary>ProfilePanel</primary><secondary>IsOpen</secondary></indexterm>
+<para><computeroutput>bool ProfilePanel.IsOpen = false<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__profile_panel_8cs_source_1l00048">48</link> of file <link linkend="__profile_panel_8cs_source">ProfilePanel.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__profile_panel_8cs">ProfilePanel.cs</link></section>
+</section>

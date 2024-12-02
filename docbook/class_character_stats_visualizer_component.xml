@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_character_stats_visualizer_component" xml:lang="en-US">
+<title>CharacterStatsVisualizerComponent Class Reference</title>
+<indexterm><primary>CharacterStatsVisualizerComponent</primary></indexterm>
+<para>
+
+<para>This component is responsible for displaying the values of a Blobert in the UI. </para>
+ 
+</para>
+<para>Inheritance diagram for CharacterStatsVisualizerComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_character_stats_visualizer_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_character_stats_visualizer_component_1ab62fba90fa9d1d9949287de75fb38269">InitializeComponent</link> (<link linkend="_interface_i_nft_type">INftType</link> nftType)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This component is responsible for displaying the values of a Blobert in the UI. </para>
+
+
+
+<para>Need to figure out on how to do the equation for the values off chain so we done have to fetch data </para>
+<para>
+Definition at line <link linkend="__character_stats_visualizer_component_8cs_source_1l00010">10</link> of file <link linkend="__character_stats_visualizer_component_8cs_source">CharacterStatsVisualizerComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_character_stats_visualizer_component_1ab62fba90fa9d1d9949287de75fb38269"/><section>
+    <title>InitializeComponent()</title>
+<indexterm><primary>InitializeComponent</primary><secondary>CharacterStatsVisualizerComponent</secondary></indexterm>
+<indexterm><primary>CharacterStatsVisualizerComponent</primary><secondary>InitializeComponent</secondary></indexterm>
+<para><computeroutput>void CharacterStatsVisualizerComponent.InitializeComponent (<link linkend="_interface_i_nft_type">INftType</link> nftType)</computeroutput></para><para>
+Definition at line <link linkend="__character_stats_visualizer_component_8cs_source_1l00018">18</link> of file <link linkend="__character_stats_visualizer_component_8cs_source">CharacterStatsVisualizerComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/<link linkend="__character_stats_visualizer_component_8cs">CharacterStatsVisualizerComponent.cs</link></section>
+</section>

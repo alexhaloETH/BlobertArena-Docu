@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__query_manager_8cs" xml:lang="en-US">
+<title>LogicLayer/QueryManager.cs File Reference</title>
+<indexterm><primary>LogicLayer/QueryManager.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">LogicLayer.GraphQlQueryHelper</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_token_trait_data">LogicLayer.TokenTraitData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_seed_data">LogicLayer.SeedData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_hit_data">LogicLayer.HitData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_affect_data">LogicLayer.AffectData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_damage_data">LogicLayer.DamageData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_stats_data">LogicLayer.StatsData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_stat_data">LogicLayer.StatData</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_entity">LogicLayer.Entity&lt; T &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_node">LogicLayer.Node&lt; T &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_edge">LogicLayer.Edge&lt; T &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_models">LogicLayer.Models&lt; T &gt;</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

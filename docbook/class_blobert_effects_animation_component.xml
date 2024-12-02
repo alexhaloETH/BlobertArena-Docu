@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_effects_animation_component" xml:lang="en-US">
+<title>BlobertEffectsAnimationComponent Class Reference</title>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary></indexterm>
+<para>Inheritance diagram for BlobertEffectsAnimationComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_effects_animation_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> { <?linebreak?><link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0abd2b7e5f85a6ea65065c4ebc6d7c95bb">Fire</link>
+, <link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a358cfe58715d680d9ab09f82e4010cbc">Slash</link>
+, <link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a2e8bc6bdf3e8ead6cb8c6465b6afd781">Toxic</link>
+, <link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a1e409a9070b570ccae471e56683b371e">Debuf</link>
+, <?linebreak?><link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0abc93fd0fa19ed26b6adf8293ada55404">Smoke</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobert_effects_animation_component_1aa4ab844c8797d86db220ed441bbeb713">PlayAnimationOnce</link> (<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> type)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_blobert_effects_animation_component_1a8818da7da393513e68380446672c12b9">GetAnimationLength</link> (<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> type)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_blobert_effects_animation_component_1adb1af8a50b21672405ffa04a32ee54ed">GetStartingIndex</link> (<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> type)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_blobert_effects_animation_component_1ada8bce9f2847d297473acf27685341cd">animate</link> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blobert_effects_animation_component_8cs_source_1l00005">5</link> of file <link linkend="__blobert_effects_animation_component_8cs_source">BlobertEffectsAnimationComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0"/><section>
+    <title>AnimationType</title>
+<indexterm><primary>AnimationType</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>AnimationType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">BlobertEffectsAnimationComponent.AnimationType</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Fire</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>Fire</secondary></indexterm>
+<anchor xml:id="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0abd2b7e5f85a6ea65065c4ebc6d7c95bb"/>Fire</entry><entry></entry></row><row><entry><indexterm><primary>Slash</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>Slash</secondary></indexterm>
+<anchor xml:id="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a358cfe58715d680d9ab09f82e4010cbc"/>Slash</entry><entry></entry></row><row><entry><indexterm><primary>Toxic</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>Toxic</secondary></indexterm>
+<anchor xml:id="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a2e8bc6bdf3e8ead6cb8c6465b6afd781"/>Toxic</entry><entry></entry></row><row><entry><indexterm><primary>Debuf</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>Debuf</secondary></indexterm>
+<anchor xml:id="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0a1e409a9070b570ccae471e56683b371e"/>Debuf</entry><entry></entry></row><row><entry><indexterm><primary>Smoke</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>Smoke</secondary></indexterm>
+<anchor xml:id="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0abc93fd0fa19ed26b6adf8293ada55404"/>Smoke</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blobert_effects_animation_component_8cs_source_1l00010">10</link> of file <link linkend="__blobert_effects_animation_component_8cs_source">BlobertEffectsAnimationComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_effects_animation_component_1a8818da7da393513e68380446672c12b9"/><section>
+    <title>GetAnimationLength()</title>
+<indexterm><primary>GetAnimationLength</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>GetAnimationLength</secondary></indexterm>
+<para><computeroutput>int BlobertEffectsAnimationComponent.GetAnimationLength (<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> type)</computeroutput></para><para>
+Definition at line <link linkend="__blobert_effects_animation_component_8cs_source_1l00103">103</link> of file <link linkend="__blobert_effects_animation_component_8cs_source">BlobertEffectsAnimationComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_effects_animation_component_1adb1af8a50b21672405ffa04a32ee54ed"/><section>
+    <title>GetStartingIndex()</title>
+<indexterm><primary>GetStartingIndex</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>GetStartingIndex</secondary></indexterm>
+<para><computeroutput>int BlobertEffectsAnimationComponent.GetStartingIndex (<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> type)</computeroutput></para><para>
+Definition at line <link linkend="__blobert_effects_animation_component_8cs_source_1l00122">122</link> of file <link linkend="__blobert_effects_animation_component_8cs_source">BlobertEffectsAnimationComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_effects_animation_component_1aa4ab844c8797d86db220ed441bbeb713"/><section>
+    <title>PlayAnimationOnce()</title>
+<indexterm><primary>PlayAnimationOnce</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>PlayAnimationOnce</secondary></indexterm>
+<para><computeroutput>void BlobertEffectsAnimationComponent.PlayAnimationOnce (<link linkend="_class_blobert_effects_animation_component_1afda337697d143f48839f5579196ac8f0">AnimationType</link> type)</computeroutput></para><para>
+Definition at line <link linkend="__blobert_effects_animation_component_8cs_source_1l00085">85</link> of file <link linkend="__blobert_effects_animation_component_8cs_source">BlobertEffectsAnimationComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_blobert_effects_animation_component_1ada8bce9f2847d297473acf27685341cd"/><section>
+    <title>animate</title>
+<indexterm><primary>animate</primary><secondary>BlobertEffectsAnimationComponent</secondary></indexterm>
+<indexterm><primary>BlobertEffectsAnimationComponent</primary><secondary>animate</secondary></indexterm>
+<para><computeroutput>bool BlobertEffectsAnimationComponent.animate = false</computeroutput></para><para>
+Definition at line <link linkend="__blobert_effects_animation_component_8cs_source_1l00019">19</link> of file <link linkend="__blobert_effects_animation_component_8cs_source">BlobertEffectsAnimationComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__blobert_effects_animation_component_8cs">BlobertEffectsAnimationComponent.cs</link></section>
+</section>

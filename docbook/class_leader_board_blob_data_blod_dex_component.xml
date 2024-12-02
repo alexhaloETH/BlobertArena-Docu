@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_leader_board_blob_data_blod_dex_component" xml:lang="en-US">
+<title>LeaderBoardBlobDataBlodDexComponent Class Reference</title>
+<indexterm><primary>LeaderBoardBlobDataBlodDexComponent</primary></indexterm>
+<para>Inheritance diagram for LeaderBoardBlobDataBlodDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_leader_board_blob_data_blod_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_leader_board_blob_data_blod_dex_component_1ab4f865019e2e2f195108c1a73d024e82">InitilizeComponent</link> (int position, int wins)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__leader_board_blob_data_blod_dex_component_8cs_source_1l00006">6</link> of file <link linkend="__leader_board_blob_data_blod_dex_component_8cs_source">LeaderBoardBlobDataBlodDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_leader_board_blob_data_blod_dex_component_1ab4f865019e2e2f195108c1a73d024e82"/><section>
+    <title>InitilizeComponent()</title>
+<indexterm><primary>InitilizeComponent</primary><secondary>LeaderBoardBlobDataBlodDexComponent</secondary></indexterm>
+<indexterm><primary>LeaderBoardBlobDataBlodDexComponent</primary><secondary>InitilizeComponent</secondary></indexterm>
+<para><computeroutput>void LeaderBoardBlobDataBlodDexComponent.InitilizeComponent (int position, int wins)</computeroutput></para><para>
+Definition at line <link linkend="__leader_board_blob_data_blod_dex_component_8cs_source_1l00011">11</link> of file <link linkend="__leader_board_blob_data_blod_dex_component_8cs_source">LeaderBoardBlobDataBlodDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__leader_board_blob_data_blod_dex_component_8cs">LeaderBoardBlobDataBlodDexComponent.cs</link></section>
+</section>

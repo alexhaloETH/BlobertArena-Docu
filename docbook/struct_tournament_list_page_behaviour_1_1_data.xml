@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_tournament_list_page_behaviour_1_1_data" xml:lang="en-US">
+<title>TournamentListPageBehaviour.Data Struct Reference</title>
+<indexterm><primary>TournamentListPageBehaviour.Data</primary></indexterm>
+<para>
+
+<para>Intermediate struct, holding the list of all the tournaments. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; <link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link> &gt; <link linkend="_struct_tournament_list_page_behaviour_1_1_data_1a5924c13a53e93f306346e52b494592f0">tournaments</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Intermediate struct, holding the list of all the tournaments. </para>
+<para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00037">37</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_tournament_list_page_behaviour_1_1_data_1a5924c13a53e93f306346e52b494592f0"/><section>
+    <title>tournaments</title>
+<indexterm><primary>tournaments</primary><secondary>TournamentListPageBehaviour.Data</secondary></indexterm>
+<indexterm><primary>TournamentListPageBehaviour.Data</primary><secondary>tournaments</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link>&gt; TournamentListPageBehaviour.Data.tournaments</computeroutput></para><para>
+Definition at line <link linkend="__tournament_list_page_behaviour_8cs_source_1l00039">39</link> of file <link linkend="__tournament_list_page_behaviour_8cs_source">TournamentListPageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Pages/<link linkend="__tournament_list_page_behaviour_8cs">TournamentListPageBehaviour.cs</link></section>
+</section>

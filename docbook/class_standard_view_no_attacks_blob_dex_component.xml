@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_standard_view_no_attacks_blob_dex_component" xml:lang="en-US">
+<title>StandardViewNoAttacksBlobDexComponent Class Reference</title>
+<indexterm><primary>StandardViewNoAttacksBlobDexComponent</primary></indexterm>
+<para>Inheritance diagram for StandardViewNoAttacksBlobDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_standard_view_no_attacks_blob_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_standard_view_no_attacks_blob_dex_component_1ad3801fb076331f5f6c3410db2150a632">InitilizeComponentBlobert</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_standard_view_no_attacks_blob_dex_component_1a3a49760e9e95ffb3080803c51ab61ede">InitilizeComponentForCombatant</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source_1l00004">4</link> of file <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source">StandardViewNoAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_standard_view_no_attacks_blob_dex_component_1ad3801fb076331f5f6c3410db2150a632"/><section>
+    <title>InitilizeComponentBlobert()</title>
+<indexterm><primary>InitilizeComponentBlobert</primary><secondary>StandardViewNoAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>StandardViewNoAttacksBlobDexComponent</primary><secondary>InitilizeComponentBlobert</secondary></indexterm>
+<para><computeroutput>void StandardViewNoAttacksBlobDexComponent.InitilizeComponentBlobert (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</computeroutput></para><para>
+Definition at line <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source_1l00009">9</link> of file <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source">StandardViewNoAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_standard_view_no_attacks_blob_dex_component_1a3a49760e9e95ffb3080803c51ab61ede"/><section>
+    <title>InitilizeComponentForCombatant()</title>
+<indexterm><primary>InitilizeComponentForCombatant</primary><secondary>StandardViewNoAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>StandardViewNoAttacksBlobDexComponent</primary><secondary>InitilizeComponentForCombatant</secondary></indexterm>
+<para><computeroutput>async void StandardViewNoAttacksBlobDexComponent.InitilizeComponentForCombatant (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</computeroutput></para><para>
+Definition at line <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source_1l00019">19</link> of file <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source">StandardViewNoAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__standard_view_no_attacks_blob_dex_component_8cs">StandardViewNoAttacksBlobDexComponent.cs</link></section>
+</section>

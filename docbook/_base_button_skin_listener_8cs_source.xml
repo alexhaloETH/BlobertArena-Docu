@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__base_button_skin_listener_8cs_source" xml:lang="en-US">
+<title>BaseButtonSkinListener.cs</title>
+<indexterm><primary>UI/Components/Skin/BaseButtonSkinListener.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__base_button_skin_listener_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00004"/>00004 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00005"/><link linkend="_class_base_button_skin_listener">00005</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_base_button_skin_listener">BaseButtonSkinListener</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00007"/><link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4">ButtonColor</link>
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4aee38e4d5dd68c4e440825018d549cb47">Red</link>,
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4ad382816a3cbeed082c9e216e7392eed1">Green</link>,
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4ab9ba865fec061c9706d2fd7ce49c0cc7">Purple</link>,
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4a51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</link>,
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00014"/>00014 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00016"/><link linkend="_struct_base_button_skin_listener_1_1_button_type">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_base_button_skin_listener_1_1_button_type">ButtonType</link>
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00018"/><link linkend="_struct_base_button_skin_listener_1_1_button_type_1ad83cbdb422f21c0eb695c04d286e6eae">00018</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_struct_base_button_skin_listener_1_1_button_type_1ad83cbdb422f21c0eb695c04d286e6eae">defaultSprite</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00019"/><link linkend="_struct_base_button_skin_listener_1_1_button_type_1aeb0c8cb9839629843cd38e0e12a35c03">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_struct_base_button_skin_listener_1_1_button_type_1aeb0c8cb9839629843cd38e0e12a35c03">clickedSprite</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00020"/><link linkend="_struct_base_button_skin_listener_1_1_button_type_1a504f5f49521b2eb6c7e3c3e2d90c46a6">00020</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_struct_base_button_skin_listener_1_1_button_type_1a504f5f49521b2eb6c7e3c3e2d90c46a6">hoverSprite</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00022"/>00022 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00023"/><link linkend="_class_base_button_skin_listener_1a6b27fbd20d3dac97a86007467597069c">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;ButtonType&gt;&#32;<link linkend="_class_base_button_skin_listener_1a6b27fbd20d3dac97a86007467597069c">buttonTypes</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>();
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00024"/>00024 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;_dynamicButtonComp;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00026"/>00026 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00027"/><link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_base_button_skin_listener_1_1_button_type">ButtonType</link>&#32;<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00028"/><link linkend="_class_base_button_skin_listener_1ab7c3f2be54e4e441557dfca128b3c28a">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_base_button_skin_listener_1ab7c3f2be54e4e441557dfca128b3c28a">startingIndexType</link>&#32;=&#32;0;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_skin_manager">SkinManager</link>&#32;_skinManager;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00030"/>00030 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_skinManager&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_skinManager&#32;=&#32;<link linkend="_class_skin_manager">SkinManager</link>.<link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00037"/>00037 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_skinManager.NewSkin&#32;+=&#32;<link linkend="_class_base_button_skin_listener_1a0dc90207d4c7e47ddf0dcad975b9a7a2">ListenerToSkinEvent</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00039"/>00039 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dynamicButtonComp&#32;=&#32;GetComponent&lt;BaseButton&gt;();
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1ad1dd02e8321c366485fbda0755041376">SetButtonType</link>(<link linkend="_class_base_button_skin_listener_1a6b27fbd20d3dac97a86007467597069c">buttonTypes</link>[<link linkend="_class_base_button_skin_listener_1ab7c3f2be54e4e441557dfca128b3c28a">startingIndexType</link>]);
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00043"/>00043 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_skinManager.NewSkin&#32;-=&#32;<link linkend="_class_base_button_skin_listener_1a0dc90207d4c7e47ddf0dcad975b9a7a2">ListenerToSkinEvent</link>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00048"/>00048 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00049"/><link linkend="_class_base_button_skin_listener_1a0dc90207d4c7e47ddf0dcad975b9a7a2">00049</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_skin_listener_1a0dc90207d4c7e47ddf0dcad975b9a7a2">ListenerToSkinEvent</link>()
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1ad1dd02e8321c366485fbda0755041376">SetButtonType</link>(<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>);
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;on&#32;skin&#32;change&#32;on&#32;the&#32;base&#32;bustton&#32;skin&#32;comp&#32;has&#32;failed&#32;this&#32;is&#32;the&#32;gameobject&#32;&quot;</emphasis>&#32;+&#32;gameObject.name);
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00060"/>00060 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00061"/><link linkend="_class_base_button_skin_listener_1ad1dd02e8321c366485fbda0755041376">00061</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_skin_listener_1ad1dd02e8321c366485fbda0755041376">SetButtonType</link>(<link linkend="_struct_base_button_skin_listener_1_1_button_type">ButtonType</link>&#32;buttonType)
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>&#32;=&#32;buttonType;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00064"/>00064 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_skinManager.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>.<link linkend="_struct_base_button_skin_listener_1_1_button_type_1ad83cbdb422f21c0eb695c04d286e6eae">defaultSprite</link>.name)&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00069"/>00069 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dynamicButtonComp.normalSprite&#32;=&#32;_skinManager.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>.<link linkend="_struct_base_button_skin_listener_1_1_button_type_1ad83cbdb422f21c0eb695c04d286e6eae">defaultSprite</link>.name);
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dynamicButtonComp.clickSprite&#32;=&#32;_skinManager.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>.<link linkend="_struct_base_button_skin_listener_1_1_button_type_1aeb0c8cb9839629843cd38e0e12a35c03">clickedSprite</link>.name);
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dynamicButtonComp.hoverSprite&#32;=&#32;_skinManager.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(<link linkend="_class_base_button_skin_listener_1a3bd6eaf9a344b0bef08522322e06521d">_currentSelectedButtonType</link>.<link linkend="_struct_base_button_skin_listener_1_1_button_type_1a504f5f49521b2eb6c7e3c3e2d90c46a6">hoverSprite</link>.name);
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00073"/>00073 
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_dynamicButtonComp.<link linkend="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452">RefreshImage</link>();
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_skin_listener_8cs_source_1l00076"/>00076 }
+</programlisting></section>

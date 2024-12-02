@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__animation_data_editor_8cs" xml:lang="en-US">
+<title>Editor/AnimationDataEditor.cs File Reference</title>
+<indexterm><primary>Editor/AnimationDataEditor.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_animation_data_editor">AnimationDataEditor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

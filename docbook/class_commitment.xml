@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_commitment" xml:lang="en-US">
+<title>Commitment Class Reference</title>
+<indexterm><primary>Commitment</primary></indexterm>
+<para>Inheritance diagram for Commitment:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_commitment.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_commitment_1_1_commitment_data_query">CommitmentDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_commitment_1ad1695cf7acee4d1603176041e6eaef6e">OnUpdate</link> (Model model)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_commitment_1a6d20d38b8a626628b5b63b63abc9f11d">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_commitment_1aa2a90ebb5386f95f554a645bcdbecb17">id</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_commitment_1aa2a90ebb5386f95f554a645bcdbecb17">id</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_commitment_1a210cf2e1d847bed142792ab812447520">commitment</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_commitment_1a44042320184bd46c4d7f82bfd34c47dc">GraphQlQueryFull</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_commitment_1a34d790a948a7c17a432a8cb32dac2a32">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_commitment_1ad9fff7720b35258943d8ca1373c15b38">GraphQlHeader</link> = &quot;blobArenaCommitmentModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>Action&lt; <link linkend="_class_commitment">Commitment</link> &gt; <link linkend="_class_commitment_1a18b4e53d6b1a953d96526e5f9dbcb970">OnUpdateCommitment</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00008">8</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_commitment_1a6d20d38b8a626628b5b63b63abc9f11d"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> Commitment.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_commitment_1ad1695cf7acee4d1603176041e6eaef6e"/><section>
+    <title>OnUpdate()</title>
+<indexterm><primary>OnUpdate</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>OnUpdate</secondary></indexterm>
+<para><computeroutput>override void Commitment.OnUpdate (Model model)</computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00023">23</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_commitment_1a210cf2e1d847bed142792ab812447520"/><section>
+    <title>commitment</title>
+<indexterm><primary>commitment</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>commitment</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> Commitment.commitment</computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00014">14</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_commitment_1ad9fff7720b35258943d8ca1373c15b38"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string Commitment.GraphQlHeader = &quot;blobArenaCommitmentModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00059">59</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_commitment_1a44042320184bd46c4d7f82bfd34c47dc"/><section>
+    <title>GraphQlQueryFull</title>
+<indexterm><primary>GraphQlQueryFull</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>GraphQlQueryFull</secondary></indexterm>
+<para><computeroutput>readonly string Commitment.GraphQlQueryFull<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaCommitmentModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_Commitment&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commitment</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00033">33</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_commitment_1a34d790a948a7c17a432a8cb32dac2a32"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string Commitment.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_Commitment&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commitment</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00052">52</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_commitment_1aa2a90ebb5386f95f554a645bcdbecb17"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>id</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> Commitment.id</computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00011">11</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_commitment_1a18b4e53d6b1a953d96526e5f9dbcb970"/><section>
+    <title>OnUpdateCommitment</title>
+<indexterm><primary>OnUpdateCommitment</primary><secondary>Commitment</secondary></indexterm>
+<indexterm><primary>Commitment</primary><secondary>OnUpdateCommitment</secondary></indexterm>
+<para><computeroutput>Action&lt;<link linkend="_class_commitment">Commitment</link>&gt; Commitment.OnUpdateCommitment</computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00016">16</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__commitment_8gen_8cs">Commitment.gen.cs</link></section>
+</section>

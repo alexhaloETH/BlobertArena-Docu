@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_start_game_page" xml:lang="en-US">
+<title>StartGamePage Class Reference</title>
+<indexterm><primary>StartGamePage</primary></indexterm>
+<para>
+
+<para>Managing class to the start game page. </para>
+ 
+</para>
+<para>Inheritance diagram for StartGamePage:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_start_game_page.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_start_game_page_1ab2e9f3df36603cbbbdacd4854670427a">OnStartButtonClicked</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Managing class to the start game page. </para>
+<para>
+Definition at line <link linkend="__start_game_page_8cs_source_1l00009">9</link> of file <link linkend="__start_game_page_8cs_source">StartGamePage.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_start_game_page_1ab2e9f3df36603cbbbdacd4854670427a"/><section>
+    <title>OnStartButtonClicked()</title>
+<indexterm><primary>OnStartButtonClicked</primary><secondary>StartGamePage</secondary></indexterm>
+<indexterm><primary>StartGamePage</primary><secondary>OnStartButtonClicked</secondary></indexterm>
+<para><computeroutput>void StartGamePage.OnStartButtonClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__start_game_page_8cs_source_1l00027">27</link> of file <link linkend="__start_game_page_8cs_source">StartGamePage.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/LoginScreen/<link linkend="__start_game_page_8cs">StartGamePage.cs</link></section>
+</section>

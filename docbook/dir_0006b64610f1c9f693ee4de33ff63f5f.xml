@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_0006b64610f1c9f693ee4de33ff63f5f" xml:lang="en-US">
+<title>UI/Elements/LobbyListPage Directory Reference</title>
+<indexterm><primary>UI/Elements/LobbyListPage Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs">InLobbyOngoingLobbyListPageElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs">InvSentOnGoingLobbyListPageElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs">OnGoingBattleLobbyListPageElemenet.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__received_inv_lobby_list_page_element_8cs">ReceivedInvLobbyListPageElement.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

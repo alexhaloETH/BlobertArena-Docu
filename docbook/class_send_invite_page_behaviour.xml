@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_send_invite_page_behaviour" xml:lang="en-US">
+<title>SendInvitePageBehaviour Class Reference</title>
+<indexterm><primary>SendInvitePageBehaviour</primary></indexterm>
+<para>
+
+<para>This class is responsible for creating a lobby page for the player to invite other players to play with them. </para>
+ 
+</para>
+<para>Inheritance diagram for SendInvitePageBehaviour:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_send_invite_page_behaviour.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_send_invite_page_behaviour_1a21b30ab3c6cddf44473c3a09e798b1be">CopyToClipboard</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_send_invite_page_behaviour_1a6999e9c5cc20b225936ff5ea692f8dfc">OnTextInputFieldChange</link> (string newInput)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_send_invite_page_behaviour_1a439e8961596a8dcf6b750fc5f9e6e498">OnPasteCall</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_send_invite_page_behaviour_1a526246252aa54a9f7517a709a49bf24f">GoToPreLobby</link> ()</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_send_invite_page_behaviour_1ad4c2ec02ca16dc415168440b04a88124">CreateInvitation</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_send_invite_page_behaviour_1ae1effddeea580d163f291014cfd473df">OnChainCallbackSendInvite</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_send_invite_page_behaviour_1a363bb8ba3d62c68effcbc358340b3cd9">TriggerRandomEncounter</link> ()</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_send_invite_page_behaviour_1a774df9a5250149482a8ec7df12a4ffa0">GetRandomEncounterAsync</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_send_invite_page_behaviour_1af69e619595d4f6ec45a84d6bc406d91b">Interact</link> (string parameter)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class is responsible for creating a lobby page for the player to invite other players to play with them. </para>
+
+
+
+<para>makes sure that before the sending the invite you have a blob selected</para>
+
+<para>One thing to still implemnent, when the button is pressed there should be a waiting screen, The buttons should hide and it should say blobbering... then once the transaction is rejected just show the buttons again if the transaction is succeded then we go into the lobbyListpage TODO </para>
+<para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00021">21</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_send_invite_page_behaviour_1a21b30ab3c6cddf44473c3a09e798b1be"/><section>
+    <title>CopyToClipboard()</title>
+<indexterm><primary>CopyToClipboard</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>CopyToClipboard</secondary></indexterm>
+<para><computeroutput>void SendInvitePageBehaviour.CopyToClipboard ( )</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00059">59</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1ad4c2ec02ca16dc415168440b04a88124"/><section>
+    <title>CreateInvitation()</title>
+<indexterm><primary>CreateInvitation</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>CreateInvitation</secondary></indexterm>
+<para><computeroutput>async void SendInvitePageBehaviour.CreateInvitation ( )</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00090">90</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1a774df9a5250149482a8ec7df12a4ffa0"/><section>
+    <title>GetRandomEncounterAsync()</title>
+<indexterm><primary>GetRandomEncounterAsync</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>GetRandomEncounterAsync</secondary></indexterm>
+<para><computeroutput>async Task SendInvitePageBehaviour.GetRandomEncounterAsync ( )</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00170">170</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1a526246252aa54a9f7517a709a49bf24f"/><section>
+    <title>GoToPreLobby()</title>
+<indexterm><primary>GoToPreLobby</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>GoToPreLobby</secondary></indexterm>
+<para><computeroutput>void SendInvitePageBehaviour.GoToPreLobby ( )</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00082">82</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1af69e619595d4f6ec45a84d6bc406d91b"/><section>
+    <title>Interact()</title>
+<indexterm><primary>Interact</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>Interact</secondary></indexterm>
+<para><computeroutput>void SendInvitePageBehaviour.Interact (string parameter)</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00216">216</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1ae1effddeea580d163f291014cfd473df"/><section>
+    <title>OnChainCallbackSendInvite()</title>
+<indexterm><primary>OnChainCallbackSendInvite</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>OnChainCallbackSendInvite</secondary></indexterm>
+<para><computeroutput>void SendInvitePageBehaviour.OnChainCallbackSendInvite (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00153">153</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1a439e8961596a8dcf6b750fc5f9e6e498"/><section>
+    <title>OnPasteCall()</title>
+<indexterm><primary>OnPasteCall</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>OnPasteCall</secondary></indexterm>
+<para><computeroutput>async void SendInvitePageBehaviour.OnPasteCall ( )</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00076">76</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1a6999e9c5cc20b225936ff5ea692f8dfc"/><section>
+    <title>OnTextInputFieldChange()</title>
+<indexterm><primary>OnTextInputFieldChange</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>OnTextInputFieldChange</secondary></indexterm>
+<para><computeroutput>void SendInvitePageBehaviour.OnTextInputFieldChange (string newInput)</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00064">64</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<anchor xml:id="_class_send_invite_page_behaviour_1a363bb8ba3d62c68effcbc358340b3cd9"/><section>
+    <title>TriggerRandomEncounter()</title>
+<indexterm><primary>TriggerRandomEncounter</primary><secondary>SendInvitePageBehaviour</secondary></indexterm>
+<indexterm><primary>SendInvitePageBehaviour</primary><secondary>TriggerRandomEncounter</secondary></indexterm>
+<para><computeroutput>void SendInvitePageBehaviour.TriggerRandomEncounter ( )</computeroutput></para><para>
+Definition at line <link linkend="__send_invite_page_behaviour_8cs_source_1l00165">165</link> of file <link linkend="__send_invite_page_behaviour_8cs_source">SendInvitePageBehaviour.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/SendInvite/<link linkend="__send_invite_page_behaviour_8cs">SendInvitePageBehaviour.cs</link></section>
+</section>

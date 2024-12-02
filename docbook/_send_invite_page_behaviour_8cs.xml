@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__send_invite_page_behaviour_8cs" xml:lang="en-US">
+<title>UI/Pages/SendInvite/SendInvitePageBehaviour.cs File Reference</title>
+<indexterm><primary>UI/Pages/SendInvite/SendInvitePageBehaviour.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_send_invite_page_behaviour">SendInvitePageBehaviour</link></para>
+
+<para>This class is responsible for creating a lobby page for the player to invite other players to play with them. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

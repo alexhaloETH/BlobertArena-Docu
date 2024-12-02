@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__local_data_model_8cs" xml:lang="en-US">
+<title>LogicLayer/Managers/LocalDataModel.cs File Reference</title>
+<indexterm><primary>LogicLayer/Managers/LocalDataModel.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">LogicLayer.LocalDataModel</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data">LogicLayer.LocalDataModel.DojoData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_serializable">LogicLayer.LocalDataModel.DojoDataSerializable</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

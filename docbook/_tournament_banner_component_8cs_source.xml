@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__tournament_banner_component_8cs_source" xml:lang="en-US">
+<title>TournamentBannerComponent.cs</title>
+<indexterm><primary>UI/Components/TournamentBannerComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__tournament_banner_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00003"/>00003 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00004"/><link linkend="_class_tournament_banner_component">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tournament_banner_component">TournamentBannerComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00006"/>00006 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_nameOfTournament;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_typeTournamentText;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_maxAmountOfPlayersText;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_timeLeftText;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00010"/>00010 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_ownerText;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>&#32;_blobertOnBanner;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00013"/>00013 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_tournament_list_page_behaviour">TournamentListPageBehaviour</link>&#32;_tournamentListPageBehaviour;
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00015"/>00015 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00016"/><link linkend="_class_tournament_banner_component_1a6905e662ed882b8207421bb03f242254">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_tournament_banner_component_1a6905e662ed882b8207421bb03f242254">Awake</link>()
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_tournamentListPageBehaviour&#32;=&#32;FindObjectOfType&lt;TournamentListPageBehaviour&gt;();
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00020"/>00020 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialiseBanner(_tournamentListPageBehaviour.<link linkend="_class_tournament_list_page_behaviour_1aa0a3d88973ffdec9087afe8e530c6feb">GetActiveTournamentData</link>());
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00025"/>00025 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00029"/>00029 
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitialiseBanner(<link linkend="_class_tournament_list_page_behaviour">TournamentListPageBehaviour</link>.<link linkend="_struct_tournament_list_page_behaviour_1_1_tournament_data">TournamentData</link>&#32;data)
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_nameOfTournament.SetText(data.name);
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_typeTournamentText.SetText(data.type);
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_maxAmountOfPlayersText.SetText(data.maxParticipant.ToString());
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_ownerText.SetText(data.creatorName);
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__tournament_banner_component_8cs_source_1l00037"/>00037 }
+</programlisting></section>

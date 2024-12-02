@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_amma_animation_controller" xml:lang="en-US">
+<title>AmmaAnimationController Class Reference</title>
+<indexterm><primary>AmmaAnimationController</primary></indexterm>
+<para>Inheritance diagram for AmmaAnimationController:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_amma_animation_controller.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AMMAAnimationState</link> { <?linebreak?><link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a06c919e11c81eb0d34c9153103632ab3">Attack1B</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ae65544dbb14f269afb59a69d15b66476">Attack1F</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a5cdb9754a2740e00e43638884a1ff709">Attack2B</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a443856c72b4c6b01b0e9a7a4b0b4e803">Attack2F</link>
+, <?linebreak?><link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a0bf4855c2653c707e031cca4290f16b4">Attack3B</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a413ffe5b9fc93a98b7a232a6d2bedde7">Attack3F</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a9dee6a0a9bc9500b027fc82f6af4a8be">Attack4B</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ae22bb5aa0226c61a5909ef0f71278636">Attack4F</link>
+, <?linebreak?><link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a82a7931f43e4206d8f48923fa7cafaa9">IdleFL</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a504b9374d334bf7635c2d29495a1b611">IdleFR</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ad350cb1a1bcce1117b0fa17798740bcc">IdleB</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454aeb79bdf9136d9d6160aaa99d29115b9b">IdleNFL</link>
+, <?linebreak?><link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ace9f3c995823092d960bab962bcfff15">IdleNFR</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454aa8461f90ea18ca0b7130ce9a2d167a17">hitB</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ae23322fdc99501ba7111c9be9fb7a35b">HitF</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a1dbf4a11ce9a0ad374488eebd4719458">WinningL</link>
+, <?linebreak?><link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a3b62bac86048541cad76756aff15c38a">WinningR</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a64195a1578ec76283a9fb9eccff766a2">WinningLWB</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a3768e786f66a5abdd6fd128e08517bac">WinningRWB</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a0a1a449c6d2bc638d645d1d3f10ac2c1">LoosingLWB</link>
+, <?linebreak?><link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a7dccf01efe0700d9c1d507d0e1dffef6">LoosingRWB</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a5fa580646d9e0048656437750a33a8c6">DyingB</link>
+, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454aa7b3f130dbac03607e929f01aa162515">DyingF</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static AmmaAnimationData <link linkend="_class_amma_animation_controller_1a93e9d9178c9b2da323198e017952a663">GetFighterScriptableObject</link> (int fighterIndex)</para>
+</listitem>
+            <listitem><para>static List&lt; Sprite &gt; <link linkend="_class_amma_animation_controller_1a0e4e0a74f30784842ca191e685a6c15d">GetAnimationSprites</link> (int fighterId, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AmmaAnimationController.AMMAAnimationState</link> animationState)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_character_animation_manager_1_1_texture_function_input">CharacterAnimationManager.TextureFunctionInput</link> <link linkend="_class_amma_animation_controller_1ac46bf878ba0436c64bd96df5ccc14269">GetTextureFunctionInput</link> (int fighterId, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AmmaAnimationController.AMMAAnimationState</link> animationState)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_amma_animation_controller_1a76bbf4807e8ab83c4b90f9cf7fbd9bd9">GetAttackNameForFighter</link> (int fighterId, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AMMAAnimationState</link> animationState)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_amma_animation_controller_1acb4c1513641af01f87073ade623890f4">CheckAnimationValidity</link> ()</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_amma_animation_controller_1a106edb842f403510dcf217e77feb0fde">CheckAttackName</link> (string attackName, int fighterId)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly int <link linkend="_class_amma_animation_controller_1a17604b13c865bc945f77f09b0d9ab426">AmountOfLayers</link> = 1</para>
+</listitem>
+            <listitem><para>static readonly string[] <link linkend="_class_amma_animation_controller_1a818a18d1a80454f574810dd1700d7636">NameOfLayers</link> = new[] { &quot;Weapon&quot; }</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_amma_animation_controller_1a2dbcf21896ab7b32333d7839d5d252d1">QuickIdleL</link> = 8</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_amma_animation_controller_1a1a840da0fe15e0c3637ff8af31a8e5a0">QuickIdleR</link> = 9</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_amma_animation_controller_1af68607d1e6b2d6a7c32f40c591e41b89">QuickIdleNoMaskL</link> = 11</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_amma_animation_controller_1a77f36f86b2395683c1c1c74a7e6b5ceb">QuickIdleNoMaskR</link> = 12</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static List&lt; AmmaAnimationData &gt; <link linkend="_class_amma_animation_controller_1a1cd803a62246bdf269f7df4cd7b3cb9a">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00007">7</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454"/><section>
+    <title>AMMAAnimationState</title>
+<indexterm><primary>AMMAAnimationState</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>AMMAAnimationState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AmmaAnimationController.AMMAAnimationState</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Attack1B</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack1B</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a06c919e11c81eb0d34c9153103632ab3"/>Attack1B</entry><entry></entry></row><row><entry><indexterm><primary>Attack1F</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack1F</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ae65544dbb14f269afb59a69d15b66476"/>Attack1F</entry><entry></entry></row><row><entry><indexterm><primary>Attack2B</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack2B</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a5cdb9754a2740e00e43638884a1ff709"/>Attack2B</entry><entry></entry></row><row><entry><indexterm><primary>Attack2F</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack2F</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a443856c72b4c6b01b0e9a7a4b0b4e803"/>Attack2F</entry><entry></entry></row><row><entry><indexterm><primary>Attack3B</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack3B</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a0bf4855c2653c707e031cca4290f16b4"/>Attack3B</entry><entry></entry></row><row><entry><indexterm><primary>Attack3F</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack3F</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a413ffe5b9fc93a98b7a232a6d2bedde7"/>Attack3F</entry><entry></entry></row><row><entry><indexterm><primary>Attack4B</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack4B</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a9dee6a0a9bc9500b027fc82f6af4a8be"/>Attack4B</entry><entry></entry></row><row><entry><indexterm><primary>Attack4F</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Attack4F</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ae22bb5aa0226c61a5909ef0f71278636"/>Attack4F</entry><entry></entry></row><row><entry><indexterm><primary>IdleFL</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>IdleFL</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a82a7931f43e4206d8f48923fa7cafaa9"/>IdleFL</entry><entry></entry></row><row><entry><indexterm><primary>IdleFR</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>IdleFR</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a504b9374d334bf7635c2d29495a1b611"/>IdleFR</entry><entry></entry></row><row><entry><indexterm><primary>IdleB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>IdleB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ad350cb1a1bcce1117b0fa17798740bcc"/>IdleB</entry><entry></entry></row><row><entry><indexterm><primary>IdleNFL</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>IdleNFL</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454aeb79bdf9136d9d6160aaa99d29115b9b"/>IdleNFL</entry><entry></entry></row><row><entry><indexterm><primary>IdleNFR</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>IdleNFR</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ace9f3c995823092d960bab962bcfff15"/>IdleNFR</entry><entry></entry></row><row><entry><indexterm><primary>hitB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>hitB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454aa8461f90ea18ca0b7130ce9a2d167a17"/>hitB</entry><entry></entry></row><row><entry><indexterm><primary>HitF</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>HitF</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454ae23322fdc99501ba7111c9be9fb7a35b"/>HitF</entry><entry></entry></row><row><entry><indexterm><primary>WinningL</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>WinningL</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a1dbf4a11ce9a0ad374488eebd4719458"/>WinningL</entry><entry></entry></row><row><entry><indexterm><primary>WinningR</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>WinningR</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a3b62bac86048541cad76756aff15c38a"/>WinningR</entry><entry></entry></row><row><entry><indexterm><primary>WinningLWB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>WinningLWB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a64195a1578ec76283a9fb9eccff766a2"/>WinningLWB</entry><entry></entry></row><row><entry><indexterm><primary>WinningRWB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>WinningRWB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a3768e786f66a5abdd6fd128e08517bac"/>WinningRWB</entry><entry></entry></row><row><entry><indexterm><primary>LoosingLWB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>LoosingLWB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a0a1a449c6d2bc638d645d1d3f10ac2c1"/>LoosingLWB</entry><entry></entry></row><row><entry><indexterm><primary>LoosingRWB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>LoosingRWB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a7dccf01efe0700d9c1d507d0e1dffef6"/>LoosingRWB</entry><entry></entry></row><row><entry><indexterm><primary>DyingB</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>DyingB</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454a5fa580646d9e0048656437750a33a8c6"/>DyingB</entry><entry></entry></row><row><entry><indexterm><primary>DyingF</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>DyingF</secondary></indexterm>
+<anchor xml:id="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454aa7b3f130dbac03607e929f01aa162515"/>DyingF</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00022">22</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_amma_animation_controller_1acb4c1513641af01f87073ade623890f4"/><section>
+    <title>CheckAnimationValidity()</title>
+<indexterm><primary>CheckAnimationValidity</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>CheckAnimationValidity</secondary></indexterm>
+<para><computeroutput>static void AmmaAnimationController.CheckAnimationValidity ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00204">204</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a106edb842f403510dcf217e77feb0fde"/><section>
+    <title>CheckAttackName()</title>
+<indexterm><primary>CheckAttackName</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>CheckAttackName</secondary></indexterm>
+<para><computeroutput>static string AmmaAnimationController.CheckAttackName (string attackName, int fighterId)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00234">234</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a0e4e0a74f30784842ca191e685a6c15d"/><section>
+    <title>GetAnimationSprites()</title>
+<indexterm><primary>GetAnimationSprites</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>GetAnimationSprites</secondary></indexterm>
+<para><computeroutput>static List&lt; Sprite &gt; AmmaAnimationController.GetAnimationSprites (int fighterId, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AmmaAnimationController.AMMAAnimationState</link> animationState)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00071">71</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a76bbf4807e8ab83c4b90f9cf7fbd9bd9"/><section>
+    <title>GetAttackNameForFighter()</title>
+<indexterm><primary>GetAttackNameForFighter</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>GetAttackNameForFighter</secondary></indexterm>
+<para><computeroutput>static string AmmaAnimationController.GetAttackNameForFighter (int fighterId, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AMMAAnimationState</link> animationState)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00123">123</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a93e9d9178c9b2da323198e017952a663"/><section>
+    <title>GetFighterScriptableObject()</title>
+<indexterm><primary>GetFighterScriptableObject</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>GetFighterScriptableObject</secondary></indexterm>
+<para><computeroutput>static AmmaAnimationData AmmaAnimationController.GetFighterScriptableObject (int fighterIndex)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00066">66</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1ac46bf878ba0436c64bd96df5ccc14269"/><section>
+    <title>GetTextureFunctionInput()</title>
+<indexterm><primary>GetTextureFunctionInput</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>GetTextureFunctionInput</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_character_animation_manager_1_1_texture_function_input">CharacterAnimationManager.TextureFunctionInput</link> AmmaAnimationController.GetTextureFunctionInput (int fighterId, <link linkend="_class_amma_animation_controller_1a5d8419d845d6afd9e99849ddeef7c454">AmmaAnimationController.AMMAAnimationState</link> animationState)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00082">82</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_amma_animation_controller_1a17604b13c865bc945f77f09b0d9ab426"/><section>
+    <title>AmountOfLayers</title>
+<indexterm><primary>AmountOfLayers</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>AmountOfLayers</secondary></indexterm>
+<para><computeroutput>readonly int AmmaAnimationController.AmountOfLayers = 1<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00011">11</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a818a18d1a80454f574810dd1700d7636"/><section>
+    <title>NameOfLayers</title>
+<indexterm><primary>NameOfLayers</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>NameOfLayers</secondary></indexterm>
+<para><computeroutput>readonly string [] AmmaAnimationController.NameOfLayers = new[] { &quot;Weapon&quot; }<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00012">12</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a2dbcf21896ab7b32333d7839d5d252d1"/><section>
+    <title>QuickIdleL</title>
+<indexterm><primary>QuickIdleL</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>QuickIdleL</secondary></indexterm>
+<para><computeroutput>readonly int AmmaAnimationController.QuickIdleL = 8<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00014">14</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1af68607d1e6b2d6a7c32f40c591e41b89"/><section>
+    <title>QuickIdleNoMaskL</title>
+<indexterm><primary>QuickIdleNoMaskL</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>QuickIdleNoMaskL</secondary></indexterm>
+<para><computeroutput>readonly int AmmaAnimationController.QuickIdleNoMaskL = 11<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00017">17</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a77f36f86b2395683c1c1c74a7e6b5ceb"/><section>
+    <title>QuickIdleNoMaskR</title>
+<indexterm><primary>QuickIdleNoMaskR</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>QuickIdleNoMaskR</secondary></indexterm>
+<para><computeroutput>readonly int AmmaAnimationController.QuickIdleNoMaskR = 12<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00018">18</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_animation_controller_1a1a840da0fe15e0c3637ff8af31a8e5a0"/><section>
+    <title>QuickIdleR</title>
+<indexterm><primary>QuickIdleR</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>QuickIdleR</secondary></indexterm>
+<para><computeroutput>readonly int AmmaAnimationController.QuickIdleR = 9<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00015">15</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_amma_animation_controller_1a1cd803a62246bdf269f7df4cd7b3cb9a"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>AmmaAnimationController</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput>List&lt;AmmaAnimationData&gt; AmmaAnimationController.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00049">49</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__amma_animation_controller_8cs">AmmaAnimationController.cs</link></section>
+</section>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__combatant_data_model_8cs" xml:lang="en-US">
+<title>LogicLayer/Managers/CombatantDataModel.cs File Reference</title>
+<indexterm><primary>LogicLayer/Managers/CombatantDataModel.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">LogicLayer.CombatantDataModel</emphasis></para>
+
+<para>This Model Uses these models: <link linkend="_class_combatant_info">CombatantInfo</link> <link linkend="_class_combatant_stats">CombatantStats</link> <link linkend="_class_planned_attack">PlannedAttack</link> <link linkend="_class_commitment">Commitment</link> <link linkend="_class_available_attack">AvailableAttack</link> AttackResult. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data">LogicLayer.CombatantDataModel.QueryCompiledCombatantData</link></para>
+
+<para>Struct for better data passing. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__base_button_8cs_source" xml:lang="en-US">
+<title>BaseButton.cs</title>
+<indexterm><primary>UI/Components/Button Types/BaseButton.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__base_button_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__base_button_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__base_button_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_audio_effects">AudioEffects</link>;
+<anchor xml:id="__base_button_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__base_button_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__base_button_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Events;
+<anchor xml:id="__base_button_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__base_button_8cs_source_1l00008"/>00008 
+<anchor xml:id="__base_button_8cs_source_1l00009"/><link linkend="_class_base_button">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_base_button">BaseButton</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__base_button_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__base_button_8cs_source_1l00011"/><link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>
+<anchor xml:id="__base_button_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479da53e1f4f9454816f580f86120b364276e">ResetAfterDelay</link>,
+<anchor xml:id="__base_button_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479da9169c0121d7b2dbe5091c4312409888b">InstantChange</link>,
+<anchor xml:id="__base_button_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479dafea564e9595262ede71176678ec3c8fe">AwaitCallback</link>
+<anchor xml:id="__base_button_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00017"/>00017 
+<anchor xml:id="__base_button_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;References&quot;</emphasis>)]
+<anchor xml:id="__base_button_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;targetImage;
+<anchor xml:id="__base_button_8cs_source_1l00020"/>00020 
+<anchor xml:id="__base_button_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;targetText;
+<anchor xml:id="__base_button_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;CanvasGroup&#32;canvasGroup;
+<anchor xml:id="__base_button_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_mouse_interaction_component">MouseInteractionComponent</link>&#32;_mouseInteractionComponent;
+<anchor xml:id="__base_button_8cs_source_1l00024"/>00024 
+<anchor xml:id="__base_button_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__base_button_8cs_source_1l00026"/><link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>;
+<anchor xml:id="__base_button_8cs_source_1l00027"/>00027 
+<anchor xml:id="__base_button_8cs_source_1l00028"/><link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>;
+<anchor xml:id="__base_button_8cs_source_1l00029"/><link linkend="_class_base_button_1a09221a1eff401353f928f0e0651c827a">00029</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_base_button_1a09221a1eff401353f928f0e0651c827a">clickSprite</link>;
+<anchor xml:id="__base_button_8cs_source_1l00030"/>00030 
+<anchor xml:id="__base_button_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__base_button_8cs_source_1l00032"/><link linkend="_class_base_button_1a0a36c4caeefb861658a32e19fbb03585">00032</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_base_button_1a0a36c4caeefb861658a32e19fbb03585">delay</link>&#32;=&#32;0.5f;
+<anchor xml:id="__base_button_8cs_source_1l00033"/>00033 
+<anchor xml:id="__base_button_8cs_source_1l00034"/><link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">00034</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>&#32;<link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">buttonBehavior</link>;
+<anchor xml:id="__base_button_8cs_source_1l00035"/>00035 
+<anchor xml:id="__base_button_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;[Space(30)]
+<anchor xml:id="__base_button_8cs_source_1l00037"/><link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">00037</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00038"/>00038 
+<anchor xml:id="__base_button_8cs_source_1l00039"/><link linkend="_class_base_button_1af1a2cf5ef568b21e77c43c7e77010ba0">00039</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;UnityEvent&#32;<link linkend="_class_base_button_1af1a2cf5ef568b21e77c43c7e77010ba0">onClickCalls</link>;
+<anchor xml:id="__base_button_8cs_source_1l00040"/>00040 
+<anchor xml:id="__base_button_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__base_button_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(canvasGroup&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;canvasGroup&#32;=&#32;GetComponent&lt;CanvasGroup&gt;();
+<anchor xml:id="__base_button_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00045"/>00045 
+<anchor xml:id="__base_button_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__base_button_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;targetImage&#32;=&#32;GetComponent&lt;Image&gt;();
+<anchor xml:id="__base_button_8cs_source_1l00049"/>00049 
+<anchor xml:id="__base_button_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;initial&#32;sprite&#32;to&#32;normalSprite&#32;if&#32;available</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00056"/>00056 
+<anchor xml:id="__base_button_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__base_button_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452">RefreshImage</link>();
+<anchor xml:id="__base_button_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00061"/>00061 
+<anchor xml:id="__base_button_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDisable()
+<anchor xml:id="__base_button_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00068"/>00068 
+<anchor xml:id="__base_button_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00071"/>00071 
+<anchor xml:id="__base_button_8cs_source_1l00072"/><link linkend="_class_base_button_1ad84a36ee72dbfd5f47f22144eb88d20b">00072</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1ad84a36ee72dbfd5f47f22144eb88d20b">OnPointerEnter</link>()
+<anchor xml:id="__base_button_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;||&#32;targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_audio_manager">AudioManager</link>.<link linkend="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5">PlayEffect</link>(<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">Effects</link>.ButtonSwap);
+<anchor xml:id="__base_button_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00077"/>00077 
+<anchor xml:id="__base_button_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00080"/>00080 
+<anchor xml:id="__base_button_8cs_source_1l00081"/><link linkend="_class_base_button_1a4207af7417fc33dbe175445069d9f215">00081</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a4207af7417fc33dbe175445069d9f215">OnPointerExit</link>()
+<anchor xml:id="__base_button_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;||&#32;targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00085"/>00085 
+<anchor xml:id="__base_button_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">buttonBehavior</link>&#32;==&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>.InstantChange&#32;&amp;&amp;&#32;Input.GetMouseButton(0))&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00087"/>00087 
+<anchor xml:id="__base_button_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00090"/>00090 
+<anchor xml:id="__base_button_8cs_source_1l00091"/><link linkend="_class_base_button_1a5a5f926ecab0ac15e18c41fb95049afd">00091</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a5a5f926ecab0ac15e18c41fb95049afd">OnPointerDown</link>()
+<anchor xml:id="__base_button_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;||&#32;targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_audio_manager">AudioManager</link>.<link linkend="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5">PlayEffect</link>(<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">Effects</link>.ButtonClick);
+<anchor xml:id="__base_button_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a09221a1eff401353f928f0e0651c827a">clickSprite</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00096"/>00096 
+<anchor xml:id="__base_button_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a09221a1eff401353f928f0e0651c827a">clickSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00098"/>00098 
+<anchor xml:id="__base_button_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1af1a2cf5ef568b21e77c43c7e77010ba0">onClickCalls</link>?.Invoke();
+<anchor xml:id="__base_button_8cs_source_1l00100"/>00100 
+<anchor xml:id="__base_button_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">buttonBehavior</link>)
+<anchor xml:id="__base_button_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>.ResetAfterDelay:
+<anchor xml:id="__base_button_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a9ee85ce3fb947ab07d29aca266270706">LockInteractable</link>();
+<anchor xml:id="__base_button_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(ResetToNormalAfterDelay());
+<anchor xml:id="__base_button_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00107"/>00107 
+<anchor xml:id="__base_button_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>.InstantChange:
+<anchor xml:id="__base_button_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00110"/>00110 
+<anchor xml:id="__base_button_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>.AwaitCallback:
+<anchor xml:id="__base_button_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a9ee85ce3fb947ab07d29aca266270706">LockInteractable</link>();
+<anchor xml:id="__base_button_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00116"/>00116 
+<anchor xml:id="__base_button_8cs_source_1l00117"/><link linkend="_class_base_button_1a7c87149b3e8c9f3564178ea010e02add">00117</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a7c87149b3e8c9f3564178ea010e02add">OnPointerUp</link>()
+<anchor xml:id="__base_button_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;||&#32;targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00121"/>00121 
+<anchor xml:id="__base_button_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">buttonBehavior</link>&#32;==&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>.InstantChange&#32;||&#32;<link linkend="_class_base_button_1ac60e8bed89f769c1364b324c33af9305">buttonBehavior</link>&#32;==&#32;<link linkend="_class_base_button_1a9cbb921b4a95fb67b9910a19426e479d">ButtonBehavior</link>.AwaitCallback)
+<anchor xml:id="__base_button_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_mouseInteractionComponent.<link linkend="_class_mouse_interaction_component_1a8e6589a348c5d8b2c2139092a58c8858">PointerIsOver</link>&#32;&amp;&amp;&#32;<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00134"/>00134 
+<anchor xml:id="__base_button_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;ResetToNormalAfterDelay()
+<anchor xml:id="__base_button_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(<link linkend="_class_base_button_1a0a36c4caeefb861658a32e19fbb03585">delay</link>);
+<anchor xml:id="__base_button_8cs_source_1l00138"/>00138 
+<anchor xml:id="__base_button_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_mouseInteractionComponent.<link linkend="_class_mouse_interaction_component_1a8e6589a348c5d8b2c2139092a58c8858">PointerIsOver</link>&#32;&amp;&amp;&#32;<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00147"/>00147 
+<anchor xml:id="__base_button_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a35c627672b99c403fc1faf4a9eb289d2">UnlockInteractable</link>();
+<anchor xml:id="__base_button_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00150"/>00150 
+<anchor xml:id="__base_button_8cs_source_1l00151"/><link linkend="_class_base_button_1a9ee85ce3fb947ab07d29aca266270706">00151</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a9ee85ce3fb947ab07d29aca266270706">LockInteractable</link>()
+<anchor xml:id="__base_button_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00155"/>00155 
+<anchor xml:id="__base_button_8cs_source_1l00156"/><link linkend="_class_base_button_1a35c627672b99c403fc1faf4a9eb289d2">00156</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a35c627672b99c403fc1faf4a9eb289d2">UnlockInteractable</link>()
+<anchor xml:id="__base_button_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00159"/>00159 
+<anchor xml:id="__base_button_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_mouseInteractionComponent.<link linkend="_class_mouse_interaction_component_1a8e6589a348c5d8b2c2139092a58c8858">PointerIsOver</link>&#32;&amp;&amp;&#32;<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00169"/>00169 
+<anchor xml:id="__base_button_8cs_source_1l00170"/><link linkend="_class_base_button_1a6186c87942f84fd912603aa63d6760ad">00170</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a6186c87942f84fd912603aa63d6760ad">LockButton</link>(<emphasis role="keywordtype">bool</emphasis>&#32;resetTexture&#32;=&#32;<emphasis role="keyword">false</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00173"/>00173 
+<anchor xml:id="__base_button_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(canvasGroup&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;canvasGroup.alpha&#32;=&#32;0.6f;
+<anchor xml:id="__base_button_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00178"/>00178 
+<anchor xml:id="__base_button_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(resetTexture)
+<anchor xml:id="__base_button_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>;
+<anchor xml:id="__base_button_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00184"/>00184 
+<anchor xml:id="__base_button_8cs_source_1l00185"/><link linkend="_class_base_button_1ad2184a39482e6a6ba0f4005977cc8be5">00185</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</link>()
+<anchor xml:id="__base_button_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a0e643107372dcfd8b0dd13aadf434eb0">isLocked</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__base_button_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;canvasGroup.alpha&#32;=&#32;1f;
+<anchor xml:id="__base_button_8cs_source_1l00189"/>00189 
+<anchor xml:id="__base_button_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_mouseInteractionComponent.<link linkend="_class_mouse_interaction_component_1a8e6589a348c5d8b2c2139092a58c8858">PointerIsOver</link>&#32;&amp;&amp;&#32;<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00199"/>00199 
+<anchor xml:id="__base_button_8cs_source_1l00200"/><link linkend="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452">00200</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452">RefreshImage</link>()
+<anchor xml:id="__base_button_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetImageSprite(<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>);
+<anchor xml:id="__base_button_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00204"/>00204 
+<anchor xml:id="__base_button_8cs_source_1l00205"/>00205 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Utils</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00206"/>00206 
+<anchor xml:id="__base_button_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Helper&#32;function&#32;to&#32;set&#32;the&#32;sprite&#32;by&#32;its&#32;name&#32;from&#32;SkinManager</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetImageSprite(Sprite&#32;sprite)
+<anchor xml:id="__base_button_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;targetImage&#32;=&#32;GetComponent&lt;Image&gt;();
+<anchor xml:id="__base_button_8cs_source_1l00213"/>00213 
+<anchor xml:id="__base_button_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__base_button_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;sprite;
+<anchor xml:id="__base_button_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(Exception&#32;e)
+<anchor xml:id="__base_button_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(e);
+<anchor xml:id="__base_button_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00224"/>00224 
+<anchor xml:id="__base_button_8cs_source_1l00225"/><link linkend="_class_base_button_1a26ff7e284145f7d6842ac86763116c90">00225</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_base_button_1a26ff7e284145f7d6842ac86763116c90">SetNewSprites</link>(<link linkend="_class_base_button_skin_listener">BaseButtonSkinListener</link>.<link linkend="_class_base_button_skin_listener_1a94f6ee12664b925785f0a4732d550ae4">ButtonColor</link>&#32;color)
+<anchor xml:id="__base_button_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__base_button_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;comp&#32;=&#32;GetComponent&lt;BaseButtonSkinListener&gt;();
+<anchor xml:id="__base_button_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sprites&#32;=&#32;comp.buttonTypes[(int)color];
+<anchor xml:id="__base_button_8cs_source_1l00229"/>00229 
+<anchor xml:id="__base_button_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a2351ecdda9184b7156cdc607325e6eef">normalSprite</link>&#32;=&#32;sprites.defaultSprite;
+<anchor xml:id="__base_button_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a2eb0a345dacdc870da199fca9d3f441a">hoverSprite</link>&#32;=&#32;sprites.hoverSprite;
+<anchor xml:id="__base_button_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a09221a1eff401353f928f0e0651c827a">clickSprite</link>&#32;=&#32;sprites.clickedSprite;
+<anchor xml:id="__base_button_8cs_source_1l00233"/>00233 
+<anchor xml:id="__base_button_8cs_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_base_button_1a2a1b42de2fb9db4468e3a2f13b662452">RefreshImage</link>();
+<anchor xml:id="__base_button_8cs_source_1l00235"/>00235 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__base_button_8cs_source_1l00236"/>00236 
+<anchor xml:id="__base_button_8cs_source_1l00237"/><link linkend="_class_base_button_1ae4a37b75f8b7a9656fb56ad2a32b0418">00237</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;TMP_Text&#32;<link linkend="_class_base_button_1ae4a37b75f8b7a9656fb56ad2a32b0418">GetText</link>()&#32;=&gt;&#32;targetText;
+<anchor xml:id="__base_button_8cs_source_1l00238"/>00238 
+<anchor xml:id="__base_button_8cs_source_1l00239"/>00239 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Utils</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00240"/>00240 
+<anchor xml:id="__base_button_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00242"/>00242 <emphasis role="comment">&#32;&#32;&#32;&#32;public&#32;void&#32;OnButtonClick()</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00243"/>00243 <emphasis role="comment">&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00244"/>00244 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_basebutton.LockButton();</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00245"/>00245 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(FakeAsyncOperation());</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00246"/>00246 <emphasis role="comment">&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00247"/>00247 <emphasis role="comment"></emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00248"/>00248 <emphasis role="comment">&#32;&#32;&#32;&#32;private&#32;IEnumerator&#32;FakeAsyncOperation()</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00249"/>00249 <emphasis role="comment">&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00250"/>00250 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;return&#32;new&#32;WaitForSeconds(3f);</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00251"/>00251 <emphasis role="comment"></emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00252"/>00252 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_basebutton.UnlockButton();</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00253"/>00253 <emphasis role="comment">&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00254"/>00254 <emphasis role="comment">&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__base_button_8cs_source_1l00255"/>00255 }
+</programlisting></section>

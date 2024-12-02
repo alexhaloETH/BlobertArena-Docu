@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_78bc42b29f862bab282e41579cd40349" xml:lang="en-US">
+<title>LogicLayer/Dojo/Variants Directory Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Variants Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__synchro_manager_dojo_8cs">SynchroManagerDojo.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__world_manager_dojo_8cs">WorldManagerDojo.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

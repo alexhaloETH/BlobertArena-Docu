@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__selection_behaviour_text_8cs" xml:lang="en-US">
+<title>UI/Components/SelectionBehaviourText.cs File Reference</title>
+<indexterm><primary>UI/Components/SelectionBehaviourText.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>interface <link linkend="_interface_i_selection_behaviour">ISelectionBehaviour</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_selection_behaviour_text">SelectionBehaviourText</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sound_combat_special_8cs_source" xml:lang="en-US">
+<title>SoundCombatSpecial.cs</title>
+<indexterm><primary>Misc/SoundCombatSpecial.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__sound_combat_special_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__sound_combat_special_8cs_source_1l00002"/>00002 
+<anchor xml:id="__sound_combat_special_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__sound_combat_special_8cs_source_1l00004"/>00004 
+<anchor xml:id="__sound_combat_special_8cs_source_1l00005"/>00005 [<link linkend="_namespace_system">System</link>.Serializable]
+<anchor xml:id="__sound_combat_special_8cs_source_1l00006"/><link linkend="_class_sound_combat_special">00006</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sound_combat_special">SoundCombatSpecial</link>
+<anchor xml:id="__sound_combat_special_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__sound_combat_special_8cs_source_1l00008"/><link linkend="_class_sound_combat_special_1aac5a94116f1dbce1bd298959943bb9a1">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">AudioEffects.CombatSpecial</link>&#32;<link linkend="_class_sound_combat_special_1aac5a94116f1dbce1bd298959943bb9a1">Effect</link>;
+<anchor xml:id="__sound_combat_special_8cs_source_1l00009"/><link linkend="_class_sound_combat_special_1ade522bc32552f456930509d615920f0e">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AudioClip&#32;<link linkend="_class_sound_combat_special_1ade522bc32552f456930509d615920f0e">Clip</link>;
+<anchor xml:id="__sound_combat_special_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;
+<anchor xml:id="__sound_combat_special_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[HideInInspector]
+<anchor xml:id="__sound_combat_special_8cs_source_1l00012"/><link linkend="_class_sound_combat_special_1a19e68d946a9e63c5e36a71cb4c92ed58">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AudioSource&#32;<link linkend="_class_sound_combat_special_1a19e68d946a9e63c5e36a71cb4c92ed58">Source</link>;
+<anchor xml:id="__sound_combat_special_8cs_source_1l00013"/>00013 }
+</programlisting></section>

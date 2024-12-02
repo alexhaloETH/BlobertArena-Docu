@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sound_combat_special" xml:lang="en-US">
+<title>SoundCombatSpecial Class Reference</title>
+<indexterm><primary>SoundCombatSpecial</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">AudioEffects.CombatSpecial</link> <link linkend="_class_sound_combat_special_1aac5a94116f1dbce1bd298959943bb9a1">Effect</link></para>
+</listitem>
+            <listitem><para>AudioClip <link linkend="_class_sound_combat_special_1ade522bc32552f456930509d615920f0e">Clip</link></para>
+</listitem>
+            <listitem><para>AudioSource <link linkend="_class_sound_combat_special_1a19e68d946a9e63c5e36a71cb4c92ed58">Source</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__sound_combat_special_8cs_source_1l00006">6</link> of file <link linkend="__sound_combat_special_8cs_source">SoundCombatSpecial.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_sound_combat_special_1ade522bc32552f456930509d615920f0e"/><section>
+    <title>Clip</title>
+<indexterm><primary>Clip</primary><secondary>SoundCombatSpecial</secondary></indexterm>
+<indexterm><primary>SoundCombatSpecial</primary><secondary>Clip</secondary></indexterm>
+<para><computeroutput>AudioClip SoundCombatSpecial.Clip</computeroutput></para><para>
+Definition at line <link linkend="__sound_combat_special_8cs_source_1l00009">9</link> of file <link linkend="__sound_combat_special_8cs_source">SoundCombatSpecial.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_combat_special_1aac5a94116f1dbce1bd298959943bb9a1"/><section>
+    <title>Effect</title>
+<indexterm><primary>Effect</primary><secondary>SoundCombatSpecial</secondary></indexterm>
+<indexterm><primary>SoundCombatSpecial</primary><secondary>Effect</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">AudioEffects.CombatSpecial</link> SoundCombatSpecial.Effect</computeroutput></para><para>
+Definition at line <link linkend="__sound_combat_special_8cs_source_1l00008">8</link> of file <link linkend="__sound_combat_special_8cs_source">SoundCombatSpecial.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_combat_special_1a19e68d946a9e63c5e36a71cb4c92ed58"/><section>
+    <title>Source</title>
+<indexterm><primary>Source</primary><secondary>SoundCombatSpecial</secondary></indexterm>
+<indexterm><primary>SoundCombatSpecial</primary><secondary>Source</secondary></indexterm>
+<para><computeroutput>AudioSource SoundCombatSpecial.Source</computeroutput></para><para>
+Definition at line <link linkend="__sound_combat_special_8cs_source_1l00012">12</link> of file <link linkend="__sound_combat_special_8cs_source">SoundCombatSpecial.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Misc/<link linkend="__sound_combat_special_8cs">SoundCombatSpecial.cs</link></section>
+</section>

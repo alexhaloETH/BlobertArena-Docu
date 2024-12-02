@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_4f4331fd29d7b1a3d38cbca147b8d7ee" xml:lang="en-US">
+<title>LogicLayer/Dojo/Models Directory Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Models Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__a_m_m_a_blobert_8gen_8cs">AMMABlobert.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__arcade_blobert_8gen_8cs">ArcadeBlobert.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__attack_8gen_8cs">Attack.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__attack_result_8cs">AttackResult.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__available_attack_8gen_8cs">AvailableAttack.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combatant_info_8gen_8cs">CombatantInfo.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combatant_state_8gen_8cs">CombatantState.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combatant_stats_8gen_8cs">CombatantStats.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combat_state_8gen_8cs">CombatState.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__commitment_8gen_8cs">Commitment.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__has_attack_8cs">HasAttack.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__item_8gen_8cs">Item.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__item_map_8gen_8cs">ItemMap.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__last_mint_8gen_8cs">LastMint.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__planned_attack_8gen_8cs">PlannedAttack.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__pv_p_challenge_invite_8gen_8cs">PvPChallengeInvite.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__pv_p_challenge_response_8gen_8cs">PvPChallengeResponse.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__pv_p_challenge_score_8gen_8cs">PvPChallengeScore.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__pv_p_combatants_8gen_8cs">PvPCombatants.gen.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__random_seed_8gen_8cs">RandomSeed.gen.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

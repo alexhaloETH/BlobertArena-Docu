@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__combatant_state_8gen_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Models/CombatantState.gen.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Models/CombatantState.gen.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_t_stats">TStats</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_combatant_state">CombatantState</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_combatant_state_1_1_combatant_state_data_query">CombatantState.CombatantStateDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

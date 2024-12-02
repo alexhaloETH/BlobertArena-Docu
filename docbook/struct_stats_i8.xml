@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_stats_i8" xml:lang="en-US">
+<title>StatsI8 Struct Reference</title>
+<indexterm><primary>StatsI8</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>sbyte <link linkend="_struct_stats_i8_1a67523061d976bbbe9092d076e9236d18">strength</link></para>
+</listitem>
+            <listitem><para>sbyte <link linkend="_struct_stats_i8_1ab6b361586fd45a3c5954580fe901c17e">vitality</link></para>
+</listitem>
+            <listitem><para>sbyte <link linkend="_struct_stats_i8_1a4f0f8c3b179003632147a82d6d19de08">dexterity</link></para>
+</listitem>
+            <listitem><para>sbyte <link linkend="_struct_stats_i8_1a9eb89a76ab402afefeadf0e2ef1879cd">luck</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00056">56</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_stats_i8_1a4f0f8c3b179003632147a82d6d19de08"/><section>
+    <title>dexterity</title>
+<indexterm><primary>dexterity</primary><secondary>StatsI8</secondary></indexterm>
+<indexterm><primary>StatsI8</primary><secondary>dexterity</secondary></indexterm>
+<para><computeroutput>sbyte StatsI8.dexterity</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00060">60</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_stats_i8_1a9eb89a76ab402afefeadf0e2ef1879cd"/><section>
+    <title>luck</title>
+<indexterm><primary>luck</primary><secondary>StatsI8</secondary></indexterm>
+<indexterm><primary>StatsI8</primary><secondary>luck</secondary></indexterm>
+<para><computeroutput>sbyte StatsI8.luck</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00061">61</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_stats_i8_1a67523061d976bbbe9092d076e9236d18"/><section>
+    <title>strength</title>
+<indexterm><primary>strength</primary><secondary>StatsI8</secondary></indexterm>
+<indexterm><primary>StatsI8</primary><secondary>strength</secondary></indexterm>
+<para><computeroutput>sbyte StatsI8.strength</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00058">58</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_stats_i8_1ab6b361586fd45a3c5954580fe901c17e"/><section>
+    <title>vitality</title>
+<indexterm><primary>vitality</primary><secondary>StatsI8</secondary></indexterm>
+<indexterm><primary>StatsI8</primary><secondary>vitality</secondary></indexterm>
+<para><computeroutput>sbyte StatsI8.vitality</computeroutput></para><para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00059">59</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__attack_8gen_8cs">Attack.gen.cs</link></section>
+</section>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ui_reference_manager" xml:lang="en-US">
+<title>UiReferenceManager Class Reference</title>
+<indexterm><primary>UiReferenceManager</primary></indexterm>
+<para>Inheritance diagram for UiReferenceManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ui_reference_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_ui_reference_manager_1ae0737a66851615458ae55130ccbc71ba">IsDevelopmentWebsite</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_menu_manager">MenuManager</link> <link linkend="_class_ui_reference_manager_1adf2f75c2541f6274783359ad6620395c">menuManager</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_game_manager">GameManager</link> <link linkend="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142">gameManager</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_notification_component_manager">NotificationComponentManager</link> <link linkend="_class_ui_reference_manager_1ae78ac6d611d2129970a6f747a533c34a">notificationComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_ui_reference_manager">UiReferenceManager</link> <link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_ui_reference_manager_8cs_source_1l00005">5</link> of file <link linkend="_ui_reference_manager_8cs_source">uiReferenceManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ui_reference_manager_1ae0737a66851615458ae55130ccbc71ba"/><section>
+    <title>IsDevelopmentWebsite()</title>
+<indexterm><primary>IsDevelopmentWebsite</primary><secondary>UiReferenceManager</secondary></indexterm>
+<indexterm><primary>UiReferenceManager</primary><secondary>IsDevelopmentWebsite</secondary></indexterm>
+<para><computeroutput>static bool UiReferenceManager.IsDevelopmentWebsite ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_ui_reference_manager_8cs_source_1l00029">29</link> of file <link linkend="_ui_reference_manager_8cs_source">uiReferenceManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142"/><section>
+    <title>gameManager</title>
+<indexterm><primary>gameManager</primary><secondary>UiReferenceManager</secondary></indexterm>
+<indexterm><primary>UiReferenceManager</primary><secondary>gameManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_game_manager">GameManager</link> UiReferenceManager.gameManager</computeroutput></para><para>
+Definition at line <link linkend="_ui_reference_manager_8cs_source_1l00011">11</link> of file <link linkend="_ui_reference_manager_8cs_source">uiReferenceManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615"/><section>
+    <title>instance</title>
+<indexterm><primary>instance</primary><secondary>UiReferenceManager</secondary></indexterm>
+<indexterm><primary>UiReferenceManager</primary><secondary>instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_ui_reference_manager">UiReferenceManager</link> UiReferenceManager.instance<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_ui_reference_manager_8cs_source_1l00009">9</link> of file <link linkend="_ui_reference_manager_8cs_source">uiReferenceManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_reference_manager_1adf2f75c2541f6274783359ad6620395c"/><section>
+    <title>menuManager</title>
+<indexterm><primary>menuManager</primary><secondary>UiReferenceManager</secondary></indexterm>
+<indexterm><primary>UiReferenceManager</primary><secondary>menuManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_menu_manager">MenuManager</link> UiReferenceManager.menuManager</computeroutput></para><para>
+Definition at line <link linkend="_ui_reference_manager_8cs_source_1l00010">10</link> of file <link linkend="_ui_reference_manager_8cs_source">uiReferenceManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_reference_manager_1ae78ac6d611d2129970a6f747a533c34a"/><section>
+    <title>notificationComponent</title>
+<indexterm><primary>notificationComponent</primary><secondary>UiReferenceManager</secondary></indexterm>
+<indexterm><primary>UiReferenceManager</primary><secondary>notificationComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_notification_component_manager">NotificationComponentManager</link> UiReferenceManager.notificationComponent</computeroutput></para><para>
+Definition at line <link linkend="_ui_reference_manager_8cs_source_1l00015">15</link> of file <link linkend="_ui_reference_manager_8cs_source">uiReferenceManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Singletons/<link linkend="_ui_reference_manager_8cs">uiReferenceManager.cs</link></section>
+</section>

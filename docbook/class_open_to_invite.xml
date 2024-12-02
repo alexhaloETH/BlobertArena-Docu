@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_open_to_invite" xml:lang="en-US">
+<title>OpenToInvite Class Reference</title>
+<indexterm><primary>OpenToInvite</primary></indexterm>
+<para>Inheritance diagram for OpenToInvite:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_open_to_invite.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_open_to_invite_1ae737169a9d46ac6270a86d99183543be">GetIsOpenToInvite</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_open_to_invite_1a61efe631924dff8bfb9d2acf3e64c5a7">OnToggleClicked</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_open_to_invite_1a13ae43110cf7a45085850d4ac8d5f057">IsOpenToInvite</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__open_to_invite_8cs_source_1l00004">4</link> of file <link linkend="__open_to_invite_8cs_source">OpenToInvite.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_open_to_invite_1ae737169a9d46ac6270a86d99183543be"/><section>
+    <title>GetIsOpenToInvite()</title>
+<indexterm><primary>GetIsOpenToInvite</primary><secondary>OpenToInvite</secondary></indexterm>
+<indexterm><primary>OpenToInvite</primary><secondary>GetIsOpenToInvite</secondary></indexterm>
+<para><computeroutput>bool OpenToInvite.GetIsOpenToInvite ( )</computeroutput></para></section>
+<anchor xml:id="_class_open_to_invite_1a13ae43110cf7a45085850d4ac8d5f057"/><section>
+    <title>IsOpenToInvite()</title>
+<indexterm><primary>IsOpenToInvite</primary><secondary>OpenToInvite</secondary></indexterm>
+<indexterm><primary>OpenToInvite</primary><secondary>IsOpenToInvite</secondary></indexterm>
+<para><computeroutput>bool OpenToInvite.IsOpenToInvite ( )</computeroutput></para></section>
+<anchor xml:id="_class_open_to_invite_1a61efe631924dff8bfb9d2acf3e64c5a7"/><section>
+    <title>OnToggleClicked()</title>
+<indexterm><primary>OnToggleClicked</primary><secondary>OpenToInvite</secondary></indexterm>
+<indexterm><primary>OpenToInvite</primary><secondary>OnToggleClicked</secondary></indexterm>
+<para><computeroutput>void OpenToInvite.OnToggleClicked ( )</computeroutput></para><para>
+Definition at line <link linkend="__open_to_invite_8cs_source_1l00036">36</link> of file <link linkend="__open_to_invite_8cs_source">OpenToInvite.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__open_to_invite_8cs">OpenToInvite.cs</link></section>
+</section>

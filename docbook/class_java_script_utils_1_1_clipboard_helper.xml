@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_java_script_utils_1_1_clipboard_helper" xml:lang="en-US">
+<title>JavaScriptUtils.ClipboardHelper Class Reference</title>
+<indexterm><primary>JavaScriptUtils.ClipboardHelper</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_java_script_utils_1_1_clipboard_helper_1a114215900b4553f48555e3a8ecc5967c">Callback</link> (string result)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static TaskCompletionSource&lt; string &gt; <link linkend="_class_java_script_utils_1_1_clipboard_helper_1a2ccc73cc43b399b0055e1f4ff4707ad2">Tcs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__java_script_utils_8cs_source_1l00091">91</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_java_script_utils_1_1_clipboard_helper_1a114215900b4553f48555e3a8ecc5967c"/><section>
+    <title>Callback()</title>
+<indexterm><primary>Callback</primary><secondary>JavaScriptUtils.ClipboardHelper</secondary></indexterm>
+<indexterm><primary>JavaScriptUtils.ClipboardHelper</primary><secondary>Callback</secondary></indexterm>
+<para><computeroutput>static void JavaScriptUtils.ClipboardHelper.Callback (string result)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__java_script_utils_8cs_source_1l00097">97</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_java_script_utils_1_1_clipboard_helper_1a2ccc73cc43b399b0055e1f4ff4707ad2"/><section>
+    <title>Tcs</title>
+<indexterm><primary>Tcs</primary><secondary>JavaScriptUtils.ClipboardHelper</secondary></indexterm>
+<indexterm><primary>JavaScriptUtils.ClipboardHelper</primary><secondary>Tcs</secondary></indexterm>
+<para><computeroutput>TaskCompletionSource&lt;string&gt; JavaScriptUtils.ClipboardHelper.Tcs<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__java_script_utils_8cs_source_1l00093">93</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/<link linkend="__java_script_utils_8cs">JavaScriptUtils.cs</link></section>
+</section>

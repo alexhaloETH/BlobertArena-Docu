@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__switch_component_8cs_source" xml:lang="en-US">
+<title>SwitchComponent.cs</title>
+<indexterm><primary>UI/Components/Button Types/SwitchComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__switch_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__switch_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Events;
+<anchor xml:id="__switch_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__switch_component_8cs_source_1l00004"/>00004 
+<anchor xml:id="__switch_component_8cs_source_1l00005"/><link linkend="_class_switch_component">00005</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_switch_component">SwitchComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__switch_component_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__switch_component_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;SwitchState
+<anchor xml:id="__switch_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;State1,
+<anchor xml:id="__switch_component_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;State2,
+<anchor xml:id="__switch_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00012"/>00012 
+<anchor xml:id="__switch_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;targetImage;
+<anchor xml:id="__switch_component_8cs_source_1l00014"/>00014 
+<anchor xml:id="__switch_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__switch_component_8cs_source_1l00016"/><link linkend="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4">defaultImageState1</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00017"/>00017 
+<anchor xml:id="__switch_component_8cs_source_1l00018"/><link linkend="_class_switch_component_1a57df6e2af4cf903031206167d9e7cf27">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_switch_component_1a57df6e2af4cf903031206167d9e7cf27">clickedImageState1</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00019"/>00019 
+<anchor xml:id="__switch_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__switch_component_8cs_source_1l00021"/><link linkend="_class_switch_component_1a8921a5f8779c7b5411a589bbb52d4061">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_switch_component_1a8921a5f8779c7b5411a589bbb52d4061">defaultImageState2</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00022"/>00022 
+<anchor xml:id="__switch_component_8cs_source_1l00023"/><link linkend="_class_switch_component_1a2e902e8e2def3c7b067a84ca54c8bdd9">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Sprite&#32;<link linkend="_class_switch_component_1a2e902e8e2def3c7b067a84ca54c8bdd9">clickedImageState2</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00024"/>00024 
+<anchor xml:id="__switch_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__switch_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;SwitchState&#32;currentState&#32;=&#32;SwitchState.State1;
+<anchor xml:id="__switch_component_8cs_source_1l00027"/>00027 
+<anchor xml:id="__switch_component_8cs_source_1l00028"/><link linkend="_class_switch_component_1a2dc5ef061bf8af08d64ad53b82cdf751">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;UnityEvent&#32;<link linkend="_class_switch_component_1a2dc5ef061bf8af08d64ad53b82cdf751">onState1Click</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00029"/><link linkend="_class_switch_component_1ad2ffebcd12475f6fcaf0f21fb5b6f932">00029</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;UnityEvent&#32;<link linkend="_class_switch_component_1ad2ffebcd12475f6fcaf0f21fb5b6f932">onState2Click</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00030"/>00030 
+<anchor xml:id="__switch_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__switch_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(targetImage&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__switch_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage&#32;=&#32;GetComponent&lt;Image&gt;();
+<anchor xml:id="__switch_component_8cs_source_1l00035"/>00035 
+<anchor xml:id="__switch_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4">defaultImageState1</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00038"/>00038 
+<anchor xml:id="__switch_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__switch_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_switch_component_1abb4d9cb64b3642161d239ebb27a2c5f4">OnSkinChange</link>();
+<anchor xml:id="__switch_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00043"/>00043 
+<anchor xml:id="__switch_component_8cs_source_1l00044"/><link linkend="_class_switch_component_1a24bbd39bdff8e5c883b3586b7ddf4141">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_switch_component_1a24bbd39bdff8e5c883b3586b7ddf4141">OnClickDown</link>()
+<anchor xml:id="__switch_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(currentState)
+<anchor xml:id="__switch_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;SwitchState.State1:
+<anchor xml:id="__switch_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a57df6e2af4cf903031206167d9e7cf27">clickedImageState1</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__switch_component_8cs_source_1l00051"/>00051 
+<anchor xml:id="__switch_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;SwitchState.State2:
+<anchor xml:id="__switch_component_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a2e902e8e2def3c7b067a84ca54c8bdd9">clickedImageState2</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__switch_component_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00057"/>00057 
+<anchor xml:id="__switch_component_8cs_source_1l00058"/><link linkend="_class_switch_component_1af6af65648c0befa5b7b183080e608dab">00058</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_switch_component_1af6af65648c0befa5b7b183080e608dab">OnClickUp</link>()
+<anchor xml:id="__switch_component_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(currentState)
+<anchor xml:id="__switch_component_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;SwitchState.State1:
+<anchor xml:id="__switch_component_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a8921a5f8779c7b5411a589bbb52d4061">defaultImageState2</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;SwitchState.State2;
+<anchor xml:id="__switch_component_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_switch_component_1a2dc5ef061bf8af08d64ad53b82cdf751">onState1Click</link>.Invoke();
+<anchor xml:id="__switch_component_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__switch_component_8cs_source_1l00067"/>00067 
+<anchor xml:id="__switch_component_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;SwitchState.State2:
+<anchor xml:id="__switch_component_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4">defaultImageState1</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;SwitchState.State1;
+<anchor xml:id="__switch_component_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_switch_component_1ad2ffebcd12475f6fcaf0f21fb5b6f932">onState2Click</link>.Invoke();
+<anchor xml:id="__switch_component_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__switch_component_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00075"/>00075 
+<anchor xml:id="__switch_component_8cs_source_1l00076"/><link linkend="_class_switch_component_1abb4d9cb64b3642161d239ebb27a2c5f4">00076</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_switch_component_1abb4d9cb64b3642161d239ebb27a2c5f4">OnSkinChange</link>()
+<anchor xml:id="__switch_component_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(currentState)
+<anchor xml:id="__switch_component_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__switch_component_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;SwitchState.State1:
+<anchor xml:id="__switch_component_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4">defaultImageState1</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__switch_component_8cs_source_1l00083"/>00083 
+<anchor xml:id="__switch_component_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;SwitchState.State2:
+<anchor xml:id="__switch_component_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetImage.sprite&#32;=&#32;<link linkend="_class_switch_component_1a8921a5f8779c7b5411a589bbb52d4061">defaultImageState2</link>;
+<anchor xml:id="__switch_component_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__switch_component_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__switch_component_8cs_source_1l00089"/>00089 }
+</programlisting></section>

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_chatting_pop_up_component" xml:lang="en-US">
+<title>ChattingPopUpComponent Class Reference</title>
+<indexterm><primary>ChattingPopUpComponent</primary></indexterm>
+<para>Inheritance diagram for ChattingPopUpComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_chatting_pop_up_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_chatting_pop_up_component_1ac0dad3346d10a322972a8701a5584c13">ShowPopup</link> (string message)</para>
+
+<para>Shows the popup with the specified message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_chatting_pop_up_component_1a259f09ae49cda75691187a8563d14a67">ShowPopup</link> (Texture texture)</para>
+
+<para>Shows the popup with the specified image. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_chatting_pop_up_component_1a3d74d41902aa7b2e40917e92b646f420">HidePopup</link> ()</para>
+
+<para>Hides the popup immediately. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_chatting_pop_up_component_1a8a5d63c03ea52cf5839901f247de980d">StartAutoGenerateMode</link> ()</para>
+
+<para>Starts the AutoGenerate mode, which will display random sentences or images at random intervals. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_chatting_pop_up_component_1ace8c876671123babbea21171077f959c">StopAutoGenerateMode</link> ()</para>
+
+<para>Stops the AutoGenerate mode. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_chatting_pop_up_component_1a218528a4f1eb1c672603415b7f9a5016">IsShowing</link> = false<computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_chatting_pop_up_component_1ac09ffd88aad29bb0b723f93a85db6c00">AutoGenerateMode</link> = false<computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00006">6</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_chatting_pop_up_component_1a3d74d41902aa7b2e40917e92b646f420"/><section>
+    <title>HidePopup()</title>
+<indexterm><primary>HidePopup</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>HidePopup</secondary></indexterm>
+<para><computeroutput>void ChattingPopUpComponent.HidePopup ( )</computeroutput></para><para>
+
+<para>Hides the popup immediately. </para>
+</para>
+<para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00061">61</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_chatting_pop_up_component_1ac0dad3346d10a322972a8701a5584c13"/><section>
+    <title>ShowPopup()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ShowPopup</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>ShowPopup</secondary></indexterm>
+<para><computeroutput>void ChattingPopUpComponent.ShowPopup (string message)</computeroutput></para><para>
+
+<para>Shows the popup with the specified message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>message</entry><entry>
+<para>The message to display in the popup.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00030">30</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_chatting_pop_up_component_1a259f09ae49cda75691187a8563d14a67"/><section>
+    <title>ShowPopup()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ShowPopup</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>ShowPopup</secondary></indexterm>
+<para><computeroutput>void ChattingPopUpComponent.ShowPopup (Texture texture)</computeroutput></para><para>
+
+<para>Shows the popup with the specified image. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>texture</entry><entry>
+<para>The texture to display in the popup.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00046">46</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_chatting_pop_up_component_1a8a5d63c03ea52cf5839901f247de980d"/><section>
+    <title>StartAutoGenerateMode()</title>
+<indexterm><primary>StartAutoGenerateMode</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>StartAutoGenerateMode</secondary></indexterm>
+<para><computeroutput>void ChattingPopUpComponent.StartAutoGenerateMode ( )</computeroutput></para><para>
+
+<para>Starts the AutoGenerate mode, which will display random sentences or images at random intervals. </para>
+</para>
+<para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00070">70</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_chatting_pop_up_component_1ace8c876671123babbea21171077f959c"/><section>
+    <title>StopAutoGenerateMode()</title>
+<indexterm><primary>StopAutoGenerateMode</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>StopAutoGenerateMode</secondary></indexterm>
+<para><computeroutput>void ChattingPopUpComponent.StopAutoGenerateMode ( )</computeroutput></para><para>
+
+<para>Stops the AutoGenerate mode. </para>
+</para>
+<para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00081">81</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_chatting_pop_up_component_1ac09ffd88aad29bb0b723f93a85db6c00"/><section>
+    <title>AutoGenerateMode</title>
+<indexterm><primary>AutoGenerateMode</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>AutoGenerateMode</secondary></indexterm>
+<para><computeroutput>bool ChattingPopUpComponent.AutoGenerateMode = false<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00013">13</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_chatting_pop_up_component_1a218528a4f1eb1c672603415b7f9a5016"/><section>
+    <title>IsShowing</title>
+<indexterm><primary>IsShowing</primary><secondary>ChattingPopUpComponent</secondary></indexterm>
+<indexterm><primary>ChattingPopUpComponent</primary><secondary>IsShowing</secondary></indexterm>
+<para><computeroutput>bool ChattingPopUpComponent.IsShowing = false<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__chatting_pop_up_component_8cs_source_1l00012">12</link> of file <link linkend="__chatting_pop_up_component_8cs_source">ChattingPopUpComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__chatting_pop_up_component_8cs">ChattingPopUpComponent.cs</link></section>
+</section>

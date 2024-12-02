@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_seed" xml:lang="en-US">
+<title>Seed Struct Reference</title>
+<indexterm><primary>Seed</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>byte <link linkend="_struct_seed_1abf00f0ee5100d4b947090578b168b822">background</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_struct_seed_1a60864720f9f7e2d398b143f01c223546">armour</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_struct_seed_1a429aea395f6b9e8fcecddf7380988996">jewelry</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_struct_seed_1a0ee4faeb36a89463b0f8f5871361b963">mask</link></para>
+</listitem>
+            <listitem><para>byte <link linkend="_struct_seed_1a7118d8cd5f7038da0ada9201fff5d47b">weapon</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00013">13</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_seed_1a60864720f9f7e2d398b143f01c223546"/><section>
+    <title>armour</title>
+<indexterm><primary>armour</primary><secondary>Seed</secondary></indexterm>
+<indexterm><primary>Seed</primary><secondary>armour</secondary></indexterm>
+<para><computeroutput>byte Seed.armour</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00016">16</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_seed_1abf00f0ee5100d4b947090578b168b822"/><section>
+    <title>background</title>
+<indexterm><primary>background</primary><secondary>Seed</secondary></indexterm>
+<indexterm><primary>Seed</primary><secondary>background</secondary></indexterm>
+<para><computeroutput>byte Seed.background</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00015">15</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_seed_1a429aea395f6b9e8fcecddf7380988996"/><section>
+    <title>jewelry</title>
+<indexterm><primary>jewelry</primary><secondary>Seed</secondary></indexterm>
+<indexterm><primary>Seed</primary><secondary>jewelry</secondary></indexterm>
+<para><computeroutput>byte Seed.jewelry</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00017">17</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_seed_1a0ee4faeb36a89463b0f8f5871361b963"/><section>
+    <title>mask</title>
+<indexterm><primary>mask</primary><secondary>Seed</secondary></indexterm>
+<indexterm><primary>Seed</primary><secondary>mask</secondary></indexterm>
+<para><computeroutput>byte Seed.mask</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00018">18</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_seed_1a7118d8cd5f7038da0ada9201fff5d47b"/><section>
+    <title>weapon</title>
+<indexterm><primary>weapon</primary><secondary>Seed</secondary></indexterm>
+<indexterm><primary>Seed</primary><secondary>weapon</secondary></indexterm>
+<para><computeroutput>byte Seed.weapon</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_8gen_8cs_source_1l00019">19</link> of file <link linkend="__arcade_blobert_8gen_8cs_source">ArcadeBlobert.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__arcade_blobert_8gen_8cs">ArcadeBlobert.gen.cs</link></section>
+</section>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_token_trait_data" xml:lang="en-US">
+<title>LogicLayer.TokenTraitData Class Reference</title>
+<indexterm><primary>LogicLayer.TokenTraitData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_token_trait_data_1ae44da95d6eae672c3682df4c13cace9c">option</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_seed_data">SeedData</link> <link linkend="_class_logic_layer_1_1_token_trait_data_1a96a59909ff6356268e473b9464a23fa3">Regular</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_token_trait_data_1a7bf9925a1abbc18d2b20239f59cd140e">Custom</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00099">99</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_token_trait_data_1a7bf9925a1abbc18d2b20239f59cd140e"/><section>
+    <title>Custom</title>
+<indexterm><primary>Custom</primary><secondary>LogicLayer.TokenTraitData</secondary></indexterm>
+<indexterm><primary>LogicLayer.TokenTraitData</primary><secondary>Custom</secondary></indexterm>
+<para><computeroutput>string LogicLayer.TokenTraitData.Custom<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00103">103</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_token_trait_data_1ae44da95d6eae672c3682df4c13cace9c"/><section>
+    <title>option</title>
+<indexterm><primary>option</primary><secondary>LogicLayer.TokenTraitData</secondary></indexterm>
+<indexterm><primary>LogicLayer.TokenTraitData</primary><secondary>option</secondary></indexterm>
+<para><computeroutput>string LogicLayer.TokenTraitData.option<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00101">101</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_token_trait_data_1a96a59909ff6356268e473b9464a23fa3"/><section>
+    <title>Regular</title>
+<indexterm><primary>Regular</primary><secondary>LogicLayer.TokenTraitData</secondary></indexterm>
+<indexterm><primary>LogicLayer.TokenTraitData</primary><secondary>Regular</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_seed_data">SeedData</link> LogicLayer.TokenTraitData.Regular<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00102">102</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

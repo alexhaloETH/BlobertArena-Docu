@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_tournament_viewer_element_8cs_source" xml:lang="en-US">
+<title>PlayerTournamentViewerElement.cs</title>
+<indexterm><primary>UI/Elements/PlayerTournamentViewerElement.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00003"/>00003 
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00004"/><link linkend="_class_player_tournament_viewer_element">00004</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_tournament_viewer_element">PlayerTournamentViewerElement</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<emphasis role="comment">//[SerializeField]&#32;private&#32;CharacterTraitVisualizerComponent&#32;_blobertTraitVisualizer;</emphasis>
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_placement;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00008"/>00008 
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_blobId;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_character_stats_visualizer_component">CharacterStatsVisualizerComponent</link>&#32;_blobertValuesVisualizer;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_statusOfPlayerText;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_roundText;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_streakWinsText;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00014"/>00014 
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_tournament_details_page_behaviour">TournamentDetailsPageBehaviour</link>&#32;_parentPage;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00016"/>00016 
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00017"/><link linkend="_class_player_tournament_viewer_element_1abbbdd766f6b233acd5cf2744176ed05c">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_tournament_viewer_element_1abbbdd766f6b233acd5cf2744176ed05c">Initilize</link>(<link linkend="_class_tournament_details_page_behaviour">TournamentDetailsPageBehaviour</link>&#32;parentPage)
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_parentPage&#32;=&#32;parentPage;
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_tournament_viewer_element_8cs_source_1l00021"/>00021 }
+</programlisting></section>

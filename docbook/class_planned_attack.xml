@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_planned_attack" xml:lang="en-US">
+<title>PlannedAttack Class Reference</title>
+<indexterm><primary>PlannedAttack</primary></indexterm>
+<para>Inheritance diagram for PlannedAttack:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_planned_attack.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_planned_attack_1_1_planned_attack_data_query">PlannedAttackDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_planned_attack_1ab2b183be6e0abe65bb647ec03f38c64b">OnUpdate</link> (Model model)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_planned_attack_1ad62441303b269bd9e7b8afdf4695002b">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_planned_attack_1aa6327ebd2aa6458ec0205b9a91fc5de1">id</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_planned_attack_1aa6327ebd2aa6458ec0205b9a91fc5de1">id</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_planned_attack_1a01fc54b96c605744e94f152b32e07447">attack</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_planned_attack_1a62bfca15188a0b077143495a3d6a6f47">target</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_planned_attack_1a7b2d9c77a533ffd5e865254607789aa7">GraphQlQueryFull</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_planned_attack_1a0052301de898d887558f29298af0fd5f">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_planned_attack_1a7f944a3faf267e9374738f49c3c1e1a9">GraphQlHeader</link> = &quot;blobArenaPlannedAttackModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>Action&lt; <link linkend="_class_planned_attack">PlannedAttack</link> &gt; <link linkend="_class_planned_attack_1a481fd618e57881ee95aaa2c5952fe200">OnUpdatePlannedAttack</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00009">9</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_planned_attack_1ad62441303b269bd9e7b8afdf4695002b"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> PlannedAttack.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_planned_attack_1ab2b183be6e0abe65bb647ec03f38c64b"/><section>
+    <title>OnUpdate()</title>
+<indexterm><primary>OnUpdate</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>OnUpdate</secondary></indexterm>
+<para><computeroutput>override void PlannedAttack.OnUpdate (Model model)</computeroutput></para><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00027">27</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_planned_attack_1a01fc54b96c605744e94f152b32e07447"/><section>
+    <title>attack</title>
+<indexterm><primary>attack</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>attack</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PlannedAttack.attack</computeroutput></para><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00015">15</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_planned_attack_1a7f944a3faf267e9374738f49c3c1e1a9"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string PlannedAttack.GraphQlHeader = &quot;blobArenaPlannedAttackModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00066">66</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_planned_attack_1a7b2d9c77a533ffd5e865254607789aa7"/><section>
+    <title>GraphQlQueryFull</title>
+<indexterm><primary>GraphQlQueryFull</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>GraphQlQueryFull</secondary></indexterm>
+<para><computeroutput>readonly string PlannedAttack.GraphQlQueryFull<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;blobArenaPlannedAttackModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PlannedAttack&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;target</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalCount</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00037">37</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_planned_attack_1a0052301de898d887558f29298af0fd5f"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string PlannedAttack.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PlannedAttack&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;target</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00058">58</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_planned_attack_1aa6327ebd2aa6458ec0205b9a91fc5de1"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>id</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PlannedAttack.id</computeroutput></para><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00012">12</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_planned_attack_1a62bfca15188a0b077143495a3d6a6f47"/><section>
+    <title>target</title>
+<indexterm><primary>target</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>target</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PlannedAttack.target</computeroutput></para><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00018">18</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_planned_attack_1a481fd618e57881ee95aaa2c5952fe200"/><section>
+    <title>OnUpdatePlannedAttack</title>
+<indexterm><primary>OnUpdatePlannedAttack</primary><secondary>PlannedAttack</secondary></indexterm>
+<indexterm><primary>PlannedAttack</primary><secondary>OnUpdatePlannedAttack</secondary></indexterm>
+<para><computeroutput>Action&lt;<link linkend="_class_planned_attack">PlannedAttack</link>&gt; PlannedAttack.OnUpdatePlannedAttack</computeroutput></para><para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00020">20</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__planned_attack_8gen_8cs">PlannedAttack.gen.cs</link></section>
+</section>

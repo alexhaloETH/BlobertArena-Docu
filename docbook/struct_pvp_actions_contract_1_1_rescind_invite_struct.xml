@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_actions_contract_1_1_rescind_invite_struct" xml:lang="en-US">
+<title>PvpActionsContract.RescindInviteStruct Struct Reference</title>
+<indexterm><primary>PvpActionsContract.RescindInviteStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1ab4033a1264701a05db08cb70e91237af">RescindInviteStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1ad2fd064c0655a507959cf4f3eaed2d99">challengeId</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1aceed20ec5696272d3d7cd33ad137acf7">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1ad2fd064c0655a507959cf4f3eaed2d99">challengeId</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1aceed20ec5696272d3d7cd33ad137acf7">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00115">115</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1ab4033a1264701a05db08cb70e91237af"/><section>
+    <title>RescindInviteStruct()</title>
+<indexterm><primary>RescindInviteStruct</primary><secondary>PvpActionsContract.RescindInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RescindInviteStruct</primary><secondary>RescindInviteStruct</secondary></indexterm>
+<para><computeroutput>PvpActionsContract.RescindInviteStruct.RescindInviteStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> challengeId, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00120">120</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1ad2fd064c0655a507959cf4f3eaed2d99"/><section>
+    <title>challengeId</title>
+<indexterm><primary>challengeId</primary><secondary>PvpActionsContract.RescindInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RescindInviteStruct</primary><secondary>challengeId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.RescindInviteStruct.challengeId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00117">117</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_rescind_invite_struct_1aceed20ec5696272d3d7cd33ad137acf7"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpActionsContract.RescindInviteStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.RescindInviteStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpActionsContract.RescindInviteStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00118">118</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_actions_contract_8cs">PvpActionsContract.cs</link></section>
+</section>

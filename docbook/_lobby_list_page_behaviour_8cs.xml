@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__lobby_list_page_behaviour_8cs" xml:lang="en-US">
+<title>UI/Pages/LobbyView/LobbyListPageBehaviour.cs File Reference</title>
+<indexterm><primary>UI/Pages/LobbyView/LobbyListPageBehaviour.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link></para>
+
+<para>This should list all of the lobbies in their current states also should be able to update in real time. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

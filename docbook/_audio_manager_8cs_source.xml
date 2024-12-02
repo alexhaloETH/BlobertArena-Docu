@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__audio_manager_8cs_source" xml:lang="en-US">
+<title>AudioManager.cs</title>
+<indexterm><primary>Managers/Singletons/AudioManager.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__audio_manager_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__audio_manager_8cs_source_1l00002"/>00002 
+<anchor xml:id="__audio_manager_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__audio_manager_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__audio_manager_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Audio;
+<anchor xml:id="__audio_manager_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Serialization;
+<anchor xml:id="__audio_manager_8cs_source_1l00009"/>00009 
+<anchor xml:id="__audio_manager_8cs_source_1l00010"/><link linkend="_namespace_audio_effects">00010</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_audio_effects">AudioEffects</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00011"/>00011 {
+<anchor xml:id="__audio_manager_8cs_source_1l00012"/><link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">Music</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfae20b43683ca50e429f54c17e33365804">BA_MenuPreRoll</link>&#32;=&#32;0,
+<anchor xml:id="__audio_manager_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfaa1fdef6b35f3795206fdc55933ede239">BA_MenuLoop</link>&#32;=&#32;1,
+<anchor xml:id="__audio_manager_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfa498b3ff676cc1cfbc30cb572d5de2da4">AMMA_MenuPreRoll</link>&#32;=&#32;2,
+<anchor xml:id="__audio_manager_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfa5006dabb8767003c15663532bae77375">AMMA_MenuLoop</link>&#32;=&#32;3,
+<anchor xml:id="__audio_manager_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfa356cefe47eeb6b82787d60c988fc65a4">ThemeSwitch</link>&#32;=&#32;4,
+<anchor xml:id="__audio_manager_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfabc08f05e6af9f4a799648465fe268c20">CatchThemAll</link>&#32;=&#32;5,
+<anchor xml:id="__audio_manager_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddfab50339a10e1de285ac99d4c3990b8693">NONE</link>&#32;=&#32;6
+<anchor xml:id="__audio_manager_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00023"/><link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">Effects</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a3a87e91f9f32928086b2104e639ab79f">ButtonSwap</link>&#32;=&#32;0,
+<anchor xml:id="__audio_manager_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a3c5e288fa847191396575098c8bbcfed">ButtonClick</link>&#32;=&#32;1,
+<anchor xml:id="__audio_manager_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168ae9bb76209c30bf6ed77529c2d4c6d441">CrowdBoo</link>&#32;=&#32;2,
+<anchor xml:id="__audio_manager_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a73e2f353b9bb0f7c0744dd888fc3df6d">CrowdHappy</link>&#32;=&#32;3,
+<anchor xml:id="__audio_manager_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a4345dbf48e7143351370c639bae78fbc">EndGong</link>&#32;=&#32;4,
+<anchor xml:id="__audio_manager_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168aa4e56a483788fe3961097de3df845adc">OpponentDefeat</link>&#32;=&#32;5,
+<anchor xml:id="__audio_manager_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a5118a233e01640699d78dbc50acfdc2a">StartBell</link>&#32;=&#32;6,
+<anchor xml:id="__audio_manager_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a96d008db67fc0b5551a926842bbb6a71">Notification</link>&#32;=&#32;7,
+<anchor xml:id="__audio_manager_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a1f5c647d9066bc9e350b70aa2d16aec4">Victory</link>&#32;=&#32;8,
+<anchor xml:id="__audio_manager_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168a570e9d24849e2161b5a969599fb03446">Defeat</link>&#32;=&#32;9
+<anchor xml:id="__audio_manager_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00036"/>00036 
+<anchor xml:id="__audio_manager_8cs_source_1l00037"/><link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">00037</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b">Vocals</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1bac3ea68d2c04f695448fb23c606afd666">StartFight</link>&#32;=&#32;0,
+<anchor xml:id="__audio_manager_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1ba4201701dc07015afdab9afa1b3d60dc8">FighterOne</link>&#32;=&#32;1,
+<anchor xml:id="__audio_manager_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1badccab139bc90253fa41414d4c60c7e89">FighterTwo</link>&#32;=&#32;2
+<anchor xml:id="__audio_manager_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00043"/>00043 
+<anchor xml:id="__audio_manager_8cs_source_1l00044"/><link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770ee">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770ee">CombatCommon</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770eea62c8a2522be2668b5452181d07dd8964">Hurt</link>&#32;=&#32;0,
+<anchor xml:id="__audio_manager_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770eea90b6cb59eae89a7fd77271caec9b33bc">SwordSlash</link>&#32;=&#32;1,
+<anchor xml:id="__audio_manager_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770eea39a6def3b04240c5c14d938c9034791f">ShieldPunch</link>&#32;=&#32;2
+<anchor xml:id="__audio_manager_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00050"/>00050 
+<anchor xml:id="__audio_manager_8cs_source_1l00051"/><link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">00051</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171">CombatSpecial</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a3fa766b8e25ab50825b525cd906807bc">Harrigan_AxeAttack</link>&#32;=&#32;0,
+<anchor xml:id="__audio_manager_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171afa53b4eeb9094bba2d7ef8e7f1a04cb5">Harrigan_Grind</link>&#32;=&#32;1,
+<anchor xml:id="__audio_manager_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171aae043708a2ee2ed47613c55b5b00fe27">Harrigan_ShieldPunch</link>&#32;=&#32;2,
+<anchor xml:id="__audio_manager_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a98d3a558d2a697c12d6e1ab1a03d9583">Harrigan_SpecialMove</link>&#32;=&#32;3,
+<anchor xml:id="__audio_manager_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a800007a3b9cc841221a4ef9bf1a22a09">Jones_LowKick</link>&#32;=&#32;4,
+<anchor xml:id="__audio_manager_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a68f1b935289de5db12b9421b27571690">Jones_SpecialMove</link>&#32;=&#32;5,
+<anchor xml:id="__audio_manager_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a54fa0ea56fbe9b9dab890bb29a489213">Jones_SwordSlash</link>&#32;=&#32;6,
+<anchor xml:id="__audio_manager_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171adf748c767603d8e7f9ca0ada22716446">Penedo_SpecialMove</link>&#32;=&#32;7,
+<anchor xml:id="__audio_manager_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a56bcf32c1e771c16b17b9acb49e988cb">Skinner_Grapple</link>&#32;=&#32;8,
+<anchor xml:id="__audio_manager_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a0b158faaf4c645bfa820746f2c14e986">Skinner_SpecialAttack</link>&#32;=&#32;9,
+<anchor xml:id="__audio_manager_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a6b73d382c83a2fe2e77ba4d26db156be">Studencki_SpecialAttack</link>&#32;=&#32;10,
+<anchor xml:id="__audio_manager_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a6fe544d1b8114eb7ae749f278a0b6d32">Studencki_SwordDance</link>&#32;=&#32;11,
+<anchor xml:id="__audio_manager_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a5aec5105785db2be0afa14ff9d69d861">Winter_Grind</link>&#32;=&#32;12,
+<anchor xml:id="__audio_manager_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171aaafc0046cb22e9cc4abc90dd173f9dde">Winter_GroundAndPound</link>&#32;=&#32;13,
+<anchor xml:id="__audio_manager_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171a388db80eb3aebd2e13a64813a608bcd7">Winter_SpecialAttack</link>&#32;=&#32;14
+<anchor xml:id="__audio_manager_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00069"/>00069 
+<anchor xml:id="__audio_manager_8cs_source_1l00070"/><link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">00070</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89">CombatBlobArena</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a66e9440b3fee40e455db1ad2661784a9">BinaryBash</link>&#32;=&#32;0,
+<anchor xml:id="__audio_manager_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89afd62604f27cf19f9f7a777553750fc8c">Algorithmic</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a467901d61d5803f8d5f0843eafd7df81">ArgentCrush</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a2adeca85ec90e8efee433e70908ccf81">BalloonBombardment</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aeedbec3bcc1eb901c435980983f28ae3">InflatableExplosion</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a602c49fac420fcdf49d987aea787e4df">FuryLash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad8152c1d426a26e3c38e01edc30aa58d">BannerJavelin</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad0cbfc7315d08e1384230ca234541bb0">BlindingRadiance</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a5d30ed28e7a3324b91dc8867eddedceb">KeenEye</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89acabe276d048ad6cf21b67cd20ea6d09a">TrueSight</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a823435ee926011a86c5913687a2c4b04">WisdomEdge</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a66720a7f014cba173f173331891fffa4">DivineInsight</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89acb06e1152c80649fc4591e0a2d2928a3">ColossalImpact</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a8a9ba4c116d3905d681edb45b2c45ad5">GiantHammer</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a706d63f0ea6cf389ac7699403864a85b">PerfectStrike</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a007b9550c302ec5b44450fd31a41fcaa">ForcefulBlow</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a5710f331d4173562032d6cb5c8e3c028">UltimateBurn</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a650d6d8fe4cebadab8e75344001d1f55">ShieldingBash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a7cd4e5980fba92b71a71942137a6184c">GuardianBlow</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab5ce3085def216d36c50650aa2078264">SavageBlow</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a0cd41d4dd0405570076b530df5296bc2">MirrorSmash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a59d6a2928f9a71e6532548b52d560497">MasterfulBlow</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad38198b4a77d560c8f6b84da140a7da2">DeceptiveSlice</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a997cddceb37a4683e376fa6e8c473c2c">SwiftSlice</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a88490319b11d0128d54f357914bdc787">GargantuanBlow</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a98d2d73ab60ba7f332632d137b64df6d">SkateSlam</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a11d54aac3b44db62f7f4fad2ee939a27">KickFlip</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a114969aa2bc3d8c53efc140095d98fa0">CorrosiveHit</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aab0967940a93bff96e4f99cb156b501b">AcidicStrike</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a8595da8b2ba2910a1046ac07e861436b">BladeSwipe</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a549812c0738f611627d5fdd8ee1fc8f8">SaberStorm</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89afe9f6e4315515cb5fc14e5fe08072c05">BriqBash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89afd58eda83c4047691a2c124df7cb5578">BriqAvalanche</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab4e3745d1e0455a28c6d67a0f576b51b">CalculatedCrush</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aaecc99c011f99df3072efc0a7c8b7212">QuantumSingularity</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab5441440a200ebf41309c3a50d0d8acf">BulletBlast</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a4e1d43a511ea541c3a82c8a97a7c2b34">BulletBarrage</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a5d8784b9cdb9a7f370c4eb53bed4c302">DesperationToss</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a072ca26e7213d801c261d2428d1654bf">PhantomPulse</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a1cc157892c97cd7984bb8f49a9508463">PhantomBlast</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a4f6258eeaad7676db926ba79daf1af5d">ArcaneAssault</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab4eaf6bcb5f84170be6ecb9980cf94a6">DarkDevastation</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a057461ec5f431dec22947ea95c5ef138">Spellstorm</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89aed51bb870c11298b8ecb5381e8b16ae5">GrugCrush</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89af69a43286262e739959718abf56cd7c2">GrugSmash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a56acffe467ae031844242a1df44fd688">EarthquakeHammer</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a4aa447104c5fec3bfddc5e90c683c86c">SaberSlash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a6f98c48ad5065d37f434fe2b6c74d29e">SithStrike</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a0f7bf842aa6ebdbc10b03c132f113f36">DragonFury</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a504b72a68048e897e37920a3936ea258">ChillStrike</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a396db3786d40c20002a5998f31a8eb5f">IceColdCrush</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a46ecd9d4641a7ed37800d383ad6df8c5">DarkSlash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a922909332a41f17665f06e2eb7a418af">ForceSurge</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ab8c2fa556dbca8dc39bab4f7d823d177">StoolToss</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a45cfeb1dfa8b9d99afce59a8f78d94e0">MagicBlast</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a3eb0158cfacb0adf0996c34282e7570a">ArcaneAnnihilation</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a17af5f2a25dd10ddbd1266597d3ee19e">CairoBurst</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ae9bf37890b564df11c17ddb2f09169dd">ShieldBash</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89ad632e5b9639380630ce16b866c1f4ddc">CairoBlast</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a07141f71d8bc882a0e732a1155e9a39d">HammerStrike</link>,
+<anchor xml:id="__audio_manager_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_audio_effects_1ae8198c22f126b91dcd1ce6594ce89e89a9b1a2ac0a207f84fa15ce862c764537b">WarhammerWreck</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00134"/>00134 }
+<anchor xml:id="__audio_manager_8cs_source_1l00135"/>00135 
+<anchor xml:id="__audio_manager_8cs_source_1l00139"/><link linkend="_class_audio_manager">00139</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_audio_manager">AudioManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__audio_manager_8cs_source_1l00140"/>00140 {
+<anchor xml:id="__audio_manager_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_audio_manager">AudioManager</link>&#32;m_Instance;
+<anchor xml:id="__audio_manager_8cs_source_1l00142"/>00142 
+<anchor xml:id="__audio_manager_8cs_source_1l00143"/><link linkend="_class_audio_manager_1af96f8bc4f9a0ad3f1a63a028bb31f790">00143</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_audio_manager">AudioManager</link>&#32;<link linkend="_class_audio_manager_1af96f8bc4f9a0ad3f1a63a028bb31f790">Instance</link>
+<anchor xml:id="__audio_manager_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">get</emphasis>
+<anchor xml:id="__audio_manager_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_Instance)
+<anchor xml:id="__audio_manager_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;AudioManager&#32;is&#32;NULL!&quot;</emphasis>);
+<anchor xml:id="__audio_manager_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_Instance;
+<anchor xml:id="__audio_manager_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00154"/>00154 
+<anchor xml:id="__audio_manager_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;[FormerlySerializedAs(<emphasis role="stringliteral">&quot;m_AudioMixerGroup&quot;</emphasis>)]
+<anchor xml:id="__audio_manager_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;[FormerlySerializedAs(<emphasis role="stringliteral">&quot;m_AudioMixer&quot;</emphasis>)]
+<anchor xml:id="__audio_manager_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Audio&#32;Manager&quot;</emphasis>)]
+<anchor xml:id="__audio_manager_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;AudioMixerGroup&#32;m_AudioMixerMaster;
+<anchor xml:id="__audio_manager_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;AudioMixerGroup&#32;m_AudioMixerMusic;
+<anchor xml:id="__audio_manager_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;AudioMixerGroup&#32;m_AudioMixerEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00161"/>00161 
+<anchor xml:id="__audio_manager_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf">AudioEffects.Music</link>&#32;m_CurrentClip&#32;=&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.NONE;
+<anchor xml:id="__audio_manager_8cs_source_1l00163"/>00163 
+<anchor xml:id="__audio_manager_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Audio&#32;Clips&quot;</emphasis>)]
+<anchor xml:id="__audio_manager_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_sound">Sound</link>[]&#32;m_MusicClips;
+<anchor xml:id="__audio_manager_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_sound_vocals">SoundVocals</link>[]&#32;m_SoundVocals;
+<anchor xml:id="__audio_manager_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_sound_effect">SoundEffect</link>[]&#32;m_SoundEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_sound_combat_common">SoundCombatCommon</link>[]&#32;m_SoundCombatCommon;
+<anchor xml:id="__audio_manager_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_sound_combat_special">SoundCombatSpecial</link>[]&#32;m_SoundCombatSpecial;
+<anchor xml:id="__audio_manager_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_sound_combat_blob_arena">SoundCombatBlobArena</link>[]&#32;m_SoundCombatBlobArena;
+<anchor xml:id="__audio_manager_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Parent&#32;Objects&quot;</emphasis>)]
+<anchor xml:id="__audio_manager_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;m_MusicParent;
+<anchor xml:id="__audio_manager_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Transform&#32;m_EffectsParent;
+<anchor xml:id="__audio_manager_8cs_source_1l00175"/>00175 
+<anchor xml:id="__audio_manager_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;m_Muted&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00177"/><link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">00177</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">MusicVolume</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;0.75f;
+<anchor xml:id="__audio_manager_8cs_source_1l00178"/><link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">00178</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;0.75f;
+<anchor xml:id="__audio_manager_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Coroutine&#32;m_WaiterCoroutine&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00180"/>00180 
+<anchor xml:id="__audio_manager_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__audio_manager_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_Instance)
+<anchor xml:id="__audio_manager_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DontDestroyOnLoad(gameObject);
+<anchor xml:id="__audio_manager_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Instance&#32;!=&#32;<emphasis role="keyword">this</emphasis>)
+<anchor xml:id="__audio_manager_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__audio_manager_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00193"/>00193 
+<anchor xml:id="__audio_manager_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialiseAudioClips();
+<anchor xml:id="__audio_manager_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialiseSoundEffects();
+<anchor xml:id="__audio_manager_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00197"/>00197 
+<anchor xml:id="__audio_manager_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitialiseAudioClips()
+<anchor xml:id="__audio_manager_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound">Sound</link>&#32;clip&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_MusicClips)
+<anchor xml:id="__audio_manager_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source&#32;=&#32;m_MusicParent.gameObject.AddComponent&lt;AudioSource&gt;();
+<anchor xml:id="__audio_manager_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.clip&#32;=&#32;clip.<link linkend="_class_sound_1a607ab2942d9e326299b6f5b4302b4b35">Clip</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.loop&#32;=&#32;clip.<link linkend="_class_sound_1a1e19d71994441e54892349232e86a837">Looping</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">MusicVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.playOnAwake&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.outputAudioMixerGroup&#32;=&#32;m_AudioMixerMusic;
+<anchor xml:id="__audio_manager_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00213"/>00213 
+<anchor xml:id="__audio_manager_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitialiseSoundEffects()
+<anchor xml:id="__audio_manager_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_effect">SoundEffect</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundEffects)
+<anchor xml:id="__audio_manager_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source&#32;=&#32;m_EffectsParent.gameObject.AddComponent&lt;AudioSource&gt;();
+<anchor xml:id="__audio_manager_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.clip&#32;=&#32;effect.<link linkend="_class_sound_effect_1a3d86da631baa950894490170ab3fef94">Clip</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.playOnAwake&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.outputAudioMixerGroup&#32;=&#32;m_AudioMixerEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00227"/>00227 
+<anchor xml:id="__audio_manager_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_vocals">SoundVocals</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundVocals)
+<anchor xml:id="__audio_manager_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source&#32;=&#32;m_EffectsParent.gameObject.AddComponent&lt;AudioSource&gt;();
+<anchor xml:id="__audio_manager_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.clip&#32;=&#32;effect.<link linkend="_class_sound_vocals_1a6ee596cd2564ea387258c01113cc93b3">Clip</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.playOnAwake&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.outputAudioMixerGroup&#32;=&#32;m_AudioMixerEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_combat_common">SoundCombatCommon</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundCombatCommon)
+<anchor xml:id="__audio_manager_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source&#32;=&#32;m_EffectsParent.gameObject.AddComponent&lt;AudioSource&gt;();
+<anchor xml:id="__audio_manager_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.clip&#32;=&#32;effect.<link linkend="_class_sound_combat_common_1aba1bb2f651b8cb7a868dd640ba0dd8b8">Clip</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.playOnAwake&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.outputAudioMixerGroup&#32;=&#32;m_AudioMixerEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_combat_special">SoundCombatSpecial</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundCombatSpecial)
+<anchor xml:id="__audio_manager_8cs_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source&#32;=&#32;m_EffectsParent.gameObject.AddComponent&lt;AudioSource&gt;();
+<anchor xml:id="__audio_manager_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.clip&#32;=&#32;effect.<link linkend="_class_sound_combat_special_1ade522bc32552f456930509d615920f0e">Clip</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.playOnAwake&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.outputAudioMixerGroup&#32;=&#32;m_AudioMixerEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_combat_blob_arena">SoundCombatBlobArena</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundCombatBlobArena)
+<anchor xml:id="__audio_manager_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source&#32;=&#32;m_EffectsParent.gameObject.AddComponent&lt;AudioSource&gt;();
+<anchor xml:id="__audio_manager_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.clip&#32;=&#32;effect.<link linkend="_class_sound_combat_blob_arena_1a3edd37b851d50ed6e39996981c7630a2">Clip</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.playOnAwake&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.outputAudioMixerGroup&#32;=&#32;m_AudioMixerEffects;
+<anchor xml:id="__audio_manager_8cs_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00264"/>00264 
+<anchor xml:id="__audio_manager_8cs_source_1l00271"/><link linkend="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034">00271</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034">PlayMusic</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.Music&#32;clip,&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music&#32;loopAudio&#32;=&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.NONE)
+<anchor xml:id="__audio_manager_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopMusic();
+<anchor xml:id="__audio_manager_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CurrentClip&#32;=&#32;clip;
+<anchor xml:id="__audio_manager_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(clip&#32;==&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.NONE)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_MusicClips[(int)clip].Source.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WaiterCoroutine&#32;=&#32;StartCoroutine(WaitAndPlayAudio(loopAudio));
+<anchor xml:id="__audio_manager_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00279"/>00279 
+<anchor xml:id="__audio_manager_8cs_source_1l00284"/><link linkend="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5">00284</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5">PlayEffect</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.Effects&#32;effect)
+<anchor xml:id="__audio_manager_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_SoundEffects[(int)effect].Source.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00288"/>00288 
+<anchor xml:id="__audio_manager_8cs_source_1l00293"/><link linkend="_class_audio_manager_1a8e228a27a7585498802ae37c4ebf6e77">00293</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a8e228a27a7585498802ae37c4ebf6e77">PlayVocal</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.Vocals&#32;vocal)
+<anchor xml:id="__audio_manager_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_SoundVocals[(int)vocal].Source.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00297"/>00297 
+<anchor xml:id="__audio_manager_8cs_source_1l00302"/><link linkend="_class_audio_manager_1a757c769ea35a476dfcf6c36799f97524">00302</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a757c769ea35a476dfcf6c36799f97524">PlayCombatCommon</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.CombatCommon&#32;effect)
+<anchor xml:id="__audio_manager_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_SoundCombatCommon[(int)effect].Source.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00305"/>00305 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00306"/>00306 
+<anchor xml:id="__audio_manager_8cs_source_1l00311"/><link linkend="_class_audio_manager_1a52d45840e617a16e41c00f546312bcf8">00311</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a52d45840e617a16e41c00f546312bcf8">PlayCombatSpecial</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.CombatSpecial&#32;effect)
+<anchor xml:id="__audio_manager_8cs_source_1l00312"/>00312 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_SoundCombatSpecial[(int)effect].Source.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00314"/>00314 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00315"/>00315 
+<anchor xml:id="__audio_manager_8cs_source_1l00320"/><link linkend="_class_audio_manager_1adeee63c2f8187e7219adadd594965d84">00320</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1adeee63c2f8187e7219adadd594965d84">PlayCombatBlobArena</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.CombatBlobArena&#32;effect)
+<anchor xml:id="__audio_manager_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_audio_manager_1adeee63c2f8187e7219adadd594965d84">PlayCombatBlobArena</link>((<emphasis role="keywordtype">int</emphasis>)effect);
+<anchor xml:id="__audio_manager_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00324"/>00324 
+<anchor xml:id="__audio_manager_8cs_source_1l00329"/><link linkend="_class_audio_manager_1a9cee78cace2f158331e2efce4897ebda">00329</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a9cee78cace2f158331e2efce4897ebda">PlayCombatBlobArena</link>(<emphasis role="keywordtype">int</emphasis>&#32;index)
+<anchor xml:id="__audio_manager_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_SoundCombatBlobArena[index].<link linkend="_class_sound_combat_blob_arena_1aa6a8f65ec6b561db07f7cd32db1625f4">Source</link>.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00333"/>00333 
+<anchor xml:id="__audio_manager_8cs_source_1l00334"/>00334 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;WaitAndPlayAudio(<link linkend="_namespace_audio_effects">AudioEffects</link>.Music&#32;nextClip)
+<anchor xml:id="__audio_manager_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitUntil(()&#32;=&gt;&#32;!m_MusicClips[(<emphasis role="keywordtype">int</emphasis>)m_CurrentClip].Source.isPlaying);
+<anchor xml:id="__audio_manager_8cs_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CurrentClip&#32;=&#32;nextClip;
+<anchor xml:id="__audio_manager_8cs_source_1l00338"/>00338 
+<anchor xml:id="__audio_manager_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(nextClip&#32;==&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.NONE)
+<anchor xml:id="__audio_manager_8cs_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00343"/>00343 
+<anchor xml:id="__audio_manager_8cs_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_MusicClips[(int)nextClip].Source.Play();
+<anchor xml:id="__audio_manager_8cs_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__audio_manager_8cs_source_1l00346"/>00346 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00347"/>00347 
+<anchor xml:id="__audio_manager_8cs_source_1l00352"/><link linkend="_class_audio_manager_1add05f438dc5539268686059b3515afa2">00352</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1add05f438dc5539268686059b3515afa2">SetMusicVolume</link>(<emphasis role="keywordtype">float</emphasis>&#32;volume)
+<anchor xml:id="__audio_manager_8cs_source_1l00353"/>00353 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">MusicVolume</link>&#32;=&#32;Mathf.Clamp(volume&#32;*&#32;0.01f,&#32;0.0f,&#32;1.0f);
+<anchor xml:id="__audio_manager_8cs_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Muted)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound">Sound</link>&#32;clip&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_MusicClips)
+<anchor xml:id="__audio_manager_8cs_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">MusicVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00362"/>00362 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00363"/>00363 
+<anchor xml:id="__audio_manager_8cs_source_1l00368"/><link linkend="_class_audio_manager_1a991b1f8c657562e6581bb3269673ef61">00368</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a991b1f8c657562e6581bb3269673ef61">SetEffectsVolume</link>(<emphasis role="keywordtype">float</emphasis>&#32;volume)
+<anchor xml:id="__audio_manager_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>&#32;=&#32;Mathf.Clamp(volume&#32;*&#32;0.01f,&#32;0.0f,&#32;1.0f);
+<anchor xml:id="__audio_manager_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Muted)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_effect">SoundEffect</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundEffects)
+<anchor xml:id="__audio_manager_8cs_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00378"/>00378 
+<anchor xml:id="__audio_manager_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_vocals">SoundVocals</link>&#32;vocal&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundVocals)
+<anchor xml:id="__audio_manager_8cs_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vocal.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00383"/>00383 
+<anchor xml:id="__audio_manager_8cs_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_combat_common">SoundCombatCommon</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundCombatCommon)
+<anchor xml:id="__audio_manager_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00388"/>00388 
+<anchor xml:id="__audio_manager_8cs_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_combat_special">SoundCombatSpecial</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundCombatSpecial)
+<anchor xml:id="__audio_manager_8cs_source_1l00390"/>00390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00392"/>00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00393"/>00393 
+<anchor xml:id="__audio_manager_8cs_source_1l00394"/>00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(<link linkend="_class_sound_combat_blob_arena">SoundCombatBlobArena</link>&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_SoundCombatBlobArena)
+<anchor xml:id="__audio_manager_8cs_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00396"/>00396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00398"/>00398 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00399"/>00399 
+<anchor xml:id="__audio_manager_8cs_source_1l00403"/><link linkend="_class_audio_manager_1a77dc0e04f1f6cbf4eaf2fc38aeb4cc11">00403</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a77dc0e04f1f6cbf4eaf2fc38aeb4cc11">MuteVolume</link>()
+<anchor xml:id="__audio_manager_8cs_source_1l00404"/>00404 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00405"/>00405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_Muted&#32;=&#32;!m_Instance.m_Muted;
+<anchor xml:id="__audio_manager_8cs_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;clip&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_Instance.m_MusicClips)
+<anchor xml:id="__audio_manager_8cs_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clip.Source.volume&#32;=&#32;m_Instance.m_Muted&#32;?&#32;0.0f&#32;:&#32;m_Instance.<link linkend="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df">MusicVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00410"/>00410 
+<anchor xml:id="__audio_manager_8cs_source_1l00411"/>00411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_Instance.m_SoundEffects)
+<anchor xml:id="__audio_manager_8cs_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;m_Instance.m_Muted&#32;?&#32;0.0f&#32;:&#32;m_Instance.<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00414"/>00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00415"/>00415 
+<anchor xml:id="__audio_manager_8cs_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_Instance.m_SoundVocals)
+<anchor xml:id="__audio_manager_8cs_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00418"/>00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;m_Instance.m_Muted&#32;?&#32;0.0f&#32;:&#32;m_Instance.<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00420"/>00420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00421"/>00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_Instance.m_SoundCombatCommon)
+<anchor xml:id="__audio_manager_8cs_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;m_Instance.m_Muted&#32;?&#32;0.0f&#32;:&#32;m_Instance.<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00424"/>00424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00425"/>00425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_Instance.m_SoundCombatSpecial)
+<anchor xml:id="__audio_manager_8cs_source_1l00427"/>00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00428"/>00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;m_Instance.m_Muted&#32;?&#32;0.0f&#32;:&#32;m_Instance.<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__audio_manager_8cs_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;effect&#32;<emphasis role="keywordflow">in</emphasis>&#32;m_Instance.m_SoundCombatBlobArena)
+<anchor xml:id="__audio_manager_8cs_source_1l00432"/>00432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00433"/>00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;effect.Source.volume&#32;=&#32;m_Instance.m_Muted&#32;?&#32;0.0f&#32;:&#32;m_Instance.<link linkend="_class_audio_manager_1ad12669d428a28a5e3107687a49754fb7">EffectsVolume</link>;
+<anchor xml:id="__audio_manager_8cs_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00435"/>00435 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00436"/>00436 
+<anchor xml:id="__audio_manager_8cs_source_1l00437"/><link linkend="_class_audio_manager_1a5042c01c2fec5d64e707886f1b949511">00437</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a5042c01c2fec5d64e707886f1b949511">OnMainMenuStartGamePressed</link>()
+<anchor xml:id="__audio_manager_8cs_source_1l00438"/>00438 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isThemeBlobArena&#32;=&#32;LocalDataModel.GameTheme&#32;==&#32;LocalDataModel.GameEvent.Normal;
+<anchor xml:id="__audio_manager_8cs_source_1l00440"/>00440 
+<anchor xml:id="__audio_manager_8cs_source_1l00441"/>00441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.<link linkend="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034">PlayMusic</link>(
+<anchor xml:id="__audio_manager_8cs_source_1l00442"/>00442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;isThemeBlobArena&#32;?&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.BA_MenuPreRoll&#32;:&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.AMMA_MenuPreRoll,
+<anchor xml:id="__audio_manager_8cs_source_1l00443"/>00443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;isThemeBlobArena&#32;?&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.BA_MenuLoop&#32;:&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.AMMA_MenuLoop
+<anchor xml:id="__audio_manager_8cs_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="__audio_manager_8cs_source_1l00445"/>00445 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00446"/>00446 
+<anchor xml:id="__audio_manager_8cs_source_1l00447"/><link linkend="_class_audio_manager_1a98db96b858551653d96a1e2a2e01ada5">00447</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_audio_manager_1a98db96b858551653d96a1e2a2e01ada5">OnThemeSwitchButtonPressed</link>()
+<anchor xml:id="__audio_manager_8cs_source_1l00448"/>00448 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.GameTheme&#32;==&#32;LocalDataModel.GameEvent.AMMA)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.<link linkend="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034">PlayMusic</link>(<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.ThemeSwitch);
+<anchor xml:id="__audio_manager_8cs_source_1l00451"/>00451 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00452"/>00452 
+<anchor xml:id="__audio_manager_8cs_source_1l00453"/>00453 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;StopMusic()
+<anchor xml:id="__audio_manager_8cs_source_1l00454"/>00454 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00455"/>00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_Instance.m_CurrentClip&#32;!=&#32;<link linkend="_namespace_audio_effects">AudioEffects</link>.Music.NONE)
+<anchor xml:id="__audio_manager_8cs_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00457"/>00457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Instance.m_MusicClips[(int)m_Instance.m_CurrentClip].<link linkend="_class_sound_1aa662ca8c088234f4215457831d45394c">Source</link>.Stop();
+<anchor xml:id="__audio_manager_8cs_source_1l00458"/>00458 
+<anchor xml:id="__audio_manager_8cs_source_1l00459"/>00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_WaiterCoroutine&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__audio_manager_8cs_source_1l00460"/>00460 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__audio_manager_8cs_source_1l00461"/>00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopCoroutine(m_WaiterCoroutine);
+<anchor xml:id="__audio_manager_8cs_source_1l00462"/>00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00463"/>00463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00464"/>00464 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__audio_manager_8cs_source_1l00465"/>00465 }
+</programlisting></section>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e9d6bc7b9ecdaded084a52e77cd33904" xml:lang="en-US">
+<title>Managers/Statics Directory Reference</title>
+<indexterm><primary>Managers/Statics Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__blobert_types_8cs">BlobertTypes.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__blobert_utils_8cs">BlobertUtils.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__dojo_entities_storage_8cs">DojoEntitiesStorage.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__event_manager_8cs">EventManager.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['parentpage_0',['parentPage',['../class_in_lobby_ongoing_lobby_list_page_element.html#aa5981b76bbe0efd0e0292511972f72fd',1,'InLobbyOngoingLobbyListPageElement.parentPage'],['../class_inv_sent_on_going_lobby_list_page_element.html#abe48c0e9fd00f1683ad5a25c9accec5a',1,'InvSentOnGoingLobbyListPageElement.parentPage'],['../class_on_going_battle_lobby_list_page_elemenet.html#a1d4af35d91a1e777caab9a71deda1d60',1,'OnGoingBattleLobbyListPageElemenet.parentPage'],['../class_received_inv_lobby_list_page_element.html#a0c53af2b8ebdd2cc1788b000c5693f47',1,'ReceivedInvLobbyListPageElement.parentPage'],['../interface_i_lobby_list_element.html#abf08a8c2cd56cf491210634c439899cd',1,'ILobbyListElement.parentPage']]],
+  ['phase_5ftime_1',['phase_time',['../class_pv_p_challenge_invite_1_1_pv_p_challenge_invite_data_query.html#af2b9120212c3a12ed5a17ee9196c76e8',1,'PvPChallengeInvite::PvPChallengeInviteDataQuery']]],
+  ['player_2',['player',['../class_combatant_info_1_1_combatant_info_data_query.html#a8e5a928f528eb63661aa55e3e356c994',1,'CombatantInfo.CombatantInfoDataQuery.player'],['../class_last_mint_1_1_last_mint_data_query.html#ade7ca77d7593df6df181d52734be04c4',1,'LastMint.LastMintDataQuery.player'],['../class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query.html#a534276bc23eebac7240dc6a1312c25d6',1,'PvPChallengeScore.PvPChallengeScoreDataQuery.player']]],
+  ['power_3',['power',['../class_logic_layer_1_1_damage_data.html#af72ddf81b167ab8fb08f1656dc9d6200',1,'LogicLayer::DamageData']]]
+];

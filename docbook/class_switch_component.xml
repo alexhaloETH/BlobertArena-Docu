@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_switch_component" xml:lang="en-US">
+<title>SwitchComponent Class Reference</title>
+<indexterm><primary>SwitchComponent</primary></indexterm>
+<para>Inheritance diagram for SwitchComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_switch_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_switch_component_1a24bbd39bdff8e5c883b3586b7ddf4141">OnClickDown</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_switch_component_1af6af65648c0befa5b7b183080e608dab">OnClickUp</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_switch_component_1abb4d9cb64b3642161d239ebb27a2c5f4">OnSkinChange</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Sprite <link linkend="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4">defaultImageState1</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_switch_component_1a57df6e2af4cf903031206167d9e7cf27">clickedImageState1</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_switch_component_1a8921a5f8779c7b5411a589bbb52d4061">defaultImageState2</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_switch_component_1a2e902e8e2def3c7b067a84ca54c8bdd9">clickedImageState2</link></para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_switch_component_1a2dc5ef061bf8af08d64ad53b82cdf751">onState1Click</link></para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_switch_component_1ad2ffebcd12475f6fcaf0f21fb5b6f932">onState2Click</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00005">5</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_switch_component_1a24bbd39bdff8e5c883b3586b7ddf4141"/><section>
+    <title>OnClickDown()</title>
+<indexterm><primary>OnClickDown</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>OnClickDown</secondary></indexterm>
+<para><computeroutput>void SwitchComponent.OnClickDown ( )</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00044">44</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1af6af65648c0befa5b7b183080e608dab"/><section>
+    <title>OnClickUp()</title>
+<indexterm><primary>OnClickUp</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>OnClickUp</secondary></indexterm>
+<para><computeroutput>void SwitchComponent.OnClickUp ( )</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00058">58</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1abb4d9cb64b3642161d239ebb27a2c5f4"/><section>
+    <title>OnSkinChange()</title>
+<indexterm><primary>OnSkinChange</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>OnSkinChange</secondary></indexterm>
+<para><computeroutput>void SwitchComponent.OnSkinChange ( )</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00076">76</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_switch_component_1a57df6e2af4cf903031206167d9e7cf27"/><section>
+    <title>clickedImageState1</title>
+<indexterm><primary>clickedImageState1</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>clickedImageState1</secondary></indexterm>
+<para><computeroutput>Sprite SwitchComponent.clickedImageState1</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00018">18</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1a2e902e8e2def3c7b067a84ca54c8bdd9"/><section>
+    <title>clickedImageState2</title>
+<indexterm><primary>clickedImageState2</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>clickedImageState2</secondary></indexterm>
+<para><computeroutput>Sprite SwitchComponent.clickedImageState2</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00023">23</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1a1dfcae95d7de771cbb58ad16a13b8ee4"/><section>
+    <title>defaultImageState1</title>
+<indexterm><primary>defaultImageState1</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>defaultImageState1</secondary></indexterm>
+<para><computeroutput>Sprite SwitchComponent.defaultImageState1</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00016">16</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1a8921a5f8779c7b5411a589bbb52d4061"/><section>
+    <title>defaultImageState2</title>
+<indexterm><primary>defaultImageState2</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>defaultImageState2</secondary></indexterm>
+<para><computeroutput>Sprite SwitchComponent.defaultImageState2</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00021">21</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1a2dc5ef061bf8af08d64ad53b82cdf751"/><section>
+    <title>onState1Click</title>
+<indexterm><primary>onState1Click</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>onState1Click</secondary></indexterm>
+<para><computeroutput>UnityEvent SwitchComponent.onState1Click</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00028">28</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_switch_component_1ad2ffebcd12475f6fcaf0f21fb5b6f932"/><section>
+    <title>onState2Click</title>
+<indexterm><primary>onState2Click</primary><secondary>SwitchComponent</secondary></indexterm>
+<indexterm><primary>SwitchComponent</primary><secondary>onState2Click</secondary></indexterm>
+<para><computeroutput>UnityEvent SwitchComponent.onState2Click</computeroutput></para><para>
+Definition at line <link linkend="__switch_component_8cs_source_1l00029">29</link> of file <link linkend="__switch_component_8cs_source">SwitchComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Button Types/<link linkend="__switch_component_8cs">SwitchComponent.cs</link></section>
+</section>

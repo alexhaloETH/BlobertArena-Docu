@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_interactable_text_component" xml:lang="en-US">
+<title>InteractableTextComponent Class Reference</title>
+<indexterm><primary>InteractableTextComponent</primary></indexterm>
+<para>Inheritance diagram for InteractableTextComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_interactable_text_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5c">TextState</link> { <link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5cabbded659bd28a40cf23c0999c20ab408">BlackText_NoArrow</link>
+, <link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5ca0df070161de9c7f399d4cc4535baa2a8">BlackText_WithArrow</link>
+, <link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5cab37be036b6102f0d5f3d8d2192178e0a">GreyText_NoArrow</link>
+, <link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5ca4b282b61f8ea33a6a2393d49349ebb78">CompletlyHide</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_interactable_text_component_1acc258cd2ba1b045cfccc012276118a87">SetState</link> (<link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5c">TextState</link> newState)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_interactable_text_component_1a91f7723f267a9ec66ca361fd60035e6c">SetText</link> (string newText)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_interactable_text_component_1ae0b4ef7bfbcf818f0a1a8c221ee289ed">StartLoopingAnimation</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_interactable_text_component_1a01aba05f9225aa9f62d61da595845195">StopArrowAnimation</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_interactable_text_component_1a97b4459e78c8b8acf22e37c9951cf468">ShowArrow</link> (bool show)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00007">7</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5c"/><section>
+    <title>TextState</title>
+<indexterm><primary>TextState</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>TextState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5c">InteractableTextComponent.TextState</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BlackText_NoArrow</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>BlackText_NoArrow</secondary></indexterm>
+<anchor xml:id="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5cabbded659bd28a40cf23c0999c20ab408"/>BlackText_NoArrow</entry><entry></entry></row><row><entry><indexterm><primary>BlackText_WithArrow</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>BlackText_WithArrow</secondary></indexterm>
+<anchor xml:id="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5ca0df070161de9c7f399d4cc4535baa2a8"/>BlackText_WithArrow</entry><entry></entry></row><row><entry><indexterm><primary>GreyText_NoArrow</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>GreyText_NoArrow</secondary></indexterm>
+<anchor xml:id="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5cab37be036b6102f0d5f3d8d2192178e0a"/>GreyText_NoArrow</entry><entry></entry></row><row><entry><indexterm><primary>CompletlyHide</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>CompletlyHide</secondary></indexterm>
+<anchor xml:id="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5ca4b282b61f8ea33a6a2393d49349ebb78"/>CompletlyHide</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00018">18</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_interactable_text_component_1acc258cd2ba1b045cfccc012276118a87"/><section>
+    <title>SetState()</title>
+<indexterm><primary>SetState</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>SetState</secondary></indexterm>
+<para><computeroutput>void InteractableTextComponent.SetState (<link linkend="_class_interactable_text_component_1ae0836d4d06379a5fb7e36b839a4fba5c">TextState</link> newState)</computeroutput></para><para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00076">76</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_interactable_text_component_1a91f7723f267a9ec66ca361fd60035e6c"/><section>
+    <title>SetText()</title>
+<indexterm><primary>SetText</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>SetText</secondary></indexterm>
+<para><computeroutput>void InteractableTextComponent.SetText (string newText)</computeroutput></para><para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00092">92</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_interactable_text_component_1a97b4459e78c8b8acf22e37c9951cf468"/><section>
+    <title>ShowArrow()</title>
+<indexterm><primary>ShowArrow</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>ShowArrow</secondary></indexterm>
+<para><computeroutput>void InteractableTextComponent.ShowArrow (bool show)</computeroutput></para><para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00122">122</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_interactable_text_component_1ae0b4ef7bfbcf818f0a1a8c221ee289ed"/><section>
+    <title>StartLoopingAnimation()</title>
+<indexterm><primary>StartLoopingAnimation</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>StartLoopingAnimation</secondary></indexterm>
+<para><computeroutput>void InteractableTextComponent.StartLoopingAnimation ( )</computeroutput></para><para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00098">98</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_interactable_text_component_1a01aba05f9225aa9f62d61da595845195"/><section>
+    <title>StopArrowAnimation()</title>
+<indexterm><primary>StopArrowAnimation</primary><secondary>InteractableTextComponent</secondary></indexterm>
+<indexterm><primary>InteractableTextComponent</primary><secondary>StopArrowAnimation</secondary></indexterm>
+<para><computeroutput>void InteractableTextComponent.StopArrowAnimation ( )</computeroutput></para><para>
+Definition at line <link linkend="__interactable_text_component_8cs_source_1l00113">113</link> of file <link linkend="__interactable_text_component_8cs_source">InteractableTextComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__interactable_text_component_8cs">InteractableTextComponent.cs</link></section>
+</section>

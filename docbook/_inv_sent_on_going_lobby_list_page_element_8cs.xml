@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__inv_sent_on_going_lobby_list_page_element_8cs" xml:lang="en-US">
+<title>UI/Elements/LobbyListPage/InvSentOnGoingLobbyListPageElement.cs File Reference</title>
+<indexterm><primary>UI/Elements/LobbyListPage/InvSentOnGoingLobbyListPageElement.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_inv_sent_on_going_lobby_list_page_element">InvSentOnGoingLobbyListPageElement</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

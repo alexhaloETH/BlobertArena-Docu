@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_select_blob_page_behavior" xml:lang="en-US">
+<title>SelectBlobPageBehavior Class Reference</title>
+<indexterm><primary>SelectBlobPageBehavior</primary></indexterm>
+<para>
+
+<para>This page should only comtaint the blobert dex component and becasue its a componnent all the logic of it is stored on that script. </para>
+ 
+</para>
+<para>Inheritance diagram for SelectBlobPageBehavior:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_select_blob_page_behavior.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_select_blob_page_behavior_1a37750d3f79b54ea8488cd7ee2cde984a">MintBlobButtonCall</link> ()</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_select_blob_page_behavior_1ac8742689a6f9ac6f3dc9cab54bc3f754">OnChainCallBackMintBlob</link> (string transactionHash)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This page should only comtaint the blobert dex component and becasue its a componnent all the logic of it is stored on that script. </para>
+<para>
+Definition at line <link linkend="__select_blob_page_behavior_8cs_source_1l00009">9</link> of file <link linkend="__select_blob_page_behavior_8cs_source">SelectBlobPageBehavior.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_select_blob_page_behavior_1a37750d3f79b54ea8488cd7ee2cde984a"/><section>
+    <title>MintBlobButtonCall()</title>
+<indexterm><primary>MintBlobButtonCall</primary><secondary>SelectBlobPageBehavior</secondary></indexterm>
+<indexterm><primary>SelectBlobPageBehavior</primary><secondary>MintBlobButtonCall</secondary></indexterm>
+<para><computeroutput>void SelectBlobPageBehavior.MintBlobButtonCall ( )</computeroutput></para><para>
+Definition at line <link linkend="__select_blob_page_behavior_8cs_source_1l00015">15</link> of file <link linkend="__select_blob_page_behavior_8cs_source">SelectBlobPageBehavior.cs</link>.</para>
+</section>
+<anchor xml:id="_class_select_blob_page_behavior_1ac8742689a6f9ac6f3dc9cab54bc3f754"/><section>
+    <title>OnChainCallBackMintBlob()</title>
+<indexterm><primary>OnChainCallBackMintBlob</primary><secondary>SelectBlobPageBehavior</secondary></indexterm>
+<indexterm><primary>SelectBlobPageBehavior</primary><secondary>OnChainCallBackMintBlob</secondary></indexterm>
+<para><computeroutput>async void SelectBlobPageBehavior.OnChainCallBackMintBlob (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__select_blob_page_behavior_8cs_source_1l00067">67</link> of file <link linkend="__select_blob_page_behavior_8cs_source">SelectBlobPageBehavior.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/SelectBlobPage/<link linkend="__select_blob_page_behavior_8cs">SelectBlobPageBehavior.cs</link></section>
+</section>

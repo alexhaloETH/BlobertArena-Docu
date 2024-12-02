@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_item_1_1_item_data_query" xml:lang="en-US">
+<title>Item.ItemDataQuery Class Reference</title>
+<indexterm><primary>Item.ItemDataQuery</primary></indexterm>
+<para>Inheritance diagram for Item.ItemDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_1_1_item_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_item_1_1_item_data_query_1aa1c5f8c62f12ebdb23e03eccea926b9e">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_item_1_1_item_data_query_1a3970da719eb230f2e3761e30da853b21">id</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_item_1_1_item_data_query_1adcca998d659781df02ff689f905ffef7">name</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_stats_data">LogicLayer.StatsData</link> <link linkend="_class_item_1_1_item_data_query_1af65cc481861d02c35597e5cd93f01cc3">stats</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00118">118</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_item_1_1_item_data_query_1aa1c5f8c62f12ebdb23e03eccea926b9e"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>Item.ItemDataQuery</secondary></indexterm>
+<indexterm><primary>Item.ItemDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string Item.ItemDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00120">120</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_item_1_1_item_data_query_1a3970da719eb230f2e3761e30da853b21"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Item.ItemDataQuery</secondary></indexterm>
+<indexterm><primary>Item.ItemDataQuery</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>string Item.ItemDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00121">121</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_item_1_1_item_data_query_1adcca998d659781df02ff689f905ffef7"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>Item.ItemDataQuery</secondary></indexterm>
+<indexterm><primary>Item.ItemDataQuery</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string Item.ItemDataQuery.name = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00122">122</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_item_1_1_item_data_query_1af65cc481861d02c35597e5cd93f01cc3"/><section>
+    <title>stats</title>
+<indexterm><primary>stats</primary><secondary>Item.ItemDataQuery</secondary></indexterm>
+<indexterm><primary>Item.ItemDataQuery</primary><secondary>stats</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_stats_data">LogicLayer.StatsData</link> Item.ItemDataQuery.stats<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00123">123</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__item_8gen_8cs">Item.gen.cs</link></section>
+</section>

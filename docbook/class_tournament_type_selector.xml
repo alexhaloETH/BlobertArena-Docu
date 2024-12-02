@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tournament_type_selector" xml:lang="en-US">
+<title>TournamentTypeSelector Class Reference</title>
+<indexterm><primary>TournamentTypeSelector</primary></indexterm>
+<para>
+
+<para>Manages the tournament type selector and the two selection buttons (Arcade / Ranked) </para>
+ 
+</para>
+<para>Inheritance diagram for TournamentTypeSelector:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tournament_type_selector.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_tournament_type_selector_1ad312db27c96165a16a534e10c974c42d">OnArcadeButtonPressed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tournament_type_selector_1a1f3f260c3bb47646896b37bc8efc2dd9">OnRankedButtonPressed</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manages the tournament type selector and the two selection buttons (Arcade / Ranked) </para>
+<para>
+Definition at line <link linkend="__tournament_type_selector_8cs_source_1l00010">10</link> of file <link linkend="__tournament_type_selector_8cs_source">TournamentTypeSelector.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tournament_type_selector_1ad312db27c96165a16a534e10c974c42d"/><section>
+    <title>OnArcadeButtonPressed()</title>
+<indexterm><primary>OnArcadeButtonPressed</primary><secondary>TournamentTypeSelector</secondary></indexterm>
+<indexterm><primary>TournamentTypeSelector</primary><secondary>OnArcadeButtonPressed</secondary></indexterm>
+<para><computeroutput>void TournamentTypeSelector.OnArcadeButtonPressed ( )</computeroutput></para><para>
+Definition at line <link linkend="__tournament_type_selector_8cs_source_1l00032">32</link> of file <link linkend="__tournament_type_selector_8cs_source">TournamentTypeSelector.cs</link>.</para>
+</section>
+<anchor xml:id="_class_tournament_type_selector_1a1f3f260c3bb47646896b37bc8efc2dd9"/><section>
+    <title>OnRankedButtonPressed()</title>
+<indexterm><primary>OnRankedButtonPressed</primary><secondary>TournamentTypeSelector</secondary></indexterm>
+<indexterm><primary>TournamentTypeSelector</primary><secondary>OnRankedButtonPressed</secondary></indexterm>
+<para><computeroutput>void TournamentTypeSelector.OnRankedButtonPressed ( )</computeroutput></para><para>
+Definition at line <link linkend="__tournament_type_selector_8cs_source_1l00049">49</link> of file <link linkend="__tournament_type_selector_8cs_source">TournamentTypeSelector.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__tournament_type_selector_8cs">TournamentTypeSelector.cs</link></section>
+</section>

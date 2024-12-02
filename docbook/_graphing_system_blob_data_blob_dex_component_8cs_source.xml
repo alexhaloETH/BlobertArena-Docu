@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source" xml:lang="en-US">
+<title>GraphingSystemBlobDataBlobDexComponent.cs</title>
+<indexterm><primary>UI/Components/BlobertData/BlobDexComponents/GraphingSystemBlobDataBlobDexComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00005"/>00005 
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00006"/><link linkend="_class_graphing_system_blob_data_blob_dex_component">00006</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_graphing_system_blob_data_blob_dex_component">GraphingSystemBlobDataBlobDexComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_custom_polygon_graph_u_i">CustomPolygonGraphUI</link>&#32;_graphingMesh;
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00009"/>00009 
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00010"/><link linkend="_class_graphing_system_blob_data_blob_dex_component_1a032ba4eceef9a6e03ee1b574493250e9">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_graphing_system_blob_data_blob_dex_component_1a032ba4eceef9a6e03ee1b574493250e9">InitializeComponent</link>(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;blobId)
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blob&#32;=&#32;WorldDataModel.AllPlayableCharactersInTheGame[blobId.Hex()];
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00013"/>00013 
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;stats&#32;=&#32;blob.GetStats();
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00015"/>00015 
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_graphingMesh.<link linkend="_class_custom_polygon_graph_u_i_1ad1889f69b173ecd364c10b7158974526">InitializeComponent</link>(<emphasis role="keyword">new</emphasis>&#32;List&lt;(<emphasis role="keywordtype">int</emphasis>&#32;value,&#32;<emphasis role="keywordtype">int</emphasis>&#32;max)&gt;
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;&#32;(stats.strength,&#32;100),
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(stats.dexterity,&#32;100),
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(stats.luck,&#32;100),
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(stats.vitality,&#32;100),
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(blob.GetMaxHealth(),&#32;255)});
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__graphing_system_blob_data_blob_dex_component_8cs_source_1l00023"/>00023 }
+</programlisting></section>

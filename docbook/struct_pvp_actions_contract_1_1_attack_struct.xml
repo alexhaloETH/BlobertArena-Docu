@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_actions_contract_1_1_attack_struct" xml:lang="en-US">
+<title>PvpActionsContract.AttackStruct Struct Reference</title>
+<indexterm><primary>PvpActionsContract.AttackStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_actions_contract_1_1_attack_struct_1a602a95167695d558ec90f579c24e2a4e">AttackStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_attack_struct_1a5e0e173620ae0afc4f0f15b05250f1c0">itemId</link>, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_attack_struct_1af64635cf095b1c616db3f3c0ded8f0cc">attackId</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_attack_struct_1a5e0e173620ae0afc4f0f15b05250f1c0">itemId</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_actions_contract_1_1_attack_struct_1af64635cf095b1c616db3f3c0ded8f0cc">attackId</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00009">9</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_attack_struct_1a602a95167695d558ec90f579c24e2a4e"/><section>
+    <title>AttackStruct()</title>
+<indexterm><primary>AttackStruct</primary><secondary>PvpActionsContract.AttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.AttackStruct</primary><secondary>AttackStruct</secondary></indexterm>
+<para><computeroutput>PvpActionsContract.AttackStruct.AttackStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> itemId, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> attackId)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00014">14</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_attack_struct_1af64635cf095b1c616db3f3c0ded8f0cc"/><section>
+    <title>attackId</title>
+<indexterm><primary>attackId</primary><secondary>PvpActionsContract.AttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.AttackStruct</primary><secondary>attackId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.AttackStruct.attackId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00012">12</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_actions_contract_1_1_attack_struct_1a5e0e173620ae0afc4f0f15b05250f1c0"/><section>
+    <title>itemId</title>
+<indexterm><primary>itemId</primary><secondary>PvpActionsContract.AttackStruct</secondary></indexterm>
+<indexterm><primary>PvpActionsContract.AttackStruct</primary><secondary>itemId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpActionsContract.AttackStruct.itemId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_actions_contract_8cs_source_1l00011">11</link> of file <link linkend="__pvp_actions_contract_8cs_source">PvpActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_actions_contract_8cs">PvpActionsContract.cs</link></section>
+</section>

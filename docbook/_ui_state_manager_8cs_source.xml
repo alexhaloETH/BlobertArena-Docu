@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ui_state_manager_8cs_source" xml:lang="en-US">
+<title>UiStateManager.cs</title>
+<indexterm><primary>UI/UiStateManager.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__ui_state_manager_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00005"/>00005 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00006"/><link linkend="_class_ui_state_manager">00006</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_ui_state_manager">UiStateManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__ui_state_manager_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__ui_state_manager_8cs_source_1l00008"/><link linkend="_class_ui_state_manager_1a02f486ab1511544504af7ade8f76e35f">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_ui_state_manager">UiStateManager</link>&#32;<link linkend="_class_ui_state_manager_1a02f486ab1511544504af7ade8f76e35f">Instance</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00009"/>00009 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__ui_state_manager_8cs_source_1l00011"/><link linkend="_class_ui_state_manager_1afe9b3694a87e358cb4134c50285cf5e4">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_game_manager">GameManager</link>&#32;<link linkend="_class_ui_state_manager_1afe9b3694a87e358cb4134c50285cf5e4">gameManager</link>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00012"/>00012 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__ui_state_manager_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoEntitiesStorage.worldManagerData&#32;=&#32;<link linkend="_class_ui_state_manager_1afe9b3694a87e358cb4134c50285cf5e4">gameManager</link>.<link linkend="_class_game_manager_1ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</link>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00016"/>00016 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_ui_state_manager_1a02f486ab1511544504af7ade8f76e35f">Instance</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_ui_state_manager_1a02f486ab1511544504af7ade8f76e35f">Instance</link>&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00026"/>00026 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00027"/><link linkend="_class_ui_state_manager_1a17386cc3a99f51bdf7fcc37ca5b2a477">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ui_state_manager_1a17386cc3a99f51bdf7fcc37ca5b2a477">Start</link>()
+<anchor xml:id="__ui_state_manager_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00030"/>00030 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;Update()
+<anchor xml:id="__ui_state_manager_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha0))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;BloberArena&#32;--help&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;1&#32;for&#32;local&#32;data&#32;saved&#32;in&#32;the&#32;logic&#32;layer&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;2&#32;for&#32;Game&#32;data&#32;saved&#32;in&#32;the&#32;logic&#32;layer&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;3&#32;for&#32;Player&#32;data&#32;saved&#32;in&#32;the&#32;logic&#32;layer&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;4&#32;for&#32;Combatant&#32;data&#32;saved&#32;in&#32;the&#32;logic&#32;layer&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;5&#32;for&#32;World&#32;data&#32;saved&#32;in&#32;the&#32;logic&#32;layer&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;6&#32;Specific&#32;Page&#32;Data&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;7&#32;manually&#32;switch&#32;between&#32;Mobile&#32;and&#32;DeskTop&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;8&#32;manually&#32;switch&#32;between&#32;the&#32;themes&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;9&#32;TestFunctions&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00045"/>00045 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;=======&#32;The&#32;section&#32;after&#32;this&#32;is&#32;in&#32;case&#32;there&#32;are&#32;some&#32;testing&#32;menus&#32;to&#32;debug&#32;to&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Press&#32;Shift&#32;+&#32;1&#32;to&#32;go&#32;to&#32;the&#32;Main&#32;menu&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00049"/>00049 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha1))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Debugging&#32;the&#32;Local&#32;Data&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Current&#32;Account&#32;Address:&#32;{LogicLayer.LocalDataModel.CurrentAccount.Address.Hex()}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Current&#32;difficulty:&#32;{LogicLayer.LocalDataModel.CurrentDifficultyMode}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Current&#32;game&#32;mode:&#32;{LogicLayer.LocalDataModel.CurrentGameMode}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00056"/>00056 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.ChoosenGameId&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning($<emphasis role="stringliteral">&quot;Choosen&#32;game&#32;id&#32;is&#32;not&#32;set&#32;yet&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Current&#32;Game&#32;Id:&#32;{LogicLayer.LocalDataModel.ChoosenGameId.Hex()}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00065"/>00065 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Current&#32;Blobert&#32;Id:&#32;{LogicLayer.LocalDataModel.ChoosenBlobert}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Current&#32;Tournament&#32;Id:&#32;{LogicLayer.LocalDataModel.ChoosenTournament}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00068"/>00068 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;savedBlob&#32;=&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.FetchSavedBlob();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00070"/>00070 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(savedBlob&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;No&#32;saved&#32;blob&#32;found&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;The&#32;saved&#32;blob&#32;is&#32;{savedBlob.Hex()}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Finished&#32;debugging&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00081"/>00081 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha2))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Debugging&#32;the&#32;Game&#32;Data&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;all&#32;the&#32;saved&#32;games&#32;plus&#32;their&#32;status&#32;for&#32;a&#32;total&#32;amount&#32;of&#32;&quot;</emphasis>&#32;+&#32;GamesDataModel._allChallengeInvite.Count);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00086"/>00086 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;game&#32;<emphasis role="keywordflow">in</emphasis>&#32;GamesDataModel._allChallengeInvite)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;This&#32;is&#32;game&#32;{game.Key}&#32;and&#32;this&#32;is&#32;the&#32;state&#32;{GamesDataModel._gameStatusDict[game.Key]}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00092"/>00092 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha3))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Debugging&#32;the&#32;Player&#32;Data&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00096"/>00096 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;The&#32;current&#32;used&#32;has&#32;access&#32;to&#32;{PlayerDataModel.selectedPlayableCharacters.Count}&#32;blobs&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00098"/>00098 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;blob&#32;<emphasis role="keywordflow">in</emphasis>&#32;PlayerDataModel.selectedPlayableCharacters)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;{blob.GetTokenId().Hex()}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00104"/>00104 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha4))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Debugging&#32;the&#32;Combatant&#32;Data&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;To&#32;implement&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00110"/>00110 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha5))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Debugging&#32;the&#32;World&#32;Data&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00114"/>00114 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;attacks&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;attack&#32;<emphasis role="keywordflow">in</emphasis>&#32;WorldDataModel.AllAttacksDict)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;attackData&#32;=&#32;attack.Value;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;Attack&#32;{attackData.dojoName}&#32;with&#32;stats:&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;-&#32;Cooldown:&#32;{attackData.cooldown}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;-&#32;Speed:&#32;{attackData.speed}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;-&#32;Accuracy:&#32;{attackData.accuracy}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00124"/>00124 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;items&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;item&#32;<emphasis role="keywordflow">in</emphasis>&#32;WorldDataModel.AllItemsDict)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;item&#32;{item.Value.dojoName}&#32;with&#32;id&#32;{item.Value.id.Hex()}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00132"/>00132 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha8))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.CurrentGameEvent&#32;=&#32;LocalDataModel.CurrentGameEvent&#32;==&#32;LocalDataModel.GameEvent.Normal&#32;?&#32;LocalDataModel.GameEvent.AMMA&#32;:&#32;LocalDataModel.GameEvent.Normal;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00137"/>00137 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha9))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(<link linkend="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a">CaptureAndDownload</link>());
+<anchor xml:id="__ui_state_manager_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha6))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc">CallFullScreen</link>();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.Alpha7))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JavaScriptUtils.CopyStringToClipboard(<emphasis role="stringliteral">&quot;this&#32;is&#32;a&#32;test&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00149"/>00149 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;outpoutFromCopy&#32;=&#32;await&#32;JavaScriptUtils.FetchClipboardContentAsync();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(outpoutFromCopy);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00152"/>00152 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;allowedToMint&#32;=&#32;await&#32;<link linkend="_class_a_m_m_a_blobert">AMMABlobert</link>.<link linkend="_class_a_m_m_a_blobert_1a06aba5ec7e6a529fb56962c958d7369a">CheckIfAbleToMintMickey</link>(LocalDataModel.CurrentAccount.Address.Hex());
+<anchor xml:id="__ui_state_manager_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;are&#32;you&#32;allowed&#32;to&#32;mint&#32;Mickey?&#32;&#32;{allowedToMint}&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Input.GetKeyDown(KeyCode.J))
+<anchor xml:id="__ui_state_manager_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;tweetUrl&#32;=&#32;$<emphasis role="stringliteral">&quot;https://twitter.com/intent/tweet?text={Uri.EscapeDataString(&quot;</emphasis><emphasis role="keyword">this</emphasis>&#32;is&#32;a&#32;test&#32;tweet<emphasis role="stringliteral">&quot;)}&quot;</emphasis>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Application.OpenURL(tweetUrl);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00162"/>00162 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00163"/><link linkend="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a">00163</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;IEnumerator&#32;<link linkend="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a">CaptureAndDownload</link>()
+<anchor xml:id="__ui_state_manager_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Wait&#32;till&#32;the&#32;end&#32;of&#32;the&#32;frame&#32;to&#32;ensure&#32;everything&#32;is&#32;rendered</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForEndOfFrame();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00167"/>00167 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Capture&#32;the&#32;screen&#32;as&#32;a&#32;texture</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Texture2D&#32;screenTexture&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Texture2D(Screen.width,&#32;Screen.height,&#32;TextureFormat.RGB24,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;screenTexture.ReadPixels(<emphasis role="keyword">new</emphasis>&#32;Rect(0,&#32;0,&#32;Screen.width,&#32;Screen.height),&#32;0,&#32;0);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;screenTexture.Apply();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00172"/>00172 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Encode&#32;texture&#32;to&#32;PNG</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">byte</emphasis>[]&#32;imageBytes&#32;=&#32;screenTexture.EncodeToPNG();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(screenTexture);&#32;<emphasis role="comment">//&#32;Clean&#32;up&#32;the&#32;texture&#32;to&#32;free&#32;memory</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00176"/>00176 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Trigger&#32;download&#32;in&#32;browser</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;imageBase64&#32;=&#32;<link linkend="_namespace_system">System</link>.Convert.ToBase64String(imageBytes);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;fileName&#32;=&#32;DateTime.Now.ToString(<emphasis role="stringliteral">&quot;yyyyMMddHHmmss&quot;</emphasis>)&#32;+&#32;<emphasis role="stringliteral">&quot;_BA.png&quot;</emphasis>;
+<anchor xml:id="__ui_state_manager_8cs_source_1l00180"/>00180 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Call&#32;the&#32;JavaScript&#32;function&#32;to&#32;download&#32;the&#32;image</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Application.ExternalEval($<emphasis role="stringliteral">&quot;var&#32;a&#32;=&#32;document.createElement(&apos;a&apos;);&#32;a.href&#32;=&#32;&apos;data:image/png;base64,{imageBase64}&apos;;&#32;a.download&#32;=&#32;&apos;{fileName}&apos;;&#32;a.click();&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00184"/>00184 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00185"/><link linkend="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc">00185</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc">CallFullScreen</link>()
+<anchor xml:id="__ui_state_manager_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JavaScriptUtils.ToggleFullscreen();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00189"/>00189 
+<anchor xml:id="__ui_state_manager_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;<emphasis role="comment">//this&#32;needs&#32;to&#32;move&#32;too</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00191"/><link linkend="_class_ui_state_manager_1a6daaf609b4e4b3639c5db9b6e01fd820">00191</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ui_state_manager_1a6daaf609b4e4b3639c5db9b6e01fd820">CallInteractOnDisabledObject</link>(<emphasis role="keywordtype">string</emphasis>&#32;gameObjectName,&#32;<emphasis role="keywordtype">string</emphasis>&#32;parameter)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GameObject&#32;obj&#32;=&#32;GameObject.Find(gameObjectName);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(obj&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IReactListener&#32;interactable&#32;=&#32;obj.GetComponent&lt;IReactListener&gt;();
+<anchor xml:id="__ui_state_manager_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(interactable&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__ui_state_manager_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;interactable.Interact(parameter);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;No&#32;IInteractable&#32;component&#32;found.&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__ui_state_manager_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__ui_state_manager_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;GameObject&#32;not&#32;found.&quot;</emphasis>);
+<anchor xml:id="__ui_state_manager_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ui_state_manager_8cs_source_1l00211"/>00211 }
+</programlisting></section>

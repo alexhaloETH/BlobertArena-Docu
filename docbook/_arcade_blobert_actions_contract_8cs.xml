@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__arcade_blobert_actions_contract_8cs" xml:lang="en-US">
+<title>LogicLayer/Dojo/Transactions/ArcadeBlobertActionsContract.cs File Reference</title>
+<indexterm><primary>LogicLayer/Dojo/Transactions/ArcadeBlobertActionsContract.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">ArcadeBlobertActionsContract</emphasis></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_arcade_blobert_actions_contract_1_1_mint_struct">ArcadeBlobertActionsContract.MintStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_arcade_blobert_actions_contract_1_1_mint_a_m_m_a_struct">ArcadeBlobertActionsContract.MintAMMAStruct</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

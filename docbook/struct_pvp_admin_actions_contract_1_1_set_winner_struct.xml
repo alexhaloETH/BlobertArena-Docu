@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pvp_admin_actions_contract_1_1_set_winner_struct" xml:lang="en-US">
+<title>PvpAdminActionsContract.SetWinnerStruct Struct Reference</title>
+<indexterm><primary>PvpAdminActionsContract.SetWinnerStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a496a30f942c227cdbe596f85fbcfce3d">SetWinnerStruct</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a88783ca2671a89c062a99e43fb69a882">combatantId</link>, EndpointDojoCallStruct <link linkend="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a468c8e1fb4fd2de95f93aa39e87c1648">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a88783ca2671a89c062a99e43fb69a882">combatantId</link></para>
+</listitem>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a468c8e1fb4fd2de95f93aa39e87c1648">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00051">51</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a496a30f942c227cdbe596f85fbcfce3d"/><section>
+    <title>SetWinnerStruct()</title>
+<indexterm><primary>SetWinnerStruct</primary><secondary>PvpAdminActionsContract.SetWinnerStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.SetWinnerStruct</primary><secondary>SetWinnerStruct</secondary></indexterm>
+<para><computeroutput>PvpAdminActionsContract.SetWinnerStruct.SetWinnerStruct (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId, EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00056">56</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a88783ca2671a89c062a99e43fb69a882"/><section>
+    <title>combatantId</title>
+<indexterm><primary>combatantId</primary><secondary>PvpAdminActionsContract.SetWinnerStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.SetWinnerStruct</primary><secondary>combatantId</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvpAdminActionsContract.SetWinnerStruct.combatantId</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00053">53</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_pvp_admin_actions_contract_1_1_set_winner_struct_1a468c8e1fb4fd2de95f93aa39e87c1648"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>PvpAdminActionsContract.SetWinnerStruct</secondary></indexterm>
+<indexterm><primary>PvpAdminActionsContract.SetWinnerStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct PvpAdminActionsContract.SetWinnerStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__pvp_admin_actions_contract_8cs_source_1l00054">54</link> of file <link linkend="__pvp_admin_actions_contract_8cs_source">PvpAdminActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__pvp_admin_actions_contract_8cs">PvpAdminActionsContract.cs</link></section>
+</section>

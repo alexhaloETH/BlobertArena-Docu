@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_settings_panel" xml:lang="en-US">
+<title>SettingsPanel Class Reference</title>
+<indexterm><primary>SettingsPanel</primary></indexterm>
+<para>
+
+<para>Manager class to the settings panel (audio levels, muting sounds, etc.) </para>
+ 
+</para>
+<para>Inheritance diagram for SettingsPanel:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_settings_panel.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_settings_panel_1ae2433773be7370bf8a6c3762be403dda">OnOpenPanel</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_settings_panel_1ae7d14f75f9832eadfda9d4b94ebe0167">OnClosePanel</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manager class to the settings panel (audio levels, muting sounds, etc.) </para>
+<para>
+Definition at line <link linkend="__settings_panel_8cs_source_1l00009">9</link> of file <link linkend="__settings_panel_8cs_source">SettingsPanel.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_settings_panel_1ae7d14f75f9832eadfda9d4b94ebe0167"/><section>
+    <title>OnClosePanel()</title>
+<indexterm><primary>OnClosePanel</primary><secondary>SettingsPanel</secondary></indexterm>
+<indexterm><primary>SettingsPanel</primary><secondary>OnClosePanel</secondary></indexterm>
+<para><computeroutput>void SettingsPanel.OnClosePanel ( )</computeroutput></para><para>
+Definition at line <link linkend="__settings_panel_8cs_source_1l00038">38</link> of file <link linkend="__settings_panel_8cs_source">SettingsPanel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_settings_panel_1ae2433773be7370bf8a6c3762be403dda"/><section>
+    <title>OnOpenPanel()</title>
+<indexterm><primary>OnOpenPanel</primary><secondary>SettingsPanel</secondary></indexterm>
+<indexterm><primary>SettingsPanel</primary><secondary>OnOpenPanel</secondary></indexterm>
+<para><computeroutput>void SettingsPanel.OnOpenPanel ( )</computeroutput></para><para>
+Definition at line <link linkend="__settings_panel_8cs_source_1l00031">31</link> of file <link linkend="__settings_panel_8cs_source">SettingsPanel.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Elements/<link linkend="__settings_panel_8cs">SettingsPanel.cs</link></section>
+</section>

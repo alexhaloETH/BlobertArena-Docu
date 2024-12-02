@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5762009e51173fecdab30621ab6d68b2" xml:lang="en-US">
+<title>Managers/Generated Directory Reference</title>
+<indexterm><primary>Managers/Generated Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__dojo_contract_caller_8cs">DojoContractCaller.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__load_version_manager_8cs">LoadVersionManager.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

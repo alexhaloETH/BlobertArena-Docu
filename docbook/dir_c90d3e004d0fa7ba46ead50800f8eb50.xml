@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_c90d3e004d0fa7ba46ead50800f8eb50" xml:lang="en-US">
+<title>LogicLayer/Dojo Directory Reference</title>
+<indexterm><primary>LogicLayer/Dojo Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_4f4331fd29d7b1a3d38cbca147b8d7ee">Models</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_4ad0e8765bc5ab4f1a0a03c4b283a83c">Transactions</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_78bc42b29f862bab282e41579cd40349">Variants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__query_helper_8cs">QueryHelper.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

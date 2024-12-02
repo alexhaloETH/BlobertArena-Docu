@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5ff670dd641edfd616ae8c34f3a41a6a" xml:lang="en-US">
+<title>UI/Pages/SelectBlobPage Directory Reference</title>
+<indexterm><primary>UI/Pages/SelectBlobPage Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__choose_blobert_for_tournament_page_behaviour_8cs">ChooseBlobertForTournamentPageBehaviour.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__select_blob_page_behavior_8cs">SelectBlobPageBehavior.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

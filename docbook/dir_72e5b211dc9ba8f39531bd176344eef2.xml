@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_72e5b211dc9ba8f39531bd176344eef2" xml:lang="en-US">
+<title>UI/Pages/MainMenu Directory Reference</title>
+<indexterm><primary>UI/Pages/MainMenu Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__main_menu_page_behavior_8cs">MainMenuPageBehavior.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

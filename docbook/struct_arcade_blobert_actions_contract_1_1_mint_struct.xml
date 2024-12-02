@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_arcade_blobert_actions_contract_1_1_mint_struct" xml:lang="en-US">
+<title>ArcadeBlobertActionsContract.MintStruct Struct Reference</title>
+<indexterm><primary>ArcadeBlobertActionsContract.MintStruct</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_arcade_blobert_actions_contract_1_1_mint_struct_1a4ef0f5d3e603fd85233279a71647adf8">MintStruct</link> (EndpointDojoCallStruct <link linkend="_struct_arcade_blobert_actions_contract_1_1_mint_struct_1aa2f9417c90df69745cc7a4c2c02abcf2">endpointData</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>EndpointDojoCallStruct <link linkend="_struct_arcade_blobert_actions_contract_1_1_mint_struct_1aa2f9417c90df69745cc7a4c2c02abcf2">endpointData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__arcade_blobert_actions_contract_8cs_source_1l00039">39</link> of file <link linkend="__arcade_blobert_actions_contract_8cs_source">ArcadeBlobertActionsContract.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_arcade_blobert_actions_contract_1_1_mint_struct_1a4ef0f5d3e603fd85233279a71647adf8"/><section>
+    <title>MintStruct()</title>
+<indexterm><primary>MintStruct</primary><secondary>ArcadeBlobertActionsContract.MintStruct</secondary></indexterm>
+<indexterm><primary>ArcadeBlobertActionsContract.MintStruct</primary><secondary>MintStruct</secondary></indexterm>
+<para><computeroutput>ArcadeBlobertActionsContract.MintStruct.MintStruct (EndpointDojoCallStruct endpointData)</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_actions_contract_8cs_source_1l00043">43</link> of file <link linkend="__arcade_blobert_actions_contract_8cs_source">ArcadeBlobertActionsContract.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_arcade_blobert_actions_contract_1_1_mint_struct_1aa2f9417c90df69745cc7a4c2c02abcf2"/><section>
+    <title>endpointData</title>
+<indexterm><primary>endpointData</primary><secondary>ArcadeBlobertActionsContract.MintStruct</secondary></indexterm>
+<indexterm><primary>ArcadeBlobertActionsContract.MintStruct</primary><secondary>endpointData</secondary></indexterm>
+<para><computeroutput>EndpointDojoCallStruct ArcadeBlobertActionsContract.MintStruct.endpointData</computeroutput></para><para>
+Definition at line <link linkend="__arcade_blobert_actions_contract_8cs_source_1l00041">41</link> of file <link linkend="__arcade_blobert_actions_contract_8cs_source">ArcadeBlobertActionsContract.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Dojo/Transactions/<link linkend="__arcade_blobert_actions_contract_8cs">ArcadeBlobertActionsContract.cs</link></section>
+</section>

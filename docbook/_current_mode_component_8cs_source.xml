@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__current_mode_component_8cs_source" xml:lang="en-US">
+<title>CurrentModeComponent.cs</title>
+<indexterm><primary>UI/Components/CurrentModeComponent.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__current_mode_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__current_mode_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__current_mode_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__current_mode_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__current_mode_component_8cs_source_1l00005"/>00005 
+<anchor xml:id="__current_mode_component_8cs_source_1l00006"/><link linkend="_class_current_mode_component">00006</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_current_mode_component">CurrentModeComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__current_mode_component_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__current_mode_component_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;_modeSignImages;
+<anchor xml:id="__current_mode_component_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;_modeSignImage;
+<anchor xml:id="__current_mode_component_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_changeButton;
+<anchor xml:id="__current_mode_component_8cs_source_1l00011"/>00011 
+<anchor xml:id="__current_mode_component_8cs_source_1l00012"/><link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0d">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0d">DirectionButton</link>
+<anchor xml:id="__current_mode_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__current_mode_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0da945d5e233cf7d6240f6b783b36a374ff">Left</link>,
+<anchor xml:id="__current_mode_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0da92b09c7c48c520c3c55e497875da437c">Right</link>,
+<anchor xml:id="__current_mode_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0da258f49887ef8d14ac268c92b02503aaa">Up</link>,
+<anchor xml:id="__current_mode_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0da08a38277b0309070706f6652eeae9a53">Down</link>
+<anchor xml:id="__current_mode_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__current_mode_component_8cs_source_1l00019"/>00019 
+<anchor xml:id="__current_mode_component_8cs_source_1l00020"/><link linkend="_class_current_mode_component_1a839796db862c72363bc0e4947eafc4d4">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0d">DirectionButton</link>&#32;<link linkend="_class_current_mode_component_1a839796db862c72363bc0e4947eafc4d4">directionButton</link>;
+<anchor xml:id="__current_mode_component_8cs_source_1l00021"/><link linkend="_class_current_mode_component_1a544fbd367d484928f0da2ea5bd164cdd">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;Vector2&gt;&#32;<link linkend="_class_current_mode_component_1a544fbd367d484928f0da2ea5bd164cdd">positions</link>;
+<anchor xml:id="__current_mode_component_8cs_source_1l00022"/>00022 
+<anchor xml:id="__current_mode_component_8cs_source_1l00023"/><link linkend="_class_current_mode_component_1a7e4d24cc86866b7db0c02353c2aca349">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_current_mode_component_1a7e4d24cc86866b7db0c02353c2aca349">Start</link>()
+<anchor xml:id="__current_mode_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__current_mode_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SkinManager.Instance.NewSkin&#32;+=&#32;OnSkinChange;
+<anchor xml:id="__current_mode_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnDifficultyGameChanged&#32;+=&#32;<link linkend="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd">SetSpriteFromDifficulty</link>;
+<anchor xml:id="__current_mode_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__current_mode_component_8cs_source_1l00028"/>00028 
+<anchor xml:id="__current_mode_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__current_mode_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__current_mode_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd">SetSpriteFromDifficulty</link>(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentDifficultyMode);
+<anchor xml:id="__current_mode_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__current_mode_component_8cs_source_1l00033"/>00033 
+<anchor xml:id="__current_mode_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnSkinChange()
+<anchor xml:id="__current_mode_component_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__current_mode_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd">SetSpriteFromDifficulty</link>(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentDifficultyMode);
+<anchor xml:id="__current_mode_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__current_mode_component_8cs_source_1l00038"/>00038 
+<anchor xml:id="__current_mode_component_8cs_source_1l00039"/><link linkend="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd">00039</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd">SetSpriteFromDifficulty</link>(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.DifficultyGame&#32;difficultyGame)
+<anchor xml:id="__current_mode_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__current_mode_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_modeSignImage.sprite&#32;=&#32;<link linkend="_class_skin_manager">SkinManager</link>.<link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link>.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(_modeSignImages[(<emphasis role="keywordtype">int</emphasis>)difficultyGame].name);
+<anchor xml:id="__current_mode_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_changeButton.transform.localPosition&#32;=&#32;<link linkend="_class_current_mode_component_1a544fbd367d484928f0da2ea5bd164cdd">positions</link>[(int)<link linkend="_class_current_mode_component_1a839796db862c72363bc0e4947eafc4d4">directionButton</link>];
+<anchor xml:id="__current_mode_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__current_mode_component_8cs_source_1l00044"/>00044 
+<anchor xml:id="__current_mode_component_8cs_source_1l00045"/><link linkend="_class_current_mode_component_1a4390da629a1a29209d92a6290a15dc94">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_current_mode_component_1a4390da629a1a29209d92a6290a15dc94">ShowChangeButton</link>(<emphasis role="keywordtype">bool</emphasis>&#32;show)
+<anchor xml:id="__current_mode_component_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__current_mode_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;_changeButton.SetActive(show);</emphasis>
+<anchor xml:id="__current_mode_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__current_mode_component_8cs_source_1l00049"/>00049 }
+</programlisting></section>

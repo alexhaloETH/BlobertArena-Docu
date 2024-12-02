@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__choose_blobert_for_tournament_page_behaviour_8cs" xml:lang="en-US">
+<title>UI/Pages/SelectBlobPage/ChooseBlobertForTournamentPageBehaviour.cs File Reference</title>
+<indexterm><primary>UI/Pages/SelectBlobPage/ChooseBlobertForTournamentPageBehaviour.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_choose_blobert_for_tournament_page_behaviour">ChooseBlobertForTournamentPageBehaviour</link></para>
+
+<para>This first of all should connect to the blob dex component, then when the LFG button is pressed it should send the selected blobert to the tournament api, ofcourse the button shouold be disabled if the user hasnt selected a blobert. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

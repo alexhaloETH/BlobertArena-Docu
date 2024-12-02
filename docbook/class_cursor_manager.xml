@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_cursor_manager" xml:lang="en-US">
+<title>CursorManager Class Reference</title>
+<indexterm><primary>CursorManager</primary></indexterm>
+<para>
+
+<para>Manager class for the cursor and the virtual cursor. </para>
+ 
+</para>
+<para>Inheritance diagram for CursorManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cursor_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_cursor_manager_1a826cd0a9bd914d2bb46a6bcd74e5cb2b">OnCursorHover</link> (bool hovering)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manager class for the cursor and the virtual cursor. </para>
+<para>
+Definition at line <link linkend="__cursor_manager_8cs_source_1l00015">15</link> of file <link linkend="__cursor_manager_8cs_source">CursorManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cursor_manager_1a826cd0a9bd914d2bb46a6bcd74e5cb2b"/><section>
+    <title>OnCursorHover()</title>
+<indexterm><primary>OnCursorHover</primary><secondary>CursorManager</secondary></indexterm>
+<indexterm><primary>CursorManager</primary><secondary>OnCursorHover</secondary></indexterm>
+<para><computeroutput>static void CursorManager.OnCursorHover (bool hovering)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__cursor_manager_8cs_source_1l00163">163</link> of file <link linkend="__cursor_manager_8cs_source">CursorManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Singletons/<link linkend="__cursor_manager_8cs">CursorManager.cs</link></section>
+</section>

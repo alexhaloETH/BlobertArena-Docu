@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_notification_component_manager" xml:lang="en-US">
+<title>NotificationComponentManager Class Reference</title>
+<indexterm><primary>NotificationComponentManager</primary></indexterm>
+<para>Inheritance diagram for NotificationComponentManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_notification_component_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_notification_component_manager_1_1_button_struct">ButtonStruct</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_notification_component_manager_1_1_notification_object_setup">NotificationObjectSetup</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_notification_component_manager_1a4dc7a0f33353106c1b9d762efd5ba5c6">ButtonType</link> { <link linkend="_class_notification_component_manager_1a4dc7a0f33353106c1b9d762efd5ba5c6ad382816a3cbeed082c9e216e7392eed1">Green</link>
+, <link linkend="_class_notification_component_manager_1a4dc7a0f33353106c1b9d762efd5ba5c6aee38e4d5dd68c4e440825018d549cb47">Red</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> { <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0a9594eec95be70e7b1710f730fdda33d9">Blue</link>
+, <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0aee38e4d5dd68c4e440825018d549cb47">Red</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1ab44b66bb4f34272d79578e52c256ea83">OnMenuChanged</link> (<link linkend="_class_menu">Menu</link> menu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1a1d326d8b4f36ab75c5362ea275f0b077">AddNotification</link> (<link linkend="_struct_notification_component_manager_1_1_notification_object_setup">NotificationObjectSetup</link> notiObjectStruct)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1a98c907f9d351dad12010aee447adbc4b">AddHighPriorityNotification</link> (<link linkend="_struct_notification_component_manager_1_1_notification_object_setup">NotificationObjectSetup</link> notiObjectStruct)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1a9ef9b0b8fbe933ecb9250afe6283563e">DeleteCurrentNotification</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1a8bfd00512b9bab8a104934ce01d22527">ClearNotificationQueue</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1a9558e9a9ecd36d261e9b979e77c5a088">ForceNextNotification</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_notification_component_manager_1a3c1697ef2eb07bd7172678074766a8bf">HasPendingNotifications</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_notification_component_manager_1a3f3d012fb08414115dd88e30d960ce65">GetPendingNotificationCount</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_notification_component_manager_1a04fd8aa5694334626811a7e42cb58d64">CreateErrorNotification</link> (string message, bool highPrio)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>GameObject[] <link linkend="_class_notification_component_manager_1adb331ee009bcdd35355a9eb33a39d71a">ButtonPrefabs</link></para>
+</listitem>
+            <listitem><para>Sprite[] <link linkend="_class_notification_component_manager_1a7361799cab70cb3ba72724c069172e52">BackgroundColours</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_notification_component_manager_1abd63135acb2affb17da1bed2de57fc7f">_timerPerNotification</link> = 10f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00011">11</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0"/><section>
+    <title>BackgroundColour</title>
+<indexterm><primary>BackgroundColour</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>BackgroundColour</secondary></indexterm>
+<para><computeroutput>enum NotificationComponentManager.BackgroundColour</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Blue</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>Blue</secondary></indexterm>
+<anchor xml:id="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0a9594eec95be70e7b1710f730fdda33d9"/>Blue</entry><entry></entry></row><row><entry><indexterm><primary>Red</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>Red</secondary></indexterm>
+<anchor xml:id="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0aee38e4d5dd68c4e440825018d549cb47"/>Red</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00039">39</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a4dc7a0f33353106c1b9d762efd5ba5c6"/><section>
+    <title>ButtonType</title>
+<indexterm><primary>ButtonType</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>ButtonType</secondary></indexterm>
+<para><computeroutput>enum NotificationComponentManager.ButtonType</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Green</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>Green</secondary></indexterm>
+<anchor xml:id="_class_notification_component_manager_1a4dc7a0f33353106c1b9d762efd5ba5c6ad382816a3cbeed082c9e216e7392eed1"/>Green</entry><entry></entry></row><row><entry><indexterm><primary>Red</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>Red</secondary></indexterm>
+<anchor xml:id="_class_notification_component_manager_1a4dc7a0f33353106c1b9d762efd5ba5c6aee38e4d5dd68c4e440825018d549cb47"/>Red</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00019">19</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_notification_component_manager_1a98c907f9d351dad12010aee447adbc4b"/><section>
+    <title>AddHighPriorityNotification()</title>
+<indexterm><primary>AddHighPriorityNotification</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>AddHighPriorityNotification</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.AddHighPriorityNotification (<link linkend="_struct_notification_component_manager_1_1_notification_object_setup">NotificationObjectSetup</link> notiObjectStruct)</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00118">118</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a1d326d8b4f36ab75c5362ea275f0b077"/><section>
+    <title>AddNotification()</title>
+<indexterm><primary>AddNotification</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>AddNotification</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.AddNotification (<link linkend="_struct_notification_component_manager_1_1_notification_object_setup">NotificationObjectSetup</link> notiObjectStruct)</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00110">110</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a8bfd00512b9bab8a104934ce01d22527"/><section>
+    <title>ClearNotificationQueue()</title>
+<indexterm><primary>ClearNotificationQueue</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>ClearNotificationQueue</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.ClearNotificationQueue ( )</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00349">349</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a04fd8aa5694334626811a7e42cb58d64"/><section>
+    <title>CreateErrorNotification()</title>
+<indexterm><primary>CreateErrorNotification</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>CreateErrorNotification</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.CreateErrorNotification (string message, bool highPrio)</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00388">388</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a9ef9b0b8fbe933ecb9250afe6283563e"/><section>
+    <title>DeleteCurrentNotification()</title>
+<indexterm><primary>DeleteCurrentNotification</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>DeleteCurrentNotification</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.DeleteCurrentNotification ( )</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00328">328</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a9558e9a9ecd36d261e9b979e77c5a088"/><section>
+    <title>ForceNextNotification()</title>
+<indexterm><primary>ForceNextNotification</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>ForceNextNotification</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.ForceNextNotification ( )</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00355">355</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a3f3d012fb08414115dd88e30d960ce65"/><section>
+    <title>GetPendingNotificationCount()</title>
+<indexterm><primary>GetPendingNotificationCount</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>GetPendingNotificationCount</secondary></indexterm>
+<para><computeroutput>int NotificationComponentManager.GetPendingNotificationCount ( )</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00375">375</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a3c1697ef2eb07bd7172678074766a8bf"/><section>
+    <title>HasPendingNotifications()</title>
+<indexterm><primary>HasPendingNotifications</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>HasPendingNotifications</secondary></indexterm>
+<para><computeroutput>bool NotificationComponentManager.HasPendingNotifications ( )</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00369">369</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1ab44b66bb4f34272d79578e52c256ea83"/><section>
+    <title>OnMenuChanged()</title>
+<indexterm><primary>OnMenuChanged</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>OnMenuChanged</secondary></indexterm>
+<para><computeroutput>void NotificationComponentManager.OnMenuChanged (<link linkend="_class_menu">Menu</link> menu)</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00098">98</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_notification_component_manager_1abd63135acb2affb17da1bed2de57fc7f"/><section>
+    <title>_timerPerNotification</title>
+<indexterm><primary>_timerPerNotification</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>_timerPerNotification</secondary></indexterm>
+<para><computeroutput>float NotificationComponentManager._timerPerNotification = 10f</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00078">78</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1a7361799cab70cb3ba72724c069172e52"/><section>
+    <title>BackgroundColours</title>
+<indexterm><primary>BackgroundColours</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>BackgroundColours</secondary></indexterm>
+<para><computeroutput>Sprite [] NotificationComponentManager.BackgroundColours</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00068">68</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_notification_component_manager_1adb331ee009bcdd35355a9eb33a39d71a"/><section>
+    <title>ButtonPrefabs</title>
+<indexterm><primary>ButtonPrefabs</primary><secondary>NotificationComponentManager</secondary></indexterm>
+<indexterm><primary>NotificationComponentManager</primary><secondary>ButtonPrefabs</secondary></indexterm>
+<para><computeroutput>GameObject [] NotificationComponentManager.ButtonPrefabs</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00066">66</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__notification_component_manager_8cs">NotificationComponentManager.cs</link></section>
+</section>

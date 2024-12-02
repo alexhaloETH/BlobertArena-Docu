@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_hit_data" xml:lang="en-US">
+<title>LogicLayer.HitData Class Reference</title>
+<indexterm><primary>LogicLayer.HitData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_hit_data_1ab7f3fc5f5ed8c5f5e6fb922a42708895">target</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_affect_data">AffectData</link> <link linkend="_class_logic_layer_1_1_hit_data_1a0cc689bfae0ffc52c912ae2f44fabc44">affect</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00117">117</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_hit_data_1a0cc689bfae0ffc52c912ae2f44fabc44"/><section>
+    <title>affect</title>
+<indexterm><primary>affect</primary><secondary>LogicLayer.HitData</secondary></indexterm>
+<indexterm><primary>LogicLayer.HitData</primary><secondary>affect</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_affect_data">AffectData</link> LogicLayer.HitData.affect<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00120">120</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_hit_data_1ab7f3fc5f5ed8c5f5e6fb922a42708895"/><section>
+    <title>target</title>
+<indexterm><primary>target</primary><secondary>LogicLayer.HitData</secondary></indexterm>
+<indexterm><primary>LogicLayer.HitData</primary><secondary>target</secondary></indexterm>
+<para><computeroutput>string LogicLayer.HitData.target<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00119">119</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_commitment_1_1_commitment_data_query" xml:lang="en-US">
+<title>Commitment.CommitmentDataQuery Class Reference</title>
+<indexterm><primary>Commitment.CommitmentDataQuery</primary></indexterm>
+<para>Inheritance diagram for Commitment.CommitmentDataQuery:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_commitment_1_1_commitment_data_query.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_commitment_1_1_commitment_data_query_1ac88df816099f6206356c75893f896fec">__typename</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_commitment_1_1_commitment_data_query_1a57dd16737556145ac4b9f66eccfcd198">id</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_commitment_1_1_commitment_data_query_1a3b7a262ca91d26983b9c9ed9f1b36633">commitment</link> = string.Empty<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00061">61</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_commitment_1_1_commitment_data_query_1ac88df816099f6206356c75893f896fec"/><section>
+    <title>__typename</title>
+<indexterm><primary>__typename</primary><secondary>Commitment.CommitmentDataQuery</secondary></indexterm>
+<indexterm><primary>Commitment.CommitmentDataQuery</primary><secondary>__typename</secondary></indexterm>
+<para><computeroutput>string Commitment.CommitmentDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+<para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00063">63</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_commitment_1_1_commitment_data_query_1a3b7a262ca91d26983b9c9ed9f1b36633"/><section>
+    <title>commitment</title>
+<indexterm><primary>commitment</primary><secondary>Commitment.CommitmentDataQuery</secondary></indexterm>
+<indexterm><primary>Commitment.CommitmentDataQuery</primary><secondary>commitment</secondary></indexterm>
+<para><computeroutput>string Commitment.CommitmentDataQuery.commitment = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00065">65</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_commitment_1_1_commitment_data_query_1a57dd16737556145ac4b9f66eccfcd198"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Commitment.CommitmentDataQuery</secondary></indexterm>
+<indexterm><primary>Commitment.CommitmentDataQuery</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>string Commitment.CommitmentDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00064">64</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__commitment_8gen_8cs">Commitment.gen.cs</link></section>
+</section>

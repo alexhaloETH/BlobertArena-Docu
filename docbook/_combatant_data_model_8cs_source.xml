@@ -1,0 +1,743 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__combatant_data_model_8cs_source" xml:lang="en-US">
+<title>CombatantDataModel.cs</title>
+<indexterm><primary>LogicLayer/Managers/CombatantDataModel.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__combatant_data_model_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>dojo_bindings;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>Newtonsoft.Json.Linq;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>SimpleGraphQL;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>System.Linq;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00011"/>00011 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00012"/>00012 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00013"/>00013 {
+<anchor xml:id="__combatant_data_model_8cs_source_1l00025"/>00025 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>CombatantDataModel
+<anchor xml:id="__combatant_data_model_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00028"/>00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Query&#32;Statics</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00029"/>00029 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;ModelCombatantInfo&#32;=&#32;<emphasis role="stringliteral">&quot;blob_arena-CombatantInfo&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;ModelPlannedAttack&#32;=&#32;<emphasis role="stringliteral">&quot;blob_arena-PlannedAttack&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;ModelCommitment&#32;=&#32;<emphasis role="stringliteral">&quot;blob_arena-Commitment&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00033"/>00033 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;MemberId&#32;=&#32;<emphasis role="stringliteral">&quot;id&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;dojo.ComparisonOperator&#32;Operator&#32;=&#32;dojo.ComparisonOperator.Eq;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00036"/>00036 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00037"/>00037 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;Query&#32;Statics</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00038"/>00038 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00039"/>00039 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;State&#32;of&#32;the&#32;battle&#32;itself</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00040"/>00040 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;int&gt;&#32;GetCommitmentStateQuery(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;selfCombatantId,&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;enemyCombatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00043"/>00043 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;selfCombatantId&#32;});
+<anchor xml:id="__combatant_data_model_8cs_source_1l00045"/>00045 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantIdPH&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[1]&#32;{&#32;selfCombatantId.Hex()&#32;}));
+<anchor xml:id="__combatant_data_model_8cs_source_1l00047"/>00047 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00048"/>00048 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00049"/>00049 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;BlobertUtils.PoseidonHash(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;enemyCombatantId&#32;});
+<anchor xml:id="__combatant_data_model_8cs_source_1l00051"/>00051 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantIdPH&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(JavaScriptUtils.PoseidonHashHelper(<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[1]&#32;{&#32;enemyCombatantId.Hex()&#32;}));
+<anchor xml:id="__combatant_data_model_8cs_source_1l00053"/>00053 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00054"/>00054 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//var&#32;selfCommitment&#32;=&#32;await&#32;QueryCommitments(selfCombatantIdPH);</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//var&#32;enemyCommitment&#32;=&#32;await&#32;QueryCommitments(enemyCombatantIdPH);</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//instead&#32;of&#32;doing&#32;queries&#32;look&#32;in&#32;the&#32;dictionary</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCommitment&#32;=&#32;combatantHashedToCommitmentMap[selfCombatantIdPH.Hex()];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCommitment&#32;=&#32;combatantHashedToCommitmentMap[enemyCombatantIdPH.Hex()];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00060"/>00060 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;bit&#32;=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00062"/>00062 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfCombatantId&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfCommitment.commitment.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;1;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00078"/>00078 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyCombatantId&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyCommitment.commitment.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;2;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00094"/>00094 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;bit;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00096"/>00096 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;async&#32;Task&lt;Commitment&gt;&#32;QueryCommitments(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;CombatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Dojo.Torii.Query&#32;queryForGameInv&#32;=&#32;<link linkend="_class_query_helper">QueryHelper</link>.<link linkend="_class_query_helper_1a95ea08d0ddef7db031b486192f2999ae">CreateMemberClauseQuery</link>(
+<anchor xml:id="__combatant_data_model_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ModelCommitment,&#32;MemberId,&#32;Operator,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;Dojo.Torii.Primitive&#32;{&#32;ContractAddress&#32;=&#32;CombatantId&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;,&#32;1000,&#32;0);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00103"/>00103 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;outputQueryCommitment&#32;=&#32;await&#32;DojoEntitiesStorage.worldManager.StandardEntityFetch(queryForGameInv);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00105"/>00105 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(outputQueryCommitment.Count&#32;==&#32;0)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00110"/>00110 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;firstEntity&#32;=&#32;outputQueryCommitment[0];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scriptOutputCommitment&#32;=&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.GetScriptsFromQueryResult(firstEntity.Models.Values.ToArray());
+<anchor xml:id="__combatant_data_model_8cs_source_1l00113"/>00113 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;model&#32;<emphasis role="keywordflow">in</emphasis>&#32;scriptOutputCommitment)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;is&#32;<link linkend="_class_commitment">Commitment</link>&#32;plannedAttack)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;plannedAttack;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00121"/>00121 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00125"/>00125 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;int&gt;&#32;GetPlannedAttackStateQuery(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;selfCombatantId,&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;enemyCombatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selfCombatantPlannedAttack&#32;=&#32;await&#32;QueryPlannedAttack(selfCombatantId);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;enemyCombatantPlannedAttack&#32;=&#32;await&#32;QueryPlannedAttack(enemyCombatantId);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00130"/>00130 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;bit&#32;=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00132"/>00132 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfCombatantPlannedAttack&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfCombatantPlannedAttack.target.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;1;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00148"/>00148 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyCombatantPlannedAttack&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyCombatantPlannedAttack.target.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;2;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00164"/>00164 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;bit;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00166"/>00166 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;async&#32;Task&lt;PlannedAttack&gt;&#32;QueryPlannedAttack(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;CombatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Dojo.Torii.Query&#32;queryForGameInv&#32;=&#32;<link linkend="_class_query_helper">QueryHelper</link>.<link linkend="_class_query_helper_1a95ea08d0ddef7db031b486192f2999ae">CreateMemberClauseQuery</link>(
+<anchor xml:id="__combatant_data_model_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ModelPlannedAttack,&#32;MemberId,&#32;Operator,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;Dojo.Torii.Primitive&#32;{&#32;U128&#32;=&#32;BlobertUtils.FieldElementToSpan(CombatantId)&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;,&#32;1000,&#32;0);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00173"/>00173 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;outputQueryChallengeInvite&#32;=&#32;await&#32;DojoEntitiesStorage.worldManager.StandardEntityFetch(queryForGameInv);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00175"/>00175 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(outputQueryChallengeInvite.Count&#32;==&#32;0)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00180"/>00180 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;firstEntity&#32;=&#32;outputQueryChallengeInvite[0];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scriptOutputChallengeInvite&#32;=&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.GetScriptsFromQueryResult(firstEntity.Models.Values.ToArray());
+<anchor xml:id="__combatant_data_model_8cs_source_1l00183"/>00183 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;model&#32;<emphasis role="keywordflow">in</emphasis>&#32;scriptOutputChallengeInvite)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(model&#32;is&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;plannedAttack)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;plannedAttack;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00191"/>00191 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00195"/>00195 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;GameObject&gt;&#32;GetPlannedAttacksObj(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Dojo.Torii.Query&#32;queryForAttacksObj&#32;=&#32;<link linkend="_class_query_helper">QueryHelper</link>.<link linkend="_class_query_helper_1a95ea08d0ddef7db031b486192f2999ae">CreateMemberClauseQuery</link>(
+<anchor xml:id="__combatant_data_model_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ModelPlannedAttack,&#32;MemberId,&#32;Operator,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;Dojo.Torii.Primitive&#32;{&#32;U128&#32;=&#32;BlobertUtils.FieldElementToSpan(combatantId)&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;,&#32;1000,&#32;0);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00202"/>00202 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;outputQueryChallengeInvite&#32;=&#32;await&#32;DojoEntitiesStorage.worldManager.StandardEntityFetch(queryForAttacksObj);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;outputQueryChallengeInvite.Count:&#32;{outputQueryChallengeInvite.Count}&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(outputQueryChallengeInvite.Count&#32;==&#32;0)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00209"/>00209 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;firstEntity&#32;=&#32;outputQueryChallengeInvite[0];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00211"/>00211 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.SpawnEntity(firstEntity.HashedKeys,&#32;firstEntity.Models.Values.ToArray());&#32;;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00214"/>00214 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetCommitmentState(<link linkend="_class_commitment">Commitment</link>&#32;selfCommitment,&#32;<link linkend="_class_commitment">Commitment</link>&#32;enemyCommitment)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;bit&#32;=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00218"/>00218 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfCommitment&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfCommitment.<link linkend="_class_commitment_1a210cf2e1d847bed142792ab812447520">commitment</link>.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;1;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00234"/>00234 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyCommitment&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyCommitment.<link linkend="_class_commitment_1a210cf2e1d847bed142792ab812447520">commitment</link>.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;2;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00250"/>00250 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;bit;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00253"/>00253 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetPlannedAttackState(<link linkend="_class_planned_attack">PlannedAttack</link>&#32;selfPlannedAttack,&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;enemyPlannedAttack)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;bit&#32;=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00257"/>00257 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfPlannedAttack&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(selfPlannedAttack.<link linkend="_class_planned_attack_1a62bfca15188a0b077143495a3d6a6f47">target</link>.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;1;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00273"/>00273 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyPlannedAttack&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enemyPlannedAttack.<link linkend="_class_planned_attack_1a62bfca15188a0b077143495a3d6a6f47">target</link>.Hex()&#32;==&#32;BlobertUtils.emptyFieldElement)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;2;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bit&#32;|=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00289"/>00289 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;bit;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00292"/>00292 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;WaitState
+<anchor xml:id="__combatant_data_model_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelfWaiting,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BothNothing,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EnemyWaiting,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BothDone
+<anchor xml:id="__combatant_data_model_8cs_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00300"/>00300 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;WaitState&#32;BitsToWaitState(<emphasis role="keywordtype">int</emphasis>&#32;bits)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(bits)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;0:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;WaitState.BothNothing;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00312"/>00312 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;WaitState.SelfWaiting;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00315"/>00315 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;WaitState.EnemyWaiting;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00318"/>00318 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;3:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;WaitState.BothDone;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;WaitState.EnemyWaiting;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00324"/>00324 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00325"/>00325 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;State&#32;of&#32;the&#32;battle&#32;itself</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00326"/>00326 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;List&lt;(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;attack_id,&#32;<emphasis role="keywordtype">int</emphasis>&#32;lastUsed)&gt;&gt;&#32;GetAvailableAttacksOfTheCombatant(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//get&#32;the&#32;token&#32;id</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//find&#32;the&#32;blobert</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//get&#32;the&#32;attacks</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00337"/>00337 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//query&#32;for&#32;each</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;tokenId&#32;=&#32;await&#32;GetTokenIdFromCombatant(combatantId);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00340"/>00340 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobert&#32;=&#32;WorldDataModel.AllPlayableCharactersInTheGame[tokenId.Hex()];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;attacks&#32;=&#32;WorldDataModel.FetchAllAttacksFromItems(WorldDataModel.GetAllItemsOfCharactersFromTraits(blobert.GetTokenTrait()));
+<anchor xml:id="__combatant_data_model_8cs_source_1l00343"/>00343 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;availableAttacks&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;(FieldElement,&#32;int)&gt;();
+<anchor xml:id="__combatant_data_model_8cs_source_1l00345"/>00345 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;attack&#32;<emphasis role="keywordflow">in</emphasis>&#32;attacks)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;availableAttackId&#32;=&#32;await&#32;ManualQueryAvailableAttackIdFromCombatant(combatantId,&#32;attack.id);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;availableAttacks.Add(availableAttackId);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00351"/>00351 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;availableAttacks;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00354"/>00354 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;GameObject&gt;&#32;QueryForCombatantData(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Dojo.Torii.Query&#32;queryForCombatantInfo&#32;=&#32;<link linkend="_class_query_helper">QueryHelper</link>.<link linkend="_class_query_helper_1a95ea08d0ddef7db031b486192f2999ae">CreateMemberClauseQuery</link>(
+<anchor xml:id="__combatant_data_model_8cs_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ModelCombatantInfo,&#32;MemberId,&#32;Operator,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;Dojo.Torii.Primitive&#32;{&#32;U128&#32;=&#32;BlobertUtils.FieldElementToSpan(combatantId)&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;,&#32;1000,&#32;0);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00366"/>00366 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;outputQueryCombatantInfo&#32;=&#32;await&#32;DojoEntitiesStorage.worldManager.StandardEntityFetch(queryForCombatantInfo);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00368"/>00368 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(outputQueryCombatantInfo.Count&#32;==&#32;0)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00373"/>00373 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;firstEntity&#32;=&#32;outputQueryCombatantInfo[0];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00375"/>00375 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scriptOutputCombatantInfo&#32;=&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.SpawnEntity(firstEntity.HashedKeys,&#32;firstEntity.Models.Values.ToArray());
+<anchor xml:id="__combatant_data_model_8cs_source_1l00377"/>00377 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;scriptOutputCombatantInfo;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00380"/>00380 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00384"/><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data">00384</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data">QueryCompiledCombatantData</link>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00386"/><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a8c0c09a8c4ceb767ed75deead063c8ff">00386</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_combatant_info">CombatantInfo</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a8c0c09a8c4ceb767ed75deead063c8ff">combatantInfo</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00387"/><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a01cbac439018729b1517b481267c9920">00387</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_combatant_stats">CombatantStats</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a01cbac439018729b1517b481267c9920">combatantStats</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00388"/><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a975c7356c5608e485f23da2201d76d8d">00388</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_combatant_state">CombatantState</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a975c7356c5608e485f23da2201d76d8d">combatantState</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00389"/><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a04490d110aebfc8cabfed26e13d0d119">00389</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a04490d110aebfc8cabfed26e13d0d119">plannedAttack</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00390"/>00390 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//could&#32;prob&#32;get&#32;the&#32;available&#32;attacks&#32;too</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00392"/><link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a5425b498efe126fc8642b0cc5daf4268">00392</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a5425b498efe126fc8642b0cc5daf4268">QueryCompiledCombatantData</link>(<link linkend="_class_combatant_info">CombatantInfo</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a8c0c09a8c4ceb767ed75deead063c8ff">combatantInfo</link>,&#32;<link linkend="_class_combatant_stats">CombatantStats</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a01cbac439018729b1517b481267c9920">combatantStats</link>,&#32;<link linkend="_class_combatant_state">CombatantState</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a975c7356c5608e485f23da2201d76d8d">combatantState</link>,&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a04490d110aebfc8cabfed26e13d0d119">plannedAttack</link>&#32;=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00394"/>00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.combatantInfo&#32;=&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a8c0c09a8c4ceb767ed75deead063c8ff">combatantInfo</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.combatantStats&#32;=&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a01cbac439018729b1517b481267c9920">combatantStats</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00396"/>00396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.combatantState&#32;=&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a975c7356c5608e485f23da2201d76d8d">combatantState</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.plannedAttack&#32;=&#32;<link linkend="_struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data_1a04490d110aebfc8cabfed26e13d0d119">plannedAttack</link>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00399"/>00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00400"/>00400 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;QueryCompiledCombatantData&#32;GetGameDataFromQuery(List&lt;ModelInstance&gt;&#32;models)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_combatant_info">CombatantInfo</link>&#32;combatantInfo&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_combatant_stats">CombatantStats</link>&#32;combatantStats&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00410"/>00410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_combatant_state">CombatantState</link>&#32;combatantState&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00411"/>00411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;plannedAttack&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00412"/>00412 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;model&#32;<emphasis role="keywordflow">in</emphasis>&#32;models)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00414"/>00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00415"/>00415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(model)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_combatant_info">CombatantInfo</link>&#32;info:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00418"/>00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatantInfo&#32;=&#32;info;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00420"/>00420 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00421"/>00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_combatant_stats">CombatantStats</link>&#32;stats:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatantStats&#32;=&#32;stats;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00424"/>00424 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00425"/>00425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_combatant_state">CombatantState</link>&#32;state:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatantState&#32;=&#32;state;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00427"/>00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00428"/>00428 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;plannedAttackModel:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;plannedAttack&#32;=&#32;plannedAttackModel;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00432"/>00432 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00433"/>00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__combatant_data_model_8cs_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00435"/>00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00436"/>00436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00437"/>00437 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00438"/>00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;QueryCompiledCombatantData(combatantInfo,&#32;combatantStats,&#32;combatantState,&#32;plannedAttack);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00440"/>00440 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00446"/>00446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;GameObject&gt;&#32;QueryForCommitmentObject(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;hashedCombatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00447"/>00447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00448"/>00448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;the&#32;hashed&#32;combatant&#32;id&#32;is&#32;the&#32;&#32;combatant&#32;id&#32;that&#32;is&#32;hashed&#32;with&#32;poseidon&#32;hash&#32;algorithm&#32;on&#32;its&#32;own</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryForCommitment&#32;=&#32;<link linkend="_class_query_helper">QueryHelper</link>.<link linkend="_class_query_helper_1af7ca5c42433dbc2e03ce22e0618a4d64">CreateKeysModelQuery</link>(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[]&#32;{&#32;hashedCombatantId&#32;},&#32;dojo.PatternMatching.FixedLen,&#32;ModelCommitment);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00450"/>00450 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;outputQueryCombatantInfo&#32;=&#32;await&#32;DojoEntitiesStorage.worldManager.StandardEntityFetch(queryForCommitment);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00452"/>00452 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(outputQueryCombatantInfo.Count&#32;==&#32;0)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00454"/>00454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00455"/>00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00457"/>00457 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;firstEntity&#32;=&#32;outputQueryCombatantInfo[0];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00459"/>00459 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00460"/>00460 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scriptOutputCombatantInfo&#32;=&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.SpawnEntity(firstEntity.HashedKeys,&#32;firstEntity.Models.Values.ToArray());
+<anchor xml:id="__combatant_data_model_8cs_source_1l00461"/>00461 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00462"/>00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;scriptOutputCombatantInfo;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00463"/>00463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00464"/>00464 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00472"/>00472 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;List&lt;<link linkend="_class_battle_page_controller">BattlePageController</link>.<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&gt;&gt;&#32;LoadStateOfAttacksForCombatant(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatant,&#32;uint&#32;currentRound&#32;=&#32;1)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00473"/>00473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00474"/>00474 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;returnData&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;<link linkend="_class_battle_page_controller">BattlePageController</link>.<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&gt;();
+<anchor xml:id="__combatant_data_model_8cs_source_1l00475"/>00475 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;attacks&#32;=&#32;await&#32;CombatantDataModel.GetAvailableAttacksOfTheCombatant(combatant);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00476"/>00476 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00477"/>00477 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;(attackId,&#32;lastRoundUsed)&#32;in&#32;attacks)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00478"/>00478 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00479"/>00479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;attackData&#32;=&#32;WorldDataModel.AllAttacksDict[attackId.Hex()];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00480"/>00480 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;attackCooldown&#32;=&#32;attackData.cooldown;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00481"/>00481 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;availability&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00482"/>00482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;roundUntil&#32;=&#32;0;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00483"/>00483 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00484"/>00484 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;cooldown&#32;is&#32;0,&#32;attack&#32;is&#32;always&#32;available</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(attackCooldown&#32;==&#32;0)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00486"/>00486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00487"/>00487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;availability&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00488"/>00488 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00489"/>00489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(lastRoundUsed&#32;==&#32;0&#32;||&#32;(lastRoundUsed&#32;+&#32;attackCooldown&#32;&lt;=&#32;currentRound))
+<anchor xml:id="__combatant_data_model_8cs_source_1l00490"/>00490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00491"/>00491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;availability&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00492"/>00492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00493"/>00493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00494"/>00494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00495"/>00495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;roundUntil&#32;=&#32;(int)(lastRoundUsed&#32;+&#32;attackCooldown&#32;-&#32;currentRound);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00496"/>00496 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00497"/>00497 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00498"/>00498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;returnData.Add(<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_battle_page_controller">BattlePageController</link>.<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00499"/>00499 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00500"/>00500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Attack&#32;=&#32;attackData,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00501"/>00501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Availability&#32;=&#32;availability,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00502"/>00502 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RoundUntil&#32;=&#32;roundUntil
+<anchor xml:id="__combatant_data_model_8cs_source_1l00503"/>00503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;});
+<anchor xml:id="__combatant_data_model_8cs_source_1l00504"/>00504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00505"/>00505 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00506"/>00506 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Sort&#32;attacks&#32;using&#32;the&#32;WorldDataModel&apos;s&#32;sorting&#32;method</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00507"/>00507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sortedAttacks&#32;=&#32;WorldDataModel.SortAttacks(returnData.Select(tuple&#32;=&gt;&#32;tuple.Attack).ToList());
+<anchor xml:id="__combatant_data_model_8cs_source_1l00508"/>00508 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00509"/>00509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sortedReturnData&#32;=&#32;sortedAttacks.Select(sortedAttack&#32;=&gt;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00510"/>00510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;returnData.First(tuple&#32;=&gt;&#32;tuple.Attack&#32;==&#32;sortedAttack)).ToList();
+<anchor xml:id="__combatant_data_model_8cs_source_1l00511"/>00511 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00512"/>00512 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sortedReturnData;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00513"/>00513 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00514"/>00514 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00515"/>00515 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;utils</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00516"/>00516 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00517"/>00517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;bool&gt;&#32;IsCombatantAMMA(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantID)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00518"/>00518 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00519"/>00519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;tokenId&#32;=&#32;await&#32;ManualQueryTokenIdFromCombatant(combatantID);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00520"/>00520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;blobert&#32;=&#32;WorldDataModel.AllPlayableCharactersInTheGame[tokenId.Hex()];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00521"/>00521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;blobert.GetNftType()&#32;==&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">NFTTypes</link>.AMMABlobs;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00522"/>00522 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00523"/>00523 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00524"/>00524 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//there&#32;needs&#32;to&#32;be&#32;a&#32;query&#32;system&#32;call&#32;to&#32;get&#32;the&#32;combatant&#32;id&#32;from&#32;the&#32;token&#32;id</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00525"/>00525 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;FieldElement&gt;&#32;GetTokenIdFromCombatant(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00526"/>00526 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00527"/>00527 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Dojo.Torii.Query&#32;keyQuery&#32;=&#32;CombatantInfo.KeyQuery(combatantId);</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00528"/>00528 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00529"/>00529 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//var&#32;outputQueryCombatantInfo&#32;=&#32;await&#32;DojoEntitiesStorage.worldManager.StandardEntityFetch(keyQuery);</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00530"/>00530 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00531"/>00531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Debug.Log($&quot;outputQueryCombatantInfo.Count:&#32;{outputQueryCombatantInfo.Count}&quot;);</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00532"/>00532 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00533"/>00533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(outputQueryCombatantInfo.Count&#32;&gt;&#32;0)</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00534"/>00534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00535"/>00535 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;//do&#32;reflection&#32;to&#32;get&#32;the&#32;right&#32;class&#32;whichs&#32;is&#32;the&#32;comabtant&#32;info</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00536"/>00536 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;firstEntity&#32;=&#32;outputQueryCombatantInfo[0];</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00537"/>00537 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;scriptOutputCombatantInfo&#32;=&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.GetScriptsFromQueryResult(firstEntity.Models.Values.ToArray());</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00538"/>00538 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00539"/>00539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;foreach&#32;(var&#32;item&#32;in&#32;scriptOutputCombatantInfo)</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00540"/>00540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00541"/>00541 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//find&#32;the&#32;combatant&#32;info</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00542"/>00542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(item&#32;is&#32;CombatantInfo&#32;combatantInfo)</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00543"/>00543 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00544"/>00544 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;combatantInfo.token_id.low;</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00545"/>00545 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00546"/>00546 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00547"/>00547 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00548"/>00548 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00549"/>00549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;await&#32;ManualQueryTokenIdFromCombatant(combatantId);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00550"/>00550 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00551"/>00551 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//var&#32;firstEntity&#32;=&#32;outputQueryCombatantInfo[0];</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00552"/>00552 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//var&#32;scriptOutputCombatantInfo&#32;=&#32;DojoEntitiesStorage.worldManager.synchronizationMaster.GetScriptsFromQueryResult(firstEntity.Models.Values.ToArray());</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00553"/>00553 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00554"/>00554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//foreach&#32;(var&#32;item&#32;in&#32;scriptOutputCombatantInfo)</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00555"/>00555 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00556"/>00556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;//find&#32;the&#32;combatant&#32;info</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00557"/>00557 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;if&#32;(item&#32;is&#32;CombatantInfo&#32;combatantInfo)</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00558"/>00558 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00559"/>00559 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;combatantInfo.token_id.low;</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00560"/>00560 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00561"/>00561 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00562"/>00562 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00563"/>00563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//return&#32;null;</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00564"/>00564 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00565"/>00565 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00566"/>00566 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;utils</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00567"/>00567 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00568"/>00568 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;everything&#32;below&#32;here&#32;is&#32;to&#32;delete&#32;later</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00569"/>00569 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;a&#32;quick&#32;explanation&#32;as&#32;to&#32;what&#32;the&#32;issue&#32;si&#32;that&#32;the&#32;queries&#32;on&#32;the&#32;dojo.c&#32;side&#32;(therefore&#32;the&#32;important&#32;part&#32;of&#32;the&#32;SDK)&#32;are&#32;returning&#32;empty&#32;even&#32;though&#32;they&#32;shouldnt</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00570"/>00570 <emphasis role="comment"></emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00571"/>00571 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;for&#32;some&#32;reason&#32;if&#32;for&#32;example&#32;there&#32;is&#32;an&#32;entity&#32;that&#32;can&#32;has&#32;3&#32;different&#32;models,&#32;lets&#32;say&#32;model&#32;A&#32;model&#32;B&#32;and&#32;model&#32;C&#32;if&#32;the&#32;entity&#32;at&#32;the&#32;time&#32;of&#32;the&#32;query</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00572"/>00572 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;doesnt&#32;have&#32;all&#32;3&#32;models&#32;the&#32;query&#32;will&#32;return&#32;empty,&#32;this&#32;is&#32;a&#32;problem&#32;because&#32;the&#32;query&#32;should&#32;return&#32;the&#32;entity&#32;regardless&#32;of&#32;the&#32;models&#32;it&#32;has,&#32;hence&#32;why&#32;sometimes&#32;it&#32;works&#32;and&#32;sometimes</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00573"/>00573 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;it&#32;doesnt&#32;and&#32;we&#32;manually&#32;do&#32;the&#32;look&#32;up&#32;using&#32;the&#32;Graphql&#32;client</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00574"/>00574 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00575"/>00575 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00576"/>00576 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Thing&#32;to&#32;delete&#32;after</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00577"/>00577 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00578"/>00578 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;FieldElement&gt;&#32;ManualQueryTokenIdFromCombatant(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00579"/>00579 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00580"/>00580 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;<emphasis role="stringliteral">$@&quot;</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00581"/>00581 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;query&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00582"/>00582 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaCombatantInfoModels(where:&#32;{{id:&#32;&quot;&quot;{combatantId.Hex()}&quot;&quot;}})&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00583"/>00583 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00584"/>00584 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00585"/>00585 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00586"/>00586 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00587"/>00587 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00588"/>00588 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00589"/>00589 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_CombatantInfo&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00590"/>00590 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;token_id</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00591"/>00591 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00592"/>00592 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00593"/>00593 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00594"/>00594 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00595"/>00595 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00596"/>00596 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00597"/>00597 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00598"/>00598 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00599"/>00599 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00600"/>00600 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GraphQLClient($<emphasis role="stringliteral">&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00601"/>00601 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00602"/>00602 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Request
+<anchor xml:id="__combatant_data_model_8cs_source_1l00603"/>00603 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00604"/>00604 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;=&#32;queryString,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00605"/>00605 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__combatant_data_model_8cs_source_1l00606"/>00606 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00607"/>00607 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00608"/>00608 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00609"/>00609 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00610"/>00610 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00611"/>00611 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00612"/>00612 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00613"/>00613 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;edges&#32;=&#32;jsonObj[<emphasis role="stringliteral">&quot;Data&quot;</emphasis>][<emphasis role="stringliteral">&quot;blobArenaCombatantInfoModels&quot;</emphasis>][<emphasis role="stringliteral">&quot;edges&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00614"/>00614 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00615"/>00615 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;edge&#32;<emphasis role="keywordflow">in</emphasis>&#32;edges)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00616"/>00616 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00617"/>00617 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;models&#32;=&#32;edge[<emphasis role="stringliteral">&quot;node&quot;</emphasis>][<emphasis role="stringliteral">&quot;entity&quot;</emphasis>][<emphasis role="stringliteral">&quot;models&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00618"/>00618 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00619"/>00619 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;model&#32;<emphasis role="keywordflow">in</emphasis>&#32;models)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00620"/>00620 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00621"/>00621 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;<emphasis role="keyword">typename</emphasis>&#32;=&#32;(string)model[<emphasis role="stringliteral">&quot;__typename&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00622"/>00622 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00623"/>00623 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">typename</emphasis>&#32;==&#32;<emphasis role="stringliteral">&quot;blob_arena_CombatantInfo&quot;</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00624"/>00624 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00625"/>00625 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;tokenId&#32;=&#32;(string)model[<emphasis role="stringliteral">&quot;token_id&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00626"/>00626 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(tokenId);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00627"/>00627 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00628"/>00628 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00629"/>00629 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00630"/>00630 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00631"/>00631 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;No&#32;token_id&#32;found&#32;for&#32;combatant&#32;ID&#32;{combatantId.Hex()}&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00632"/>00632 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00633"/>00633 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00634"/>00634 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00635"/>00635 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>,&#32;int)&gt;&#32;ManualQueryAvailableAttackIdFromCombatant(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId,&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;attackId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00636"/>00636 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00637"/>00637 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;<emphasis role="stringliteral">$@&quot;</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00638"/>00638 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;query&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00639"/>00639 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaAvailableAttackModels(where:&#32;{{combatant_id:&#32;&quot;&quot;{combatantId.Hex()}&quot;&quot;,&#32;attack_id:&#32;&quot;&quot;{attackId.Hex()}&quot;&quot;&#32;}})&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00640"/>00640 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00641"/>00641 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00642"/>00642 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00643"/>00643 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00644"/>00644 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00645"/>00645 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_AvailableAttack&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00646"/>00646 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack_id</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00647"/>00647 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;last_used</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00648"/>00648 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00649"/>00649 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00650"/>00650 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00651"/>00651 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00652"/>00652 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00653"/>00653 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00654"/>00654 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00655"/>00655 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00656"/>00656 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GraphQLClient($<emphasis role="stringliteral">&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00657"/>00657 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00658"/>00658 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Request
+<anchor xml:id="__combatant_data_model_8cs_source_1l00659"/>00659 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00660"/>00660 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;=&#32;queryString,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00661"/>00661 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__combatant_data_model_8cs_source_1l00662"/>00662 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00663"/>00663 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00664"/>00664 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00665"/>00665 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00666"/>00666 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00667"/>00667 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00668"/>00668 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00669"/>00669 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;edges&#32;=&#32;jsonObj[<emphasis role="stringliteral">&quot;Data&quot;</emphasis>][<emphasis role="stringliteral">&quot;blobArenaAvailableAttackModels&quot;</emphasis>][<emphasis role="stringliteral">&quot;edges&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00670"/>00670 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00671"/>00671 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;edge&#32;<emphasis role="keywordflow">in</emphasis>&#32;edges)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00672"/>00672 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00673"/>00673 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;models&#32;=&#32;edge[<emphasis role="stringliteral">&quot;node&quot;</emphasis>][<emphasis role="stringliteral">&quot;entity&quot;</emphasis>][<emphasis role="stringliteral">&quot;models&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00674"/>00674 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00675"/>00675 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;model&#32;<emphasis role="keywordflow">in</emphasis>&#32;models)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00676"/>00676 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00677"/>00677 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;<emphasis role="keyword">typename</emphasis>&#32;=&#32;(string)model[<emphasis role="stringliteral">&quot;__typename&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00678"/>00678 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00679"/>00679 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">typename</emphasis>&#32;==&#32;<emphasis role="stringliteral">&quot;blob_arena_AvailableAttack&quot;</emphasis>)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00680"/>00680 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00681"/>00681 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;lastUsed&#32;=&#32;<emphasis role="keywordtype">int</emphasis>.Parse((<emphasis role="keywordtype">string</emphasis>)model[<emphasis role="stringliteral">&quot;last_used&quot;</emphasis>]);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00682"/>00682 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(attackId,&#32;lastUsed);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00683"/>00683 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00684"/>00684 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00685"/>00685 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00686"/>00686 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00687"/>00687 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(attackId,&#32;0);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00688"/>00688 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00689"/>00689 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00690"/>00690 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;async&#32;Task&lt;(<emphasis role="keywordtype">int</emphasis>&#32;health,&#32;<emphasis role="keywordtype">int</emphasis>&#32;stunChance,&#32;<link linkend="_struct_t_stats">TStats</link>&#32;stats)&gt;&#32;ManualQueryCombatantState(<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;combatantId)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00691"/>00691 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00692"/>00692 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;<emphasis role="stringliteral">$@&quot;</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00693"/>00693 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;query&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00694"/>00694 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaCombatantStateModels(where:&#32;{{id:&#32;&quot;&quot;{combatantId.Hex()}&quot;&quot;}})&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00695"/>00695 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00696"/>00696 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00697"/>00697 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00698"/>00698 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats&#32;{{</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00699"/>00699 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dexterity</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00700"/>00700 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vitality</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00701"/>00701 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00702"/>00702 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;luck</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00703"/>00703 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00704"/>00704 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stun_chance</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00705"/>00705 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;health</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00706"/>00706 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00707"/>00707 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00708"/>00708 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00709"/>00709 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}&quot;</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00710"/>00710 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00711"/>00711 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GraphQLClient($<emphasis role="stringliteral">&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00712"/>00712 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00713"/>00713 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Request
+<anchor xml:id="__combatant_data_model_8cs_source_1l00714"/>00714 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00715"/>00715 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;=&#32;queryString,
+<anchor xml:id="__combatant_data_model_8cs_source_1l00716"/>00716 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__combatant_data_model_8cs_source_1l00717"/>00717 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00718"/>00718 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00719"/>00719 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00720"/>00720 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00721"/>00721 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00722"/>00722 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00723"/>00723 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00724"/>00724 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;edges&#32;=&#32;jsonObj[<emphasis role="stringliteral">&quot;Data&quot;</emphasis>][<emphasis role="stringliteral">&quot;blobArenaCombatantStateModels&quot;</emphasis>][<emphasis role="stringliteral">&quot;edges&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00725"/>00725 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00726"/>00726 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Loop&#32;through&#32;edges&#32;to&#32;find&#32;health,&#32;stun_chance,&#32;and&#32;stats</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00727"/>00727 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;edge&#32;<emphasis role="keywordflow">in</emphasis>&#32;edges)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00728"/>00728 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00729"/>00729 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;node&#32;=&#32;edge[<emphasis role="stringliteral">&quot;node&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00730"/>00730 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00731"/>00731 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;health&#32;=&#32;(int)node[<emphasis role="stringliteral">&quot;health&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00732"/>00732 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;stunChance&#32;=&#32;(int)node[<emphasis role="stringliteral">&quot;stun_chance&quot;</emphasis>];
+<anchor xml:id="__combatant_data_model_8cs_source_1l00733"/>00733 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00734"/>00734 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_t_stats">TStats</link>&#32;stats&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_struct_t_stats">TStats</link>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00735"/>00735 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00736"/>00736 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dexterity&#32;=&#32;(sbyte)node[<emphasis role="stringliteral">&quot;stats&quot;</emphasis>][<emphasis role="stringliteral">&quot;dexterity&quot;</emphasis>],
+<anchor xml:id="__combatant_data_model_8cs_source_1l00737"/>00737 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vitality&#32;=&#32;(sbyte)node[<emphasis role="stringliteral">&quot;stats&quot;</emphasis>][<emphasis role="stringliteral">&quot;vitality&quot;</emphasis>],
+<anchor xml:id="__combatant_data_model_8cs_source_1l00738"/>00738 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength&#32;=&#32;(sbyte)node[<emphasis role="stringliteral">&quot;stats&quot;</emphasis>][<emphasis role="stringliteral">&quot;strength&quot;</emphasis>],
+<anchor xml:id="__combatant_data_model_8cs_source_1l00739"/>00739 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;luck&#32;=&#32;(sbyte)node[<emphasis role="stringliteral">&quot;stats&quot;</emphasis>][<emphasis role="stringliteral">&quot;luck&quot;</emphasis>]
+<anchor xml:id="__combatant_data_model_8cs_source_1l00740"/>00740 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__combatant_data_model_8cs_source_1l00741"/>00741 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00742"/>00742 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Return&#32;the&#32;tuple&#32;with&#32;health,&#32;stun_chance,&#32;and&#32;stats</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00743"/>00743 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(health,&#32;stunChance,&#32;stats);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00744"/>00744 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00745"/>00745 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00746"/>00746 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Return&#32;a&#32;default&#32;tuple&#32;if&#32;no&#32;CombatantState&#32;is&#32;found</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00747"/>00747 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;No&#32;CombatantState&#32;found&#32;for&#32;combatant&#32;ID&#32;{combatantId.Hex()}&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00748"/>00748 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(0,&#32;0,&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_struct_t_stats">TStats</link>());&#32;&#32;<emphasis role="comment">//&#32;Default&#32;values</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00749"/>00749 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00750"/>00750 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00755"/>00755 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Dictionary&lt;string,&#32;Commitment&gt;&#32;combatantHashedToCommitmentMap&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Dictionary&lt;string,&#32;Commitment&gt;();
+<anchor xml:id="__combatant_data_model_8cs_source_1l00756"/>00756 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00757"/>00757 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Dictionary&lt;string,&#32;PlannedAttack&gt;&#32;combatantToPlannedAttackMap&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Dictionary&lt;string,&#32;PlannedAttack&gt;();
+<anchor xml:id="__combatant_data_model_8cs_source_1l00758"/>00758 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00759"/>00759 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;Action&lt;string,&#32;Commitment&gt;&#32;OnCommitmentAdded;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00760"/>00760 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00761"/>00761 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;Action&lt;string,&#32;PlannedAttack&gt;&#32;OnPlannedAttackAdded;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00762"/>00762 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00763"/>00763 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;AddToCommitmentMap(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;<link linkend="_class_commitment">Commitment</link>&#32;value)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00764"/>00764 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00765"/>00765 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(combatantHashedToCommitmentMap.ContainsKey(key))
+<anchor xml:id="__combatant_data_model_8cs_source_1l00766"/>00766 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00767"/>00767 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00768"/>00768 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00769"/>00769 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00770"/>00770 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatantHashedToCommitmentMap[key]&#32;=&#32;value;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00771"/>00771 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OnCommitmentAdded?.Invoke(key,&#32;value);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00772"/>00772 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00773"/>00773 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00774"/>00774 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;AddToPlannedAttackMap(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;<link linkend="_class_planned_attack">PlannedAttack</link>&#32;value)
+<anchor xml:id="__combatant_data_model_8cs_source_1l00775"/>00775 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00776"/>00776 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(combatantToPlannedAttackMap.ContainsKey(key))
+<anchor xml:id="__combatant_data_model_8cs_source_1l00777"/>00777 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__combatant_data_model_8cs_source_1l00778"/>00778 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log($<emphasis role="stringliteral">&quot;PlannedAttack&#32;for&#32;{key}&#32;already&#32;exists.&quot;</emphasis>);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00779"/>00779 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00780"/>00780 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00781"/>00781 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00782"/>00782 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatantToPlannedAttackMap[key]&#32;=&#32;value;
+<anchor xml:id="__combatant_data_model_8cs_source_1l00783"/>00783 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OnPlannedAttackAdded?.Invoke(key,&#32;value);
+<anchor xml:id="__combatant_data_model_8cs_source_1l00784"/>00784 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00785"/>00785 
+<anchor xml:id="__combatant_data_model_8cs_source_1l00786"/>00786 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion&#32;Thing&#32;to&#32;delete&#32;after</emphasis>
+<anchor xml:id="__combatant_data_model_8cs_source_1l00787"/>00787 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__combatant_data_model_8cs_source_1l00788"/>00788 }
+</programlisting></section>

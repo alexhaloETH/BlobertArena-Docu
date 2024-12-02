@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game_background_component" xml:lang="en-US">
+<title>GameBackgroundComponent Class Reference</title>
+<indexterm><primary>GameBackgroundComponent</primary></indexterm>
+<para>Inheritance diagram for GameBackgroundComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_game_background_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> { <?linebreak?><link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa080912d475bb3b2654d1d445a765bc95">EntranceArena</link>
+, <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa5205b1bc5b53d008f069e3563744a66b">EntranceArenaTournament</link>
+, <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfaf57a86033bdfec2815802b0dc9ae4527">FightArena</link>
+, <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfae02b89857b91a11b8be92fca409827ba">Leaderboard</link>
+, <?linebreak?><link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfae69d13f13be28775383d1beee0d8692d">LobbyBackground</link>
+, <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa64bfd0e5b16568ed18a424b52abd9894">StartPage</link>
+, <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfab381d8cebad9bf25731d6cbba09d7f75">TournamentsMenu</link>
+, <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfaf9a248765642fd014f96f8bafd2117de">TournamentsView</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43">SetBackgroundImage</link> (<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> image)</para>
+</listitem>
+            <listitem><para><link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> <link linkend="_class_game_background_component_1a153d5366bb27bc550adabb7419be4bd2">GetBackgroundImage</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_game_background_component_1af70b341f98f4d215cd581989a91b5abe">ChangeOfSkinDetected</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_game_background_component">GameBackgroundComponent</link> <link linkend="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00004">4</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf"/><section>
+    <title>BackgroundImage</title>
+<indexterm><primary>BackgroundImage</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>BackgroundImage</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">GameBackgroundComponent.BackgroundImage</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>EntranceArena</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>EntranceArena</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa080912d475bb3b2654d1d445a765bc95"/>EntranceArena</entry><entry></entry></row><row><entry><indexterm><primary>EntranceArenaTournament</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>EntranceArenaTournament</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa5205b1bc5b53d008f069e3563744a66b"/>EntranceArenaTournament</entry><entry></entry></row><row><entry><indexterm><primary>FightArena</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>FightArena</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfaf57a86033bdfec2815802b0dc9ae4527"/>FightArena</entry><entry></entry></row><row><entry><indexterm><primary>Leaderboard</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>Leaderboard</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfae02b89857b91a11b8be92fca409827ba"/>Leaderboard</entry><entry></entry></row><row><entry><indexterm><primary>LobbyBackground</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>LobbyBackground</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfae69d13f13be28775383d1beee0d8692d"/>LobbyBackground</entry><entry></entry></row><row><entry><indexterm><primary>StartPage</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>StartPage</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfa64bfd0e5b16568ed18a424b52abd9894"/>StartPage</entry><entry></entry></row><row><entry><indexterm><primary>TournamentsMenu</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>TournamentsMenu</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfab381d8cebad9bf25731d6cbba09d7f75"/>TournamentsMenu</entry><entry></entry></row><row><entry><indexterm><primary>TournamentsView</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>TournamentsView</secondary></indexterm>
+<anchor xml:id="_class_game_background_component_1acef175a45fd958f52280cb5d366197cfaf9a248765642fd014f96f8bafd2117de"/>TournamentsView</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00011">11</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_game_background_component_1af70b341f98f4d215cd581989a91b5abe"/><section>
+    <title>ChangeOfSkinDetected()</title>
+<indexterm><primary>ChangeOfSkinDetected</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>ChangeOfSkinDetected</secondary></indexterm>
+<para><computeroutput>void GameBackgroundComponent.ChangeOfSkinDetected ( )</computeroutput></para><para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00064">64</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_game_background_component_1a153d5366bb27bc550adabb7419be4bd2"/><section>
+    <title>GetBackgroundImage()</title>
+<indexterm><primary>GetBackgroundImage</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>GetBackgroundImage</secondary></indexterm>
+<para><computeroutput><link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> GameBackgroundComponent.GetBackgroundImage ( )</computeroutput></para><para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00059">59</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43"/><section>
+    <title>SetBackgroundImage()</title>
+<indexterm><primary>SetBackgroundImage</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>SetBackgroundImage</secondary></indexterm>
+<para><computeroutput>void GameBackgroundComponent.SetBackgroundImage (<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> image)</computeroutput></para><para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00048">48</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_game_background_component_1a0c880f030fa5fdb7d0cbc8c2524c26c0"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>GameBackgroundComponent</secondary></indexterm>
+<indexterm><primary>GameBackgroundComponent</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_game_background_component">GameBackgroundComponent</link> GameBackgroundComponent.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00006">6</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__game_background_component_8cs">GameBackgroundComponent.cs</link></section>
+</section>

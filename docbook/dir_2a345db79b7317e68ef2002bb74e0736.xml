@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2a345db79b7317e68ef2002bb74e0736" xml:lang="en-US">
+<title>LogicLayer/Managers Directory Reference</title>
+<indexterm><primary>LogicLayer/Managers Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__combatant_data_model_8cs">CombatantDataModel.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__games_data_model_8cs">GamesDataModel.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__local_data_model_8cs">LocalDataModel.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__player_data_model_8cs">PlayerDataModel.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__world_data_model_8cs">WorldDataModel.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

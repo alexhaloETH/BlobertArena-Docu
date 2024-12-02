@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_available_attack" xml:lang="en-US">
+<title>AvailableAttack Class Reference</title>
+<indexterm><primary>AvailableAttack</primary></indexterm>
+<para>Inheritance diagram for AvailableAttack:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_available_attack.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_available_attack_1a44a7bd34efc7f710f2ec1897a50c6305">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_available_attack_1ab4b538ded09c0bcca9484e8ebe25db59">attack_id</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_available_attack_1a152ff4f57a97e767808e3a6da01b3730">combatant_id</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_available_attack_1ab4b538ded09c0bcca9484e8ebe25db59">attack_id</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_available_attack_1aba91334f0a38104ea76f7323cd7d55c8">available</link></para>
+</listitem>
+            <listitem><para>uint <link linkend="_class_available_attack_1a189ef4bcaac8ae92d6ffa1e699f7dfff">last_used</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_available_attack_1a6a9e2ab04b5fe76bb3fe1ef88e0a95d1">GraphQlQueryFull</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_available_attack_1a7ef6ba77fa404e78c2109f965db1289d">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_available_attack_1ad9ee24570de77e45d0099c65f0d963e1">GraphQlHeader</link> = &quot;blobArenaAvailableAttackModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00006">6</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_available_attack_1a44a7bd34efc7f710f2ec1897a50c6305"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> AvailableAttack.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> attack_id)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_available_attack_1ab4b538ded09c0bcca9484e8ebe25db59"/><section>
+    <title>attack_id</title>
+<indexterm><primary>attack_id</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>attack_id</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> AvailableAttack.attack_id</computeroutput></para><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00012">12</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_available_attack_1aba91334f0a38104ea76f7323cd7d55c8"/><section>
+    <title>available</title>
+<indexterm><primary>available</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>available</secondary></indexterm>
+<para><computeroutput>bool AvailableAttack.available</computeroutput></para><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00015">15</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_available_attack_1a152ff4f57a97e767808e3a6da01b3730"/><section>
+    <title>combatant_id</title>
+<indexterm><primary>combatant_id</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>combatant_id</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> AvailableAttack.combatant_id</computeroutput></para><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00009">9</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_available_attack_1ad9ee24570de77e45d0099c65f0d963e1"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string AvailableAttack.GraphQlHeader = &quot;blobArenaAvailableAttackModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00057">57</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_available_attack_1a6a9e2ab04b5fe76bb3fe1ef88e0a95d1"/><section>
+    <title>GraphQlQueryFull</title>
+<indexterm><primary>GraphQlQueryFull</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>GraphQlQueryFull</secondary></indexterm>
+<para><computeroutput>readonly string AvailableAttack.GraphQlQueryFull<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaAvailableAttackModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_AvailableAttack&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;last_used</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack_id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatant_id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;available</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00027">27</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_available_attack_1a7ef6ba77fa404e78c2109f965db1289d"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string AvailableAttack.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_AvailableAttack&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;last_used</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack_id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatant_id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;available</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00048">48</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_available_attack_1a189ef4bcaac8ae92d6ffa1e699f7dfff"/><section>
+    <title>last_used</title>
+<indexterm><primary>last_used</primary><secondary>AvailableAttack</secondary></indexterm>
+<indexterm><primary>AvailableAttack</primary><secondary>last_used</secondary></indexterm>
+<para><computeroutput>uint AvailableAttack.last_used</computeroutput></para><para>
+Definition at line <link linkend="__available_attack_8gen_8cs_source_1l00018">18</link> of file <link linkend="__available_attack_8gen_8cs_source">AvailableAttack.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__available_attack_8gen_8cs">AvailableAttack.gen.cs</link></section>
+</section>

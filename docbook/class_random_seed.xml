@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_random_seed" xml:lang="en-US">
+<title>RandomSeed Class Reference</title>
+<indexterm><primary>RandomSeed</primary></indexterm>
+<para>Inheritance diagram for RandomSeed:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_random_seed.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_random_seed_1_1_random_seed_data_query">RandomSeedDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_random_seed_1aa9bb5c9664340ad7b6c1246a9904fcc8">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_random_seed_1aeaa0e2d9051172d46a8095083b71ce3e">key</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_random_seed_1ae761689da19fad807431bf6e979b88cd">value</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_random_seed_1a36bd6ff5a22f4a5d5c6df785a96d2ab5">PvpCombatantsGraphQlQueryFullString</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_random_seed_1a910e1bfe897fb839beb4af4f8f13d985">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_random_seed_1ac98ae937bfa969365fea9bcf5ca11f20">GraphQlHeader</link> = &quot;blobArenaRandomSeed&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00007">7</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_random_seed_1aa9bb5c9664340ad7b6c1246a9904fcc8"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>RandomSeed</secondary></indexterm>
+<indexterm><primary>RandomSeed</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> RandomSeed.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_random_seed_1ac98ae937bfa969365fea9bcf5ca11f20"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>RandomSeed</secondary></indexterm>
+<indexterm><primary>RandomSeed</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string RandomSeed.GraphQlHeader = &quot;blobArenaRandomSeed&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00051">51</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_random_seed_1a910e1bfe897fb839beb4af4f8f13d985"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>RandomSeed</secondary></indexterm>
+<indexterm><primary>RandomSeed</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string RandomSeed.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_RandomSeed&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00044">44</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_random_seed_1aeaa0e2d9051172d46a8095083b71ce3e"/><section>
+    <title>key</title>
+<indexterm><primary>key</primary><secondary>RandomSeed</secondary></indexterm>
+<indexterm><primary>RandomSeed</primary><secondary>key</secondary></indexterm>
+<para><computeroutput>bool RandomSeed.key</computeroutput></para><para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00010">10</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_random_seed_1a36bd6ff5a22f4a5d5c6df785a96d2ab5"/><section>
+    <title>PvpCombatantsGraphQlQueryFullString</title>
+<indexterm><primary>PvpCombatantsGraphQlQueryFullString</primary><secondary>RandomSeed</secondary></indexterm>
+<indexterm><primary>RandomSeed</primary><secondary>PvpCombatantsGraphQlQueryFullString</secondary></indexterm>
+<para><computeroutput>readonly string RandomSeed.PvpCombatantsGraphQlQueryFullString<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;&#32;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;blobArenaRandomSeed&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_RandomSeed&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalCount</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00024">24</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_random_seed_1ae761689da19fad807431bf6e979b88cd"/><section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>RandomSeed</secondary></indexterm>
+<indexterm><primary>RandomSeed</primary><secondary>value</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> RandomSeed.value</computeroutput></para><para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00013">13</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__random_seed_8gen_8cs">RandomSeed.gen.cs</link></section>
+</section>

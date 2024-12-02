@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_skin_listener_component" xml:lang="en-US">
+<title>SkinListenerComponent Class Reference</title>
+<indexterm><primary>SkinListenerComponent</primary></indexterm>
+<para>Inheritance diagram for SkinListenerComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_skin_listener_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_skin_listener_component_1a93692bee7c1f311e5c6fca0a0f9aac0d">OnChangeOfSkin</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_skin_listener_component_1a3d68d4bb452a3ce59682c1bcb44e418a">SetSpriteTo</link> (Sprite newSprite)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__skin_listener_component_8cs_source_1l00004">4</link> of file <link linkend="__skin_listener_component_8cs_source">SkinListenerComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_skin_listener_component_1a93692bee7c1f311e5c6fca0a0f9aac0d"/><section>
+    <title>OnChangeOfSkin()</title>
+<indexterm><primary>OnChangeOfSkin</primary><secondary>SkinListenerComponent</secondary></indexterm>
+<indexterm><primary>SkinListenerComponent</primary><secondary>OnChangeOfSkin</secondary></indexterm>
+<para><computeroutput>void SkinListenerComponent.OnChangeOfSkin ( )</computeroutput></para><para>
+Definition at line <link linkend="__skin_listener_component_8cs_source_1l00032">32</link> of file <link linkend="__skin_listener_component_8cs_source">SkinListenerComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_skin_listener_component_1a3d68d4bb452a3ce59682c1bcb44e418a"/><section>
+    <title>SetSpriteTo()</title>
+<indexterm><primary>SetSpriteTo</primary><secondary>SkinListenerComponent</secondary></indexterm>
+<indexterm><primary>SkinListenerComponent</primary><secondary>SetSpriteTo</secondary></indexterm>
+<para><computeroutput>void SkinListenerComponent.SetSpriteTo (Sprite newSprite)</computeroutput></para><para>
+Definition at line <link linkend="__skin_listener_component_8cs_source_1l00041">41</link> of file <link linkend="__skin_listener_component_8cs_source">SkinListenerComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__skin_listener_component_8cs">SkinListenerComponent.cs</link></section>
+</section>

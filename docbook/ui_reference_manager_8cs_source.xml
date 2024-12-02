@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ui_reference_manager_8cs_source" xml:lang="en-US">
+<title>uiReferenceManager.cs</title>
+<indexterm><primary>Managers/Singletons/uiReferenceManager.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_ui_reference_manager_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00003"/>00003 
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00004"/>00004 <emphasis role="comment">//this&#32;is&#32;all&#32;to&#32;delete&#32;slowly</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00005"/><link linkend="_class_ui_reference_manager">00005</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_ui_reference_manager">UiReferenceManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00006"/>00006 {
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<emphasis role="comment">//this&#32;can&#32;be&#32;a&#32;static&#32;class</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00008"/>00008 
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00009"/><link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_ui_reference_manager">UiReferenceManager</link>&#32;<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00010"/><link linkend="_class_ui_reference_manager_1adf2f75c2541f6274783359ad6620395c">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_menu_manager">MenuManager</link>&#32;<link linkend="_class_ui_reference_manager_1adf2f75c2541f6274783359ad6620395c">menuManager</link>;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00011"/><link linkend="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_game_manager">GameManager</link>&#32;<link linkend="_class_ui_reference_manager_1a92943447998dc625e3fce7235c0ea142">gameManager</link>;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00012"/>00012 
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Ui&#32;Component&#32;References&quot;</emphasis>)]
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00015"/><link linkend="_class_ui_reference_manager_1ae78ac6d611d2129970a6f747a533c34a">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_notification_component_manager">NotificationComponentManager</link>&#32;<link linkend="_class_ui_reference_manager_1ae78ac6d611d2129970a6f747a533c34a">notificationComponent</link>;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00016"/>00016 
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_ui_reference_manager_1a4d555c1f6dd1b18bbc157f4f2dad1615">instance</link>&#32;!=&#32;<emphasis role="keyword">this</emphasis>)
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00028"/>00028 
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00029"/><link linkend="_class_ui_reference_manager_1ae0737a66851615458ae55130ccbc71ba">00029</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ui_reference_manager_1ae0737a66851615458ae55130ccbc71ba">IsDevelopmentWebsite</link>()
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00031"/>00031 <emphasis role="preprocessor">#if&#32;UNITY_WEBGL&#32;&amp;&amp;&#32;!UNITY_EDITOR</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Get&#32;the&#32;URL&#32;from&#32;Unity&apos;s&#32;built-in&#32;property</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;url&#32;=&#32;Application.absoluteURL;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00034"/>00034 Debug.Log(<emphasis role="stringliteral">&quot;URL:&#32;&quot;</emphasis>&#32;+&#32;url);
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;url.Contains(<emphasis role="stringliteral">&quot;localhost&quot;</emphasis>)&#32;;&#32;&#32;&#32;<emphasis role="comment">//||&#32;url.Contains(&quot;staging-cartridge.blobarena.xyz&quot;)</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00036"/>00036 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Return&#32;true&#32;in&#32;the&#32;Unity&#32;Editor&#32;or&#32;other&#32;platforms&#32;for&#32;testing</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00039"/>00039 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ui_reference_manager_8cs_source_1l00041"/>00041 }
+</programlisting></section>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_i_skin_listener" xml:lang="en-US">
+<title>ISkinListener Interface Reference</title>
+<indexterm><primary>ISkinListener</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_interface_i_skin_listener_1a2b7378382c4efbc39e86285cb9a88c01">OnChangeOfSkin</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__i_skin_listener_8cs_source_1l00005">5</link> of file <link linkend="__i_skin_listener_8cs_source">ISkinListener.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_interface_i_skin_listener_1a2b7378382c4efbc39e86285cb9a88c01"/><section>
+    <title>OnChangeOfSkin()</title>
+<indexterm><primary>OnChangeOfSkin</primary><secondary>ISkinListener</secondary></indexterm>
+<indexterm><primary>ISkinListener</primary><secondary>OnChangeOfSkin</secondary></indexterm>
+<para><computeroutput>void ISkinListener.OnChangeOfSkin ( )</computeroutput></para></section>
+<para>
+The documentation for this interface was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__i_skin_listener_8cs">ISkinListener.cs</link></section>
+</section>

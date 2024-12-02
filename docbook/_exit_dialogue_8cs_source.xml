@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__exit_dialogue_8cs_source" xml:lang="en-US">
+<title>ExitDialogue.cs</title>
+<indexterm><primary>UI/Elements/ExitDialogue.cs</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__exit_dialogue_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
+<anchor xml:id="__exit_dialogue_8cs_source_1l00002"/>00002 
+<anchor xml:id="__exit_dialogue_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00005"/>00005 
+<anchor xml:id="__exit_dialogue_8cs_source_1l00009"/><link linkend="_class_exit_dialogue">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_exit_dialogue">ExitDialogue</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__exit_dialogue_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__exit_dialogue_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;CanvasGroup&#32;m_CanvasGroup;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;m_FADE_DURATION&#32;=&#32;0.075f;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__exit_dialogue_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CanvasGroup&#32;=&#32;GetComponent&lt;CanvasGroup&gt;();
+<anchor xml:id="__exit_dialogue_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CanvasGroup.interactable&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CanvasGroup.alpha&#32;=&#32;0;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EnableBlockingRaycast(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__exit_dialogue_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__exit_dialogue_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;EnableBlockingRaycast(<emphasis role="keywordtype">bool</emphasis>&#32;enable&#32;=&#32;<emphasis role="keyword">true</emphasis>)
+<anchor xml:id="__exit_dialogue_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CanvasGroup.blocksRaycasts&#32;=&#32;enable;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__exit_dialogue_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00027"/><link linkend="_class_exit_dialogue_1ad700c934ee7f41fb4aab14e5a2236219">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_exit_dialogue_1ad700c934ee7f41fb4aab14e5a2236219">OnStayButtonClicked</link>()
+<anchor xml:id="__exit_dialogue_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;player&#32;doesn&apos;t&#32;want&#32;to&#32;leave&#32;the&#32;game,&#32;the&#32;panel&#32;closes,&#32;nothing&#32;else&#32;happens</emphasis>
+<anchor xml:id="__exit_dialogue_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClosePanel();
+<anchor xml:id="__exit_dialogue_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__exit_dialogue_8cs_source_1l00032"/>00032 
+<anchor xml:id="__exit_dialogue_8cs_source_1l00033"/><link linkend="_class_exit_dialogue_1a2f94a91c7696e34db34b779e6ced5a34">00033</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_exit_dialogue_1a2f94a91c7696e34db34b779e6ced5a34">OnLeaveButtonClicked</link>()
+<anchor xml:id="__exit_dialogue_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FindObjectOfType&lt;MenuManager&gt;().CloseLastPage();
+<anchor xml:id="__exit_dialogue_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClosePanel();
+<anchor xml:id="__exit_dialogue_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__exit_dialogue_8cs_source_1l00038"/>00038 
+<anchor xml:id="__exit_dialogue_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ClosePanel()
+<anchor xml:id="__exit_dialogue_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CanvasGroup.interactable&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.alphaCanvas(m_CanvasGroup,&#32;0f,&#32;m_FADE_DURATION)
+<anchor xml:id="__exit_dialogue_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setOnComplete(()&#32;=&gt;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EnableBlockingRaycast(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__exit_dialogue_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;});
+<anchor xml:id="__exit_dialogue_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__exit_dialogue_8cs_source_1l00047"/>00047 
+<anchor xml:id="__exit_dialogue_8cs_source_1l00048"/><link linkend="_class_exit_dialogue_1a3848008d38ed0dd2679e155bad76dd1b">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_exit_dialogue_1a3848008d38ed0dd2679e155bad76dd1b">OpenPanel</link>()
+<anchor xml:id="__exit_dialogue_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EnableBlockingRaycast();
+<anchor xml:id="__exit_dialogue_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LeanTween.alphaCanvas(m_CanvasGroup,&#32;1.0f,&#32;m_FADE_DURATION)
+<anchor xml:id="__exit_dialogue_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setOnComplete(()=&gt;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__exit_dialogue_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CanvasGroup.interactable&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__exit_dialogue_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;});
+<anchor xml:id="__exit_dialogue_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__exit_dialogue_8cs_source_1l00057"/>00057 }
+</programlisting></section>

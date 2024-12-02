@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_skin_manager" xml:lang="en-US">
+<title>SkinManager Class Reference</title>
+<indexterm><primary>SkinManager</primary></indexterm>
+<para>Inheritance diagram for SkinManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_skin_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>delegate void <link linkend="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7">OnNewSkin</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_skin_manager_1a388cedf30420666cd98f6ded87096c30">ChangeSkin</link> (LocalDataModel.GameEvent newTheme)</para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link> (string spriteName)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_skin_manager_1a22ded1d2541ffaa32613160289252684">LoadedEntities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_skin_manager">SkinManager</link> <link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7">OnNewSkin</link> <link linkend="_class_skin_manager_1ad4b8e9ddfe8c4c47452f1bda8fd84fe4">NewSkin</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00005">5</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_skin_manager_1a388cedf30420666cd98f6ded87096c30"/><section>
+    <title>ChangeSkin()</title>
+<indexterm><primary>ChangeSkin</primary><secondary>SkinManager</secondary></indexterm>
+<indexterm><primary>SkinManager</primary><secondary>ChangeSkin</secondary></indexterm>
+<para><computeroutput>void SkinManager.ChangeSkin (LocalDataModel.GameEvent newTheme)</computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00065">65</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b"/><section>
+    <title>GetSpriteByName()</title>
+<indexterm><primary>GetSpriteByName</primary><secondary>SkinManager</secondary></indexterm>
+<indexterm><primary>SkinManager</primary><secondary>GetSpriteByName</secondary></indexterm>
+<para><computeroutput>Sprite SkinManager.GetSpriteByName (string spriteName)</computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00088">88</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7"/><section>
+    <title>OnNewSkin()</title>
+<indexterm><primary>OnNewSkin</primary><secondary>SkinManager</secondary></indexterm>
+<indexterm><primary>SkinManager</primary><secondary>OnNewSkin</secondary></indexterm>
+<para><computeroutput>delegate void SkinManager.OnNewSkin ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_skin_manager_1a22ded1d2541ffaa32613160289252684"/><section>
+    <title>LoadedEntities</title>
+<indexterm><primary>LoadedEntities</primary><secondary>SkinManager</secondary></indexterm>
+<indexterm><primary>SkinManager</primary><secondary>LoadedEntities</secondary></indexterm>
+<para><computeroutput>int SkinManager.LoadedEntities</computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00042">42</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>SkinManager</secondary></indexterm>
+<indexterm><primary>SkinManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_skin_manager">SkinManager</link> SkinManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00009">9</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_skin_manager_1ad4b8e9ddfe8c4c47452f1bda8fd84fe4"/><section>
+    <title>NewSkin</title>
+<indexterm><primary>NewSkin</primary><secondary>SkinManager</secondary></indexterm>
+<indexterm><primary>SkinManager</primary><secondary>NewSkin</secondary></indexterm>
+<para><computeroutput><link linkend="_class_skin_manager_1a77ea9184c1d3a5f4df032e25b62fedd7">OnNewSkin</link> SkinManager.NewSkin</computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00037">37</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__skin_manager_8cs">SkinManager.cs</link></section>
+</section>

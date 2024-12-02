@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_9370f31ede3817b67af2154883b478bb" xml:lang="en-US">
+<title>UI/Pages/LobbyView Directory Reference</title>
+<indexterm><primary>UI/Pages/LobbyView Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__lobby_list_page_behaviour_8cs">LobbyListPageBehaviour.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__lobby_view_page_behaviour_8cs">LobbyViewPageBehaviour.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

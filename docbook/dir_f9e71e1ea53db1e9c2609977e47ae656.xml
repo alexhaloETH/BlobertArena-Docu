@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f9e71e1ea53db1e9c2609977e47ae656" xml:lang="en-US">
+<title>UI/Components Directory Reference</title>
+<indexterm><primary>UI/Components Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_95ea9f9966951e9102837051efa6298d">AnimationComponents</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_f24a7d389152bc47d4f0ac98d7fd7499">BattlePageComponents</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_88f59704ef21345658b616a47c39987f">BlobertData</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_b84e9620b5d31f43143db2251ce9a485">Button Types</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_0c0ec3475708cbe92468042d98266498">QuickLeaderBoard</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_60a6afb385dc3a6d78822d3a1ab88ec2">Skin</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__amma_switch_button_8cs">AmmaSwitchButton.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__blobering_animation_8cs">BloberingAnimation.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__blobert_effects_animation_component_8cs">BlobertEffectsAnimationComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__button_manager_battle_page_component_8cs">ButtonManagerBattlePageComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__chatting_pop_up_component_8cs">ChattingPopUpComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__counter_8cs">Counter.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__current_mode_component_8cs">CurrentModeComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__interactable_text_component_8cs">InteractableTextComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__notification_component_manager_8cs">NotificationComponentManager.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__selection_behaviour_text_8cs">SelectionBehaviourText.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__top_bar_button_component_8cs">TopBarButtonComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__tournament_banner_component_8cs">TournamentBannerComponent.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__tournament_type_selector_8cs">TournamentTypeSelector.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__wallet_selector_8cs">WalletSelector.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__xp_bar_8cs">XpBar.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

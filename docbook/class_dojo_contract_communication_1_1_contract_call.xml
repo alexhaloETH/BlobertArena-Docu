@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_dojo_contract_communication_1_1_contract_call" xml:lang="en-US">
+<title>DojoContractCommunication.ContractCall Class Reference</title>
+<indexterm><primary>DojoContractCommunication.ContractCall</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_dojo_contract_communication_1_1_contract_call_1aaa538ab838dd12ae70e0480f6a5620d0">ContractCall</link> (string contractAddress, string entrypoint, string[] calldata)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_dojo_contract_communication_1_1_contract_call_1a2f1c33fb8dd52d8eb7ad6b263a965ed2">contractAddress</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_dojo_contract_communication_1_1_contract_call_1a1aceefc0b9b504c07fcd5ac046bd7eaa">entrypoint</link></para>
+</listitem>
+            <listitem><para>string[] <link linkend="_class_dojo_contract_communication_1_1_contract_call_1a9cb4083c7f4e9a79f9b884e7888bedc1">calldata</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00090">90</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_dojo_contract_communication_1_1_contract_call_1aaa538ab838dd12ae70e0480f6a5620d0"/><section>
+    <title>ContractCall()</title>
+<indexterm><primary>ContractCall</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>ContractCall</secondary></indexterm>
+<para><computeroutput>DojoContractCommunication.ContractCall.ContractCall (string contractAddress, string entrypoint, string[] calldata)</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00096">96</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_dojo_contract_communication_1_1_contract_call_1a9cb4083c7f4e9a79f9b884e7888bedc1"/><section>
+    <title>calldata</title>
+<indexterm><primary>calldata</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>calldata</secondary></indexterm>
+<para><computeroutput>string [] DojoContractCommunication.ContractCall.calldata</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00094">94</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_contract_call_1a2f1c33fb8dd52d8eb7ad6b263a965ed2"/><section>
+    <title>contractAddress</title>
+<indexterm><primary>contractAddress</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>contractAddress</secondary></indexterm>
+<para><computeroutput>string DojoContractCommunication.ContractCall.contractAddress</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00092">92</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<anchor xml:id="_class_dojo_contract_communication_1_1_contract_call_1a1aceefc0b9b504c07fcd5ac046bd7eaa"/><section>
+    <title>entrypoint</title>
+<indexterm><primary>entrypoint</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
+<indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>entrypoint</secondary></indexterm>
+<para><computeroutput>string DojoContractCommunication.ContractCall.entrypoint</computeroutput></para><para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00093">93</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Generated/<link linkend="__dojo_contract_caller_8cs">DojoContractCaller.cs</link></section>
+</section>

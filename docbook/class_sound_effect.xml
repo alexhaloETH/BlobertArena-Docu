@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sound_effect" xml:lang="en-US">
+<title>SoundEffect Class Reference</title>
+<indexterm><primary>SoundEffect</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">AudioEffects.Effects</link> <link linkend="_class_sound_effect_1ab7f431ca39490f9c6864e1e70da47a59">Effect</link></para>
+</listitem>
+            <listitem><para>AudioClip <link linkend="_class_sound_effect_1a3d86da631baa950894490170ab3fef94">Clip</link></para>
+</listitem>
+            <listitem><para>AudioSource <link linkend="_class_sound_effect_1a93b26d7dfcfb830aa7cf88375e8da091">Source</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__sound_effect_8cs_source_1l00006">6</link> of file <link linkend="__sound_effect_8cs_source">SoundEffect.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_sound_effect_1a3d86da631baa950894490170ab3fef94"/><section>
+    <title>Clip</title>
+<indexterm><primary>Clip</primary><secondary>SoundEffect</secondary></indexterm>
+<indexterm><primary>SoundEffect</primary><secondary>Clip</secondary></indexterm>
+<para><computeroutput>AudioClip SoundEffect.Clip</computeroutput></para><para>
+Definition at line <link linkend="__sound_effect_8cs_source_1l00009">9</link> of file <link linkend="__sound_effect_8cs_source">SoundEffect.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_effect_1ab7f431ca39490f9c6864e1e70da47a59"/><section>
+    <title>Effect</title>
+<indexterm><primary>Effect</primary><secondary>SoundEffect</secondary></indexterm>
+<indexterm><primary>SoundEffect</primary><secondary>Effect</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168">AudioEffects.Effects</link> SoundEffect.Effect</computeroutput></para><para>
+Definition at line <link linkend="__sound_effect_8cs_source_1l00008">8</link> of file <link linkend="__sound_effect_8cs_source">SoundEffect.cs</link>.</para>
+</section>
+<anchor xml:id="_class_sound_effect_1a93b26d7dfcfb830aa7cf88375e8da091"/><section>
+    <title>Source</title>
+<indexterm><primary>Source</primary><secondary>SoundEffect</secondary></indexterm>
+<indexterm><primary>SoundEffect</primary><secondary>Source</secondary></indexterm>
+<para><computeroutput>AudioSource SoundEffect.Source</computeroutput></para><para>
+Definition at line <link linkend="__sound_effect_8cs_source_1l00012">12</link> of file <link linkend="__sound_effect_8cs_source">SoundEffect.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Misc/<link linkend="__sound_effect_8cs">SoundEffect.cs</link></section>
+</section>

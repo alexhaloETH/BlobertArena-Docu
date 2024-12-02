@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_battle_page_controller" xml:lang="en-US">
+<title>BattlePageController Class Reference</title>
+<indexterm><primary>BattlePageController</primary></indexterm>
+<para>
+
+<para>flow of one round </para>
+ 
+</para>
+<para>Inheritance diagram for BattlePageController:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_battle_page_controller.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> { <?linebreak?><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadacef4507fecb9cce7b6c0c294cb936e">CommitAttack</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaeb8ab7d98634514cc61c2b0a0c8d93a2">Stunned</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aad0f2e5376298c880665077b565ffd7dd">Locked</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aabcf2ed01f87c5c22be81405063f8804b">WaitingForEnemyToCommit</link>
+, <?linebreak?><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaf92cb63ec3603fc08101d78d5633969b">RevealAttack</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaf90b8f79c662ea07880ba5579c3383b6">WaitingForEnemyToReveal</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aabed43647a5fe62cc2caa520c89b3f721">RunRoundCallWait</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aa074b963ee1212c6c60c7badc08d221ba">RoundOutcomeFirst</link>
+, <?linebreak?><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aa3713f0785f4494e927f3bf54d9b10435">RoundOutcomeSecond</link>
+, <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadae60449f24ec4477da2727041120a64">EndOfBattle</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1ac2b5890d8918815b656c55ccf1424e8e">SetDojoData</link> (DojoData dojoData)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49">SetBattleState</link> (<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> newState)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db">HardSetBattleState</link> (<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> newState)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1a634b7a86a2182c86a19c0fe577a30cad">ToggleBattleUi</link> (bool toggle)</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> <link linkend="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76">EvaluteOnChainState</link> ()</para>
+
+<para>This will return the current state of the combat respective to the actual chain state not the UI state. </para>
+</listitem>
+            <listitem><para><link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">EndOfBattle.Outcomes</link> <link linkend="_class_battle_page_controller_1a67e2cd0fe1c646eae908ddf93a739691">GetBattleOutcome</link> ()</para>
+
+<para>Get the outcome of the battle. A returned value of None means the battle is not over yet. </para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_battle_page_controller_1a9e39cd4507d21b9bff16ff4ca24405f3">CallToAttacks</link> (Attack attack, int index)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_battle_page_controller_1a927653e16828428b2d77d992acf04a07">OnChainTransactionCallbackFunctionC</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_battle_page_controller_1aac4dc02c21e8ac30c9fbe1926181d7a9">CallToReveal</link> ()</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_battle_page_controller_1a48e545c71a56135c796cf8d981e0ef1e">OnChainTransactionCallbackFunctionR</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1a2f89544974bf48366cbed57407fa134a">NonAsyncCallToForfeit</link> ()</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_battle_page_controller_1a6335c3ce029649e704532a59f5a7041e">CallToForfeit</link> ()</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_battle_page_controller_1a754efdd89affd78e6f62edaa9a4e05db">OnChainTransactionCallbackFunctionF</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_battle_page_controller_1af820e9918e5f2b984377aa4d82b24362">CallToRunRound</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1a4d0eb0c8b966e2f66cf4a28d719792c6">OnChainTransactionCallbackFunctionRR</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async Task <link linkend="_class_battle_page_controller_1a628a44895750ab5049c886d2bdeb8b54">CallToKick</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1a4f743b53321b925fb0c5a6579428226e">OnChainTransactionCallbackFunctionK</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_battle_page_controller_1ab209234c101f1c3f7a52f323f579d422">SetPlannedAttacks</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> &gt; <link linkend="_class_battle_page_controller_1a5cbe4f8c72d7e1898c187a75daad3f30">AttacksLoaded</link> = new()</para>
+</listitem>
+            <listitem><para><link linkend="_class_commitment">Commitment</link>[] <link linkend="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb">Commitments</link> = new <link linkend="_class_commitment">Commitment</link>[2]</para>
+</listitem>
+            <listitem><para><link linkend="_class_base_button">BaseButton</link>[] <link linkend="_class_battle_page_controller_1acd6c7f4477e1a327dbc0a7240520e0ca">attacks</link> = new <link linkend="_class_base_button">BaseButton</link>[4]</para>
+</listitem>
+            <listitem><para><link linkend="_class_planned_attack">PlannedAttack</link>[] <link linkend="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab">PlannedAttacks</link> = new <link linkend="_class_planned_attack">PlannedAttack</link>[2]</para>
+</listitem>
+            <listitem><para>CombatState <link linkend="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61">CombatState</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[] <link linkend="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4">CombatantIds</link> = new <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[2]</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_page_card_stats_component">BattlePageCardStatsComponent</link>[] <link linkend="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a">StatsComponents</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_character_animation_manager">CharacterAnimationManager</link>[] <link linkend="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a">BlobertTraitAnimationComponents</link></para>
+</listitem>
+            <listitem><para>BattlePageDataSection <link linkend="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b">BattlePageDataSection</link></para>
+</listitem>
+            <listitem><para>BattlePageFullLengthComponent <link linkend="_class_battle_page_controller_1aff0f37cdf90816dfe0b5707bb5cdddea">BattlePageFullLengthComponent</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_choice_section_battle_page">ChoiceSectionBattlePage</link> <link linkend="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e">BattlePageChoiceManager</link></para>
+</listitem>
+            <listitem><para>uint <link linkend="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544">RoundNumber</link> = 1</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> <link linkend="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0">CurrentState</link> = <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadacef4507fecb9cce7b6c0c294cb936e">BattleState.CommitAttack</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>Action&lt; <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> &gt; <link linkend="_class_battle_page_controller_1a017e72fb68b42ae28d821235b6f79e09">OnBattleStateChanged</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>flow of one round </para>
+
+
+
+<para>both users commit attack the attack each will have a commitment model which will get populated</para>
+
+<para>both users reveal attack the attack each will have a planned attack model which will get populated</para>
+
+<para>one person needs to call run round, if one of them does then the combat state will change to either ended for finished game or back to commit phase</para>
+
+<para>for when the user is stunned is a bit weird, altough i do say we dont want the user to commit and attack, to keep the turn going we still need to commit an attack so for example in the ui we would show something like, You are stunned press here to continue..., but in that action we are actually commiting the attack that has the least cooldown, the attack on the backend will fail but the transaction wont this is the expected behaviour as we dont want to stop the game for the user </para>
+<para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00024">24</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a"/><section>
+    <title>BattleState</title>
+<indexterm><primary>BattleState</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>BattleState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattlePageController.BattleState</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CommitAttack</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CommitAttack</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadacef4507fecb9cce7b6c0c294cb936e"/>CommitAttack</entry><entry></entry></row><row><entry><indexterm><primary>Stunned</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>Stunned</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaeb8ab7d98634514cc61c2b0a0c8d93a2"/>Stunned</entry><entry></entry></row><row><entry><indexterm><primary>Locked</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>Locked</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aad0f2e5376298c880665077b565ffd7dd"/>Locked</entry><entry></entry></row><row><entry><indexterm><primary>WaitingForEnemyToCommit</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>WaitingForEnemyToCommit</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aabcf2ed01f87c5c22be81405063f8804b"/>WaitingForEnemyToCommit</entry><entry></entry></row><row><entry><indexterm><primary>RevealAttack</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>RevealAttack</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaf92cb63ec3603fc08101d78d5633969b"/>RevealAttack</entry><entry></entry></row><row><entry><indexterm><primary>WaitingForEnemyToReveal</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>WaitingForEnemyToReveal</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aaf90b8f79c662ea07880ba5579c3383b6"/>WaitingForEnemyToReveal</entry><entry></entry></row><row><entry><indexterm><primary>RunRoundCallWait</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>RunRoundCallWait</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aabed43647a5fe62cc2caa520c89b3f721"/>RunRoundCallWait</entry><entry></entry></row><row><entry><indexterm><primary>RoundOutcomeFirst</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>RoundOutcomeFirst</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aa074b963ee1212c6c60c7badc08d221ba"/>RoundOutcomeFirst</entry><entry></entry></row><row><entry><indexterm><primary>RoundOutcomeSecond</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>RoundOutcomeSecond</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aa3713f0785f4494e927f3bf54d9b10435"/>RoundOutcomeSecond</entry><entry></entry></row><row><entry><indexterm><primary>EndOfBattle</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>EndOfBattle</secondary></indexterm>
+<anchor xml:id="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadae60449f24ec4477da2727041120a64"/>EndOfBattle</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00135">135</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_battle_page_controller_1a9e39cd4507d21b9bff16ff4ca24405f3"/><section>
+    <title>CallToAttacks()</title>
+<indexterm><primary>CallToAttacks</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CallToAttacks</secondary></indexterm>
+<para><computeroutput>async Task BattlePageController.CallToAttacks (Attack attack, int index)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00675">675</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a6335c3ce029649e704532a59f5a7041e"/><section>
+    <title>CallToForfeit()</title>
+<indexterm><primary>CallToForfeit</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CallToForfeit</secondary></indexterm>
+<para><computeroutput>async Task BattlePageController.CallToForfeit ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00813">813</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a628a44895750ab5049c886d2bdeb8b54"/><section>
+    <title>CallToKick()</title>
+<indexterm><primary>CallToKick</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CallToKick</secondary></indexterm>
+<para><computeroutput>async Task BattlePageController.CallToKick ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00840">840</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1aac4dc02c21e8ac30c9fbe1926181d7a9"/><section>
+    <title>CallToReveal()</title>
+<indexterm><primary>CallToReveal</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CallToReveal</secondary></indexterm>
+<para><computeroutput>async Task BattlePageController.CallToReveal ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00747">747</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1af820e9918e5f2b984377aa4d82b24362"/><section>
+    <title>CallToRunRound()</title>
+<indexterm><primary>CallToRunRound</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CallToRunRound</secondary></indexterm>
+<para><computeroutput>async Task BattlePageController.CallToRunRound ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00826">826</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a846f1acd33b779b1a02b576b5064ce76"/><section>
+    <title>EvaluteOnChainState()</title>
+<indexterm><primary>EvaluteOnChainState</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>EvaluteOnChainState</secondary></indexterm>
+<para><computeroutput><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> BattlePageController.EvaluteOnChainState ( )</computeroutput></para><para>
+
+<para>This will return the current state of the combat respective to the actual chain state not the UI state. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00595">595</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a67e2cd0fe1c646eae908ddf93a739691"/><section>
+    <title>GetBattleOutcome()</title>
+<indexterm><primary>GetBattleOutcome</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>GetBattleOutcome</secondary></indexterm>
+<para><computeroutput><link linkend="_class_end_of_battle_1a167a2da36a29a75fd86d917af1cc7014">EndOfBattle.Outcomes</link> BattlePageController.GetBattleOutcome ( )</computeroutput></para><para>
+
+<para>Get the outcome of the battle. A returned value of None means the battle is not over yet. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00659">659</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a2e33a1c3501c65017ba2c924f33132db"/><section>
+    <title>HardSetBattleState()</title>
+<indexterm><primary>HardSetBattleState</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>HardSetBattleState</secondary></indexterm>
+<para><computeroutput>void BattlePageController.HardSetBattleState (<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> newState)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00207">207</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a2f89544974bf48366cbed57407fa134a"/><section>
+    <title>NonAsyncCallToForfeit()</title>
+<indexterm><primary>NonAsyncCallToForfeit</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>NonAsyncCallToForfeit</secondary></indexterm>
+<para><computeroutput>void BattlePageController.NonAsyncCallToForfeit ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00808">808</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a927653e16828428b2d77d992acf04a07"/><section>
+    <title>OnChainTransactionCallbackFunctionC()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionC</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>OnChainTransactionCallbackFunctionC</secondary></indexterm>
+<para><computeroutput>async void BattlePageController.OnChainTransactionCallbackFunctionC (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00726">726</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a754efdd89affd78e6f62edaa9a4e05db"/><section>
+    <title>OnChainTransactionCallbackFunctionF()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionF</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>OnChainTransactionCallbackFunctionF</secondary></indexterm>
+<para><computeroutput>async void BattlePageController.OnChainTransactionCallbackFunctionF (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00822">822</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a4f743b53321b925fb0c5a6579428226e"/><section>
+    <title>OnChainTransactionCallbackFunctionK()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionK</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>OnChainTransactionCallbackFunctionK</secondary></indexterm>
+<para><computeroutput>void BattlePageController.OnChainTransactionCallbackFunctionK (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00849">849</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a48e545c71a56135c796cf8d981e0ef1e"/><section>
+    <title>OnChainTransactionCallbackFunctionR()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionR</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>OnChainTransactionCallbackFunctionR</secondary></indexterm>
+<para><computeroutput>async void BattlePageController.OnChainTransactionCallbackFunctionR (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00787">787</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a4d0eb0c8b966e2f66cf4a28d719792c6"/><section>
+    <title>OnChainTransactionCallbackFunctionRR()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionRR</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>OnChainTransactionCallbackFunctionRR</secondary></indexterm>
+<para><computeroutput>void BattlePageController.OnChainTransactionCallbackFunctionRR (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00835">835</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a0390ce78d4c4ae8fd3a112b72043dc49"/><section>
+    <title>SetBattleState()</title>
+<indexterm><primary>SetBattleState</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>SetBattleState</secondary></indexterm>
+<para><computeroutput>void BattlePageController.SetBattleState (<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> newState)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00153">153</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1ac2b5890d8918815b656c55ccf1424e8e"/><section>
+    <title>SetDojoData()</title>
+<indexterm><primary>SetDojoData</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>SetDojoData</secondary></indexterm>
+<para><computeroutput>void BattlePageController.SetDojoData (DojoData dojoData)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00078">78</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1ab209234c101f1c3f7a52f323f579d422"/><section>
+    <title>SetPlannedAttacks()</title>
+<indexterm><primary>SetPlannedAttacks</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>SetPlannedAttacks</secondary></indexterm>
+<para><computeroutput>void BattlePageController.SetPlannedAttacks ( )</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00970">970</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a634b7a86a2182c86a19c0fe577a30cad"/><section>
+    <title>ToggleBattleUi()</title>
+<indexterm><primary>ToggleBattleUi</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>ToggleBattleUi</secondary></indexterm>
+<para><computeroutput>void BattlePageController.ToggleBattleUi (bool toggle)</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00490">490</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_battle_page_controller_1acd6c7f4477e1a327dbc0a7240520e0ca"/><section>
+    <title>attacks</title>
+<indexterm><primary>attacks</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>attacks</secondary></indexterm>
+<para><computeroutput><link linkend="_class_base_button">BaseButton</link> [] BattlePageController.attacks = new <link linkend="_class_base_button">BaseButton</link>[4]</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00065">65</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a5cbe4f8c72d7e1898c187a75daad3f30"/><section>
+    <title>AttacksLoaded</title>
+<indexterm><primary>AttacksLoaded</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>AttacksLoaded</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link>&gt; BattlePageController.AttacksLoaded = new()</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00026">26</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a67bd3b8ea763f29d5d7e4947afc0932e"/><section>
+    <title>BattlePageChoiceManager</title>
+<indexterm><primary>BattlePageChoiceManager</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>BattlePageChoiceManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_choice_section_battle_page">ChoiceSectionBattlePage</link> BattlePageController.BattlePageChoiceManager</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00090">90</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a9b408d735ea4363647124d20986fc77b"/><section>
+    <title>BattlePageDataSection</title>
+<indexterm><primary>BattlePageDataSection</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>BattlePageDataSection</secondary></indexterm>
+<para><computeroutput>BattlePageDataSection BattlePageController.BattlePageDataSection</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00088">88</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1aff0f37cdf90816dfe0b5707bb5cdddea"/><section>
+    <title>BattlePageFullLengthComponent</title>
+<indexterm><primary>BattlePageFullLengthComponent</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>BattlePageFullLengthComponent</secondary></indexterm>
+<para><computeroutput>BattlePageFullLengthComponent BattlePageController.BattlePageFullLengthComponent</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00089">89</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a74c53e53f05f5a20b582161413b30b0a"/><section>
+    <title>BlobertTraitAnimationComponents</title>
+<indexterm><primary>BlobertTraitAnimationComponents</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>BlobertTraitAnimationComponents</secondary></indexterm>
+<para><computeroutput><link linkend="_class_character_animation_manager">CharacterAnimationManager</link> [] BattlePageController.BlobertTraitAnimationComponents</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00086">86</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a9d9a259166d59ea2df8d8514d3ac24b4"/><section>
+    <title>CombatantIds</title>
+<indexterm><primary>CombatantIds</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CombatantIds</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> [] BattlePageController.CombatantIds = new <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>[2]</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00071">71</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1abaf689ee7ae529c06ed5957d806c8e61"/><section>
+    <title>CombatState</title>
+<indexterm><primary>CombatState</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CombatState</secondary></indexterm>
+<para><computeroutput>CombatState BattlePageController.CombatState</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00069">69</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a9ab076800135647485396f5762a6e3eb"/><section>
+    <title>Commitments</title>
+<indexterm><primary>Commitments</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>Commitments</secondary></indexterm>
+<para><computeroutput><link linkend="_class_commitment">Commitment</link> [] BattlePageController.Commitments = new <link linkend="_class_commitment">Commitment</link>[2]</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00063">63</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1aa3172a99ef31d44a30ea5ec1adb2d0d0"/><section>
+    <title>CurrentState</title>
+<indexterm><primary>CurrentState</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>CurrentState</secondary></indexterm>
+<para><computeroutput><link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link> BattlePageController.CurrentState = <link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5aadacef4507fecb9cce7b6c0c294cb936e">BattleState.CommitAttack</link></computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00151">151</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1afca0f287f9911ea0b09ba2384d8eb2ab"/><section>
+    <title>PlannedAttacks</title>
+<indexterm><primary>PlannedAttacks</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>PlannedAttacks</secondary></indexterm>
+<para><computeroutput><link linkend="_class_planned_attack">PlannedAttack</link> [] BattlePageController.PlannedAttacks = new <link linkend="_class_planned_attack">PlannedAttack</link>[2]</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00067">67</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1a8e563b2a3fce55c2f687257cab728544"/><section>
+    <title>RoundNumber</title>
+<indexterm><primary>RoundNumber</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>RoundNumber</secondary></indexterm>
+<para><computeroutput>uint BattlePageController.RoundNumber = 1</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00132">132</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_battle_page_controller_1ab6dec8d771a45995831b49793788c67a"/><section>
+    <title>StatsComponents</title>
+<indexterm><primary>StatsComponents</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>StatsComponents</secondary></indexterm>
+<para><computeroutput><link linkend="_class_battle_page_card_stats_component">BattlePageCardStatsComponent</link> [] BattlePageController.StatsComponents</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00085">85</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_battle_page_controller_1a017e72fb68b42ae28d821235b6f79e09"/><section>
+    <title>OnBattleStateChanged</title>
+<indexterm><primary>OnBattleStateChanged</primary><secondary>BattlePageController</secondary></indexterm>
+<indexterm><primary>BattlePageController</primary><secondary>OnBattleStateChanged</secondary></indexterm>
+<para><computeroutput>Action&lt;<link linkend="_class_battle_page_controller_1a695ddcf171d92e7a5d18473aa9bb4b5a">BattleState</link>&gt; BattlePageController.OnBattleStateChanged</computeroutput></para><para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00149">149</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/BattlePage/<link linkend="__battle_page_controller_8cs">BattlePageController.cs</link></section>
+</section>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item" xml:lang="en-US">
+<title>LogicLayer.FetchBlobertWalletData.NFTItem Class Reference</title>
+<indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a60faae20da89e3cd1879db4f6693f1ee">NFTItem</link> (string id)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1afab242584b88d3dbd9be6ca6ee5df268">SetTrait</link> (string traitKey, string traitValue)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1ae9679282933487d3644ef1a32e8c1e36">Id</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link> <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a24b844519023306a343a030ed134b649">Traits</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00059">59</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a60faae20da89e3cd1879db4f6693f1ee"/><section>
+    <title>NFTItem()</title>
+<indexterm><primary>NFTItem</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
+<indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>NFTItem</secondary></indexterm>
+<para><computeroutput>LogicLayer.FetchBlobertWalletData.NFTItem.NFTItem (string id)</computeroutput></para><para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00064">64</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1afab242584b88d3dbd9be6ca6ee5df268"/><section>
+    <title>SetTrait()</title>
+<indexterm><primary>SetTrait</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
+<indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>SetTrait</secondary></indexterm>
+<para><computeroutput>void LogicLayer.FetchBlobertWalletData.NFTItem.SetTrait (string traitKey, string traitValue)</computeroutput></para><para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00070">70</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1ae9679282933487d3644ef1a32e8c1e36"/><section>
+    <title>Id</title>
+<indexterm><primary>Id</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
+<indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>Id</secondary></indexterm>
+<para><computeroutput>string LogicLayer.FetchBlobertWalletData.NFTItem.Id<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00061">61</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a24b844519023306a343a030ed134b649"/><section>
+    <title>Traits</title>
+<indexterm><primary>Traits</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
+<indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>Traits</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link> LogicLayer.FetchBlobertWalletData.NFTItem.Traits<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00062">62</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__fetch_blobert_wallet_data_8cs">FetchBlobertWalletData.cs</link></section>
+</section>

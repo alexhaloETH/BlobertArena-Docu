@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_pv_p_challenge_invite" xml:lang="en-US">
+<title>PvPChallengeInvite Class Reference</title>
+<indexterm><primary>PvPChallengeInvite</primary></indexterm>
+<para>Inheritance diagram for PvPChallengeInvite:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pv_p_challenge_invite.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_pv_p_challenge_invite_1_1_pv_p_challenge_invite_data_query">PvPChallengeInviteDataQuery</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_pv_p_challenge_invite_1ace67ecf32f855b0961602a2f4996a99c">OnUpdate</link> (Model model)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_pv_p_challenge_invite_1acaf8a483e7056bcabeafa893d0bd7089">DestroyObject</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> <link linkend="_class_pv_p_challenge_invite_1afa1b1acb1fc246b4bdcc2b61d3024e80">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_invite_1a41e01ed1d242a401931f6b47c8512ac7">id</link>)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_pv_p_challenge_invite_1a4b131a5496912eaf28069aeef036d7d3">IsPlayerPartOfGame</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> game, string address)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_pv_p_challenge_invite_1a2a69ed1cc8badf7ad81fe738c21ab670">IsPlayerPartOfGame</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> game, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_pv_p_challenge_invite_1a37ff87293492214926603604314af93c">IsAdminOfGame</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_pv_p_challenge_invite_1a4e8f6ba15c4dc3f6c729c003d0d0fe2b">IsAdminOfGame</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite, string address)</para>
+</listitem>
+            <listitem><para>static GameStatus <link linkend="_class_pv_p_challenge_invite_1a8ce21a5046a534bad3f8cfcfef44ae22">SetStatusFromInvite</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)</para>
+</listitem>
+            <listitem><para>static async Task&lt; GameStatus &gt; <link linkend="_class_pv_p_challenge_invite_1a1bd6f66068c3b76bd5c2683c6ddd6afd">InitialSetFromInvite</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_invite_1a41e01ed1d242a401931f6b47c8512ac7">id</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_invite_1af6f1246f9485988b176100f5bd6505ac">sender</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_invite_1aacbfd86986c6c4c84f3cf01a976cb41b">receiver</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_invite_1a1b8e50ab56c1e529bd5883cbfa92867e">collection_address</link></para>
+</listitem>
+            <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_pv_p_challenge_invite_1a1d0ce509d557800323a7740c215f87dc">combatant</link></para>
+</listitem>
+            <listitem><para>ulong <link linkend="_class_pv_p_challenge_invite_1a521f6791c49a33f92c066b989ba00f51">phase_time</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_pv_p_challenge_invite_1a0910fc0061b7ba371d530e704bf0f0a0">open</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly string <link linkend="_class_pv_p_challenge_invite_1a8183f7e991d7d52093249b0a62c484e3">GraphQlQueryFull</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_pv_p_challenge_invite_1a028e1b7fdef0ce6f05f30c109a78c243">GraphQlQueryOnSection</link></para>
+</listitem>
+            <listitem><para>static readonly string <link linkend="_class_pv_p_challenge_invite_1aed1c04d47b965df065a1da35dff163be">GraphQlHeader</link> = &quot;blobArenaPvPChallengeInviteModels&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00011">11</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_pv_p_challenge_invite_1acaf8a483e7056bcabeafa893d0bd7089"/><section>
+    <title>DestroyObject()</title>
+<indexterm><primary>DestroyObject</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>DestroyObject</secondary></indexterm>
+<para><computeroutput>void PvPChallengeInvite.DestroyObject ( )</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00045">45</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a1bd6f66068c3b76bd5c2683c6ddd6afd"/><section>
+    <title>InitialSetFromInvite()</title>
+<indexterm><primary>InitialSetFromInvite</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>InitialSetFromInvite</secondary></indexterm>
+<para><computeroutput>static async Task&lt; GameStatus &gt; PvPChallengeInvite.InitialSetFromInvite (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00102">102</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a37ff87293492214926603604314af93c"/><section>
+    <title>IsAdminOfGame()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>IsAdminOfGame</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>IsAdminOfGame</secondary></indexterm>
+<para><computeroutput>static bool PvPChallengeInvite.IsAdminOfGame (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a4e8f6ba15c4dc3f6c729c003d0d0fe2b"/><section>
+    <title>IsAdminOfGame()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>IsAdminOfGame</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>IsAdminOfGame</secondary></indexterm>
+<para><computeroutput>static bool PvPChallengeInvite.IsAdminOfGame (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite, string address)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a2a69ed1cc8badf7ad81fe738c21ab670"/><section>
+    <title>IsPlayerPartOfGame()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>IsPlayerPartOfGame</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>IsPlayerPartOfGame</secondary></indexterm>
+<para><computeroutput>static bool PvPChallengeInvite.IsPlayerPartOfGame (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> game, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a4b131a5496912eaf28069aeef036d7d3"/><section>
+    <title>IsPlayerPartOfGame()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>IsPlayerPartOfGame</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>IsPlayerPartOfGame</secondary></indexterm>
+<para><computeroutput>static bool PvPChallengeInvite.IsPlayerPartOfGame (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> game, string address)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_pv_p_challenge_invite_1afa1b1acb1fc246b4bdcc2b61d3024e80"/><section>
+    <title>KeyQuery()</title>
+<indexterm><primary>KeyQuery</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>KeyQuery</secondary></indexterm>
+<para><computeroutput>static <link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> PvPChallengeInvite.KeyQuery (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> id)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_pv_p_challenge_invite_1ace67ecf32f855b0961602a2f4996a99c"/><section>
+    <title>OnUpdate()</title>
+<indexterm><primary>OnUpdate</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>OnUpdate</secondary></indexterm>
+<para><computeroutput>override void PvPChallengeInvite.OnUpdate (Model model)</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00039">39</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a8ce21a5046a534bad3f8cfcfef44ae22"/><section>
+    <title>SetStatusFromInvite()</title>
+<indexterm><primary>SetStatusFromInvite</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>SetStatusFromInvite</secondary></indexterm>
+<para><computeroutput>static GameStatus PvPChallengeInvite.SetStatusFromInvite (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00063">63</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_pv_p_challenge_invite_1a1b8e50ab56c1e529bd5883cbfa92867e"/><section>
+    <title>collection_address</title>
+<indexterm><primary>collection_address</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>collection_address</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.collection_address</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00023">23</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a1d0ce509d557800323a7740c215f87dc"/><section>
+    <title>combatant</title>
+<indexterm><primary>combatant</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>combatant</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.combatant</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00026">26</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1aed1c04d47b965df065a1da35dff163be"/><section>
+    <title>GraphQlHeader</title>
+<indexterm><primary>GraphQlHeader</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>GraphQlHeader</secondary></indexterm>
+<para><computeroutput>readonly string PvPChallengeInvite.GraphQlHeader = &quot;blobArenaPvPChallengeInviteModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00161">161</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a8183f7e991d7d52093249b0a62c484e3"/><section>
+    <title>GraphQlQueryFull</title>
+<indexterm><primary>GraphQlQueryFull</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>GraphQlQueryFull</secondary></indexterm>
+<para><computeroutput>readonly string PvPChallengeInvite.GraphQlQueryFull<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;blobArenaPvPChallengeInviteModels&#32;arguments&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PvPChallengeInvite&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sender</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;receiver</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;collection_address</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatant</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;phase_time</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;open</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00125">125</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a028e1b7fdef0ce6f05f30c109a78c243"/><section>
+    <title>GraphQlQueryOnSection</title>
+<indexterm><primary>GraphQlQueryOnSection</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>GraphQlQueryOnSection</secondary></indexterm>
+<para><computeroutput>readonly string PvPChallengeInvite.GraphQlQueryOnSection<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_PvPChallengeInvite&#32;{</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sender</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;receiver</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;collection_address</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combatant</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;phase_time</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;open</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00149">149</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a41e01ed1d242a401931f6b47c8512ac7"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>id</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.id</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00014">14</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a0910fc0061b7ba371d530e704bf0f0a0"/><section>
+    <title>open</title>
+<indexterm><primary>open</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>open</secondary></indexterm>
+<para><computeroutput>bool PvPChallengeInvite.open</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00032">32</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1a521f6791c49a33f92c066b989ba00f51"/><section>
+    <title>phase_time</title>
+<indexterm><primary>phase_time</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>phase_time</secondary></indexterm>
+<para><computeroutput>ulong PvPChallengeInvite.phase_time</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00029">29</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1aacbfd86986c6c4c84f3cf01a976cb41b"/><section>
+    <title>receiver</title>
+<indexterm><primary>receiver</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>receiver</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.receiver</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00020">20</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<anchor xml:id="_class_pv_p_challenge_invite_1af6f1246f9485988b176100f5bd6505ac"/><section>
+    <title>sender</title>
+<indexterm><primary>sender</primary><secondary>PvPChallengeInvite</secondary></indexterm>
+<indexterm><primary>PvPChallengeInvite</primary><secondary>sender</secondary></indexterm>
+<para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.sender</computeroutput></para><para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00017">17</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Dojo/Models/<link linkend="__pv_p_challenge_invite_8gen_8cs">PvPChallengeInvite.gen.cs</link></section>
+</section>

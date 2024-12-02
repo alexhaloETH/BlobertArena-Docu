@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_0c0ec3475708cbe92468042d98266498" xml:lang="en-US">
+<title>UI/Components/QuickLeaderBoard Directory Reference</title>
+<indexterm><primary>UI/Components/QuickLeaderBoard Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__quick_leadear_board_element_8cs">QuickLeadearBoardElement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__quick_leader_board_component_8cs">QuickLeaderBoardComponent.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

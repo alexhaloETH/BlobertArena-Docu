@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_amma_switch_button" xml:lang="en-US">
+<title>AmmaSwitchButton Class Reference</title>
+<indexterm><primary>AmmaSwitchButton</primary></indexterm>
+<para>
+
+<para>Script to manage the switch between BlobArena and AMMA. </para>
+ 
+</para>
+<para>Inheritance diagram for AmmaSwitchButton:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_amma_switch_button.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_amma_switch_button_1a032f5aaf54f021927c3483e46f6b0f19">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_amma_switch_button_1a926442f11ee9d1727184b44018bc99b5">OnMouseHoverOver</link> (bool hover)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Script to manage the switch between BlobArena and AMMA. </para>
+<para>
+Definition at line <link linkend="__amma_switch_button_8cs_source_1l00012">12</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_amma_switch_button_1a926442f11ee9d1727184b44018bc99b5"/><section>
+    <title>OnMouseHoverOver()</title>
+<indexterm><primary>OnMouseHoverOver</primary><secondary>AmmaSwitchButton</secondary></indexterm>
+<indexterm><primary>AmmaSwitchButton</primary><secondary>OnMouseHoverOver</secondary></indexterm>
+<para><computeroutput>void AmmaSwitchButton.OnMouseHoverOver (bool hover)</computeroutput></para><para>
+Definition at line <link linkend="__amma_switch_button_8cs_source_1l00038">38</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
+</section>
+<anchor xml:id="_class_amma_switch_button_1a032f5aaf54f021927c3483e46f6b0f19"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>AmmaSwitchButton</secondary></indexterm>
+<indexterm><primary>AmmaSwitchButton</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void AmmaSwitchButton.Start ( )</computeroutput></para><para>
+Definition at line <link linkend="__amma_switch_button_8cs_source_1l00027">27</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/<link linkend="__amma_switch_button_8cs">AmmaSwitchButton.cs</link></section>
+</section>
