@@ -6,7 +6,7 @@ var class_logic_layer_1_1_synchro_manager_dojo =
     [ "SpawnEntity", "class_logic_layer_1_1_synchro_manager_dojo.html#a8e5a66e1d92298b303908ed00cedf90d", null ],
     [ "SpawnEntityCustom", "class_logic_layer_1_1_synchro_manager_dojo.html#afc54c7087e49770326e6dd0e675386f1", null ],
     [ "SynchronizeEntities", "class_logic_layer_1_1_synchro_manager_dojo.html#ab1d1f375ff1985ef31e0994663b61610", null ],
-    [ "SynchronizeEntitiesCustom", "class_logic_layer_1_1_synchro_manager_dojo.html#a4a0c6bea46b427f7a5ecd1b6aa344879", null ],
+    [ "SynchronizeEntitiesCustom", "class_logic_layer_1_1_synchro_manager_dojo.html#a4e585939fdf0fe0dc2c0aad9e30d2554", null ],
     [ "CreateNewWhenUpdated", "class_logic_layer_1_1_synchro_manager_dojo.html#ade45791e9961fe1803d9367c7e77b71d", null ],
     [ "EntitiesToUpdate", "class_logic_layer_1_1_synchro_manager_dojo.html#aa412728d6088cdd4802c82be4a68c559", null ],
     [ "limit", "class_logic_layer_1_1_synchro_manager_dojo.html#a05a7a5946fac494d5e488f481ab66d86", null ],

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_in_lobby_controller" xml:lang="en-US">
+<title>InLobbyController Class Reference</title>
+<indexterm><primary>InLobbyController</primary></indexterm>
+<para>
+
+<para>This is the lobby page, the user is only allowed here if the invite he sent or received has been accepted. </para>
+ 
+</para>
+<para>Inheritance diagram for InLobbyController:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_in_lobby_controller.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async void <link linkend="_class_in_lobby_controller_1a7bf9b594a909f2b5f6381d5eacfac69e">AdminStartGameCall</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_in_lobby_controller_1aa84b4ba6351123e5c93c9fa9a95c00d2">OnChainTransactionCallbackFunctionSG</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_in_lobby_controller_1aa82c60569cbb07a417d670d4124ffa8c">AdminLeaveLobby</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_in_lobby_controller_1a297be2b327f6a9fec06d611c7536264d">OnChainTransactionCallbackFunctionALL</link> (string transactionHash)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_in_lobby_controller_1a938ea6b962b4b6b6923d3e16d88abf6f">UserCloseLobby</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_in_lobby_controller_1a62d6b43458c771740a8990e112dd87fa">OnChainTransactionCallbackFunctionUCL</link> (string transactionHash)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_menu_1a7552b33addd9704b62183b04e5580d6a">returnable</link> = true</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This is the lobby page, the user is only allowed here if the invite he sent or received has been accepted. </para>
+
+
+
+<para>this is where the users now confront each other before the real battle starts or the countdown finishes</para>
+
+<para>This page has two modes, one for the admin of the game and on for the guest of the game, depending on which we show different buttons</para>
+
+<para>on enable the code should check if the game is in the correct state otherwise kick him back to the corresponding page, either the game page or main menu page </para>
+<para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00018">18</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_in_lobby_controller_1aa82c60569cbb07a417d670d4124ffa8c"/><section>
+    <title>AdminLeaveLobby()</title>
+<indexterm><primary>AdminLeaveLobby</primary><secondary>InLobbyController</secondary></indexterm>
+<indexterm><primary>InLobbyController</primary><secondary>AdminLeaveLobby</secondary></indexterm>
+<para><computeroutput>async void InLobbyController.AdminLeaveLobby ( )</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00145">145</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_controller_1a7bf9b594a909f2b5f6381d5eacfac69e"/><section>
+    <title>AdminStartGameCall()</title>
+<indexterm><primary>AdminStartGameCall</primary><secondary>InLobbyController</secondary></indexterm>
+<indexterm><primary>InLobbyController</primary><secondary>AdminStartGameCall</secondary></indexterm>
+<para><computeroutput>async void InLobbyController.AdminStartGameCall ( )</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00131">131</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_controller_1a297be2b327f6a9fec06d611c7536264d"/><section>
+    <title>OnChainTransactionCallbackFunctionALL()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionALL</primary><secondary>InLobbyController</secondary></indexterm>
+<indexterm><primary>InLobbyController</primary><secondary>OnChainTransactionCallbackFunctionALL</secondary></indexterm>
+<para><computeroutput>void InLobbyController.OnChainTransactionCallbackFunctionALL (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00154">154</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_controller_1aa84b4ba6351123e5c93c9fa9a95c00d2"/><section>
+    <title>OnChainTransactionCallbackFunctionSG()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionSG</primary><secondary>InLobbyController</secondary></indexterm>
+<indexterm><primary>InLobbyController</primary><secondary>OnChainTransactionCallbackFunctionSG</secondary></indexterm>
+<para><computeroutput>void InLobbyController.OnChainTransactionCallbackFunctionSG (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00140">140</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_controller_1a62d6b43458c771740a8990e112dd87fa"/><section>
+    <title>OnChainTransactionCallbackFunctionUCL()</title>
+<indexterm><primary>OnChainTransactionCallbackFunctionUCL</primary><secondary>InLobbyController</secondary></indexterm>
+<indexterm><primary>InLobbyController</primary><secondary>OnChainTransactionCallbackFunctionUCL</secondary></indexterm>
+<para><computeroutput>void InLobbyController.OnChainTransactionCallbackFunctionUCL (string transactionHash)</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00168">168</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_in_lobby_controller_1a938ea6b962b4b6b6923d3e16d88abf6f"/><section>
+    <title>UserCloseLobby()</title>
+<indexterm><primary>UserCloseLobby</primary><secondary>InLobbyController</secondary></indexterm>
+<indexterm><primary>InLobbyController</primary><secondary>UserCloseLobby</secondary></indexterm>
+<para><computeroutput>async void InLobbyController.UserCloseLobby ( )</computeroutput></para><para>
+Definition at line <link linkend="__in_lobby_controller_8cs_source_1l00159">159</link> of file <link linkend="__in_lobby_controller_8cs_source">InLobbyController.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Pages/LobbyView/<link linkend="__in_lobby_controller_8cs">InLobbyController.cs</link></section>
+</section>

@@ -104,281 +104,282 @@ $(function(){initNavTree('_login_to_main_menu_page_behaviour_8cs_source.html',''
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Collections;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Threading.Tasks;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">    Page inbetween the login and the main menu</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"></span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    The fact that this is between the two we can use this excuse to load in anything that is left to load, this should mainly be the arcade blobert traits as they are a struct and currently the struct are not loaded by the SDK</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    Depending on the Version of the game different things happen, but currenlty we have only one version which is the arcade version.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">    1)If the user has no arcade blobert then we need to show the mint arcade blobert object</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">    when in the middle of minting it should be animated until the new blob is received</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">    2) if the user has at least one blob or has just minted a new one we now need to show the blob that he has in the blob dex, there will still be a button that asks if the user can mint another</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    the user can mint as many as he wantes</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    3) the way the user goes forward to the main menu is by clicking the LFG button, the LFG will also select the blob as the choosen one</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"></span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    Things to rememeber is to load in the localBlob, this is fetched from the plyaerPrefs/local storage of the browser</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html">   26</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_login_to_main_menu_page_behaviour.html">LoginToMainMenuPageBehaviour</a> : <a class="code hl_class" href="class_menu.html">Menu</a></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    [SerializeField] <span class="keyword">private</span> GameObject _blobberingComponent;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    [SerializeField] <span class="keyword">private</span> GameObject _staticQuestionmark;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    [SerializeField] <span class="keyword">private</span> GameObject _blobDexComponent;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">string</span> _txHash = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_base_button.html">BaseButton</a> _callbackButton;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">   36</a></span>    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_enumvalue" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aae1e55b59e9a43fa1dafaee1ad8347c43">StaticQuestionMark</a>,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_enumvalue" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aaece18447c9568f004b51a78b988c2ab0">MovingQuestionMark</a>,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_enumvalue" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aa22d16c6faf8665809bfeefc1a8674366">BlobDex</a>,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer_1_1_models.html">LogicLayer.Models</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">    Page inbetween the login and the main menu</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"></span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    The fact that this is between the two we can use this excuse to load in anything that is left to load, this should mainly be the arcade blobert traits as they are a struct and currently the struct are not loaded by the SDK</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"></span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    Depending on the Version of the game different things happen, but currenlty we have only one version which is the arcade version.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">    1)If the user has no arcade blobert then we need to show the mint arcade blobert object</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">    when in the middle of minting it should be animated until the new blob is received</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"></span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    2) if the user has at least one blob or has just minted a new one we now need to show the blob that he has in the blob dex, there will still be a button that asks if the user can mint another</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    the user can mint as many as he wantes</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    3) the way the user goes forward to the main menu is by clicking the LFG button, the LFG will also select the blob as the choosen one</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"></span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">    Things to rememeber is to load in the localBlob, this is fetched from the plyaerPrefs/local storage of the browser</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html">   27</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_login_to_main_menu_page_behaviour.html">LoginToMainMenuPageBehaviour</a> : <a class="code hl_class" href="class_menu.html">Menu</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    [SerializeField] <span class="keyword">private</span> GameObject _blobberingComponent;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    [SerializeField] <span class="keyword">private</span> GameObject _staticQuestionmark;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    [SerializeField] <span class="keyword">private</span> GameObject _blobDexComponent;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">string</span> _txHash = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_base_button.html">BaseButton</a> _callbackButton;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">   37</a></span>    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_enumvalue" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aae1e55b59e9a43fa1dafaee1ad8347c43">StaticQuestionMark</a>,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_enumvalue" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aaece18447c9568f004b51a78b988c2ab0">MovingQuestionMark</a>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_enumvalue" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aa22d16c6faf8665809bfeefc1a8674366">BlobDex</a>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        var hasBlob = LocalDataModel.LoadLocalBlob();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (hasBlob || PlayerDataModel.selectedPlayableCharacters.Count &gt; 0)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (LocalDataModel.CurrentGameEvent == LocalDataModel.GameEvent.AMMA)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                PlayerDataModel.OnAMMACharacterAdded += OnAMMACharacterAddedListener;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                PlayerDataModel.OnCharacterAdded += OnArcadeBlobertCharacterAddedListener;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">   66</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a> state)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">switch</span> (state)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                _blobDexComponent.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                _blobberingComponent.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                _staticQuestionmark.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.MovingQuestionMark:</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                _blobDexComponent.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                _blobberingComponent.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                _staticQuestionmark.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex:</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                StartCoroutine(CheckAndSetBlobDexStateWithRetries());</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        var hasBlob = LocalDataModel.LoadLocalBlob();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (hasBlob || PlayerDataModel.selectedPlayableCharacters.Count &gt; 0)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">if</span> (LocalDataModel.CurrentGameEvent == LocalDataModel.GameEvent.AMMA)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                PlayerDataModel.OnAMMACharacterAdded += OnAMMACharacterAddedListener;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                PlayerDataModel.OnCharacterAdded += OnArcadeBlobertCharacterAddedListener;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">   67</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a> state)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">switch</span> (state)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                _blobDexComponent.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                _blobberingComponent.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                _staticQuestionmark.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.MovingQuestionMark:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                _blobDexComponent.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                _blobberingComponent.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                _staticQuestionmark.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                StartCoroutine(CheckAndSetBlobDexStateWithRetries());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">private</span> IEnumerator CheckAndSetBlobDexStateWithRetries()</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> maxRetries = 10;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> retryInterval = 1.0f; <span class="comment">// 1 second between retries</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 0; attempt &lt; maxRetries; attempt++)</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">if</span> (PlayerDataModel.selectedPlayableCharacters.Count &gt; 0)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="comment">// Proceed with BlobDex state</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                _blobDexComponent.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                _staticQuestionmark.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                _blobberingComponent.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <span class="keywordflow">if</span> (LocalDataModel.CurrentGameEvent == LocalDataModel.GameEvent.AMMA)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                    AreAmmaBlobsMissing();</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                    _callbackButton.<a class="code hl_function" href="class_base_button.html#ae4a37b75f8b7a9656fb56ad2a32b0418">GetText</a>().text = <span class="stringliteral">&quot;ROLL ANOTHER&quot;</span>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                _txHash = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="keywordflow">if</span> (LocalDataModel.ChoosenBlobert == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    LocalDataModel.ChoosenBlobert = PlayerDataModel.selectedPlayableCharacters[0].GetTokenId().Hex();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                yield <span class="keywordflow">break</span>; <span class="comment">// Exit coroutine once successful</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="comment">// Wait for 1 second before the next attempt</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(retryInterval);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="comment">// If all attempts fail, fallback to StaticQuestionMark state</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    #region chain Calls</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnArcadeBlobertCharacterAddedListener(<a class="code hl_interface" href="interface_i_nft_type.html">INftType</a> blob)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        Debug.Log(<span class="stringliteral">&quot;on arcade blob&quot;</span>);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnAMMACharacterAddedListener(<a class="code hl_interface" href="interface_i_nft_type.html">INftType</a> blob)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        AreAmmaBlobsMissing();</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">private</span> async Task AreAmmaBlobsMissing()</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        _callbackButton.gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        var areMissing = (await <a class="code hl_class" href="class_a_m_m_a_blobert.html">AMMABlobert</a>.<a class="code hl_function" href="class_a_m_m_a_blobert.html#ab671c61a794e883c347d55cefae1297f">GetMissingCharacters</a>(LocalDataModel.CurrentAccount.Address)).Count &gt; 0;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">if</span> (areMissing)</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            _callbackButton.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        _callbackButton.<a class="code hl_function" href="class_base_button.html#ae4a37b75f8b7a9656fb56ad2a32b0418">GetText</a>().text = <span class="stringliteral">&quot;GET AMMA BLOBS&quot;</span>;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="foldopen" id="foldopen00160" data-start="{" data-end="}">
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a2908985bfbd5dfe634008a16387643be">  160</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a2908985bfbd5dfe634008a16387643be">MintBlobButtonCall</a>()</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">if</span> (LocalDataModel.CurrentGameEvent == LocalDataModel.GameEvent.AMMA)</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        {</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            CallForAMMALookup();</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            MintArcadeBlobert();</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">private</span> IEnumerator CheckAndSetBlobDexStateWithRetries()</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> maxRetries = 10;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> retryInterval = 1.0f; <span class="comment">// 1 second between retries</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 0; attempt &lt; maxRetries; attempt++)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">if</span> (PlayerDataModel.selectedPlayableCharacters.Count &gt; 0)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                <span class="comment">// Proceed with BlobDex state</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                _blobDexComponent.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                _staticQuestionmark.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                _blobberingComponent.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <span class="keywordflow">if</span> (LocalDataModel.CurrentGameEvent == LocalDataModel.GameEvent.AMMA)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                    AreAmmaBlobsMissing();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    _callbackButton.<a class="code hl_function" href="class_base_button.html#ae4a37b75f8b7a9656fb56ad2a32b0418">GetText</a>().text = <span class="stringliteral">&quot;ROLL ANOTHER&quot;</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                _txHash = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">if</span> (LocalDataModel.ChoosenBlobert == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    LocalDataModel.ChoosenBlobert = PlayerDataModel.selectedPlayableCharacters[0].GetTokenId().Hex();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                yield <span class="keywordflow">break</span>; <span class="comment">// Exit coroutine once successful</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="comment">// Wait for 1 second before the next attempt</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(retryInterval);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="comment">// If all attempts fail, fallback to StaticQuestionMark state</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    #region chain Calls</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnArcadeBlobertCharacterAddedListener(<a class="code hl_interface" href="interface_i_nft_type.html">INftType</a> blob)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        Debug.Log(<span class="stringliteral">&quot;on arcade blob&quot;</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnAMMACharacterAddedListener(<a class="code hl_interface" href="interface_i_nft_type.html">INftType</a> blob)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        AreAmmaBlobsMissing();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">private</span> async Task AreAmmaBlobsMissing()</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        _callbackButton.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        var areMissing = (await <a class="code hl_class" href="class_a_m_m_a_blobert.html">AMMABlobert</a>.<a class="code hl_function" href="class_a_m_m_a_blobert.html#ab671c61a794e883c347d55cefae1297f">GetMissingCharacters</a>(LocalDataModel.CurrentAccount.Address)).Count &gt; 0;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">if</span> (areMissing)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            _callbackButton.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        _callbackButton.<a class="code hl_function" href="class_base_button.html#ae4a37b75f8b7a9656fb56ad2a32b0418">GetText</a>().text = <span class="stringliteral">&quot;GET AMMA BLOBS&quot;</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a2908985bfbd5dfe634008a16387643be">  161</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a2908985bfbd5dfe634008a16387643be">MintBlobButtonCall</a>()</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">if</span> (LocalDataModel.CurrentGameEvent == LocalDataModel.GameEvent.AMMA)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            CallForAMMALookup();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            MintArcadeBlobert();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
 </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">private</span> async <span class="keywordtype">void</span> CallForAMMALookup()</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        _callbackButton.<a class="code hl_function" href="class_base_button.html#a6186c87942f84fd912603aa63d6760ad">LockButton</a>();</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        var missing = await <a class="code hl_class" href="class_a_m_m_a_blobert.html">AMMABlobert</a>.<a class="code hl_function" href="class_a_m_m_a_blobert.html#ab671c61a794e883c347d55cefae1297f">GetMissingCharacters</a>(LocalDataModel.CurrentAccount.Address);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">if</span> (missing.Count &gt; 0 &amp;&amp; missing.Count != 7)</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            Debug.Log(<span class="stringliteral">&quot;this is in the loginto main menu page and we are missing bloberts the lengt is &quot;</span> + missing.Count);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">#if UNITY_WEBGL &amp;&amp; !UNITY_EDITOR</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            MintAMMABlobert(missing);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            _callbackButton.<a class="code hl_function" href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</a>();</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keyword">private</span> async <span class="keywordtype">void</span> MintAMMABlobert(List&lt;int&gt; missingIds)</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    {</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; missingIds.Count; i++)</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordtype">byte</span> <span class="keywordtype">id</span> = (byte)(missingIds[i] - 50);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            var structData = ArcadeBlobertActionsContract.MintAMMABlobert(DojoEntitiesStorage.worldManagerData.arcadeBlobertActions, <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            DojoContractCommunication.AddToCallsList(structData);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        var transaction = await DojoContractCommunication.InvokeContract(gameObject.name, <span class="stringliteral">&quot;OnChainCallBackMintBlob&quot;</span>, account: <a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>.<a class="code hl_class" href="class_logic_layer_1_1_local_data_model.html">LocalDataModel</a>.CurrentAccount);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">private</span> async <span class="keywordtype">void</span> MintArcadeBlobert()</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        var structData = ArcadeBlobertActionsContract.MintBlobert(DojoEntitiesStorage.worldManagerData.arcadeBlobertActions);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        DojoContractCommunication.AddToCallsList(structData, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        var transaction = await DojoContractCommunication.InvokeContract(gameObject.name, <span class="stringliteral">&quot;OnChainCallBackMintBlob&quot;</span>, account: <a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>.<a class="code hl_class" href="class_logic_layer_1_1_local_data_model.html">LocalDataModel</a>.CurrentAccount);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
-<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a5241e5720f866a11e7357bfc7db6cd81">  215</a></span>    <span class="keyword">public</span> async <span class="keywordtype">void</span> <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a5241e5720f866a11e7357bfc7db6cd81">OnChainCallBackMintBlob</a>(<span class="keywordtype">string</span> transactionHash)</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> (_txHash != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">if</span> (WalletConnect.IsErrorOutcome(transactionHash))</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>.<a class="code hl_class" href="class_logic_layer_1_1_local_data_model.html">LocalDataModel</a>.ChoosenBlobert == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            _callbackButton.<a class="code hl_function" href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</a>();</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.MovingQuestionMark);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        _txHash = transactionHash;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        await <a class="code hl_class" href="class_ui_reference_manager.html">UiReferenceManager</a>.<a class="code hl_variable" href="class_ui_reference_manager.html#a4d555c1f6dd1b18bbc157f4f2dad1615">instance</a>.<a class="code hl_variable" href="class_ui_reference_manager.html#a92943447998dc625e3fce7235c0ea142">gameManager</a>.<a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>.WaitForTransaction(<span class="keyword">new</span> <a class="code hl_typedef" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>(transactionHash));</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        _txHash = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        _callbackButton.<a class="code hl_function" href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</a>();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keyword">private</span> async <span class="keywordtype">void</span> CallForAMMALookup()</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        _callbackButton.<a class="code hl_function" href="class_base_button.html#a6186c87942f84fd912603aa63d6760ad">LockButton</a>();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        var missing = await <a class="code hl_class" href="class_a_m_m_a_blobert.html">AMMABlobert</a>.<a class="code hl_function" href="class_a_m_m_a_blobert.html#ab671c61a794e883c347d55cefae1297f">GetMissingCharacters</a>(LocalDataModel.CurrentAccount.Address);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">if</span> (missing.Count &gt; 0 &amp;&amp; missing.Count != 7)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            Debug.Log(<span class="stringliteral">&quot;this is in the loginto main menu page and we are missing bloberts the lengt is &quot;</span> + missing.Count);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#if UNITY_WEBGL &amp;&amp; !UNITY_EDITOR</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            MintAMMABlobert(missing);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            _callbackButton.<a class="code hl_function" href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</a>();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">private</span> async <span class="keywordtype">void</span> MintAMMABlobert(List&lt;int&gt; missingIds)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; missingIds.Count; i++)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordtype">byte</span> <span class="keywordtype">id</span> = (byte)(missingIds[i] - 50);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            var structData = ArcadeBlobertActionsContract.MintAMMABlobert(DojoEntitiesStorage.worldManagerData.arcadeBlobertActions, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            DojoContractCommunication.AddToCallsList(structData);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        var transaction = await DojoContractCommunication.InvokeContract(gameObject.name, <span class="stringliteral">&quot;OnChainCallBackMintBlob&quot;</span>, account: LocalDataModel.CurrentAccount);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">private</span> async <span class="keywordtype">void</span> MintArcadeBlobert()</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        var structData = ArcadeBlobertActionsContract.MintBlobert(DojoEntitiesStorage.worldManagerData.arcadeBlobertActions);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        DojoContractCommunication.AddToCallsList(structData, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        var transaction = await DojoContractCommunication.InvokeContract(gameObject.name, <span class="stringliteral">&quot;OnChainCallBackMintBlob&quot;</span>, account: LocalDataModel.CurrentAccount);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="foldopen" id="foldopen00216" data-start="{" data-end="}">
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="class_login_to_main_menu_page_behaviour.html#a5241e5720f866a11e7357bfc7db6cd81">  216</a></span>    <span class="keyword">public</span> async <span class="keywordtype">void</span> <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a5241e5720f866a11e7357bfc7db6cd81">OnChainCallBackMintBlob</a>(<span class="keywordtype">string</span> transactionHash)</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">if</span> (_txHash != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">if</span> (WalletConnect.IsErrorOutcome(transactionHash))</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">if</span> (LocalDataModel.ChoosenBlobert == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.StaticQuestionMark);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            _callbackButton.<a class="code hl_function" href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</a>();</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.MovingQuestionMark);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        _txHash = transactionHash;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        await <a class="code hl_class" href="class_ui_reference_manager.html">UiReferenceManager</a>.<a class="code hl_variable" href="class_ui_reference_manager.html#a4d555c1f6dd1b18bbc157f4f2dad1615">instance</a>.<a class="code hl_variable" href="class_ui_reference_manager.html#a92943447998dc625e3fce7235c0ea142">gameManager</a>.<a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>.WaitForTransaction(<span class="keyword">new</span> <a class="code hl_typedef" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>(transactionHash));</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        _txHash = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        _callbackButton.<a class="code hl_function" href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">UnlockButton</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <a class="code hl_function" href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">SetState</a>(<a class="code hl_enumeration" href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">State</a>.BlobDex);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    }</div>
 </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">    #endregion chain Calls</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>}</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="preprocessor">    #endregion chain Calls</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
 </div>
-<div class="ttc" id="a_view_equipped_attacks_blob_dex_component_8cs_html_a04fcbbbbb88c5b1e47388f419576f399"><div class="ttname"><a href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a></div><div class="ttdeci">Dojo.Starknet.FieldElement FieldElement</div><div class="ttdef"><b>Definition</b> <a href="_view_equipped_attacks_blob_dex_component_8cs_source.html#l00006">ViewEquippedAttacksBlobDexComponent.cs:6</a></div></div>
-<div class="ttc" id="aclass_a_m_m_a_blobert_html"><div class="ttname"><a href="class_a_m_m_a_blobert.html">AMMABlobert</a></div><div class="ttdef"><b>Definition</b> <a href="_a_m_m_a_blobert_8gen_8cs_source.html#l00012">AMMABlobert.gen.cs:13</a></div></div>
-<div class="ttc" id="aclass_a_m_m_a_blobert_html_ab671c61a794e883c347d55cefae1297f"><div class="ttname"><a href="class_a_m_m_a_blobert.html#ab671c61a794e883c347d55cefae1297f">AMMABlobert.GetMissingCharacters</a></div><div class="ttdeci">static async Task&lt; List&lt; int &gt; &gt; GetMissingCharacters(FieldElement address)</div><div class="ttdef"><b>Definition</b> <a href="_a_m_m_a_blobert_8gen_8cs_source.html#l00188">AMMABlobert.gen.cs:188</a></div></div>
-<div class="ttc" id="aclass_base_button_html"><div class="ttname"><a href="class_base_button.html">BaseButton</a></div><div class="ttdef"><b>Definition</b> <a href="_base_button_8cs_source.html#l00009">BaseButton.cs:10</a></div></div>
-<div class="ttc" id="aclass_base_button_html_a6186c87942f84fd912603aa63d6760ad"><div class="ttname"><a href="class_base_button.html#a6186c87942f84fd912603aa63d6760ad">BaseButton.LockButton</a></div><div class="ttdeci">void LockButton(bool resetTexture=false)</div><div class="ttdef"><b>Definition</b> <a href="_base_button_8cs_source.html#l00170">BaseButton.cs:170</a></div></div>
-<div class="ttc" id="aclass_base_button_html_ad2184a39482e6a6ba0f4005977cc8be5"><div class="ttname"><a href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">BaseButton.UnlockButton</a></div><div class="ttdeci">void UnlockButton()</div><div class="ttdef"><b>Definition</b> <a href="_base_button_8cs_source.html#l00185">BaseButton.cs:185</a></div></div>
+<div class="ttc" id="a_view_equipped_attacks_blob_dex_component_8cs_html_a04fcbbbbb88c5b1e47388f419576f399"><div class="ttname"><a href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a></div><div class="ttdeci">Dojo.Starknet.FieldElement FieldElement</div><div class="ttdef"><b>Definition</b> <a href="_view_equipped_attacks_blob_dex_component_8cs_source.html#l00005">ViewEquippedAttacksBlobDexComponent.cs:5</a></div></div>
+<div class="ttc" id="aclass_a_m_m_a_blobert_html"><div class="ttname"><a href="class_a_m_m_a_blobert.html">AMMABlobert</a></div><div class="ttdef"><b>Definition</b> <a href="_a_m_m_a_blobert_8gen_8cs_source.html#l00011">AMMABlobert.gen.cs:12</a></div></div>
+<div class="ttc" id="aclass_a_m_m_a_blobert_html_ab671c61a794e883c347d55cefae1297f"><div class="ttname"><a href="class_a_m_m_a_blobert.html#ab671c61a794e883c347d55cefae1297f">AMMABlobert.GetMissingCharacters</a></div><div class="ttdeci">static async Task&lt; List&lt; int &gt; &gt; GetMissingCharacters(FieldElement address)</div><div class="ttdoc">Retrieves the list of missing AMMA character IDs for a given address.</div><div class="ttdef"><b>Definition</b> <a href="_a_m_m_a_blobert_8gen_8cs_source.html#l00210">AMMABlobert.gen.cs:210</a></div></div>
+<div class="ttc" id="aclass_base_button_html"><div class="ttname"><a href="class_base_button.html">BaseButton</a></div><div class="ttdef"><b>Definition</b> <a href="_base_button_8cs_source.html#l00010">BaseButton.cs:11</a></div></div>
+<div class="ttc" id="aclass_base_button_html_a6186c87942f84fd912603aa63d6760ad"><div class="ttname"><a href="class_base_button.html#a6186c87942f84fd912603aa63d6760ad">BaseButton.LockButton</a></div><div class="ttdeci">void LockButton(bool resetTexture=false)</div><div class="ttdef"><b>Definition</b> <a href="_base_button_8cs_source.html#l00171">BaseButton.cs:171</a></div></div>
+<div class="ttc" id="aclass_base_button_html_ad2184a39482e6a6ba0f4005977cc8be5"><div class="ttname"><a href="class_base_button.html#ad2184a39482e6a6ba0f4005977cc8be5">BaseButton.UnlockButton</a></div><div class="ttdeci">void UnlockButton()</div><div class="ttdef"><b>Definition</b> <a href="_base_button_8cs_source.html#l00186">BaseButton.cs:186</a></div></div>
 <div class="ttc" id="aclass_base_button_html_ae4a37b75f8b7a9656fb56ad2a32b0418"><div class="ttname"><a href="class_base_button.html#ae4a37b75f8b7a9656fb56ad2a32b0418">BaseButton.GetText</a></div><div class="ttdeci">TMP_Text GetText()</div></div>
-<div class="ttc" id="aclass_game_manager_html_ae34504f8f3a9fa1de8d8632f6ede11a8"><div class="ttname"><a href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">GameManager.provider</a></div><div class="ttdeci">JsonRpcClient provider</div><div class="ttdef"><b>Definition</b> <a href="_game_manager_8cs_source.html#l00023">GameManager.cs:23</a></div></div>
-<div class="ttc" id="aclass_logic_layer_1_1_local_data_model_html"><div class="ttname"><a href="class_logic_layer_1_1_local_data_model.html">LogicLayer.LocalDataModel</a></div><div class="ttdef"><b>Definition</b> <a href="_local_data_model_8cs_source.html#l00022">LocalDataModel.cs:23</a></div></div>
-<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html">LoginToMainMenuPageBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="#l00026">LoginToMainMenuPageBehaviour.cs:27</a></div></div>
-<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a2908985bfbd5dfe634008a16387643be"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a2908985bfbd5dfe634008a16387643be">LoginToMainMenuPageBehaviour.MintBlobButtonCall</a></div><div class="ttdeci">void MintBlobButtonCall()</div><div class="ttdef"><b>Definition</b> <a href="#l00160">LoginToMainMenuPageBehaviour.cs:160</a></div></div>
-<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a4fb95ced9e424be82743b09b4deae76a"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">LoginToMainMenuPageBehaviour.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition</b> <a href="#l00036">LoginToMainMenuPageBehaviour.cs:37</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_ae34504f8f3a9fa1de8d8632f6ede11a8"><div class="ttname"><a href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">GameManager.provider</a></div><div class="ttdeci">JsonRpcClient provider</div><div class="ttdef"><b>Definition</b> <a href="_game_manager_8cs_source.html#l00025">GameManager.cs:25</a></div></div>
+<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html">LoginToMainMenuPageBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="#l00027">LoginToMainMenuPageBehaviour.cs:28</a></div></div>
+<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a2908985bfbd5dfe634008a16387643be"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a2908985bfbd5dfe634008a16387643be">LoginToMainMenuPageBehaviour.MintBlobButtonCall</a></div><div class="ttdeci">void MintBlobButtonCall()</div><div class="ttdef"><b>Definition</b> <a href="#l00161">LoginToMainMenuPageBehaviour.cs:161</a></div></div>
+<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a4fb95ced9e424be82743b09b4deae76a"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76a">LoginToMainMenuPageBehaviour.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition</b> <a href="#l00037">LoginToMainMenuPageBehaviour.cs:38</a></div></div>
 <div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a4fb95ced9e424be82743b09b4deae76aa22d16c6faf8665809bfeefc1a8674366"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aa22d16c6faf8665809bfeefc1a8674366">LoginToMainMenuPageBehaviour.State.BlobDex</a></div><div class="ttdeci">@ BlobDex</div></div>
 <div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a4fb95ced9e424be82743b09b4deae76aae1e55b59e9a43fa1dafaee1ad8347c43"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aae1e55b59e9a43fa1dafaee1ad8347c43">LoginToMainMenuPageBehaviour.State.StaticQuestionMark</a></div><div class="ttdeci">@ StaticQuestionMark</div></div>
 <div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a4fb95ced9e424be82743b09b4deae76aaece18447c9568f004b51a78b988c2ab0"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a4fb95ced9e424be82743b09b4deae76aaece18447c9568f004b51a78b988c2ab0">LoginToMainMenuPageBehaviour.State.MovingQuestionMark</a></div><div class="ttdeci">@ MovingQuestionMark</div></div>
-<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a5241e5720f866a11e7357bfc7db6cd81"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a5241e5720f866a11e7357bfc7db6cd81">LoginToMainMenuPageBehaviour.OnChainCallBackMintBlob</a></div><div class="ttdeci">async void OnChainCallBackMintBlob(string transactionHash)</div><div class="ttdef"><b>Definition</b> <a href="#l00215">LoginToMainMenuPageBehaviour.cs:215</a></div></div>
-<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a9b5c7abfa3499776f8448a323724e9a9"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">LoginToMainMenuPageBehaviour.SetState</a></div><div class="ttdeci">void SetState(State state)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">LoginToMainMenuPageBehaviour.cs:66</a></div></div>
+<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a5241e5720f866a11e7357bfc7db6cd81"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a5241e5720f866a11e7357bfc7db6cd81">LoginToMainMenuPageBehaviour.OnChainCallBackMintBlob</a></div><div class="ttdeci">async void OnChainCallBackMintBlob(string transactionHash)</div><div class="ttdef"><b>Definition</b> <a href="#l00216">LoginToMainMenuPageBehaviour.cs:216</a></div></div>
+<div class="ttc" id="aclass_login_to_main_menu_page_behaviour_html_a9b5c7abfa3499776f8448a323724e9a9"><div class="ttname"><a href="class_login_to_main_menu_page_behaviour.html#a9b5c7abfa3499776f8448a323724e9a9">LoginToMainMenuPageBehaviour.SetState</a></div><div class="ttdeci">void SetState(State state)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">LoginToMainMenuPageBehaviour.cs:67</a></div></div>
 <div class="ttc" id="aclass_menu_html"><div class="ttname"><a href="class_menu.html">Menu</a></div><div class="ttdef"><b>Definition</b> <a href="_menu_8cs_source.html#l00003">Menu.cs:4</a></div></div>
 <div class="ttc" id="aclass_ui_reference_manager_html"><div class="ttname"><a href="class_ui_reference_manager.html">UiReferenceManager</a></div><div class="ttdef"><b>Definition</b> <a href="ui_reference_manager_8cs_source.html#l00005">uiReferenceManager.cs:6</a></div></div>
 <div class="ttc" id="aclass_ui_reference_manager_html_a4d555c1f6dd1b18bbc157f4f2dad1615"><div class="ttname"><a href="class_ui_reference_manager.html#a4d555c1f6dd1b18bbc157f4f2dad1615">UiReferenceManager.instance</a></div><div class="ttdeci">static UiReferenceManager instance</div><div class="ttdef"><b>Definition</b> <a href="ui_reference_manager_8cs_source.html#l00009">uiReferenceManager.cs:9</a></div></div>
 <div class="ttc" id="aclass_ui_reference_manager_html_a92943447998dc625e3fce7235c0ea142"><div class="ttname"><a href="class_ui_reference_manager.html#a92943447998dc625e3fce7235c0ea142">UiReferenceManager.gameManager</a></div><div class="ttdeci">GameManager gameManager</div><div class="ttdef"><b>Definition</b> <a href="ui_reference_manager_8cs_source.html#l00011">uiReferenceManager.cs:11</a></div></div>
-<div class="ttc" id="ainterface_i_nft_type_html"><div class="ttname"><a href="interface_i_nft_type.html">INftType</a></div><div class="ttdef"><b>Definition</b> <a href="_i_nft_type_8cs_source.html#l00004">INftType.cs:5</a></div></div>
+<div class="ttc" id="ainterface_i_nft_type_html"><div class="ttname"><a href="interface_i_nft_type.html">INftType</a></div><div class="ttdoc">Defines the interface for NFT types, providing a blueprint for methods and properties to handle stati...</div><div class="ttdef"><b>Definition</b> <a href="_i_nft_type_8cs_source.html#l00008">INftType.cs:9</a></div></div>
+<div class="ttc" id="anamespace_logic_layer_1_1_models_html"><div class="ttname"><a href="namespace_logic_layer_1_1_models.html">LogicLayer.Models</a></div><div class="ttdef"><b>Definition</b> <a href="_games_data_model_8cs_source.html#l00013">GamesDataModel.cs:14</a></div></div>
 <div class="ttc" id="anamespace_logic_layer_html"><div class="ttname"><a href="namespace_logic_layer.html">LogicLayer</a></div><div class="ttdef"><b>Definition</b> <a href="_synchro_manager_dojo_8cs_source.html#l00012">SynchroManagerDojo.cs:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

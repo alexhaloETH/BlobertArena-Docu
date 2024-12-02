@@ -9,8 +9,6 @@
 </listitem>
             <listitem><para>struct <link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link></para>
 </listitem>
-            <listitem><para>struct <link linkend="_struct_blobert_types_1_1_stats">BlobertTypes.Stats</link></para>
-</listitem>
         </itemizedlist>
 </simplesect>
 </section>

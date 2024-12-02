@@ -99,33 +99,35 @@ $(function(){initNavTree('_tournament_fight_element_8cs_source.html',''); initRe
   <div class="headertitle"><div class="title">TournamentFightElement.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_tournament_fight_element_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.UI;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_tournament_fight_element.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_tournament_fight_element.html">TournamentFightElement</a> : MonoBehaviour</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    [SerializeField] <span class="keyword">private</span> GameObject _leftPlayerObject;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    [SerializeField] <span class="keyword">private</span> RawImage _leftBackgroundColour;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_character_stats_visualizer_component.html">CharacterStatsVisualizerComponent</a> _blobLeftValueVisualizer;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_character_animation_manager.html">CharacterAnimationManager</a> _blobLeftTraitVisualizer;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    [Space(10)]</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [SerializeField] <span class="keyword">private</span> GameObject _rightPlayerObject;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    [SerializeField] <span class="keyword">private</span> RawImage _rightBackgroundColour;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_character_stats_visualizer_component.html">CharacterStatsVisualizerComponent</a> _blobRightValueVisualizer;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_character_animation_manager.html">CharacterAnimationManager</a> _blobRightTraitVisualizer;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">//this needs to receive onlt the combat id and then query the thing</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">//on the contract address is the same make it blue else red</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// on finished game make it grey out and red and green</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<a href="_tournament_fight_element_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_blobert_arena_1_1_animations.html">BlobertArena.Animations</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_tournament_fight_element.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_tournament_fight_element.html">TournamentFightElement</a> : MonoBehaviour</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    [SerializeField] <span class="keyword">private</span> GameObject _leftPlayerObject;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    [SerializeField] <span class="keyword">private</span> RawImage _leftBackgroundColour;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_character_stats_visualizer_component.html">CharacterStatsVisualizerComponent</a> _blobLeftValueVisualizer;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_blobert_arena_1_1_animations_1_1_character_animation_manager.html">CharacterAnimationManager</a> _blobLeftTraitVisualizer;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [Space(10)]</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    [SerializeField] <span class="keyword">private</span> GameObject _rightPlayerObject;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [SerializeField] <span class="keyword">private</span> RawImage _rightBackgroundColour;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_character_stats_visualizer_component.html">CharacterStatsVisualizerComponent</a> _blobRightValueVisualizer;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_blobert_arena_1_1_animations_1_1_character_animation_manager.html">CharacterAnimationManager</a> _blobRightTraitVisualizer;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">//this needs to receive onlt the combat id and then query the thing</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">//on the contract address is the same make it blue else red</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// on finished game make it grey out and red and green</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
 </div>
-<div class="ttc" id="aclass_character_animation_manager_html"><div class="ttname"><a href="class_character_animation_manager.html">CharacterAnimationManager</a></div><div class="ttdef"><b>Definition</b> <a href="_character_animation_manager_8cs_source.html#l00008">CharacterAnimationManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_blobert_arena_1_1_animations_1_1_character_animation_manager_html"><div class="ttname"><a href="class_blobert_arena_1_1_animations_1_1_character_animation_manager.html">BlobertArena.Animations.CharacterAnimationManager</a></div><div class="ttdef"><b>Definition</b> <a href="_character_animation_manager_8cs_source.html#l00009">CharacterAnimationManager.cs:10</a></div></div>
 <div class="ttc" id="aclass_character_stats_visualizer_component_html"><div class="ttname"><a href="class_character_stats_visualizer_component.html">CharacterStatsVisualizerComponent</a></div><div class="ttdoc">This component is responsible for displaying the values of a Blobert in the UI.</div><div class="ttdef"><b>Definition</b> <a href="_character_stats_visualizer_component_8cs_source.html#l00010">CharacterStatsVisualizerComponent.cs:11</a></div></div>
-<div class="ttc" id="aclass_tournament_fight_element_html"><div class="ttname"><a href="class_tournament_fight_element.html">TournamentFightElement</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">TournamentFightElement.cs:5</a></div></div>
+<div class="ttc" id="aclass_tournament_fight_element_html"><div class="ttname"><a href="class_tournament_fight_element.html">TournamentFightElement</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">TournamentFightElement.cs:6</a></div></div>
+<div class="ttc" id="anamespace_blobert_arena_1_1_animations_html"><div class="ttname"><a href="namespace_blobert_arena_1_1_animations.html">BlobertArena.Animations</a></div><div class="ttdef"><b>Definition</b> <a href="_amma_animation_controller_8cs_source.html#l00006">AmmaAnimationController.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

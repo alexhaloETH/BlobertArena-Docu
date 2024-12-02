@@ -19,7 +19,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__java_script_utils_8cs_source_1l00091">91</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
+Definition at line <link linkend="__java_script_utils_8cs_source_1l00089">89</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -28,7 +28,7 @@ Definition at line <link linkend="__java_script_utils_8cs_source_1l00091">91</li
 <indexterm><primary>Callback</primary><secondary>JavaScriptUtils.ClipboardHelper</secondary></indexterm>
 <indexterm><primary>JavaScriptUtils.ClipboardHelper</primary><secondary>Callback</secondary></indexterm>
 <para><computeroutput>static void JavaScriptUtils.ClipboardHelper.Callback (string result)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__java_script_utils_8cs_source_1l00097">97</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
+Definition at line <link linkend="__java_script_utils_8cs_source_1l00094">94</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -38,7 +38,7 @@ Definition at line <link linkend="__java_script_utils_8cs_source_1l00097">97</li
 <indexterm><primary>Tcs</primary><secondary>JavaScriptUtils.ClipboardHelper</secondary></indexterm>
 <indexterm><primary>JavaScriptUtils.ClipboardHelper</primary><secondary>Tcs</secondary></indexterm>
 <para><computeroutput>TaskCompletionSource&lt;string&gt; JavaScriptUtils.ClipboardHelper.Tcs<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__java_script_utils_8cs_source_1l00093">93</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
+Definition at line <link linkend="__java_script_utils_8cs_source_1l00091">91</link> of file <link linkend="__java_script_utils_8cs_source">JavaScriptUtils.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

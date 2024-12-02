@@ -13,5 +13,5 @@ var searchData=
   ['poland_10',['Poland',['../class_blobert_types.html#ac87f9c0324ba8a13481b3dbbb359986da94880bda83bda77c5692876700711f15',1,'BlobertTypes']]],
   ['popehat_11',['PopeHat',['../class_blobert_types.html#aeea23bb373668a46486ca06150c26e1ba528f6bff5829d0ec48af0647bb62841f',1,'BlobertTypes']]],
   ['pudgy_12',['Pudgy',['../class_blobert_types.html#aeea23bb373668a46486ca06150c26e1ba70d66924f584b34384d08157aae6f5f2',1,'BlobertTypes']]],
-  ['purple_13',['Purple',['../class_blobert_types.html#ac87f9c0324ba8a13481b3dbbb359986dab9ba865fec061c9706d2fd7ce49c0cc7',1,'BlobertTypes.Purple'],['../class_base_button_skin_listener.html#a94f6ee12664b925785f0a4732d550ae4ab9ba865fec061c9706d2fd7ce49c0cc7',1,'BaseButtonSkinListener.Purple']]]
+  ['purple_13',['Purple',['../class_blobert_types.html#ac87f9c0324ba8a13481b3dbbb359986dab9ba865fec061c9706d2fd7ce49c0cc7',1,'BlobertTypes.Purple'],['../class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener.html#ab3331b5edaaf3577b80fbbb5e89bb955ab9ba865fec061c9706d2fd7ce49c0cc7',1,'BlobertArena.ThemeManager.BaseButtonSkinListener.Purple']]]
 ];

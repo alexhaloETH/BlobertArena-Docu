@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['queueofplayoveranims_0',['QueueOfPlayOverAnims',['../class_character_animation_manager.html#a428ea85e49fa33e12b1fd892b535abfa',1,'CharacterAnimationManager']]],
-  ['quickidlel_1',['QuickIdleL',['../class_amma_animation_controller.html#a2dbcf21896ab7b32333d7839d5d252d1',1,'AmmaAnimationController']]],
-  ['quickidlenomaskl_2',['QuickIdleNoMaskL',['../class_amma_animation_controller.html#af68607d1e6b2d6a7c32f40c591e41b89',1,'AmmaAnimationController']]],
-  ['quickidlenomaskr_3',['QuickIdleNoMaskR',['../class_amma_animation_controller.html#a77f36f86b2395683c1c1c74a7e6b5ceb',1,'AmmaAnimationController']]],
-  ['quickidler_4',['QuickIdleR',['../class_amma_animation_controller.html#a1a840da0fe15e0c3637ff8af31a8e5a0',1,'AmmaAnimationController']]]
+  ['queueofplayoveranims_0',['QueueOfPlayOverAnims',['../class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#ab69c844cab008651087722fb3d43ac49',1,'BlobertArena::Animations::CharacterAnimationManager']]],
+  ['quickidlel_1',['QuickIdleL',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a8341e49afb5686bddeb6ac4dd3e200d5',1,'BlobertArena::Animations::AmmaAnimationController']]],
+  ['quickidlenomaskl_2',['QuickIdleNoMaskL',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a93895c01379cd7f030e81066b805e46b',1,'BlobertArena::Animations::AmmaAnimationController']]],
+  ['quickidlenomaskr_3',['QuickIdleNoMaskR',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a159b1d579976d25c20ec3702a459a53e',1,'BlobertArena::Animations::AmmaAnimationController']]],
+  ['quickidler_4',['QuickIdleR',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a72159c0c8b4329ab0aa98e1578315d72',1,'BlobertArena::Animations::AmmaAnimationController']]]
 ];

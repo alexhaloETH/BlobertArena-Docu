@@ -2,12 +2,21 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item" xml:lang="en-US">
 <title>LogicLayer.FetchBlobertWalletData.NFTItem Class Reference</title>
 <indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary></indexterm>
+<para>
+
+<para>Represents a single NFT item, including its ID and associated traits. </para>
+ 
+</para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
             <listitem><para><link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a60faae20da89e3cd1879db4f6693f1ee">NFTItem</link> (string id)</para>
+
+<para>Initializes a new instance of the <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item">NFTItem</link> class with a specified ID. </para>
 </listitem>
             <listitem><para>void <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1afab242584b88d3dbd9be6ca6ee5df268">SetTrait</link> (string traitKey, string traitValue)</para>
+
+<para>Sets a specific trait for the NFT based on its key and value. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -16,16 +25,22 @@
         <itemizedlist>
             <listitem><para>string <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1ae9679282933487d3644ef1a32e8c1e36">Id</link><computeroutput> [get, set]</computeroutput>
 </para>
+
+<para>Gets or sets the unique identifier of the NFT item. </para>
 </listitem>
             <listitem><para><link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link> <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a24b844519023306a343a030ed134b649">Traits</link><computeroutput> [get]</computeroutput>
 </para>
+
+<para>Gets the traits associated with the NFT item. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Detailed Description</title>
+
+<para>Represents a single NFT item, including its ID and associated traits. </para>
 <para>
-Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00059">59</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00070">70</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -34,7 +49,33 @@ Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00059
 <indexterm><primary>NFTItem</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
 <indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>NFTItem</secondary></indexterm>
 <para><computeroutput>LogicLayer.FetchBlobertWalletData.NFTItem.NFTItem (string id)</computeroutput></para><para>
-Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00064">64</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+
+<para>Initializes a new instance of the <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item">NFTItem</link> class with a specified ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>The unique identifier of the NFT.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00086">86</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -44,7 +85,38 @@ Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00064
 <indexterm><primary>SetTrait</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
 <indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>SetTrait</secondary></indexterm>
 <para><computeroutput>void LogicLayer.FetchBlobertWalletData.NFTItem.SetTrait (string traitKey, string traitValue)</computeroutput></para><para>
-Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00070">70</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+
+<para>Sets a specific trait for the NFT based on its key and value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>traitKey</entry><entry>
+<para>The key representing the trait type.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>traitValue</entry><entry>
+<para>The value of the trait to assign.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00097">97</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -54,14 +126,22 @@ Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00070
 <indexterm><primary>Id</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
 <indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>Id</secondary></indexterm>
 <para><computeroutput>string LogicLayer.FetchBlobertWalletData.NFTItem.Id<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00061">61</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+
+<para>Gets or sets the unique identifier of the NFT item. </para>
+</para>
+<para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00075">75</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
 </section>
 <anchor xml:id="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item_1a24b844519023306a343a030ed134b649"/><section>
     <title>Traits</title>
 <indexterm><primary>Traits</primary><secondary>LogicLayer.FetchBlobertWalletData.NFTItem</secondary></indexterm>
 <indexterm><primary>LogicLayer.FetchBlobertWalletData.NFTItem</primary><secondary>Traits</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link> LogicLayer.FetchBlobertWalletData.NFTItem.Traits<computeroutput>[get]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00062">62</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
+
+<para>Gets the traits associated with the NFT item. </para>
+</para>
+<para>
+Definition at line <link linkend="__fetch_blobert_wallet_data_8cs_source_1l00080">80</link> of file <link linkend="__fetch_blobert_wallet_data_8cs_source">FetchBlobertWalletData.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

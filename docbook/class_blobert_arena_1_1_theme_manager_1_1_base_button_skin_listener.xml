@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.BaseButtonSkinListener Class Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.ThemeManager.BaseButtonSkinListener:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955">ButtonColor</link> { <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955aee38e4d5dd68c4e440825018d549cb47">Red</link>
+, <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955ad382816a3cbeed082c9e216e7392eed1">Green</link>
+, <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955ab9ba865fec061c9706d2fd7ce49c0cc7">Purple</link>
+, <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955a51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a8380ca224a6e193367db1916d6c5176a">ListenerToSkinEvent</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a1d255cb70462100a1b73a9c299108d9a">SetButtonType</link> (<link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link> buttonType)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; <link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link> &gt; <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a4ee51273311e04176f45899a15e2d81f">buttonTypes</link> = new()</para>
+</listitem>
+            <listitem><para><link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link> <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a01bda45937ce6c8ca6b0b85eef608aab">_currentSelectedButtonType</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1acd39e232defd17c347a2446631c648fc">startingIndexType</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00007">7</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955"/><section>
+    <title>ButtonColor</title>
+<indexterm><primary>ButtonColor</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>ButtonColor</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955">BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonColor</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Red</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>Red</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955aee38e4d5dd68c4e440825018d549cb47"/>Red</entry><entry></entry></row><row><entry><indexterm><primary>Green</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>Green</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955ad382816a3cbeed082c9e216e7392eed1"/>Green</entry><entry></entry></row><row><entry><indexterm><primary>Purple</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>Purple</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955ab9ba865fec061c9706d2fd7ce49c0cc7"/>Purple</entry><entry></entry></row><row><entry><indexterm><primary>Yellow</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>Yellow</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1ab3331b5edaaf3577b80fbbb5e89bb955a51e6cd92b6c45f9affdc158ecca2b8b8"/>Yellow</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00009">9</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a8380ca224a6e193367db1916d6c5176a"/><section>
+    <title>ListenerToSkinEvent()</title>
+<indexterm><primary>ListenerToSkinEvent</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>ListenerToSkinEvent</secondary></indexterm>
+<para><computeroutput>void BlobertArena.ThemeManager.BaseButtonSkinListener.ListenerToSkinEvent ( )</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00051">51</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a1d255cb70462100a1b73a9c299108d9a"/><section>
+    <title>SetButtonType()</title>
+<indexterm><primary>SetButtonType</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>SetButtonType</secondary></indexterm>
+<para><computeroutput>void BlobertArena.ThemeManager.BaseButtonSkinListener.SetButtonType (<link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link> buttonType)</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00063">63</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a01bda45937ce6c8ca6b0b85eef608aab"/><section>
+    <title>_currentSelectedButtonType</title>
+<indexterm><primary>_currentSelectedButtonType</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>_currentSelectedButtonType</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link> BlobertArena.ThemeManager.BaseButtonSkinListener._currentSelectedButtonType</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00029">29</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1a4ee51273311e04176f45899a15e2d81f"/><section>
+    <title>buttonTypes</title>
+<indexterm><primary>buttonTypes</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>buttonTypes</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type">ButtonType</link>&gt; BlobertArena.ThemeManager.BaseButtonSkinListener.buttonTypes = new()</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00025">25</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1acd39e232defd17c347a2446631c648fc"/><section>
+    <title>startingIndexType</title>
+<indexterm><primary>startingIndexType</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener</primary><secondary>startingIndexType</secondary></indexterm>
+<para><computeroutput>int BlobertArena.ThemeManager.BaseButtonSkinListener.startingIndexType = 0</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00030">30</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__base_button_skin_listener_8cs">BaseButtonSkinListener.cs</link></section>
+</section>

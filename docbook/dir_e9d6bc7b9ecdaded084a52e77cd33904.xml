@@ -7,11 +7,13 @@
         <itemizedlist>
             <listitem><para>file <link linkend="__blobert_types_8cs">BlobertTypes.cs</link></para>
 </listitem>
-            <listitem><para>file <link linkend="__blobert_utils_8cs">BlobertUtils.cs</link></para>
-</listitem>
             <listitem><para>file <link linkend="__dojo_entities_storage_8cs">DojoEntitiesStorage.cs</link></para>
 </listitem>
             <listitem><para>file <link linkend="__event_manager_8cs">EventManager.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__starknet_address_utils_8cs">StarknetAddressUtils.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__starknet_hash_operations_utils_8cs">StarknetHashOperationsUtils.cs</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

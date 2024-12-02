@@ -1,7 +1,7 @@
 var searchData=
 [
   ['effect_0',['Effect',['../class_sound_combat_blob_arena.html#adba520e400ee9d1c6492dc54d94f4695',1,'SoundCombatBlobArena.Effect'],['../class_sound_combat_common.html#a0aaf32b8f54723a1bae0d3b57aa2acfa',1,'SoundCombatCommon.Effect'],['../class_sound_combat_special.html#aac5a94116f1dbce1bd298959943bb9a1',1,'SoundCombatSpecial.Effect'],['../class_sound_effect.html#ab7f431ca39490f9c6864e1e70da47a59',1,'SoundEffect.Effect']]],
-  ['effectoverlayimage_1',['EffectOverlayImage',['../class_character_animation_manager.html#a1aab4a10ce8c04c2b1b8df318554763c',1,'CharacterAnimationManager']]],
+  ['effectoverlayimage_1',['EffectOverlayImage',['../class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#a148ef12eabadb3a8c4c2a3846c2bd122',1,'BlobertArena::Animations::CharacterAnimationManager']]],
   ['elements_2',['elements',['../struct_pvp_actions_contract_1_1_send_invite_struct.html#a58c240d8e228567d1f98ec7068585f9f',1,'PvpActionsContract::SendInviteStruct']]],
   ['elementsnumber_3',['elementsNumber',['../struct_pvp_actions_contract_1_1_respond_invite_struct.html#a3cc18a8aeb4cbef5429d3acaf9016be2',1,'PvpActionsContract::RespondInviteStruct']]],
   ['emptyfieldelement_4',['emptyFieldElement',['../struct_pvp_actions_contract_1_1_send_invite_struct.html#ab6e07f52fa2e24a6689de4be83251dbb',1,'PvpActionsContract.SendInviteStruct.emptyFieldElement'],['../struct_pvp_actions_contract_1_1_respond_invite_struct.html#a61e1f1f9deb6778a6c5fb1261ad040fd',1,'PvpActionsContract.RespondInviteStruct.emptyFieldElement']]],

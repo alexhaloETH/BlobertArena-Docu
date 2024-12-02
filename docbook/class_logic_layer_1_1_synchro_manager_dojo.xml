@@ -17,7 +17,7 @@
 </listitem>
             <listitem><para>GameObject <link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a8e5a66e1d92298b303908ed00cedf90d">SpawnEntity</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> hashedKeys, Model[] entityModels)</para>
 </listitem>
-            <listitem><para>async Task&lt; int &gt; <link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a4a0c6bea46b427f7a5ecd1b6aa344879">SynchronizeEntitiesCustom</link> (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</para>
+            <listitem><para>async Task&lt; int &gt; <link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1a4e585939fdf0fe0dc2c0aad9e30d2554">SynchronizeEntitiesCustom</link> (Dojo.Torii.Query query)</para>
 </listitem>
             <listitem><para>GameObject <link linkend="_class_logic_layer_1_1_synchro_manager_dojo_1afc54c7087e49770326e6dd0e675386f1">SpawnEntityCustom</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> hashedKeys, Model[] entityModels)</para>
 </listitem>
@@ -105,11 +105,11 @@ Definition at line <link linkend="__synchro_manager_dojo_8cs_source_1l00168">168
 <para><computeroutput>async Task&lt; int &gt; LogicLayer.SynchroManagerDojo.SynchronizeEntities ( )</computeroutput></para><para>
 Definition at line <link linkend="__synchro_manager_dojo_8cs_source_1l00054">54</link> of file <link linkend="__synchro_manager_dojo_8cs_source">SynchroManagerDojo.cs</link>.</para>
 </section>
-<anchor xml:id="_class_logic_layer_1_1_synchro_manager_dojo_1a4a0c6bea46b427f7a5ecd1b6aa344879"/><section>
+<anchor xml:id="_class_logic_layer_1_1_synchro_manager_dojo_1a4e585939fdf0fe0dc2c0aad9e30d2554"/><section>
     <title>SynchronizeEntitiesCustom()</title>
 <indexterm><primary>SynchronizeEntitiesCustom</primary><secondary>LogicLayer.SynchroManagerDojo</secondary></indexterm>
 <indexterm><primary>LogicLayer.SynchroManagerDojo</primary><secondary>SynchronizeEntitiesCustom</secondary></indexterm>
-<para><computeroutput>async Task&lt; int &gt; LogicLayer.SynchroManagerDojo.SynchronizeEntitiesCustom (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</computeroutput></para><para>
+<para><computeroutput>async Task&lt; int &gt; LogicLayer.SynchroManagerDojo.SynchronizeEntitiesCustom (Dojo.Torii.Query query)</computeroutput></para><para>
 Definition at line <link linkend="__synchro_manager_dojo_8cs_source_1l00150">150</link> of file <link linkend="__synchro_manager_dojo_8cs_source">SynchroManagerDojo.cs</link>.</para>
 </section>
 </section>

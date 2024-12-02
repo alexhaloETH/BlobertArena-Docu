@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType Struct Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Sprite <link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type_1ae5c3bd08b47b6dd83ba7e130c421f60a">defaultSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type_1a5451667159205551c1c76bcd33681972">clickedSprite</link></para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type_1a0ff35a2b5995a767d31d9839691f3b0d">hoverSprite</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00018">18</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type_1a5451667159205551c1c76bcd33681972"/><section>
+    <title>clickedSprite</title>
+<indexterm><primary>clickedSprite</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</primary><secondary>clickedSprite</secondary></indexterm>
+<para><computeroutput>Sprite BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType.clickedSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00021">21</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type_1ae5c3bd08b47b6dd83ba7e130c421f60a"/><section>
+    <title>defaultSprite</title>
+<indexterm><primary>defaultSprite</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</primary><secondary>defaultSprite</secondary></indexterm>
+<para><computeroutput>Sprite BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType.defaultSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00020">20</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type_1a0ff35a2b5995a767d31d9839691f3b0d"/><section>
+    <title>hoverSprite</title>
+<indexterm><primary>hoverSprite</primary><secondary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType</primary><secondary>hoverSprite</secondary></indexterm>
+<para><computeroutput>Sprite BlobertArena.ThemeManager.BaseButtonSkinListener.ButtonType.hoverSprite</computeroutput></para><para>
+Definition at line <link linkend="__base_button_skin_listener_8cs_source_1l00022">22</link> of file <link linkend="__base_button_skin_listener_8cs_source">BaseButtonSkinListener.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__base_button_skin_listener_8cs">BaseButtonSkinListener.cs</link></section>
+</section>

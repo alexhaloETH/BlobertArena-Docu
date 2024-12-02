@@ -78,7 +78,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00011">11</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00013">13</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -87,14 +87,14 @@ Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l0001
 <indexterm><primary>DestroyObject</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>DestroyObject</secondary></indexterm>
 <para><computeroutput>void PvPChallengeInvite.DestroyObject ( )</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00045">45</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00047">47</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a1bd6f66068c3b76bd5c2683c6ddd6afd"/><section>
     <title>InitialSetFromInvite()</title>
 <indexterm><primary>InitialSetFromInvite</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>InitialSetFromInvite</secondary></indexterm>
 <para><computeroutput>static async Task&lt; GameStatus &gt; PvPChallengeInvite.InitialSetFromInvite (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00102">102</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00104">104</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a37ff87293492214926603604314af93c"/><section>
     <title>IsAdminOfGame()<computeroutput>[1/2]</computeroutput></title>
@@ -126,14 +126,14 @@ Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l0010
 <indexterm><primary>OnUpdate</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>OnUpdate</secondary></indexterm>
 <para><computeroutput>override void PvPChallengeInvite.OnUpdate (Model model)</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00039">39</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00041">41</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a8ce21a5046a534bad3f8cfcfef44ae22"/><section>
     <title>SetStatusFromInvite()</title>
 <indexterm><primary>SetStatusFromInvite</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>SetStatusFromInvite</secondary></indexterm>
 <para><computeroutput>static GameStatus PvPChallengeInvite.SetStatusFromInvite (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00063">63</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00065">65</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -143,21 +143,21 @@ Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l0006
 <indexterm><primary>collection_address</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>collection_address</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.collection_address</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00023">23</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00025">25</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a1d0ce509d557800323a7740c215f87dc"/><section>
     <title>combatant</title>
 <indexterm><primary>combatant</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>combatant</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.combatant</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00026">26</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00028">28</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1aed1c04d47b965df065a1da35dff163be"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string PvPChallengeInvite.GraphQlHeader = &quot;blobArenaPvPChallengeInviteModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00161">161</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00163">163</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a8183f7e991d7d52093249b0a62c484e3"/><section>
     <title>GraphQlQueryFull</title>
@@ -187,7 +187,7 @@ Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l0016
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00125">125</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00127">127</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a028e1b7fdef0ce6f05f30c109a78c243"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -205,42 +205,42 @@ Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l0012
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00149">149</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00151">151</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a41e01ed1d242a401931f6b47c8512ac7"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.id</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00014">14</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00016">16</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a0910fc0061b7ba371d530e704bf0f0a0"/><section>
     <title>open</title>
 <indexterm><primary>open</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>open</secondary></indexterm>
 <para><computeroutput>bool PvPChallengeInvite.open</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00032">32</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00034">34</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1a521f6791c49a33f92c066b989ba00f51"/><section>
     <title>phase_time</title>
 <indexterm><primary>phase_time</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>phase_time</secondary></indexterm>
 <para><computeroutput>ulong PvPChallengeInvite.phase_time</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00029">29</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00031">31</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1aacbfd86986c6c4c84f3cf01a976cb41b"/><section>
     <title>receiver</title>
 <indexterm><primary>receiver</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>receiver</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.receiver</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00020">20</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00022">22</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_pv_p_challenge_invite_1af6f1246f9485988b176100f5bd6505ac"/><section>
     <title>sender</title>
 <indexterm><primary>sender</primary><secondary>PvPChallengeInvite</secondary></indexterm>
 <indexterm><primary>PvPChallengeInvite</primary><secondary>sender</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> PvPChallengeInvite.sender</computeroutput></para><para>
-Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00017">17</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
+Definition at line <link linkend="__pv_p_challenge_invite_8gen_8cs_source_1l00019">19</link> of file <link linkend="__pv_p_challenge_invite_8gen_8cs_source">PvPChallengeInvite.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_blobert_arena_1_1_blob_dex" xml:lang="en-US">
+<title>BlobertArena.BlobDex Namespace Reference</title>
+<indexterm><primary>BlobertArena.BlobDex</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component">BlobDataManagerBlobDexComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component">BlobDataStandardObjectsBlobDexComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_dex_list_component">BlobDexListComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_dex_list_element">BlobDexListElement</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_leader_board_blob_data_blod_dex_component">LeaderBoardBlobDataBlodDexComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component">StandardViewNoAttacksBlobDexComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_equipped_attacks_blob_dex_component">ViewEquippedAttacksBlobDexComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_traits_attack_blob_dex_component">ViewTraitsAttackBlobDexComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

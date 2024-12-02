@@ -5,9 +5,9 @@
 <simplesect>
     <title>Files    </title>
         <itemizedlist>
-            <listitem><para>file <link linkend="__lobby_list_page_behaviour_8cs">LobbyListPageBehaviour.cs</link></para>
+            <listitem><para>file <link linkend="__in_lobby_controller_8cs">InLobbyController.cs</link></para>
 </listitem>
-            <listitem><para>file <link linkend="__lobby_view_page_behaviour_8cs">LobbyViewPageBehaviour.cs</link></para>
+            <listitem><para>file <link linkend="__lobby_list_page_behaviour_8cs">LobbyListPageBehaviour.cs</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

@@ -29,7 +29,7 @@
 
 <para>Script to manage the switch between BlobArena and AMMA. </para>
 <para>
-Definition at line <link linkend="__amma_switch_button_8cs_source_1l00012">12</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
+Definition at line <link linkend="__amma_switch_button_8cs_source_1l00014">14</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -38,14 +38,14 @@ Definition at line <link linkend="__amma_switch_button_8cs_source_1l00012">12</l
 <indexterm><primary>OnMouseHoverOver</primary><secondary>AmmaSwitchButton</secondary></indexterm>
 <indexterm><primary>AmmaSwitchButton</primary><secondary>OnMouseHoverOver</secondary></indexterm>
 <para><computeroutput>void AmmaSwitchButton.OnMouseHoverOver (bool hover)</computeroutput></para><para>
-Definition at line <link linkend="__amma_switch_button_8cs_source_1l00038">38</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
+Definition at line <link linkend="__amma_switch_button_8cs_source_1l00040">40</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
 </section>
 <anchor xml:id="_class_amma_switch_button_1a032f5aaf54f021927c3483e46f6b0f19"/><section>
     <title>Start()</title>
 <indexterm><primary>Start</primary><secondary>AmmaSwitchButton</secondary></indexterm>
 <indexterm><primary>AmmaSwitchButton</primary><secondary>Start</secondary></indexterm>
 <para><computeroutput>void AmmaSwitchButton.Start ( )</computeroutput></para><para>
-Definition at line <link linkend="__amma_switch_button_8cs_source_1l00027">27</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
+Definition at line <link linkend="__amma_switch_button_8cs_source_1l00029">29</link> of file <link linkend="__amma_switch_button_8cs_source">AmmaSwitchButton.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

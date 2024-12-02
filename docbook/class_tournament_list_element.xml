@@ -26,7 +26,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__tournament_list_element_8cs_source_1l00006">6</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00007">7</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -35,7 +35,7 @@ Definition at line <link linkend="__tournament_list_element_8cs_source_1l00006">
 <indexterm><primary>ExploreTournamentButtonPressed</primary><secondary>TournamentListElement</secondary></indexterm>
 <indexterm><primary>TournamentListElement</primary><secondary>ExploreTournamentButtonPressed</secondary></indexterm>
 <para><computeroutput>void TournamentListElement.ExploreTournamentButtonPressed ( )</computeroutput></para><para>
-Definition at line <link linkend="__tournament_list_element_8cs_source_1l00051">51</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00052">52</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_tournament_list_element_1aa8eabab514b53df743d30b9af3b55276"/><section>
     <title>Initialize()</title>
@@ -69,14 +69,14 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__tournament_list_element_8cs_source_1l00036">36</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00037">37</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_tournament_list_element_1ad3fd7190ab88820699baa3510170367c"/><section>
     <title>JoinTournamentButtonPressed()</title>
 <indexterm><primary>JoinTournamentButtonPressed</primary><secondary>TournamentListElement</secondary></indexterm>
 <indexterm><primary>TournamentListElement</primary><secondary>JoinTournamentButtonPressed</secondary></indexterm>
 <para><computeroutput>void TournamentListElement.JoinTournamentButtonPressed ( )</computeroutput></para><para>
-Definition at line <link linkend="__tournament_list_element_8cs_source_1l00057">57</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
+Definition at line <link linkend="__tournament_list_element_8cs_source_1l00058">58</link> of file <link linkend="__tournament_list_element_8cs_source">TournamentListElement.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

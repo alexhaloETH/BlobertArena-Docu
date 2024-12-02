@@ -5,7 +5,7 @@
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__select_blob_page_behavior_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00002"/>00002 
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
-<anchor xml:id="__select_blob_page_behavior_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__select_blob_page_behavior_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer_1_1_models">LogicLayer.Models</link>;
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00005"/>00005 
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00009"/><link linkend="_class_select_blob_page_behavior">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_select_blob_page_behavior">SelectBlobPageBehavior</link>&#32;:&#32;<link linkend="_class_menu">Menu</link>
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00010"/>00010 {
@@ -53,7 +53,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(structData);
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00054"/>00054 
-<anchor xml:id="__select_blob_page_behavior_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainCallBackMintBlob&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__select_blob_page_behavior_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainCallBackMintBlob&quot;</emphasis>,&#32;account:&#32;LocalDataModel.CurrentAccount);
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00057"/>00057 
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;MintArcadeBlobert()
@@ -62,7 +62,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00061"/>00061 
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DojoContractCommunication.AddToCallsList(structData,&#32;<emphasis role="keyword">true</emphasis>);
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00063"/>00063 
-<anchor xml:id="__select_blob_page_behavior_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainCallBackMintBlob&quot;</emphasis>,&#32;account:&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.CurrentAccount);
+<anchor xml:id="__select_blob_page_behavior_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;transaction&#32;=&#32;await&#32;DojoContractCommunication.InvokeContract(gameObject.name,&#32;<emphasis role="stringliteral">&quot;OnChainCallBackMintBlob&quot;</emphasis>,&#32;account:&#32;LocalDataModel.CurrentAccount);
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00066"/>00066 
 <anchor xml:id="__select_blob_page_behavior_8cs_source_1l00067"/><link linkend="_class_select_blob_page_behavior_1ac8742689a6f9ac6f3dc9cab54bc3f754">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_select_blob_page_behavior_1ac8742689a6f9ac6f3dc9cab54bc3f754">OnChainCallBackMintBlob</link>(<emphasis role="keywordtype">string</emphasis>&#32;transactionHash)

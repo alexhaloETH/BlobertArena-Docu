@@ -99,94 +99,98 @@ $(function(){initNavTree('_game_manager_8cs_source.html',''); initResizable(true
   <div class="headertitle"><div class="title">GameManager.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_game_manager_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>Dojo;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Dojo.Starknet;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Threading.Tasks;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Fix to use Records in Unity ref. https://stackoverflow.com/a/73100830</span></div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespace_system.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_system_1_1_runtime_1_1_compiler_services.html">System.Runtime.CompilerServices</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<a href="_game_manager_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>DG.Tweening.Core.Easing;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Dojo;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Dojo.Starknet;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>System.Threading.Tasks;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer_1_1_models.html">LogicLayer.Models</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Fix to use Records in Unity ref. https://stackoverflow.com/a/73100830</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_system.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_system_1_1_runtime_1_1_compiler_services.html">System.Runtime.CompilerServices</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
 </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//pretty sure this is all not neeeded as we dont use the init entityt and other stuff from here</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_game_manager.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_game_manager.html">GameManager</a> : MonoBehaviour</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">   17</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_logic_layer_1_1_world_manager_dojo.html">WorldManagerDojo</a> <a class="code hl_variable" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">   18</a></span>    <span class="keyword">public</span> WorldManagerData <a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">   20</a></span>    <span class="keyword">public</span> BurnerManager <a class="code hl_variable" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">private</span> Dictionary&lt;FieldElement, string&gt; spawnedAccounts = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">   23</a></span>    <span class="keyword">public</span> JsonRpcClient <a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">   24</a></span>    <span class="keyword">public</span> Account <a class="code hl_variable" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        UiReferenceManager.instance.gameManager = <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a> = <span class="keyword">new</span> JsonRpcClient(<a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>.rpcUrl);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</a>.<a class="code hl_variable" href="class_logic_layer_1_1_world_manager_dojo.html#a40e3f19b5ccafc3151ae72b152a50e33">synchronizationMaster</a>.<a class="code hl_variable" href="class_logic_layer_1_1_synchro_manager_dojo.html#a2b3e701f2099ff28895d09104f9b068f">OnEntitySpawned</a>.AddListener(InitEntity);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">foreach</span> (var entity <span class="keywordflow">in</span> <a class="code hl_variable" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</a>.<a class="code hl_function" href="class_logic_layer_1_1_world_manager_dojo.html#ab2c764975a88915f63467f9a57527427">Entities</a>())</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            InitEntity(entity);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> (DojoEntitiesStorage.worldManagerData.environmentType == EnvironmentType.TESTNET || DojoEntitiesStorage.worldManagerData.environmentType == EnvironmentType.MAINNET)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</a> = <span class="keyword">new</span> Account(<a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>, <span class="keyword">new</span> SigningKey(<a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>.masterPrivateKey), <a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>.masterAddress);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_variable" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</a> = <span class="keyword">new</span> BurnerManager(<a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>, <a class="code hl_variable" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</a>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_game_manager.html#a001f71f831c910b2a0276fa12bbdf457">   50</a></span>    <span class="keyword">public</span> async Task&lt;Account&gt; <a class="code hl_function" href="class_game_manager.html#a001f71f831c910b2a0276fa12bbdf457">CreateBurner</a>()</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        var burner = await <a class="code hl_variable" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</a>.DeployBurner();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        LocalDataModel.CurrentAccount = burner;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> burner;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//pretty sure this is all not neeeded as we dont use the init entityt and other stuff from here</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_game_manager.html">   17</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_game_manager.html">GameManager</a> : MonoBehaviour</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">   19</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_logic_layer_1_1_world_manager_dojo.html">WorldManagerDojo</a> <a class="code hl_variable" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">   20</a></span>    <span class="keyword">public</span> WorldManagerData <a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">   22</a></span>    <span class="keyword">public</span> BurnerManager <a class="code hl_variable" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> Dictionary&lt;FieldElement, string&gt; spawnedAccounts = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">   25</a></span>    <span class="keyword">public</span> JsonRpcClient <a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">   26</a></span>    <span class="keyword">public</span> Account <a class="code hl_variable" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        UiReferenceManager.instance.gameManager = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        DojoEntitiesStorage.worldManagerData = <a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a> = <span class="keyword">new</span> JsonRpcClient(<a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>.rpcUrl);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</a>.<a class="code hl_variable" href="class_logic_layer_1_1_world_manager_dojo.html#a40e3f19b5ccafc3151ae72b152a50e33">synchronizationMaster</a>.<a class="code hl_variable" href="class_logic_layer_1_1_synchro_manager_dojo.html#a2b3e701f2099ff28895d09104f9b068f">OnEntitySpawned</a>.AddListener(InitEntity);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">foreach</span> (var entity <span class="keywordflow">in</span> <a class="code hl_variable" href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">worldManager</a>.<a class="code hl_function" href="class_logic_layer_1_1_world_manager_dojo.html#ab2c764975a88915f63467f9a57527427">Entities</a>())</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            InitEntity(entity);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (DojoEntitiesStorage.worldManagerData.environmentType == EnvironmentType.TESTNET || DojoEntitiesStorage.worldManagerData.environmentType == EnvironmentType.MAINNET)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</a> = <span class="keyword">new</span> Account(<a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>, <span class="keyword">new</span> SigningKey(<a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>.masterPrivateKey), <a class="code hl_variable" href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">dojoConfig</a>.masterAddress);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</a> = <span class="keyword">new</span> BurnerManager(<a class="code hl_variable" href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">provider</a>, <a class="code hl_variable" href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">masterAccount</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_game_manager.html#a001f71f831c910b2a0276fa12bbdf457">   53</a></span>    <span class="keyword">public</span> async Task&lt;Account&gt; <a class="code hl_function" href="class_game_manager.html#a001f71f831c910b2a0276fa12bbdf457">CreateBurner</a>()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        var burner = await <a class="code hl_variable" href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">burnerManager</a>.DeployBurner();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        LocalDataModel.CurrentAccount = burner;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> burner;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//pretty sure this is not needed</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> InitEntity(GameObject entity)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">foreach</span> (var account <span class="keywordflow">in</span> spawnedAccounts)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">if</span> (account.Value == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                spawnedAccounts[account.Key] = entity.name;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//pretty sure this is not needed</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> InitEntity(GameObject entity)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">foreach</span> (var account <span class="keywordflow">in</span> spawnedAccounts)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (account.Value == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                spawnedAccounts[account.Key] = entity.name;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 </div>
-<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00015">GameManager.cs:16</a></div></div>
-<div class="ttc" id="aclass_game_manager_html_a001f71f831c910b2a0276fa12bbdf457"><div class="ttname"><a href="class_game_manager.html#a001f71f831c910b2a0276fa12bbdf457">GameManager.CreateBurner</a></div><div class="ttdeci">async Task&lt; Account &gt; CreateBurner()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">GameManager.cs:50</a></div></div>
-<div class="ttc" id="aclass_game_manager_html_a662ac5f31e7f3b02bcbf3048b3792cec"><div class="ttname"><a href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">GameManager.worldManager</a></div><div class="ttdeci">WorldManagerDojo worldManager</div><div class="ttdef"><b>Definition</b> <a href="#l00017">GameManager.cs:17</a></div></div>
-<div class="ttc" id="aclass_game_manager_html_ab87cba9c2ebf1176617ceda64c086ffd"><div class="ttname"><a href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">GameManager.burnerManager</a></div><div class="ttdeci">BurnerManager burnerManager</div><div class="ttdef"><b>Definition</b> <a href="#l00020">GameManager.cs:20</a></div></div>
-<div class="ttc" id="aclass_game_manager_html_acdc8f7e9d474ad4e8f1c8e61e6bac320"><div class="ttname"><a href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">GameManager.masterAccount</a></div><div class="ttdeci">Account masterAccount</div><div class="ttdef"><b>Definition</b> <a href="#l00024">GameManager.cs:24</a></div></div>
-<div class="ttc" id="aclass_game_manager_html_ad3490cdb4ac5373e77a8a7d3f44f63c0"><div class="ttname"><a href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">GameManager.dojoConfig</a></div><div class="ttdeci">WorldManagerData dojoConfig</div><div class="ttdef"><b>Definition</b> <a href="#l00018">GameManager.cs:18</a></div></div>
-<div class="ttc" id="aclass_game_manager_html_ae34504f8f3a9fa1de8d8632f6ede11a8"><div class="ttname"><a href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">GameManager.provider</a></div><div class="ttdeci">JsonRpcClient provider</div><div class="ttdef"><b>Definition</b> <a href="#l00023">GameManager.cs:23</a></div></div>
+<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00017">GameManager.cs:18</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_a001f71f831c910b2a0276fa12bbdf457"><div class="ttname"><a href="class_game_manager.html#a001f71f831c910b2a0276fa12bbdf457">GameManager.CreateBurner</a></div><div class="ttdeci">async Task&lt; Account &gt; CreateBurner()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">GameManager.cs:53</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_a662ac5f31e7f3b02bcbf3048b3792cec"><div class="ttname"><a href="class_game_manager.html#a662ac5f31e7f3b02bcbf3048b3792cec">GameManager.worldManager</a></div><div class="ttdeci">WorldManagerDojo worldManager</div><div class="ttdef"><b>Definition</b> <a href="#l00019">GameManager.cs:19</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_ab87cba9c2ebf1176617ceda64c086ffd"><div class="ttname"><a href="class_game_manager.html#ab87cba9c2ebf1176617ceda64c086ffd">GameManager.burnerManager</a></div><div class="ttdeci">BurnerManager burnerManager</div><div class="ttdef"><b>Definition</b> <a href="#l00022">GameManager.cs:22</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_acdc8f7e9d474ad4e8f1c8e61e6bac320"><div class="ttname"><a href="class_game_manager.html#acdc8f7e9d474ad4e8f1c8e61e6bac320">GameManager.masterAccount</a></div><div class="ttdeci">Account masterAccount</div><div class="ttdef"><b>Definition</b> <a href="#l00026">GameManager.cs:26</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_ad3490cdb4ac5373e77a8a7d3f44f63c0"><div class="ttname"><a href="class_game_manager.html#ad3490cdb4ac5373e77a8a7d3f44f63c0">GameManager.dojoConfig</a></div><div class="ttdeci">WorldManagerData dojoConfig</div><div class="ttdef"><b>Definition</b> <a href="#l00020">GameManager.cs:20</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_ae34504f8f3a9fa1de8d8632f6ede11a8"><div class="ttname"><a href="class_game_manager.html#ae34504f8f3a9fa1de8d8632f6ede11a8">GameManager.provider</a></div><div class="ttdeci">JsonRpcClient provider</div><div class="ttdef"><b>Definition</b> <a href="#l00025">GameManager.cs:25</a></div></div>
 <div class="ttc" id="aclass_logic_layer_1_1_synchro_manager_dojo_html_a2b3e701f2099ff28895d09104f9b068f"><div class="ttname"><a href="class_logic_layer_1_1_synchro_manager_dojo.html#a2b3e701f2099ff28895d09104f9b068f">LogicLayer.SynchroManagerDojo.OnEntitySpawned</a></div><div class="ttdeci">UnityEvent&lt; GameObject &gt; OnEntitySpawned</div><div class="ttdef"><b>Definition</b> <a href="_synchro_manager_dojo_8cs_source.html#l00028">SynchroManagerDojo.cs:28</a></div></div>
 <div class="ttc" id="aclass_logic_layer_1_1_world_manager_dojo_html"><div class="ttname"><a href="class_logic_layer_1_1_world_manager_dojo.html">LogicLayer.WorldManagerDojo</a></div><div class="ttdef"><b>Definition</b> <a href="_world_manager_dojo_8cs_source.html#l00011">WorldManagerDojo.cs:12</a></div></div>
 <div class="ttc" id="aclass_logic_layer_1_1_world_manager_dojo_html_a40e3f19b5ccafc3151ae72b152a50e33"><div class="ttname"><a href="class_logic_layer_1_1_world_manager_dojo.html#a40e3f19b5ccafc3151ae72b152a50e33">LogicLayer.WorldManagerDojo.synchronizationMaster</a></div><div class="ttdeci">SynchroManagerDojo synchronizationMaster</div><div class="ttdef"><b>Definition</b> <a href="_world_manager_dojo_8cs_source.html#l00013">WorldManagerDojo.cs:13</a></div></div>
 <div class="ttc" id="aclass_logic_layer_1_1_world_manager_dojo_html_ab2c764975a88915f63467f9a57527427"><div class="ttname"><a href="class_logic_layer_1_1_world_manager_dojo.html#ab2c764975a88915f63467f9a57527427">LogicLayer.WorldManagerDojo.Entities</a></div><div class="ttdeci">GameObject[] Entities()</div><div class="ttdef"><b>Definition</b> <a href="_world_manager_dojo_8cs_source.html#l00060">WorldManagerDojo.cs:60</a></div></div>
+<div class="ttc" id="anamespace_logic_layer_1_1_models_html"><div class="ttname"><a href="namespace_logic_layer_1_1_models.html">LogicLayer.Models</a></div><div class="ttdef"><b>Definition</b> <a href="_games_data_model_8cs_source.html#l00013">GamesDataModel.cs:14</a></div></div>
 <div class="ttc" id="anamespace_logic_layer_html"><div class="ttname"><a href="namespace_logic_layer.html">LogicLayer</a></div><div class="ttdef"><b>Definition</b> <a href="_synchro_manager_dojo_8cs_source.html#l00012">SynchroManagerDojo.cs:13</a></div></div>
-<div class="ttc" id="anamespace_system_1_1_runtime_1_1_compiler_services_html"><div class="ttname"><a href="namespace_system_1_1_runtime_1_1_compiler_services.html">System.Runtime.CompilerServices</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_system_1_1_runtime_1_1_compiler_services_html"><div class="ttname"><a href="namespace_system_1_1_runtime_1_1_compiler_services.html">System.Runtime.CompilerServices</a></div><div class="ttdef"><b>Definition</b> <a href="#l00011">GameManager.cs:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

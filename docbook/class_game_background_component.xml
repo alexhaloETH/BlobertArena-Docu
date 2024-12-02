@@ -47,7 +47,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__game_background_component_8cs_source_1l00004">4</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00005">5</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
 </section>
 <section>
 <title>Member Enumeration Documentation</title>
@@ -81,7 +81,7 @@ Definition at line <link linkend="__game_background_component_8cs_source_1l00004
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__game_background_component_8cs_source_1l00011">11</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00012">12</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -91,21 +91,21 @@ Definition at line <link linkend="__game_background_component_8cs_source_1l00011
 <indexterm><primary>ChangeOfSkinDetected</primary><secondary>GameBackgroundComponent</secondary></indexterm>
 <indexterm><primary>GameBackgroundComponent</primary><secondary>ChangeOfSkinDetected</secondary></indexterm>
 <para><computeroutput>void GameBackgroundComponent.ChangeOfSkinDetected ( )</computeroutput></para><para>
-Definition at line <link linkend="__game_background_component_8cs_source_1l00064">64</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00065">65</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
 </section>
 <anchor xml:id="_class_game_background_component_1a153d5366bb27bc550adabb7419be4bd2"/><section>
     <title>GetBackgroundImage()</title>
 <indexterm><primary>GetBackgroundImage</primary><secondary>GameBackgroundComponent</secondary></indexterm>
 <indexterm><primary>GameBackgroundComponent</primary><secondary>GetBackgroundImage</secondary></indexterm>
 <para><computeroutput><link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> GameBackgroundComponent.GetBackgroundImage ( )</computeroutput></para><para>
-Definition at line <link linkend="__game_background_component_8cs_source_1l00059">59</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00060">60</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
 </section>
 <anchor xml:id="_class_game_background_component_1a56df19682d70316c6c1e69e811927a43"/><section>
     <title>SetBackgroundImage()</title>
 <indexterm><primary>SetBackgroundImage</primary><secondary>GameBackgroundComponent</secondary></indexterm>
 <indexterm><primary>GameBackgroundComponent</primary><secondary>SetBackgroundImage</secondary></indexterm>
 <para><computeroutput>void GameBackgroundComponent.SetBackgroundImage (<link linkend="_class_game_background_component_1acef175a45fd958f52280cb5d366197cf">BackgroundImage</link> image)</computeroutput></para><para>
-Definition at line <link linkend="__game_background_component_8cs_source_1l00048">48</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00049">49</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -115,7 +115,7 @@ Definition at line <link linkend="__game_background_component_8cs_source_1l00048
 <indexterm><primary>Instance</primary><secondary>GameBackgroundComponent</secondary></indexterm>
 <indexterm><primary>GameBackgroundComponent</primary><secondary>Instance</secondary></indexterm>
 <para><computeroutput><link linkend="_class_game_background_component">GameBackgroundComponent</link> GameBackgroundComponent.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__game_background_component_8cs_source_1l00006">6</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
+Definition at line <link linkend="__game_background_component_8cs_source_1l00007">7</link> of file <link linkend="__game_background_component_8cs_source">GameBackgroundComponent.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

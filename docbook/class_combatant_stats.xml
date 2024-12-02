@@ -53,7 +53,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00008">8</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00009">9</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -70,14 +70,14 @@ Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00008">8</
 <indexterm><primary>dexterity</primary><secondary>CombatantStats</secondary></indexterm>
 <indexterm><primary>CombatantStats</primary><secondary>dexterity</secondary></indexterm>
 <para><computeroutput>byte CombatantStats.dexterity</computeroutput></para><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00020">20</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00021">21</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1a2c62d2bec8e2b19c59ce266175ea77f4"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>CombatantStats</secondary></indexterm>
 <indexterm><primary>CombatantStats</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string CombatantStats.GraphQlHeader = &quot;blobArenaCombatStateModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00065">65</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00066">66</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1aa30cc05a06862bb92a6760cb5478f224"/><section>
     <title>GraphQlQueryFull</title>
@@ -107,7 +107,7 @@ Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00065">65<
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00029">29</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00030">30</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1a568684ab5cedbce94c0215f116d1f576"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -125,35 +125,35 @@ Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00029">29<
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00053">53</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00054">54</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1af1246f634539a7493d62ec70f4cbf54d"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>CombatantStats</secondary></indexterm>
 <indexterm><primary>CombatantStats</primary><secondary>id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantStats.id</computeroutput></para><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00011">11</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00012">12</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1a94c05d62630dd6e32a2682f165e66c79"/><section>
     <title>luck</title>
 <indexterm><primary>luck</primary><secondary>CombatantStats</secondary></indexterm>
 <indexterm><primary>CombatantStats</primary><secondary>luck</secondary></indexterm>
 <para><computeroutput>byte CombatantStats.luck</computeroutput></para><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00023">23</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00024">24</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1a10fec285a3d778480088dd963763de4b"/><section>
     <title>strength</title>
 <indexterm><primary>strength</primary><secondary>CombatantStats</secondary></indexterm>
 <indexterm><primary>CombatantStats</primary><secondary>strength</secondary></indexterm>
 <para><computeroutput>byte CombatantStats.strength</computeroutput></para><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00014">14</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00015">15</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_stats_1a9c36ef7c1155280565b9cbc29f1f9d28"/><section>
     <title>vitality</title>
 <indexterm><primary>vitality</primary><secondary>CombatantStats</secondary></indexterm>
 <indexterm><primary>CombatantStats</primary><secondary>vitality</secondary></indexterm>
 <para><computeroutput>byte CombatantStats.vitality</computeroutput></para><para>
-Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00017">17</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_stats_8gen_8cs_source_1l00018">18</link> of file <link linkend="__combatant_stats_8gen_8cs_source">CombatantStats.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

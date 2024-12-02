@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component" xml:lang="en-US">
+<title>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent Class Reference</title>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.BlobDex.BlobDataManagerBlobDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3d">KindOfBlobData</link> { <?linebreak?><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3dae02b89857b91a11b8be92fca409827ba">Leaderboard</link>
+, <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3da22d16c6faf8665809bfeefc1a8674366">BlobDex</link>
+, <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3da614fdd8ff367e59ae2c6dfe6bfd5b65a">CombatantIdNoAttacks</link>
+, <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3dae8b76cf4c685857e77bb8e19776aace6">CombatanatIdWithAttacks</link>
+, <?linebreak?><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3da6cb2167799cc571f36007a9b89a6aa1a">AMMA</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_blob_data_background_blob_dex_component">BlobDataBackgroundBlobDexComponent</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a2916659710c6e10792e61872a125c3cf">GetBackgroundBlobDexComponent</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component">BlobDataStandardObjectsBlobDexComponent</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a47dbb19ebec3a1073ff177c7535421b7">GetStandardObjectsBlobDexComponent</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component">StandardViewNoAttacksBlobDexComponent</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1ac451d57278b7b1eb2399596241acbe6f">GetStandardViewNoAttacksBlobDexComponent</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_equipped_attacks_blob_dex_component">ViewEquippedAttacksBlobDexComponent</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a0b0b4eca3ff62931d5cb297f36e5592e">GetEquippedAttacksBlobDexComponent</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_traits_attack_blob_dex_component">ViewTraitsAttackBlobDexComponent</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1afe615b0fdb07ab970fdd845bd0de1c9c">GetTraitsAttackBlobDexComponent</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a24f7774e188ab48e3ffe1e1eeb62b71e">LoadBlobert</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> tokenId)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a7f50f2ab771bf8e918823f3918f9c7d8">LoadCombatant</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1afffc8bac874bdc6797e80deaa36bda41">OnClickOfTraitToggle</link> (string traitName)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1ae4e262b1d4efad420159a594c55e8659">ResetView</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a28f88139f75330fa494d53081f05eefe">BlobGraphingSystemToggle</link> (bool showGraphing)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_interface_i_nft_type">INftType</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1aacb5e20a5e424b8e3852c0237c755e29">currentBlobert</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3d">KindOfBlobData</link> <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a5220b60e3530df717b508824e6290f15">_kindOfBlobData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00007">7</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3d"/><section>
+    <title>KindOfBlobData</title>
+<indexterm><primary>KindOfBlobData</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>KindOfBlobData</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3d">BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.KindOfBlobData</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Leaderboard</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>Leaderboard</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3dae02b89857b91a11b8be92fca409827ba"/>Leaderboard</entry><entry></entry></row><row><entry><indexterm><primary>BlobDex</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>BlobDex</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3da22d16c6faf8665809bfeefc1a8674366"/>BlobDex</entry><entry></entry></row><row><entry><indexterm><primary>CombatantIdNoAttacks</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>CombatantIdNoAttacks</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3da614fdd8ff367e59ae2c6dfe6bfd5b65a"/>CombatantIdNoAttacks</entry><entry></entry></row><row><entry><indexterm><primary>CombatanatIdWithAttacks</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>CombatanatIdWithAttacks</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3dae8b76cf4c685857e77bb8e19776aace6"/>CombatanatIdWithAttacks</entry><entry></entry></row><row><entry><indexterm><primary>AMMA</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>AMMA</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3da6cb2167799cc571f36007a9b89a6aa1a"/>AMMA</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00032">32</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a28f88139f75330fa494d53081f05eefe"/><section>
+    <title>BlobGraphingSystemToggle()</title>
+<indexterm><primary>BlobGraphingSystemToggle</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>BlobGraphingSystemToggle</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.BlobGraphingSystemToggle (bool showGraphing)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00114">114</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a2916659710c6e10792e61872a125c3cf"/><section>
+    <title>GetBackgroundBlobDexComponent()</title>
+<indexterm><primary>GetBackgroundBlobDexComponent</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>GetBackgroundBlobDexComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blob_data_background_blob_dex_component">BlobDataBackgroundBlobDexComponent</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.GetBackgroundBlobDexComponent ( )</computeroutput></para></section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a0b0b4eca3ff62931d5cb297f36e5592e"/><section>
+    <title>GetEquippedAttacksBlobDexComponent()</title>
+<indexterm><primary>GetEquippedAttacksBlobDexComponent</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>GetEquippedAttacksBlobDexComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_equipped_attacks_blob_dex_component">ViewEquippedAttacksBlobDexComponent</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.GetEquippedAttacksBlobDexComponent ( )</computeroutput></para></section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a47dbb19ebec3a1073ff177c7535421b7"/><section>
+    <title>GetStandardObjectsBlobDexComponent()</title>
+<indexterm><primary>GetStandardObjectsBlobDexComponent</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>GetStandardObjectsBlobDexComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component">BlobDataStandardObjectsBlobDexComponent</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.GetStandardObjectsBlobDexComponent ( )</computeroutput></para></section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1ac451d57278b7b1eb2399596241acbe6f"/><section>
+    <title>GetStandardViewNoAttacksBlobDexComponent()</title>
+<indexterm><primary>GetStandardViewNoAttacksBlobDexComponent</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>GetStandardViewNoAttacksBlobDexComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component">StandardViewNoAttacksBlobDexComponent</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.GetStandardViewNoAttacksBlobDexComponent ( )</computeroutput></para></section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1afe615b0fdb07ab970fdd845bd0de1c9c"/><section>
+    <title>GetTraitsAttackBlobDexComponent()</title>
+<indexterm><primary>GetTraitsAttackBlobDexComponent</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>GetTraitsAttackBlobDexComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_traits_attack_blob_dex_component">ViewTraitsAttackBlobDexComponent</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.GetTraitsAttackBlobDexComponent ( )</computeroutput></para></section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a24f7774e188ab48e3ffe1e1eeb62b71e"/><section>
+    <title>LoadBlobert()</title>
+<indexterm><primary>LoadBlobert</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>LoadBlobert</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.LoadBlobert (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> tokenId)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00055">55</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a7f50f2ab771bf8e918823f3918f9c7d8"/><section>
+    <title>LoadCombatant()</title>
+<indexterm><primary>LoadCombatant</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>LoadCombatant</secondary></indexterm>
+<para><computeroutput>async void BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.LoadCombatant (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00081">81</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1afffc8bac874bdc6797e80deaa36bda41"/><section>
+    <title>OnClickOfTraitToggle()</title>
+<indexterm><primary>OnClickOfTraitToggle</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>OnClickOfTraitToggle</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.OnClickOfTraitToggle (string traitName)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00089">89</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1ae4e262b1d4efad420159a594c55e8659"/><section>
+    <title>ResetView()</title>
+<indexterm><primary>ResetView</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>ResetView</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.ResetView ( )</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00108">108</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1a5220b60e3530df717b508824e6290f15"/><section>
+    <title>_kindOfBlobData</title>
+<indexterm><primary>_kindOfBlobData</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>_kindOfBlobData</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1abdf0d75f9a5a8484398fb38795e8af3d">KindOfBlobData</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent._kindOfBlobData</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00041">41</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_1aacb5e20a5e424b8e3852c0237c755e29"/><section>
+    <title>currentBlobert</title>
+<indexterm><primary>currentBlobert</primary><secondary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</primary><secondary>currentBlobert</secondary></indexterm>
+<para><computeroutput><link linkend="_interface_i_nft_type">INftType</link> BlobertArena.BlobDex.BlobDataManagerBlobDexComponent.currentBlobert</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_manager_blob_dex_component_8cs_source_1l00030">30</link> of file <link linkend="__blob_data_manager_blob_dex_component_8cs_source">BlobDataManagerBlobDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__blob_data_manager_blob_dex_component_8cs">BlobDataManagerBlobDexComponent.cs</link></section>
+</section>

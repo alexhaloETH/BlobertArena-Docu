@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__themes_manager_8cs" xml:lang="en-US">
+<title>Managers/Singletons/ThemesManager.cs File Reference</title>
+<indexterm><primary>Managers/Singletons/ThemesManager.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager">BlobertArena.ThemeManager.ThemesManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena">BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager">BlobertArena.ThemeManager</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena">BlobertArena.ThemeManager.BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager">BlobertArena.ThemeManager.BlobertArena.ThemeManager</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cc">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.PanelColours</link> { <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca8cdf3509895d0d3a638631926a1a1d3a">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.BlobArena_Player</link> = 0
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca8a844c1b7bed7252df722744f1eacd21">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.BlobArena_Enemy</link> = 1
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca667c3ac0a5a548e4b4810ff2b464a9d1">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.AMMA_Player</link> = 2
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca4057236a7e08b616da98aa883c8e9db3">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.AMMA_Enemy</link> = 3
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0c">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.TextColours</link> { <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0ca7991fce025fa185bfbc5a3590808c5ce">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.BlobArena</link> = 0
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0ca6cb2167799cc571f36007a9b89a6aa1a">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.AMMA</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

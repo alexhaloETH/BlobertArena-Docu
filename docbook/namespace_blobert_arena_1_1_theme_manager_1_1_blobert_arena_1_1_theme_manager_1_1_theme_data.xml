@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData Namespace Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary></indexterm>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cc">PanelColours</link> { <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca8cdf3509895d0d3a638631926a1a1d3a">BlobArena_Player</link> = 0
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca8a844c1b7bed7252df722744f1eacd21">BlobArena_Enemy</link> = 1
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca667c3ac0a5a548e4b4810ff2b464a9d1">AMMA_Player</link> = 2
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca4057236a7e08b616da98aa883c8e9db3">AMMA_Enemy</link> = 3
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0c">TextColours</link> { <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0ca7991fce025fa185bfbc5a3590808c5ce">BlobArena</link> = 0
+, <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0ca6cb2167799cc571f36007a9b89a6aa1a">AMMA</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cc"/><section>
+    <title>PanelColours</title>
+<indexterm><primary>PanelColours</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>PanelColours</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cc">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.PanelColours</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BlobArena_Player</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>BlobArena_Player</secondary></indexterm>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca8cdf3509895d0d3a638631926a1a1d3a"/>BlobArena_Player</entry><entry></entry></row><row><entry><indexterm><primary>BlobArena_Enemy</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>BlobArena_Enemy</secondary></indexterm>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca8a844c1b7bed7252df722744f1eacd21"/>BlobArena_Enemy</entry><entry></entry></row><row><entry><indexterm><primary>AMMA_Player</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>AMMA_Player</secondary></indexterm>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca667c3ac0a5a548e4b4810ff2b464a9d1"/>AMMA_Player</entry><entry></entry></row><row><entry><indexterm><primary>AMMA_Enemy</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>AMMA_Enemy</secondary></indexterm>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cca4057236a7e08b616da98aa883c8e9db3"/>AMMA_Enemy</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00010">10</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0c"/><section>
+    <title>TextColours</title>
+<indexterm><primary>TextColours</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>TextColours</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0c">BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData.TextColours</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BlobArena</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>BlobArena</secondary></indexterm>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0ca7991fce025fa185bfbc5a3590808c5ce"/>BlobArena</entry><entry></entry></row><row><entry><indexterm><primary>AMMA</primary><secondary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager.ThemeData</primary><secondary>AMMA</secondary></indexterm>
+<anchor xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0ca6cb2167799cc571f36007a9b89a6aa1a"/>AMMA</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00018">18</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+</section>
+</section>

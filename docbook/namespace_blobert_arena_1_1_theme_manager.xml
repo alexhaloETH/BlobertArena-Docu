@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_blobert_arena_1_1_theme_manager" xml:lang="en-US">
+<title>BlobertArena.ThemeManager Namespace Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena">BlobertArena</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener">BaseButtonSkinListener</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component">SkinListenerComponent</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager">SkinManager</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_switch_skin_listener">SwitchSkinListener</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager">ThemesManager</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_toggle_skin_component">ToggleSkinComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

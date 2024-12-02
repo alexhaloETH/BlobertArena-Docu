@@ -6,7 +6,7 @@ var class_current_mode_component =
       [ "Up", "class_current_mode_component.html#a7eefd89965d0d1eaa4deb9b873bf7c0da258f49887ef8d14ac268c92b02503aaa", null ],
       [ "Down", "class_current_mode_component.html#a7eefd89965d0d1eaa4deb9b873bf7c0da08a38277b0309070706f6652eeae9a53", null ]
     ] ],
-    [ "SetSpriteFromDifficulty", "class_current_mode_component.html#afc8d6cd448361247c8048f80bb306afd", null ],
+    [ "SetSpriteFromDifficulty", "class_current_mode_component.html#a4c7984ef8bf344bf5cbf397880b5e234", null ],
     [ "ShowChangeButton", "class_current_mode_component.html#a4390da629a1a29209d92a6290a15dc94", null ],
     [ "Start", "class_current_mode_component.html#a7e4d24cc86866b7db0c02353c2aca349", null ],
     [ "directionButton", "class_current_mode_component.html#a839796db862c72363bc0e4947eafc4d4", null ],

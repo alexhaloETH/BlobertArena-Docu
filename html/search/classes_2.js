@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['characteranimationmanager_0',['CharacterAnimationManager',['../class_character_animation_manager.html',1,'']]],
+  ['characteranimationmanager_0',['CharacterAnimationManager',['../class_blobert_arena_1_1_animations_1_1_character_animation_manager.html',1,'BlobertArena::Animations']]],
   ['characterstatsvisualizercomponent_1',['CharacterStatsVisualizerComponent',['../class_character_stats_visualizer_component.html',1,'']]],
   ['chattingpopupcomponent_2',['ChattingPopUpComponent',['../class_chatting_pop_up_component.html',1,'']]],
   ['choicesectionbattlepage_3',['ChoiceSectionBattlePage',['../class_choice_section_battle_page.html',1,'']]],

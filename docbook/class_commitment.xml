@@ -61,7 +61,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00008">8</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00009">9</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -75,7 +75,7 @@ Definition at line <link linkend="__commitment_8gen_8cs_source_1l00008">8</link>
 <indexterm><primary>OnUpdate</primary><secondary>Commitment</secondary></indexterm>
 <indexterm><primary>Commitment</primary><secondary>OnUpdate</secondary></indexterm>
 <para><computeroutput>override void Commitment.OnUpdate (Model model)</computeroutput></para><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00023">23</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00024">24</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -85,14 +85,14 @@ Definition at line <link linkend="__commitment_8gen_8cs_source_1l00023">23</link
 <indexterm><primary>commitment</primary><secondary>Commitment</secondary></indexterm>
 <indexterm><primary>Commitment</primary><secondary>commitment</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> Commitment.commitment</computeroutput></para><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00014">14</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00015">15</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_commitment_1ad9fff7720b35258943d8ca1373c15b38"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>Commitment</secondary></indexterm>
 <indexterm><primary>Commitment</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string Commitment.GraphQlHeader = &quot;blobArenaCommitmentModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00059">59</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00060">60</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_commitment_1a44042320184bd46c4d7f82bfd34c47dc"/><section>
     <title>GraphQlQueryFull</title>
@@ -117,7 +117,7 @@ Definition at line <link linkend="__commitment_8gen_8cs_source_1l00059">59</link
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00033">33</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00034">34</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_commitment_1a34d790a948a7c17a432a8cb32dac2a32"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -130,14 +130,14 @@ Definition at line <link linkend="__commitment_8gen_8cs_source_1l00033">33</link
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00052">52</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00053">53</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_commitment_1aa2a90ebb5386f95f554a645bcdbecb17"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>Commitment</secondary></indexterm>
 <indexterm><primary>Commitment</primary><secondary>id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> Commitment.id</computeroutput></para><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00011">11</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00012">12</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -147,7 +147,7 @@ Definition at line <link linkend="__commitment_8gen_8cs_source_1l00011">11</link
 <indexterm><primary>OnUpdateCommitment</primary><secondary>Commitment</secondary></indexterm>
 <indexterm><primary>Commitment</primary><secondary>OnUpdateCommitment</secondary></indexterm>
 <para><computeroutput>Action&lt;<link linkend="_class_commitment">Commitment</link>&gt; Commitment.OnUpdateCommitment</computeroutput></para><para>
-Definition at line <link linkend="__commitment_8gen_8cs_source_1l00016">16</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
+Definition at line <link linkend="__commitment_8gen_8cs_source_1l00017">17</link> of file <link linkend="__commitment_8gen_8cs_source">Commitment.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

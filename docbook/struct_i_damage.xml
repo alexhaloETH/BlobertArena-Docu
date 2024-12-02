@@ -14,7 +14,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00024">24</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00025">25</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -23,14 +23,14 @@ Definition at line <link linkend="__attack_8gen_8cs_source_1l00024">24</link> of
 <indexterm><primary>critical</primary><secondary>IDamage</secondary></indexterm>
 <indexterm><primary>IDamage</primary><secondary>critical</secondary></indexterm>
 <para><computeroutput>byte IDamage.critical</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00026">26</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00027">27</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_i_damage_1a93a941f631b5ccb8235bcbff4f214016"/><section>
     <title>power</title>
 <indexterm><primary>power</primary><secondary>IDamage</secondary></indexterm>
 <indexterm><primary>IDamage</primary><secondary>power</secondary></indexterm>
 <para><computeroutput>byte IDamage.power</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00027">27</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00028">28</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

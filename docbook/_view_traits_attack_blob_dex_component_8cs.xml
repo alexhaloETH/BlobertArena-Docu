@@ -5,9 +5,16 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_class_view_traits_attack_blob_dex_component">ViewTraitsAttackBlobDexComponent</link></para>
-
-<para>given the trait this should load in all the attacks of the traits </para>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_traits_attack_blob_dex_component">BlobertArena.BlobDex.ViewTraitsAttackBlobDexComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena">BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_blob_dex">BlobertArena.BlobDex</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

@@ -20,7 +20,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__quick_leadear_board_element_8cs_source_1l00007">7</link> of file <link linkend="__quick_leadear_board_element_8cs_source">QuickLeadearBoardElement.cs</link>.</para>
+Definition at line <link linkend="__quick_leadear_board_element_8cs_source_1l00009">9</link> of file <link linkend="__quick_leadear_board_element_8cs_source">QuickLeadearBoardElement.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -29,7 +29,7 @@ Definition at line <link linkend="__quick_leadear_board_element_8cs_source_1l000
 <indexterm><primary>InitializeElement</primary><secondary>QuickLeadearBoardElement</secondary></indexterm>
 <indexterm><primary>QuickLeadearBoardElement</primary><secondary>InitializeElement</secondary></indexterm>
 <para><computeroutput>void QuickLeadearBoardElement.InitializeElement (<link linkend="_interface_i_nft_type">INftType</link> blobertData, int dataPlacement)</computeroutput></para><para>
-Definition at line <link linkend="__quick_leadear_board_element_8cs_source_1l00014">14</link> of file <link linkend="__quick_leadear_board_element_8cs_source">QuickLeadearBoardElement.cs</link>.</para>
+Definition at line <link linkend="__quick_leadear_board_element_8cs_source_1l00016">16</link> of file <link linkend="__quick_leadear_board_element_8cs_source">QuickLeadearBoardElement.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

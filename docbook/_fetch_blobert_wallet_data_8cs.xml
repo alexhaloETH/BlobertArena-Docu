@@ -6,8 +6,12 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <emphasis role="strong">LogicLayer.FetchBlobertWalletData</emphasis></para>
+
+<para>Provides functionality for fetching wallet data for Blobert NFTs from a remote API. </para>
 </listitem>
             <listitem><para>class <link linkend="_class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item">LogicLayer.FetchBlobertWalletData.NFTItem</link></para>
+
+<para>Represents a single NFT item, including its ID and associated traits. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

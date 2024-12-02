@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_query_1_1_stat_data" xml:lang="en-US">
+<title>LogicLayer.Query.StatData Class Reference</title>
+<indexterm><primary>LogicLayer.Query.StatData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_query_1_1_stat_data_1a7949c550f2db2f2e4a15d87d4637f8ae">stat</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00173">173</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_query_1_1_stat_data_1a7949c550f2db2f2e4a15d87d4637f8ae"/><section>
+    <title>stat</title>
+<indexterm><primary>stat</primary><secondary>LogicLayer.Query.StatData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Query.StatData</primary><secondary>stat</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Query.StatData.stat<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00175">175</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

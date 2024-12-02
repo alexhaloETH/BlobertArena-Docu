@@ -23,7 +23,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00090">90</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00091">91</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -32,7 +32,7 @@ Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00090">90<
 <indexterm><primary>ContractCall</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>ContractCall</secondary></indexterm>
 <para><computeroutput>DojoContractCommunication.ContractCall.ContractCall (string contractAddress, string entrypoint, string[] calldata)</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00096">96</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00097">97</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -42,21 +42,21 @@ Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00096">96<
 <indexterm><primary>calldata</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>calldata</secondary></indexterm>
 <para><computeroutput>string [] DojoContractCommunication.ContractCall.calldata</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00094">94</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00095">95</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <anchor xml:id="_class_dojo_contract_communication_1_1_contract_call_1a2f1c33fb8dd52d8eb7ad6b263a965ed2"/><section>
     <title>contractAddress</title>
 <indexterm><primary>contractAddress</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>contractAddress</secondary></indexterm>
 <para><computeroutput>string DojoContractCommunication.ContractCall.contractAddress</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00092">92</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00093">93</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <anchor xml:id="_class_dojo_contract_communication_1_1_contract_call_1a1aceefc0b9b504c07fcd5ac046bd7eaa"/><section>
     <title>entrypoint</title>
 <indexterm><primary>entrypoint</primary><secondary>DojoContractCommunication.ContractCall</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.ContractCall</primary><secondary>entrypoint</secondary></indexterm>
 <para><computeroutput>string DojoContractCommunication.ContractCall.entrypoint</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00093">93</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00094">94</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

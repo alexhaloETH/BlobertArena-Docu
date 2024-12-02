@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager" xml:lang="en-US">
+<title>BlobertArena.Animations.CharacterAnimationManager Class Reference</title>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.Animations.CharacterAnimationManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_animations_1_1_character_animation_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link></para>
+
+<para>Represents the input data for a texture function in an animation. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link></para>
+
+<para>Represents a tween callback system for animation frames. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1abcbfdc3f15525c5c63fe902fbd97565f">InitilizeComponentQuick</link> (<link linkend="_interface_i_nft_type">INftType</link> character, int animEncode)</para>
+
+<para>Initializes the component quickly based on the character and animation encode. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1aa670a425fb51e4c9b28f0fffe6cf4e5a">InitializeComponent</link> (List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureInputs, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> type)</para>
+
+<para>Initializes the component with the given texture inputs and character type. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1acbfe828aadd74da46591090fd3637367">InitializeComponent</link> (List&lt; List&lt; Sprite &gt; &gt; spritesList, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> type)</para>
+
+<para>Initializes the component with the given sprites list and character type. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a7d410cd021a330508110e6fb9fc9dfec">SetSpeedAnimation</link> (float speedMultiplier)</para>
+
+<para>Sets the speed of the animation. </para>
+</listitem>
+            <listitem><para>List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a4abed417996f468571b23d683af05c39">GetTextureDataCurrentlyPlaying</link> ()</para>
+
+<para>Gets the texture data currently being played. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a58beca5c7e80c181ffd35a9cfca1c29c">PauseAnimation</link> (bool pause)</para>
+
+<para>Pauses or resumes the animation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a446065ef988a908ddd36f1789b358fc6">DrawAnimationOverlay</link> (List&lt; List&lt; Sprite &gt; &gt; sprites, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback=null, bool deleteQueue=true)</para>
+
+<para>Draws an animation overlay using a list of sprite lists. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1abd291f136a40d3f7e71d7b8b0143680b">DrawAnimationOverlay</link> (List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureInputs, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback=null, bool deleteQueue=true)</para>
+
+<para>Draws an animation overlay using a list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a129e18e733fd6062da0c80b4bca3c6b5">DrawAndFinish</link> (List&lt; List&lt; Sprite &gt; &gt; sprites, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback=null)</para>
+
+<para>Draws an animation overlay using a list of sprite lists and finishes the current animation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ae2ac967cfc81c6bbe30c564fe11a75b9">DrawAndFinish</link> (List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureInputs, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback=null, bool deleteQueue=true)</para>
+
+<para>Draws an animation overlay using a list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects and finishes the current animation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a6ff8b794ee82a5665051dabb67330f68">Speed</link> = 0.08333f</para>
+</listitem>
+            <listitem><para>List&lt; GameObject &gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ac5a825695d879b9acdf8c29ef077a610">ImageObjects</link></para>
+</listitem>
+            <listitem><para>Image <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a148ef12eabadb3a8c4c2a3846c2bd122">EffectOverlayImage</link></para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a2650cba5ef6732cf200e4c2824f6d1b9">TraitParent</link></para>
+</listitem>
+            <listitem><para>List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a8f6ca2907990fc5212c18d9c09443b42">IdleTextureFunctionInput</link> = new()</para>
+</listitem>
+            <listitem><para>List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ad283e3edb572b8528a65ef9e5bca6927">PlayOverTextureFunctionInput</link> = new()</para>
+</listitem>
+            <listitem><para>Queue&lt;(List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureData, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callbackSystem)&gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ab69c844cab008651087722fb3d43ac49">QueueOfPlayOverAnims</link> = new()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00009">9</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a129e18e733fd6062da0c80b4bca3c6b5"/><section>
+    <title>DrawAndFinish()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>DrawAndFinish</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>DrawAndFinish</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.DrawAndFinish (List&lt; List&lt; Sprite &gt; &gt; sprites, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback = <computeroutput>null</computeroutput>
+)</computeroutput></para><para>
+
+<para>Draws an animation overlay using a list of sprite lists and finishes the current animation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sprites</entry><entry>
+<para>The list of sprite lists representing the animation frames.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>drawOver</entry><entry>
+<para>Determines whether the overlay should be drawn over the main animation or replace it.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>callback</entry><entry>
+<para>Optional list of callback functions to be executed at specific frames of the animation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00325">325</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ae2ac967cfc81c6bbe30c564fe11a75b9"/><section>
+    <title>DrawAndFinish()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>DrawAndFinish</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>DrawAndFinish</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.DrawAndFinish (List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureInputs, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback = <computeroutput>null</computeroutput>
+, bool deleteQueue = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Draws an animation overlay using a list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects and finishes the current animation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>textureInputs</entry><entry>
+<para>The list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects representing the animation frames.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>drawOver</entry><entry>
+<para>Determines whether the overlay should be drawn over the main animation or replace it.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>callback</entry><entry>
+<para>Optional list of callback functions to be executed at specific frames of the animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>deleteQueue</entry><entry>
+<para>Determines whether the animation queue should be cleared before adding the new animation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00343">343</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a446065ef988a908ddd36f1789b358fc6"/><section>
+    <title>DrawAnimationOverlay()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>DrawAnimationOverlay</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>DrawAnimationOverlay</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.DrawAnimationOverlay (List&lt; List&lt; Sprite &gt; &gt; sprites, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback = <computeroutput>null</computeroutput>
+, bool deleteQueue = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Draws an animation overlay using a list of sprite lists. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sprites</entry><entry>
+<para>The list of sprite lists representing the animation frames.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>drawOver</entry><entry>
+<para>Determines whether the overlay should be drawn over the main animation or replace it.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>callback</entry><entry>
+<para>Optional list of callback functions to be executed at specific frames of the animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>deleteQueue</entry><entry>
+<para>Determines whether the animation queue should be cleared before adding the new animation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00289">289</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1abd291f136a40d3f7e71d7b8b0143680b"/><section>
+    <title>DrawAnimationOverlay()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>DrawAnimationOverlay</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>DrawAnimationOverlay</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.DrawAnimationOverlay (List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureInputs, bool drawOver, List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link> &gt; callback = <computeroutput>null</computeroutput>
+, bool deleteQueue = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Draws an animation overlay using a list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>textureInputs</entry><entry>
+<para>The list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects representing the animation frames.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>drawOver</entry><entry>
+<para>Determines whether the overlay should be drawn over the main animation or replace it.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>callback</entry><entry>
+<para>Optional list of callback functions to be executed at specific frames of the animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>deleteQueue</entry><entry>
+<para>Determines whether the animation queue should be cleared before adding the new animation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00310">310</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a4abed417996f468571b23d683af05c39"/><section>
+    <title>GetTextureDataCurrentlyPlaying()</title>
+<indexterm><primary>GetTextureDataCurrentlyPlaying</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>GetTextureDataCurrentlyPlaying</secondary></indexterm>
+<para><computeroutput>List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; BlobertArena.Animations.CharacterAnimationManager.GetTextureDataCurrentlyPlaying ( )</computeroutput></para><para>
+
+<para>Gets the texture data currently being played. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The list of <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> objects representing the animation frames.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1acbfe828aadd74da46591090fd3637367"/><section>
+    <title>InitializeComponent()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>InitializeComponent</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>InitializeComponent</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.InitializeComponent (List&lt; List&lt; Sprite &gt; &gt; spritesList, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> type)</computeroutput></para><para>
+
+<para>Initializes the component with the given sprites list and character type. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>spritesList</entry><entry>
+<para>The sprites list.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>type</entry><entry>
+<para>The character type.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00182">182</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1aa670a425fb51e4c9b28f0fffe6cf4e5a"/><section>
+    <title>InitializeComponent()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>InitializeComponent</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>InitializeComponent</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.InitializeComponent (List&lt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link> &gt; textureInputs, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> type)</computeroutput></para><para>
+
+<para>Initializes the component with the given texture inputs and character type. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>textureInputs</entry><entry>
+<para>The texture inputs.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>type</entry><entry>
+<para>The character type.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00169">169</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1abcbfdc3f15525c5c63fe902fbd97565f"/><section>
+    <title>InitilizeComponentQuick()</title>
+<indexterm><primary>InitilizeComponentQuick</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>InitilizeComponentQuick</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.InitilizeComponentQuick (<link linkend="_interface_i_nft_type">INftType</link> character, int animEncode)</computeroutput></para><para>
+
+<para>Initializes the component quickly based on the character and animation encode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>character</entry><entry>
+<para>The character to initialize the component for.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>animEncode</entry><entry>
+<para>The animation encode.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00152">152</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a58beca5c7e80c181ffd35a9cfca1c29c"/><section>
+    <title>PauseAnimation()</title>
+<indexterm><primary>PauseAnimation</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>PauseAnimation</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.PauseAnimation (bool pause)</computeroutput></para><para>
+
+<para>Pauses or resumes the animation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pause</entry><entry>
+<para>True to pause the animation, false to resume.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a7d410cd021a330508110e6fb9fc9dfec"/><section>
+    <title>SetSpeedAnimation()</title>
+<indexterm><primary>SetSpeedAnimation</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>SetSpeedAnimation</secondary></indexterm>
+<para><computeroutput>void BlobertArena.Animations.CharacterAnimationManager.SetSpeedAnimation (float speedMultiplier)</computeroutput></para><para>
+
+<para>Sets the speed of the animation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speedMultiplier</entry><entry>
+<para>The speed multiplier to set.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a148ef12eabadb3a8c4c2a3846c2bd122"/><section>
+    <title>EffectOverlayImage</title>
+<indexterm><primary>EffectOverlayImage</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>EffectOverlayImage</secondary></indexterm>
+<para><computeroutput>Image BlobertArena.Animations.CharacterAnimationManager.EffectOverlayImage</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00130">130</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a8f6ca2907990fc5212c18d9c09443b42"/><section>
+    <title>IdleTextureFunctionInput</title>
+<indexterm><primary>IdleTextureFunctionInput</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>IdleTextureFunctionInput</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>&gt; BlobertArena.Animations.CharacterAnimationManager.IdleTextureFunctionInput = new()</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00137">137</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ac5a825695d879b9acdf8c29ef077a610"/><section>
+    <title>ImageObjects</title>
+<indexterm><primary>ImageObjects</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>ImageObjects</secondary></indexterm>
+<para><computeroutput>List&lt;GameObject&gt; BlobertArena.Animations.CharacterAnimationManager.ImageObjects</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00129">129</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ad283e3edb572b8528a65ef9e5bca6927"/><section>
+    <title>PlayOverTextureFunctionInput</title>
+<indexterm><primary>PlayOverTextureFunctionInput</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>PlayOverTextureFunctionInput</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>&gt; BlobertArena.Animations.CharacterAnimationManager.PlayOverTextureFunctionInput = new()</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00138">138</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1ab69c844cab008651087722fb3d43ac49"/><section>
+    <title>QueueOfPlayOverAnims</title>
+<indexterm><primary>QueueOfPlayOverAnims</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>QueueOfPlayOverAnims</secondary></indexterm>
+<para><computeroutput>Queue&lt;(List&lt;<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>&gt; textureData, bool drawOver, List&lt;<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system">TweenCallbackSystem</link>&gt; callbackSystem)&gt; BlobertArena.Animations.CharacterAnimationManager.QueueOfPlayOverAnims = new()</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00141">141</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a6ff8b794ee82a5665051dabb67330f68"/><section>
+    <title>Speed</title>
+<indexterm><primary>Speed</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>Speed</secondary></indexterm>
+<para><computeroutput>float BlobertArena.Animations.CharacterAnimationManager.Speed = 0.08333f</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00122">122</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_character_animation_manager_1a2650cba5ef6732cf200e4c2824f6d1b9"/><section>
+    <title>TraitParent</title>
+<indexterm><primary>TraitParent</primary><secondary>BlobertArena.Animations.CharacterAnimationManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager</primary><secondary>TraitParent</secondary></indexterm>
+<para><computeroutput>Transform BlobertArena.Animations.CharacterAnimationManager.TraitParent</computeroutput></para><para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00131">131</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__character_animation_manager_8cs">CharacterAnimationManager.cs</link></section>
+</section>

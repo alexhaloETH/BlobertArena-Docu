@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_logic_layer_1_1_back_end_server" xml:lang="en-US">
+<title>LogicLayer.BackEndServer Namespace Reference</title>
+<indexterm><primary>LogicLayer.BackEndServer</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">QuickFightModel</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

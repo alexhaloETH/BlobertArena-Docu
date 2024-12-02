@@ -15,31 +15,22 @@
         <itemizedlist>
             <listitem><para>void <link linkend="_class_leader_board_ranking_element_1a2f7ecf5ae9532662c78597e63be12018">InitializeElement</link> (<link linkend="_interface_i_nft_type">INftType</link> nftData, <link linkend="_class_leader_board_page_behaviour">LeaderBoardPageBehaviour</link> parentPage, int rank, int wins=0)</para>
 </listitem>
-            <listitem><para>void <link linkend="_class_leader_board_ranking_element_1a6b632046873cf0ce8f136d41ec683d33">ClickedOn</link> ()</para>
-</listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__leader_board_ranking_element_8cs_source_1l00005">5</link> of file <link linkend="__leader_board_ranking_element_8cs_source">LeaderBoardRankingElement.cs</link>.</para>
+Definition at line <link linkend="__leader_board_ranking_element_8cs_source_1l00006">6</link> of file <link linkend="__leader_board_ranking_element_8cs_source">LeaderBoardRankingElement.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_class_leader_board_ranking_element_1a6b632046873cf0ce8f136d41ec683d33"/><section>
-    <title>ClickedOn()</title>
-<indexterm><primary>ClickedOn</primary><secondary>LeaderBoardRankingElement</secondary></indexterm>
-<indexterm><primary>LeaderBoardRankingElement</primary><secondary>ClickedOn</secondary></indexterm>
-<para><computeroutput>void LeaderBoardRankingElement.ClickedOn ( )</computeroutput></para><para>
-Definition at line <link linkend="__leader_board_ranking_element_8cs_source_1l00043">43</link> of file <link linkend="__leader_board_ranking_element_8cs_source">LeaderBoardRankingElement.cs</link>.</para>
-</section>
 <anchor xml:id="_class_leader_board_ranking_element_1a2f7ecf5ae9532662c78597e63be12018"/><section>
     <title>InitializeElement()</title>
 <indexterm><primary>InitializeElement</primary><secondary>LeaderBoardRankingElement</secondary></indexterm>
 <indexterm><primary>LeaderBoardRankingElement</primary><secondary>InitializeElement</secondary></indexterm>
 <para><computeroutput>void LeaderBoardRankingElement.InitializeElement (<link linkend="_interface_i_nft_type">INftType</link> nftData, <link linkend="_class_leader_board_page_behaviour">LeaderBoardPageBehaviour</link> parentPage, int rank, int wins = <computeroutput>0</computeroutput>
 )</computeroutput></para><para>
-Definition at line <link linkend="__leader_board_ranking_element_8cs_source_1l00016">16</link> of file <link linkend="__leader_board_ranking_element_8cs_source">LeaderBoardRankingElement.cs</link>.</para>
+Definition at line <link linkend="__leader_board_ranking_element_8cs_source_1l00017">17</link> of file <link linkend="__leader_board_ranking_element_8cs_source">LeaderBoardRankingElement.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

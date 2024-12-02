@@ -5,7 +5,16 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_class_slider_animator_component">SliderAnimatorComponent</link></para>
+            <listitem><para>class <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component">UiComponents.Slider.SliderAnimatorComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_ui_components">UiComponents</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_ui_components_1_1_slider">UiComponents.Slider</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

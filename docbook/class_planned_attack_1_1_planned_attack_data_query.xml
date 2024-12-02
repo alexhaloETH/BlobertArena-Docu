@@ -27,10 +27,10 @@
 </listitem>
         </itemizedlist>
 </simplesect>
-Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_query_1_1_i_data">LogicLayer.Query.IData</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00068">68</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00069">69</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
 </section>
 <section>
 <title>Property Documentation</title>
@@ -39,30 +39,30 @@ Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00068">68</
 <indexterm><primary>__typename</primary><secondary>PlannedAttack.PlannedAttackDataQuery</secondary></indexterm>
 <indexterm><primary>PlannedAttack.PlannedAttackDataQuery</primary><secondary>__typename</secondary></indexterm>
 <para><computeroutput>string PlannedAttack.PlannedAttackDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+Implements <link linkend="_interface_logic_layer_1_1_query_1_1_i_data_1afac299ef67932b69363a6f36f943c3c0">LogicLayer.Query.IData</link>.</para>
 <para>
-Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00070">70</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00071">71</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_planned_attack_1_1_planned_attack_data_query_1afe921a5ce28647ea90c016d8444282a1"/><section>
     <title>attack</title>
 <indexterm><primary>attack</primary><secondary>PlannedAttack.PlannedAttackDataQuery</secondary></indexterm>
 <indexterm><primary>PlannedAttack.PlannedAttackDataQuery</primary><secondary>attack</secondary></indexterm>
 <para><computeroutput>string PlannedAttack.PlannedAttackDataQuery.attack = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00072">72</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00073">73</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_planned_attack_1_1_planned_attack_data_query_1ad4e4178ae8d4949aee8d8dd6f83e288d"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>PlannedAttack.PlannedAttackDataQuery</secondary></indexterm>
 <indexterm><primary>PlannedAttack.PlannedAttackDataQuery</primary><secondary>id</secondary></indexterm>
 <para><computeroutput>string PlannedAttack.PlannedAttackDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00071">71</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00072">72</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_planned_attack_1_1_planned_attack_data_query_1a8d8c98aa443ae088c461e16d70da13db"/><section>
     <title>target</title>
 <indexterm><primary>target</primary><secondary>PlannedAttack.PlannedAttackDataQuery</secondary></indexterm>
 <indexterm><primary>PlannedAttack.PlannedAttackDataQuery</primary><secondary>target</secondary></indexterm>
 <para><computeroutput>string PlannedAttack.PlannedAttackDataQuery.target = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00073">73</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
+Definition at line <link linkend="__planned_attack_8gen_8cs_source_1l00074">74</link> of file <link linkend="__planned_attack_8gen_8cs_source">PlannedAttack.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

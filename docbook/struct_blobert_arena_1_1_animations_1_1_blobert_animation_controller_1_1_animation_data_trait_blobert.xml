@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert" xml:lang="en-US">
+<title>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert Struct Reference</title>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1c10528f740d1d2f03474f50270f3ecf">AnimationDataTraitBlobert</link> (AnimationDirection direction, AnimationFace side, AnimationState idleState, BehaviourState emotionState)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad03449b8785e2484b0b2d27b1ac705d5">EncodeAnimationData</link> (<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link> dataTraitBlobert)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link> <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a969dbf844e402b332ce5da44f7d6659e">DecodeAnimationData</link> (int encoded)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link> <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a98dc50c787f36352870e4e3a349f8aa2">GetRandomAnimationData</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>AnimationDirection <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1add5f829b6084a2bf984fad69e88e5332">Direction</link></para>
+</listitem>
+            <listitem><para>AnimationFace <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a012bb06d9cab41c1ecfc6f122f18fa53">Side</link></para>
+</listitem>
+            <listitem><para>AnimationState <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad74388eacc575bbc209fbd1242879107">State</link></para>
+</listitem>
+            <listitem><para>BehaviourState <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a42babc7f599ffe0a7d2d9ea788a630ed">Behaviour</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00042">42</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1c10528f740d1d2f03474f50270f3ecf"/><section>
+    <title>AnimationDataTraitBlobert()</title>
+<indexterm><primary>AnimationDataTraitBlobert</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>AnimationDataTraitBlobert</secondary></indexterm>
+<para><computeroutput>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.AnimationDataTraitBlobert (AnimationDirection direction, AnimationFace side, AnimationState idleState, BehaviourState emotionState)</computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00052">52</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a969dbf844e402b332ce5da44f7d6659e"/><section>
+    <title>DecodeAnimationData()</title>
+<indexterm><primary>DecodeAnimationData</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>DecodeAnimationData</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link> BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.DecodeAnimationData (int encoded)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00082">82</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad03449b8785e2484b0b2d27b1ac705d5"/><section>
+    <title>EncodeAnimationData()</title>
+<indexterm><primary>EncodeAnimationData</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>EncodeAnimationData</secondary></indexterm>
+<para><computeroutput>static int BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.EncodeAnimationData (<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link> dataTraitBlobert)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00071">71</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a98dc50c787f36352870e4e3a349f8aa2"/><section>
+    <title>GetRandomAnimationData()</title>
+<indexterm><primary>GetRandomAnimationData</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>GetRandomAnimationData</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link> BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.GetRandomAnimationData ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00093">93</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a42babc7f599ffe0a7d2d9ea788a630ed"/><section>
+    <title>Behaviour</title>
+<indexterm><primary>Behaviour</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>Behaviour</secondary></indexterm>
+<para><computeroutput>BehaviourState BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.Behaviour</computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00049">49</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1add5f829b6084a2bf984fad69e88e5332"/><section>
+    <title>Direction</title>
+<indexterm><primary>Direction</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>Direction</secondary></indexterm>
+<para><computeroutput>AnimationDirection BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.Direction</computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00045">45</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a012bb06d9cab41c1ecfc6f122f18fa53"/><section>
+    <title>Side</title>
+<indexterm><primary>Side</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>Side</secondary></indexterm>
+<para><computeroutput>AnimationFace BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.Side</computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00047">47</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad74388eacc575bbc209fbd1242879107"/><section>
+    <title>State</title>
+<indexterm><primary>State</primary><secondary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</primary><secondary>State</secondary></indexterm>
+<para><computeroutput>AnimationState BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert.State</computeroutput></para><para>
+Definition at line <link linkend="__blobert_animation_controller_8cs_source_1l00048">48</link> of file <link linkend="__blobert_animation_controller_8cs_source">BlobertAnimationController.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__blobert_animation_controller_8cs">BlobertAnimationController.cs</link></section>
+</section>

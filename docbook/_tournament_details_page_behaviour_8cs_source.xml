@@ -2,37 +2,38 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__tournament_details_page_behaviour_8cs_source" xml:lang="en-US">
 <title>TournamentDetailsPageBehaviour.cs</title>
 <indexterm><primary>UI/Pages/TournamentDetailsPageBehaviour.cs</primary></indexterm>
-Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>TMPro;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00003"/>00003 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00007"/><link linkend="_class_tournament_details_page_behaviour">00007</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tournament_details_page_behaviour">TournamentDetailsPageBehaviour</link>&#32;:&#32;<link linkend="_class_menu">Menu</link>
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00008"/>00008 {
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_tournament_banner_component">TournamentBannerComponent</link>&#32;_bannerComponent;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00010"/>00010 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[Space(20)]
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_pageText;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00013"/>00013 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;List&#32;Of&#32;Players&quot;</emphasis>)]
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_listOfPlayersObject;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00016"/>00016 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_player_tournament_viewer_element">PlayerTournamentViewerElement</link>[]&#32;_tournamentPlayersElements&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_player_tournament_viewer_element">PlayerTournamentViewerElement</link>[5];
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_InputField&#32;_InputField;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00019"/>00019 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[Space(5)]
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;List&#32;Of&#32;Fights&quot;</emphasis>)]
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_listOfFightsObject;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00023"/>00023 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_tournament_fight_element">TournamentFightElement</link>[]&#32;_tournamentFightElements&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_tournament_fight_element">TournamentFightElement</link>[5];
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00025"/>00025 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;[Space(20)]
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;self&#32;data&quot;</emphasis>)]
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;this&#32;should&#32;only&#32;show&#32;if&#32;the&#32;user&#32;is&#32;actually&#32;in&#32;the&#32;tournament</emphasis>
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>&#32;_selfBlobertVisualizer;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00030"/>00030 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_character_stats_visualizer_component">CharacterStatsVisualizerComponent</link>&#32;_selfValueVisualizer;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_selfTextData;&#32;<emphasis role="comment">//&#32;this&#32;should&#32;be&#32;&#32;&#32;&#32;&#32;position&#32;&#32;&#32;&#32;&#32;state&#32;&#32;&#32;&#32;&#32;&#32;next&#32;fight&#32;available&#32;&#32;all&#32;in&#32;the&#32;same&#32;text&#32;use&#32;/n</emphasis>
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_selfContainer;
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00034"/>00034 
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="comment">//query&#32;for&#32;the&#32;active&#32;trounaments&#32;games&#32;and&#32;actiave&#32;people&#32;in&#32;the&#32;tournamens&#32;should&#32;go&#32;here</emphasis>
-<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00036"/>00036 }
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_blobert_arena_1_1_animations">BlobertArena.Animations</link>;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00004"/>00004 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00008"/><link linkend="_class_tournament_details_page_behaviour">00008</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tournament_details_page_behaviour">TournamentDetailsPageBehaviour</link>&#32;:&#32;<link linkend="_class_menu">Menu</link>
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00009"/>00009 {
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_tournament_banner_component">TournamentBannerComponent</link>&#32;_bannerComponent;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00011"/>00011 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_pageText;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00014"/>00014 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;List&#32;Of&#32;Players&quot;</emphasis>)]
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_listOfPlayersObject;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00017"/>00017 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_player_tournament_viewer_element">PlayerTournamentViewerElement</link>[]&#32;_tournamentPlayersElements&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_player_tournament_viewer_element">PlayerTournamentViewerElement</link>[5];
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_InputField&#32;_InputField;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00020"/>00020 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[Space(5)]
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;List&#32;Of&#32;Fights&quot;</emphasis>)]
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_listOfFightsObject;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00024"/>00024 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_tournament_fight_element">TournamentFightElement</link>[]&#32;_tournamentFightElements&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_tournament_fight_element">TournamentFightElement</link>[5];
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00026"/>00026 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;[Space(20)]
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;self&#32;data&quot;</emphasis>)]
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;this&#32;should&#32;only&#32;show&#32;if&#32;the&#32;user&#32;is&#32;actually&#32;in&#32;the&#32;tournament</emphasis>
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager">CharacterAnimationManager</link>&#32;_selfBlobertVisualizer;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00031"/>00031 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_character_stats_visualizer_component">CharacterStatsVisualizerComponent</link>&#32;_selfValueVisualizer;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;_selfTextData;&#32;<emphasis role="comment">//&#32;this&#32;should&#32;be&#32;&#32;&#32;&#32;&#32;position&#32;&#32;&#32;&#32;&#32;state&#32;&#32;&#32;&#32;&#32;&#32;next&#32;fight&#32;available&#32;&#32;all&#32;in&#32;the&#32;same&#32;text&#32;use&#32;/n</emphasis>
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;_selfContainer;
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00035"/>00035 
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="comment">//query&#32;for&#32;the&#32;active&#32;trounaments&#32;games&#32;and&#32;actiave&#32;people&#32;in&#32;the&#32;tournamens&#32;should&#32;go&#32;here</emphasis>
+<anchor xml:id="__tournament_details_page_behaviour_8cs_source_1l00037"/>00037 }
 </programlisting></section>

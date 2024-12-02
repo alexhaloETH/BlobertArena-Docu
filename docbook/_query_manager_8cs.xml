@@ -5,31 +5,33 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <emphasis role="strong">LogicLayer.GraphQlQueryHelper</emphasis></para>
+            <listitem><para>class <emphasis role="strong">LogicLayer.Query.GraphQlQueryHelper</emphasis></para>
+
+<para>Helper class for constructing and manipulating GraphQL queries dynamically. Provides methods to create where clauses, order clauses, and build GraphQL queries with or without arguments. </para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_token_trait_data">LogicLayer.TokenTraitData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_token_trait_data">LogicLayer.Query.TokenTraitData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_seed_data">LogicLayer.SeedData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_seed_data">LogicLayer.Query.SeedData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_hit_data">LogicLayer.HitData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_hit_data">LogicLayer.Query.HitData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_affect_data">LogicLayer.AffectData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_affect_data">LogicLayer.Query.AffectData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_damage_data">LogicLayer.DamageData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_damage_data">LogicLayer.Query.DamageData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_stats_data">LogicLayer.StatsData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_stats_data">LogicLayer.Query.StatsData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_stat_data">LogicLayer.StatData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_stat_data">LogicLayer.Query.StatData</link></para>
 </listitem>
-            <listitem><para>interface <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link></para>
+            <listitem><para>interface <link linkend="_interface_logic_layer_1_1_query_1_1_i_data">LogicLayer.Query.IData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_entity">LogicLayer.Entity&lt; T &gt;</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_entity">LogicLayer.Query.Entity&lt; T &gt;</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_node">LogicLayer.Node&lt; T &gt;</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_node">LogicLayer.Query.Node&lt; T &gt;</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_edge">LogicLayer.Edge&lt; T &gt;</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_edge">LogicLayer.Query.Edge&lt; T &gt;</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_models">LogicLayer.Models&lt; T &gt;</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_query_1_1_models">LogicLayer.Query.Models&lt; T &gt;</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -37,6 +39,8 @@
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer_1_1_query">LogicLayer.Query</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

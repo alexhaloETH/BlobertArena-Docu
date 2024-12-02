@@ -2,57 +2,59 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__blob_data_background_blob_dex_component_8cs_source" xml:lang="en-US">
 <title>BlobDataBackgroundBlobDexComponent.cs</title>
 <indexterm><primary>UI/Components/BlobertData/BlobDexComponents/BlobDataBackgroundBlobDexComponent.cs</primary></indexterm>
-Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00003"/>00003 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00007"/><link linkend="_class_blob_data_background_blob_dex_component">00007</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_blob_data_background_blob_dex_component">BlobDataBackgroundBlobDexComponent</link>&#32;:&#32;MonoBehaviour
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00008"/>00008 {
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00009"/><link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806">Self</link>,
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e">Enemy</link>,
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00014"/>00014 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>&#32;_backgroundType;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;_backgrounds;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00017"/>00017 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;_backgroundImage;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_blob_data_manager_blob_dex_component">BlobDataManagerBlobDexComponent</link>&#32;_blobDataManager;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00020"/>00020 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00021"/>00021 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//check&#32;for&#32;</emphasis>
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00025"/>00025 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//_blobDataManager.</emphasis>
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00028"/>00028 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">SetBackground</link>(_backgroundType);
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SkinManager.Instance.NewSkin&#32;+=&#32;OnSkinChange;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00034"/>00034 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00035"/><link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">SetBackground</link>(<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>&#32;type)
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgroundType&#32;=&#32;type;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OnSkinChange();&#32;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00040"/>00040 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnSkinChange()
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgrounds[0]&#32;=&#32;<link linkend="_class_skin_manager">SkinManager</link>.<link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link>.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(_backgrounds[0].name);
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgrounds[1]&#32;=&#32;<link linkend="_class_skin_manager">SkinManager</link>.<link linkend="_class_skin_manager_1a54f9dd1918044e2558a1ce9635aa421c">Instance</link>.<link linkend="_class_skin_manager_1a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</link>(_backgrounds[1].name);
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00045"/>00045 
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_backgroundType)
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>.Self:
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgroundImage.sprite&#32;=&#32;_backgrounds[0];
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>.Enemy:
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgroundImage.sprite&#32;=&#32;_backgrounds[1];
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00056"/>00056 }
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_blobert_arena_1_1_blob_dex">BlobertArena.BlobDex</link>;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_blobert_arena_1_1_theme_manager">BlobertArena.ThemeManager</link>;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00005"/>00005 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00009"/><link linkend="_class_blob_data_background_blob_dex_component">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_blob_data_background_blob_dex_component">BlobDataBackgroundBlobDexComponent</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00011"/><link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806">Self</link>,
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e">Enemy</link>,
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00016"/>00016 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>&#32;_backgroundType;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;_backgrounds;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00019"/>00019 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;_backgroundImage;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component">BlobDataManagerBlobDexComponent</link>&#32;_blobDataManager;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00022"/>00022 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//check&#32;for</emphasis>
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00026"/>00026 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//_blobDataManager.</emphasis>
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00029"/>00029 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">SetBackground</link>(_backgroundType);
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SkinManager.Instance.NewSkin&#32;+=&#32;OnSkinChange;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00035"/>00035 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00036"/><link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">00036</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a86a540b204aa8ebc0aa921146804410d">SetBackground</link>(<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>&#32;type)
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgroundType&#32;=&#32;type;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OnSkinChange();
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00041"/>00041 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnSkinChange()
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgrounds[0]&#32;=&#32;<link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager">SkinManager</link>.<link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a22015f594d33f4caba702f6f15b95683">Instance</link>.<link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1aee1a1ad385a383873dd6b40723b03175">GetSpriteByName</link>(_backgrounds[0].name);
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgrounds[1]&#32;=&#32;<link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager">SkinManager</link>.<link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a22015f594d33f4caba702f6f15b95683">Instance</link>.<link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1aee1a1ad385a383873dd6b40723b03175">GetSpriteByName</link>(_backgrounds[1].name);
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00046"/>00046 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_backgroundType)
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>.Self:
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgroundImage.sprite&#32;=&#32;_backgrounds[0];
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00052"/>00052 
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link>.Enemy:
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_backgroundImage.sprite&#32;=&#32;_backgrounds[1];
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blob_data_background_blob_dex_component_8cs_source_1l00058"/>00058 }
 </programlisting></section>

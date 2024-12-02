@@ -36,7 +36,7 @@
 
 <para>Sets the background of the blob data component. </para>
 <para>
-Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00007">7</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
+Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00009">9</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
 </section>
 <section>
 <title>Member Enumeration Documentation</title>
@@ -58,7 +58,7 @@ Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00009">9</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
+Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00011">11</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -68,7 +68,7 @@ Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_
 <indexterm><primary>SetBackground</primary><secondary>BlobDataBackgroundBlobDexComponent</secondary></indexterm>
 <indexterm><primary>BlobDataBackgroundBlobDexComponent</primary><secondary>SetBackground</secondary></indexterm>
 <para><computeroutput>void BlobDataBackgroundBlobDexComponent.SetBackground (<link linkend="_class_blob_data_background_blob_dex_component_1a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</link> type)</computeroutput></para><para>
-Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00035">35</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
+Definition at line <link linkend="__blob_data_background_blob_dex_component_8cs_source_1l00036">36</link> of file <link linkend="__blob_data_background_blob_dex_component_8cs_source">BlobDataBackgroundBlobDexComponent.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

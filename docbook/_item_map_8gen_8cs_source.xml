@@ -10,153 +10,154 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__item_map_8gen_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>SimpleGraphQL;
 <anchor xml:id="__item_map_8gen_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
 <anchor xml:id="__item_map_8gen_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis><link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>&#32;=&#32;Dojo.Starknet.Enum;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00011"/>00011 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00012"/>00012 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">abstract</emphasis>&#32;record&#32;BlobertTrait()&#32;:&#32;<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00013"/>00013 {
-<anchor xml:id="__item_map_8gen_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetTraitName(BlobertTrait&#32;trait)
-<anchor xml:id="__item_map_8gen_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;trait&#32;<emphasis role="keywordflow">switch</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Background&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Background&quot;</emphasis>,
-<anchor xml:id="__item_map_8gen_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Armour&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Armour&quot;</emphasis>,
-<anchor xml:id="__item_map_8gen_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Jewelry&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Jewelry&quot;</emphasis>,
-<anchor xml:id="__item_map_8gen_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Mask&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Mask&quot;</emphasis>,
-<anchor xml:id="__item_map_8gen_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Weapon&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Weapon&quot;</emphasis>,
-<anchor xml:id="__item_map_8gen_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Unknown&quot;</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
-<anchor xml:id="__item_map_8gen_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_map_8gen_8cs_source_1l00026"/>00026 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Background()&#32;:&#32;BlobertTrait;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Armour()&#32;:&#32;BlobertTrait;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Jewelry()&#32;:&#32;BlobertTrait;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Mask()&#32;:&#32;BlobertTrait;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Weapon()&#32;:&#32;BlobertTrait;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00032"/>00032 }
-<anchor xml:id="__item_map_8gen_8cs_source_1l00033"/>00033 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00034"/>00034 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>ItemMap&#32;:&#32;ModelInstance
-<anchor xml:id="__item_map_8gen_8cs_source_1l00035"/>00035 {
-<anchor xml:id="__item_map_8gen_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;trait_type&quot;</emphasis>)]
-<anchor xml:id="__item_map_8gen_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;custom;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00038"/>00038 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;blobert_trait&quot;</emphasis>)]
-<anchor xml:id="__item_map_8gen_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;BlobertTrait&#32;blobert_trait;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00041"/>00041 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;blobert_trait_id&quot;</emphasis>)]
-<anchor xml:id="__item_map_8gen_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;blobert_trait_id;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00044"/>00044 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;item_id&quot;</emphasis>)]
-<anchor xml:id="__item_map_8gen_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;item_id;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00047"/>00047 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
-<anchor xml:id="__item_map_8gen_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_world_data_model">WorldDataModel</link>.TraitIdToItemId.Add((WorldDataModel.seed.Hex(),&#32;WorldDataModel.ItemIdToBlobertTraitDict[item_id.Hex()],&#32;blobert_trait_id),&#32;item_id.Hex());
-<anchor xml:id="__item_map_8gen_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
-<anchor xml:id="__item_map_8gen_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_map_8gen_8cs_source_1l00053"/>00053 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="comment">//SDK&#32;workAround</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;ManuallySetEnum()
-<anchor xml:id="__item_map_8gen_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;<emphasis role="stringliteral">$@&quot;</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00058"/>00058 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;query&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00059"/>00059 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaItemMapModels&#32;(where:{{item_id:&quot;&quot;{item_id.Hex()}&quot;&quot;,&#32;blobert_trait_id:&#32;{blobert_trait_id}}})&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00060"/>00060 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00061"/>00061 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00062"/>00062 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00063"/>00063 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00064"/>00064 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00065"/>00065 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00066"/>00066 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_ItemMap&#32;{{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00067"/>00067 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00068"/>00068 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait_id</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00069"/>00069 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;item_id</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00070"/>00070 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00071"/>00071 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00072"/>00072 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00073"/>00073 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00074"/>00074 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00075"/>00075 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00076"/>00076 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}&quot;</emphasis>;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00077"/>00077 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GraphQLClient($<emphasis role="stringliteral">&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;</emphasis>);
-<anchor xml:id="__item_map_8gen_8cs_source_1l00079"/>00079 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Request
-<anchor xml:id="__item_map_8gen_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;=&#32;queryString,
-<anchor xml:id="__item_map_8gen_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
-<anchor xml:id="__item_map_8gen_8cs_source_1l00084"/>00084 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);
-<anchor xml:id="__item_map_8gen_8cs_source_1l00086"/>00086 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);
-<anchor xml:id="__item_map_8gen_8cs_source_1l00088"/>00088 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);
-<anchor xml:id="__item_map_8gen_8cs_source_1l00090"/>00090 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;blobertTrait&#32;=&#32;(string)jsonObj[<emphasis role="stringliteral">&quot;Data&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;blobArenaItemMapModels&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;edges&quot;</emphasis>]?[0]?[<emphasis role="stringliteral">&quot;node&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;entity&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;models&quot;</emphasis>]?[0]?[<emphasis role="stringliteral">&quot;blobert_trait&quot;</emphasis>];
-<anchor xml:id="__item_map_8gen_8cs_source_1l00094"/>00094 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait&#32;blobertTraitEnum&#32;=&#32;blobertTrait&#32;<emphasis role="keywordflow">switch</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Background&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Background(),
-<anchor xml:id="__item_map_8gen_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Armour&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Armour(),
-<anchor xml:id="__item_map_8gen_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Jewelry&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Jewelry(),
-<anchor xml:id="__item_map_8gen_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Mask&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Mask(),
-<anchor xml:id="__item_map_8gen_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Weapon&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Weapon(),
-<anchor xml:id="__item_map_8gen_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;=&gt;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;InvalidOperationException(<emphasis role="stringliteral">&quot;Unknown&#32;BlobertTrait&#32;type&quot;</emphasis>)
-<anchor xml:id="__item_map_8gen_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
-<anchor xml:id="__item_map_8gen_8cs_source_1l00104"/>00104 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.blobert_trait&#32;=&#32;blobertTraitEnum;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_map_8gen_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;this&#32;query&#32;is&#32;wrong&#32;{queryString}&#32;(yes&#32;alex&#32;knows&#32;this)&quot;</emphasis>);
-<anchor xml:id="__item_map_8gen_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_map_8gen_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_map_8gen_8cs_source_1l00112"/>00112 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00113"/>00113 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Graphql&#32;templates</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00114"/>00114 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;GraphQlQueryFull&#32;=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00116"/>00116 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaItemMapModels&#32;arguments&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00117"/>00117 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00118"/>00118 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00119"/>00119 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00120"/>00120 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00121"/>00121 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00122"/>00122 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00123"/>00123 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_ItemMap&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00124"/>00124 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;trait_type</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00125"/>00125 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00126"/>00126 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait_id</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00127"/>00127 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;item_id</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00128"/>00128 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00129"/>00129 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00130"/>00130 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00131"/>00131 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00132"/>00132 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00133"/>00133 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00134"/>00134 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00135"/>00135 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;GraphQlQueryOnSection&#32;=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00137"/>00137 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_ItemMap&#32;{</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00138"/>00138 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;trait_type</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00139"/>00139 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00140"/>00140 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait_id</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00141"/>00141 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;item_id</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00142"/>00142 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00143"/>00143 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00144"/>00144 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;GraphQlHeader&#32;=&#32;<emphasis role="stringliteral">&quot;blobArenaItemMapModels&quot;</emphasis>;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00146"/>00146 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>ItemMapDataQuery&#32;:&#32;<link linkend="_interface_logic_layer_1_1_i_data">IData</link>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_map_8gen_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;__typename&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;trait_type&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;blobert_trait&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;blobert_trait_id&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;item_id&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_map_8gen_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_map_8gen_8cs_source_1l00155"/>00155 
-<anchor xml:id="__item_map_8gen_8cs_source_1l00156"/>00156 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Graphql&#32;templates</emphasis>
-<anchor xml:id="__item_map_8gen_8cs_source_1l00157"/>00157 }
+<anchor xml:id="__item_map_8gen_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer_1_1_query">LogicLayer.Query</link>;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00011"/>00011 <emphasis role="keyword">using&#32;</emphasis><link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>&#32;=&#32;Dojo.Starknet.Enum;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00012"/>00012 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00013"/>00013 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">abstract</emphasis>&#32;record&#32;BlobertTrait()&#32;:&#32;<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00014"/>00014 {
+<anchor xml:id="__item_map_8gen_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;GetTraitName(BlobertTrait&#32;trait)
+<anchor xml:id="__item_map_8gen_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;trait&#32;<emphasis role="keywordflow">switch</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Background&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Background&quot;</emphasis>,
+<anchor xml:id="__item_map_8gen_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Armour&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Armour&quot;</emphasis>,
+<anchor xml:id="__item_map_8gen_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Jewelry&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Jewelry&quot;</emphasis>,
+<anchor xml:id="__item_map_8gen_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Mask&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Mask&quot;</emphasis>,
+<anchor xml:id="__item_map_8gen_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait.Weapon&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Weapon&quot;</emphasis>,
+<anchor xml:id="__item_map_8gen_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;=&gt;&#32;<emphasis role="stringliteral">&quot;Unknown&quot;</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__item_map_8gen_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_map_8gen_8cs_source_1l00027"/>00027 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Background()&#32;:&#32;BlobertTrait;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Armour()&#32;:&#32;BlobertTrait;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Jewelry()&#32;:&#32;BlobertTrait;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Mask()&#32;:&#32;BlobertTrait;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;record&#32;Weapon()&#32;:&#32;BlobertTrait;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00033"/>00033 }
+<anchor xml:id="__item_map_8gen_8cs_source_1l00034"/>00034 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00035"/>00035 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>ItemMap&#32;:&#32;ModelInstance
+<anchor xml:id="__item_map_8gen_8cs_source_1l00036"/>00036 {
+<anchor xml:id="__item_map_8gen_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;trait_type&quot;</emphasis>)]
+<anchor xml:id="__item_map_8gen_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;custom;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00039"/>00039 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;blobert_trait&quot;</emphasis>)]
+<anchor xml:id="__item_map_8gen_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;BlobertTrait&#32;blobert_trait;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00042"/>00042 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;blobert_trait_id&quot;</emphasis>)]
+<anchor xml:id="__item_map_8gen_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;blobert_trait_id;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00045"/>00045 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;item_id&quot;</emphasis>)]
+<anchor xml:id="__item_map_8gen_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;item_id;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00048"/>00048 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__item_map_8gen_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_world_data_model">WorldDataModel</link>.TraitIdToItemId.Add((WorldDataModel.seed.Hex(),&#32;WorldDataModel.ItemIdToBlobertTraitDict[item_id.Hex()],&#32;blobert_trait_id),&#32;item_id.Hex());
+<anchor xml:id="__item_map_8gen_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Destroy(gameObject);
+<anchor xml:id="__item_map_8gen_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_map_8gen_8cs_source_1l00054"/>00054 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="comment">//SDK&#32;workAround</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;ManuallySetEnum()
+<anchor xml:id="__item_map_8gen_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;<emphasis role="stringliteral">$@&quot;</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00059"/>00059 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;query&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00060"/>00060 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaItemMapModels&#32;(where:{{item_id:&quot;&quot;{item_id.Hex()}&quot;&quot;,&#32;blobert_trait_id:&#32;{blobert_trait_id}}})&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00061"/>00061 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00062"/>00062 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00063"/>00063 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00064"/>00064 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00065"/>00065 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00066"/>00066 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00067"/>00067 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_ItemMap&#32;{{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00068"/>00068 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00069"/>00069 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait_id</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00070"/>00070 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;item_id</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00071"/>00071 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00072"/>00072 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00073"/>00073 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00074"/>00074 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00075"/>00075 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00076"/>00076 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00077"/>00077 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}&quot;</emphasis>;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00078"/>00078 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;GraphQLClient($<emphasis role="stringliteral">&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;</emphasis>);
+<anchor xml:id="__item_map_8gen_8cs_source_1l00080"/>00080 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Request
+<anchor xml:id="__item_map_8gen_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link>&#32;=&#32;queryString,
+<anchor xml:id="__item_map_8gen_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__item_map_8gen_8cs_source_1l00085"/>00085 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);
+<anchor xml:id="__item_map_8gen_8cs_source_1l00087"/>00087 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);
+<anchor xml:id="__item_map_8gen_8cs_source_1l00089"/>00089 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);
+<anchor xml:id="__item_map_8gen_8cs_source_1l00091"/>00091 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;blobertTrait&#32;=&#32;(string)jsonObj[<emphasis role="stringliteral">&quot;Data&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;blobArenaItemMapModels&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;edges&quot;</emphasis>]?[0]?[<emphasis role="stringliteral">&quot;node&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;entity&quot;</emphasis>]?[<emphasis role="stringliteral">&quot;models&quot;</emphasis>]?[0]?[<emphasis role="stringliteral">&quot;blobert_trait&quot;</emphasis>];
+<anchor xml:id="__item_map_8gen_8cs_source_1l00095"/>00095 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BlobertTrait&#32;blobertTraitEnum&#32;=&#32;blobertTrait&#32;<emphasis role="keywordflow">switch</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Background&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Background(),
+<anchor xml:id="__item_map_8gen_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Armour&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Armour(),
+<anchor xml:id="__item_map_8gen_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Jewelry&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Jewelry(),
+<anchor xml:id="__item_map_8gen_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Mask&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Mask(),
+<anchor xml:id="__item_map_8gen_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Weapon&quot;</emphasis>&#32;=&gt;&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertTrait.Weapon(),
+<anchor xml:id="__item_map_8gen_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;=&gt;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;InvalidOperationException(<emphasis role="stringliteral">&quot;Unknown&#32;BlobertTrait&#32;type&quot;</emphasis>)
+<anchor xml:id="__item_map_8gen_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__item_map_8gen_8cs_source_1l00105"/>00105 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.blobert_trait&#32;=&#32;blobertTraitEnum;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_map_8gen_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;this&#32;query&#32;is&#32;wrong&#32;{queryString}&#32;(yes&#32;alex&#32;knows&#32;this)&quot;</emphasis>);
+<anchor xml:id="__item_map_8gen_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_map_8gen_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_map_8gen_8cs_source_1l00113"/>00113 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00114"/>00114 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Graphql&#32;templates</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00115"/>00115 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;GraphQlQueryFull&#32;=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00117"/>00117 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaItemMapModels&#32;arguments&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00118"/>00118 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00119"/>00119 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00120"/>00120 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00121"/>00121 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00122"/>00122 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00123"/>00123 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00124"/>00124 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_ItemMap&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00125"/>00125 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;trait_type</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00126"/>00126 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00127"/>00127 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait_id</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00128"/>00128 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;item_id</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00129"/>00129 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00130"/>00130 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00131"/>00131 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00132"/>00132 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00133"/>00133 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00134"/>00134 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00135"/>00135 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00136"/>00136 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;GraphQlQueryOnSection&#32;=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00138"/>00138 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_ItemMap&#32;{</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00139"/>00139 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;trait_type</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00140"/>00140 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00141"/>00141 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobert_trait_id</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00142"/>00142 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;item_id</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00143"/>00143 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00144"/>00144 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00145"/>00145 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;GraphQlHeader&#32;=&#32;<emphasis role="stringliteral">&quot;blobArenaItemMapModels&quot;</emphasis>;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00147"/>00147 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>ItemMapDataQuery&#32;:&#32;<link linkend="_interface_logic_layer_1_1_query_1_1_i_data">IData</link>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_map_8gen_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;__typename&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;trait_type&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;blobert_trait&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;blobert_trait_id&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;item_id&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_map_8gen_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_map_8gen_8cs_source_1l00156"/>00156 
+<anchor xml:id="__item_map_8gen_8cs_source_1l00157"/>00157 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Graphql&#32;templates</emphasis>
+<anchor xml:id="__item_map_8gen_8cs_source_1l00158"/>00158 }
 </programlisting></section>

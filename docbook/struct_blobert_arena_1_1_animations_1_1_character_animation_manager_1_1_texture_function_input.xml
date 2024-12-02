@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input" xml:lang="en-US">
+<title>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput Struct Reference</title>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary></indexterm>
+<para>
+
+<para>Represents the input data for a texture function in an animation. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a536550d16baf0170837247350816c77b">TextureFunctionInput</link> (<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a8c74fae2ff06c2337c63578db35334dd">Texture</link> texture, string name, int startIndex, int length)</para>
+
+<para>Constructor that loads and trims the list of sprites. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a1082e8664350a64c99ac506427a226a2">TextureFunctionInput</link> (List&lt; Sprite &gt; sprites, int length)</para>
+
+<para>Constructor that takes a list of sprites and the length of the animation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>readonly Texture <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a8c74fae2ff06c2337c63578db35334dd">Texture</link></para>
+
+<para>The texture associated with the animation. </para>
+</listitem>
+            <listitem><para>readonly string <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1aa561e5bba3b2ef4bf8d8284a079b4b1b">Name</link></para>
+
+<para>The name of the animation. </para>
+</listitem>
+            <listitem><para>readonly int <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1ab9d313d4e57fea12ef102f9f8b2b66da">StartIndex</link></para>
+
+<para>The start index of the animation. </para>
+</listitem>
+            <listitem><para>readonly int <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a0fb7336bdc35564d304365616cbed93d">Length</link></para>
+
+<para>The length of the animation. </para>
+</listitem>
+            <listitem><para>readonly List&lt; Sprite &gt; <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1acead51c5c8dd0d7b467d0dcc3195c865">Sprites</link></para>
+
+<para>The list of sprites representing the animation frames. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the input data for a texture function in an animation. </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00014">14</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a536550d16baf0170837247350816c77b"/><section>
+    <title>TextureFunctionInput()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TextureFunctionInput</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>TextureFunctionInput</secondary></indexterm>
+<para><computeroutput>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.TextureFunctionInput (<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a8c74fae2ff06c2337c63578db35334dd">Texture</link> texture, string name, int startIndex, int length)</computeroutput></para><para>
+
+<para>Constructor that loads and trims the list of sprites. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>texture</entry><entry>
+<para>The texture associated with the animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>startIndex</entry><entry>
+<para>The start index of the animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>The length of the animation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00048">48</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a1082e8664350a64c99ac506427a226a2"/><section>
+    <title>TextureFunctionInput()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TextureFunctionInput</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>TextureFunctionInput</secondary></indexterm>
+<para><computeroutput>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.TextureFunctionInput (List&lt; Sprite &gt; sprites, int length)</computeroutput></para><para>
+
+<para>Constructor that takes a list of sprites and the length of the animation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sprites</entry><entry>
+<para>The list of sprites representing the animation frames.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>The length of the animation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00073">73</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a0fb7336bdc35564d304365616cbed93d"/><section>
+    <title>Length</title>
+<indexterm><primary>Length</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>Length</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.Length</computeroutput></para><para>
+
+<para>The length of the animation. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00034">34</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1aa561e5bba3b2ef4bf8d8284a079b4b1b"/><section>
+    <title>Name</title>
+<indexterm><primary>Name</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>readonly string BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.Name</computeroutput></para><para>
+
+<para>The name of the animation. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00024">24</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1acead51c5c8dd0d7b467d0dcc3195c865"/><section>
+    <title>Sprites</title>
+<indexterm><primary>Sprites</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>Sprites</secondary></indexterm>
+<para><computeroutput>readonly List&lt;Sprite&gt; BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.Sprites</computeroutput></para><para>
+
+<para>The list of sprites representing the animation frames. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00039">39</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1ab9d313d4e57fea12ef102f9f8b2b66da"/><section>
+    <title>StartIndex</title>
+<indexterm><primary>StartIndex</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>StartIndex</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.StartIndex</computeroutput></para><para>
+
+<para>The start index of the animation. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00029">29</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a8c74fae2ff06c2337c63578db35334dd"/><section>
+    <title>Texture</title>
+<indexterm><primary>Texture</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput</primary><secondary>Texture</secondary></indexterm>
+<para><computeroutput>readonly Texture BlobertArena.Animations.CharacterAnimationManager.TextureFunctionInput.Texture</computeroutput></para><para>
+
+<para>The texture associated with the animation. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00019">19</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__character_animation_manager_8cs">CharacterAnimationManager.cs</link></section>
+</section>

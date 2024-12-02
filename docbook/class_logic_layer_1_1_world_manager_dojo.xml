@@ -27,9 +27,9 @@
 </listitem>
             <listitem><para>async Task&lt; byte[]&gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a803bdd7f2e7d17e9028a7110a050ad2d">Publish</link> (TypedData typedData, Signature signature)</para>
 </listitem>
-            <listitem><para>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a95f3928d3aecc3fa4fe99591e167767b">FetchEntitiesByBatch</link> (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</para>
+            <listitem><para>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6">Entity</link> &gt; &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a09e3f5be4f4463bcea3ad7af2e32d5c1">FetchEntitiesByBatch</link> (Dojo.Torii.Query query)</para>
 </listitem>
-            <listitem><para>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1a26d4f87794e0268f38fdd245ccfca9fd">StandardEntityFetch</link> (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</para>
+            <listitem><para>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6">Entity</link> &gt; &gt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec95fb06ee9c86b1210b8969d7a03547">StandardEntityFetch</link> (Dojo.Torii.Query query)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -84,11 +84,11 @@ Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00067">67</l
 <para><computeroutput>GameObject LogicLayer.WorldManagerDojo.Entity (string name)</computeroutput></para><para>
 Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00047">47</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
 </section>
-<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a95f3928d3aecc3fa4fe99591e167767b"/><section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a09e3f5be4f4463bcea3ad7af2e32d5c1"/><section>
     <title>FetchEntitiesByBatch()</title>
 <indexterm><primary>FetchEntitiesByBatch</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
 <indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>FetchEntitiesByBatch</secondary></indexterm>
-<para><computeroutput>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; LogicLayer.WorldManagerDojo.FetchEntitiesByBatch (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</computeroutput></para><para>
+<para><computeroutput>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6">Entity</link> &gt; &gt; LogicLayer.WorldManagerDojo.FetchEntitiesByBatch (Dojo.Torii.Query query)</computeroutput></para><para>
 Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00114">114</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
 </section>
 <anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a5866b4ab1494e09127ae59f772f16f8b"/><section>
@@ -112,11 +112,11 @@ Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00104">104</
 <para><computeroutput>void LogicLayer.WorldManagerDojo.RemoveEntity (string key)</computeroutput></para><para>
 Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00094">94</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
 </section>
-<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1a26d4f87794e0268f38fdd245ccfca9fd"/><section>
+<anchor xml:id="_class_logic_layer_1_1_world_manager_dojo_1aec95fb06ee9c86b1210b8969d7a03547"/><section>
     <title>StandardEntityFetch()</title>
 <indexterm><primary>StandardEntityFetch</primary><secondary>LogicLayer.WorldManagerDojo</secondary></indexterm>
 <indexterm><primary>LogicLayer.WorldManagerDojo</primary><secondary>StandardEntityFetch</secondary></indexterm>
-<para><computeroutput>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_entity">Entity</link> &gt; &gt; LogicLayer.WorldManagerDojo.StandardEntityFetch (<link linkend="__attack_result_8cs_1a680846c413970a24b7783196259823ae">Query</link> query)</computeroutput></para><para>
+<para><computeroutput>async Task&lt; List&lt; <link linkend="_class_logic_layer_1_1_world_manager_dojo_1aec5a729e060b116e8c104d961ca140e6">Entity</link> &gt; &gt; LogicLayer.WorldManagerDojo.StandardEntityFetch (Dojo.Torii.Query query)</computeroutput></para><para>
 Definition at line <link linkend="__world_manager_dojo_8cs_source_1l00145">145</link> of file <link linkend="__world_manager_dojo_8cs_source">WorldManagerDojo.cs</link>.</para>
 </section>
 </section>

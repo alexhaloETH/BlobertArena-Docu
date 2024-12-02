@@ -5,9 +5,18 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <emphasis role="strong">BlobertAnimationController</emphasis></para>
+            <listitem><para>class <emphasis role="strong">BlobertArena.Animations.BlobertAnimationController</emphasis></para>
 </listitem>
-            <listitem><para>struct <link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">BlobertAnimationController.AnimationDataTraitBlobert</link></para>
+            <listitem><para>struct <link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">BlobertArena.Animations.BlobertAnimationController.AnimationDataTraitBlobert</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena">BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_animations">BlobertArena.Animations</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

@@ -6,6 +6,8 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_ui_state_manager">UiStateManager</link></para>
+
+<para>Deprecated class was used for debugging purposes but the ticket to make debuggin specific to the page should depricate this. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

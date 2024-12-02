@@ -33,7 +33,7 @@ Public Member Functions inherited from <link linkend="_interface_i_lobby_list_el
 Properties inherited from <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00008">8</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00011">11</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -42,7 +42,7 @@ Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs
 <indexterm><primary>GoToPage</primary><secondary>InLobbyOngoingLobbyListPageElement</secondary></indexterm>
 <indexterm><primary>InLobbyOngoingLobbyListPageElement</primary><secondary>GoToPage</secondary></indexterm>
 <para><computeroutput>void InLobbyOngoingLobbyListPageElement.GoToPage ( )</computeroutput></para><para>
-Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00075">75</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00078">78</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_in_lobby_ongoing_lobby_list_page_element_1a6563ae3102ba1938c9e71fa1ec2b8949"/><section>
     <title>InitializeElement()</title>
@@ -51,7 +51,7 @@ Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs
 <para><computeroutput>async void InLobbyOngoingLobbyListPageElement.InitializeElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> battleId, <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> parent)</computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a951b1b770ff776454bf9e8a4c74abd54">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00035">35</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00038">38</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -63,7 +63,7 @@ Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> InLobbyOngoingLobbyListPageElement.challengeId<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a919833e81c2d7531dfe6df14cdf88d80">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00011">11</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00014">14</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_in_lobby_ongoing_lobby_list_page_element_1aa5981b76bbe0efd0e0292511972f72fd"/><section>
     <title>parentPage</title>
@@ -72,7 +72,7 @@ Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs
 <para><computeroutput><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> InLobbyOngoingLobbyListPageElement.parentPage<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1abf08a8c2cd56cf491210634c439899cd">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00010">10</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source_1l00013">13</link> of file <link linkend="__in_lobby_ongoing_lobby_list_page_element_8cs_source">InLobbyOngoingLobbyListPageElement.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

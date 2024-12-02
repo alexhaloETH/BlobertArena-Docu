@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ui_state_manager" xml:lang="en-US">
 <title>UiStateManager Class Reference</title>
 <indexterm><primary>UiStateManager</primary></indexterm>
+<para>
+
+<para>Deprecated class was used for debugging purposes but the ticket to make debuggin specific to the page should depricate this. </para>
+ 
+</para>
 <para>Inheritance diagram for UiStateManager:    <informalfigure>
         <mediaobject>
             <imageobject>
@@ -14,12 +19,6 @@
     <title>Public Member Functions    </title>
         <itemizedlist>
             <listitem><para>async void <link linkend="_class_ui_state_manager_1a17386cc3a99f51bdf7fcc37ca5b2a477">Start</link> ()</para>
-</listitem>
-            <listitem><para>IEnumerator <link linkend="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a">CaptureAndDownload</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc">CallFullScreen</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_class_ui_state_manager_1a6daaf609b4e4b3639c5db9b6e01fd820">CallInteractOnDisabledObject</link> (string gameObjectName, string parameter)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -40,38 +39,19 @@
 </simplesect>
 <section>
 <title>Detailed Description</title>
+
+<para>Deprecated class was used for debugging purposes but the ticket to make debuggin specific to the page should depricate this. </para>
 <para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00006">6</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00010">10</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_class_ui_state_manager_1ac77cab7d20be27105405404b96c16ccc"/><section>
-    <title>CallFullScreen()</title>
-<indexterm><primary>CallFullScreen</primary><secondary>UiStateManager</secondary></indexterm>
-<indexterm><primary>UiStateManager</primary><secondary>CallFullScreen</secondary></indexterm>
-<para><computeroutput>void UiStateManager.CallFullScreen ( )</computeroutput></para><para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00185">185</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
-</section>
-<anchor xml:id="_class_ui_state_manager_1a6daaf609b4e4b3639c5db9b6e01fd820"/><section>
-    <title>CallInteractOnDisabledObject()</title>
-<indexterm><primary>CallInteractOnDisabledObject</primary><secondary>UiStateManager</secondary></indexterm>
-<indexterm><primary>UiStateManager</primary><secondary>CallInteractOnDisabledObject</secondary></indexterm>
-<para><computeroutput>void UiStateManager.CallInteractOnDisabledObject (string gameObjectName, string parameter)</computeroutput></para><para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00191">191</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
-</section>
-<anchor xml:id="_class_ui_state_manager_1a2777ec8b7e357de24e1e99b05a1d156a"/><section>
-    <title>CaptureAndDownload()</title>
-<indexterm><primary>CaptureAndDownload</primary><secondary>UiStateManager</secondary></indexterm>
-<indexterm><primary>UiStateManager</primary><secondary>CaptureAndDownload</secondary></indexterm>
-<para><computeroutput>IEnumerator UiStateManager.CaptureAndDownload ( )</computeroutput></para><para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00163">163</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
-</section>
 <anchor xml:id="_class_ui_state_manager_1a17386cc3a99f51bdf7fcc37ca5b2a477"/><section>
     <title>Start()</title>
 <indexterm><primary>Start</primary><secondary>UiStateManager</secondary></indexterm>
 <indexterm><primary>UiStateManager</primary><secondary>Start</secondary></indexterm>
 <para><computeroutput>async void UiStateManager.Start ( )</computeroutput></para><para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00027">27</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00031">31</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -81,7 +61,7 @@ Definition at line <link linkend="__ui_state_manager_8cs_source_1l00027">27</lin
 <indexterm><primary>gameManager</primary><secondary>UiStateManager</secondary></indexterm>
 <indexterm><primary>UiStateManager</primary><secondary>gameManager</secondary></indexterm>
 <para><computeroutput><link linkend="_class_game_manager">GameManager</link> UiStateManager.gameManager</computeroutput></para><para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00011">11</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00015">15</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -91,7 +71,7 @@ Definition at line <link linkend="__ui_state_manager_8cs_source_1l00011">11</lin
 <indexterm><primary>Instance</primary><secondary>UiStateManager</secondary></indexterm>
 <indexterm><primary>UiStateManager</primary><secondary>Instance</secondary></indexterm>
 <para><computeroutput><link linkend="_class_ui_state_manager">UiStateManager</link> UiStateManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__ui_state_manager_8cs_source_1l00008">8</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
+Definition at line <link linkend="__ui_state_manager_8cs_source_1l00012">12</link> of file <link linkend="__ui_state_manager_8cs_source">UiStateManager.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

@@ -5,13 +5,13 @@
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__combat_state_8gen_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>Dojo;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>Dojo.Torii;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>Newtonsoft.Json.Linq;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>SimpleGraphQL;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>static&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_games_data_model">GamesDataModel</link>;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>Newtonsoft.Json.Linq;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>SimpleGraphQL;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer_1_1_models">LogicLayer.Models</link>;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer_1_1_query">LogicLayer.Query</link>;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00011"/>00011 <emphasis role="keyword">using&#32;</emphasis><link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>&#32;=&#32;Dojo.Starknet.Enum;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00012"/>00012 
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00013"/>00013 <emphasis role="comment">//&#32;Type&#32;definition&#32;for&#32;`blob_arena::models::combat::Phase`&#32;enum</emphasis>
@@ -71,28 +71,28 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00069"/>00069 
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;GameStatus&#32;SetStatusInMapping(CombatState&#32;gameState)
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;GamesDataModel.GameStatus&#32;SetStatusInMapping(CombatState&#32;gameState)
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_gameStatusDict.ContainsKey(gameState.id.Hex()))
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(GamesDataModel._gameStatusDict.ContainsKey(gameState.id.Hex()))
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;_gameStatusDict[gameState.id.Hex()];&#32;&#32;<emphasis role="comment">//if&#32;the&#32;state&#32;is&#32;either&#32;lobby&#32;game&#32;ended&#32;or&#32;exited&#32;then&#32;early&#32;return</emphasis>
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;GamesDataModel._gameStatusDict[gameState.id.Hex()];&#32;&#32;<emphasis role="comment">//if&#32;the&#32;state&#32;is&#32;either&#32;lobby&#32;game&#32;ended&#32;or&#32;exited&#32;then&#32;early&#32;return</emphasis>
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00075"/>00075 
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(state)
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GameStatus.Exited:
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;GamesDataModel.GameStatus.Exited:
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;state;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00082"/>00082 
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gameState.phase&#32;is&#32;Phase.Ended)
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateGameStatus(gameState.id.Hex(),&#32;GameStatus.Ended);
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GameStatus.Ended;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GamesDataModel.UpdateGameStatus(gameState.id.Hex(),&#32;GamesDataModel.GameStatus.Ended);
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GamesDataModel.GameStatus.Ended;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateGameStatus(gameState.id.Hex(),&#32;GameStatus.Game);
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GameStatus.Game;
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GamesDataModel.UpdateGameStatus(gameState.id.Hex(),&#32;GamesDataModel.GameStatus.Game);
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GamesDataModel.GameStatus.Game;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00094"/>00094 
@@ -138,7 +138,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00134"/>00134 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00135"/>00135 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00136"/>00136 
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>CombatStateDataQuery&#32;:&#32;<link linkend="_interface_logic_layer_1_1_i_data">IData</link>
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>CombatStateDataQuery&#32;:&#32;<link linkend="_interface_logic_layer_1_1_query_1_1_i_data">IData</link>
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;{
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;__typename&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;block_number&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
@@ -196,12 +196,12 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;phase&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Phase.Ended(<emphasis role="keyword">new</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>(endedString));
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00194"/>00194 
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.ChoosenGameId&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.ChoosenGameId&#32;==&#32;<emphasis role="keyword">null</emphasis>)
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00199"/>00199 
-<anchor xml:id="__combat_state_8gen_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_local_data_model">LocalDataModel</link>.ChoosenGameId&#32;!=&#32;<emphasis role="keywordtype">id</emphasis>)
+<anchor xml:id="__combat_state_8gen_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.ChoosenGameId&#32;!=&#32;<emphasis role="keywordtype">id</emphasis>)
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
 <anchor xml:id="__combat_state_8gen_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}

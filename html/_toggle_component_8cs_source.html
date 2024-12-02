@@ -99,7 +99,7 @@ $(function(){initNavTree('_toggle_component_8cs_source.html',''); initResizable(
   <div class="headertitle"><div class="title">ToggleComponent.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_toggle_component_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_system.html">System</a>;</div>
+<a href="_toggle_component_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_blobert_arena_1_1_theme_manager.html">BlobertArena.ThemeManager</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.Events;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.UI;</div>
@@ -109,7 +109,7 @@ $(function(){initNavTree('_toggle_component_8cs_source.html',''); initResizable(
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> isOn = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    [SerializeField] <span class="keyword">private</span> Image targetImage;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">private</span> <a class="code hl_class" href="class_toggle_skin_component.html">ToggleSkinComponent</a> _toggleSkinComponent;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">private</span> <a class="code hl_class" href="class_blobert_arena_1_1_theme_manager_1_1_toggle_skin_component.html">ToggleSkinComponent</a> _toggleSkinComponent;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [Space(30)]</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    [Header(<span class="stringliteral">&quot;Default sprite&quot;</span>)]</div>
@@ -138,7 +138,7 @@ $(function(){initNavTree('_toggle_component_8cs_source.html',''); initResizable(
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        _toggleSkinComponent = gameObject.GetComponent&lt;<a class="code hl_class" href="class_toggle_skin_component.html">ToggleSkinComponent</a>&gt;();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        _toggleSkinComponent = gameObject.GetComponent&lt;<a class="code hl_class" href="class_blobert_arena_1_1_theme_manager_1_1_toggle_skin_component.html">ToggleSkinComponent</a>&gt;();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> (targetImage == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            targetImage = GetComponent&lt;Image&gt;();</div>
@@ -196,14 +196,14 @@ $(function(){initNavTree('_toggle_component_8cs_source.html',''); initResizable(
 </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 </div>
+<div class="ttc" id="aclass_blobert_arena_1_1_theme_manager_1_1_toggle_skin_component_html"><div class="ttname"><a href="class_blobert_arena_1_1_theme_manager_1_1_toggle_skin_component.html">BlobertArena.ThemeManager.ToggleSkinComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_toggle_skin_component_8cs_source.html#l00008">ToggleSkinComponent.cs:9</a></div></div>
 <div class="ttc" id="aclass_toggle_component_html"><div class="ttname"><a href="class_toggle_component.html">ToggleComponent</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">ToggleComponent.cs:7</a></div></div>
 <div class="ttc" id="aclass_toggle_component_html_a1e1bdcaa860ca6acc300ca60bcc47a82"><div class="ttname"><a href="class_toggle_component.html#a1e1bdcaa860ca6acc300ca60bcc47a82">ToggleComponent.OnSkinChange</a></div><div class="ttdeci">void OnSkinChange()</div><div class="ttdef"><b>Definition</b> <a href="#l00083">ToggleComponent.cs:83</a></div></div>
 <div class="ttc" id="aclass_toggle_component_html_a3229fb93f121b7f8485f2827b9263403"><div class="ttname"><a href="class_toggle_component.html#a3229fb93f121b7f8485f2827b9263403">ToggleComponent.SetToggleState</a></div><div class="ttdeci">void SetToggleState(bool state)</div><div class="ttdef"><b>Definition</b> <a href="#l00073">ToggleComponent.cs:73</a></div></div>
 <div class="ttc" id="aclass_toggle_component_html_a8afc581c9a60bb6f2a48dbb1299eb956"><div class="ttname"><a href="class_toggle_component.html#a8afc581c9a60bb6f2a48dbb1299eb956">ToggleComponent.defaultSprite</a></div><div class="ttdeci">Sprite defaultSprite</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ToggleComponent.cs:14</a></div></div>
 <div class="ttc" id="aclass_toggle_component_html_a8f113949d342477339bdd27336b4bbd8"><div class="ttname"><a href="class_toggle_component.html#a8f113949d342477339bdd27336b4bbd8">ToggleComponent.OnPointerClick</a></div><div class="ttdeci">void OnPointerClick()</div><div class="ttdef"><b>Definition</b> <a href="#l00051">ToggleComponent.cs:51</a></div></div>
 <div class="ttc" id="aclass_toggle_component_html_ad6cb330d5868032b97f4d368b9661198"><div class="ttname"><a href="class_toggle_component.html#ad6cb330d5868032b97f4d368b9661198">ToggleComponent.clickedSprite</a></div><div class="ttdeci">Sprite clickedSprite</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ToggleComponent.cs:19</a></div></div>
-<div class="ttc" id="aclass_toggle_skin_component_html"><div class="ttname"><a href="class_toggle_skin_component.html">ToggleSkinComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_toggle_skin_component_8cs_source.html#l00006">ToggleSkinComponent.cs:7</a></div></div>
-<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_blobert_arena_1_1_theme_manager_html"><div class="ttname"><a href="namespace_blobert_arena_1_1_theme_manager.html">BlobertArena.ThemeManager</a></div><div class="ttdef"><b>Definition</b> <a href="_themes_manager_8cs_source.html#l00006">ThemesManager.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

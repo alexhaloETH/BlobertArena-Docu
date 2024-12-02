@@ -33,7 +33,7 @@ Public Member Functions inherited from <link linkend="_interface_i_lobby_list_el
 Properties inherited from <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00008">8</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
+Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00011">11</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -42,7 +42,7 @@ Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs
 <indexterm><primary>GoToGameScreen</primary><secondary>OnGoingBattleLobbyListPageElemenet</secondary></indexterm>
 <indexterm><primary>OnGoingBattleLobbyListPageElemenet</primary><secondary>GoToGameScreen</secondary></indexterm>
 <para><computeroutput>void OnGoingBattleLobbyListPageElemenet.GoToGameScreen ( )</computeroutput></para><para>
-Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00075">75</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
+Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00078">78</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
 </section>
 <anchor xml:id="_class_on_going_battle_lobby_list_page_elemenet_1aeb00fdef92c68add09309551cabcd817"/><section>
     <title>InitializeElement()</title>
@@ -51,7 +51,7 @@ Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs
 <para><computeroutput>async void OnGoingBattleLobbyListPageElemenet.InitializeElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> battleId, <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> parent)</computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a951b1b770ff776454bf9e8a4c74abd54">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00035">35</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
+Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00038">38</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -63,7 +63,7 @@ Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> OnGoingBattleLobbyListPageElemenet.challengeId<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a919833e81c2d7531dfe6df14cdf88d80">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00033">33</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
+Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00036">36</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
 </section>
 <anchor xml:id="_class_on_going_battle_lobby_list_page_elemenet_1a1d4af35d91a1e777caab9a71deda1d60"/><section>
     <title>parentPage</title>
@@ -72,7 +72,7 @@ Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs
 <para><computeroutput><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> OnGoingBattleLobbyListPageElemenet.parentPage<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1abf08a8c2cd56cf491210634c439899cd">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00032">32</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
+Definition at line <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source_1l00035">35</link> of file <link linkend="__on_going_battle_lobby_list_page_elemenet_8cs_source">OnGoingBattleLobbyListPageElemenet.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

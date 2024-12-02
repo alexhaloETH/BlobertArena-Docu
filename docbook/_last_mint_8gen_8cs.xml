@@ -6,6 +6,8 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_last_mint">LastMint</link></para>
+
+<para>Model from the backend thats stores the timestamp of the last mint of the specific player. </para>
 </listitem>
             <listitem><para>class <link linkend="_class_last_mint_1_1_last_mint_data_query">LastMint.LastMintDataQuery</link></para>
 </listitem>

@@ -5,7 +5,16 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_class_skin_manager">SkinManager</link></para>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager">BlobertArena.ThemeManager.SkinManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena">BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager">BlobertArena.ThemeManager</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

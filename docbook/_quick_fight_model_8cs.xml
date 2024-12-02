@@ -5,7 +5,7 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <emphasis role="strong">LogicLayer.QuickFightModel</emphasis></para>
+            <listitem><para>class <emphasis role="strong">LogicLayer.BackEndServer.QuickFightModel</emphasis></para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -13,6 +13,8 @@
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer_1_1_back_end_server">LogicLayer.BackEndServer</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

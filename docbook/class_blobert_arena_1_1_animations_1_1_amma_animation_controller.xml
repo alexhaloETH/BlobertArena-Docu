@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller" xml:lang="en-US">
+<title>BlobertArena.Animations.AmmaAnimationController Class Reference</title>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.Animations.AmmaAnimationController:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_animations_1_1_amma_animation_controller.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> { <?linebreak?><link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a06c919e11c81eb0d34c9153103632ab3">Attack1B</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ae65544dbb14f269afb59a69d15b66476">Attack1F</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a5cdb9754a2740e00e43638884a1ff709">Attack2B</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a443856c72b4c6b01b0e9a7a4b0b4e803">Attack2F</link>
+, <?linebreak?><link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a0bf4855c2653c707e031cca4290f16b4">Attack3B</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a413ffe5b9fc93a98b7a232a6d2bedde7">Attack3F</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a9dee6a0a9bc9500b027fc82f6af4a8be">Attack4B</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ae22bb5aa0226c61a5909ef0f71278636">Attack4F</link>
+, <?linebreak?><link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a82a7931f43e4206d8f48923fa7cafaa9">IdleFL</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a504b9374d334bf7635c2d29495a1b611">IdleFR</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ad350cb1a1bcce1117b0fa17798740bcc">IdleB</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323aeb79bdf9136d9d6160aaa99d29115b9b">IdleNFL</link>
+, <?linebreak?><link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ace9f3c995823092d960bab962bcfff15">IdleNFR</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323aa8461f90ea18ca0b7130ce9a2d167a17">hitB</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ae23322fdc99501ba7111c9be9fb7a35b">HitF</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a1dbf4a11ce9a0ad374488eebd4719458">WinningL</link>
+, <?linebreak?><link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a3b62bac86048541cad76756aff15c38a">WinningR</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a64195a1578ec76283a9fb9eccff766a2">WinningLWB</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a3768e786f66a5abdd6fd128e08517bac">WinningRWB</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a0a1a449c6d2bc638d645d1d3f10ac2c1">LoosingLWB</link>
+, <?linebreak?><link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a7dccf01efe0700d9c1d507d0e1dffef6">LoosingRWB</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a5fa580646d9e0048656437750a33a8c6">DyingB</link>
+, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323aa7b3f130dbac03607e929f01aa162515">DyingF</link>
+ }</para>
+
+<para>Enumeration of AMMA animation states. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static AmmaAnimationData <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1ab29f312341f6af609fda04442126852a">GetFighterScriptableObject</link> (int fighterIndex)</para>
+
+<para>Retrieves the AmmaAnimationData instance for the specified fighter index. </para>
+</listitem>
+            <listitem><para>static List&lt; Sprite &gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1aec7ca450952f247aa40e9abadf83b7e1">GetAnimationSprites</link> (int fighterId, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> animationState)</para>
+
+<para>Retrieves the list of animation sprites for the specified fighter and animation state. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">CharacterAnimationManager.TextureFunctionInput</link> <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a9412d8d6cc457701e5ff8995f3ab2d25">GetTextureFunctionInput</link> (int fighterId, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> animationState)</para>
+
+<para>Retrieves the texture function input for the specified fighter and animation state. </para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1abd50c5bcaf80fb30784c9f832003d702">GetAttackNameForFighter</link> (int fighterId, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> animationState)</para>
+
+<para>Retrieves the attack name for the specified fighter and animation state. </para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a72a237c0e469115ade29280c6218497b">CheckAttackName</link> (string attackName, int fighterId)</para>
+
+<para>Checks the attack name for duplicates and appends the fighter ID if necessary. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a662f74c04cff5b92e5b48faf6edc433e">CheckAnimationValidity</link> ()</para>
+
+<para>Checks the validity of the animations. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static readonly int <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a4b10f2a5f4d1fee89893beaa04a7b040">AmountOfLayers</link> = 1</para>
+</listitem>
+            <listitem><para>static readonly string[] <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1ae43a3b53bf90fbe0b696a0d15ea3484b">NameOfLayers</link> = new[] { &quot;Weapon&quot; }</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8341e49afb5686bddeb6ac4dd3e200d5">QuickIdleL</link> = 8</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a72159c0c8b4329ab0aa98e1578315d72">QuickIdleR</link> = 9</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a93895c01379cd7f030e81066b805e46b">QuickIdleNoMaskL</link> = 11</para>
+</listitem>
+            <listitem><para>static readonly int <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a159b1d579976d25c20ec3702a459a53e">QuickIdleNoMaskR</link> = 12</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static List&lt; AmmaAnimationData &gt; <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a5d8275b6b30a2bf7e82c84e4bd571359">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>List of AmmaAnimationData instances. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00008">8</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323"/><section>
+    <title>AMMAAnimationState</title>
+<indexterm><primary>AMMAAnimationState</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>AMMAAnimationState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">BlobertArena.Animations.AmmaAnimationController.AMMAAnimationState</link></computeroutput></para><para>
+
+<para>Enumeration of AMMA animation states. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Attack1B</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack1B</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a06c919e11c81eb0d34c9153103632ab3"/>Attack1B</entry><entry></entry></row><row><entry><indexterm><primary>Attack1F</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack1F</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ae65544dbb14f269afb59a69d15b66476"/>Attack1F</entry><entry></entry></row><row><entry><indexterm><primary>Attack2B</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack2B</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a5cdb9754a2740e00e43638884a1ff709"/>Attack2B</entry><entry></entry></row><row><entry><indexterm><primary>Attack2F</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack2F</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a443856c72b4c6b01b0e9a7a4b0b4e803"/>Attack2F</entry><entry></entry></row><row><entry><indexterm><primary>Attack3B</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack3B</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a0bf4855c2653c707e031cca4290f16b4"/>Attack3B</entry><entry></entry></row><row><entry><indexterm><primary>Attack3F</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack3F</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a413ffe5b9fc93a98b7a232a6d2bedde7"/>Attack3F</entry><entry></entry></row><row><entry><indexterm><primary>Attack4B</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack4B</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a9dee6a0a9bc9500b027fc82f6af4a8be"/>Attack4B</entry><entry></entry></row><row><entry><indexterm><primary>Attack4F</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Attack4F</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ae22bb5aa0226c61a5909ef0f71278636"/>Attack4F</entry><entry></entry></row><row><entry><indexterm><primary>IdleFL</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>IdleFL</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a82a7931f43e4206d8f48923fa7cafaa9"/>IdleFL</entry><entry></entry></row><row><entry><indexterm><primary>IdleFR</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>IdleFR</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a504b9374d334bf7635c2d29495a1b611"/>IdleFR</entry><entry></entry></row><row><entry><indexterm><primary>IdleB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>IdleB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ad350cb1a1bcce1117b0fa17798740bcc"/>IdleB</entry><entry></entry></row><row><entry><indexterm><primary>IdleNFL</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>IdleNFL</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323aeb79bdf9136d9d6160aaa99d29115b9b"/>IdleNFL</entry><entry></entry></row><row><entry><indexterm><primary>IdleNFR</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>IdleNFR</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ace9f3c995823092d960bab962bcfff15"/>IdleNFR</entry><entry></entry></row><row><entry><indexterm><primary>hitB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>hitB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323aa8461f90ea18ca0b7130ce9a2d167a17"/>hitB</entry><entry></entry></row><row><entry><indexterm><primary>HitF</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>HitF</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323ae23322fdc99501ba7111c9be9fb7a35b"/>HitF</entry><entry></entry></row><row><entry><indexterm><primary>WinningL</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>WinningL</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a1dbf4a11ce9a0ad374488eebd4719458"/>WinningL</entry><entry></entry></row><row><entry><indexterm><primary>WinningR</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>WinningR</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a3b62bac86048541cad76756aff15c38a"/>WinningR</entry><entry></entry></row><row><entry><indexterm><primary>WinningLWB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>WinningLWB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a64195a1578ec76283a9fb9eccff766a2"/>WinningLWB</entry><entry></entry></row><row><entry><indexterm><primary>WinningRWB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>WinningRWB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a3768e786f66a5abdd6fd128e08517bac"/>WinningRWB</entry><entry></entry></row><row><entry><indexterm><primary>LoosingLWB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>LoosingLWB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a0a1a449c6d2bc638d645d1d3f10ac2c1"/>LoosingLWB</entry><entry></entry></row><row><entry><indexterm><primary>LoosingRWB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>LoosingRWB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a7dccf01efe0700d9c1d507d0e1dffef6"/>LoosingRWB</entry><entry></entry></row><row><entry><indexterm><primary>DyingB</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>DyingB</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323a5fa580646d9e0048656437750a33a8c6"/>DyingB</entry><entry></entry></row><row><entry><indexterm><primary>DyingF</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>DyingF</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323aa7b3f130dbac03607e929f01aa162515"/>DyingF</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00026">26</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a662f74c04cff5b92e5b48faf6edc433e"/><section>
+    <title>CheckAnimationValidity()</title>
+<indexterm><primary>CheckAnimationValidity</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>CheckAnimationValidity</secondary></indexterm>
+<para><computeroutput>static void BlobertArena.Animations.AmmaAnimationController.CheckAnimationValidity ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Checks the validity of the animations. </para>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00266">266</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a72a237c0e469115ade29280c6218497b"/><section>
+    <title>CheckAttackName()</title>
+<indexterm><primary>CheckAttackName</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>CheckAttackName</secondary></indexterm>
+<para><computeroutput>static string BlobertArena.Animations.AmmaAnimationController.CheckAttackName (string attackName, int fighterId)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Checks the attack name for duplicates and appends the fighter ID if necessary. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>attackName</entry><entry>
+<para>The attack name.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>fighterId</entry><entry>
+<para>The ID of the fighter.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The modified attack name.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00245">245</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1aec7ca450952f247aa40e9abadf83b7e1"/><section>
+    <title>GetAnimationSprites()</title>
+<indexterm><primary>GetAnimationSprites</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>GetAnimationSprites</secondary></indexterm>
+<para><computeroutput>static List&lt; Sprite &gt; BlobertArena.Animations.AmmaAnimationController.GetAnimationSprites (int fighterId, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> animationState)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the list of animation sprites for the specified fighter and animation state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fighterId</entry><entry>
+<para>The ID of the fighter.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>animationState</entry><entry>
+<para>The animation state.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The list of animation sprites.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00090">90</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1abd50c5bcaf80fb30784c9f832003d702"/><section>
+    <title>GetAttackNameForFighter()</title>
+<indexterm><primary>GetAttackNameForFighter</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>GetAttackNameForFighter</secondary></indexterm>
+<para><computeroutput>static string BlobertArena.Animations.AmmaAnimationController.GetAttackNameForFighter (int fighterId, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> animationState)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the attack name for the specified fighter and animation state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fighterId</entry><entry>
+<para>The ID of the fighter.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>animationState</entry><entry>
+<para>The animation state.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The attack name.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00158">158</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1ab29f312341f6af609fda04442126852a"/><section>
+    <title>GetFighterScriptableObject()</title>
+<indexterm><primary>GetFighterScriptableObject</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>GetFighterScriptableObject</secondary></indexterm>
+<para><computeroutput>static AmmaAnimationData BlobertArena.Animations.AmmaAnimationController.GetFighterScriptableObject (int fighterIndex)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the AmmaAnimationData instance for the specified fighter index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fighterIndex</entry><entry>
+<para>The index of the fighter.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The AmmaAnimationData instance.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00079">79</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a9412d8d6cc457701e5ff8995f3ab2d25"/><section>
+    <title>GetTextureFunctionInput()</title>
+<indexterm><primary>GetTextureFunctionInput</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>GetTextureFunctionInput</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">CharacterAnimationManager.TextureFunctionInput</link> BlobertArena.Animations.AmmaAnimationController.GetTextureFunctionInput (int fighterId, <link linkend="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8fc4c7f72ace9ff050379fe422633323">AMMAAnimationState</link> animationState)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the texture function input for the specified fighter and animation state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fighterId</entry><entry>
+<para>The ID of the fighter.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>animationState</entry><entry>
+<para>The animation state.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The texture function input.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00107">107</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a4b10f2a5f4d1fee89893beaa04a7b040"/><section>
+    <title>AmountOfLayers</title>
+<indexterm><primary>AmountOfLayers</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>AmountOfLayers</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.AmmaAnimationController.AmountOfLayers = 1<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00012">12</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1ae43a3b53bf90fbe0b696a0d15ea3484b"/><section>
+    <title>NameOfLayers</title>
+<indexterm><primary>NameOfLayers</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>NameOfLayers</secondary></indexterm>
+<para><computeroutput>readonly string [] BlobertArena.Animations.AmmaAnimationController.NameOfLayers = new[] { &quot;Weapon&quot; }<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00013">13</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a8341e49afb5686bddeb6ac4dd3e200d5"/><section>
+    <title>QuickIdleL</title>
+<indexterm><primary>QuickIdleL</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>QuickIdleL</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.AmmaAnimationController.QuickIdleL = 8<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00015">15</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a93895c01379cd7f030e81066b805e46b"/><section>
+    <title>QuickIdleNoMaskL</title>
+<indexterm><primary>QuickIdleNoMaskL</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>QuickIdleNoMaskL</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.AmmaAnimationController.QuickIdleNoMaskL = 11<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00018">18</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a159b1d579976d25c20ec3702a459a53e"/><section>
+    <title>QuickIdleNoMaskR</title>
+<indexterm><primary>QuickIdleNoMaskR</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>QuickIdleNoMaskR</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.AmmaAnimationController.QuickIdleNoMaskR = 12<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00019">19</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a72159c0c8b4329ab0aa98e1578315d72"/><section>
+    <title>QuickIdleR</title>
+<indexterm><primary>QuickIdleR</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>QuickIdleR</secondary></indexterm>
+<para><computeroutput>readonly int BlobertArena.Animations.AmmaAnimationController.QuickIdleR = 9<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00016">16</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_animations_1_1_amma_animation_controller_1a5d8275b6b30a2bf7e82c84e4bd571359"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>BlobertArena.Animations.AmmaAnimationController</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.AmmaAnimationController</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput>List&lt;AmmaAnimationData&gt; BlobertArena.Animations.AmmaAnimationController.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>List of AmmaAnimationData instances. </para>
+</para>
+<para>
+Definition at line <link linkend="__amma_animation_controller_8cs_source_1l00056">56</link> of file <link linkend="__amma_animation_controller_8cs_source">AmmaAnimationController.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__amma_animation_controller_8cs">AmmaAnimationController.cs</link></section>
+</section>

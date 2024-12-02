@@ -27,7 +27,7 @@
 
 <para>Manager class for the cursor and the virtual cursor. </para>
 <para>
-Definition at line <link linkend="__cursor_manager_8cs_source_1l00015">15</link> of file <link linkend="__cursor_manager_8cs_source">CursorManager.cs</link>.</para>
+Definition at line <link linkend="__cursor_manager_8cs_source_1l00016">16</link> of file <link linkend="__cursor_manager_8cs_source">CursorManager.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -36,7 +36,7 @@ Definition at line <link linkend="__cursor_manager_8cs_source_1l00015">15</link>
 <indexterm><primary>OnCursorHover</primary><secondary>CursorManager</secondary></indexterm>
 <indexterm><primary>CursorManager</primary><secondary>OnCursorHover</secondary></indexterm>
 <para><computeroutput>static void CursorManager.OnCursorHover (bool hovering)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__cursor_manager_8cs_source_1l00163">163</link> of file <link linkend="__cursor_manager_8cs_source">CursorManager.cs</link>.</para>
+Definition at line <link linkend="__cursor_manager_8cs_source_1l00161">161</link> of file <link linkend="__cursor_manager_8cs_source">CursorManager.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

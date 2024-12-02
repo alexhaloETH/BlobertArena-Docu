@@ -53,7 +53,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00017">17</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00018">18</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -70,21 +70,21 @@ Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00017">17</
 <indexterm><primary>collection_address</primary><secondary>CombatantInfo</secondary></indexterm>
 <indexterm><primary>CombatantInfo</primary><secondary>collection_address</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantInfo.collection_address</computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00029">29</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00030">30</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1aa897b47b68a33482064ac9a75ef63c77"/><section>
     <title>combat_id</title>
 <indexterm><primary>combat_id</primary><secondary>CombatantInfo</secondary></indexterm>
 <indexterm><primary>CombatantInfo</primary><secondary>combat_id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantInfo.combat_id</computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00023">23</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00024">24</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1ab0dd2436accf35ab4a3489c5cd2daf50"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>CombatantInfo</secondary></indexterm>
 <indexterm><primary>CombatantInfo</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string CombatantInfo.GraphQlHeader = &quot;blobArenaCombatantInfoModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00070">70</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00071">71</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1a24b46342acc61b5d2544104f60fe9840"/><section>
     <title>GraphQlQueryFull</title>
@@ -112,7 +112,7 @@ Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00070">70</
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00038">38</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00039">39</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1aba47a4ce8eabd42f83b92830ea0fdd05"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -128,28 +128,28 @@ Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00038">38</
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00060">60</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00061">61</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1a80bd435a836286a2c568a9ec83e3a6be"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>CombatantInfo</secondary></indexterm>
 <indexterm><primary>CombatantInfo</primary><secondary>id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantInfo.id</computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00020">20</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00021">21</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1a57f623f5329ceffc4179d89b78566f6d"/><section>
     <title>player</title>
 <indexterm><primary>player</primary><secondary>CombatantInfo</secondary></indexterm>
 <indexterm><primary>CombatantInfo</primary><secondary>player</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantInfo.player</computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00026">26</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00027">27</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1a17321e144d5fee3990c7dcb907900f1d"/><section>
     <title>token_id</title>
 <indexterm><primary>token_id</primary><secondary>CombatantInfo</secondary></indexterm>
 <indexterm><primary>CombatantInfo</primary><secondary>token_id</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_u256">U256</link> CombatantInfo.token_id</computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00032">32</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00033">33</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

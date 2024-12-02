@@ -9,7 +9,7 @@ var searchData=
   ['rescindinvitestruct_6',['RescindInviteStruct',['../struct_pvp_actions_contract_1_1_rescind_invite_struct.html#ab4033a1264701a05db08cb70e91237af',1,'PvpActionsContract::RescindInviteStruct']]],
   ['rescindresponsestruct_7',['RescindResponseStruct',['../struct_pvp_actions_contract_1_1_rescind_response_struct.html#a44c148f7233bcecefaf415a840d8f970',1,'PvpActionsContract::RescindResponseStruct']]],
   ['resetbubble_8',['ResetBubble',['../class_speach_bubble.html#a1089ce1202165d1683d19d121738ab19',1,'SpeachBubble']]],
-  ['resetview_9',['ResetView',['../class_blob_data_manager_blob_dex_component.html#a17da70430f259f9166685179faaf90f1',1,'BlobDataManagerBlobDexComponent']]],
+  ['resetview_9',['ResetView',['../class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component.html#ae4e262b1d4efad420159a594c55e8659',1,'BlobertArena::BlobDex::BlobDataManagerBlobDexComponent']]],
   ['respondinvitestruct_10',['RespondInviteStruct',['../struct_pvp_actions_contract_1_1_respond_invite_struct.html#a3439ae6a29357dec423817db03707207',1,'PvpActionsContract::RespondInviteStruct']]],
   ['revealattackstruct_11',['RevealAttackStruct',['../struct_pvp_actions_contract_1_1_reveal_attack_struct.html#a0164421e4df3d664f29424a5950a26cc',1,'PvpActionsContract::RevealAttackStruct']]],
   ['revokeinvitecall_12',['RevokeInviteCall',['../class_inv_sent_on_going_lobby_list_page_element.html#aa5810fabe541b8463166a8c8524ba2a7',1,'InvSentOnGoingLobbyListPageElement']]],

@@ -49,7 +49,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00009">9</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00010">10</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -58,7 +58,7 @@ Definition at line <link linkend="__item_8gen_8cs_source_1l00009">9</link> of fi
 <indexterm><primary>GetStatsManually</primary><secondary>Item</secondary></indexterm>
 <indexterm><primary>Item</primary><secondary>GetStatsManually</secondary></indexterm>
 <para><computeroutput>async Task Item.GetStatsManually ( )</computeroutput></para><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00027">27</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00028">28</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -68,14 +68,14 @@ Definition at line <link linkend="__item_8gen_8cs_source_1l00027">27</link> of f
 <indexterm><primary>dojoName</primary><secondary>Item</secondary></indexterm>
 <indexterm><primary>Item</primary><secondary>dojoName</secondary></indexterm>
 <para><computeroutput>string Item.dojoName</computeroutput></para><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00015">15</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00016">16</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_item_1a0da8e92fbdd8ec3dd5f25af2382d3215"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>Item</secondary></indexterm>
 <indexterm><primary>Item</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string Item.GraphQlHeader = &quot;blobArenaItemModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00116">116</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00117">117</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_item_1a5f5efb7ddaa3a2eacd57e4bf9603dfd1"/><section>
     <title>GraphQlQueryFull</title>
@@ -106,7 +106,7 @@ Definition at line <link linkend="__item_8gen_8cs_source_1l00116">116</link> of 
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00078">78</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00079">79</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_item_1ad2353dcff6e4f43c691adc7dba3e3b10"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -125,21 +125,21 @@ Definition at line <link linkend="__item_8gen_8cs_source_1l00078">78</link> of f
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00103">103</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00104">104</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_item_1a7c4b7d43a200cc96dff7dc3280c13365"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>Item</secondary></indexterm>
 <indexterm><primary>Item</primary><secondary>id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> Item.id</computeroutput></para><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00012">12</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00013">13</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_item_1aae9c470520927936de6bdc5f54da7166"/><section>
     <title>stats</title>
 <indexterm><primary>stats</primary><secondary>Item</secondary></indexterm>
 <indexterm><primary>Item</primary><secondary>stats</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_t_stats">TStats</link> Item.stats</computeroutput></para><para>
-Definition at line <link linkend="__item_8gen_8cs_source_1l00018">18</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
+Definition at line <link linkend="__item_8gen_8cs_source_1l00019">19</link> of file <link linkend="__item_8gen_8cs_source">Item.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

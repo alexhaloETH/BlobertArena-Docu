@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component" xml:lang="en-US">
+<title>BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent Class Reference</title>
+<indexterm><primary>BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component_1a0d9abffa3c9f6b54878c2bc788d2790d">InitilizeComponentBlobert</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component_1aa9371ab71e9a4caeb22f2f988165c5f6">InitilizeComponentForCombatant</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source_1l00007">7</link> of file <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source">StandardViewNoAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component_1a0d9abffa3c9f6b54878c2bc788d2790d"/><section>
+    <title>InitilizeComponentBlobert()</title>
+<indexterm><primary>InitilizeComponentBlobert</primary><secondary>BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent</primary><secondary>InitilizeComponentBlobert</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent.InitilizeComponentBlobert (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</computeroutput></para><para>
+Definition at line <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source_1l00012">12</link> of file <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source">StandardViewNoAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component_1aa9371ab71e9a4caeb22f2f988165c5f6"/><section>
+    <title>InitilizeComponentForCombatant()</title>
+<indexterm><primary>InitilizeComponentForCombatant</primary><secondary>BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent</primary><secondary>InitilizeComponentForCombatant</secondary></indexterm>
+<para><computeroutput>async void BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent.InitilizeComponentForCombatant (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> combatantId)</computeroutput></para><para>
+Definition at line <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source_1l00022">22</link> of file <link linkend="__standard_view_no_attacks_blob_dex_component_8cs_source">StandardViewNoAttacksBlobDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__standard_view_no_attacks_blob_dex_component_8cs">StandardViewNoAttacksBlobDexComponent.cs</link></section>
+</section>

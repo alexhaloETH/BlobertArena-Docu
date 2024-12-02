@@ -42,7 +42,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00008">8</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00009">9</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -51,14 +51,14 @@ Definition at line <link linkend="__has_attack_8cs_source_1l00008">8</link> of f
 <indexterm><primary>attack_id</primary><secondary>HasAttack</secondary></indexterm>
 <indexterm><primary>HasAttack</primary><secondary>attack_id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> HasAttack.attack_id</computeroutput></para><para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00014">14</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00015">15</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <anchor xml:id="_class_has_attack_1a2b9e0c0ab908bb9fab34d42f0af10a86"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>HasAttack</secondary></indexterm>
 <indexterm><primary>HasAttack</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string HasAttack.GraphQlHeader = &quot;blobArenaHasAttackModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00062">62</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00063">63</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <anchor xml:id="_class_has_attack_1aa67f1e7e3613055a70ce0835ce25d178"/><section>
     <title>GraphQlQueryFull</title>
@@ -84,7 +84,7 @@ Definition at line <link linkend="__has_attack_8cs_source_1l00062">62</link> of 
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00034">34</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00035">35</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <anchor xml:id="_class_has_attack_1a5a877b29d3feebdefe719558a3f25799"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -98,21 +98,21 @@ Definition at line <link linkend="__has_attack_8cs_source_1l00034">34</link> of 
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00054">54</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00055">55</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <anchor xml:id="_class_has_attack_1aae7b459715223ac5ced0847d331330f5"/><section>
     <title>has</title>
 <indexterm><primary>has</primary><secondary>HasAttack</secondary></indexterm>
 <indexterm><primary>HasAttack</primary><secondary>has</secondary></indexterm>
 <para><computeroutput>bool HasAttack.has</computeroutput></para><para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00017">17</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00018">18</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <anchor xml:id="_class_has_attack_1a7b8dc0be182d6ac74c8b75b7c8e754d5"/><section>
     <title>item_id</title>
 <indexterm><primary>item_id</primary><secondary>HasAttack</secondary></indexterm>
 <indexterm><primary>HasAttack</primary><secondary>item_id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> HasAttack.item_id</computeroutput></para><para>
-Definition at line <link linkend="__has_attack_8cs_source_1l00011">11</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
+Definition at line <link linkend="__has_attack_8cs_source_1l00012">12</link> of file <link linkend="__has_attack_8cs_source">HasAttack.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

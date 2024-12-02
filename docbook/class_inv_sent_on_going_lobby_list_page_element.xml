@@ -33,7 +33,7 @@ Public Member Functions inherited from <link linkend="_interface_i_lobby_list_el
 Properties inherited from <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00008">8</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00012">12</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -44,14 +44,14 @@ Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8c
 <para><computeroutput>async void InvSentOnGoingLobbyListPageElement.InitializeElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> battleId, <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> parent)</computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a951b1b770ff776454bf9e8a4c74abd54">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00031">31</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00035">35</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_inv_sent_on_going_lobby_list_page_element_1aa5810fabe541b8463166a8c8524ba2a7"/><section>
     <title>RevokeInviteCall()</title>
 <indexterm><primary>RevokeInviteCall</primary><secondary>InvSentOnGoingLobbyListPageElement</secondary></indexterm>
 <indexterm><primary>InvSentOnGoingLobbyListPageElement</primary><secondary>RevokeInviteCall</secondary></indexterm>
 <para><computeroutput>void InvSentOnGoingLobbyListPageElement.RevokeInviteCall ( )</computeroutput></para><para>
-Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00079">79</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00083">83</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -63,7 +63,7 @@ Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8c
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> InvSentOnGoingLobbyListPageElement.challengeId<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a919833e81c2d7531dfe6df14cdf88d80">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00029">29</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00033">33</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_inv_sent_on_going_lobby_list_page_element_1abe48c0e9fd00f1683ad5a25c9accec5a"/><section>
     <title>parentPage</title>
@@ -72,7 +72,7 @@ Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8c
 <para><computeroutput><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> InvSentOnGoingLobbyListPageElement.parentPage<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1abf08a8c2cd56cf491210634c439899cd">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00028">28</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source_1l00032">32</link> of file <link linkend="__inv_sent_on_going_lobby_list_page_element_8cs_source">InvSentOnGoingLobbyListPageElement.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

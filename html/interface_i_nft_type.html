@@ -102,6 +102,9 @@ $(function(){initNavTree('interface_i_nft_type.html',''); initResizable(true); }
   <div class="headertitle"><div class="title">INftType Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defines the interface for NFT types, providing a blueprint for methods and properties to handle statistics, items, traits, ownership, and other NFT-related functionalities.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for INftType:</div>
 <div class="dyncontent">
@@ -115,35 +118,49 @@ Inheritance diagram for INftType:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2abc488b33cbb624a9c00fc6efe8b974" id="r_a2abc488b33cbb624a9c00fc6efe8b974"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_t_stats.html">TStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abc488b33cbb624a9c00fc6efe8b974">GetStats</a> ()</td></tr>
+<tr class="memdesc:a2abc488b33cbb624a9c00fc6efe8b974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stats associated with the NFT.  <br /></td></tr>
 <tr class="separator:a2abc488b33cbb624a9c00fc6efe8b974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bd25912127182da857a5e7224d5d489" id="r_a7bd25912127182da857a5e7224d5d489"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bd25912127182da857a5e7224d5d489">GetItems</a> ()</td></tr>
+<tr class="memdesc:a7bd25912127182da857a5e7224d5d489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the list of items associated with the NFT.  <br /></td></tr>
 <tr class="separator:a7bd25912127182da857a5e7224d5d489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea8d4c717f7660add2e3d5c3920fd41a" id="r_aea8d4c717f7660add2e3d5c3920fd41a"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, List&lt; Attack &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea8d4c717f7660add2e3d5c3920fd41a">GetAttackMapToTrait</a> ()</td></tr>
+<tr class="memdesc:aea8d4c717f7660add2e3d5c3920fd41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a mapping of traits to their associated attacks.  <br /></td></tr>
 <tr class="separator:aea8d4c717f7660add2e3d5c3920fd41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a042ec63cdfa6aa93bf8558bd9d1bc294" id="r_a042ec63cdfa6aa93bf8558bd9d1bc294"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="class_item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a042ec63cdfa6aa93bf8558bd9d1bc294">GetItemMapToTrait</a> ()</td></tr>
+<tr class="memdesc:a042ec63cdfa6aa93bf8558bd9d1bc294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a mapping of traits to their associated items.  <br /></td></tr>
 <tr class="separator:a042ec63cdfa6aa93bf8558bd9d1bc294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe085c5479f08c0ab55bad8027cda365" id="r_abe085c5479f08c0ab55bad8027cda365"><td class="memItemLeft" align="right" valign="top">TokenTrait&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe085c5479f08c0ab55bad8027cda365">GetTokenTrait</a> ()</td></tr>
+<tr class="memdesc:abe085c5479f08c0ab55bad8027cda365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the trait information of the token.  <br /></td></tr>
 <tr class="separator:abe085c5479f08c0ab55bad8027cda365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa7bc1d87ec6484c21c78e686a876a99" id="r_afa7bc1d87ec6484c21c78e686a876a99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_seed.html">Seed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa7bc1d87ec6484c21c78e686a876a99">GetSeed</a> ()</td></tr>
+<tr class="memdesc:afa7bc1d87ec6484c21c78e686a876a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the seed data for the NFT.  <br /></td></tr>
 <tr class="separator:afa7bc1d87ec6484c21c78e686a876a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64c18169831c3928f539756915454d38" id="r_a64c18169831c3928f539756915454d38"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c18169831c3928f539756915454d38">GetCustom</a> ()</td></tr>
+<tr class="memdesc:a64c18169831c3928f539756915454d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the custom byte value associated with the NFT.  <br /></td></tr>
 <tr class="separator:a64c18169831c3928f539756915454d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460575e5ee67460688b562300c8e75aa" id="r_a460575e5ee67460688b562300c8e75aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a460575e5ee67460688b562300c8e75aa">GetMaxHealth</a> ()</td></tr>
+<tr class="memdesc:a460575e5ee67460688b562300c8e75aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the maximum health value of the NFT.  <br /></td></tr>
 <tr class="separator:a460575e5ee67460688b562300c8e75aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b06e21a4892cbf5961568f4d118be3e" id="r_a8b06e21a4892cbf5961568f4d118be3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b06e21a4892cbf5961568f4d118be3e">GetOwner</a> ()</td></tr>
+<tr class="memdesc:a8b06e21a4892cbf5961568f4d118be3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the owner of the NFT as a FieldElement.  <br /></td></tr>
 <tr class="separator:a8b06e21a4892cbf5961568f4d118be3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85fb13e00c2fed0e17d74131e957924" id="r_ad85fb13e00c2fed0e17d74131e957924"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85fb13e00c2fed0e17d74131e957924">GetTokenId</a> ()</td></tr>
+<tr class="memdesc:ad85fb13e00c2fed0e17d74131e957924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the token ID of the NFT.  <br /></td></tr>
 <tr class="separator:ad85fb13e00c2fed0e17d74131e957924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64674a4b35f8d823646b4a804773eeb3" id="r_a64674a4b35f8d823646b4a804773eeb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64674a4b35f8d823646b4a804773eeb3">IsAddressOwner</a> (<a class="el" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a> user)</td></tr>
+<tr class="memdesc:a64674a4b35f8d823646b4a804773eeb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given address corresponds to the owner of the NFT.  <br /></td></tr>
 <tr class="separator:a64674a4b35f8d823646b4a804773eeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e8bce326427c4a3d7e35f69e7e7a5c" id="r_a38e8bce326427c4a3d7e35f69e7e7a5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_blobert_types.html#a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e8bce326427c4a3d7e35f69e7e7a5c">GetNftType</a> ()</td></tr>
+<tr class="memdesc:a38e8bce326427c4a3d7e35f69e7e7a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the specific NFT type from the <a class="el" href="class_blobert_types.html#a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</a> enumeration.  <br /></td></tr>
 <tr class="separator:a38e8bce326427c4a3d7e35f69e7e7a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acad47123d95d62e5fcab1f88a895487c" id="r_acad47123d95d62e5fcab1f88a895487c"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acad47123d95d62e5fcab1f88a895487c">GetInstance&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:acad47123d95d62e5fcab1f88a895487c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an instance of the implementing type, cast to the specified generic type.  <br /></td></tr>
 <tr class="separator:acad47123d95d62e5fcab1f88a895487c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_nft_type_8cs_source.html#l00004">4</a> of file <a class="el" href="_i_nft_type_8cs_source.html">INftType.cs</a>.</p>
+<div class="textblock"><p>Defines the interface for NFT types, providing a blueprint for methods and properties to handle statistics, items, traits, ownership, and other NFT-related functionalities. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_nft_type_8cs_source.html#l00008">8</a> of file <a class="el" href="_i_nft_type_8cs_source.html">INftType.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aea8d4c717f7660add2e3d5c3920fd41a" name="aea8d4c717f7660add2e3d5c3920fd41a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea8d4c717f7660add2e3d5c3920fd41a">&#9670;&#160;</a></span>GetAttackMapToTrait()</h2>
@@ -159,6 +176,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves a mapping of traits to their associated attacks. </p>
+<dl class="section return"><dt>Returns</dt><dd>A dictionary where keys are trait names and values are lists of attacks.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#a668a972952df66ae64d35d6c2634d278">WalletBlobert</a>.</p>
 
@@ -179,6 +199,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves the custom byte value associated with the NFT. </p>
+<dl class="section return"><dt>Returns</dt><dd>A byte representing a custom attribute.</dd></dl>
+
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#a12cb47eeaa16d0ba180f9bde90662360">WalletBlobert</a>.</p>
 
 </div>
@@ -197,6 +220,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves an instance of the implementing type, cast to the specified generic type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to cast the instance to, which must implement <a class="el" href="interface_i_nft_type.html" title="Defines the interface for NFT types, providing a blueprint for methods and properties to handle stati...">INftType</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An instance of type T.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#aa4b788947de00704b91e7a7c3884162b">WalletBlobert</a>.</p>
 <div class="typeconstraint">
@@ -225,6 +257,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves a mapping of traits to their associated items. </p>
+<dl class="section return"><dt>Returns</dt><dd>A dictionary where keys are trait names and values are corresponding items.</dd></dl>
+
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#a0ae416fe1f949c800a647a25f75e7c12">WalletBlobert</a>.</p>
 
 </div>
@@ -243,6 +278,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the list of items associated with the NFT. </p>
+<dl class="section return"><dt>Returns</dt><dd>A list of items owned by the NFT.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#abb0aacbd8ca1b707dad3e1337911ce51">WalletBlobert</a>.</p>
 
@@ -263,6 +301,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves the maximum health value of the NFT. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the maximum health of the NFT.</dd></dl>
+
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#afbdcf2010b6b26a8e620f2b3e644d62a">WalletBlobert</a>.</p>
 
 </div>
@@ -281,6 +322,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the specific NFT type from the <a class="el" href="class_blobert_types.html#a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</a> enumeration. </p>
+<dl class="section return"><dt>Returns</dt><dd>The NFT type.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#ae80c070374a920aedf00a640a78e3127">WalletBlobert</a>.</p>
 
@@ -301,6 +345,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves the owner of the NFT as a FieldElement. </p>
+<dl class="section return"><dt>Returns</dt><dd>A FieldElement representing the NFT owner's address.</dd></dl>
+
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#a71a21fb08c40e8fcab22f0ddcfa683a4">WalletBlobert</a>.</p>
 
 </div>
@@ -319,6 +366,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the seed data for the NFT. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_seed.html">Seed</a> object associated with the NFT.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#a24d519fe911ae3bd8466591eeb3be418">WalletBlobert</a>.</p>
 
@@ -339,6 +389,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves the stats associated with the NFT. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_t_stats.html">TStats</a> object containing NFT statistics.</dd></dl>
+
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#a0fb36594a1ce2e2564a5d0597ba23023">WalletBlobert</a>.</p>
 
 </div>
@@ -357,6 +410,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the token ID of the NFT. </p>
+<dl class="section return"><dt>Returns</dt><dd>A FieldElement representing the NFT's unique token ID.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#ac919c8fc44e1631762d44ccbe1c1838f">WalletBlobert</a>.</p>
 
@@ -377,6 +433,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves the trait information of the token. </p>
+<dl class="section return"><dt>Returns</dt><dd>A TokenTrait object representing the NFT's traits.</dd></dl>
+
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#aebb59d6949e8a6cf09bc88acd64ed8ad">WalletBlobert</a>.</p>
 
 </div>
@@ -395,6 +454,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if a given address corresponds to the owner of the NFT. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td>A FieldElement representing the address to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the address is the owner, otherwise false.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_wallet_blobert.html#ac271f0f25abe5ac50f8379cce84dbd14">WalletBlobert</a>.</p>
 

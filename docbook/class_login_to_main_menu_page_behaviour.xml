@@ -51,7 +51,7 @@ Public Attributes inherited from <link linkend="_class_menu">Menu</link>        
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00026">26</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00027">27</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
 </section>
 <section>
 <title>Member Enumeration Documentation</title>
@@ -75,7 +75,7 @@ Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00036">36</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00037">37</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -85,21 +85,21 @@ Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source
 <indexterm><primary>MintBlobButtonCall</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>MintBlobButtonCall</secondary></indexterm>
 <para><computeroutput>void LoginToMainMenuPageBehaviour.MintBlobButtonCall ( )</computeroutput></para><para>
-Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00160">160</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00161">161</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_to_main_menu_page_behaviour_1a5241e5720f866a11e7357bfc7db6cd81"/><section>
     <title>OnChainCallBackMintBlob()</title>
 <indexterm><primary>OnChainCallBackMintBlob</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>OnChainCallBackMintBlob</secondary></indexterm>
 <para><computeroutput>async void LoginToMainMenuPageBehaviour.OnChainCallBackMintBlob (string transactionHash)</computeroutput></para><para>
-Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00215">215</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00216">216</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_to_main_menu_page_behaviour_1a9b5c7abfa3499776f8448a323724e9a9"/><section>
     <title>SetState()</title>
 <indexterm><primary>SetState</primary><secondary>LoginToMainMenuPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginToMainMenuPageBehaviour</primary><secondary>SetState</secondary></indexterm>
 <para><computeroutput>void LoginToMainMenuPageBehaviour.SetState (<link linkend="_class_login_to_main_menu_page_behaviour_1a4fb95ced9e424be82743b09b4deae76a">State</link> state)</computeroutput></para><para>
-Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00066">66</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_to_main_menu_page_behaviour_8cs_source_1l00067">67</link> of file <link linkend="__login_to_main_menu_page_behaviour_8cs_source">LoginToMainMenuPageBehaviour.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

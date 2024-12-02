@@ -1,4 +1,4 @@
 var _standard_view_no_attacks_blob_dex_component_8cs =
 [
-    [ "StandardViewNoAttacksBlobDexComponent", "class_standard_view_no_attacks_blob_dex_component.html", "class_standard_view_no_attacks_blob_dex_component" ]
+    [ "BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent", "class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component.html", "class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component" ]
 ];

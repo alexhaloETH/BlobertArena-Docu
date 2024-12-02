@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component" xml:lang="en-US">
+<title>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent Class Reference</title>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593f">MenuState</link> { <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593fa2d3bb85744ac8bbb0bfca41cd131a0d4">ShowGraphing</link>
+, <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593fa9d1d98130df6b1cfa73153b673402658">ShowTraits</link>
+, <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593fa90383d3848b66e3f10c6a3c4c3f74439">CleanCanvas</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1a67cb10faa4c75270a676fbaec1ae2799">SetMenuState</link> (<link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593f">MenuState</link> menuState)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf8ed85331efec1077d7ad697b02e9d5">SetMenuState</link> (bool showGraphing)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1a87cb4939dc5de4b220796d6aff317823">InitializeComponent</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1a2f4216905d9864a1eb3ce0d532bae1b2">ToggleMenu</link> (bool showMenu)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source_1l00011">11</link> of file <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source">BlobDataStandardObjectsBlobDexComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593f"/><section>
+    <title>MenuState</title>
+<indexterm><primary>MenuState</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>MenuState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593f">BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent.MenuState</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>ShowGraphing</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>ShowGraphing</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593fa2d3bb85744ac8bbb0bfca41cd131a0d4"/>ShowGraphing</entry><entry></entry></row><row><entry><indexterm><primary>ShowTraits</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>ShowTraits</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593fa9d1d98130df6b1cfa73153b673402658"/>ShowTraits</entry><entry></entry></row><row><entry><indexterm><primary>CleanCanvas</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>CleanCanvas</secondary></indexterm>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593fa90383d3848b66e3f10c6a3c4c3f74439"/>CleanCanvas</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source_1l00030">30</link> of file <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source">BlobDataStandardObjectsBlobDexComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1a87cb4939dc5de4b220796d6aff317823"/><section>
+    <title>InitializeComponent()</title>
+<indexterm><primary>InitializeComponent</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>InitializeComponent</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent.InitializeComponent (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source_1l00075">75</link> of file <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source">BlobDataStandardObjectsBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf8ed85331efec1077d7ad697b02e9d5"/><section>
+    <title>SetMenuState()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SetMenuState</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>SetMenuState</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent.SetMenuState (bool showGraphing)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source_1l00061">61</link> of file <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source">BlobDataStandardObjectsBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1a67cb10faa4c75270a676fbaec1ae2799"/><section>
+    <title>SetMenuState()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SetMenuState</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>SetMenuState</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent.SetMenuState (<link linkend="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1acf5b9598918181e9a85a67cd3449593f">MenuState</link> menuState)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source_1l00037">37</link> of file <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source">BlobDataStandardObjectsBlobDexComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component_1a2f4216905d9864a1eb3ce0d532bae1b2"/><section>
+    <title>ToggleMenu()</title>
+<indexterm><primary>ToggleMenu</primary><secondary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent</primary><secondary>ToggleMenu</secondary></indexterm>
+<para><computeroutput>void BlobertArena.BlobDex.BlobDataStandardObjectsBlobDexComponent.ToggleMenu (bool showMenu)</computeroutput></para><para>
+Definition at line <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source_1l00113">113</link> of file <link linkend="__blob_data_standard_objects_blob_dex_component_8cs_source">BlobDataStandardObjectsBlobDexComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BlobertData/BlobDexComponents/<link linkend="__blob_data_standard_objects_blob_dex_component_8cs">BlobDataStandardObjectsBlobDexComponent.cs</link></section>
+</section>

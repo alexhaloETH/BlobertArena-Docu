@@ -20,7 +20,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00008">8</link> of file <link linkend="__quick_leader_board_component_8cs_source">QuickLeaderBoardComponent.cs</link>.</para>
+Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00006">6</link> of file <link linkend="__quick_leader_board_component_8cs_source">QuickLeaderBoardComponent.cs</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -29,7 +29,7 @@ Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00
 <indexterm><primary>positions</primary><secondary>QuickLeaderBoardComponent</secondary></indexterm>
 <indexterm><primary>QuickLeaderBoardComponent</primary><secondary>positions</secondary></indexterm>
 <para><computeroutput><link linkend="_class_quick_leadear_board_element">QuickLeadearBoardElement</link> [] QuickLeaderBoardComponent.positions</computeroutput></para><para>
-Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00010">10</link> of file <link linkend="__quick_leader_board_component_8cs_source">QuickLeaderBoardComponent.cs</link>.</para>
+Definition at line <link linkend="__quick_leader_board_component_8cs_source_1l00008">8</link> of file <link linkend="__quick_leader_board_component_8cs_source">QuickLeaderBoardComponent.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

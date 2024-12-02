@@ -5,7 +5,16 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_class_view_equipped_attacks_blob_dex_component">ViewEquippedAttacksBlobDexComponent</link></para>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_view_equipped_attacks_blob_dex_component">BlobertArena.BlobDex.ViewEquippedAttacksBlobDexComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena">BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_blob_dex">BlobertArena.BlobDex</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -23,7 +32,7 @@
 <indexterm><primary>FieldElement</primary><secondary>ViewEquippedAttacksBlobDexComponent.cs</secondary></indexterm>
 <indexterm><primary>ViewEquippedAttacksBlobDexComponent.cs</primary><secondary>FieldElement</secondary></indexterm>
 <para><computeroutput>using <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> = Dojo.Starknet.FieldElement</computeroutput></para><para>
-Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00006">6</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
+Definition at line <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source_1l00005">5</link> of file <link linkend="__view_equipped_attacks_blob_dex_component_8cs_source">ViewEquippedAttacksBlobDexComponent.cs</link>.</para>
 </section>
 </section>
 </section>

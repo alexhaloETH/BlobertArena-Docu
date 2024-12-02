@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.SkinManager Class Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.SkinManager</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.ThemeManager.SkinManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>delegate void <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a02c2b6191b33fb31fed0d2cd6d6befed">OnNewSkin</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a12000ddd6cf984bd96599c4e71a04872">ChangeSkin</link> (LocalDataModel.GameEvent newTheme)</para>
+
+<para>Changes the skin by loading new sprites based on the specified game theme. Triggers the <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a534729b363deacbeced414d65f3a8a3f">NewSkin</link> event and updates the loaded entities count. </para>
+</listitem>
+            <listitem><para>Sprite <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1aee1a1ad385a383873dd6b40723b03175">GetSpriteByName</link> (string spriteName)</para>
+
+<para>Retrieves a sprite by its name from the sprite dictionary. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager">SkinManager</link> <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a22015f594d33f4caba702f6f15b95683">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a02c2b6191b33fb31fed0d2cd6d6befed">OnNewSkin</link> <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a534729b363deacbeced414d65f3a8a3f">NewSkin</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00008">8</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a12000ddd6cf984bd96599c4e71a04872"/><section>
+    <title>ChangeSkin()</title>
+<indexterm><primary>ChangeSkin</primary><secondary>BlobertArena.ThemeManager.SkinManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinManager</primary><secondary>ChangeSkin</secondary></indexterm>
+<para><computeroutput>void BlobertArena.ThemeManager.SkinManager.ChangeSkin (LocalDataModel.GameEvent newTheme)</computeroutput></para><para>
+
+<para>Changes the skin by loading new sprites based on the specified game theme. Triggers the <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a534729b363deacbeced414d65f3a8a3f">NewSkin</link> event and updates the loaded entities count. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newTheme</entry><entry>
+<para>The new game theme to apply.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00075">75</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1aee1a1ad385a383873dd6b40723b03175"/><section>
+    <title>GetSpriteByName()</title>
+<indexterm><primary>GetSpriteByName</primary><secondary>BlobertArena.ThemeManager.SkinManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinManager</primary><secondary>GetSpriteByName</secondary></indexterm>
+<para><computeroutput>Sprite BlobertArena.ThemeManager.SkinManager.GetSpriteByName (string spriteName)</computeroutput></para><para>
+
+<para>Retrieves a sprite by its name from the sprite dictionary. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>spriteName</entry><entry>
+<para>The name of the sprite to retrieve.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The sprite with the specified name, or null if not found.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00104">104</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a02c2b6191b33fb31fed0d2cd6d6befed"/><section>
+    <title>OnNewSkin()</title>
+<indexterm><primary>OnNewSkin</primary><secondary>BlobertArena.ThemeManager.SkinManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinManager</primary><secondary>OnNewSkin</secondary></indexterm>
+<para><computeroutput>delegate void BlobertArena.ThemeManager.SkinManager.OnNewSkin ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a22015f594d33f4caba702f6f15b95683"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>BlobertArena.ThemeManager.SkinManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager">SkinManager</link> BlobertArena.ThemeManager.SkinManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00012">12</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a534729b363deacbeced414d65f3a8a3f"/><section>
+    <title>NewSkin</title>
+<indexterm><primary>NewSkin</primary><secondary>BlobertArena.ThemeManager.SkinManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinManager</primary><secondary>NewSkin</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_manager_1a02c2b6191b33fb31fed0d2cd6d6befed">OnNewSkin</link> BlobertArena.ThemeManager.SkinManager.NewSkin</computeroutput></para><para>
+Definition at line <link linkend="__skin_manager_8cs_source_1l00040">40</link> of file <link linkend="__skin_manager_8cs_source">SkinManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__skin_manager_8cs">SkinManager.cs</link></section>
+</section>

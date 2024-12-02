@@ -256,7 +256,7 @@
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00070">70</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00071">71</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_namespace_audio_effects_1ac01e5f2e41097b7366769c099ab770ee"/><section>
     <title>CombatCommon</title>
@@ -278,7 +278,7 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00070">70</link> 
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00044">44</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00045">45</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_namespace_audio_effects_1a4b048b5af8f30fc3298f57769b565171"/><section>
     <title>CombatSpecial</title>
@@ -324,7 +324,7 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00044">44</link> 
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00051">51</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00052">52</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_namespace_audio_effects_1a770ba1505158efce5c1e5ee6a4e03168"/><section>
     <title>Effects</title>
@@ -360,7 +360,7 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00051">51</link> 
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00023">23</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00024">24</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_namespace_audio_effects_1adb0c7f97d7b32d7f2e39ca13ad157ddf"/><section>
     <title>Music</title>
@@ -390,7 +390,7 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00023">23</link> 
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00012">12</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00013">13</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_namespace_audio_effects_1a94412afe0475a601c62c48ae43523f1b"/><section>
     <title>Vocals</title>
@@ -412,7 +412,7 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00012">12</link> 
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00037">37</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00038">38</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 </section>
 </section>

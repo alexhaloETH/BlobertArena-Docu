@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data" xml:lang="en-US">
+<title>LogicLayer.Models.GamesDataModel.QueryCompiledData Struct Reference</title>
+<indexterm><primary>LogicLayer.Models.GamesDataModel.QueryCompiledData</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1abc41be33848fb7f567da739a465b2190">QueryCompiledData</link> (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite, <link linkend="_class_pv_p_challenge_response">PvPChallengeResponse</link> response=null, CombatState <link linkend="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1afa395d87aa286346f73dbd2b467be79b">combatState</link>=null, <link linkend="_class_pv_p_combatants">PvPCombatants</link> combatants=null)</para>
+
+<para>There should always be an invite type, eveything else is optional. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> <link linkend="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1adb8253fbefd6fff00096fdde1c3a0042">challengeInvite</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_pv_p_challenge_response">PvPChallengeResponse</link> <link linkend="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1adaf5e9ff25152a8eec7d9186e16a7bbf">challengeResponse</link></para>
+</listitem>
+            <listitem><para>CombatState <link linkend="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1afa395d87aa286346f73dbd2b467be79b">combatState</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_pv_p_combatants">PvPCombatants</link> <link linkend="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1a64f2c7f07c7b54a4c27028c7aed3155b">pvPCombatants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__games_data_model_8cs_source_1l00245">245</link> of file <link linkend="__games_data_model_8cs_source">GamesDataModel.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1abc41be33848fb7f567da739a465b2190"/><section>
+    <title>QueryCompiledData()</title>
+<indexterm><primary>QueryCompiledData</primary><secondary>LogicLayer.Models.GamesDataModel.QueryCompiledData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.GamesDataModel.QueryCompiledData</primary><secondary>QueryCompiledData</secondary></indexterm>
+<para><computeroutput>LogicLayer.Models.GamesDataModel.QueryCompiledData.QueryCompiledData (<link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> invite, <link linkend="_class_pv_p_challenge_response">PvPChallengeResponse</link> response = <computeroutput>null</computeroutput>
+, CombatState combatState = <computeroutput>null</computeroutput>
+, <link linkend="_class_pv_p_combatants">PvPCombatants</link> combatants = <computeroutput>null</computeroutput>
+)</computeroutput></para><para>
+
+<para>There should always be an invite type, eveything else is optional. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>invite</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>response</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>combatState</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>combatants</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__games_data_model_8cs_source_1l00259">259</link> of file <link linkend="__games_data_model_8cs_source">GamesDataModel.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1adb8253fbefd6fff00096fdde1c3a0042"/><section>
+    <title>challengeInvite</title>
+<indexterm><primary>challengeInvite</primary><secondary>LogicLayer.Models.GamesDataModel.QueryCompiledData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.GamesDataModel.QueryCompiledData</primary><secondary>challengeInvite</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pv_p_challenge_invite">PvPChallengeInvite</link> LogicLayer.Models.GamesDataModel.QueryCompiledData.challengeInvite</computeroutput></para><para>
+Definition at line <link linkend="__games_data_model_8cs_source_1l00247">247</link> of file <link linkend="__games_data_model_8cs_source">GamesDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1adaf5e9ff25152a8eec7d9186e16a7bbf"/><section>
+    <title>challengeResponse</title>
+<indexterm><primary>challengeResponse</primary><secondary>LogicLayer.Models.GamesDataModel.QueryCompiledData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.GamesDataModel.QueryCompiledData</primary><secondary>challengeResponse</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pv_p_challenge_response">PvPChallengeResponse</link> LogicLayer.Models.GamesDataModel.QueryCompiledData.challengeResponse</computeroutput></para><para>
+Definition at line <link linkend="__games_data_model_8cs_source_1l00248">248</link> of file <link linkend="__games_data_model_8cs_source">GamesDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1afa395d87aa286346f73dbd2b467be79b"/><section>
+    <title>combatState</title>
+<indexterm><primary>combatState</primary><secondary>LogicLayer.Models.GamesDataModel.QueryCompiledData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.GamesDataModel.QueryCompiledData</primary><secondary>combatState</secondary></indexterm>
+<para><computeroutput>CombatState LogicLayer.Models.GamesDataModel.QueryCompiledData.combatState</computeroutput></para><para>
+Definition at line <link linkend="__games_data_model_8cs_source_1l00249">249</link> of file <link linkend="__games_data_model_8cs_source">GamesDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data_1a64f2c7f07c7b54a4c27028c7aed3155b"/><section>
+    <title>pvPCombatants</title>
+<indexterm><primary>pvPCombatants</primary><secondary>LogicLayer.Models.GamesDataModel.QueryCompiledData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.GamesDataModel.QueryCompiledData</primary><secondary>pvPCombatants</secondary></indexterm>
+<para><computeroutput><link linkend="_class_pv_p_combatants">PvPCombatants</link> LogicLayer.Models.GamesDataModel.QueryCompiledData.pvPCombatants</computeroutput></para><para>
+Definition at line <link linkend="__games_data_model_8cs_source_1l00250">250</link> of file <link linkend="__games_data_model_8cs_source">GamesDataModel.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+LogicLayer/Managers/<link linkend="__games_data_model_8cs">GamesDataModel.cs</link></section>
+</section>

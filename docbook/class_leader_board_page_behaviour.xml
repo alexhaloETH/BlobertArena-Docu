@@ -16,22 +16,14 @@
     </informalfigure>
 </para>
 <simplesect>
-    <title>Public Member Functions    </title>
-        <itemizedlist>
-            <listitem><para>void <link linkend="_class_leader_board_page_behaviour_1abe67e12a6f265ffb0c79e46be726264f">ClickedOn</link> (int index)</para>
-
-<para>call to show the blobert information on click </para>
-</listitem>
-        </itemizedlist>
-</simplesect>
+    <title>Additional Inherited Members    </title>
 Public Member Functions inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
             <listitem><para>virtual void <link linkend="_class_menu_1a70dee27069171493755a9a9a52fce15c">Open</link> ()</para>
 </listitem>
             <listitem><para>virtual void <link linkend="_class_menu_1a15daf00810e65859923cc5e30147b840">Close</link> ()</para>
 </listitem>
         </itemizedlist>
-<simplesect>
-    <title>Additional Inherited Members    </title>
+</simplesect>
 Public Attributes inherited from <link linkend="_class_menu">Menu</link>        <itemizedlist>
             <listitem><para>bool <link linkend="_class_menu_1ae111044c97e3a295f702dce3f6186b69">open</link></para>
 </listitem>
@@ -40,47 +32,12 @@ Public Attributes inherited from <link linkend="_class_menu">Menu</link>        
             <listitem><para>string <link linkend="_class_menu_1a723939c7a0b7722ac226634e132c71b6">MenuName</link> = &quot;&quot;</para>
 </listitem>
         </itemizedlist>
-</simplesect>
 <section>
 <title>Detailed Description</title>
 
 <para>This page is done, the only thing that is theoretically missing is that when the user clicks on one of the Bloberts it should show the informations of that blobert, that component is still not implemented. </para>
 <para>
 Definition at line <link linkend="__leader_board_page_behaviour_8cs_source_1l00010">10</link> of file <link linkend="__leader_board_page_behaviour_8cs_source">LeaderBoardPageBehaviour.cs</link>.</para>
-</section>
-<section>
-<title>Member Function Documentation</title>
-<anchor xml:id="_class_leader_board_page_behaviour_1abe67e12a6f265ffb0c79e46be726264f"/><section>
-    <title>ClickedOn()</title>
-<indexterm><primary>ClickedOn</primary><secondary>LeaderBoardPageBehaviour</secondary></indexterm>
-<indexterm><primary>LeaderBoardPageBehaviour</primary><secondary>ClickedOn</secondary></indexterm>
-<para><computeroutput>void LeaderBoardPageBehaviour.ClickedOn (int index)</computeroutput></para><para>
-
-<para>call to show the blobert information on click </para>
-</para>
-
-<para>
-                <formalpara>
-                    <title>
-Parameters</title>
-                    <para>
-                    <table frame="all">
-                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
-                        <colspec colwidth="1*"/>
-                        <colspec colwidth="4*"/>
-                        <tbody>
-                            <row>
-<entry>index</entry><entry></entry>
-                            </row>
-                        </tbody>
-                        </tgroup>
-                    </table>
-                    </para>
-                </formalpara>
-                </para>
-<para>
-Definition at line <link linkend="__leader_board_page_behaviour_8cs_source_1l00072">72</link> of file <link linkend="__leader_board_page_behaviour_8cs_source">LeaderBoardPageBehaviour.cs</link>.</para>
-</section>
 <para>
 The documentation for this class was generated from the following file:</para>
 UI/Pages/<link linkend="__leader_board_page_behaviour_8cs">LeaderBoardPageBehaviour.cs</link></section>

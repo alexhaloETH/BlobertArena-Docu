@@ -27,10 +27,10 @@
 </listitem>
         </itemizedlist>
 </simplesect>
-Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_query_1_1_i_data">LogicLayer.Query.IData</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00077">77</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00078">78</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <section>
 <title>Property Documentation</title>
@@ -39,30 +39,30 @@ Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00077">77<
 <indexterm><primary>__typename</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>__typename</secondary></indexterm>
 <para><computeroutput>string CombatantState.CombatantStateDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+Implements <link linkend="_interface_logic_layer_1_1_query_1_1_i_data_1afac299ef67932b69363a6f36f943c3c0">LogicLayer.Query.IData</link>.</para>
 <para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00079">79</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00080">80</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1af752a8349394815d94256edd6c1ceda9"/><section>
     <title>health</title>
 <indexterm><primary>health</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>health</secondary></indexterm>
 <para><computeroutput>string CombatantState.CombatantStateDataQuery.health = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00081">81</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00082">82</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1a2b52c40f5c42cc0cbc5a8d7819fcff8a"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>id</secondary></indexterm>
 <para><computeroutput>string CombatantState.CombatantStateDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00080">80</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00081">81</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1_1_combatant_state_data_query_1a7635c76df9d740df04373e90ac045a0d"/><section>
     <title>stun_chance</title>
 <indexterm><primary>stun_chance</primary><secondary>CombatantState.CombatantStateDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantState.CombatantStateDataQuery</primary><secondary>stun_chance</secondary></indexterm>
 <para><computeroutput>string CombatantState.CombatantStateDataQuery.stun_chance = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00082">82</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00083">83</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

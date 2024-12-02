@@ -99,74 +99,78 @@ $(function(){initNavTree('_blob_data_background_blob_dex_component_8cs_source.ht
   <div class="headertitle"><div class="title">BlobDataBackgroundBlobDexComponent.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_blob_data_background_blob_dex_component_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.UI;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_blob_data_background_blob_dex_component.html">    7</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_blob_data_background_blob_dex_component.html">BlobDataBackgroundBlobDexComponent</a> : MonoBehaviour</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<a href="_blob_data_background_blob_dex_component_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_blobert_arena_1_1_blob_dex.html">BlobertArena.BlobDex</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_blobert_arena_1_1_theme_manager.html">BlobertArena.ThemeManager</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">    9</a></span>    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_enumvalue" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806">Self</a>,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_enumvalue" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e">Enemy</a>,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_blob_data_background_blob_dex_component.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_blob_data_background_blob_dex_component.html">BlobDataBackgroundBlobDexComponent</a> : MonoBehaviour</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">   11</a></span>    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_enumvalue" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806">Self</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_enumvalue" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e">Enemy</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
 </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a> _backgroundType;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [SerializeField] <span class="keyword">private</span> Sprite[] _backgrounds;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    [SerializeField] <span class="keyword">private</span> Image _backgroundImage;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_blob_data_manager_blob_dex_component.html">BlobDataManagerBlobDexComponent</a> _blobDataManager;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">//check for </span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">//_blobDataManager.</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_function" href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">SetBackground</a>(_backgroundType);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        SkinManager.Instance.NewSkin += OnSkinChange;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">   35</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">SetBackground</a>(<a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a> type)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        _backgroundType = type;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        OnSkinChange(); </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a> _backgroundType;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    [SerializeField] <span class="keyword">private</span> Sprite[] _backgrounds;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    [SerializeField] <span class="keyword">private</span> Image _backgroundImage;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component.html">BlobDataManagerBlobDexComponent</a> _blobDataManager;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">//check for</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">//_blobDataManager.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">SetBackground</a>(_backgroundType);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        SkinManager.Instance.NewSkin += OnSkinChange;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">   36</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">SetBackground</a>(<a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a> type)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        _backgroundType = type;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        OnSkinChange();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnSkinChange()</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        _backgrounds[0] = <a class="code hl_class" href="class_skin_manager.html">SkinManager</a>.<a class="code hl_property" href="class_skin_manager.html#a54f9dd1918044e2558a1ce9635aa421c">Instance</a>.<a class="code hl_function" href="class_skin_manager.html#a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</a>(_backgrounds[0].name);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        _backgrounds[1] = <a class="code hl_class" href="class_skin_manager.html">SkinManager</a>.<a class="code hl_property" href="class_skin_manager.html#a54f9dd1918044e2558a1ce9635aa421c">Instance</a>.<a class="code hl_function" href="class_skin_manager.html#a30b998aa390e3dc9030fb253c7a3b46b">GetSpriteByName</a>(_backgrounds[1].name);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">switch</span> (_backgroundType)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a>.Self:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                _backgroundImage.sprite = _backgrounds[0];</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a>.Enemy:</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                _backgroundImage.sprite = _backgrounds[1];</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnSkinChange()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        _backgrounds[0] = <a class="code hl_class" href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html">SkinManager</a>.<a class="code hl_property" href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#a22015f594d33f4caba702f6f15b95683">Instance</a>.<a class="code hl_function" href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#aee1a1ad385a383873dd6b40723b03175">GetSpriteByName</a>(_backgrounds[0].name);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        _backgrounds[1] = <a class="code hl_class" href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html">SkinManager</a>.<a class="code hl_property" href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#a22015f594d33f4caba702f6f15b95683">Instance</a>.<a class="code hl_function" href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#aee1a1ad385a383873dd6b40723b03175">GetSpriteByName</a>(_backgrounds[1].name);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">switch</span> (_backgroundType)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a>.Self:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                _backgroundImage.sprite = _backgrounds[0];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BackgroundType</a>.Enemy:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                _backgroundImage.sprite = _backgrounds[1];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 </div>
-<div class="ttc" id="aclass_blob_data_background_blob_dex_component_html"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html">BlobDataBackgroundBlobDexComponent</a></div><div class="ttdoc">Sets the background of the blob data component.</div><div class="ttdef"><b>Definition</b> <a href="#l00007">BlobDataBackgroundBlobDexComponent.cs:8</a></div></div>
-<div class="ttc" id="aclass_blob_data_background_blob_dex_component_html_a6f145cbda76ad7afb5b367a572f68cd2"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BlobDataBackgroundBlobDexComponent.BackgroundType</a></div><div class="ttdeci">BackgroundType</div><div class="ttdef"><b>Definition</b> <a href="#l00009">BlobDataBackgroundBlobDexComponent.cs:10</a></div></div>
+<div class="ttc" id="aclass_blob_data_background_blob_dex_component_html"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html">BlobDataBackgroundBlobDexComponent</a></div><div class="ttdoc">Sets the background of the blob data component.</div><div class="ttdef"><b>Definition</b> <a href="#l00009">BlobDataBackgroundBlobDexComponent.cs:10</a></div></div>
+<div class="ttc" id="aclass_blob_data_background_blob_dex_component_html_a6f145cbda76ad7afb5b367a572f68cd2"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2">BlobDataBackgroundBlobDexComponent.BackgroundType</a></div><div class="ttdeci">BackgroundType</div><div class="ttdef"><b>Definition</b> <a href="#l00011">BlobDataBackgroundBlobDexComponent.cs:12</a></div></div>
 <div class="ttc" id="aclass_blob_data_background_blob_dex_component_html_a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2a8c6d21187fb58b7a079d70030686b33e">BlobDataBackgroundBlobDexComponent.BackgroundType.Enemy</a></div><div class="ttdeci">@ Enemy</div></div>
 <div class="ttc" id="aclass_blob_data_background_blob_dex_component_html_a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html#a6f145cbda76ad7afb5b367a572f68cd2aad6e7652b1bdfb38783486c2c3d5e806">BlobDataBackgroundBlobDexComponent.BackgroundType.Self</a></div><div class="ttdeci">@ Self</div></div>
-<div class="ttc" id="aclass_blob_data_background_blob_dex_component_html_a86a540b204aa8ebc0aa921146804410d"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">BlobDataBackgroundBlobDexComponent.SetBackground</a></div><div class="ttdeci">void SetBackground(BackgroundType type)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">BlobDataBackgroundBlobDexComponent.cs:35</a></div></div>
-<div class="ttc" id="aclass_blob_data_manager_blob_dex_component_html"><div class="ttname"><a href="class_blob_data_manager_blob_dex_component.html">BlobDataManagerBlobDexComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_blob_data_manager_blob_dex_component_8cs_source.html#l00005">BlobDataManagerBlobDexComponent.cs:6</a></div></div>
-<div class="ttc" id="aclass_skin_manager_html"><div class="ttname"><a href="class_skin_manager.html">SkinManager</a></div><div class="ttdef"><b>Definition</b> <a href="_skin_manager_8cs_source.html#l00005">SkinManager.cs:6</a></div></div>
-<div class="ttc" id="aclass_skin_manager_html_a30b998aa390e3dc9030fb253c7a3b46b"><div class="ttname"><a href="class_skin_manager.html#a30b998aa390e3dc9030fb253c7a3b46b">SkinManager.GetSpriteByName</a></div><div class="ttdeci">Sprite GetSpriteByName(string spriteName)</div><div class="ttdef"><b>Definition</b> <a href="_skin_manager_8cs_source.html#l00088">SkinManager.cs:88</a></div></div>
-<div class="ttc" id="aclass_skin_manager_html_a54f9dd1918044e2558a1ce9635aa421c"><div class="ttname"><a href="class_skin_manager.html#a54f9dd1918044e2558a1ce9635aa421c">SkinManager.Instance</a></div><div class="ttdeci">static SkinManager Instance</div><div class="ttdef"><b>Definition</b> <a href="_skin_manager_8cs_source.html#l00009">SkinManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_blob_data_background_blob_dex_component_html_a86a540b204aa8ebc0aa921146804410d"><div class="ttname"><a href="class_blob_data_background_blob_dex_component.html#a86a540b204aa8ebc0aa921146804410d">BlobDataBackgroundBlobDexComponent.SetBackground</a></div><div class="ttdeci">void SetBackground(BackgroundType type)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">BlobDataBackgroundBlobDexComponent.cs:36</a></div></div>
+<div class="ttc" id="aclass_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component_html"><div class="ttname"><a href="class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component.html">BlobertArena.BlobDex.BlobDataManagerBlobDexComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_blob_data_manager_blob_dex_component_8cs_source.html#l00007">BlobDataManagerBlobDexComponent.cs:8</a></div></div>
+<div class="ttc" id="aclass_blobert_arena_1_1_theme_manager_1_1_skin_manager_html"><div class="ttname"><a href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html">BlobertArena.ThemeManager.SkinManager</a></div><div class="ttdef"><b>Definition</b> <a href="_skin_manager_8cs_source.html#l00008">SkinManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_blobert_arena_1_1_theme_manager_1_1_skin_manager_html_a22015f594d33f4caba702f6f15b95683"><div class="ttname"><a href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#a22015f594d33f4caba702f6f15b95683">BlobertArena.ThemeManager.SkinManager.Instance</a></div><div class="ttdeci">static SkinManager Instance</div><div class="ttdef"><b>Definition</b> <a href="_skin_manager_8cs_source.html#l00012">SkinManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_blobert_arena_1_1_theme_manager_1_1_skin_manager_html_aee1a1ad385a383873dd6b40723b03175"><div class="ttname"><a href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#aee1a1ad385a383873dd6b40723b03175">BlobertArena.ThemeManager.SkinManager.GetSpriteByName</a></div><div class="ttdeci">Sprite GetSpriteByName(string spriteName)</div><div class="ttdoc">Retrieves a sprite by its name from the sprite dictionary.</div><div class="ttdef"><b>Definition</b> <a href="_skin_manager_8cs_source.html#l00104">SkinManager.cs:104</a></div></div>
+<div class="ttc" id="anamespace_blobert_arena_1_1_blob_dex_html"><div class="ttname"><a href="namespace_blobert_arena_1_1_blob_dex.html">BlobertArena.BlobDex</a></div><div class="ttdef"><b>Definition</b> <a href="_blob_data_manager_blob_dex_component_8cs_source.html#l00005">BlobDataManagerBlobDexComponent.cs:6</a></div></div>
+<div class="ttc" id="anamespace_blobert_arena_1_1_theme_manager_html"><div class="ttname"><a href="namespace_blobert_arena_1_1_theme_manager.html">BlobertArena.ThemeManager</a></div><div class="ttdef"><b>Definition</b> <a href="_themes_manager_8cs_source.html#l00006">ThemesManager.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

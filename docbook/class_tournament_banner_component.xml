@@ -20,7 +20,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__tournament_banner_component_8cs_source_1l00004">4</link> of file <link linkend="__tournament_banner_component_8cs_source">TournamentBannerComponent.cs</link>.</para>
+Definition at line <link linkend="__tournament_banner_component_8cs_source_1l00005">5</link> of file <link linkend="__tournament_banner_component_8cs_source">TournamentBannerComponent.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -29,7 +29,7 @@ Definition at line <link linkend="__tournament_banner_component_8cs_source_1l000
 <indexterm><primary>Awake</primary><secondary>TournamentBannerComponent</secondary></indexterm>
 <indexterm><primary>TournamentBannerComponent</primary><secondary>Awake</secondary></indexterm>
 <para><computeroutput>void TournamentBannerComponent.Awake ( )</computeroutput></para><para>
-Definition at line <link linkend="__tournament_banner_component_8cs_source_1l00016">16</link> of file <link linkend="__tournament_banner_component_8cs_source">TournamentBannerComponent.cs</link>.</para>
+Definition at line <link linkend="__tournament_banner_component_8cs_source_1l00017">17</link> of file <link linkend="__tournament_banner_component_8cs_source">TournamentBannerComponent.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

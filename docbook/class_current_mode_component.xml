@@ -26,7 +26,7 @@
         <itemizedlist>
             <listitem><para>void <link linkend="_class_current_mode_component_1a7e4d24cc86866b7db0c02353c2aca349">Start</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd">SetSpriteFromDifficulty</link> (LogicLayer.LocalDataModel.DifficultyGame difficultyGame)</para>
+            <listitem><para>void <link linkend="_class_current_mode_component_1a4c7984ef8bf344bf5cbf397880b5e234">SetSpriteFromDifficulty</link> (LocalDataModel.DifficultyGame difficultyGame)</para>
 </listitem>
             <listitem><para>void <link linkend="_class_current_mode_component_1a4390da629a1a29209d92a6290a15dc94">ShowChangeButton</link> (bool show)</para>
 </listitem>
@@ -44,7 +44,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00006">6</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00007">7</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 <section>
 <title>Member Enumeration Documentation</title>
@@ -70,31 +70,31 @@ Definition at line <link linkend="__current_mode_component_8cs_source_1l00006">6
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00012">12</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00013">13</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_class_current_mode_component_1afc8d6cd448361247c8048f80bb306afd"/><section>
+<anchor xml:id="_class_current_mode_component_1a4c7984ef8bf344bf5cbf397880b5e234"/><section>
     <title>SetSpriteFromDifficulty()</title>
 <indexterm><primary>SetSpriteFromDifficulty</primary><secondary>CurrentModeComponent</secondary></indexterm>
 <indexterm><primary>CurrentModeComponent</primary><secondary>SetSpriteFromDifficulty</secondary></indexterm>
-<para><computeroutput>void CurrentModeComponent.SetSpriteFromDifficulty (LogicLayer.LocalDataModel.DifficultyGame difficultyGame)</computeroutput></para><para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00039">39</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+<para><computeroutput>void CurrentModeComponent.SetSpriteFromDifficulty (LocalDataModel.DifficultyGame difficultyGame)</computeroutput></para><para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00040">40</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 <anchor xml:id="_class_current_mode_component_1a4390da629a1a29209d92a6290a15dc94"/><section>
     <title>ShowChangeButton()</title>
 <indexterm><primary>ShowChangeButton</primary><secondary>CurrentModeComponent</secondary></indexterm>
 <indexterm><primary>CurrentModeComponent</primary><secondary>ShowChangeButton</secondary></indexterm>
 <para><computeroutput>void CurrentModeComponent.ShowChangeButton (bool show)</computeroutput></para><para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00045">45</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00046">46</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 <anchor xml:id="_class_current_mode_component_1a7e4d24cc86866b7db0c02353c2aca349"/><section>
     <title>Start()</title>
 <indexterm><primary>Start</primary><secondary>CurrentModeComponent</secondary></indexterm>
 <indexterm><primary>CurrentModeComponent</primary><secondary>Start</secondary></indexterm>
 <para><computeroutput>void CurrentModeComponent.Start ( )</computeroutput></para><para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00023">23</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00024">24</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -104,14 +104,14 @@ Definition at line <link linkend="__current_mode_component_8cs_source_1l00023">2
 <indexterm><primary>directionButton</primary><secondary>CurrentModeComponent</secondary></indexterm>
 <indexterm><primary>CurrentModeComponent</primary><secondary>directionButton</secondary></indexterm>
 <para><computeroutput><link linkend="_class_current_mode_component_1a7eefd89965d0d1eaa4deb9b873bf7c0d">DirectionButton</link> CurrentModeComponent.directionButton</computeroutput></para><para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00020">20</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00021">21</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 <anchor xml:id="_class_current_mode_component_1a544fbd367d484928f0da2ea5bd164cdd"/><section>
     <title>positions</title>
 <indexterm><primary>positions</primary><secondary>CurrentModeComponent</secondary></indexterm>
 <indexterm><primary>CurrentModeComponent</primary><secondary>positions</secondary></indexterm>
 <para><computeroutput>List&lt;Vector2&gt; CurrentModeComponent.positions</computeroutput></para><para>
-Definition at line <link linkend="__current_mode_component_8cs_source_1l00021">21</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
+Definition at line <link linkend="__current_mode_component_8cs_source_1l00022">22</link> of file <link linkend="__current_mode_component_8cs_source">CurrentModeComponent.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

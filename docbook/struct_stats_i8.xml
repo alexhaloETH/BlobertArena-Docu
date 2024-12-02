@@ -18,7 +18,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00056">56</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00057">57</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -27,28 +27,28 @@ Definition at line <link linkend="__attack_8gen_8cs_source_1l00056">56</link> of
 <indexterm><primary>dexterity</primary><secondary>StatsI8</secondary></indexterm>
 <indexterm><primary>StatsI8</primary><secondary>dexterity</secondary></indexterm>
 <para><computeroutput>sbyte StatsI8.dexterity</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00060">60</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00061">61</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_stats_i8_1a9eb89a76ab402afefeadf0e2ef1879cd"/><section>
     <title>luck</title>
 <indexterm><primary>luck</primary><secondary>StatsI8</secondary></indexterm>
 <indexterm><primary>StatsI8</primary><secondary>luck</secondary></indexterm>
 <para><computeroutput>sbyte StatsI8.luck</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00061">61</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00062">62</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_stats_i8_1a67523061d976bbbe9092d076e9236d18"/><section>
     <title>strength</title>
 <indexterm><primary>strength</primary><secondary>StatsI8</secondary></indexterm>
 <indexterm><primary>StatsI8</primary><secondary>strength</secondary></indexterm>
 <para><computeroutput>sbyte StatsI8.strength</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00058">58</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00059">59</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_stats_i8_1ab6b361586fd45a3c5954580fe901c17e"/><section>
     <title>vitality</title>
 <indexterm><primary>vitality</primary><secondary>StatsI8</secondary></indexterm>
 <indexterm><primary>StatsI8</primary><secondary>vitality</secondary></indexterm>
 <para><computeroutput>sbyte StatsI8.vitality</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00059">59</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00060">60</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

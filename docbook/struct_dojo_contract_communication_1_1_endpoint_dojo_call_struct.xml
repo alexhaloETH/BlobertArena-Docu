@@ -21,7 +21,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00077">77</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00078">78</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -30,7 +30,7 @@ Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00077">77<
 <indexterm><primary>EndpointDojoCallStruct</primary><secondary>DojoContractCommunication.EndpointDojoCallStruct</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.EndpointDojoCallStruct</primary><secondary>EndpointDojoCallStruct</secondary></indexterm>
 <para><computeroutput>DojoContractCommunication.EndpointDojoCallStruct.EndpointDojoCallStruct (string functionName, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> addressOfSystem)</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00082">82</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00083">83</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -40,14 +40,14 @@ Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00082">82<
 <indexterm><primary>addressOfSystem</primary><secondary>DojoContractCommunication.EndpointDojoCallStruct</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.EndpointDojoCallStruct</primary><secondary>addressOfSystem</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> DojoContractCommunication.EndpointDojoCallStruct.addressOfSystem</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00080">80</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00081">81</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_dojo_contract_communication_1_1_endpoint_dojo_call_struct_1aa8db435cd22526b183e4154269b85a8e"/><section>
     <title>functionName</title>
 <indexterm><primary>functionName</primary><secondary>DojoContractCommunication.EndpointDojoCallStruct</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.EndpointDojoCallStruct</primary><secondary>functionName</secondary></indexterm>
 <para><computeroutput>string DojoContractCommunication.EndpointDojoCallStruct.functionName</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00079">79</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00080">80</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -1,4 +1,4 @@
 var _slider_animator_component_8cs =
 [
-    [ "SliderAnimatorComponent", "class_slider_animator_component.html", "class_slider_animator_component" ]
+    [ "UiComponents.Slider.SliderAnimatorComponent", "class_ui_components_1_1_slider_1_1_slider_animator_component.html", "class_ui_components_1_1_slider_1_1_slider_animator_component" ]
 ];

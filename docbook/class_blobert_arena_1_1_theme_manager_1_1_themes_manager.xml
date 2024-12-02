@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.ThemesManager Class Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.ThemesManager</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.ThemeManager.ThemesManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_theme_manager_1_1_themes_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Color <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1a4341659d617ca0ffa983f9a23f9b88b7">GetPanelColour</link> (<link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cc">PanelColours</link> panelColour)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1aca91ab49cb45d8a98a3bb4bd0f2ba341">GetTextColour</link> (<link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0c">TextColours</link> textColour)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static Sprite <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1af4c600622778a2d28fdfb7d74a40af25">GetFlagSprite</link> (int index)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager">ThemesManager</link> <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1ac07b8c8925447df70f349b6c8fa84793">Instance</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00025">25</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1af4c600622778a2d28fdfb7d74a40af25"/><section>
+    <title>GetFlagSprite()</title>
+<indexterm><primary>GetFlagSprite</primary><secondary>BlobertArena.ThemeManager.ThemesManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.ThemesManager</primary><secondary>GetFlagSprite</secondary></indexterm>
+<para><computeroutput>static Sprite BlobertArena.ThemeManager.ThemesManager.GetFlagSprite (int index)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00104">104</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1a4341659d617ca0ffa983f9a23f9b88b7"/><section>
+    <title>GetPanelColour()</title>
+<indexterm><primary>GetPanelColour</primary><secondary>BlobertArena.ThemeManager.ThemesManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.ThemesManager</primary><secondary>GetPanelColour</secondary></indexterm>
+<para><computeroutput>Color BlobertArena.ThemeManager.ThemesManager.GetPanelColour (<link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a49562cfadf65a193d5d1eb8c77a124cc">PanelColours</link> panelColour)</computeroutput></para><para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00072">72</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1aca91ab49cb45d8a98a3bb4bd0f2ba341"/><section>
+    <title>GetTextColour()</title>
+<indexterm><primary>GetTextColour</primary><secondary>BlobertArena.ThemeManager.ThemesManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.ThemesManager</primary><secondary>GetTextColour</secondary></indexterm>
+<para><computeroutput>Color BlobertArena.ThemeManager.ThemesManager.GetTextColour (<link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data_1a5a1af0b975c5a935c9403da4461e2f0c">TextColours</link> textColour)</computeroutput></para><para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00091">91</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager_1ac07b8c8925447df70f349b6c8fa84793"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>BlobertArena.ThemeManager.ThemesManager</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.ThemesManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_blobert_arena_1_1_theme_manager_1_1_themes_manager">ThemesManager</link> BlobertArena.ThemeManager.ThemesManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__themes_manager_8cs_source_1l00046">46</link> of file <link linkend="__themes_manager_8cs_source">ThemesManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Managers/Singletons/<link linkend="__themes_manager_8cs">ThemesManager.cs</link></section>
+</section>

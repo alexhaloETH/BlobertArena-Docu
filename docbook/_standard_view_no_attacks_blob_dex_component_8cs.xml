@@ -5,7 +5,16 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_class_standard_view_no_attacks_blob_dex_component">StandardViewNoAttacksBlobDexComponent</link></para>
+            <listitem><para>class <link linkend="_class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component">BlobertArena.BlobDex.StandardViewNoAttacksBlobDexComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena">BlobertArena</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_blob_dex">BlobertArena.BlobDex</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

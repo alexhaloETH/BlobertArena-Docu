@@ -88,7 +88,7 @@
 
 <para>Manager class for both music and audio effects (SINGLETON) </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00139">139</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00140">140</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -101,21 +101,21 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00139">139</link>
 <para>Mute/Unmute all audio. </para>
 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00403">403</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00407">407</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a5042c01c2fec5d64e707886f1b949511"/><section>
     <title>OnMainMenuStartGamePressed()</title>
 <indexterm><primary>OnMainMenuStartGamePressed</primary><secondary>AudioManager</secondary></indexterm>
 <indexterm><primary>AudioManager</primary><secondary>OnMainMenuStartGamePressed</secondary></indexterm>
 <para><computeroutput>static void AudioManager.OnMainMenuStartGamePressed ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00437">437</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00441">441</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a98db96b858551653d96a1e2a2e01ada5"/><section>
     <title>OnThemeSwitchButtonPressed()</title>
 <indexterm><primary>OnThemeSwitchButtonPressed</primary><secondary>AudioManager</secondary></indexterm>
 <indexterm><primary>AudioManager</primary><secondary>OnThemeSwitchButtonPressed</secondary></indexterm>
 <para><computeroutput>static void AudioManager.OnThemeSwitchButtonPressed ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00447">447</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00451">451</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1adeee63c2f8187e7219adadd594965d84"/><section>
     <title>PlayCombatBlobArena()<computeroutput>[1/2]</computeroutput></title>
@@ -146,7 +146,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00320">320</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00324">324</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a9cee78cace2f158331e2efce4897ebda"/><section>
     <title>PlayCombatBlobArena()<computeroutput>[2/2]</computeroutput></title>
@@ -177,7 +177,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00329">329</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00333">333</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a757c769ea35a476dfcf6c36799f97524"/><section>
     <title>PlayCombatCommon()</title>
@@ -208,7 +208,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00302">302</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00306">306</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a52d45840e617a16e41c00f546312bcf8"/><section>
     <title>PlayCombatSpecial()</title>
@@ -239,7 +239,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00311">311</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00315">315</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a0f8a1f0986be63bcac2309dc70dac7f5"/><section>
     <title>PlayEffect()</title>
@@ -270,7 +270,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00284">284</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00288">288</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a52dc330b550c1967a54990e39b4f6034"/><section>
     <title>PlayMusic()</title>
@@ -309,7 +309,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00271">271</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00275">275</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a8e228a27a7585498802ae37c4ebf6e77"/><section>
     <title>PlayVocal()</title>
@@ -340,7 +340,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00293">293</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00297">297</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a991b1f8c657562e6581bb3269673ef61"/><section>
     <title>SetEffectsVolume()</title>
@@ -371,7 +371,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00368">368</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00372">372</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1add05f438dc5539268686059b3515afa2"/><section>
     <title>SetMusicVolume()</title>
@@ -402,7 +402,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00352">352</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00356">356</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -412,21 +412,21 @@ Definition at line <link linkend="__audio_manager_8cs_source_1l00352">352</link>
 <indexterm><primary>EffectsVolume</primary><secondary>AudioManager</secondary></indexterm>
 <indexterm><primary>AudioManager</primary><secondary>EffectsVolume</secondary></indexterm>
 <para><computeroutput>float AudioManager.EffectsVolume = 0.75f<computeroutput>[get]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00178">178</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00182">182</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1af96f8bc4f9a0ad3f1a63a028bb31f790"/><section>
     <title>Instance</title>
 <indexterm><primary>Instance</primary><secondary>AudioManager</secondary></indexterm>
 <indexterm><primary>AudioManager</primary><secondary>Instance</secondary></indexterm>
 <para><computeroutput><link linkend="_class_audio_manager">AudioManager</link> AudioManager.Instance<computeroutput>[static]</computeroutput>, <computeroutput>[get]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00143">143</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00144">144</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <anchor xml:id="_class_audio_manager_1a312e502a26002f6e36a8da7d881709df"/><section>
     <title>MusicVolume</title>
 <indexterm><primary>MusicVolume</primary><secondary>AudioManager</secondary></indexterm>
 <indexterm><primary>AudioManager</primary><secondary>MusicVolume</secondary></indexterm>
 <para><computeroutput>float AudioManager.MusicVolume = 0.75f<computeroutput>[get]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__audio_manager_8cs_source_1l00177">177</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
+Definition at line <link linkend="__audio_manager_8cs_source_1l00181">181</link> of file <link linkend="__audio_manager_8cs_source">AudioManager.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

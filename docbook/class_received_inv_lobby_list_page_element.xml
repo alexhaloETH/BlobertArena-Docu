@@ -39,7 +39,7 @@ Public Member Functions inherited from <link linkend="_interface_i_lobby_list_el
 Properties inherited from <link linkend="_interface_i_lobby_list_element">ILobbyListElement</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00008">8</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00011">11</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -50,35 +50,35 @@ Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_sou
 <para><computeroutput>async void ReceivedInvLobbyListPageElement.InitializeElement (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> battleId, <link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> parent)</computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a951b1b770ff776454bf9e8a4c74abd54">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00048">48</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00051">51</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_received_inv_lobby_list_page_element_1acf15b8503581c6d2ccf19244a4653025"/><section>
     <title>OpenBlobDexCall()</title>
 <indexterm><primary>OpenBlobDexCall</primary><secondary>ReceivedInvLobbyListPageElement</secondary></indexterm>
 <indexterm><primary>ReceivedInvLobbyListPageElement</primary><secondary>OpenBlobDexCall</secondary></indexterm>
 <para><computeroutput>void ReceivedInvLobbyListPageElement.OpenBlobDexCall ( )</computeroutput></para><para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00120">120</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00122">122</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_received_inv_lobby_list_page_element_1a403867255d8adf764d5b93a3f66b438f"/><section>
     <title>SayNoToInvite()</title>
 <indexterm><primary>SayNoToInvite</primary><secondary>ReceivedInvLobbyListPageElement</secondary></indexterm>
 <indexterm><primary>ReceivedInvLobbyListPageElement</primary><secondary>SayNoToInvite</secondary></indexterm>
 <para><computeroutput>void ReceivedInvLobbyListPageElement.SayNoToInvite ( )</computeroutput></para><para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00115">115</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00117">117</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_received_inv_lobby_list_page_element_1a1000bd69f1655da509fdb9e0a9097cc3"/><section>
     <title>SayYesToInvite()</title>
 <indexterm><primary>SayYesToInvite</primary><secondary>ReceivedInvLobbyListPageElement</secondary></indexterm>
 <indexterm><primary>ReceivedInvLobbyListPageElement</primary><secondary>SayYesToInvite</secondary></indexterm>
 <para><computeroutput>void ReceivedInvLobbyListPageElement.SayYesToInvite ( )</computeroutput></para><para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00110">110</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00112">112</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_received_inv_lobby_list_page_element_1a0ecf919d7579105dfc1b1eee0f339ab4"/><section>
     <title>UpdateSelfBlob()</title>
 <indexterm><primary>UpdateSelfBlob</primary><secondary>ReceivedInvLobbyListPageElement</secondary></indexterm>
 <indexterm><primary>ReceivedInvLobbyListPageElement</primary><secondary>UpdateSelfBlob</secondary></indexterm>
 <para><computeroutput>void ReceivedInvLobbyListPageElement.UpdateSelfBlob (string blobId)</computeroutput></para><para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00094">94</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00096">96</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -90,7 +90,7 @@ Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_sou
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> ReceivedInvLobbyListPageElement.challengeId<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1a919833e81c2d7531dfe6df14cdf88d80">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00035">35</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00038">38</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <anchor xml:id="_class_received_inv_lobby_list_page_element_1a0c53af2b8ebdd2cc1788b000c5693f47"/><section>
     <title>parentPage</title>
@@ -99,7 +99,7 @@ Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_sou
 <para><computeroutput><link linkend="_class_lobby_list_page_behaviour">LobbyListPageBehaviour</link> ReceivedInvLobbyListPageElement.parentPage<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
 Implements <link linkend="_interface_i_lobby_list_element_1abf08a8c2cd56cf491210634c439899cd">ILobbyListElement</link>.</para>
 <para>
-Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00034">34</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
+Definition at line <link linkend="__received_inv_lobby_list_page_element_8cs_source_1l00037">37</link> of file <link linkend="__received_inv_lobby_list_page_element_8cs_source">ReceivedInvLobbyListPageElement.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

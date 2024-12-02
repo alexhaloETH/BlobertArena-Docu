@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['target_0',['target',['../class_planned_attack_1_1_planned_attack_data_query.html#a8d8c98aa443ae088c461e16d70da13db',1,'PlannedAttack.PlannedAttackDataQuery.target'],['../class_logic_layer_1_1_hit_data.html#ab7f3fc5f5ed8c5f5e6fb922a42708895',1,'LogicLayer.HitData.target']]],
+  ['target_0',['target',['../class_planned_attack_1_1_planned_attack_data_query.html#a8d8c98aa443ae088c461e16d70da13db',1,'PlannedAttack.PlannedAttackDataQuery.target'],['../class_logic_layer_1_1_query_1_1_hit_data.html#a08b46f510a9b6cf3ea4171f6e6ff5669',1,'LogicLayer.Query.HitData.target']]],
   ['timestamp_1',['timestamp',['../class_last_mint_1_1_last_mint_data_query.html#a491cca27bb4842566607617a14f867be',1,'LastMint::LastMintDataQuery']]],
   ['token_5fhigh_2',['token_high',['../class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query.html#add5899a7e0dc0d8490b67feb2720c9d4',1,'PvPChallengeScore::PvPChallengeScoreDataQuery']]],
   ['token_5fid_3',['token_id',['../class_combatant_info_1_1_combatant_info_data_query.html#acd12f54121eaeeecf3130a933d85152a',1,'CombatantInfo::CombatantInfoDataQuery']]],

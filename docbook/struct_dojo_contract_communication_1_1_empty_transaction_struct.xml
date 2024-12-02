@@ -19,7 +19,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00104">104</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00105">105</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -28,7 +28,7 @@ Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00104">104
 <indexterm><primary>EmptyTransactionStruct</primary><secondary>DojoContractCommunication.EmptyTransactionStruct</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.EmptyTransactionStruct</primary><secondary>EmptyTransactionStruct</secondary></indexterm>
 <para><computeroutput>DojoContractCommunication.EmptyTransactionStruct.EmptyTransactionStruct (<link linkend="_struct_dojo_contract_communication_1_1_endpoint_dojo_call_struct">EndpointDojoCallStruct</link> endpointData)</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00108">108</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00109">109</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -38,7 +38,7 @@ Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00108">108
 <indexterm><primary>endpointData</primary><secondary>DojoContractCommunication.EmptyTransactionStruct</secondary></indexterm>
 <indexterm><primary>DojoContractCommunication.EmptyTransactionStruct</primary><secondary>endpointData</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_dojo_contract_communication_1_1_endpoint_dojo_call_struct">EndpointDojoCallStruct</link> DojoContractCommunication.EmptyTransactionStruct.endpointData</computeroutput></para><para>
-Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00106">106</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
+Definition at line <link linkend="__dojo_contract_caller_8cs_source_1l00107">107</link> of file <link linkend="__dojo_contract_caller_8cs_source">DojoContractCaller.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

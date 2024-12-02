@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['system_0',['System',['../namespace_system.html',1,'']]],
-  ['system_3a_3aruntime_1',['Runtime',['../namespace_system_1_1_runtime.html',1,'System']]],
-  ['system_3a_3aruntime_3a_3acompilerservices_2',['CompilerServices',['../namespace_system_1_1_runtime_1_1_compiler_services.html',1,'System::Runtime']]]
+  ['logiclayer_0',['LogicLayer',['../namespace_logic_layer.html',1,'']]],
+  ['logiclayer_3a_3abackendserver_1',['BackEndServer',['../namespace_logic_layer_1_1_back_end_server.html',1,'LogicLayer']]],
+  ['logiclayer_3a_3amodels_2',['Models',['../namespace_logic_layer_1_1_models.html',1,'LogicLayer']]],
+  ['logiclayer_3a_3aquery_3',['Query',['../namespace_logic_layer_1_1_query.html',1,'LogicLayer']]]
 ];

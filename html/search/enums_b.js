@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['panelcolours_0',['PanelColours',['../namespace_theme_data.html#aaca17bebf70a340c01148ae5934f5254',1,'ThemeData']]]
+  ['panelcolours_0',['PanelColours',['../namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data.html#a49562cfadf65a193d5d1eb8c77a124cc',1,'BlobertArena::ThemeManager::BlobertArena::ThemeManager::ThemeData']]]
 ];

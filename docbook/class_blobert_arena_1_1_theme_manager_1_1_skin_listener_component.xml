@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.SkinListenerComponent Class Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.SkinListenerComponent</primary></indexterm>
+<para>Inheritance diagram for BlobertArena.ThemeManager.SkinListenerComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component_1abdcfd2178145dc93b523a5340ff820fc">OnChangeOfSkin</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component_1ad67a7defc5d9b80ef3ba3a41c61f0ca5">SetSpriteTo</link> (Sprite newSprite)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__skin_listener_component_8cs_source_1l00006">6</link> of file <link linkend="__skin_listener_component_8cs_source">SkinListenerComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component_1abdcfd2178145dc93b523a5340ff820fc"/><section>
+    <title>OnChangeOfSkin()</title>
+<indexterm><primary>OnChangeOfSkin</primary><secondary>BlobertArena.ThemeManager.SkinListenerComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinListenerComponent</primary><secondary>OnChangeOfSkin</secondary></indexterm>
+<para><computeroutput>void BlobertArena.ThemeManager.SkinListenerComponent.OnChangeOfSkin ( )</computeroutput></para><para>
+Definition at line <link linkend="__skin_listener_component_8cs_source_1l00034">34</link> of file <link linkend="__skin_listener_component_8cs_source">SkinListenerComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component_1ad67a7defc5d9b80ef3ba3a41c61f0ca5"/><section>
+    <title>SetSpriteTo()</title>
+<indexterm><primary>SetSpriteTo</primary><secondary>BlobertArena.ThemeManager.SkinListenerComponent</secondary></indexterm>
+<indexterm><primary>BlobertArena.ThemeManager.SkinListenerComponent</primary><secondary>SetSpriteTo</secondary></indexterm>
+<para><computeroutput>void BlobertArena.ThemeManager.SkinListenerComponent.SetSpriteTo (Sprite newSprite)</computeroutput></para><para>
+Definition at line <link linkend="__skin_listener_component_8cs_source_1l00043">43</link> of file <link linkend="__skin_listener_component_8cs_source">SkinListenerComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/Skin/<link linkend="__skin_listener_component_8cs">SkinListenerComponent.cs</link></section>
+</section>

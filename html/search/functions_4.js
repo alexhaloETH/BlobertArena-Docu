@@ -2,7 +2,7 @@ var searchData=
 [
   ['emptytransactionstruct_0',['EmptyTransactionStruct',['../struct_dojo_contract_communication_1_1_empty_transaction_struct.html#ae52d2ce19a577993d0eafe498416d9c0',1,'DojoContractCommunication::EmptyTransactionStruct']]],
   ['enabledropdownmenu_1',['EnableDropdownMenu',['../class_dropdown_main_menu.html#a6fb17fea65433d9a7d4e8da78188c0f4',1,'DropdownMainMenu']]],
-  ['encodeanimationdata_2',['EncodeAnimationData',['../struct_blobert_animation_controller_1_1_animation_data_trait_blobert.html#ad07ffce1694f95f43416251bb71f3e21',1,'BlobertAnimationController::AnimationDataTraitBlobert']]],
+  ['encodeanimationdata_2',['EncodeAnimationData',['../struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert.html#ad03449b8785e2484b0b2d27b1ac705d5',1,'BlobertArena::Animations::BlobertAnimationController::AnimationDataTraitBlobert']]],
   ['endpointdojocallstruct_3',['EndpointDojoCallStruct',['../struct_dojo_contract_communication_1_1_endpoint_dojo_call_struct.html#aa663ab3cfdf7799814db3dec4e5e5c9a',1,'DojoContractCommunication::EndpointDojoCallStruct']]],
   ['enterdescriptiontext_4',['EnterDescriptionText',['../class_login_page_behaviour.html#a13a335836a733496d954a3a78be07f20',1,'LoginPageBehaviour']]],
   ['entities_5',['Entities',['../class_logic_layer_1_1_world_manager_dojo.html#ab2c764975a88915f63467f9a57527427',1,'LogicLayer::WorldManagerDojo']]],

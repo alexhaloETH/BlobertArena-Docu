@@ -45,7 +45,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__animated_arrow_8cs_source_1l00044"/>00044 
 <anchor xml:id="__animated_arrow_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;StartAnimation()
 <anchor xml:id="__animated_arrow_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__animated_arrow_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Tween&#32;=&#32;LeanTween.moveLocal(m_Arrow.gameObject,&#32;m_Arrow.localPosition&#32;+&#32;m_Arrow.right&#32;*&#32;m_Distance&#32;*&#32;2,&#32;1.0f/m_AnimationSpeed)
+<anchor xml:id="__animated_arrow_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_Tween&#32;=&#32;LeanTween.moveLocal(m_Arrow.gameObject,&#32;m_Arrow.localPosition&#32;+&#32;m_Arrow.right&#32;*&#32;m_Distance&#32;*&#32;2,&#32;1.0f&#32;/&#32;m_AnimationSpeed)
 <anchor xml:id="__animated_arrow_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setEaseInOutQuad()
 <anchor xml:id="__animated_arrow_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.setLoopPingPong();
 <anchor xml:id="__animated_arrow_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}

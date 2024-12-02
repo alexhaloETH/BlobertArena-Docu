@@ -60,7 +60,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00023">23</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00024">24</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -69,7 +69,7 @@ Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00023">23<
 <indexterm><primary>FetchCombatantStateAsync</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>FetchCombatantStateAsync</secondary></indexterm>
 <para><computeroutput>async Task CombatantState.FetchCombatantStateAsync ( )</computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00085">85</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00086">86</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1a4b58caac5d7d83634667e9945ea63d97"/><section>
     <title>KeyQuery()</title>
@@ -81,7 +81,7 @@ Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00085">85<
 <indexterm><primary>OnUpdate</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>OnUpdate</secondary></indexterm>
 <para><computeroutput>override async void CombatantState.OnUpdate (Model model)</computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00037">37</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00038">38</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -91,7 +91,7 @@ Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00037">37<
 <indexterm><primary>GraphQlHeader</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string CombatantState.GraphQlHeader = &quot;blobArenaCombatantStateModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00075">75</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00076">76</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1a981c48b3940f6fb6d6822e2454f84f01"/><section>
     <title>GraphQlQueryFull</title>
@@ -117,7 +117,7 @@ Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00075">75<
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00047">47</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00048">48</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1ad7bfdd0d6a82d7ec89152d334aa46358"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -131,35 +131,35 @@ Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00047">47<
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00067">67</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00068">68</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1a6e3f29d07e156b16bceee9645201ffc3"/><section>
     <title>health</title>
 <indexterm><primary>health</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>health</secondary></indexterm>
 <para><computeroutput>byte CombatantState.health</computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00029">29</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00030">30</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1ae0eec5355e999028d7ecb55d383c6e71"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>id</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> CombatantState.id</computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00026">26</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00027">27</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1a6faf1bac8cef442cef00c679b55ca65e"/><section>
     <title>stats</title>
 <indexterm><primary>stats</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>stats</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_t_stats">TStats</link> CombatantState.stats</computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00035">35</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00036">36</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_state_1ae678c30d37d39fc92a6cd4760e3be5fe"/><section>
     <title>stun_chance</title>
 <indexterm><primary>stun_chance</primary><secondary>CombatantState</secondary></indexterm>
 <indexterm><primary>CombatantState</primary><secondary>stun_chance</secondary></indexterm>
 <para><computeroutput>byte CombatantState.stun_chance</computeroutput></para><para>
-Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00032">32</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_state_8gen_8cs_source_1l00033">33</link> of file <link linkend="__combatant_state_8gen_8cs_source">CombatantState.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

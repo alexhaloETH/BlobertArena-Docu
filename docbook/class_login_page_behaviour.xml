@@ -76,7 +76,7 @@ Public Attributes inherited from <link linkend="_class_menu">Menu</link>        
 
 <para>We do not allow the player to go forward unless everything has been loaded in, hence why the bools in the update </para>
 <para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00027">27</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00022">22</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -85,56 +85,56 @@ Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00027">27<
 <indexterm><primary>EnterDescriptionText</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>EnterDescriptionText</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.EnterDescriptionText (string description)</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00365">365</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00360">360</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a12f7f993609b2caa3ca05ace77bfaf25"/><section>
     <title>ExitDescriptionText()</title>
 <indexterm><primary>ExitDescriptionText</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>ExitDescriptionText</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.ExitDescriptionText ( )</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00371">371</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00366">366</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1ae40c4a621da6e03cb5c1134185fb48a0"/><section>
     <title>LoadData()</title>
 <indexterm><primary>LoadData</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>LoadData</secondary></indexterm>
 <para><computeroutput>async void LoginPageBehaviour.LoadData ( )</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00175">175</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00170">170</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a9c46773bcb983119c09dd2f3fdab829a"/><section>
     <title>OnStartGameButtonClicked()</title>
 <indexterm><primary>OnStartGameButtonClicked</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>OnStartGameButtonClicked</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.OnStartGameButtonClicked ( )</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00223">223</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00218">218</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a41b48e6c5347051ef5efce602d44bcfb"/><section>
     <title>SetButtonStates()</title>
 <indexterm><primary>SetButtonStates</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>SetButtonStates</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.SetButtonStates (int state)</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00218">218</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00213">213</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a573a9ed1604d871ef15980f3db7d206b"/><section>
     <title>SetDifficuLtyMode()</title>
 <indexterm><primary>SetDifficuLtyMode</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>SetDifficuLtyMode</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.SetDifficuLtyMode (int gameMode)</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00271">271</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00266">266</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a34a8c7e59ab8a2b61ab94c354e239839"/><section>
     <title>SetGameMode()</title>
 <indexterm><primary>SetGameMode</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>SetGameMode</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.SetGameMode (int gameMode)</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00277">277</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00272">272</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a182bc6bb9933d54011dd70f42e5a7028"/><section>
     <title>SwitchTheme()</title>
 <indexterm><primary>SwitchTheme</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>SwitchTheme</secondary></indexterm>
 <para><computeroutput>void LoginPageBehaviour.SwitchTheme ( )</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00283">283</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00278">278</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -144,14 +144,14 @@ Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00283">283
 <indexterm><primary>buttonText</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>buttonText</secondary></indexterm>
 <para><computeroutput>TMP_Text LoginPageBehaviour.buttonText</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00029">29</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00024">24</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <anchor xml:id="_class_login_page_behaviour_1a181ec26c14e53c2f1abe1e553488d8ac"/><section>
     <title>orText</title>
 <indexterm><primary>orText</primary><secondary>LoginPageBehaviour</secondary></indexterm>
 <indexterm><primary>LoginPageBehaviour</primary><secondary>orText</secondary></indexterm>
 <para><computeroutput>TMP_Text LoginPageBehaviour.orText</computeroutput></para><para>
-Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00030">30</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
+Definition at line <link linkend="__login_page_behaviour_8cs_source_1l00025">25</link> of file <link linkend="__login_page_behaviour_8cs_source">LoginPageBehaviour.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

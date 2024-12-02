@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['name_0',['Name',['../struct_character_animation_manager_1_1_texture_function_input.html#a4d4dfeecc18fab75db8bed585e58a483',1,'CharacterAnimationManager::TextureFunctionInput']]],
+  ['name_0',['Name',['../struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input.html#aa561e5bba3b2ef4bf8d8284a079b4b1b',1,'BlobertArena::Animations::CharacterAnimationManager::TextureFunctionInput']]],
   ['name_1',['name',['../class_item_1_1_item_data_query.html#adcca998d659781df02ff689f905ffef7',1,'Item.ItemDataQuery.name'],['../struct_tournament_list_page_behaviour_1_1_tournament_data.html#ae04bb2370c9b1da8b005b69a55a19d9d',1,'TournamentListPageBehaviour.TournamentData.name']]],
-  ['nameoflayers_2',['NameOfLayers',['../class_amma_animation_controller.html#a818a18d1a80454f574810dd1700d7636',1,'AmmaAnimationController']]],
+  ['nameoflayers_2',['NameOfLayers',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#ae43a3b53bf90fbe0b696a0d15ea3484b',1,'BlobertArena::Animations::AmmaAnimationController']]],
   ['necklace_3',['Necklace',['../class_blobert_types.html#a0950cf1ecfdf20879a2fd45033ce4bd3ae1bda4ac1fa8da51314b66510c193c0e',1,'BlobertTypes']]],
-  ['newskin_4',['NewSkin',['../class_skin_manager.html#ad4b8e9ddfe8c4c47452f1bda8fd84fe4',1,'SkinManager']]],
+  ['newskin_4',['NewSkin',['../class_blobert_arena_1_1_theme_manager_1_1_skin_manager.html#a534729b363deacbeced414d65f3a8a3f',1,'BlobertArena::ThemeManager::SkinManager']]],
   ['nftitem_5',['NFTItem',['../class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item.html',1,'LogicLayer.FetchBlobertWalletData.NFTItem'],['../class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item.html#a60faae20da89e3cd1879db4f6693f1ee',1,'LogicLayer.FetchBlobertWalletData.NFTItem.NFTItem()']]],
   ['nfttype_6',['NftType',['../struct_notification_component_manager_1_1_notification_object_setup.html#a77ba80513fd2c161654d7b84d84425ba',1,'NotificationComponentManager::NotificationObjectSetup']]],
   ['nfttypes_7',['NFTTypes',['../class_blobert_types.html#a6e7b71d682ed504f647e259090af2b94',1,'BlobertTypes']]],
-  ['node_8',['Node',['../class_logic_layer_1_1_node.html',1,'LogicLayer.Node&lt; T &gt;'],['../class_logic_layer_1_1_edge.html#a5b7f1877fbacd0a43034ac2d0f6b26dd',1,'LogicLayer.Edge.Node']]],
+  ['node_8',['Node',['../class_logic_layer_1_1_query_1_1_node.html',1,'LogicLayer.Query.Node&lt; T &gt;'],['../class_logic_layer_1_1_query_1_1_edge.html#a0419eb08b02893db892cf96aea729a12',1,'LogicLayer.Query.Edge.Node']]],
   ['nonasynccalltoforfeit_9',['NonAsyncCallToForfeit',['../class_battle_page_controller.html#a2f89544974bf48366cbed57407fa134a',1,'BattlePageController']]],
   ['none_10',['NONE',['../namespace_audio_effects.html#adb0c7f97d7b32d7f2e39ca13ad157ddfab50339a10e1de285ac99d4c3990b8693',1,'AudioEffects']]],
   ['none_11',['None',['../class_end_of_battle.html#a167a2da36a29a75fd86d917af1cc7014a6adf97f83acf6453d4a6a4b1070f3754',1,'EndOfBattle']]],

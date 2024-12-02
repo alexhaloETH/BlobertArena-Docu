@@ -638,14 +638,5 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__blobert_types_8cs_source_1l00634"/>00634 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
 <anchor xml:id="__blobert_types_8cs_source_1l00635"/>00635 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="__blobert_types_8cs_source_1l00636"/>00636 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_types_8cs_source_1l00637"/>00637 
-<anchor xml:id="__blobert_types_8cs_source_1l00638"/>00638 &#32;&#32;&#32;&#32;[Serializable]
-<anchor xml:id="__blobert_types_8cs_source_1l00639"/><link linkend="_struct_blobert_types_1_1_stats">00639</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_blobert_types_1_1_stats">Stats</link>
-<anchor xml:id="__blobert_types_8cs_source_1l00640"/>00640 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_types_8cs_source_1l00641"/><link linkend="_struct_blobert_types_1_1_stats_1a1016afeaa2fafedf4f07efa01f405e39">00641</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1a1016afeaa2fafedf4f07efa01f405e39">attack</link>;
-<anchor xml:id="__blobert_types_8cs_source_1l00642"/><link linkend="_struct_blobert_types_1_1_stats_1a943f0ed1108fa1896cf694cd0d9f09a9">00642</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1a943f0ed1108fa1896cf694cd0d9f09a9">defense</link>;
-<anchor xml:id="__blobert_types_8cs_source_1l00643"/><link linkend="_struct_blobert_types_1_1_stats_1abff62bb01f57fd3878fb5364a0ac1611">00643</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1abff62bb01f57fd3878fb5364a0ac1611">speed</link>;
-<anchor xml:id="__blobert_types_8cs_source_1l00644"/><link linkend="_struct_blobert_types_1_1_stats_1a482008a1181b182393bc89eaaa480261">00644</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">byte</emphasis>&#32;<link linkend="_struct_blobert_types_1_1_stats_1a482008a1181b182393bc89eaaa480261">strength</link>;
-<anchor xml:id="__blobert_types_8cs_source_1l00645"/>00645 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_types_8cs_source_1l00646"/>00646 }
+<anchor xml:id="__blobert_types_8cs_source_1l00637"/>00637 }
 </programlisting></section>

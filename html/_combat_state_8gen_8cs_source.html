@@ -102,13 +102,13 @@ $(function(){initNavTree('_combat_state_8gen_8cs_source.html',''); initResizable
 <a href="_combat_state_8gen_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>Dojo;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Dojo.Starknet;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Dojo.Torii;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>Newtonsoft.Json.Linq;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>SimpleGraphQL;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_system.html">System</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>System.Threading.Tasks;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>.<a class="code hl_class" href="class_logic_layer_1_1_games_data_model.html">GamesDataModel</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Newtonsoft.Json.Linq;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>SimpleGraphQL;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_system.html">System</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>System.Threading.Tasks;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer_1_1_models.html">LogicLayer.Models</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logic_layer_1_1_query.html">LogicLayer.Query</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span><a class="code hl_typedef" href="_arcade_blobert_8gen_8cs.html#a1ad026eae6158e05516a7fc458801fd6">Enum</a> = Dojo.Starknet.Enum;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Type definition for `blob_arena::models::combat::Phase` enum</span></div>
@@ -168,28 +168,28 @@ $(function(){initNavTree('_combat_state_8gen_8cs_source.html',''); initResizable
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">public</span> <span class="keyword">static</span> GameStatus SetStatusInMapping(CombatState gameState)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">public</span> <span class="keyword">static</span> GamesDataModel.GameStatus SetStatusInMapping(CombatState gameState)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (_gameStatusDict.ContainsKey(gameState.id.Hex()))</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (GamesDataModel._gameStatusDict.ContainsKey(gameState.id.Hex()))</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            var state = _gameStatusDict[gameState.id.Hex()];  <span class="comment">//if the state is either lobby game ended or exited then early return</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            var state = GamesDataModel._gameStatusDict[gameState.id.Hex()];  <span class="comment">//if the state is either lobby game ended or exited then early return</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">switch</span> (state)</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">case</span> GameStatus.Exited:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">case</span> GamesDataModel.GameStatus.Exited:</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    <span class="keywordflow">return</span> state;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">if</span> (gameState.phase is Phase.Ended)</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            UpdateGameStatus(gameState.id.Hex(), GameStatus.Ended);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">return</span> GameStatus.Ended;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            GamesDataModel.UpdateGameStatus(gameState.id.Hex(), GamesDataModel.GameStatus.Ended);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">return</span> GamesDataModel.GameStatus.Ended;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            UpdateGameStatus(gameState.id.Hex(), GameStatus.Game);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> GameStatus.Game;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            GamesDataModel.UpdateGameStatus(gameState.id.Hex(), GamesDataModel.GameStatus.Game);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> GamesDataModel.GameStatus.Game;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
@@ -235,7 +235,7 @@ $(function(){initNavTree('_combat_state_8gen_8cs_source.html',''); initResizable
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="stringliteral">                }</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="stringliteral">    &quot;</span>;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">public</span> <span class="keyword">class </span>CombatStateDataQuery : <a class="code hl_interface" href="interface_logic_layer_1_1_i_data.html">IData</a></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">public</span> <span class="keyword">class </span>CombatStateDataQuery : <a class="code hl_interface" href="interface_logic_layer_1_1_query_1_1_i_data.html">IData</a></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    {</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> __typename { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> block_number { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
@@ -293,12 +293,12 @@ $(function(){initNavTree('_combat_state_8gen_8cs_source.html',''); initResizable
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            phase = <span class="keyword">new</span> Phase.Ended(<span class="keyword">new</span> <a class="code hl_typedef" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>(endedString));</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>.<a class="code hl_class" href="class_logic_layer_1_1_local_data_model.html">LocalDataModel</a>.ChoosenGameId == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (LocalDataModel.ChoosenGameId == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        {</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespace_logic_layer.html">LogicLayer</a>.<a class="code hl_class" href="class_logic_layer_1_1_local_data_model.html">LocalDataModel</a>.ChoosenGameId != <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">if</span> (LocalDataModel.ChoosenGameId != <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        {</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
@@ -306,16 +306,15 @@ $(function(){initNavTree('_combat_state_8gen_8cs_source.html',''); initResizable
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">    #endregion WorkAround</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
-<div class="ttc" id="a_arcade_blobert_8gen_8cs_html_a1ad026eae6158e05516a7fc458801fd6"><div class="ttname"><a href="_arcade_blobert_8gen_8cs.html#a1ad026eae6158e05516a7fc458801fd6">Enum</a></div><div class="ttdeci">Dojo.Starknet.Enum Enum</div><div class="ttdef"><b>Definition</b> <a href="_arcade_blobert_8gen_8cs_source.html#l00010">ArcadeBlobert.gen.cs:10</a></div></div>
+<div class="ttc" id="a_arcade_blobert_8gen_8cs_html_a1ad026eae6158e05516a7fc458801fd6"><div class="ttname"><a href="_arcade_blobert_8gen_8cs.html#a1ad026eae6158e05516a7fc458801fd6">Enum</a></div><div class="ttdeci">Dojo.Starknet.Enum Enum</div><div class="ttdef"><b>Definition</b> <a href="_arcade_blobert_8gen_8cs_source.html#l00012">ArcadeBlobert.gen.cs:12</a></div></div>
 <div class="ttc" id="a_attack_result_8cs_html_a680846c413970a24b7783196259823ae"><div class="ttname"><a href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a></div><div class="ttdeci">Dojo.Torii.Query Query</div><div class="ttdef"><b>Definition</b> <a href="_attack_result_8cs_source.html#l00014">AttackResult.cs:14</a></div></div>
-<div class="ttc" id="a_view_equipped_attacks_blob_dex_component_8cs_html_a04fcbbbbb88c5b1e47388f419576f399"><div class="ttname"><a href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a></div><div class="ttdeci">Dojo.Starknet.FieldElement FieldElement</div><div class="ttdef"><b>Definition</b> <a href="_view_equipped_attacks_blob_dex_component_8cs_source.html#l00006">ViewEquippedAttacksBlobDexComponent.cs:6</a></div></div>
-<div class="ttc" id="aclass_logic_layer_1_1_games_data_model_html"><div class="ttname"><a href="class_logic_layer_1_1_games_data_model.html">LogicLayer.GamesDataModel</a></div><div class="ttdef"><b>Definition</b> <a href="_games_data_model_8cs_source.html#l00052">GamesDataModel.cs:53</a></div></div>
-<div class="ttc" id="aclass_logic_layer_1_1_local_data_model_html"><div class="ttname"><a href="class_logic_layer_1_1_local_data_model.html">LogicLayer.LocalDataModel</a></div><div class="ttdef"><b>Definition</b> <a href="_local_data_model_8cs_source.html#l00022">LocalDataModel.cs:23</a></div></div>
+<div class="ttc" id="a_view_equipped_attacks_blob_dex_component_8cs_html_a04fcbbbbb88c5b1e47388f419576f399"><div class="ttname"><a href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a></div><div class="ttdeci">Dojo.Starknet.FieldElement FieldElement</div><div class="ttdef"><b>Definition</b> <a href="_view_equipped_attacks_blob_dex_component_8cs_source.html#l00005">ViewEquippedAttacksBlobDexComponent.cs:5</a></div></div>
 <div class="ttc" id="aclass_query_helper_html"><div class="ttname"><a href="class_query_helper.html">QueryHelper</a></div><div class="ttdef"><b>Definition</b> <a href="_query_helper_8cs_source.html#l00006">QueryHelper.cs:7</a></div></div>
 <div class="ttc" id="aclass_query_helper_html_af7ca5c42433dbc2e03ce22e0618a4d64"><div class="ttname"><a href="class_query_helper.html#af7ca5c42433dbc2e03ce22e0618a4d64">QueryHelper.CreateKeysModelQuery</a></div><div class="ttdeci">static Query CreateKeysModelQuery(FieldElement[] keys, dojo.PatternMatching pattern, string modelName, uint limit=1000, uint offset=0)</div><div class="ttdoc">Fixed len all the keys are given var len not all of them are given.</div><div class="ttdef"><b>Definition</b> <a href="_query_helper_8cs_source.html#l00017">QueryHelper.cs:17</a></div></div>
-<div class="ttc" id="ainterface_logic_layer_1_1_i_data_html"><div class="ttname"><a href="interface_logic_layer_1_1_i_data.html">LogicLayer.IData</a></div><div class="ttdef"><b>Definition</b> <a href="_query_manager_8cs_source.html#l00159">QueryManager.cs:160</a></div></div>
-<div class="ttc" id="anamespace_logic_layer_html"><div class="ttname"><a href="namespace_logic_layer.html">LogicLayer</a></div><div class="ttdef"><b>Definition</b> <a href="_synchro_manager_dojo_8cs_source.html#l00012">SynchroManagerDojo.cs:13</a></div></div>
-<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="ainterface_logic_layer_1_1_query_1_1_i_data_html"><div class="ttname"><a href="interface_logic_layer_1_1_query_1_1_i_data.html">LogicLayer.Query.IData</a></div><div class="ttdef"><b>Definition</b> <a href="_query_manager_8cs_source.html#l00182">QueryManager.cs:183</a></div></div>
+<div class="ttc" id="anamespace_logic_layer_1_1_models_html"><div class="ttname"><a href="namespace_logic_layer_1_1_models.html">LogicLayer.Models</a></div><div class="ttdef"><b>Definition</b> <a href="_games_data_model_8cs_source.html#l00013">GamesDataModel.cs:14</a></div></div>
+<div class="ttc" id="anamespace_logic_layer_1_1_query_html"><div class="ttname"><a href="namespace_logic_layer_1_1_query.html">LogicLayer.Query</a></div><div class="ttdef"><b>Definition</b> <a href="_query_manager_8cs_source.html#l00004">QueryManager.cs:5</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition</b> <a href="_game_manager_8cs_source.html#l00011">GameManager.cs:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

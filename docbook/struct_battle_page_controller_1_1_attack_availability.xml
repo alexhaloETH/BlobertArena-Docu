@@ -47,7 +47,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00028">28</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00029">29</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -56,35 +56,35 @@ Definition at line <link linkend="__battle_page_controller_8cs_source_1l00028">2
 <indexterm><primary>Equals</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Equals</secondary></indexterm>
 <para><computeroutput>bool BattlePageController.AttackAvailability.Equals (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> other)</computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00034">34</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00035">35</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a65ceefbe71c0ad9f4a2955c1a45a42b7"/><section>
     <title>Equals()<computeroutput>[2/2]</computeroutput></title>
 <indexterm><primary>Equals</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Equals</secondary></indexterm>
 <para><computeroutput>override bool BattlePageController.AttackAvailability.Equals (object obj)</computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00039">39</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00040">40</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1ab9b7cf938c0cc27602d8fc5353be400d"/><section>
     <title>GetHashCode()</title>
 <indexterm><primary>GetHashCode</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>GetHashCode</secondary></indexterm>
 <para><computeroutput>override int BattlePageController.AttackAvailability.GetHashCode ( )</computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00044">44</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00045">45</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a9306581bc9d2eadc8f05f487b86a4dce"/><section>
     <title>operator!=()</title>
 <indexterm><primary>operator!=</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>operator!=</secondary></indexterm>
 <para><computeroutput>static bool BattlePageController.AttackAvailability.operator!= (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> left, <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> right)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00054">54</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00055">55</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1ad5f07d2f2c2d693cfdd208ab3b8d88c4"/><section>
     <title>operator==()</title>
 <indexterm><primary>operator==</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>operator==</secondary></indexterm>
 <para><computeroutput>static bool BattlePageController.AttackAvailability.operator== (<link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> left, <link linkend="_struct_battle_page_controller_1_1_attack_availability">AttackAvailability</link> right)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00049">49</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00050">50</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -94,21 +94,21 @@ Definition at line <link linkend="__battle_page_controller_8cs_source_1l00049">4
 <indexterm><primary>Attack</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Attack</secondary></indexterm>
 <para><computeroutput>Attack BattlePageController.AttackAvailability.Attack<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00030">30</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00031">31</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1a7804275e40710331a9cceb8ab9b81567"/><section>
     <title>Availability</title>
 <indexterm><primary>Availability</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>Availability</secondary></indexterm>
 <para><computeroutput>bool BattlePageController.AttackAvailability.Availability<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00031">31</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00032">32</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_battle_page_controller_1_1_attack_availability_1aa548149c78bca885eab75a77afb7e0eb"/><section>
     <title>RoundUntil</title>
 <indexterm><primary>RoundUntil</primary><secondary>BattlePageController.AttackAvailability</secondary></indexterm>
 <indexterm><primary>BattlePageController.AttackAvailability</primary><secondary>RoundUntil</secondary></indexterm>
 <para><computeroutput>int BattlePageController.AttackAvailability.RoundUntil<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__battle_page_controller_8cs_source_1l00032">32</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
+Definition at line <link linkend="__battle_page_controller_8cs_source_1l00033">33</link> of file <link linkend="__battle_page_controller_8cs_source">BattlePageController.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

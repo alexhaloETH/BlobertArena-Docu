@@ -24,10 +24,10 @@
 </listitem>
         </itemizedlist>
 </simplesect>
-Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_query_1_1_i_data">LogicLayer.Query.IData</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00048">48</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00052">52</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
 </section>
 <section>
 <title>Property Documentation</title>
@@ -36,23 +36,23 @@ Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00048">48</link>
 <indexterm><primary>__typename</primary><secondary>LastMint.LastMintDataQuery</secondary></indexterm>
 <indexterm><primary>LastMint.LastMintDataQuery</primary><secondary>__typename</secondary></indexterm>
 <para><computeroutput>string LastMint.LastMintDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+Implements <link linkend="_interface_logic_layer_1_1_query_1_1_i_data_1afac299ef67932b69363a6f36f943c3c0">LogicLayer.Query.IData</link>.</para>
 <para>
-Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00050">50</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00054">54</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_last_mint_1_1_last_mint_data_query_1ade7ca77d7593df6df181d52734be04c4"/><section>
     <title>player</title>
 <indexterm><primary>player</primary><secondary>LastMint.LastMintDataQuery</secondary></indexterm>
 <indexterm><primary>LastMint.LastMintDataQuery</primary><secondary>player</secondary></indexterm>
 <para><computeroutput>string LastMint.LastMintDataQuery.player = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00051">51</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00055">55</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_last_mint_1_1_last_mint_data_query_1a491cca27bb4842566607617a14f867be"/><section>
     <title>timestamp</title>
 <indexterm><primary>timestamp</primary><secondary>LastMint.LastMintDataQuery</secondary></indexterm>
 <indexterm><primary>LastMint.LastMintDataQuery</primary><secondary>timestamp</secondary></indexterm>
 <para><computeroutput>string LastMint.LastMintDataQuery.timestamp = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00052">52</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
+Definition at line <link linkend="__last_mint_8gen_8cs_source_1l00056">56</link> of file <link linkend="__last_mint_8gen_8cs_source">LastMint.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

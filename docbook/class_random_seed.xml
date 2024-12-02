@@ -47,7 +47,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00007">7</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00008">8</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -64,7 +64,7 @@ Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00007">7</link
 <indexterm><primary>GraphQlHeader</primary><secondary>RandomSeed</secondary></indexterm>
 <indexterm><primary>RandomSeed</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string RandomSeed.GraphQlHeader = &quot;blobArenaRandomSeed&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00051">51</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00052">52</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_random_seed_1a910e1bfe897fb839beb4af4f8f13d985"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -77,14 +77,14 @@ Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00051">51</lin
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00044">44</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00045">45</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_random_seed_1aeaa0e2d9051172d46a8095083b71ce3e"/><section>
     <title>key</title>
 <indexterm><primary>key</primary><secondary>RandomSeed</secondary></indexterm>
 <indexterm><primary>RandomSeed</primary><secondary>key</secondary></indexterm>
 <para><computeroutput>bool RandomSeed.key</computeroutput></para><para>
-Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00010">10</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00011">11</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_random_seed_1a36bd6ff5a22f4a5d5c6df785a96d2ab5"/><section>
     <title>PvpCombatantsGraphQlQueryFullString</title>
@@ -110,14 +110,14 @@ Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00010">10</lin
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00024">24</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00025">25</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_random_seed_1ae761689da19fad807431bf6e979b88cd"/><section>
     <title>value</title>
 <indexterm><primary>value</primary><secondary>RandomSeed</secondary></indexterm>
 <indexterm><primary>RandomSeed</primary><secondary>value</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> RandomSeed.value</computeroutput></para><para>
-Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00013">13</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
+Definition at line <link linkend="__random_seed_8gen_8cs_source_1l00014">14</link> of file <link linkend="__random_seed_8gen_8cs_source">RandomSeed.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

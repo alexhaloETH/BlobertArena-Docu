@@ -18,18 +18,30 @@
             <listitem><para>static <link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link> <link linkend="_class_a_m_m_a_blobert_1ae2e956038b749ab973db910f93512ac4">FigtherIdToTraits</link> (byte <link linkend="_class_a_m_m_a_blobert_1a5eff0d62ed48681afc9f0f774326f1b4">fighterId</link>)</para>
 </listitem>
             <listitem><para>static string <link linkend="_class_a_m_m_a_blobert_1ad9cedd11496fcee21327bb32ae63a88b">GetNameFromFighterId</link> (byte <link linkend="_class_a_m_m_a_blobert_1a5eff0d62ed48681afc9f0f774326f1b4">fighterId</link>)</para>
+
+<para>Retrieves the name of a fighter based on their fighter ID. </para>
 </listitem>
             <listitem><para>static byte <link linkend="_class_a_m_m_a_blobert_1abdd11411423f1d292778314a66035bb4">GetFighterIdFromName</link> (string name)</para>
+
+<para>Retrieves the fighter ID based on their name. </para>
 </listitem>
             <listitem><para>static byte <link linkend="_class_a_m_m_a_blobert_1a684442fc377c251dfb400482976cfd1f">GetCustomIdFromFighterId</link> (byte <link linkend="_class_a_m_m_a_blobert_1a5eff0d62ed48681afc9f0f774326f1b4">fighterId</link>)</para>
+
+<para>Retrieves the custom ID based on the fighter ID. </para>
 </listitem>
             <listitem><para>static byte <link linkend="_class_a_m_m_a_blobert_1a557e7ee6eaebcc94e78029ce32c66523">GetFighterIdFromCustomId</link> (byte <link linkend="_class_a_m_m_a_blobert_1af1c680a5fb9c607ced751c68df26deba">customId</link>)</para>
-</listitem>
-            <listitem><para>static async Task&lt; List&lt; int &gt; &gt; <link linkend="_class_a_m_m_a_blobert_1ab671c61a794e883c347d55cefae1297f">GetMissingCharacters</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)</para>
+
+<para>Retrieves the fighter ID based on the custom ID. </para>
 </listitem>
             <listitem><para>static Dojo.Torii.Query <link linkend="_class_a_m_m_a_blobert_1a4388e27301eab735f70b341674ee88be">KeyQuery</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_class_a_m_m_a_blobert_1a5eff0d62ed48681afc9f0f774326f1b4">fighterId</link>)</para>
 </listitem>
+            <listitem><para>static async Task&lt; List&lt; int &gt; &gt; <link linkend="_class_a_m_m_a_blobert_1ab671c61a794e883c347d55cefae1297f">GetMissingCharacters</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)</para>
+
+<para>Retrieves the list of missing AMMA character IDs for a given address. </para>
+</listitem>
             <listitem><para>static async Task&lt;(bool allowedToMint, int gamesLeft)&gt; <link linkend="_class_a_m_m_a_blobert_1a06aba5ec7e6a529fb56962c958d7369a">CheckIfAbleToMintMickey</link> (string senderAddress)</para>
+
+<para>Checks if the user is allowed to mint a Mickey based on the number of ended games they have participated in. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -58,7 +70,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00012">12</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00011">11</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -67,55 +79,233 @@ Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00012">12<
 <indexterm><primary>CheckIfAbleToMintMickey</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>CheckIfAbleToMintMickey</secondary></indexterm>
 <para><computeroutput>static async Task&lt;(bool allowedToMint, int gamesLeft)&gt; AMMABlobert.CheckIfAbleToMintMickey (string senderAddress)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00251">251</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+
+<para>Checks if the user is allowed to mint a Mickey based on the number of ended games they have participated in. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>senderAddress</entry><entry>
+<para>The address of the sender.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A tuple containing a boolean value indicating whether the user is allowed to mint a Mickey and an integer representing the number of games left.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00276">276</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1ae2e956038b749ab973db910f93512ac4"/><section>
     <title>FigtherIdToTraits()</title>
 <indexterm><primary>FigtherIdToTraits</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>FigtherIdToTraits</secondary></indexterm>
 <para><computeroutput>static <link linkend="_struct_blobert_types_1_1_traits">BlobertTypes.Traits</link> AMMABlobert.FigtherIdToTraits (byte fighterId)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00049">49</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00044">44</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a684442fc377c251dfb400482976cfd1f"/><section>
     <title>GetCustomIdFromFighterId()</title>
 <indexterm><primary>GetCustomIdFromFighterId</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GetCustomIdFromFighterId</secondary></indexterm>
 <para><computeroutput>static byte AMMABlobert.GetCustomIdFromFighterId (byte fighterId)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00178">178</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+
+<para>Retrieves the custom ID based on the fighter ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fighterId</entry><entry>
+<para>The ID of the fighter.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The custom ID of the fighter.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00188">188</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a557e7ee6eaebcc94e78029ce32c66523"/><section>
     <title>GetFighterIdFromCustomId()</title>
 <indexterm><primary>GetFighterIdFromCustomId</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GetFighterIdFromCustomId</secondary></indexterm>
 <para><computeroutput>static byte AMMABlobert.GetFighterIdFromCustomId (byte customId)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00183">183</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+
+<para>Retrieves the fighter ID based on the custom ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>customId</entry><entry>
+<para>The custom ID of the fighter.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The ID of the fighter.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00198">198</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a54ed22adbc91fed044712d858cd9c32a"/><section>
     <title>GetFighterIdFromCustomValue()</title>
 <indexterm><primary>GetFighterIdFromCustomValue</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GetFighterIdFromCustomValue</secondary></indexterm>
-<para><computeroutput>static byte AMMABlobert.GetFighterIdFromCustomValue (byte customValue)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00035">35</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
-</section>
+<para><computeroutput>static byte AMMABlobert.GetFighterIdFromCustomValue (byte customValue)<computeroutput>[static]</computeroutput></computeroutput></para></section>
 <anchor xml:id="_class_a_m_m_a_blobert_1abdd11411423f1d292778314a66035bb4"/><section>
     <title>GetFighterIdFromName()</title>
 <indexterm><primary>GetFighterIdFromName</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GetFighterIdFromName</secondary></indexterm>
 <para><computeroutput>static byte AMMABlobert.GetFighterIdFromName (string name)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00148">148</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+
+<para>Retrieves the fighter ID based on their name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the fighter.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The ID of the fighter.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00153">153</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1ab671c61a794e883c347d55cefae1297f"/><section>
     <title>GetMissingCharacters()</title>
 <indexterm><primary>GetMissingCharacters</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GetMissingCharacters</secondary></indexterm>
 <para><computeroutput>static async Task&lt; List&lt; int &gt; &gt; AMMABlobert.GetMissingCharacters (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> address)<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00188">188</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+
+<para>Retrieves the list of missing AMMA character IDs for a given address. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>address</entry><entry>
+<para>The address to query for.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The list of missing AMMA character IDs.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00210">210</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1ad9cedd11496fcee21327bb32ae63a88b"/><section>
     <title>GetNameFromFighterId()</title>
 <indexterm><primary>GetNameFromFighterId</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GetNameFromFighterId</secondary></indexterm>
 <para><computeroutput>static string AMMABlobert.GetNameFromFighterId (byte fighterId)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the name of a fighter based on their fighter ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fighterId</entry><entry>
+<para>The ID of the fighter.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The name of the fighter.</para>
+</formalpara>
+</para>
+<para>
 Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00118">118</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a4388e27301eab735f70b341674ee88be"/><section>
@@ -131,28 +321,28 @@ Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00118">118
 <indexterm><primary>customId</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>customId</secondary></indexterm>
 <para><computeroutput>byte AMMABlobert.customId</computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00033">33</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00040">40</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a3b7e2b0f59f0a0d177b77e5960db39b5"/><section>
     <title>dojoName</title>
 <indexterm><primary>dojoName</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>dojoName</secondary></indexterm>
 <para><computeroutput>string AMMABlobert.dojoName</computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00030">30</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00037">37</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a5eff0d62ed48681afc9f0f774326f1b4"/><section>
     <title>fighterId</title>
 <indexterm><primary>fighterId</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>fighterId</secondary></indexterm>
 <para><computeroutput>byte AMMABlobert.fighterId</computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00027">27</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00034">34</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1abef346324e75aa7e4dd41aace9f702c2"/><section>
     <title>GraphQlHeader</title>
 <indexterm><primary>GraphQlHeader</primary><secondary>AMMABlobert</secondary></indexterm>
 <indexterm><primary>AMMABlobert</primary><secondary>GraphQlHeader</secondary></indexterm>
 <para><computeroutput>readonly string AMMABlobert.GraphQlHeader = &quot;blobArenaAttackModels&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00370">370</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00401">401</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a05cf68dcff86e815b3c9e1ab14af716f"/><section>
     <title>GraphQlQueryFull</title>
@@ -178,7 +368,7 @@ Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00370">370
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00342">342</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00373">373</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_a_m_m_a_blobert_1a62386cecc6f5f1148530cc8698c7b67a"/><section>
     <title>GraphQlQueryOnSection</title>
@@ -192,7 +382,7 @@ Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00342">342
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>
 </programlisting><para>
-Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00362">362</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
+Definition at line <link linkend="__a_m_m_a_blobert_8gen_8cs_source_1l00393">393</link> of file <link linkend="__a_m_m_a_blobert_8gen_8cs_source">AMMABlobert.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

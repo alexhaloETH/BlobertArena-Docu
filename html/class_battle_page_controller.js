@@ -28,7 +28,7 @@ var class_battle_page_controller =
     [ "OnChainTransactionCallbackFunctionR", "class_battle_page_controller.html#a48e545c71a56135c796cf8d981e0ef1e", null ],
     [ "OnChainTransactionCallbackFunctionRR", "class_battle_page_controller.html#a4d0eb0c8b966e2f66cf4a28d719792c6", null ],
     [ "SetBattleState", "class_battle_page_controller.html#a0390ce78d4c4ae8fd3a112b72043dc49", null ],
-    [ "SetDojoData", "class_battle_page_controller.html#ac2b5890d8918815b656c55ccf1424e8e", null ],
+    [ "SetDojoData", "class_battle_page_controller.html#a77c9808ad94d316979f74c80fc00a4a9", null ],
     [ "SetPlannedAttacks", "class_battle_page_controller.html#ab209234c101f1c3f7a52f323f579d422", null ],
     [ "ToggleBattleUi", "class_battle_page_controller.html#a634b7a86a2182c86a19c0fe577a30cad", null ],
     [ "attacks", "class_battle_page_controller.html#acd6c7f4477e1a327dbc0a7240520e0ca", null ],

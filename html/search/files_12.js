@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['thememanager_2ecs_0',['ThemeManager.cs',['../_theme_manager_8cs.html',1,'']]],
+  ['themesmanager_2ecs_0',['ThemesManager.cs',['../_themes_manager_8cs.html',1,'']]],
   ['togglecomponent_2ecs_1',['ToggleComponent.cs',['../_toggle_component_8cs.html',1,'']]],
   ['toggleskincomponent_2ecs_2',['ToggleSkinComponent.cs',['../_toggle_skin_component_8cs.html',1,'']]],
   ['topbarbuttoncomponent_2ecs_3',['TopBarButtonComponent.cs',['../_top_bar_button_component_8cs.html',1,'']]],

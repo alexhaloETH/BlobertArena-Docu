@@ -31,7 +31,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RevokeResponse,<emphasis role="comment">//&#32;admin&#32;leaves</emphasis>
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RejectInvite,&#32;<emphasis role="comment">//guest&#32;rejects&#32;invit</emphasis>
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RejectResponse,&#32;<emphasis role="comment">//guest&#32;rejects&#32;response</emphasis>
-<anchor xml:id="__pvp_actions_contract_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptResponse,&#32;<emphasis role="comment">//</emphasis>
+<anchor xml:id="__pvp_actions_contract_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AcceptResponse,
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00031"/>00031 
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CommitAttack,
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RevealAttack,
@@ -105,7 +105,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.receiver&#32;=&#32;<link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1a0a11ba1e26e16096d8924f2fea025084">receiver</link>;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.collectionAddress&#32;=&#32;<link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1abb642edf4800bdd84e89a4905e22687e">collectionAddress</link>;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00103"/>00103 
-<anchor xml:id="__pvp_actions_contract_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;split&#32;=&#32;BlobertUtils.SplitU256ToU128(<link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1aff3733d3fcaeb743eeef4a0ead942493">tokenId</link>.Hex());
+<anchor xml:id="__pvp_actions_contract_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;split&#32;=&#32;<link linkend="_namespace_starknet_utils">StarknetUtils</link>.<link linkend="_class_starknet_utils_1_1_starknet_hash_operations_utils">StarknetHashOperationsUtils</link>.SplitU256ToU128(<link linkend="_struct_pvp_actions_contract_1_1_send_invite_struct_1aff3733d3fcaeb743eeef4a0ead942493">tokenId</link>.Hex());
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.tokenId&#32;=&#32;split.low;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.emptyFieldElement&#32;=&#32;split.high;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00107"/>00107 
@@ -141,7 +141,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.challengeId&#32;=&#32;<link linkend="_struct_pvp_actions_contract_1_1_respond_invite_struct_1a29667b74b3c7afd768081733ba26d484">challengeId</link>;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00139"/>00139 
-<anchor xml:id="__pvp_actions_contract_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;split&#32;=&#32;BlobertUtils.SplitU256ToU128(<link linkend="_struct_pvp_actions_contract_1_1_respond_invite_struct_1a9a1dfe68a015c2c2afab34f8a0d0843f">tokenId</link>.Hex());
+<anchor xml:id="__pvp_actions_contract_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;split&#32;=&#32;<link linkend="_namespace_starknet_utils">StarknetUtils</link>.<link linkend="_class_starknet_utils_1_1_starknet_hash_operations_utils">StarknetHashOperationsUtils</link>.SplitU256ToU128(<link linkend="_struct_pvp_actions_contract_1_1_respond_invite_struct_1a9a1dfe68a015c2c2afab34f8a0d0843f">tokenId</link>.Hex());
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.tokenId&#32;=&#32;split.low;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.emptyFieldElement&#32;=&#32;split.high;
 <anchor xml:id="__pvp_actions_contract_8cs_source_1l00143"/>00143 

@@ -5,11 +5,11 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <emphasis role="strong">LogicLayer.LocalDataModel</emphasis></para>
+            <listitem><para>class <emphasis role="strong">LogicLayer.Models.LocalDataModel</emphasis></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data">LogicLayer.LocalDataModel.DojoData</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data">LogicLayer.Models.LocalDataModel.DojoData</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_class_logic_layer_1_1_local_data_model_1_1_dojo_data_serializable">LogicLayer.LocalDataModel.DojoDataSerializable</link></para>
+            <listitem><para>class <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable">LogicLayer.Models.LocalDataModel.DojoDataSerializable</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -17,6 +17,8 @@
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespace_logic_layer">LogicLayer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_logic_layer_1_1_models">LogicLayer.Models</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

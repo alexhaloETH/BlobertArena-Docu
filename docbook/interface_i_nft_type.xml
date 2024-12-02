@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_i_nft_type" xml:lang="en-US">
 <title>INftType Interface Reference</title>
 <indexterm><primary>INftType</primary></indexterm>
+<para>
+
+<para>Defines the interface for NFT types, providing a blueprint for methods and properties to handle statistics, items, traits, ownership, and other NFT-related functionalities. </para>
+ 
+</para>
 <para>Inheritance diagram for INftType:    <informalfigure>
         <mediaobject>
             <imageobject>
@@ -14,37 +19,65 @@
     <title>Public Member Functions    </title>
         <itemizedlist>
             <listitem><para><link linkend="_struct_t_stats">TStats</link> <link linkend="_interface_i_nft_type_1a2abc488b33cbb624a9c00fc6efe8b974">GetStats</link> ()</para>
+
+<para>Retrieves the stats associated with the NFT. </para>
 </listitem>
             <listitem><para>List&lt; <link linkend="_class_item">Item</link> &gt; <link linkend="_interface_i_nft_type_1a7bd25912127182da857a5e7224d5d489">GetItems</link> ()</para>
+
+<para>Retrieves the list of items associated with the NFT. </para>
 </listitem>
             <listitem><para>Dictionary&lt; string, List&lt; Attack &gt; &gt; <link linkend="_interface_i_nft_type_1aea8d4c717f7660add2e3d5c3920fd41a">GetAttackMapToTrait</link> ()</para>
+
+<para>Retrieves a mapping of traits to their associated attacks. </para>
 </listitem>
             <listitem><para>Dictionary&lt; string, <link linkend="_class_item">Item</link> &gt; <link linkend="_interface_i_nft_type_1a042ec63cdfa6aa93bf8558bd9d1bc294">GetItemMapToTrait</link> ()</para>
+
+<para>Retrieves a mapping of traits to their associated items. </para>
 </listitem>
             <listitem><para>TokenTrait <link linkend="_interface_i_nft_type_1abe085c5479f08c0ab55bad8027cda365">GetTokenTrait</link> ()</para>
+
+<para>Retrieves the trait information of the token. </para>
 </listitem>
             <listitem><para><link linkend="_struct_seed">Seed</link> <link linkend="_interface_i_nft_type_1afa7bc1d87ec6484c21c78e686a876a99">GetSeed</link> ()</para>
+
+<para>Retrieves the seed data for the NFT. </para>
 </listitem>
             <listitem><para>byte <link linkend="_interface_i_nft_type_1a64c18169831c3928f539756915454d38">GetCustom</link> ()</para>
+
+<para>Retrieves the custom byte value associated with the NFT. </para>
 </listitem>
             <listitem><para>int <link linkend="_interface_i_nft_type_1a460575e5ee67460688b562300c8e75aa">GetMaxHealth</link> ()</para>
+
+<para>Retrieves the maximum health value of the NFT. </para>
 </listitem>
             <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_interface_i_nft_type_1a8b06e21a4892cbf5961568f4d118be3e">GetOwner</link> ()</para>
+
+<para>Retrieves the owner of the NFT as a FieldElement. </para>
 </listitem>
             <listitem><para><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> <link linkend="_interface_i_nft_type_1ad85fb13e00c2fed0e17d74131e957924">GetTokenId</link> ()</para>
+
+<para>Retrieves the token ID of the NFT. </para>
 </listitem>
             <listitem><para>bool <link linkend="_interface_i_nft_type_1a64674a4b35f8d823646b4a804773eeb3">IsAddressOwner</link> (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> user)</para>
+
+<para>Checks if a given address corresponds to the owner of the NFT. </para>
 </listitem>
             <listitem><para><link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> <link linkend="_interface_i_nft_type_1a38e8bce326427c4a3d7e35f69e7e7a5c">GetNftType</link> ()</para>
+
+<para>Retrieves the specific NFT type from the <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> enumeration. </para>
 </listitem>
             <listitem><para>T <link linkend="_interface_i_nft_type_1acad47123d95d62e5fcab1f88a895487c">GetInstance&lt; T &gt;</link> ()</para>
+
+<para>Retrieves an instance of the implementing type, cast to the specified generic type. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Detailed Description</title>
+
+<para>Defines the interface for NFT types, providing a blueprint for methods and properties to handle statistics, items, traits, ownership, and other NFT-related functionalities. </para>
 <para>
-Definition at line <link linkend="__i_nft_type_8cs_source_1l00004">4</link> of file <link linkend="__i_nft_type_8cs_source">INftType.cs</link>.</para>
+Definition at line <link linkend="__i_nft_type_8cs_source_1l00008">8</link> of file <link linkend="__i_nft_type_8cs_source">INftType.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -53,6 +86,16 @@ Definition at line <link linkend="__i_nft_type_8cs_source_1l00004">4</link> of f
 <indexterm><primary>GetAttackMapToTrait</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetAttackMapToTrait</secondary></indexterm>
 <para><computeroutput>Dictionary&lt; string, List&lt; Attack &gt; &gt; INftType.GetAttackMapToTrait ( )</computeroutput></para><para>
+
+<para>Retrieves a mapping of traits to their associated attacks. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A dictionary where keys are trait names and values are lists of attacks.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1a668a972952df66ae64d35d6c2634d278">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a64c18169831c3928f539756915454d38"/><section>
@@ -60,6 +103,16 @@ Implemented in <link linkend="_class_wallet_blobert_1a668a972952df66ae64d35d6c26
 <indexterm><primary>GetCustom</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetCustom</secondary></indexterm>
 <para><computeroutput>byte INftType.GetCustom ( )</computeroutput></para><para>
+
+<para>Retrieves the custom byte value associated with the NFT. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A byte representing a custom attribute.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1a12cb47eeaa16d0ba180f9bde90662360">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1acad47123d95d62e5fcab1f88a895487c"/><section>
@@ -67,6 +120,36 @@ Implemented in <link linkend="_class_wallet_blobert_1a12cb47eeaa16d0ba180f9bde90
 <indexterm><primary>GetInstance&lt; T &gt;</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetInstance&lt; T &gt;</secondary></indexterm>
 <para><computeroutput>T INftType.GetInstance&lt; T &gt; ( )</computeroutput></para><para>
+
+<para>Retrieves an instance of the implementing type, cast to the specified generic type. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type to cast the instance to, which must implement <link linkend="_interface_i_nft_type">INftType</link>.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An instance of type T.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1aa4b788947de00704b91e7a7c3884162b">WalletBlobert</link>.</para>
 <simplesect><title>Type Constraints</title>
 <para><emphasis role="strong">T:<link linkend="_interface_i_nft_type">INftType</link></emphasis></para>
@@ -77,6 +160,16 @@ Implemented in <link linkend="_class_wallet_blobert_1aa4b788947de00704b91e7a7c38
 <indexterm><primary>GetItemMapToTrait</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetItemMapToTrait</secondary></indexterm>
 <para><computeroutput>Dictionary&lt; string, <link linkend="_class_item">Item</link> &gt; INftType.GetItemMapToTrait ( )</computeroutput></para><para>
+
+<para>Retrieves a mapping of traits to their associated items. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A dictionary where keys are trait names and values are corresponding items.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1a0ae416fe1f949c800a647a25f75e7c12">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a7bd25912127182da857a5e7224d5d489"/><section>
@@ -84,6 +177,16 @@ Implemented in <link linkend="_class_wallet_blobert_1a0ae416fe1f949c800a647a25f7
 <indexterm><primary>GetItems</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetItems</secondary></indexterm>
 <para><computeroutput>List&lt; <link linkend="_class_item">Item</link> &gt; INftType.GetItems ( )</computeroutput></para><para>
+
+<para>Retrieves the list of items associated with the NFT. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A list of items owned by the NFT.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1abb0aacbd8ca1b707dad3e1337911ce51">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a460575e5ee67460688b562300c8e75aa"/><section>
@@ -91,6 +194,16 @@ Implemented in <link linkend="_class_wallet_blobert_1abb0aacbd8ca1b707dad3e13379
 <indexterm><primary>GetMaxHealth</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetMaxHealth</secondary></indexterm>
 <para><computeroutput>int INftType.GetMaxHealth ( )</computeroutput></para><para>
+
+<para>Retrieves the maximum health value of the NFT. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>An integer representing the maximum health of the NFT.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1afbdcf2010b6b26a8e620f2b3e644d62a">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a38e8bce326427c4a3d7e35f69e7e7a5c"/><section>
@@ -98,6 +211,16 @@ Implemented in <link linkend="_class_wallet_blobert_1afbdcf2010b6b26a8e620f2b3e6
 <indexterm><primary>GetNftType</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetNftType</secondary></indexterm>
 <para><computeroutput><link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> INftType.GetNftType ( )</computeroutput></para><para>
+
+<para>Retrieves the specific NFT type from the <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> enumeration. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The NFT type.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1ae80c070374a920aedf00a640a78e3127">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a8b06e21a4892cbf5961568f4d118be3e"/><section>
@@ -105,6 +228,16 @@ Implemented in <link linkend="_class_wallet_blobert_1ae80c070374a920aedf00a640a7
 <indexterm><primary>GetOwner</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetOwner</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> INftType.GetOwner ( )</computeroutput></para><para>
+
+<para>Retrieves the owner of the NFT as a FieldElement. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A FieldElement representing the NFT owner&apos;s address.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1a71a21fb08c40e8fcab22f0ddcfa683a4">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1afa7bc1d87ec6484c21c78e686a876a99"/><section>
@@ -112,6 +245,16 @@ Implemented in <link linkend="_class_wallet_blobert_1a71a21fb08c40e8fcab22f0ddcf
 <indexterm><primary>GetSeed</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetSeed</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_seed">Seed</link> INftType.GetSeed ( )</computeroutput></para><para>
+
+<para>Retrieves the seed data for the NFT. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A <link linkend="_struct_seed">Seed</link> object associated with the NFT.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1a24d519fe911ae3bd8466591eeb3be418">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a2abc488b33cbb624a9c00fc6efe8b974"/><section>
@@ -119,6 +262,16 @@ Implemented in <link linkend="_class_wallet_blobert_1a24d519fe911ae3bd8466591eeb
 <indexterm><primary>GetStats</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetStats</secondary></indexterm>
 <para><computeroutput><link linkend="_struct_t_stats">TStats</link> INftType.GetStats ( )</computeroutput></para><para>
+
+<para>Retrieves the stats associated with the NFT. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A <link linkend="_struct_t_stats">TStats</link> object containing NFT statistics.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1a0fb36594a1ce2e2564a5d0597ba23023">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1ad85fb13e00c2fed0e17d74131e957924"/><section>
@@ -126,6 +279,16 @@ Implemented in <link linkend="_class_wallet_blobert_1a0fb36594a1ce2e2564a5d0597b
 <indexterm><primary>GetTokenId</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetTokenId</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> INftType.GetTokenId ( )</computeroutput></para><para>
+
+<para>Retrieves the token ID of the NFT. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A FieldElement representing the NFT&apos;s unique token ID.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1ac919c8fc44e1631762d44ccbe1c1838f">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1abe085c5479f08c0ab55bad8027cda365"/><section>
@@ -133,6 +296,16 @@ Implemented in <link linkend="_class_wallet_blobert_1ac919c8fc44e1631762d44ccbe1
 <indexterm><primary>GetTokenTrait</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>GetTokenTrait</secondary></indexterm>
 <para><computeroutput>TokenTrait INftType.GetTokenTrait ( )</computeroutput></para><para>
+
+<para>Retrieves the trait information of the token. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A TokenTrait object representing the NFT&apos;s traits.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1aebb59d6949e8a6cf09bc88acd64ed8ad">WalletBlobert</link>.</para>
 </section>
 <anchor xml:id="_interface_i_nft_type_1a64674a4b35f8d823646b4a804773eeb3"/><section>
@@ -140,6 +313,36 @@ Implemented in <link linkend="_class_wallet_blobert_1aebb59d6949e8a6cf09bc88acd6
 <indexterm><primary>IsAddressOwner</primary><secondary>INftType</secondary></indexterm>
 <indexterm><primary>INftType</primary><secondary>IsAddressOwner</secondary></indexterm>
 <para><computeroutput>bool INftType.IsAddressOwner (<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> user)</computeroutput></para><para>
+
+<para>Checks if a given address corresponds to the owner of the NFT. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>user</entry><entry>
+<para>A FieldElement representing the address to check.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the address is the owner, otherwise false.</para>
+</formalpara>
+</para>
+<para>
 Implemented in <link linkend="_class_wallet_blobert_1ac271f0f25abe5ac50f8379cce84dbd14">WalletBlobert</link>.</para>
 </section>
 <para>

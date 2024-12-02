@@ -4,223 +4,222 @@
 <indexterm><primary>UI/Elements/ProfilePanel.cs</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__profile_panel_8cs_source_1l00001"/>00001 <emphasis role="comment">//&#32;Created&#32;by&#32;Norbert</emphasis>
 <anchor xml:id="__profile_panel_8cs_source_1l00002"/>00002 
-<anchor xml:id="__profile_panel_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_system">System</link>;
-<anchor xml:id="__profile_panel_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
-<anchor xml:id="__profile_panel_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
-<anchor xml:id="__profile_panel_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
-<anchor xml:id="__profile_panel_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
-<anchor xml:id="__profile_panel_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>TMPro;
-<anchor xml:id="__profile_panel_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
-<anchor xml:id="__profile_panel_8cs_source_1l00010"/>00010 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
-<anchor xml:id="__profile_panel_8cs_source_1l00011"/>00011 
-<anchor xml:id="__profile_panel_8cs_source_1l00015"/><link linkend="_class_profile_panel">00015</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_profile_panel">ProfilePanel</link>&#32;:&#32;MonoBehaviour
-<anchor xml:id="__profile_panel_8cs_source_1l00016"/>00016 {
-<anchor xml:id="__profile_panel_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;UI&#32;Elements&quot;</emphasis>)]
-<anchor xml:id="__profile_panel_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;m_WalletLogoTop;
-<anchor xml:id="__profile_panel_8cs_source_1l00019"/>00019 
-<anchor xml:id="__profile_panel_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;m_WalletLogoDropdown;
-<anchor xml:id="__profile_panel_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_UserNameTop;
-<anchor xml:id="__profile_panel_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_UserNameDropdown;
-<anchor xml:id="__profile_panel_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_WalletAddress;
-<anchor xml:id="__profile_panel_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_CopyAddressButton;
-<anchor xml:id="__profile_panel_8cs_source_1l00025"/>00025 
-<anchor xml:id="__profile_panel_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Button&#32;Container&quot;</emphasis>)]
-<anchor xml:id="__profile_panel_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_LogoutText;
-<anchor xml:id="__profile_panel_8cs_source_1l00028"/>00028 
-<anchor xml:id="__profile_panel_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;[Space(10)]
-<anchor xml:id="__profile_panel_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_OpenToInvitePanel;
-<anchor xml:id="__profile_panel_8cs_source_1l00031"/>00031 
-<anchor xml:id="__profile_panel_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_LogoutButton;
-<anchor xml:id="__profile_panel_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_LoginButton;
-<anchor xml:id="__profile_panel_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_YesButton;
-<anchor xml:id="__profile_panel_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_NoButton;
-<anchor xml:id="__profile_panel_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_open_to_invite">OpenToInvite</link>&#32;m_OpenToInvite;
-<anchor xml:id="__profile_panel_8cs_source_1l00037"/>00037 
-<anchor xml:id="__profile_panel_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Panels&quot;</emphasis>)]
-<anchor xml:id="__profile_panel_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_UserAndWalletPanel;
-<anchor xml:id="__profile_panel_8cs_source_1l00040"/>00040 
-<anchor xml:id="__profile_panel_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_DropdownPanel;
-<anchor xml:id="__profile_panel_8cs_source_1l00042"/>00042 
-<anchor xml:id="__profile_panel_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Wallet&#32;Icons&quot;</emphasis>)]
-<anchor xml:id="__profile_panel_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;m_WalletIcons;
-<anchor xml:id="__profile_panel_8cs_source_1l00045"/>00045 
-<anchor xml:id="__profile_panel_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;WalletConnect&#32;_walletConnector;
-<anchor xml:id="__profile_panel_8cs_source_1l00047"/>00047 
-<anchor xml:id="__profile_panel_8cs_source_1l00048"/><link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="__profile_panel_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;m_WalletAddressAsString;
-<anchor xml:id="__profile_panel_8cs_source_1l00050"/>00050 
-<anchor xml:id="__profile_panel_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
-<anchor xml:id="__profile_panel_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserAndWalletPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00055"/>00055 
-<anchor xml:id="__profile_panel_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialSetup();
-<anchor xml:id="__profile_panel_8cs_source_1l00057"/>00057 
-<anchor xml:id="__profile_panel_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnUsernameChanged&#32;+=&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>;
-<anchor xml:id="__profile_panel_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnCurrentAccountChanged&#32;+=&#32;<link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link>;
-<anchor xml:id="__profile_panel_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnConnectionMethodChanged&#32;+=&#32;<link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link>;
-<anchor xml:id="__profile_panel_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00062"/>00062 
-<anchor xml:id="__profile_panel_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
-<anchor xml:id="__profile_panel_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>(LocalDataModel.Username);
-<anchor xml:id="__profile_panel_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link>(LocalDataModel.CurrentAccount);
-<anchor xml:id="__profile_panel_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link>(LocalDataModel.SelectedConnectionMethod);
-<anchor xml:id="__profile_panel_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00069"/>00069 
-<anchor xml:id="__profile_panel_8cs_source_1l00070"/><link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">00070</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>(<emphasis role="keywordtype">string</emphasis>&#32;userName)
-<anchor xml:id="__profile_panel_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserNameTop.text&#32;=&#32;userName;
-<anchor xml:id="__profile_panel_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserNameDropdown.text&#32;=&#32;userName;
-<anchor xml:id="__profile_panel_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.Username&#32;=&#32;userName;
-<anchor xml:id="__profile_panel_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00076"/>00076 
-<anchor xml:id="__profile_panel_8cs_source_1l00077"/><link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">00077</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link>(Account&#32;walletAddress)
-<anchor xml:id="__profile_panel_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletAddressAsString&#32;=&#32;walletAddress.Address.Hex();
-<anchor xml:id="__profile_panel_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletAddress.text&#32;=&#32;BlobertUtils.ShortenAddress(m_WalletAddressAsString);
-<anchor xml:id="__profile_panel_8cs_source_1l00081"/>00081 
-<anchor xml:id="__profile_panel_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">OnLoginClicked</link>();
-<anchor xml:id="__profile_panel_8cs_source_1l00083"/>00083 
-<anchor xml:id="__profile_panel_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.Username&#32;==&#32;<emphasis role="keyword">null</emphasis>)
-<anchor xml:id="__profile_panel_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;usernameOutcome&#32;=&#32;await&#32;BlobertUtils.QuerySNSIds(walletAddress.Address.Hex());
-<anchor xml:id="__profile_panel_8cs_source_1l00087"/>00087 
-<anchor xml:id="__profile_panel_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(usernameOutcome.successes)
-<anchor xml:id="__profile_panel_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>(usernameOutcome.address);
-<anchor xml:id="__profile_panel_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserNameTop.text&#32;=&#32;BlobertUtils.ShortenAddress(walletAddress.Address.Hex());
-<anchor xml:id="__profile_panel_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00097"/>00097 
-<anchor xml:id="__profile_panel_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(PingMatchMakingServerCoroutine());
-<anchor xml:id="__profile_panel_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00100"/>00100 
-<anchor xml:id="__profile_panel_8cs_source_1l00101"/><link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">00101</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link>(LocalDataModel.ConnectionMethod&#32;walletType)
-<anchor xml:id="__profile_panel_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletLogoTop.sprite&#32;=&#32;m_WalletIcons[(int)walletType];
-<anchor xml:id="__profile_panel_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletLogoDropdown.sprite&#32;=&#32;m_WalletIcons[(int)walletType];
-<anchor xml:id="__profile_panel_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00106"/>00106 
-<anchor xml:id="__profile_panel_8cs_source_1l00107"/>00107 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;&gt;&gt;&#32;Button&#32;click&#32;handlers&#32;&lt;&lt;</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00108"/>00108 
-<anchor xml:id="__profile_panel_8cs_source_1l00109"/><link linkend="_class_profile_panel_1a2e5f86c261c88f84f355e8f9dd07b7c6">00109</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a2e5f86c261c88f84f355e8f9dd07b7c6">OnOpenPanelClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
-<anchor xml:id="__profile_panel_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserAndWalletPanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00115"/>00115 
-<anchor xml:id="__profile_panel_8cs_source_1l00116"/><link linkend="_class_profile_panel_1ae3390ff964145f3de2617e71c3cd93a4">00116</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1ae3390ff964145f3de2617e71c3cd93a4">OnOpenPanelForPortraitMode</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
-<anchor xml:id="__profile_panel_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00121"/>00121 
-<anchor xml:id="__profile_panel_8cs_source_1l00122"/><link linkend="_class_profile_panel_1a5ae31afc4be4544a1ed4f3a6db691de2">00122</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a5ae31afc4be4544a1ed4f3a6db691de2">OnClosePanelClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="__profile_panel_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserAndWalletPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00128"/>00128 
-<anchor xml:id="__profile_panel_8cs_source_1l00129"/><link linkend="_class_profile_panel_1abe2ba46fb6c7f6c9b6df35326ab73114">00129</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1abe2ba46fb6c7f6c9b6df35326ab73114">OnCopyAddressClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JavaScriptUtils.CopyStringToClipboard(LocalDataModel.CurrentAccount.Address.Hex());
-<anchor xml:id="__profile_panel_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00133"/>00133 
-<anchor xml:id="__profile_panel_8cs_source_1l00134"/><link linkend="_class_profile_panel_1afaa775354e1ac420fbbe4d14c9025e2a">00134</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1afaa775354e1ac420fbbe4d14c9025e2a">OnLogoutClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00138"/>00138 
-<anchor xml:id="__profile_panel_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_YesButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_NoButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutText.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00143"/>00143 
-<anchor xml:id="__profile_panel_8cs_source_1l00144"/><link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">00144</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">OnLoginClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LoginButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00147"/>00147 
-<anchor xml:id="__profile_panel_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CopyAddressButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00152"/>00152 
-<anchor xml:id="__profile_panel_8cs_source_1l00153"/><link linkend="_class_profile_panel_1ac50274de9b5a095c74973d7bd1fb759c">00153</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1ac50274de9b5a095c74973d7bd1fb759c">OnYesClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;logic&#32;here:&#32;Log&#32;the&#32;player&#32;out&#32;of&#32;the&#32;current&#32;session</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;YES&#32;button&#32;has&#32;been&#32;clicked...&quot;</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_walletConnector.DisconnectWalletCartridge();
-<anchor xml:id="__profile_panel_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Currently&#32;it&#32;only&#32;resets&#32;the&#32;panel&#32;element&#32;states...</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialSetup();
-<anchor xml:id="__profile_panel_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00161"/>00161 
-<anchor xml:id="__profile_panel_8cs_source_1l00162"/><link linkend="_class_profile_panel_1a14d19f7515ac5160dbfe330bc02446fb">00162</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a14d19f7515ac5160dbfe330bc02446fb">OnNoClicked</link>()
-<anchor xml:id="__profile_panel_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00166"/>00166 
-<anchor xml:id="__profile_panel_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_YesButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_NoButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutText.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00171"/>00171 
-<anchor xml:id="__profile_panel_8cs_source_1l00172"/>00172 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;&gt;&gt;&#32;Button&#32;click&#32;handlers&#32;&lt;&lt;</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00173"/>00173 
-<anchor xml:id="__profile_panel_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitialSetup()
-<anchor xml:id="__profile_panel_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LoginButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00177"/>00177 
-<anchor xml:id="__profile_panel_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CopyAddressButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_YesButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_NoButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutText.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00185"/>00185 
-<anchor xml:id="__profile_panel_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;PingMatchMakingServerCoroutine()
-<anchor xml:id="__profile_panel_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<emphasis role="keyword">true</emphasis>)
-<anchor xml:id="__profile_panel_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//this&#32;here&#32;needs&#32;a&#32;listener</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_OpenToInvite.<link linkend="_class_open_to_invite_1a13ae43110cf7a45085850d4ac8d5f057">IsOpenToInvite</link>())
-<anchor xml:id="__profile_panel_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Open&#32;to&#32;invite&#32;is&#32;false&quot;</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(180f);&#32;<emphasis role="comment">//&#32;Avoid&#32;busy-waiting;&#32;check&#32;again&#32;after&#32;1&#32;second.</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
-<anchor xml:id="__profile_panel_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00197"/>00197 
-<anchor xml:id="__profile_panel_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.CurrentAccount&#32;==&#32;<emphasis role="keyword">null</emphasis>)
-<anchor xml:id="__profile_panel_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(180f);&#32;<emphasis role="comment">//&#32;Avoid&#32;busy-waiting;&#32;check&#32;again&#32;after&#32;1&#32;second.</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
-<anchor xml:id="__profile_panel_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00203"/>00203 
-<anchor xml:id="__profile_panel_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;i&#32;am&#32;requstiiong&#32;to&#32;have&#32;an&#32;invite&quot;</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;pingTask&#32;=&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_quick_fight_model">QuickFightModel</link>.PingQuickMatchEndPointAsync(
-<anchor xml:id="__profile_panel_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.CurrentAccount.Address.Hex(),&#32;LocalDataModel.Username);
-<anchor xml:id="__profile_panel_8cs_source_1l00207"/>00207 
-<anchor xml:id="__profile_panel_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!pingTask.IsCompleted)
-<anchor xml:id="__profile_panel_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;&#32;<emphasis role="comment">//&#32;Wait&#32;for&#32;the&#32;async&#32;task&#32;to&#32;complete.</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00212"/>00212 
-<anchor xml:id="__profile_panel_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(pingTask.Exception&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
-<anchor xml:id="__profile_panel_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;Error&#32;during&#32;PingMatchMakingServerCoroutine:&#32;{pingTask.Exception.Message}&quot;</emphasis>);
-<anchor xml:id="__profile_panel_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(60f);&#32;<emphasis role="comment">//&#32;Wait&#32;before&#32;retrying&#32;in&#32;case&#32;of&#32;an&#32;error.</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__profile_panel_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(60f);&#32;<emphasis role="comment">//&#32;Wait&#32;for&#32;60&#32;seconds&#32;before&#32;the&#32;next&#32;ping.</emphasis>
-<anchor xml:id="__profile_panel_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__profile_panel_8cs_source_1l00224"/>00224 }
+<anchor xml:id="__profile_panel_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
+<anchor xml:id="__profile_panel_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
+<anchor xml:id="__profile_panel_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__profile_panel_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer_1_1_models">LogicLayer.Models</link>;
+<anchor xml:id="__profile_panel_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>TMPro;
+<anchor xml:id="__profile_panel_8cs_source_1l00008"/>00008 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__profile_panel_8cs_source_1l00009"/>00009 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.UI;
+<anchor xml:id="__profile_panel_8cs_source_1l00010"/>00010 
+<anchor xml:id="__profile_panel_8cs_source_1l00014"/><link linkend="_class_profile_panel">00014</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_profile_panel">ProfilePanel</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__profile_panel_8cs_source_1l00015"/>00015 {
+<anchor xml:id="__profile_panel_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;UI&#32;Elements&quot;</emphasis>)]
+<anchor xml:id="__profile_panel_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;m_WalletLogoTop;
+<anchor xml:id="__profile_panel_8cs_source_1l00018"/>00018 
+<anchor xml:id="__profile_panel_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Image&#32;m_WalletLogoDropdown;
+<anchor xml:id="__profile_panel_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_UserNameTop;
+<anchor xml:id="__profile_panel_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_UserNameDropdown;
+<anchor xml:id="__profile_panel_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_WalletAddress;
+<anchor xml:id="__profile_panel_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_CopyAddressButton;
+<anchor xml:id="__profile_panel_8cs_source_1l00024"/>00024 
+<anchor xml:id="__profile_panel_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Button&#32;Container&quot;</emphasis>)]
+<anchor xml:id="__profile_panel_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;TMP_Text&#32;m_LogoutText;
+<anchor xml:id="__profile_panel_8cs_source_1l00027"/>00027 
+<anchor xml:id="__profile_panel_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;[Space(10)]
+<anchor xml:id="__profile_panel_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_OpenToInvitePanel;
+<anchor xml:id="__profile_panel_8cs_source_1l00030"/>00030 
+<anchor xml:id="__profile_panel_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_LogoutButton;
+<anchor xml:id="__profile_panel_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_LoginButton;
+<anchor xml:id="__profile_panel_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_YesButton;
+<anchor xml:id="__profile_panel_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_base_button">BaseButton</link>&#32;m_NoButton;
+<anchor xml:id="__profile_panel_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_open_to_invite">OpenToInvite</link>&#32;m_OpenToInvite;
+<anchor xml:id="__profile_panel_8cs_source_1l00036"/>00036 
+<anchor xml:id="__profile_panel_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Panels&quot;</emphasis>)]
+<anchor xml:id="__profile_panel_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_UserAndWalletPanel;
+<anchor xml:id="__profile_panel_8cs_source_1l00039"/>00039 
+<anchor xml:id="__profile_panel_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;RectTransform&#32;m_DropdownPanel;
+<anchor xml:id="__profile_panel_8cs_source_1l00041"/>00041 
+<anchor xml:id="__profile_panel_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Wallet&#32;Icons&quot;</emphasis>)]
+<anchor xml:id="__profile_panel_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;Sprite[]&#32;m_WalletIcons;
+<anchor xml:id="__profile_panel_8cs_source_1l00044"/>00044 
+<anchor xml:id="__profile_panel_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;WalletConnect&#32;_walletConnector;
+<anchor xml:id="__profile_panel_8cs_source_1l00046"/>00046 
+<anchor xml:id="__profile_panel_8cs_source_1l00047"/><link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">00047</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__profile_panel_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;m_WalletAddressAsString;
+<anchor xml:id="__profile_panel_8cs_source_1l00049"/>00049 
+<anchor xml:id="__profile_panel_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__profile_panel_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserAndWalletPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00054"/>00054 
+<anchor xml:id="__profile_panel_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialSetup();
+<anchor xml:id="__profile_panel_8cs_source_1l00056"/>00056 
+<anchor xml:id="__profile_panel_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnUsernameChanged&#32;+=&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>;
+<anchor xml:id="__profile_panel_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnCurrentAccountChanged&#32;+=&#32;<link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link>;
+<anchor xml:id="__profile_panel_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.OnConnectionMethodChanged&#32;+=&#32;<link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link>;
+<anchor xml:id="__profile_panel_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00061"/>00061 
+<anchor xml:id="__profile_panel_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__profile_panel_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>(LocalDataModel.Username);
+<anchor xml:id="__profile_panel_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link>(LocalDataModel.CurrentAccount);
+<anchor xml:id="__profile_panel_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link>(LocalDataModel.SelectedConnectionMethod);
+<anchor xml:id="__profile_panel_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00068"/>00068 
+<anchor xml:id="__profile_panel_8cs_source_1l00069"/><link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">00069</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>(<emphasis role="keywordtype">string</emphasis>&#32;userName)
+<anchor xml:id="__profile_panel_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserNameTop.text&#32;=&#32;userName;
+<anchor xml:id="__profile_panel_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserNameDropdown.text&#32;=&#32;userName;
+<anchor xml:id="__profile_panel_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.Username&#32;=&#32;userName;
+<anchor xml:id="__profile_panel_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00075"/>00075 
+<anchor xml:id="__profile_panel_8cs_source_1l00076"/><link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">00076</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a8e64d0009269547ca46e7ff30bfa27a2">SetWalletAddress</link>(Account&#32;walletAddress)
+<anchor xml:id="__profile_panel_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletAddressAsString&#32;=&#32;walletAddress.Address.Hex();
+<anchor xml:id="__profile_panel_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletAddress.text&#32;=&#32;<link linkend="_namespace_starknet_utils">StarknetUtils</link>.<link linkend="_class_starknet_utils_1_1_starknet_address_utils">StarknetAddressUtils</link>.ShortenAddress(m_WalletAddressAsString);
+<anchor xml:id="__profile_panel_8cs_source_1l00080"/>00080 
+<anchor xml:id="__profile_panel_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">OnLoginClicked</link>();
+<anchor xml:id="__profile_panel_8cs_source_1l00082"/>00082 
+<anchor xml:id="__profile_panel_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.Username&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__profile_panel_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;usernameOutcome&#32;=&#32;await&#32;<link linkend="_namespace_starknet_utils">StarknetUtils</link>.SnsUtils.QuerySNSIds(walletAddress.Address.Hex());
+<anchor xml:id="__profile_panel_8cs_source_1l00086"/>00086 
+<anchor xml:id="__profile_panel_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(usernameOutcome.successes)
+<anchor xml:id="__profile_panel_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a4a6c8f4f4898acbd70d8e649208ad3d4">SetUsername</link>(usernameOutcome.address);
+<anchor xml:id="__profile_panel_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserNameTop.text&#32;=&#32;<link linkend="_namespace_starknet_utils">StarknetUtils</link>.<link linkend="_class_starknet_utils_1_1_starknet_address_utils">StarknetAddressUtils</link>.ShortenAddress(walletAddress.Address.Hex());
+<anchor xml:id="__profile_panel_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00096"/>00096 
+<anchor xml:id="__profile_panel_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(PingMatchMakingServerCoroutine());
+<anchor xml:id="__profile_panel_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00099"/>00099 
+<anchor xml:id="__profile_panel_8cs_source_1l00100"/><link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">00100</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1aecf1380d98c5b5cd2057b955e54c0bb4">SetWalletType</link>(LocalDataModel.ConnectionMethod&#32;walletType)
+<anchor xml:id="__profile_panel_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletLogoTop.sprite&#32;=&#32;m_WalletIcons[(int)walletType];
+<anchor xml:id="__profile_panel_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_WalletLogoDropdown.sprite&#32;=&#32;m_WalletIcons[(int)walletType];
+<anchor xml:id="__profile_panel_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00105"/>00105 
+<anchor xml:id="__profile_panel_8cs_source_1l00106"/>00106 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;&gt;&gt;&#32;Button&#32;click&#32;handlers&#32;&lt;&lt;</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00107"/>00107 
+<anchor xml:id="__profile_panel_8cs_source_1l00108"/><link linkend="_class_profile_panel_1a2e5f86c261c88f84f355e8f9dd07b7c6">00108</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a2e5f86c261c88f84f355e8f9dd07b7c6">OnOpenPanelClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__profile_panel_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserAndWalletPanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00114"/>00114 
+<anchor xml:id="__profile_panel_8cs_source_1l00115"/><link linkend="_class_profile_panel_1ae3390ff964145f3de2617e71c3cd93a4">00115</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1ae3390ff964145f3de2617e71c3cd93a4">OnOpenPanelForPortraitMode</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__profile_panel_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00120"/>00120 
+<anchor xml:id="__profile_panel_8cs_source_1l00121"/><link linkend="_class_profile_panel_1a5ae31afc4be4544a1ed4f3a6db691de2">00121</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a5ae31afc4be4544a1ed4f3a6db691de2">OnClosePanelClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_profile_panel_1a8ea77ebde73dca65ee68dde458d9c698">IsOpen</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__profile_panel_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_UserAndWalletPanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_DropdownPanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00127"/>00127 
+<anchor xml:id="__profile_panel_8cs_source_1l00128"/><link linkend="_class_profile_panel_1abe2ba46fb6c7f6c9b6df35326ab73114">00128</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1abe2ba46fb6c7f6c9b6df35326ab73114">OnCopyAddressClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JavaScriptUtils.CopyStringToClipboard(LocalDataModel.CurrentAccount.Address.Hex());
+<anchor xml:id="__profile_panel_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00132"/>00132 
+<anchor xml:id="__profile_panel_8cs_source_1l00133"/><link linkend="_class_profile_panel_1afaa775354e1ac420fbbe4d14c9025e2a">00133</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1afaa775354e1ac420fbbe4d14c9025e2a">OnLogoutClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00137"/>00137 
+<anchor xml:id="__profile_panel_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_YesButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_NoButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutText.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00142"/>00142 
+<anchor xml:id="__profile_panel_8cs_source_1l00143"/><link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">00143</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a7aecd73e57f6581c93fe292c08e79d43">OnLoginClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LoginButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00146"/>00146 
+<anchor xml:id="__profile_panel_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CopyAddressButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00151"/>00151 
+<anchor xml:id="__profile_panel_8cs_source_1l00152"/><link linkend="_class_profile_panel_1ac50274de9b5a095c74973d7bd1fb759c">00152</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1ac50274de9b5a095c74973d7bd1fb759c">OnYesClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;logic&#32;here:&#32;Log&#32;the&#32;player&#32;out&#32;of&#32;the&#32;current&#32;session</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;YES&#32;button&#32;has&#32;been&#32;clicked...&quot;</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_walletConnector.DisconnectWalletCartridge();
+<anchor xml:id="__profile_panel_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Currently&#32;it&#32;only&#32;resets&#32;the&#32;panel&#32;element&#32;states...</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitialSetup();
+<anchor xml:id="__profile_panel_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00160"/>00160 
+<anchor xml:id="__profile_panel_8cs_source_1l00161"/><link linkend="_class_profile_panel_1a14d19f7515ac5160dbfe330bc02446fb">00161</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_profile_panel_1a14d19f7515ac5160dbfe330bc02446fb">OnNoClicked</link>()
+<anchor xml:id="__profile_panel_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00165"/>00165 
+<anchor xml:id="__profile_panel_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_YesButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_NoButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutText.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00170"/>00170 
+<anchor xml:id="__profile_panel_8cs_source_1l00171"/>00171 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;&gt;&gt;&#32;Button&#32;click&#32;handlers&#32;&lt;&lt;</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00172"/>00172 
+<anchor xml:id="__profile_panel_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitialSetup()
+<anchor xml:id="__profile_panel_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LoginButton.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00176"/>00176 
+<anchor xml:id="__profile_panel_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_CopyAddressButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_OpenToInvitePanel.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_YesButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_NoButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutButton.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_LogoutText.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00184"/>00184 
+<anchor xml:id="__profile_panel_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;PingMatchMakingServerCoroutine()
+<anchor xml:id="__profile_panel_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<emphasis role="keyword">true</emphasis>)
+<anchor xml:id="__profile_panel_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//this&#32;here&#32;needs&#32;a&#32;listener</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_OpenToInvite.<link linkend="_class_open_to_invite_1a13ae43110cf7a45085850d4ac8d5f057">IsOpenToInvite</link>())
+<anchor xml:id="__profile_panel_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;Open&#32;to&#32;invite&#32;is&#32;false&quot;</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(180f);&#32;<emphasis role="comment">//&#32;Avoid&#32;busy-waiting;&#32;check&#32;again&#32;after&#32;1&#32;second.</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__profile_panel_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00196"/>00196 
+<anchor xml:id="__profile_panel_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(LocalDataModel.CurrentAccount&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__profile_panel_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(180f);&#32;<emphasis role="comment">//&#32;Avoid&#32;busy-waiting;&#32;check&#32;again&#32;after&#32;1&#32;second.</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__profile_panel_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00202"/>00202 
+<anchor xml:id="__profile_panel_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;i&#32;am&#32;requstiiong&#32;to&#32;have&#32;an&#32;invite&quot;</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;pingTask&#32;=&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_namespace_logic_layer_1_1_back_end_server">BackEndServer</link>.<link linkend="_class_logic_layer_1_1_back_end_server_1_1_quick_fight_model">QuickFightModel</link>.PingQuickMatchEndPointAsync(
+<anchor xml:id="__profile_panel_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LocalDataModel.CurrentAccount.Address.Hex(),&#32;LocalDataModel.Username);
+<anchor xml:id="__profile_panel_8cs_source_1l00206"/>00206 
+<anchor xml:id="__profile_panel_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!pingTask.IsCompleted)
+<anchor xml:id="__profile_panel_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;&#32;<emphasis role="comment">//&#32;Wait&#32;for&#32;the&#32;async&#32;task&#32;to&#32;complete.</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00211"/>00211 
+<anchor xml:id="__profile_panel_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(pingTask.Exception&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__profile_panel_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError($<emphasis role="stringliteral">&quot;Error&#32;during&#32;PingMatchMakingServerCoroutine:&#32;{pingTask.Exception.Message}&quot;</emphasis>);
+<anchor xml:id="__profile_panel_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(60f);&#32;<emphasis role="comment">//&#32;Wait&#32;before&#32;retrying&#32;in&#32;case&#32;of&#32;an&#32;error.</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__profile_panel_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(60f);&#32;<emphasis role="comment">//&#32;Wait&#32;for&#32;60&#32;seconds&#32;before&#32;the&#32;next&#32;ping.</emphasis>
+<anchor xml:id="__profile_panel_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__profile_panel_8cs_source_1l00223"/>00223 }
 </programlisting></section>

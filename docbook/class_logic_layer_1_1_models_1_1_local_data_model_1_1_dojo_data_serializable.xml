@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable" xml:lang="en-US">
+<title>LogicLayer.Models.LocalDataModel.DojoDataSerializable Class Reference</title>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a34d981281eed7812373ee40234c95000">DojoDataSerializable</link> (<link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data">DojoData</link> gameData)</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data">DojoData</link> <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a99c96c0770c862abbd15f7df9ec7692b">ToDojoData</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1aca943b06d2c7e74addc6a896d252142c">gameId</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a25d1ad0d1bc980877ef4abc8bcf4784c">committedHash</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a272c3ea6cf922f6f95875bf0e53b2c65">lastAttack</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a26b7c8ef921c7feb6fc2d0dc58cfc662">randomNumber</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1acd4355fe7fe01eb888770f4368ad14ce">roundNum</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00369">369</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a34d981281eed7812373ee40234c95000"/><section>
+    <title>DojoDataSerializable()</title>
+<indexterm><primary>DojoDataSerializable</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>DojoDataSerializable</secondary></indexterm>
+<para><computeroutput>LogicLayer.Models.LocalDataModel.DojoDataSerializable.DojoDataSerializable (<link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data">DojoData</link> gameData)</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00377">377</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a99c96c0770c862abbd15f7df9ec7692b"/><section>
+    <title>ToDojoData()</title>
+<indexterm><primary>ToDojoData</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>ToDojoData</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data">DojoData</link> LogicLayer.Models.LocalDataModel.DojoDataSerializable.ToDojoData ( )</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00386">386</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a25d1ad0d1bc980877ef4abc8bcf4784c"/><section>
+    <title>committedHash</title>
+<indexterm><primary>committedHash</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>committedHash</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Models.LocalDataModel.DojoDataSerializable.committedHash</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00372">372</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1aca943b06d2c7e74addc6a896d252142c"/><section>
+    <title>gameId</title>
+<indexterm><primary>gameId</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>gameId</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Models.LocalDataModel.DojoDataSerializable.gameId</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00371">371</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a272c3ea6cf922f6f95875bf0e53b2c65"/><section>
+    <title>lastAttack</title>
+<indexterm><primary>lastAttack</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>lastAttack</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Models.LocalDataModel.DojoDataSerializable.lastAttack</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00373">373</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1a26b7c8ef921c7feb6fc2d0dc58cfc662"/><section>
+    <title>randomNumber</title>
+<indexterm><primary>randomNumber</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>randomNumber</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Models.LocalDataModel.DojoDataSerializable.randomNumber</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00374">374</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable_1acd4355fe7fe01eb888770f4368ad14ce"/><section>
+    <title>roundNum</title>
+<indexterm><primary>roundNum</primary><secondary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</secondary></indexterm>
+<indexterm><primary>LogicLayer.Models.LocalDataModel.DojoDataSerializable</primary><secondary>roundNum</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Models.LocalDataModel.DojoDataSerializable.roundNum</computeroutput></para><para>
+Definition at line <link linkend="__local_data_model_8cs_source_1l00375">375</link> of file <link linkend="__local_data_model_8cs_source">LocalDataModel.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/Managers/<link linkend="__local_data_model_8cs">LocalDataModel.cs</link></section>
+</section>

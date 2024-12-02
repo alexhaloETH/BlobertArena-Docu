@@ -7,126 +7,127 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__item_8gen_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>Dojo.Starknet;
 <anchor xml:id="__item_8gen_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer">LogicLayer</link>;
 <anchor xml:id="__item_8gen_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>System.Threading.Tasks;
-<anchor xml:id="__item_8gen_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
-<anchor xml:id="__item_8gen_8cs_source_1l00007"/>00007 
-<anchor xml:id="__item_8gen_8cs_source_1l00008"/>00008 <emphasis role="comment">//&#32;Model&#32;definition&#32;for&#32;`blob_arena::models::item::Item`&#32;model</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00009"/><link linkend="_class_item">00009</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_item">Item</link>&#32;:&#32;ModelInstance
-<anchor xml:id="__item_8gen_8cs_source_1l00010"/>00010 {
-<anchor xml:id="__item_8gen_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;id&quot;</emphasis>)]
-<anchor xml:id="__item_8gen_8cs_source_1l00012"/><link linkend="_class_item_1a7c4b7d43a200cc96dff7dc3280c13365">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_item_1a7c4b7d43a200cc96dff7dc3280c13365">id</link>;
-<anchor xml:id="__item_8gen_8cs_source_1l00013"/>00013 
-<anchor xml:id="__item_8gen_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;name&quot;</emphasis>)]
-<anchor xml:id="__item_8gen_8cs_source_1l00015"/><link linkend="_class_item_1a5ef7a9c97b8de5b2688285a5b2c5e750">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1a5ef7a9c97b8de5b2688285a5b2c5e750">dojoName</link>;
-<anchor xml:id="__item_8gen_8cs_source_1l00016"/>00016 
-<anchor xml:id="__item_8gen_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;stats&quot;</emphasis>)]
-<anchor xml:id="__item_8gen_8cs_source_1l00018"/><link linkend="_class_item_1aae9c470520927936de6bdc5f54da7166">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_t_stats">TStats</link>&#32;<link linkend="_class_item_1aae9c470520927936de6bdc5f54da7166">stats</link>;
-<anchor xml:id="__item_8gen_8cs_source_1l00019"/>00019 
-<anchor xml:id="__item_8gen_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
-<anchor xml:id="__item_8gen_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_8gen_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_item_1aae9c470520927936de6bdc5f54da7166">stats</link>&#32;=&#32;WorldDataModel.StatsDictionary[<link linkend="_class_item_1a5ef7a9c97b8de5b2688285a5b2c5e750">dojoName</link>];
-<anchor xml:id="__item_8gen_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_world_data_model">WorldDataModel</link>.AllItemsDict.Add(<emphasis role="keywordtype">id</emphasis>.Hex(),&#32;<emphasis role="keyword">this</emphasis>);
-<anchor xml:id="__item_8gen_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_8gen_8cs_source_1l00025"/>00025 
-<anchor xml:id="__item_8gen_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="comment">//SDK&#32;workAround</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00027"/><link linkend="_class_item_1a7a4803a54f9bc69cf19fcdbaf541ce81">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_item_1a7a4803a54f9bc69cf19fcdbaf541ce81">GetStatsManually</link>()
-<anchor xml:id="__item_8gen_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_8gen_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//try</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;$&quot;query&#32;{{\r\n&#32;&#32;blobArenaItemModels&#32;(where&#32;:{{id:&#32;\&quot;{id.Hex()}\&quot;}})&#32;{{\r\n&#32;&#32;&#32;&#32;edges&#32;{{\r\n&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats{{\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speed\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;defense\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\r\n&#32;&#32;&#32;&#32;&#32;&#32;}}\r\n&#32;&#32;&#32;&#32;}}\r\n&#32;&#32;}}\r\n}}&quot;;</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00032"/>00032 
-<anchor xml:id="__item_8gen_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;new&#32;GraphQLClient($&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;);</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00034"/>00034 
-<anchor xml:id="__item_8gen_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;new&#32;Request</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Query&#32;=&#32;queryString,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;};</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00039"/>00039 
-<anchor xml:id="__item_8gen_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00041"/>00041 
-<anchor xml:id="__item_8gen_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;//&#32;Log&#32;the&#32;entire&#32;response&#32;for&#32;debugging</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00044"/>00044 
-<anchor xml:id="__item_8gen_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00046"/>00046 
-<anchor xml:id="__item_8gen_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;strength&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;strength&quot;];</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;defense&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;defense&quot;];</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;speed&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;speed&quot;];</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;attack&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;attack&quot;];</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00051"/>00051 
-<anchor xml:id="__item_8gen_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;Stats&#32;stats&#32;=&#32;new&#32;Stats</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;defense&#32;=&#32;(byte)defense,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speed&#32;=&#32;(byte)speed,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack&#32;=&#32;(byte)attack,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength&#32;=&#32;(byte)strength,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;};</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00059"/>00059 
-<anchor xml:id="__item_8gen_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;this.stats&#32;=&#32;stats;</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//catch</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;Stats&#32;stats&#32;=&#32;new&#32;Stats</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;defense&#32;=&#32;(byte)4,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speed&#32;=&#32;(byte)0,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack&#32;=&#32;(byte)0,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength&#32;=&#32;(byte)4,</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;};</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00071"/>00071 
-<anchor xml:id="__item_8gen_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;this.stats&#32;=&#32;stats;</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_8gen_8cs_source_1l00075"/>00075 
-<anchor xml:id="__item_8gen_8cs_source_1l00076"/>00076 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Graphql&#32;templates</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00077"/>00077 
-<anchor xml:id="__item_8gen_8cs_source_1l00078"/><link linkend="_class_item_1a5f5efb7ddaa3a2eacd57e4bf9603dfd1">00078</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1a5f5efb7ddaa3a2eacd57e4bf9603dfd1">GraphQlQueryFull</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00079"/>00079 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaItemModels&#32;argument&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00080"/>00080 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00081"/>00081 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00082"/>00082 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00083"/>00083 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00084"/>00084 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00085"/>00085 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00086"/>00086 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_Item&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00087"/>00087 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00088"/>00088 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;name</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00089"/>00089 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00090"/>00090 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dexterity</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00091"/>00091 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vitality</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00092"/>00092 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00093"/>00093 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;luck</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00094"/>00094 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00095"/>00095 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00096"/>00096 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00097"/>00097 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00098"/>00098 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00099"/>00099 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00100"/>00100 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00101"/>00101 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>;
-<anchor xml:id="__item_8gen_8cs_source_1l00102"/>00102 
-<anchor xml:id="__item_8gen_8cs_source_1l00103"/><link linkend="_class_item_1ad2353dcff6e4f43c691adc7dba3e3b10">00103</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1ad2353dcff6e4f43c691adc7dba3e3b10">GraphQlQueryOnSection</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00104"/>00104 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_Item&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00105"/>00105 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00106"/>00106 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;name</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00107"/>00107 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats&#32;{</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00108"/>00108 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dexterity</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00109"/>00109 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vitality</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00110"/>00110 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00111"/>00111 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;luck</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00112"/>00112 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00113"/>00113 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00114"/>00114 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
-<anchor xml:id="__item_8gen_8cs_source_1l00115"/>00115 
-<anchor xml:id="__item_8gen_8cs_source_1l00116"/><link linkend="_class_item_1a0da8e92fbdd8ec3dd5f25af2382d3215">00116</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1a0da8e92fbdd8ec3dd5f25af2382d3215">GraphQlHeader</link>&#32;=&#32;<emphasis role="stringliteral">&quot;blobArenaItemModels&quot;</emphasis>;
-<anchor xml:id="__item_8gen_8cs_source_1l00117"/>00117 
-<anchor xml:id="__item_8gen_8cs_source_1l00118"/><link linkend="_class_item_1_1_item_data_query">00118</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_item_1_1_item_data_query">ItemDataQuery</link>&#32;:&#32;<link linkend="_interface_logic_layer_1_1_i_data">IData</link>
-<anchor xml:id="__item_8gen_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__item_8gen_8cs_source_1l00120"/><link linkend="_class_item_1_1_item_data_query_1aa1c5f8c62f12ebdb23e03eccea926b9e">00120</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1_1_item_data_query_1aa1c5f8c62f12ebdb23e03eccea926b9e">__typename</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_8gen_8cs_source_1l00121"/><link linkend="_class_item_1_1_item_data_query_1a3970da719eb230f2e3761e30da853b21">00121</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_8gen_8cs_source_1l00122"/><link linkend="_class_item_1_1_item_data_query_1adcca998d659781df02ff689f905ffef7">00122</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1_1_item_data_query_1adcca998d659781df02ff689f905ffef7">name</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
-<anchor xml:id="__item_8gen_8cs_source_1l00123"/><link linkend="_class_item_1_1_item_data_query_1af65cc481861d02c35597e5cd93f01cc3">00123</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_logic_layer_1_1_stats_data">LogicLayer.StatsData</link>&#32;<link linkend="_class_item_1_1_item_data_query_1af65cc481861d02c35597e5cd93f01cc3">stats</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
-<anchor xml:id="__item_8gen_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__item_8gen_8cs_source_1l00125"/>00125 
-<anchor xml:id="__item_8gen_8cs_source_1l00126"/>00126 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Graphql&#32;templates</emphasis>
-<anchor xml:id="__item_8gen_8cs_source_1l00127"/>00127 }
+<anchor xml:id="__item_8gen_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_logic_layer_1_1_query">LogicLayer.Query</link>;
+<anchor xml:id="__item_8gen_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__item_8gen_8cs_source_1l00008"/>00008 
+<anchor xml:id="__item_8gen_8cs_source_1l00009"/>00009 <emphasis role="comment">//&#32;Model&#32;definition&#32;for&#32;`blob_arena::models::item::Item`&#32;model</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00010"/><link linkend="_class_item">00010</link> <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_item">Item</link>&#32;:&#32;ModelInstance
+<anchor xml:id="__item_8gen_8cs_source_1l00011"/>00011 {
+<anchor xml:id="__item_8gen_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;id&quot;</emphasis>)]
+<anchor xml:id="__item_8gen_8cs_source_1l00013"/><link linkend="_class_item_1a7c4b7d43a200cc96dff7dc3280c13365">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link>&#32;<link linkend="_class_item_1a7c4b7d43a200cc96dff7dc3280c13365">id</link>;
+<anchor xml:id="__item_8gen_8cs_source_1l00014"/>00014 
+<anchor xml:id="__item_8gen_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;name&quot;</emphasis>)]
+<anchor xml:id="__item_8gen_8cs_source_1l00016"/><link linkend="_class_item_1a5ef7a9c97b8de5b2688285a5b2c5e750">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1a5ef7a9c97b8de5b2688285a5b2c5e750">dojoName</link>;
+<anchor xml:id="__item_8gen_8cs_source_1l00017"/>00017 
+<anchor xml:id="__item_8gen_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;[ModelField(<emphasis role="stringliteral">&quot;stats&quot;</emphasis>)]
+<anchor xml:id="__item_8gen_8cs_source_1l00019"/><link linkend="_class_item_1aae9c470520927936de6bdc5f54da7166">00019</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_t_stats">TStats</link>&#32;<link linkend="_class_item_1aae9c470520927936de6bdc5f54da7166">stats</link>;
+<anchor xml:id="__item_8gen_8cs_source_1l00020"/>00020 
+<anchor xml:id="__item_8gen_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__item_8gen_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_8gen_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_item_1aae9c470520927936de6bdc5f54da7166">stats</link>&#32;=&#32;WorldDataModel.StatsDictionary[<link linkend="_class_item_1a5ef7a9c97b8de5b2688285a5b2c5e750">dojoName</link>];
+<anchor xml:id="__item_8gen_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_logic_layer">LogicLayer</link>.<link linkend="_class_logic_layer_1_1_world_data_model">WorldDataModel</link>.AllItemsDict.Add(<emphasis role="keywordtype">id</emphasis>.Hex(),&#32;<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__item_8gen_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_8gen_8cs_source_1l00026"/>00026 
+<anchor xml:id="__item_8gen_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="comment">//SDK&#32;workAround</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00028"/><link linkend="_class_item_1a7a4803a54f9bc69cf19fcdbaf541ce81">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;async&#32;Task&#32;<link linkend="_class_item_1a7a4803a54f9bc69cf19fcdbaf541ce81">GetStatsManually</link>()
+<anchor xml:id="__item_8gen_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_8gen_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//try</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;queryString&#32;=&#32;$&quot;query&#32;{{\r\n&#32;&#32;blobArenaItemModels&#32;(where&#32;:{{id:&#32;\&quot;{id.Hex()}\&quot;}})&#32;{{\r\n&#32;&#32;&#32;&#32;edges&#32;{{\r\n&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{{\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats{{\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speed\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;defense\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\r\n&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\r\n&#32;&#32;&#32;&#32;&#32;&#32;}}\r\n&#32;&#32;&#32;&#32;}}\r\n&#32;&#32;}}\r\n}}&quot;;</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00033"/>00033 
+<anchor xml:id="__item_8gen_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;client&#32;=&#32;new&#32;GraphQLClient($&quot;{DojoEntitiesStorage.worldManagerData.toriiUrl}/graphql&quot;);</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00035"/>00035 
+<anchor xml:id="__item_8gen_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;request&#32;=&#32;new&#32;Request</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Query&#32;=&#32;queryString,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;};</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00040"/>00040 
+<anchor xml:id="__item_8gen_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;response&#32;=&#32;await&#32;client.Send&lt;dynamic&gt;(request);</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00042"/>00042 
+<anchor xml:id="__item_8gen_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;//&#32;Log&#32;the&#32;entire&#32;response&#32;for&#32;debugging</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;var&#32;jsonString&#32;=&#32;Newtonsoft.Json.JsonConvert.SerializeObject(response,&#32;Newtonsoft.Json.Formatting.Indented);</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00045"/>00045 
+<anchor xml:id="__item_8gen_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;JObject&#32;jsonObj&#32;=&#32;JObject.Parse(jsonString);</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00047"/>00047 
+<anchor xml:id="__item_8gen_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;strength&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;strength&quot;];</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;defense&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;defense&quot;];</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;speed&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;speed&quot;];</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;int&#32;attack&#32;=&#32;(int)jsonObj[&quot;Data&quot;][&quot;blobArenaItemModels&quot;][&quot;edges&quot;][0][&quot;node&quot;][&quot;stats&quot;][&quot;attack&quot;];</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00052"/>00052 
+<anchor xml:id="__item_8gen_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;Stats&#32;stats&#32;=&#32;new&#32;Stats</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;defense&#32;=&#32;(byte)defense,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speed&#32;=&#32;(byte)speed,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack&#32;=&#32;(byte)attack,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength&#32;=&#32;(byte)strength,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;};</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00060"/>00060 
+<anchor xml:id="__item_8gen_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;this.stats&#32;=&#32;stats;</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//catch</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;Stats&#32;stats&#32;=&#32;new&#32;Stats</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;defense&#32;=&#32;(byte)4,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speed&#32;=&#32;(byte)0,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attack&#32;=&#32;(byte)0,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength&#32;=&#32;(byte)4,</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;};</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00072"/>00072 
+<anchor xml:id="__item_8gen_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;this.stats&#32;=&#32;stats;</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_8gen_8cs_source_1l00076"/>00076 
+<anchor xml:id="__item_8gen_8cs_source_1l00077"/>00077 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Graphql&#32;templates</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00078"/>00078 
+<anchor xml:id="__item_8gen_8cs_source_1l00079"/><link linkend="_class_item_1a5f5efb7ddaa3a2eacd57e4bf9603dfd1">00079</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1a5f5efb7ddaa3a2eacd57e4bf9603dfd1">GraphQlQueryFull</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;query&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00080"/>00080 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;blobArenaItemModels&#32;argument&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00081"/>00081 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;edges&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00082"/>00082 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00083"/>00083 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entity&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00084"/>00084 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;keys</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00085"/>00085 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;models&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00086"/>00086 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__typename</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00087"/>00087 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_Item&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00088"/>00088 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00089"/>00089 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;name</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00090"/>00090 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00091"/>00091 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dexterity</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00092"/>00092 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vitality</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00093"/>00093 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00094"/>00094 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;luck</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00095"/>00095 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00096"/>00096 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00097"/>00097 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00098"/>00098 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00099"/>00099 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00100"/>00100 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00101"/>00101 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00102"/>00102 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;}&quot;</emphasis>;
+<anchor xml:id="__item_8gen_8cs_source_1l00103"/>00103 
+<anchor xml:id="__item_8gen_8cs_source_1l00104"/><link linkend="_class_item_1ad2353dcff6e4f43c691adc7dba3e3b10">00104</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1ad2353dcff6e4f43c691adc7dba3e3b10">GraphQlQueryOnSection</link>&#32;=&#32;<emphasis role="stringliteral">@&quot;</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00105"/>00105 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;...&#32;on&#32;blob_arena_Item&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00106"/>00106 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;id</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00107"/>00107 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;name</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00108"/>00108 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stats&#32;{</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00109"/>00109 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dexterity</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00110"/>00110 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vitality</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00111"/>00111 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strength</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00112"/>00112 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;luck</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00113"/>00113 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00114"/>00114 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00115"/>00115 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;</emphasis>;
+<anchor xml:id="__item_8gen_8cs_source_1l00116"/>00116 
+<anchor xml:id="__item_8gen_8cs_source_1l00117"/><link linkend="_class_item_1a0da8e92fbdd8ec3dd5f25af2382d3215">00117</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1a0da8e92fbdd8ec3dd5f25af2382d3215">GraphQlHeader</link>&#32;=&#32;<emphasis role="stringliteral">&quot;blobArenaItemModels&quot;</emphasis>;
+<anchor xml:id="__item_8gen_8cs_source_1l00118"/>00118 
+<anchor xml:id="__item_8gen_8cs_source_1l00119"/><link linkend="_class_item_1_1_item_data_query">00119</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_item_1_1_item_data_query">ItemDataQuery</link>&#32;:&#32;<link linkend="_interface_logic_layer_1_1_query_1_1_i_data">IData</link>
+<anchor xml:id="__item_8gen_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__item_8gen_8cs_source_1l00121"/><link linkend="_class_item_1_1_item_data_query_1aa1c5f8c62f12ebdb23e03eccea926b9e">00121</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1_1_item_data_query_1aa1c5f8c62f12ebdb23e03eccea926b9e">__typename</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_8gen_8cs_source_1l00122"/><link linkend="_class_item_1_1_item_data_query_1a3970da719eb230f2e3761e30da853b21">00122</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_8gen_8cs_source_1l00123"/><link linkend="_class_item_1_1_item_data_query_1adcca998d659781df02ff689f905ffef7">00123</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_item_1_1_item_data_query_1adcca998d659781df02ff689f905ffef7">name</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}&#32;=&#32;<emphasis role="keywordtype">string</emphasis>.Empty;
+<anchor xml:id="__item_8gen_8cs_source_1l00124"/><link linkend="_class_item_1_1_item_data_query_1a78b94beb832c08df2be5ee4e08cb5f70">00124</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_logic_layer_1_1_query_1_1_stats_data">LogicLayer.Query.StatsData</link>&#32;<link linkend="_class_item_1_1_item_data_query_1a78b94beb832c08df2be5ee4e08cb5f70">stats</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__item_8gen_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__item_8gen_8cs_source_1l00126"/>00126 
+<anchor xml:id="__item_8gen_8cs_source_1l00127"/>00127 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Graphql&#32;templates</emphasis>
+<anchor xml:id="__item_8gen_8cs_source_1l00128"/>00128 }
 </programlisting></section>

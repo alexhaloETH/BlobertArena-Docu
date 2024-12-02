@@ -16,8 +16,6 @@
 <simplesect>
     <title>Files    </title>
         <itemizedlist>
-            <listitem><para>file <link linkend="__blobert_arena_helpers_8cs">BlobertArenaHelpers.cs</link></para>
-</listitem>
             <listitem><para>file <link linkend="__game_manager_8cs">GameManager.cs</link></para>
 </listitem>
             <listitem><para>file <link linkend="__java_script_utils_8cs">JavaScriptUtils.cs</link></para>

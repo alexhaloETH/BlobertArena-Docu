@@ -22,7 +22,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l00007">7</link> of file <link linkend="__choice_section_battle_page_8cs_source">ChoiceSectionBattlePage.cs</link>.</para>
+Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l00008">8</link> of file <link linkend="__choice_section_battle_page_8cs_source">ChoiceSectionBattlePage.cs</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -31,14 +31,14 @@ Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l0000
 <indexterm><primary>InitializeComponet</primary><secondary>ChoiceSectionBattlePage</secondary></indexterm>
 <indexterm><primary>ChoiceSectionBattlePage</primary><secondary>InitializeComponet</secondary></indexterm>
 <para><computeroutput>void ChoiceSectionBattlePage.InitializeComponet ( )</computeroutput></para><para>
-Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l00026">26</link> of file <link linkend="__choice_section_battle_page_8cs_source">ChoiceSectionBattlePage.cs</link>.</para>
+Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l00027">27</link> of file <link linkend="__choice_section_battle_page_8cs_source">ChoiceSectionBattlePage.cs</link>.</para>
 </section>
 <anchor xml:id="_class_choice_section_battle_page_1abeb45879e733ebad087c0f16ff6d31d8"/><section>
     <title>OnWaitingForTransaction()</title>
 <indexterm><primary>OnWaitingForTransaction</primary><secondary>ChoiceSectionBattlePage</secondary></indexterm>
 <indexterm><primary>ChoiceSectionBattlePage</primary><secondary>OnWaitingForTransaction</secondary></indexterm>
 <para><computeroutput>void ChoiceSectionBattlePage.OnWaitingForTransaction (bool showAwaiter, string textToShow)</computeroutput></para><para>
-Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l00031">31</link> of file <link linkend="__choice_section_battle_page_8cs_source">ChoiceSectionBattlePage.cs</link>.</para>
+Definition at line <link linkend="__choice_section_battle_page_8cs_source_1l00032">32</link> of file <link linkend="__choice_section_battle_page_8cs_source">ChoiceSectionBattlePage.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

@@ -1,6 +1,5 @@
 var class_blobert_types =
 [
-    [ "Stats", "struct_blobert_types_1_1_stats.html", "struct_blobert_types_1_1_stats" ],
     [ "Traits", "struct_blobert_types_1_1_traits.html", "struct_blobert_types_1_1_traits" ],
     [ "Armour", "class_blobert_types.html#a03b7cd7a2659573da9e83b66e72c20cd", [
       [ "SheepsWool", "class_blobert_types.html#a03b7cd7a2659573da9e83b66e72c20cdad2d1122c9ccfb732f244a6422c5c32f6", null ],

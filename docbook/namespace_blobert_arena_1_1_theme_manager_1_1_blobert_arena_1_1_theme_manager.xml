@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager" xml:lang="en-US">
+<title>BlobertArena.ThemeManager.BlobertArena.ThemeManager Namespace Reference</title>
+<indexterm><primary>BlobertArena.ThemeManager.BlobertArena.ThemeManager</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data">ThemeData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -33,10 +33,10 @@
 </listitem>
         </itemizedlist>
 </simplesect>
-Properties inherited from <link linkend="_interface_logic_layer_1_1_i_data">LogicLayer.IData</link><section>
+Properties inherited from <link linkend="_interface_logic_layer_1_1_query_1_1_i_data">LogicLayer.Query.IData</link><section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00072">72</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00073">73</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <section>
 <title>Property Documentation</title>
@@ -45,44 +45,44 @@ Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00072">72</
 <indexterm><primary>__typename</primary><secondary>CombatantInfo.CombatantInfoDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantInfo.CombatantInfoDataQuery</primary><secondary>__typename</secondary></indexterm>
 <para><computeroutput>string CombatantInfo.CombatantInfoDataQuery.__typename = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Implements <link linkend="_interface_logic_layer_1_1_i_data_1a3e063139245c826a3ac6f191885eabe7">LogicLayer.IData</link>.</para>
+Implements <link linkend="_interface_logic_layer_1_1_query_1_1_i_data_1afac299ef67932b69363a6f36f943c3c0">LogicLayer.Query.IData</link>.</para>
 <para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00074">74</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00075">75</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1_1_combatant_info_data_query_1aee28a82e47fe1821981e67f3d2c7802f"/><section>
     <title>collection_address</title>
 <indexterm><primary>collection_address</primary><secondary>CombatantInfo.CombatantInfoDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantInfo.CombatantInfoDataQuery</primary><secondary>collection_address</secondary></indexterm>
 <para><computeroutput>string CombatantInfo.CombatantInfoDataQuery.collection_address = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00078">78</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00079">79</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1_1_combatant_info_data_query_1ab2b07f401ba7f659f1a9de87ce86bd03"/><section>
     <title>combat_id</title>
 <indexterm><primary>combat_id</primary><secondary>CombatantInfo.CombatantInfoDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantInfo.CombatantInfoDataQuery</primary><secondary>combat_id</secondary></indexterm>
 <para><computeroutput>string CombatantInfo.CombatantInfoDataQuery.combat_id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00076">76</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00077">77</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1_1_combatant_info_data_query_1aab982cfba6183b47d97f6a6e0374cb03"/><section>
     <title>id</title>
 <indexterm><primary>id</primary><secondary>CombatantInfo.CombatantInfoDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantInfo.CombatantInfoDataQuery</primary><secondary>id</secondary></indexterm>
 <para><computeroutput>string CombatantInfo.CombatantInfoDataQuery.id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00075">75</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00076">76</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1_1_combatant_info_data_query_1a8e5a928f528eb63661aa55e3e356c994"/><section>
     <title>player</title>
 <indexterm><primary>player</primary><secondary>CombatantInfo.CombatantInfoDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantInfo.CombatantInfoDataQuery</primary><secondary>player</secondary></indexterm>
 <para><computeroutput>string CombatantInfo.CombatantInfoDataQuery.player = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00077">77</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00078">78</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_class_combatant_info_1_1_combatant_info_data_query_1acd12f54121eaeeecf3130a933d85152a"/><section>
     <title>token_id</title>
 <indexterm><primary>token_id</primary><secondary>CombatantInfo.CombatantInfoDataQuery</secondary></indexterm>
 <indexterm><primary>CombatantInfo.CombatantInfoDataQuery</primary><secondary>token_id</secondary></indexterm>
 <para><computeroutput>string CombatantInfo.CombatantInfoDataQuery.token_id = string.Empty<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00079">79</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
+Definition at line <link linkend="__combatant_info_8gen_8cs_source_1l00080">80</link> of file <link linkend="__combatant_info_8gen_8cs_source">CombatantInfo.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

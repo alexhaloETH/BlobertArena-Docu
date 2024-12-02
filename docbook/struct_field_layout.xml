@@ -14,7 +14,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00040">40</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00041">41</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -23,14 +23,14 @@ Definition at line <link linkend="__attack_8gen_8cs_source_1l00040">40</link> of
 <indexterm><primary>layout</primary><secondary>FieldLayout</secondary></indexterm>
 <indexterm><primary>FieldLayout</primary><secondary>layout</secondary></indexterm>
 <para><computeroutput>Layout FieldLayout.layout</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00043">43</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00044">44</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_field_layout_1ab706d8b2371db110103a50302f1390e2"/><section>
     <title>selector</title>
 <indexterm><primary>selector</primary><secondary>FieldLayout</secondary></indexterm>
 <indexterm><primary>FieldLayout</primary><secondary>selector</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> FieldLayout.selector</computeroutput></para><para>
-Definition at line <link linkend="__attack_8gen_8cs_source_1l00042">42</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
+Definition at line <link linkend="__attack_8gen_8cs_source_1l00043">43</link> of file <link linkend="__attack_8gen_8cs_source">Attack.gen.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

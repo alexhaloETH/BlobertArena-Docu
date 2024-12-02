@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component" xml:lang="en-US">
+<title>UiComponents.Slider.SliderAnimatorComponent Class Reference</title>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary></indexterm>
+<para>Inheritance diagram for UiComponents.Slider.SliderAnimatorComponent:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ui_components_1_1_slider_1_1_slider_animator_component.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1ab9a88e0a7551e3d3aaba48d451241d10">SetValue</link> (float value, float duration=0f, bool changeBackgroundColour=false)</para>
+
+<para>Moves the slider to a specific value, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1acd0ce9c8b13a9b0aac8d4cf9251fb1eb">SetPercentage</link> (float percentage, float duration=0f)</para>
+
+<para>Moves the slider to a specific percentage (0-1), animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a62747398de5e5478fa4ec5b519767d21">IncrementValue</link> (float increment, float duration=0f)</para>
+
+<para>Increments the slider&apos;s value by a specific amount, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1adcd4f52ebb9fd57992f71f66f93aca44">DecrementValue</link> (float decrement, float duration=0f)</para>
+
+<para>Decrements the slider&apos;s value by a specific amount, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a273f84abe83f7f333dcc35f07dac17b9">GetValue</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1abde5db27f675761fdd4cc5ed7a5829ba">MoveToMin</link> (float duration=0f)</para>
+
+<para>Moves the slider to its minimum value, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a5bff3eaa1f296d2693d57f2e1bdc2c34">MoveToMax</link> (float duration=0f)</para>
+
+<para>Moves the slider to its maximum value, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a5e8fd0146ea6b5c855e0b5f7532b30dd">SetMax</link> (int max)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1ab5e400aedd6db9ec4986e75fbf815903">SetMin</link> (int min)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a42636e9826ac13f629812674e83c0062">PingPong</link> (float startValue, float endValue, float duration)</para>
+
+<para>Creates a ping-pong animation between two values, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1ad748c7be0f8a98c0ca52c08d61bf8f5a">ChangeFillColor</link> (Color color, float duration=0f)</para>
+
+<para>Changes the slider&apos;s fill color, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a0bf8e24407c1f39cc6563fc566d6c279">ChangeHandleColor</link> (Color color, float duration=0f)</para>
+
+<para>Changes the slider&apos;s handle color, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a18d9876646cf92547957d13b346aceeb">ChangeBackgroundColor</link> (Color color, float duration=0f)</para>
+
+<para>Changes the slider&apos;s background color, animating if duration is greater than 0. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a700f12046f89d6b85c9574707ee03fd5">Shake</link> (float duration, float magnitude)</para>
+
+<para>Shakes the specified transform with the given duration and magnitude. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a0c93b51d89e6288e391c03787796f8b2">isAnimating</link> = true</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00009">9</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a18d9876646cf92547957d13b346aceeb"/><section>
+    <title>ChangeBackgroundColor()</title>
+<indexterm><primary>ChangeBackgroundColor</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>ChangeBackgroundColor</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.ChangeBackgroundColor (Color color, float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Changes the slider&apos;s background color, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>color</entry><entry>
+<para>The new color for the slider&apos;s background area.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the color change. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00249">249</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1ad748c7be0f8a98c0ca52c08d61bf8f5a"/><section>
+    <title>ChangeFillColor()</title>
+<indexterm><primary>ChangeFillColor</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>ChangeFillColor</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.ChangeFillColor (Color color, float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Changes the slider&apos;s fill color, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>color</entry><entry>
+<para>The new color for the slider&apos;s fill area.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the color change. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00201">201</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a0bf8e24407c1f39cc6563fc566d6c279"/><section>
+    <title>ChangeHandleColor()</title>
+<indexterm><primary>ChangeHandleColor</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>ChangeHandleColor</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.ChangeHandleColor (Color color, float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Changes the slider&apos;s handle color, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>color</entry><entry>
+<para>The new color for the slider&apos;s handle.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the color change. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00225">225</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1adcd4f52ebb9fd57992f71f66f93aca44"/><section>
+    <title>DecrementValue()</title>
+<indexterm><primary>DecrementValue</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>DecrementValue</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.DecrementValue (float decrement, float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Decrements the slider&apos;s value by a specific amount, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>decrement</entry><entry>
+<para>The amount by which to decrease the slider&apos;s value.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the slider. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00087">87</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a273f84abe83f7f333dcc35f07dac17b9"/><section>
+    <title>GetValue()</title>
+<indexterm><primary>GetValue</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>GetValue</secondary></indexterm>
+<para><computeroutput>float UiComponents.Slider.SliderAnimatorComponent.GetValue ( )</computeroutput></para><para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00100">100</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a62747398de5e5478fa4ec5b519767d21"/><section>
+    <title>IncrementValue()</title>
+<indexterm><primary>IncrementValue</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>IncrementValue</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.IncrementValue (float increment, float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Increments the slider&apos;s value by a specific amount, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>increment</entry><entry>
+<para>The amount by which to increase the slider&apos;s value.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the slider. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00070">70</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a5bff3eaa1f296d2693d57f2e1bdc2c34"/><section>
+    <title>MoveToMax()</title>
+<indexterm><primary>MoveToMax</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>MoveToMax</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.MoveToMax (float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Moves the slider to its maximum value, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the slider to its maximum value. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00125">125</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1abde5db27f675761fdd4cc5ed7a5829ba"/><section>
+    <title>MoveToMin()</title>
+<indexterm><primary>MoveToMin</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>MoveToMin</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.MoveToMin (float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Moves the slider to its minimum value, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the slider to its minimum value. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00109">109</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a42636e9826ac13f629812674e83c0062"/><section>
+    <title>PingPong()</title>
+<indexterm><primary>PingPong</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>PingPong</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.PingPong (float startValue, float endValue, float duration)</computeroutput></para><para>
+
+<para>Creates a ping-pong animation between two values, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>startValue</entry><entry>
+<para>The starting value for the ping-pong animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>endValue</entry><entry>
+<para>The ending value for the ping-pong animation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate between the values. If 0, the slider will just set to the startValue.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00184">184</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a5e8fd0146ea6b5c855e0b5f7532b30dd"/><section>
+    <title>SetMax()</title>
+<indexterm><primary>SetMax</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>SetMax</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.SetMax (int max)</computeroutput></para><para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00137">137</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1ab5e400aedd6db9ec4986e75fbf815903"/><section>
+    <title>SetMin()</title>
+<indexterm><primary>SetMin</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>SetMin</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.SetMin (int min)</computeroutput></para><para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00142">142</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1acd0ce9c8b13a9b0aac8d4cf9251fb1eb"/><section>
+    <title>SetPercentage()</title>
+<indexterm><primary>SetPercentage</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>SetPercentage</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.SetPercentage (float percentage, float duration = <computeroutput>0f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Moves the slider to a specific percentage (0-1), animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>percentage</entry><entry>
+<para>The target percentage (0 to 1) to move the slider to.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the slider. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00051">51</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1ab9a88e0a7551e3d3aaba48d451241d10"/><section>
+    <title>SetValue()</title>
+<indexterm><primary>SetValue</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>SetValue</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.SetValue (float value, float duration = <computeroutput>0f</computeroutput>
+, bool changeBackgroundColour = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+
+<para>Moves the slider to a specific value, animating if duration is greater than 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The target value to move the slider to.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration over which to animate the slider. If 0, the change is instant.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00027">27</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a700f12046f89d6b85c9574707ee03fd5"/><section>
+    <title>Shake()</title>
+<indexterm><primary>Shake</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>Shake</secondary></indexterm>
+<para><computeroutput>void UiComponents.Slider.SliderAnimatorComponent.Shake (float duration, float magnitude)</computeroutput></para><para>
+
+<para>Shakes the specified transform with the given duration and magnitude. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>duration</entry><entry>
+<para>The duration of the shake effect.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>magnitude</entry><entry>
+<para>The magnitude of the shake effect.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00273">273</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_ui_components_1_1_slider_1_1_slider_animator_component_1a0c93b51d89e6288e391c03787796f8b2"/><section>
+    <title>isAnimating</title>
+<indexterm><primary>isAnimating</primary><secondary>UiComponents.Slider.SliderAnimatorComponent</secondary></indexterm>
+<indexterm><primary>UiComponents.Slider.SliderAnimatorComponent</primary><secondary>isAnimating</secondary></indexterm>
+<para><computeroutput>bool UiComponents.Slider.SliderAnimatorComponent.isAnimating = true</computeroutput></para><para>
+Definition at line <link linkend="__slider_animator_component_8cs_source_1l00014">14</link> of file <link linkend="__slider_animator_component_8cs_source">SliderAnimatorComponent.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+UI/Components/BattlePageComponents/<link linkend="__slider_animator_component_8cs">SliderAnimatorComponent.cs</link></section>
+</section>

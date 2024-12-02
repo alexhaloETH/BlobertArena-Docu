@@ -5,7 +5,7 @@
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a5f42526eb8f7252f3d314898bb3e4283">NotificationObjectSetup</link> (List&lt; <link linkend="_struct_notification_component_manager_1_1_button_struct">ButtonStruct</link> &gt; buttonTypes, string message, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> colourOfBackground, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> eventType, TextureFunctionInput textureInput=default)</para>
+            <listitem><para><link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a5f42526eb8f7252f3d314898bb3e4283">NotificationObjectSetup</link> (List&lt; <link linkend="_struct_notification_component_manager_1_1_button_struct">ButtonStruct</link> &gt; buttonTypes, string message, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> colourOfBackground, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> eventType, <link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a78c8fa3fcc5f6b11019e7a48753a03d2">TextureFunctionInput</link> textureInput=default)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -20,7 +20,7 @@
 </listitem>
             <listitem><para><link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> <link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a9e9895b850f951aa71cf91affeda48ee">ColourOfBackground</link></para>
 </listitem>
-            <listitem><para><link linkend="_struct_character_animation_manager_1_1_texture_function_input">CharacterAnimationManager.TextureFunctionInput</link> <link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a78c8fa3fcc5f6b11019e7a48753a03d2">TextureFunctionInput</link></para>
+            <listitem><para>CharacterAnimationManager.TextureFunctionInput <link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a78c8fa3fcc5f6b11019e7a48753a03d2">TextureFunctionInput</link></para>
 </listitem>
             <listitem><para><link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> <link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a77ba80513fd2c161654d7b84d84425ba">NftType</link></para>
 </listitem>
@@ -29,7 +29,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00045">45</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00047">47</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -37,9 +37,9 @@ Definition at line <link linkend="__notification_component_manager_8cs_source_1l
     <title>NotificationObjectSetup()</title>
 <indexterm><primary>NotificationObjectSetup</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>NotificationObjectSetup</secondary></indexterm>
-<para><computeroutput>NotificationComponentManager.NotificationObjectSetup.NotificationObjectSetup (List&lt; <link linkend="_struct_notification_component_manager_1_1_button_struct">ButtonStruct</link> &gt; buttonTypes, string message, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> colourOfBackground, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> eventType, TextureFunctionInput textureInput = <computeroutput>default</computeroutput>
+<para><computeroutput>NotificationComponentManager.NotificationObjectSetup.NotificationObjectSetup (List&lt; <link linkend="_struct_notification_component_manager_1_1_button_struct">ButtonStruct</link> &gt; buttonTypes, string message, <link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> blobId, <link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> colourOfBackground, <link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> eventType, <link linkend="_struct_notification_component_manager_1_1_notification_object_setup_1a78c8fa3fcc5f6b11019e7a48753a03d2">TextureFunctionInput</link> textureInput = <computeroutput>default</computeroutput>
 )</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00054">54</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00056">56</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 </section>
 <section>
@@ -49,42 +49,42 @@ Definition at line <link linkend="__notification_component_manager_8cs_source_1l
 <indexterm><primary>BlobId</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>BlobId</secondary></indexterm>
 <para><computeroutput><link linkend="__view_equipped_attacks_blob_dex_component_8cs_1a04fcbbbbb88c5b1e47388f419576f399">FieldElement</link> NotificationComponentManager.NotificationObjectSetup.BlobId</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00049">49</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00051">51</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_notification_component_manager_1_1_notification_object_setup_1ada477c2c5972104a1549ceee25ebea38"/><section>
     <title>ButtonTypes</title>
 <indexterm><primary>ButtonTypes</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>ButtonTypes</secondary></indexterm>
 <para><computeroutput>List&lt;<link linkend="_struct_notification_component_manager_1_1_button_struct">ButtonStruct</link>&gt; NotificationComponentManager.NotificationObjectSetup.ButtonTypes</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00047">47</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00049">49</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_notification_component_manager_1_1_notification_object_setup_1a9e9895b850f951aa71cf91affeda48ee"/><section>
     <title>ColourOfBackground</title>
 <indexterm><primary>ColourOfBackground</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>ColourOfBackground</secondary></indexterm>
 <para><computeroutput><link linkend="_class_notification_component_manager_1a232070374e6159e6ab17662d15ea54c0">BackgroundColour</link> NotificationComponentManager.NotificationObjectSetup.ColourOfBackground</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00050">50</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00052">52</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_notification_component_manager_1_1_notification_object_setup_1a2dfd4b3219aa8603a7c7831d03dc38f1"/><section>
     <title>Message</title>
 <indexterm><primary>Message</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>Message</secondary></indexterm>
 <para><computeroutput>string NotificationComponentManager.NotificationObjectSetup.Message</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00048">48</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00050">50</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_notification_component_manager_1_1_notification_object_setup_1a77ba80513fd2c161654d7b84d84425ba"/><section>
     <title>NftType</title>
 <indexterm><primary>NftType</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>NftType</secondary></indexterm>
 <para><computeroutput><link linkend="_class_blobert_types_1a6e7b71d682ed504f647e259090af2b94">BlobertTypes.NFTTypes</link> NotificationComponentManager.NotificationObjectSetup.NftType</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00052">52</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00054">54</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <anchor xml:id="_struct_notification_component_manager_1_1_notification_object_setup_1a78c8fa3fcc5f6b11019e7a48753a03d2"/><section>
     <title>TextureFunctionInput</title>
 <indexterm><primary>TextureFunctionInput</primary><secondary>NotificationComponentManager.NotificationObjectSetup</secondary></indexterm>
 <indexterm><primary>NotificationComponentManager.NotificationObjectSetup</primary><secondary>TextureFunctionInput</secondary></indexterm>
-<para><computeroutput><link linkend="_struct_character_animation_manager_1_1_texture_function_input">CharacterAnimationManager.TextureFunctionInput</link> NotificationComponentManager.NotificationObjectSetup.TextureFunctionInput</computeroutput></para><para>
-Definition at line <link linkend="__notification_component_manager_8cs_source_1l00051">51</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
+<para><computeroutput>CharacterAnimationManager.TextureFunctionInput NotificationComponentManager.NotificationObjectSetup.TextureFunctionInput</computeroutput></para><para>
+Definition at line <link linkend="__notification_component_manager_8cs_source_1l00053">53</link> of file <link linkend="__notification_component_manager_8cs_source">NotificationComponentManager.cs</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

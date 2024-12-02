@@ -8,383 +8,388 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00005"/><link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">00005</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link>&#32;=&#32;<link linkend="_namespace_system">System</link>.Random;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00006"/>00006 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00007"/>00007 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>BlobertAnimationController
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00007"/>00007 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_blobert_arena_1_1_animations">BlobertArena.Animations</link>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00008"/>00008 {
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Character&#32;data</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00010"/>00010 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;AmountOfLayers&#32;=&#32;4;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;NameOfLayers&#32;=&#32;<emphasis role="keyword">new</emphasis>[]&#32;{&#32;<emphasis role="stringliteral">&quot;Mask&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Armour&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jewelry&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Weapon&quot;</emphasis>&#32;};
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00009"/>00009 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00010"/>00010 <emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>BlobertAnimationController
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00011"/>00011 {
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Character&#32;data</emphasis>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00013"/>00013 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleHappyFrontL&#32;=&#32;18;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleHappyFrontR&#32;=&#32;16;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;AmountOfLayers&#32;=&#32;4;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;NameOfLayers&#32;=&#32;<emphasis role="keyword">new</emphasis>[]&#32;{&#32;<emphasis role="stringliteral">&quot;Mask&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Armour&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jewelry&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Weapon&quot;</emphasis>&#32;};
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00016"/>00016 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleDefaultFrontL&#32;=&#32;2;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleDefaultFrontR&#32;=&#32;0;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleHappyFrontL&#32;=&#32;18;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleHappyFrontR&#32;=&#32;16;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00019"/>00019 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleMadFrontL&#32;=&#32;34;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleMadFrontR&#32;=&#32;32;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleDefaultFrontL&#32;=&#32;2;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleDefaultFrontR&#32;=&#32;0;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00022"/>00022 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00023"/>00023 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Character&#32;data</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00024"/>00024 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00025"/>00025 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;States</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00026"/>00026 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;AnimationDirection
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{&#32;Front,&#32;Back&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleMadFrontL&#32;=&#32;34;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;IdleMadFrontR&#32;=&#32;32;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00025"/>00025 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00026"/>00026 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Character&#32;data</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00027"/>00027 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00028"/>00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;States</emphasis>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00029"/>00029 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;AnimationFace
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{&#32;Right,&#32;Left&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;AnimationDirection
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{&#32;Front,&#32;Back&#32;}
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00032"/>00032 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;AnimationState
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{&#32;Idle1,&#32;Static&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;AnimationFace
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{&#32;Right,&#32;Left&#32;}
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00035"/>00035 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;BehaviourState
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;{&#32;Default,&#32;Happy,&#32;Mad,&#32;Speak&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;AnimationState
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;{&#32;Idle1,&#32;Static&#32;}
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00038"/>00038 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00039"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">00039</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Enums</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00042"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a93114d0c39f970dc23aff302474812d7">00042</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationDirection&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a93114d0c39f970dc23aff302474812d7">Direction</link>;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00043"/>00043 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00044"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a828ecfd9288e13ed12c37ee1ee1599ae">00044</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationFace&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a828ecfd9288e13ed12c37ee1ee1599ae">Side</link>;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00045"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a0876ffca99138c14503ff2f53e62d9ac">00045</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationState&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a0876ffca99138c14503ff2f53e62d9ac">State</link>;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00046"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a0a9ecee8adb390bd90b71956e9ff64bb">00046</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;BehaviourState&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a0a9ecee8adb390bd90b71956e9ff64bb">Behaviour</link>;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00047"/>00047 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Constructor</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00049"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a02eaddc3300b40c0edce90e4da6094f1">00049</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a02eaddc3300b40c0edce90e4da6094f1">AnimationDataTraitBlobert</link>(AnimationDirection&#32;direction,&#32;AnimationFace&#32;side,&#32;AnimationState&#32;idleState,&#32;BehaviourState&#32;emotionState)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Direction&#32;=&#32;direction;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Side&#32;=&#32;side;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.State&#32;=&#32;idleState;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Behaviour&#32;=&#32;emotionState;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00055"/>00055 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(State&#32;==&#32;AnimationState.Static)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Direction&#32;=&#32;AnimationDirection.Front;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//cannot&#32;be&#32;default&#32;if&#32;static&#32;so&#32;we&#32;set&#32;it&#32;to&#32;happy</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Behaviour&#32;=&#32;BehaviourState.Happy;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Direction&#32;=&#32;direction;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00067"/>00067 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00068"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad07ffce1694f95f43416251bb71f3e21">00068</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad07ffce1694f95f43416251bb71f3e21">EncodeAnimationData</link>(<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>&#32;dataTraitBlobert)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;encoded&#32;=&#32;0;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a93114d0c39f970dc23aff302474812d7">Direction</link>&#32;&lt;&lt;&#32;0;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a828ecfd9288e13ed12c37ee1ee1599ae">Side</link>&#32;&lt;&lt;&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a0876ffca99138c14503ff2f53e62d9ac">State</link>&#32;&lt;&lt;&#32;2;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a0a9ecee8adb390bd90b71956e9ff64bb">Behaviour</link>&#32;&lt;&lt;&#32;4;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00075"/>00075 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;encoded;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;BehaviourState
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;{&#32;Default,&#32;Happy,&#32;Mad,&#32;Speak&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00041"/>00041 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00042"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">00042</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Enums</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00045"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1add5f829b6084a2bf984fad69e88e5332">00045</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationDirection&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1add5f829b6084a2bf984fad69e88e5332">Direction</link>;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00046"/>00046 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00047"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a012bb06d9cab41c1ecfc6f122f18fa53">00047</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationFace&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a012bb06d9cab41c1ecfc6f122f18fa53">Side</link>;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00048"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad74388eacc575bbc209fbd1242879107">00048</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationState&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad74388eacc575bbc209fbd1242879107">State</link>;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00049"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a42babc7f599ffe0a7d2d9ea788a630ed">00049</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;BehaviourState&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a42babc7f599ffe0a7d2d9ea788a630ed">Behaviour</link>;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00050"/>00050 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Constructor</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00052"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1c10528f740d1d2f03474f50270f3ecf">00052</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1c10528f740d1d2f03474f50270f3ecf">AnimationDataTraitBlobert</link>(AnimationDirection&#32;direction,&#32;AnimationFace&#32;side,&#32;AnimationState&#32;idleState,&#32;BehaviourState&#32;emotionState)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Direction&#32;=&#32;direction;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Side&#32;=&#32;side;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.State&#32;=&#32;idleState;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Behaviour&#32;=&#32;emotionState;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00058"/>00058 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad74388eacc575bbc209fbd1242879107">State</link>&#32;==&#32;AnimationState.Static)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Direction&#32;=&#32;AnimationDirection.Front;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//cannot&#32;be&#32;default&#32;if&#32;static&#32;so&#32;we&#32;set&#32;it&#32;to&#32;happy</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Behaviour&#32;=&#32;BehaviourState.Happy;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Direction&#32;=&#32;direction;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00070"/>00070 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00071"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad03449b8785e2484b0b2d27b1ac705d5">00071</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad03449b8785e2484b0b2d27b1ac705d5">EncodeAnimationData</link>(<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>&#32;dataTraitBlobert)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;encoded&#32;=&#32;0;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1add5f829b6084a2bf984fad69e88e5332">Direction</link>&#32;&lt;&lt;&#32;0;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a012bb06d9cab41c1ecfc6f122f18fa53">Side</link>&#32;&lt;&lt;&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1ad74388eacc575bbc209fbd1242879107">State</link>&#32;&lt;&lt;&#32;2;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;|=&#32;(int)dataTraitBlobert.<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a42babc7f599ffe0a7d2d9ea788a630ed">Behaviour</link>&#32;&lt;&lt;&#32;4;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00078"/>00078 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00079"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a8661a39e1412fc81c5345f961b644fd4">00079</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a8661a39e1412fc81c5345f961b644fd4">DecodeAnimationData</link>(<emphasis role="keywordtype">int</emphasis>&#32;encoded)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Extract&#32;the&#32;data&#32;using&#32;bit-masking&#32;and&#32;shifting</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationDirection&#32;direction&#32;=&#32;(AnimationDirection)(encoded&#32;&amp;&#32;0b1);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationFace&#32;side&#32;=&#32;(AnimationFace)((encoded&#32;&gt;&gt;&#32;1)&#32;&amp;&#32;0b1);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationState&#32;state&#32;=&#32;(AnimationState)((encoded&#32;&gt;&gt;&#32;2)&#32;&amp;&#32;0b11);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BehaviourState&#32;behaviour&#32;=&#32;(BehaviourState)((encoded&#32;&gt;&gt;&#32;4)&#32;&amp;&#32;0b111);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00086"/>00086 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>(direction,&#32;side,&#32;state,&#32;behaviour);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;encoded;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00081"/>00081 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00082"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a969dbf844e402b332ce5da44f7d6659e">00082</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a969dbf844e402b332ce5da44f7d6659e">DecodeAnimationData</link>(<emphasis role="keywordtype">int</emphasis>&#32;encoded)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Extract&#32;the&#32;data&#32;using&#32;bit-masking&#32;and&#32;shifting</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationDirection&#32;direction&#32;=&#32;(AnimationDirection)(encoded&#32;&amp;&#32;0b1);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationFace&#32;side&#32;=&#32;(AnimationFace)((encoded&#32;&gt;&gt;&#32;1)&#32;&amp;&#32;0b1);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationState&#32;state&#32;=&#32;(AnimationState)((encoded&#32;&gt;&gt;&#32;2)&#32;&amp;&#32;0b11);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BehaviourState&#32;behaviour&#32;=&#32;(BehaviourState)((encoded&#32;&gt;&gt;&#32;4)&#32;&amp;&#32;0b111);
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00089"/>00089 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00090"/><link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1655d40e7a712229738e9ae41f3e1648">00090</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1655d40e7a712229738e9ae41f3e1648">GetRandomAnimationData</link>()
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;rand&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link>();
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>(
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(AnimationDirection)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(AnimationDirection)).Length),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(AnimationFace)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(AnimationFace)).Length),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(AnimationState)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(AnimationState)).Length),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(BehaviourState)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(BehaviourState)).Length)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00101"/>00101 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00102"/>00102 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;States</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00103"/>00103 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>.<link linkend="_struct_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>&gt;&#32;GetTextureFunctionInput(TokenTrait&#32;tokenTrait,
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationDataTraitBlobert&#32;animDataTraitBlobert)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(tokenTrait&#32;is&#32;TokenTrait.Custom)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Custom&#32;traits&#32;are&#32;not&#32;supported&#32;for&#32;BlobertTraitAnimationComponent&#32;yet&quot;</emphasis>);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00112"/>00112 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;listOfTextureFuncInput&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>.<link linkend="_struct_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>&gt;();
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;regularTrait&#32;=&#32;(TokenTrait.Regular)tokenTrait;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00115"/>00115 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Array&#32;of&#32;textures&#32;to&#32;load&#32;for&#32;each&#32;trait</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;textures&#32;=&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Mask/BlobertSpriteSheet_Mask_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">TraitMaskToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>)&#32;regularTrait.value.mask),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Armour/BlobertSpriteSheet_Armour_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">TraitArmourToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>)&#32;regularTrait.value.armour),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Jewelry/BlobertSpriteSheet_Jewelry_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">TraitJewelryToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>)&#32;regularTrait.value.jewelry),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Weapon/BlobertSpriteSheet_Weapon_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">TraitWeaponToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>)regularTrait.value.weapon)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00123"/>00123 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Array&#32;of&#32;animation&#32;data&#32;(start&#32;index&#32;and&#32;length)&#32;for&#32;each&#32;texture</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;animationInfos&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;startIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)[]
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateMaskAnimationIndexAndLength(animDataTraitBlobert),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateTorsoAnimationIndexAndLength(animDataTraitBlobert),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateTorsoAnimationIndexAndLength(animDataTraitBlobert),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateTorsoAnimationIndexAndLength(animDataTraitBlobert)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00132"/>00132 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(var&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;textures.Length;&#32;i++)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;listOfTextureFuncInput.Add(<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_character_animation_manager">CharacterAnimationManager</link>.<link linkend="_struct_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>(
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Resources.Load&lt;Texture&gt;(textures[i]),
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textures[i],
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;animationInfos[i].startIndex,
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;animationInfos[i].length
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;));
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00142"/>00142 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;listOfTextureFuncInput;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00145"/>00145 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;&#32;GetAnimationSprites(TokenTrait&#32;tokenTrait,&#32;AnimationDataTraitBlobert&#32;animDataTraitBlobert)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(tokenTrait&#32;is&#32;TokenTrait.Custom)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Custom&#32;traits&#32;are&#32;not&#32;supported&#32;for&#32;BlobertTraitAnimationComponent&#32;yet&quot;</emphasis>);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00153"/>00153 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;regularTrait&#32;=&#32;(TokenTrait.Regular)tokenTrait;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00155"/>00155 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;maskTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Mask/BlobertSpriteSheet_Mask_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">TraitMaskToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>)regularTrait.value.mask));
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;armourTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Armour/BlobertSpriteSheet_Armour_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">TraitArmourToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>)regularTrait.value.armour));
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jewelryTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Jewelry/BlobertSpriteSheet_Jewelry_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">TraitJewelryToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>)regularTrait.value.jewelry));
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;weaponTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Weapon/BlobertSpriteSheet_Weapon_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">TraitWeaponToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>)regularTrait.value.weapon));
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00160"/>00160 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;bodyTraits&#32;=&#32;LoadBodyTraits(armourTextures,&#32;jewelryTextures,&#32;weaponTextures,&#32;animDataTraitBlobert);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;maskTrait&#32;=&#32;LoadMaskFormat(maskTextures,&#32;animDataTraitBlobert);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00163"/>00163 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;combinedTextures&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;(bodyTraits)&#32;{&#32;maskTrait&#32;};
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00165"/>00165 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;combinedTextures;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00168"/>00168 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00169"/>00169 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Loading&#32;Texture</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00170"/>00170 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;Sprite&gt;&#32;LoadMaskFormat(Sprite[]&#32;maskArr,&#32;AnimationDataTraitBlobert&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;lengthOfAnimation&#32;=&#32;CalculateMaskAnimationIndexAndLength(animation);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1c10528f740d1d2f03474f50270f3ecf">AnimationDataTraitBlobert</link>(direction,&#32;side,&#32;state,&#32;behaviour);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00092"/>00092 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00093"/><link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a98dc50c787f36352870e4e3a349f8aa2">00093</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert">AnimationDataTraitBlobert</link>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a98dc50c787f36352870e4e3a349f8aa2">GetRandomAnimationData</link>()
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;rand&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="__blobert_animation_controller_8cs_1a24953b19d956caa76c403684c71b4e5b">Random</link>();
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert_1a1c10528f740d1d2f03474f50270f3ecf">AnimationDataTraitBlobert</link>(
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(AnimationDirection)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(AnimationDirection)).Length),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(AnimationFace)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(AnimationFace)).Length),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(AnimationState)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(AnimationState)).Length),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(BehaviourState)rand.Next(<link linkend="__arcade_blobert_8gen_8cs_1a1ad026eae6158e05516a7fc458801fd6">Enum</link>.GetValues(typeof(BehaviourState)).Length)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00104"/>00104 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00105"/>00105 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;States</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00106"/>00106 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00107"/>00107 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;<link linkend="_class_blobert_arena_1_1_animations_1_1_character_animation_manager">CharacterAnimationManager</link>.<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input">TextureFunctionInput</link>&gt;&#32;GetTextureFunctionInput(TokenTrait&#32;tokenTrait,
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AnimationDataTraitBlobert&#32;animDataTraitBlobert)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(tokenTrait&#32;is&#32;TokenTrait.Custom)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Custom&#32;traits&#32;are&#32;not&#32;supported&#32;for&#32;BlobertTraitAnimationComponent&#32;yet&quot;</emphasis>);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00116"/>00116 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;listOfTextureFuncInput&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;CharacterAnimationManager.<link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input_1a536550d16baf0170837247350816c77b">TextureFunctionInput</link>&gt;();
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;regularTrait&#32;=&#32;(TokenTrait.Regular)tokenTrait;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00119"/>00119 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Array&#32;of&#32;textures&#32;to&#32;load&#32;for&#32;each&#32;trait</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;textures&#32;=&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Mask/BlobertSpriteSheet_Mask_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">TraitMaskToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>)&#32;regularTrait.value.mask),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Armour/BlobertSpriteSheet_Armour_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">TraitArmourToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>)&#32;regularTrait.value.armour),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Jewelry/BlobertSpriteSheet_Jewelry_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">TraitJewelryToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>)&#32;regularTrait.value.jewelry),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Traits/Normal/Weapon/BlobertSpriteSheet_Weapon_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">TraitWeaponToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>)regularTrait.value.weapon)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00127"/>00127 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Array&#32;of&#32;animation&#32;data&#32;(start&#32;index&#32;and&#32;length)&#32;for&#32;each&#32;texture</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;animationInfos&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;startIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)[]
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateMaskAnimationIndexAndLength(animDataTraitBlobert),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateTorsoAnimationIndexAndLength(animDataTraitBlobert),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateTorsoAnimationIndexAndLength(animDataTraitBlobert),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateTorsoAnimationIndexAndLength(animDataTraitBlobert)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00136"/>00136 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(var&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;textures.Length;&#32;i++)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;listOfTextureFuncInput.Add(<emphasis role="keyword">new</emphasis>&#32;CharacterAnimationManager.TextureFunctionInput(
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Resources.Load&lt;Texture&gt;(textures[i]),
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textures[i],
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;animationInfos[i].startIndex,
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;animationInfos[i].length
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;));
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00146"/>00146 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;listOfTextureFuncInput;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00149"/>00149 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;&#32;GetAnimationSprites(TokenTrait&#32;tokenTrait,&#32;AnimationDataTraitBlobert&#32;animDataTraitBlobert)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(tokenTrait&#32;is&#32;TokenTrait.Custom)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError(<emphasis role="stringliteral">&quot;Custom&#32;traits&#32;are&#32;not&#32;supported&#32;for&#32;BlobertTraitAnimationComponent&#32;yet&quot;</emphasis>);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00157"/>00157 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;regularTrait&#32;=&#32;(TokenTrait.Regular)tokenTrait;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00159"/>00159 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;maskTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Mask/BlobertSpriteSheet_Mask_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a70e507e009c112857f37f9715506b167">TraitMaskToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1aeea23bb373668a46486ca06150c26e1b">Mask</link>)regularTrait.value.mask));
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;armourTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Armour/BlobertSpriteSheet_Armour_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a5a8889d6efcb62c2e9dabde12edb95dc">TraitArmourToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a03b7cd7a2659573da9e83b66e72c20cd">Armour</link>)regularTrait.value.armour));
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;jewelryTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Jewelry/BlobertSpriteSheet_Jewelry_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a87dec33205aa0a2cb0e2f241bcc18f47">TraitJewelryToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a0950cf1ecfdf20879a2fd45033ce4bd3">Jewelry</link>)regularTrait.value.jewelry));
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;weaponTextures&#32;=&#32;Resources.LoadAll&lt;Sprite&gt;(<emphasis role="stringliteral">&quot;Traits/Normal/Weapon/BlobertSpriteSheet_Weapon_&quot;</emphasis>&#32;+&#32;<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a6b04d76bedcec4fe47abc2f81aed5f1f">TraitWeaponToFileName</link>((<link linkend="_class_blobert_types">BlobertTypes</link>.<link linkend="_class_blobert_types_1a15aa64e16cdddbefd7720e3caf0b0b76">Weapon</link>)regularTrait.value.weapon));
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00164"/>00164 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;bodyTraits&#32;=&#32;LoadBodyTraits(armourTextures,&#32;jewelryTextures,&#32;weaponTextures,&#32;animDataTraitBlobert);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;maskTrait&#32;=&#32;LoadMaskFormat(maskTextures,&#32;animDataTraitBlobert);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00167"/>00167 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;combinedTextures&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;(bodyTraits)&#32;{&#32;maskTrait&#32;};
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00169"/>00169 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;combinedTextures;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00172"/>00172 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00173"/>00173 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Loading&#32;Texture</emphasis>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00174"/>00174 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedMaskSprites&#32;=&#32;GetSubArray(maskArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.length);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00176"/>00176 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;selectedMaskSprites.ToList();
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00179"/>00179 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;&#32;LoadBodyTraits(Sprite[]&#32;armourArr,&#32;Sprite[]&#32;jewelryArr,&#32;Sprite[]&#32;weaponArr,&#32;AnimationDataTraitBlobert&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sprites&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;();
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;Sprite&gt;&#32;LoadMaskFormat(Sprite[]&#32;maskArr,&#32;AnimationDataTraitBlobert&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;lengthOfAnimation&#32;=&#32;CalculateMaskAnimationIndexAndLength(animation);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00178"/>00178 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedMaskSprites&#32;=&#32;GetSubArray(maskArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.length);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00180"/>00180 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;selectedMaskSprites.ToList();
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00183"/>00183 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;lengthOfAnimation&#32;=&#32;CalculateTorsoAnimationIndexAndLength(animation);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00185"/>00185 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedArmourSprites&#32;=&#32;GetSubArray(armourArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.lengthAnimation);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprites.Add(selectedArmourSprites.ToList());
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00188"/>00188 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedJewelrySprites&#32;=&#32;GetSubArray(jewelryArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.lengthAnimation);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprites.Add(selectedJewelrySprites.ToList());
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00191"/>00191 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedWeaponSprites&#32;=&#32;GetSubArray(weaponArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.lengthAnimation);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprites.Add(selectedWeaponSprites.ToList());
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00194"/>00194 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprites;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00197"/>00197 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateChildOrder(AnimationDataTraitBlobert&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(animation.direction&#32;==&#32;AnimationDirection.Back)</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;WeaponImage.transform.SetSiblingIndex(0);</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;&#32;LoadBodyTraits(Sprite[]&#32;armourArr,&#32;Sprite[]&#32;jewelryArr,&#32;Sprite[]&#32;weaponArr,&#32;AnimationDataTraitBlobert&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;sprites&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;List&lt;Sprite&gt;&gt;();
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00187"/>00187 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;lengthOfAnimation&#32;=&#32;CalculateTorsoAnimationIndexAndLength(animation);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00189"/>00189 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedArmourSprites&#32;=&#32;GetSubArray(armourArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.lengthAnimation);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprites.Add(selectedArmourSprites.ToList());
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00192"/>00192 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedJewelrySprites&#32;=&#32;GetSubArray(jewelryArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.lengthAnimation);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprites.Add(selectedJewelrySprites.ToList());
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00195"/>00195 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;selectedWeaponSprites&#32;=&#32;GetSubArray(weaponArr,&#32;lengthOfAnimation.startingIndex,&#32;lengthOfAnimation.lengthAnimation);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprites.Add(selectedWeaponSprites.ToList());
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00198"/>00198 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprites;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00201"/>00201 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateChildOrder(AnimationDataTraitBlobert&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(animation.direction&#32;==&#32;AnimationDirection.Back)</emphasis>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;WeaponImage.transform.SetSiblingIndex(transform.childCount&#32;-&#32;1);</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;WeaponImage.transform.SetSiblingIndex(0);</emphasis>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00209"/>00209 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00210"/>00210 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Loading&#32;Texture</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00211"/>00211 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00212"/>00212 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Index&#32;Calculation</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//{</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;WeaponImage.transform.SetSiblingIndex(transform.childCount&#32;-&#32;1);</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00213"/>00213 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;startingIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;lengthAnimation)&#32;CalculateTorsoAnimationIndexAndLength(AnimationDataTraitBlobert&#32;animationDataTraitBlobert)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;startIndex&#32;=&#32;GetStartIndexForTorsoAnimation(animationDataTraitBlobert.State);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;length&#32;=&#32;GetLengthOfTorsoAnimationState(animationDataTraitBlobert.State);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00218"/>00218 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(animationDataTraitBlobert.State&#32;==&#32;AnimationState.Static)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emotion&#32;=&#32;(int)animationDataTraitBlobert.Behaviour&#32;-&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction&#32;=&#32;(int)animationDataTraitBlobert.Side;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00223"/>00223 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(emotion&#32;*&#32;2)&#32;+&#32;direction;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directionMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Direction;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sideMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Side;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00230"/>00230 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(directionMultiplier&#32;*&#32;length&#32;*&#32;2)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;(sideMultiplier&#32;*&#32;length);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00214"/>00214 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Loading&#32;Texture</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00215"/>00215 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00216"/>00216 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Index&#32;Calculation</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00217"/>00217 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;startingIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;lengthAnimation)&#32;CalculateTorsoAnimationIndexAndLength(AnimationDataTraitBlobert&#32;animationDataTraitBlobert)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;startIndex&#32;=&#32;GetStartIndexForTorsoAnimation(animationDataTraitBlobert.State);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;length&#32;=&#32;GetLengthOfTorsoAnimationState(animationDataTraitBlobert.State);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00222"/>00222 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(animationDataTraitBlobert.State&#32;==&#32;AnimationState.Static)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emotion&#32;=&#32;(int)animationDataTraitBlobert.Behaviour&#32;-&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction&#32;=&#32;(int)animationDataTraitBlobert.Side;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00227"/>00227 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(emotion&#32;*&#32;2)&#32;+&#32;direction;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directionMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Direction;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sideMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Side;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00234"/>00234 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(startIndex,&#32;length);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00237"/>00237 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;startingIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)&#32;CalculateMaskAnimationIndexAndLength(AnimationDataTraitBlobert&#32;animationDataTraitBlobert)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;startIndex&#32;=&#32;GetStartIndexForMaskAnimation(animationDataTraitBlobert.State);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;length&#32;=&#32;GetLengthOfMaskAnimationState(animationDataTraitBlobert.State);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00242"/>00242 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(animationDataTraitBlobert.State&#32;==&#32;AnimationState.Static)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emotion&#32;=&#32;(int)animationDataTraitBlobert.Behaviour&#32;-&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction&#32;=&#32;(int)animationDataTraitBlobert.Side;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00247"/>00247 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(emotion&#32;*&#32;2)&#32;+&#32;direction;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directionMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Direction;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sideMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Side;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00254"/>00254 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(animationDataTraitBlobert.Behaviour&#32;==&#32;BehaviourState.Default)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(directionMultiplier&#32;*&#32;length&#32;*&#32;2)&#32;+&#32;(sideMultiplier&#32;*&#32;length);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(directionMultiplier&#32;*&#32;length&#32;*&#32;2)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;(sideMultiplier&#32;*&#32;length);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00238"/>00238 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(startIndex,&#32;length);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00241"/>00241 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;startingIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)&#32;CalculateMaskAnimationIndexAndLength(AnimationDataTraitBlobert&#32;animationDataTraitBlobert)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;startIndex&#32;=&#32;GetStartIndexForMaskAnimation(animationDataTraitBlobert.State);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;length&#32;=&#32;GetLengthOfMaskAnimationState(animationDataTraitBlobert.State);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00246"/>00246 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(animationDataTraitBlobert.State&#32;==&#32;AnimationState.Static)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emotion&#32;=&#32;(int)animationDataTraitBlobert.Behaviour&#32;-&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction&#32;=&#32;(int)animationDataTraitBlobert.Side;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00251"/>00251 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(emotion&#32;*&#32;2)&#32;+&#32;direction;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directionMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Direction;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sideMultiplier&#32;=&#32;(int)animationDataTraitBlobert.Side;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00258"/>00258 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(animationDataTraitBlobert.Behaviour&#32;==&#32;BehaviourState.Default)
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;length&#32;*&#32;4;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00262"/>00262 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emotion&#32;=&#32;(int)animationDataTraitBlobert.Behaviour&#32;-&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directionOffset&#32;=&#32;sideMultiplier&#32;*&#32;length;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00265"/>00265 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(emotion&#32;*&#32;2&#32;*&#32;length)&#32;+&#32;directionOffset;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(directionMultiplier&#32;*&#32;length&#32;*&#32;2)&#32;+&#32;(sideMultiplier&#32;*&#32;length);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;length&#32;*&#32;4;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00266"/>00266 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emotion&#32;=&#32;(int)animationDataTraitBlobert.Behaviour&#32;-&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directionOffset&#32;=&#32;sideMultiplier&#32;*&#32;length;
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00269"/>00269 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(startIndex,&#32;length);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00272"/>00272 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetStartIndexForTorsoAnimation(AnimationState&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)AnimationState.Idle1&#32;*&#32;GetLengthOfTorsoAnimationState(animation)&#32;*&#32;4;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00279"/>00279 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle2&#32;*&#32;GetLengthOfTorsoAnimationState(animation)&#32;*&#32;4;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00282"/>00282 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle3&#32;*&#32;GetLengthOfTorsoAnimationState(animation)&#32;*&#32;4;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00285"/>00285 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Static:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;32;&#32;&#32;&#32;<emphasis role="comment">//this&#32;will&#32;be&#32;hardcoded</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00292"/>00292 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetLengthOfTorsoAnimationState(AnimationState&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00299"/>00299 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00302"/>00302 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00305"/>00305 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00309"/>00309 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00310"/>00310 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetStartIndexForMaskAnimation(AnimationState&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00312"/>00312 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)AnimationState.Idle1&#32;*&#32;GetLengthOfMaskAnimationState(animation)&#32;*&#32;10;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00317"/>00317 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle2&#32;*&#32;GetLengthOfMaskAnimationState(animation)&#32;*&#32;10;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00320"/>00320 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle3&#32;*&#32;GetLengthOfMaskAnimationState(animation)&#32;*&#32;10;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00323"/>00323 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Static:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;80;&#32;&#32;&#32;<emphasis role="comment">//this&#32;will&#32;be&#32;hardcoded</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00330"/>00330 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00331"/>00331 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetLengthOfMaskAnimationState(AnimationState&#32;animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00337"/>00337 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00340"/>00340 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00343"/>00343 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Static:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00346"/>00346 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00350"/>00350 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00351"/>00351 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00352"/>00352 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Index&#32;Calculation</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00353"/>00353 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00354"/>00354 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Utils</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;startIndex&#32;+=&#32;(emotion&#32;*&#32;2&#32;*&#32;length)&#32;+&#32;directionOffset;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00273"/>00273 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(startIndex,&#32;length);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00276"/>00276 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetStartIndexForTorsoAnimation(AnimationState&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)AnimationState.Idle1&#32;*&#32;GetLengthOfTorsoAnimationState(animation)&#32;*&#32;4;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00283"/>00283 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle2&#32;*&#32;GetLengthOfTorsoAnimationState(animation)&#32;*&#32;4;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00286"/>00286 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle3&#32;*&#32;GetLengthOfTorsoAnimationState(animation)&#32;*&#32;4;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00289"/>00289 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Static:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;32;&#32;&#32;&#32;<emphasis role="comment">//this&#32;will&#32;be&#32;hardcoded</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00295"/>00295 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00296"/>00296 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00297"/>00297 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetLengthOfTorsoAnimationState(AnimationState&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00298"/>00298 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00303"/>00303 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00306"/>00306 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00309"/>00309 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00313"/>00313 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00314"/>00314 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00315"/>00315 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetStartIndexForMaskAnimation(AnimationState&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00316"/>00316 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)AnimationState.Idle1&#32;*&#32;GetLengthOfMaskAnimationState(animation)&#32;*&#32;10;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00321"/>00321 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle2&#32;*&#32;GetLengthOfMaskAnimationState(animation)&#32;*&#32;10;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00324"/>00324 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;(int)AnimationState.Idle3&#32;*&#32;GetLengthOfMaskAnimationState(animation)&#32;*&#32;10;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00327"/>00327 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Static:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;80;&#32;&#32;&#32;<emphasis role="comment">//this&#32;will&#32;be&#32;hardcoded</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00333"/>00333 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00334"/>00334 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00335"/>00335 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;GetLengthOfMaskAnimationState(AnimationState&#32;animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00336"/>00336 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(animation)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Idle1:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00341"/>00341 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle2:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00344"/>00344 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//case&#32;AnimationState.Idle3:</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;return&#32;8;</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00347"/>00347 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;AnimationState.Static:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00350"/>00350 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00354"/>00354 &#32;&#32;&#32;&#32;}
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00355"/>00355 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00356"/>00356 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert">BlobertAnimationController.AnimationDataTraitBlobert</link>&#32;GetAnimationDataFromInt(<emphasis role="keywordtype">int</emphasis>&#32;value)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00357"/>00357 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Extract&#32;bits&#32;for&#32;each&#32;enum&#32;using&#32;bitwise&#32;operations</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;direction&#32;=&#32;(AnimationDirection)(value&#32;&amp;&#32;0b1);&#32;<emphasis role="comment">//&#32;First&#32;1&#32;bit</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;face&#32;=&#32;(AnimationFace)((value&#32;&gt;&gt;&#32;1)&#32;&amp;&#32;0b1);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Next&#32;1&#32;bit</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;(AnimationState)((value&#32;&gt;&gt;&#32;2)&#32;&amp;&#32;0b11);&#32;<emphasis role="comment">//&#32;Next&#32;2&#32;bits</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;behaviour&#32;=&#32;(BehaviourState)((value&#32;&gt;&gt;&#32;4)&#32;&amp;&#32;0b11);&#32;<emphasis role="comment">//&#32;Next&#32;2&#32;bits</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00363"/>00363 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;and&#32;return&#32;an&#32;AnimationData&#32;struct&#32;with&#32;the&#32;extracted&#32;values</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertAnimationController.<link linkend="_struct_blobert_animation_controller_1_1_animation_data_trait_blobert_1a02eaddc3300b40c0edce90e4da6094f1">AnimationDataTraitBlobert</link>(direction,&#32;face,&#32;state,&#32;behaviour);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00366"/>00366 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00356"/>00356 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Index&#32;Calculation</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00357"/>00357 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00358"/>00358 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#region&#32;Utils</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00359"/>00359 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00360"/>00360 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;BlobertAnimationController.AnimationDataTraitBlobert&#32;GetAnimationDataFromInt(<emphasis role="keywordtype">int</emphasis>&#32;value)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00361"/>00361 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Extract&#32;bits&#32;for&#32;each&#32;enum&#32;using&#32;bitwise&#32;operations</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;direction&#32;=&#32;(AnimationDirection)(value&#32;&amp;&#32;0b1);&#32;<emphasis role="comment">//&#32;First&#32;1&#32;bit</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;face&#32;=&#32;(AnimationFace)((value&#32;&gt;&gt;&#32;1)&#32;&amp;&#32;0b1);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Next&#32;1&#32;bit</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;state&#32;=&#32;(AnimationState)((value&#32;&gt;&gt;&#32;2)&#32;&amp;&#32;0b11);&#32;<emphasis role="comment">//&#32;Next&#32;2&#32;bits</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;behaviour&#32;=&#32;(BehaviourState)((value&#32;&gt;&gt;&#32;4)&#32;&amp;&#32;0b11);&#32;<emphasis role="comment">//&#32;Next&#32;2&#32;bits</emphasis>
 <anchor xml:id="__blobert_animation_controller_8cs_source_1l00367"/>00367 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00368"/>00368 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;T[]&#32;GetSubArray&lt;T&gt;(T[]&#32;array,&#32;<emphasis role="keywordtype">int</emphasis>&#32;startIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;{
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(array&#32;==&#32;<emphasis role="keyword">null</emphasis>)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentNullException(nameof(array));
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00372"/>00372 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(startIndex&#32;&lt;&#32;0&#32;||&#32;startIndex&#32;&gt;&#32;array.Length)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentOutOfRangeException(nameof(startIndex),&#32;<emphasis role="stringliteral">&quot;Start&#32;index&#32;must&#32;be&#32;within&#32;the&#32;bounds&#32;of&#32;the&#32;array.&quot;</emphasis>);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00375"/>00375 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(length&#32;&lt;&#32;0&#32;||&#32;(startIndex&#32;+&#32;length)&#32;&gt;&#32;array.Length)
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentOutOfRangeException(nameof(length),&#32;<emphasis role="stringliteral">&quot;Length&#32;must&#32;be&#32;non-negative&#32;and&#32;the&#32;range&#32;must&#32;be&#32;within&#32;the&#32;bounds&#32;of&#32;the&#32;array.&quot;</emphasis>);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00378"/>00378 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T[]&#32;result&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;T[length];
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Array.Copy(array,&#32;startIndex,&#32;result,&#32;0,&#32;length);
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00382"/>00382 &#32;&#32;&#32;&#32;}
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00383"/>00383 
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00384"/>00384 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Utils</emphasis>
-<anchor xml:id="__blobert_animation_controller_8cs_source_1l00385"/>00385 }
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;and&#32;return&#32;an&#32;AnimationData&#32;struct&#32;with&#32;the&#32;extracted&#32;values</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;BlobertAnimationController.AnimationDataTraitBlobert(direction,&#32;face,&#32;state,&#32;behaviour);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00370"/>00370 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00371"/>00371 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00372"/>00372 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;T[]&#32;GetSubArray&lt;T&gt;(T[]&#32;array,&#32;<emphasis role="keywordtype">int</emphasis>&#32;startIndex,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00373"/>00373 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(array&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentNullException(nameof(array));
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00376"/>00376 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(startIndex&#32;&lt;&#32;0&#32;||&#32;startIndex&#32;&gt;&#32;array.Length)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentOutOfRangeException(nameof(startIndex),&#32;<emphasis role="stringliteral">&quot;Start&#32;index&#32;must&#32;be&#32;within&#32;the&#32;bounds&#32;of&#32;the&#32;array.&quot;</emphasis>);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00379"/>00379 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(length&#32;&lt;&#32;0&#32;||&#32;(startIndex&#32;+&#32;length)&#32;&gt;&#32;array.Length)
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;ArgumentOutOfRangeException(nameof(length),&#32;<emphasis role="stringliteral">&quot;Length&#32;must&#32;be&#32;non-negative&#32;and&#32;the&#32;range&#32;must&#32;be&#32;within&#32;the&#32;bounds&#32;of&#32;the&#32;array.&quot;</emphasis>);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00382"/>00382 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T[]&#32;result&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;T[length];
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Array.Copy(array,&#32;startIndex,&#32;result,&#32;0,&#32;length);
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00386"/>00386 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00387"/>00387 
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00388"/>00388 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endregion&#32;Utils</emphasis>
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00389"/>00389 }
+<anchor xml:id="__blobert_animation_controller_8cs_source_1l00390"/>00390 }
 </programlisting></section>

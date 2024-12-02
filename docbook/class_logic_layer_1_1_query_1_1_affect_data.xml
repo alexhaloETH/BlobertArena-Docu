@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logic_layer_1_1_query_1_1_affect_data" xml:lang="en-US">
+<title>LogicLayer.Query.AffectData Class Reference</title>
+<indexterm><primary>LogicLayer.Query.AffectData</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_query_1_1_affect_data_1a6bef24ccaebebab53740fbb6b4fac01f">Stun</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_logic_layer_1_1_query_1_1_affect_data_1a95b20ba189883bcf6bb0bb214e93cc3d">Health</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_query_1_1_damage_data">DamageData</link> <link linkend="_class_logic_layer_1_1_query_1_1_affect_data_1aa3328dcc4c6b342f0c681e2914696ce2">Damage</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_query_1_1_stats_data">StatsData</link> <link linkend="_class_logic_layer_1_1_query_1_1_affect_data_1a5fb256b8e2a4f00aef63ce4ba87c3b3e">Stats</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_logic_layer_1_1_query_1_1_stat_data">StatData</link> <link linkend="_class_logic_layer_1_1_query_1_1_affect_data_1adfb085e7e1c0180b44f59affc04c81f5">Stat</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00150">150</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_logic_layer_1_1_query_1_1_affect_data_1aa3328dcc4c6b342f0c681e2914696ce2"/><section>
+    <title>Damage</title>
+<indexterm><primary>Damage</primary><secondary>LogicLayer.Query.AffectData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Query.AffectData</primary><secondary>Damage</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_query_1_1_damage_data">DamageData</link> LogicLayer.Query.AffectData.Damage<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00154">154</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_query_1_1_affect_data_1a95b20ba189883bcf6bb0bb214e93cc3d"/><section>
+    <title>Health</title>
+<indexterm><primary>Health</primary><secondary>LogicLayer.Query.AffectData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Query.AffectData</primary><secondary>Health</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Query.AffectData.Health<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00153">153</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_query_1_1_affect_data_1adfb085e7e1c0180b44f59affc04c81f5"/><section>
+    <title>Stat</title>
+<indexterm><primary>Stat</primary><secondary>LogicLayer.Query.AffectData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Query.AffectData</primary><secondary>Stat</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_query_1_1_stat_data">StatData</link> LogicLayer.Query.AffectData.Stat<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00156">156</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_query_1_1_affect_data_1a5fb256b8e2a4f00aef63ce4ba87c3b3e"/><section>
+    <title>Stats</title>
+<indexterm><primary>Stats</primary><secondary>LogicLayer.Query.AffectData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Query.AffectData</primary><secondary>Stats</secondary></indexterm>
+<para><computeroutput><link linkend="_class_logic_layer_1_1_query_1_1_stats_data">StatsData</link> LogicLayer.Query.AffectData.Stats<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00155">155</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_logic_layer_1_1_query_1_1_affect_data_1a6bef24ccaebebab53740fbb6b4fac01f"/><section>
+    <title>Stun</title>
+<indexterm><primary>Stun</primary><secondary>LogicLayer.Query.AffectData</secondary></indexterm>
+<indexterm><primary>LogicLayer.Query.AffectData</primary><secondary>Stun</secondary></indexterm>
+<para><computeroutput>string LogicLayer.Query.AffectData.Stun<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__query_manager_8cs_source_1l00152">152</link> of file <link linkend="__query_manager_8cs_source">QueryManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+LogicLayer/<link linkend="__query_manager_8cs">QueryManager.cs</link></section>
+</section>

@@ -6,47 +6,58 @@
 <chapter>
     <title>Namespace Documentation</title>
 <xi:include href="namespace_audio_effects.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena_1_1_animations.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena_1_1_blob_dex.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena_1_1_theme_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_blobert_arena_1_1_theme_manager_1_1_blobert_arena_1_1_theme_manager_1_1_theme_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespace_logic_layer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_logic_layer_1_1_back_end_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_logic_layer_1_1_models.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_logic_layer_1_1_query.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_starknet_utils.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespace_system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespace_system_1_1_runtime.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespace_system_1_1_runtime_1_1_compiler_services.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-<xi:include href="namespace_theme_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_ui_components.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_ui_components_1_1_slider.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>Class Documentation</title>
     <xi:include href="struct_pvp_actions_contract_1_1_accept_response_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_affect_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_amma_animation_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_affect_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_animations_1_1_amma_animation_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_a_m_m_a_blobert.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_amma_switch_button.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_animated_arrow.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_animation_data_editor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="struct_blobert_animation_controller_1_1_animation_data_trait_blobert.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_logic_layer_1_1_world_data_model_1_1_attack_anim_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_battle_page_controller_1_1_attack_availability.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_pvp_actions_contract_1_1_attack_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_audio_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_available_attack.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_base_button.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_base_button_skin_listener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_battle_page_card_stats_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_battle_page_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_blob_data_background_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_blob_data_manager_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_blob_data_standard_objects_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_blob_dex_list_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_blob_dex_list_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_blob_data_manager_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_blob_data_standard_objects_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_blob_dex_list_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_blob_dex_list_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_blobering_animation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_blobert_effects_animation_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_blobert_types.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_blob_hints.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_blob_test.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_build_script.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_button_manager_battle_page_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_notification_component_manager_1_1_button_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="struct_base_button_skin_listener_1_1_button_type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener_1_1_button_type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_byte_array.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_character_animation_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_animations_1_1_character_animation_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_character_stats_visualizer_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_chatting_pop_up_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_choice_section_battle_page.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -72,20 +83,20 @@
     <xi:include href="class_current_mode_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_cursor_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_custom_polygon_graph_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_damage_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_damage_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_damage_result.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_tournament_list_page_behaviour_1_1_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_local_data_model_1_1_dojo_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_local_data_model_1_1_dojo_data_serializable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_dropdown_main_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_edge.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_edge.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_effect.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_effect_player.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_effect_result.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_dojo_contract_communication_1_1_empty_transaction_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_end_of_battle.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_dojo_contract_communication_1_1_endpoint_dojo_call_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_exit_dialogue.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_field_layout.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_pvp_actions_contract_1_1_forfeit_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -94,11 +105,12 @@
     <xi:include href="class_graphing_system_blob_data_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_has_attack.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_has_attack_1_1_has_attack_data_query.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_hit_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_hit_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_i_damage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="interface_logic_layer_1_1_i_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interface_logic_layer_1_1_query_1_1_i_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="interface_i_lobby_list_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="interface_i_nft_type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_in_lobby_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_in_lobby_ongoing_lobby_list_page_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_interactable_text_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_inv_sent_on_going_lobby_list_page_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -111,13 +123,12 @@
     <xi:include href="struct_pvp_actions_contract_1_1_kick_inactive_player_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_last_mint.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_last_mint_1_1_last_mint_data_query.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_leader_board_blob_data_blod_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_leader_board_blob_data_blod_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_leader_board_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_leader_board_ranking_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_load_version_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_lobby_list_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_lobby_main_menu_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_lobby_view_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_login_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_login_to_main_menu_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_main_menu_page_behavior.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -125,10 +136,10 @@
     <xi:include href="class_menu_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_arcade_blobert_actions_contract_1_1_mint_a_m_m_a_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_arcade_blobert_actions_contract_1_1_mint_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_models.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_models.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_mouse_interaction_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_node.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_node.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_notification_component_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_notification_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_notification_component_manager_1_1_notification_object_setup.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -147,7 +158,7 @@
     <xi:include href="class_pv_p_combatants.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_tournament_list_page_behaviour_1_1_querry_result.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_logic_layer_1_1_combatant_data_model_1_1_query_compiled_combatant_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="struct_logic_layer_1_1_games_data_model_1_1_query_compiled_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_logic_layer_1_1_models_1_1_games_data_model_1_1_query_compiled_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_query_helper.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_quick_leadear_board_element.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_quick_leader_board_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -164,16 +175,16 @@
     <xi:include href="struct_pvp_actions_contract_1_1_run_round_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_scrolling_text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_seed.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_seed_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_seed_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_select_blob_page_behavior.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_selection_behaviour_text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_send_invite_page_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_pvp_actions_contract_1_1_send_invite_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_settings_panel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_pvp_admin_actions_contract_1_1_set_winner_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_skin_listener_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_skin_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_slider_animator_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_theme_manager_1_1_skin_listener_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_theme_manager_1_1_skin_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_ui_components_1_1_slider_1_1_slider_animator_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_sound.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_sound_combat_blob_arena.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_sound_combat_common.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -181,20 +192,18 @@
     <xi:include href="class_sound_effect.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_sound_vocals.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_speach_bubble.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_standard_view_no_attacks_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_start_game_page.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_stat_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="struct_blobert_types_1_1_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_stats_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_standard_view_no_attacks_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_stat_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_stats_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_stats_i8.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_switch_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_switch_skin_listener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_theme_manager_1_1_switch_skin_listener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_logic_layer_1_1_synchro_manager_dojo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="struct_character_animation_manager_1_1_texture_function_input.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_theme_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_theme_manager_1_1_themes_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_toggle_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_toggle_skin_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_logic_layer_1_1_token_trait_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_theme_manager_1_1_toggle_skin_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_logic_layer_1_1_query_1_1_token_trait_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_top_bar_button_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_tournament_banner_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_tournament_list_page_behaviour_1_1_tournament_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -208,14 +217,14 @@
     <xi:include href="struct_blobert_types_1_1_traits.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_dojo_contract_communication_1_1_transaction_result.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_t_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_character_animation_manager_1_1_tween_callback_system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_typewriter.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_u256.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_ui_reference_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_ui_state_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_upcoming_features.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_view_equipped_attacks_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_view_traits_attack_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_view_equipped_attacks_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_blobert_arena_1_1_blob_dex_1_1_view_traits_attack_blob_dex_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_wallet_blobert.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_wallet_selector.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_logic_layer_1_1_world_manager_dojo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -225,8 +234,6 @@
     <title>File Documentation</title>
     <xi:include href="_blob_hints_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_blob_hints_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_blob_test_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_blob_test_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_combat_animations_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_combat_animations_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_animation_data_editor_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -311,8 +318,6 @@
     <xi:include href="_tournament_model_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_wallet_blobert_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_wallet_blobert_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_blobert_arena_helpers_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_blobert_arena_helpers_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_game_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_game_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_dojo_contract_caller_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -325,18 +330,20 @@
     <xi:include href="_audio_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_cursor_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_cursor_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_theme_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_theme_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_themes_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_themes_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ui_reference_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ui_reference_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_blobert_types_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_blobert_types_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_blobert_utils_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_blobert_utils_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_dojo_entities_storage_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_dojo_entities_storage_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_event_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_event_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_starknet_address_utils_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_starknet_address_utils_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_starknet_hash_operations_utils_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_starknet_hash_operations_utils_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_contact_us_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_contact_us_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_insults_data_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -501,14 +508,12 @@
     <xi:include href="_leader_board_page_behaviour_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_lobby_main_menu_page_behaviour_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_lobby_main_menu_page_behaviour_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_in_lobby_controller_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_in_lobby_controller_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_lobby_list_page_behaviour_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_lobby_list_page_behaviour_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_lobby_view_page_behaviour_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_lobby_view_page_behaviour_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_login_page_behaviour_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_login_page_behaviour_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_start_game_page_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_start_game_page_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_login_to_main_menu_page_behaviour_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_login_to_main_menu_page_behaviour_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_main_menu_page_behavior_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

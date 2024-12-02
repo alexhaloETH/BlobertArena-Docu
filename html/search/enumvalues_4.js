@@ -22,6 +22,6 @@ var searchData=
   ['down_19',['Down',['../class_current_mode_component.html#a7eefd89965d0d1eaa4deb9b873bf7c0da08a38277b0309070706f6652eeae9a53',1,'CurrentModeComponent']]],
   ['dragonfury_20',['DragonFury',['../namespace_audio_effects.html#ae8198c22f126b91dcd1ce6594ce89e89a0f7bf842aa6ebdbc10b03c132f113f36',1,'AudioEffects']]],
   ['ducks_21',['Ducks',['../class_blobert_types.html#aeea23bb373668a46486ca06150c26e1bab0ac723d11524af93721c779a422d3b7',1,'BlobertTypes']]],
-  ['dyingb_22',['DyingB',['../class_amma_animation_controller.html#a5d8419d845d6afd9e99849ddeef7c454a5fa580646d9e0048656437750a33a8c6',1,'AmmaAnimationController']]],
-  ['dyingf_23',['DyingF',['../class_amma_animation_controller.html#a5d8419d845d6afd9e99849ddeef7c454aa7b3f130dbac03607e929f01aa162515',1,'AmmaAnimationController']]]
+  ['dyingb_22',['DyingB',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a8fc4c7f72ace9ff050379fe422633323a5fa580646d9e0048656437750a33a8c6',1,'BlobertArena::Animations::AmmaAnimationController']]],
+  ['dyingf_23',['DyingF',['../class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a8fc4c7f72ace9ff050379fe422633323aa7b3f130dbac03607e929f01aa162515',1,'BlobertArena::Animations::AmmaAnimationController']]]
 ];

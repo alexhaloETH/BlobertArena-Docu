@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system" xml:lang="en-US">
+<title>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem Struct Reference</title>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</primary></indexterm>
+<para>
+
+<para>Represents a tween callback system for animation frames. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a1c2911c00164b8989f3efedd1f90d295">TweenCallbackSystem</link> (int <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a7532d8cea53dd945fd6939ac28eed477">frameNum</link>, Action <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a1acc58bc381e0a8f2c44458226709360">functionCallback</link>)</para>
+
+<para>Constructor that initializes the frame number and callback function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a7532d8cea53dd945fd6939ac28eed477">frameNum</link></para>
+
+<para>The frame number at which the callback should be executed. </para>
+</listitem>
+            <listitem><para>Action <link linkend="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a1acc58bc381e0a8f2c44458226709360">functionCallback</link></para>
+
+<para>The callback function to be executed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a tween callback system for animation frames. </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00096">96</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a1c2911c00164b8989f3efedd1f90d295"/><section>
+    <title>TweenCallbackSystem()</title>
+<indexterm><primary>TweenCallbackSystem</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</primary><secondary>TweenCallbackSystem</secondary></indexterm>
+<para><computeroutput>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem.TweenCallbackSystem (int frameNum, Action functionCallback)</computeroutput></para><para>
+
+<para>Constructor that initializes the frame number and callback function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>frameNum</entry><entry>
+<para>The frame number at which the callback should be executed.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>functionCallback</entry><entry>
+<para>The callback function to be executed.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00113">113</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a7532d8cea53dd945fd6939ac28eed477"/><section>
+    <title>frameNum</title>
+<indexterm><primary>frameNum</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</primary><secondary>frameNum</secondary></indexterm>
+<para><computeroutput>int BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem.frameNum</computeroutput></para><para>
+
+<para>The frame number at which the callback should be executed. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00101">101</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system_1a1acc58bc381e0a8f2c44458226709360"/><section>
+    <title>functionCallback</title>
+<indexterm><primary>functionCallback</primary><secondary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</secondary></indexterm>
+<indexterm><primary>BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem</primary><secondary>functionCallback</secondary></indexterm>
+<para><computeroutput>Action BlobertArena.Animations.CharacterAnimationManager.TweenCallbackSystem.functionCallback</computeroutput></para><para>
+
+<para>The callback function to be executed. </para>
+</para>
+<para>
+Definition at line <link linkend="__character_animation_manager_8cs_source_1l00106">106</link> of file <link linkend="__character_animation_manager_8cs_source">CharacterAnimationManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+UI/Components/AnimationComponents/<link linkend="__character_animation_manager_8cs">CharacterAnimationManager.cs</link></section>
+</section>

@@ -6,6 +6,8 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>interface <link linkend="_interface_i_nft_type">INftType</link></para>
+
+<para>Defines the interface for NFT types, providing a blueprint for methods and properties to handle statistics, items, traits, ownership, and other NFT-related functionalities. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
