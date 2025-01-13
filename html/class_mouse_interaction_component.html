@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blobert Arena: MouseInteractionComponent Class Reference</title>
+<title>Blob Arena: MouseInteractionComponent Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Blobert Arena<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
    </div>
   </td>
  </tr>
@@ -107,38 +106,48 @@ $(function(){initNavTree('class_mouse_interaction_component.html',''); initResiz
 <div class="dynheader">
 Inheritance diagram for MouseInteractionComponent:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_mouse_interaction_component.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_mouse_interaction_component__inherit__graph.png" border="0" usemap="#a_mouse_interaction_component_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MouseInteractionComponent:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mouse_interaction_component__coll__graph.png" border="0" usemap="#a_mouse_interaction_component_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeef7ff92dd25f3efbfb10befd1d4ec5b" id="r_aeef7ff92dd25f3efbfb10befd1d4ec5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef7ff92dd25f3efbfb10befd1d4ec5b">OnPointerClick</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:aeef7ff92dd25f3efbfb10befd1d4ec5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer click events for left, right, and middle mouse buttons. Invokes the corresponding UnityEvent for each button.  <br /></td></tr>
 <tr class="separator:aeef7ff92dd25f3efbfb10befd1d4ec5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d4cf3aa0130e50339b2e056a346516a" id="r_a0d4cf3aa0130e50339b2e056a346516a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d4cf3aa0130e50339b2e056a346516a">OnPointerDown</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:a0d4cf3aa0130e50339b2e056a346516a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer down (press) events. Updates state and invokes the m_OnPointerDown event.  <br /></td></tr>
 <tr class="separator:a0d4cf3aa0130e50339b2e056a346516a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab06bc642c210ba73a9cb944efefb1e2a" id="r_ab06bc642c210ba73a9cb944efefb1e2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06bc642c210ba73a9cb944efefb1e2a">OnPointerUp</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:ab06bc642c210ba73a9cb944efefb1e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer up (release) events. Updates state and invokes the m_OnPointerUp event.  <br /></td></tr>
 <tr class="separator:ab06bc642c210ba73a9cb944efefb1e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e2ca34db50bccca9db00a13a128ec0f" id="r_a7e2ca34db50bccca9db00a13a128ec0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e2ca34db50bccca9db00a13a128ec0f">OnPointerEnter</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:a7e2ca34db50bccca9db00a13a128ec0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer enter events (when the pointer moves over the component). Updates hover state, invokes the m_OnPointerEnter event, and manages cursor state.  <br /></td></tr>
 <tr class="separator:a7e2ca34db50bccca9db00a13a128ec0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7556e797837a1cc7b307711a5f70db67" id="r_a7556e797837a1cc7b307711a5f70db67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7556e797837a1cc7b307711a5f70db67">OnPointerExit</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:a7556e797837a1cc7b307711a5f70db67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer exit events (when the pointer moves off the component). Updates hover state, invokes the m_OnPointerExit event, and manages cursor state.  <br /></td></tr>
 <tr class="separator:a7556e797837a1cc7b307711a5f70db67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8e6589a348c5d8b2c2139092a58c8858" id="r_a8e6589a348c5d8b2c2139092a58c8858"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e6589a348c5d8b2c2139092a58c8858">PointerIsOver</a> = false</td></tr>
+<tr class="memitem:a8e6589a348c5d8b2c2139092a58c8858" id="r_a8e6589a348c5d8b2c2139092a58c8858"><td class="memItemLeft" align="right" valign="top"><a id="a8e6589a348c5d8b2c2139092a58c8858" name="a8e6589a348c5d8b2c2139092a58c8858"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>PointerIsOver</b> = false</td></tr>
 <tr class="separator:a8e6589a348c5d8b2c2139092a58c8858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa8e41d3c3edd721207484a5cdde15df" id="r_aaa8e41d3c3edd721207484a5cdde15df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8e41d3c3edd721207484a5cdde15df">PointerIsDown</a> = false</td></tr>
+<tr class="memitem:aaa8e41d3c3edd721207484a5cdde15df" id="r_aaa8e41d3c3edd721207484a5cdde15df"><td class="memItemLeft" align="right" valign="top"><a id="aaa8e41d3c3edd721207484a5cdde15df" name="aaa8e41d3c3edd721207484a5cdde15df"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>PointerIsDown</b> = false</td></tr>
 <tr class="separator:aaa8e41d3c3edd721207484a5cdde15df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f9463cb806bad1f97c7cb50a1e6cedc" id="r_a8f9463cb806bad1f97c7cb50a1e6cedc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9463cb806bad1f97c7cb50a1e6cedc">InteractableHover</a> = true</td></tr>
+<tr class="memitem:a8f9463cb806bad1f97c7cb50a1e6cedc" id="r_a8f9463cb806bad1f97c7cb50a1e6cedc"><td class="memItemLeft" align="right" valign="top"><a id="a8f9463cb806bad1f97c7cb50a1e6cedc" name="a8f9463cb806bad1f97c7cb50a1e6cedc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>InteractableHover</b> = true</td></tr>
 <tr class="separator:a8f9463cb806bad1f97c7cb50a1e6cedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8886058ef96a5edfc519a72c97341abc" id="r_a8886058ef96a5edfc519a72c97341abc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8886058ef96a5edfc519a72c97341abc">InteractableClickB</a> = true</td></tr>
-<tr class="separator:a8886058ef96a5edfc519a72c97341abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad819b9a4d7a7051cab0b0a724de543ba" id="r_ad819b9a4d7a7051cab0b0a724de543ba"><td class="memItemLeft" align="right" valign="top"><a id="ad819b9a4d7a7051cab0b0a724de543ba" name="ad819b9a4d7a7051cab0b0a724de543ba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>InteractableClick</b> = true</td></tr>
+<tr class="separator:ad819b9a4d7a7051cab0b0a724de543ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00009">9</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aeef7ff92dd25f3efbfb10befd1d4ec5b" name="aeef7ff92dd25f3efbfb10befd1d4ec5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeef7ff92dd25f3efbfb10befd1d4ec5b">&#9670;&#160;</a></span>OnPointerClick()</h2>
 
@@ -154,7 +163,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00040">40</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
+<p>Handles pointer click events for left, right, and middle mouse buttons. Invokes the corresponding UnityEvent for each button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Pointer event data containing button information.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -173,7 +188,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00058">58</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
+<p>Handles pointer down (press) events. Updates state and invokes the m_OnPointerDown event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Pointer event data.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -192,7 +213,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00072">72</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
+<p>Handles pointer enter events (when the pointer moves over the component). Updates hover state, invokes the m_OnPointerEnter event, and manages cursor state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Pointer event data.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -211,7 +238,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00083">83</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
+<p>Handles pointer exit events (when the pointer moves off the component). Updates hover state, invokes the m_OnPointerExit event, and manages cursor state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Pointer event data.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -230,77 +263,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00065">65</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8886058ef96a5edfc519a72c97341abc" name="a8886058ef96a5edfc519a72c97341abc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8886058ef96a5edfc519a72c97341abc">&#9670;&#160;</a></span>InteractableClickB</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MouseInteractionComponent.InteractableClickB = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00028">28</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="a8f9463cb806bad1f97c7cb50a1e6cedc" name="a8f9463cb806bad1f97c7cb50a1e6cedc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f9463cb806bad1f97c7cb50a1e6cedc">&#9670;&#160;</a></span>InteractableHover</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MouseInteractionComponent.InteractableHover = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00027">27</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="aaa8e41d3c3edd721207484a5cdde15df" name="aaa8e41d3c3edd721207484a5cdde15df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa8e41d3c3edd721207484a5cdde15df">&#9670;&#160;</a></span>PointerIsDown</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MouseInteractionComponent.PointerIsDown = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00026">26</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="a8e6589a348c5d8b2c2139092a58c8858" name="a8e6589a348c5d8b2c2139092a58c8858"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e6589a348c5d8b2c2139092a58c8858">&#9670;&#160;</a></span>PointerIsOver</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MouseInteractionComponent.PointerIsOver = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mouse_interaction_component_8cs_source.html#l00025">25</a> of file <a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a>.</p>
+<p>Handles pointer up (release) events. Updates state and invokes the m_OnPointerUp event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Pointer event data.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>UI/Components/Button Types/<a class="el" href="_mouse_interaction_component_8cs_source.html">MouseInteractionComponent.cs</a></li>
+<li>Bloberts/Scripts/UI/Components/GeneralUiComponents/<b>MouseInteractionComponent.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

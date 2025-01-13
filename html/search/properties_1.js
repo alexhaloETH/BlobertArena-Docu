@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['active_0',['active',['../interface_i_selection_behaviour.html#a5142a80fd1d853a5c4afcd3b6a4e4e55',1,'ISelectionBehaviour']]],
-  ['affect_1',['affect',['../class_logic_layer_1_1_query_1_1_hit_data.html#a22a5742f9e53a42cb8debe5f93e6354d',1,'LogicLayer::Query::HitData']]],
-  ['armour_2',['armour',['../class_logic_layer_1_1_query_1_1_seed_data.html#a56419bd7e706272847940cbc76eca698',1,'LogicLayer::Query::SeedData']]],
-  ['attack_3',['Attack',['../struct_battle_page_controller_1_1_attack_availability.html#ae5dd9976ef258b987ee22d893184bd28',1,'BattlePageController::AttackAvailability']]],
-  ['attack_4',['attack',['../class_combatant_stats_1_1_combatant_stats_data_query.html#a0b108265dfe41a5e173a98723c90117a',1,'CombatantStats.CombatantStatsDataQuery.attack'],['../class_planned_attack_1_1_planned_attack_data_query.html#afe921a5ce28647ea90c016d8444282a1',1,'PlannedAttack.PlannedAttackDataQuery.attack']]],
-  ['attack_5fid_5',['attack_id',['../class_has_attack_1_1_has_attack_data_query.html#acb8250cfd1296c81b44a33c54e25ae89',1,'HasAttack::HasAttackDataQuery']]],
-  ['autogeneratemode_6',['AutoGenerateMode',['../class_chatting_pop_up_component.html#ac09ffd88aad29bb0b723f93a85db6c00',1,'ChattingPopUpComponent']]],
-  ['availability_7',['Availability',['../struct_battle_page_controller_1_1_attack_availability.html#a7804275e40710331a9cceb8ab9b81567',1,'BattlePageController::AttackAvailability']]]
+  ['id_0',['Id',['../class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item.html#ae9679282933487d3644ef1a32e8c1e36',1,'LogicLayer::FetchBlobertWalletData::NFTItem']]],
+  ['isclonecreated_1',['isCloneCreated',['../class_parrel_sync_1_1_clones_manager_window.html#ace13fd2ea9646e2af55929bbc7409b5e',1,'ParrelSync::ClonesManagerWindow']]],
+  ['isnull_2',['IsNull',['../structbottlenoselabs_1_1_c2_c_s_1_1_runtime_1_1_c_string.html#a23f902d7c7b56c07a66a62556a978c5e',1,'bottlenoselabs.C2CS.Runtime.CString.IsNull'],['../structbottlenoselabs_1_1_c2_c_s_1_1_runtime_1_1_c_string_wide.html#a26db0f23e0c77bd59fa23a35acd72284',1,'bottlenoselabs.C2CS.Runtime.CStringWide.IsNull']]],
+  ['isquiting_3',['IsQuiting',['../class_parrel_sync_1_1_editor_quit.html#a9e81032e4ae950cf20b7f40c7ad0fb89',1,'ParrelSync::EditorQuit']]]
 ];

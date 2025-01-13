@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="dojo_bindings.dojo.Result\lSubscription_ANONYMOUS_FIELD1",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structdojo__bindings_1_1dojo_1_1_result_subscription___a_n_o_n_y_m_o_u_s___f_i_e_l_d1.html",tooltip=" "];
+}

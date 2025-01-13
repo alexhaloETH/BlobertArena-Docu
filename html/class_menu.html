@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blobert Arena: Menu Class Reference</title>
+<title>Blob Arena: Menu Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Blobert Arena<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
    </div>
   </td>
  </tr>
@@ -100,6 +99,9 @@ $(function(){initNavTree('class_menu.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_menu-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Menu Class Reference</div></div>
 </div><!--header-->
@@ -107,152 +109,58 @@ $(function(){initNavTree('class_menu.html',''); initResizable(true); });
 <div class="dynheader">
 Inheritance diagram for Menu:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_menu.png" usemap="#Menu_map" alt=""/>
-  <map id="Menu_map" name="Menu_map">
-<area href="class_battle_page_controller.html" title="flow of one round" alt="BattlePageController" shape="rect" coords="278,112,546,136"/>
-<area href="class_choose_blobert_for_tournament_page_behaviour.html" title="This first of all should connect to the blob dex component, then when the LFG button is pressed it sh..." alt="ChooseBlobertForTournamentPageBehaviour" shape="rect" coords="278,168,546,192"/>
-<area href="class_in_lobby_controller.html" title="This is the lobby page, the user is only allowed here if the invite he sent or received has been acce..." alt="InLobbyController" shape="rect" coords="278,224,546,248"/>
-<area href="class_leader_board_page_behaviour.html" title="This page is done, the only thing that is theoretically missing is that when the user clicks on one o..." alt="LeaderBoardPageBehaviour" shape="rect" coords="278,280,546,304"/>
-<area href="class_lobby_list_page_behaviour.html" title="This should list all of the lobbies in their current states also should be able to update in real tim..." alt="LobbyListPageBehaviour" shape="rect" coords="278,336,546,360"/>
-<area href="class_lobby_main_menu_page_behaviour.html" title="Main Menu for the lobby nothing interesting here." alt="LobbyMainMenuPageBehaviour" shape="rect" coords="278,392,546,416"/>
-<area href="class_login_page_behaviour.html" title="The Login screen initially should have an animation at the start which it has yet to be implemented." alt="LoginPageBehaviour" shape="rect" coords="278,448,546,472"/>
-<area href="class_login_to_main_menu_page_behaviour.html" alt="LoginToMainMenuPageBehaviour" shape="rect" coords="278,504,546,528"/>
-<area href="class_main_menu_page_behavior.html" title="Page that contains the 4 buttons, not much to do here, here we should for now load all the attacks of..." alt="MainMenuPageBehavior" shape="rect" coords="278,560,546,584"/>
-<area href="class_rules_page_behaviour.html" title="Class to define the general behaviour of the Rules page." alt="RulesPageBehaviour" shape="rect" coords="278,616,546,640"/>
-<area href="class_select_blob_page_behavior.html" title="This page should only comtaint the blobert dex component and becasue its a componnent all the logic o..." alt="SelectBlobPageBehavior" shape="rect" coords="278,672,546,696"/>
-<area href="class_send_invite_page_behaviour.html" title="This class is responsible for creating a lobby page for the player to invite other players to play wi..." alt="SendInvitePageBehaviour" shape="rect" coords="278,728,546,752"/>
-<area href="class_tournament_details_page_behaviour.html" title="Not too sure what is going on so this will be need to look at." alt="TournamentDetailsPageBehaviour" shape="rect" coords="278,784,546,808"/>
-<area href="class_tournament_list_page_behaviour.html" title="Listing all the tournaments, the logic is allready all done i think this page is over maybe just give..." alt="TournamentListPageBehaviour" shape="rect" coords="278,840,546,864"/>
-<area href="class_tournament_menu_page_behaviour.html" alt="TournamentMenuPageBehaviour" shape="rect" coords="278,896,546,920"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_menu__inherit__graph.png" border="0" usemap="#a_menu_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Menu:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_menu__coll__graph.png" border="0" usemap="#a_menu_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a70dee27069171493755a9a9a52fce15c" id="r_a70dee27069171493755a9a9a52fce15c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70dee27069171493755a9a9a52fce15c">Open</a> ()</td></tr>
+<tr class="memitem:a70dee27069171493755a9a9a52fce15c" id="r_a70dee27069171493755a9a9a52fce15c"><td class="memItemLeft" align="right" valign="top"><a id="a70dee27069171493755a9a9a52fce15c" name="a70dee27069171493755a9a9a52fce15c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Open</b> ()</td></tr>
 <tr class="separator:a70dee27069171493755a9a9a52fce15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15daf00810e65859923cc5e30147b840" id="r_a15daf00810e65859923cc5e30147b840"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15daf00810e65859923cc5e30147b840">Close</a> ()</td></tr>
+<tr class="memitem:a15daf00810e65859923cc5e30147b840" id="r_a15daf00810e65859923cc5e30147b840"><td class="memItemLeft" align="right" valign="top"><a id="a15daf00810e65859923cc5e30147b840" name="a15daf00810e65859923cc5e30147b840"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Close</b> ()</td></tr>
 <tr class="separator:a15daf00810e65859923cc5e30147b840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae111044c97e3a295f702dce3f6186b69" id="r_ae111044c97e3a295f702dce3f6186b69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae111044c97e3a295f702dce3f6186b69">open</a></td></tr>
-<tr class="separator:ae111044c97e3a295f702dce3f6186b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7552b33addd9704b62183b04e5580d6a" id="r_a7552b33addd9704b62183b04e5580d6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7552b33addd9704b62183b04e5580d6a">returnable</a> = true</td></tr>
-<tr class="separator:a7552b33addd9704b62183b04e5580d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a723939c7a0b7722ac226634e132c71b6" id="r_a723939c7a0b7722ac226634e132c71b6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a723939c7a0b7722ac226634e132c71b6">MenuName</a> = &quot;&quot;</td></tr>
+<tr class="memitem:a98d31e7530b956790acd9a419ab0dd06" id="r_a98d31e7530b956790acd9a419ab0dd06"><td class="memItemLeft" align="right" valign="top"><a id="a98d31e7530b956790acd9a419ab0dd06" name="a98d31e7530b956790acd9a419ab0dd06"></a>
+CanvasGroup&#160;</td><td class="memItemRight" valign="bottom"><b>m_CanvasGroup</b> = null</td></tr>
+<tr class="separator:a98d31e7530b956790acd9a419ab0dd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1e19f7cf487b0dbf9844364c3ce17596" id="r_a1e19f7cf487b0dbf9844364c3ce17596"><td class="memItemLeft" align="right" valign="top"><a id="a1e19f7cf487b0dbf9844364c3ce17596" name="a1e19f7cf487b0dbf9844364c3ce17596"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
+<tr class="separator:a1e19f7cf487b0dbf9844364c3ce17596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37ca5162a651e78ec81ffb4782b7b8b" id="r_ae37ca5162a651e78ec81ffb4782b7b8b"><td class="memItemLeft" align="right" valign="top"><a id="ae37ca5162a651e78ec81ffb4782b7b8b" name="ae37ca5162a651e78ec81ffb4782b7b8b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="separator:ae37ca5162a651e78ec81ffb4782b7b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:adf2a75ea5930495bdfd5450e882e6450" id="r_adf2a75ea5930495bdfd5450e882e6450"><td class="memItemLeft" align="right" valign="top"><a id="adf2a75ea5930495bdfd5450e882e6450" name="adf2a75ea5930495bdfd5450e882e6450"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleLogo</b> (bool toggle)</td></tr>
+<tr class="separator:adf2a75ea5930495bdfd5450e882e6450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:af434e1f483fb63a55fd1b9a5e5da12fc" id="r_af434e1f483fb63a55fd1b9a5e5da12fc"><td class="memItemLeft" align="right" valign="top"><a id="af434e1f483fb63a55fd1b9a5e5da12fc" name="af434e1f483fb63a55fd1b9a5e5da12fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsOpen</b><code> [get, protected set]</code></td></tr>
+<tr class="separator:af434e1f483fb63a55fd1b9a5e5da12fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36b006b917d71b89defc701fb6ceb642" id="r_a36b006b917d71b89defc701fb6ceb642"><td class="memItemLeft" align="right" valign="top"><a id="a36b006b917d71b89defc701fb6ceb642" name="a36b006b917d71b89defc701fb6ceb642"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReturnable</b> = true<code> [get, protected set]</code></td></tr>
+<tr class="separator:a36b006b917d71b89defc701fb6ceb642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723939c7a0b7722ac226634e132c71b6" id="r_a723939c7a0b7722ac226634e132c71b6"><td class="memItemLeft" align="right" valign="top"><a id="a723939c7a0b7722ac226634e132c71b6" name="a723939c7a0b7722ac226634e132c71b6"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>MenuName</b> = &quot;&quot;<code> [get, protected set]</code></td></tr>
 <tr class="separator:a723939c7a0b7722ac226634e132c71b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00003">3</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a15daf00810e65859923cc5e30147b840" name="a15daf00810e65859923cc5e30147b840"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15daf00810e65859923cc5e30147b840">&#9670;&#160;</a></span>Close()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Menu.Close </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00015">15</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
-
-</div>
-</div>
-<a id="a70dee27069171493755a9a9a52fce15c" name="a70dee27069171493755a9a9a52fce15c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70dee27069171493755a9a9a52fce15c">&#9670;&#160;</a></span>Open()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Menu.Open </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00009">9</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a723939c7a0b7722ac226634e132c71b6" name="a723939c7a0b7722ac226634e132c71b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a723939c7a0b7722ac226634e132c71b6">&#9670;&#160;</a></span>MenuName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Menu.MenuName = &quot;&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00007">7</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
-
-</div>
-</div>
-<a id="ae111044c97e3a295f702dce3f6186b69" name="ae111044c97e3a295f702dce3f6186b69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae111044c97e3a295f702dce3f6186b69">&#9670;&#160;</a></span>open</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Menu.open</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00005">5</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
-
-</div>
-</div>
-<a id="a7552b33addd9704b62183b04e5580d6a" name="a7552b33addd9704b62183b04e5580d6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7552b33addd9704b62183b04e5580d6a">&#9670;&#160;</a></span>returnable</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Menu.returnable = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00006">6</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>UI/<a class="el" href="_menu_8cs_source.html">Menu.cs</a></li>
+<li>Bloberts/Scripts/UI/Components/Menu/<b>Menu.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

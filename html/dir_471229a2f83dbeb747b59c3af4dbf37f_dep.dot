@@ -1,0 +1,12 @@
+digraph "Bloberts/Scripts/UI/Components/GeneralUiComponents/TextBehaviours"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_9eab6daf260a94859f8e12e729bbdf4d {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="GeneralUiComponents", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_9eab6daf260a94859f8e12e729bbdf4d.html",tooltip=""]
+  dir_471229a2f83dbeb747b59c3af4dbf37f [label="TextBehaviours", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_471229a2f83dbeb747b59c3af4dbf37f.html",tooltip=""];
+  }
+}

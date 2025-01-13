@@ -1,0 +1,20 @@
+digraph "dojo_bindings.dojo.ResultSignature_ANONYMOUS_FIELD1"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="dojo_bindings.dojo.Result\lSignature_ANONYMOUS_FIELD1",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ok",fontcolor="grey" ];
+  Node2 [id="Node000002",label="dojo_bindings.dojo.Signature",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structdojo__bindings_1_1dojo_1_1_signature.html",tooltip=" "];
+  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" r\ns",fontcolor="grey" ];
+  Node3 [id="Node000003",label="dojo_bindings.dojo.Field\lElement",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structdojo__bindings_1_1dojo_1_1_field_element.html",tooltip=" "];
+  Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" err",fontcolor="grey" ];
+  Node4 [id="Node000004",label="dojo_bindings.dojo.Error",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structdojo__bindings_1_1dojo_1_1_error.html",tooltip=" "];
+  Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" message_",fontcolor="grey" ];
+  Node5 [id="Node000005",label="bottlenoselabs.C2CS.Runtime.\lCString",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structbottlenoselabs_1_1_c2_c_s_1_1_runtime_1_1_c_string.html",tooltip="A pointer value type of bytes that represent a string; the C type char*."];
+  Node6 -> Node5 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="IEquatable\< CString \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node5 [id="edge6_Node000005_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="IDisposable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

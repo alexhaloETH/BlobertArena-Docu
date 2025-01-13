@@ -1,0 +1,12 @@
+digraph "Starknet Unity/WebGL/Dojo/Scripts"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_628102efcc46f72483069da4644e5583 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Dojo", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_628102efcc46f72483069da4644e5583.html",tooltip=""]
+  dir_7010e35e30a50202c04cde8822c42197 [label="Scripts", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_7010e35e30a50202c04cde8822c42197.html",tooltip=""];
+  }
+}

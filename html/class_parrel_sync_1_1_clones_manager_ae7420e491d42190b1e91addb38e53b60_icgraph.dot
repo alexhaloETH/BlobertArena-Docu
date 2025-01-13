@@ -1,0 +1,15 @@
+digraph "ParrelSync.ClonesManager.CopyDirectoryWithProgressBar"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ParrelSync.ClonesManager.\lCopyDirectoryWithProgressBar",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Copies directory located at sourcePath to destinationPath. Displays a progress bar."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ParrelSync.ClonesManager.\lCopyLibraryFolder",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#aa782678004f120dfa619fefb9f865607",tooltip="Copies the full contents of the unity library. We want to do this to avoid the lengthy re-serializati..."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ParrelSync.ClonesManager.\lCreateCloneFromPath",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a6ad4ab60d3ff69172fa44a4140b637c2",tooltip="Creates clone of the project located at the given path."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="ParrelSync.ClonesManager.\lCreateCloneFromCurrent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a8d1e30fb14a608c161e369ff20da4621",tooltip="Creates clone from the project currently open in Unity Editor."];
+}

@@ -1,0 +1,21 @@
+digraph "ParrelSync.ClonesManager.GetCurrentProject"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ParrelSync.ClonesManager.\lGetCurrentProject",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Return a project object that describes all the paths we need to clone it."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ParrelSync.ClonesManager.\lCreateCloneFromPath",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a6ad4ab60d3ff69172fa44a4140b637c2",tooltip="Creates clone of the project located at the given path."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ParrelSync.ClonesManager.\lCreateCloneFromCurrent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a8d1e30fb14a608c161e369ff20da4621",tooltip="Creates clone from the project currently open in Unity Editor."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="ParrelSync.ClonesManager.\lGetCloneProjectsPath",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a7b38e6884d772cb12d987f2f9f0e48c3",tooltip="Returns all clone projects path."];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ParrelSync.ClonesManager.\lGetOriginalProjectPath",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a6ebb384bf43c559df66ec402f12b38a0",tooltip="Returns the path to the original project. If currently open project is the original,..."];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ParrelSync.ClonesManager.\lDeleteClone",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a4fb10663eae8478877e3b6ca880deee8",tooltip="Deletes the clone of the currently open project, if such exists."];
+  Node5 -> Node7 [id="edge6_Node000005_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="ParrelSync.ClonesManager.\lOpenProject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a70e7ed16c35d3a6a461cdfc4524e1693",tooltip="Opens a project located at the given path (if one exists)."];
+}

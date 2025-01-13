@@ -24,13 +24,16 @@
 */
 var NAVTREE =
 [
-  [ "Blobert Arena", "index.html", [
+  [ "Blob Arena", "index.html", [
+    [ "dojo.c", "md__web_g_l_templates_2_dojo_2_template_data_2dojo_8js_2_r_e_a_d_m_e.html", [
+      [ "Building", "md__web_g_l_templates_2_dojo_2_template_data_2dojo_8js_2_r_e_a_d_m_e.html#autotoc_md1", [
+        [ "Native platform", "md__web_g_l_templates_2_dojo_2_template_data_2dojo_8js_2_r_e_a_d_m_e.html#autotoc_md2", null ],
+        [ "Wasm", "md__web_g_l_templates_2_dojo_2_template_data_2dojo_8js_2_r_e_a_d_m_e.html#autotoc_md3", null ]
+      ] ],
+      [ "Running", "md__web_g_l_templates_2_dojo_2_template_data_2dojo_8js_2_r_e_a_d_m_e.html#autotoc_md4", null ]
+    ] ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ],
-      [ "Package Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
-      ] ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -39,33 +42,24 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
-        [ "Properties", "functions_prop.html", null ],
-        [ "Events", "functions_evnt.html", null ]
+        [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Typedefs", "globals_type.html", null ]
-      ] ]
-    ] ]
+    [ "Examples", "examples.html", "examples" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_a_m_m_a_blobert_8gen_8cs.html",
-"_item_map_8gen_8cs.html",
-"class_battle_page_controller.html#a695ddcf171d92e7a5d18473aa9bb4b5aad0f2e5376298c880665077b565ffd7dd",
-"class_blobert_arena_1_1_theme_manager_1_1_base_button_skin_listener.html#a01bda45937ce6c8ca6b0b85eef608aab",
-"class_combat_animations.html#ac1864f28311165dd3b5cbd90c2538240",
-"class_logic_layer_1_1_query_1_1_seed_data.html#a255c360c9242b6fba7cf3e5a3194f57a",
-"class_random_seed.html#aeaa0e2d9051172d46a8095083b71ce3e",
-"functions_d.html",
-"struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input.html#a1082e8664350a64c99ac506427a226a2"
+"_c_1_2_users_2alexh_2_one_drive_2_desktop_2_programming_2_work_01_repo_2blob-arena-client_2_asse647144d5dde9cc0d7f2ea209afd6b840.html",
+"class_dojo_1_1_torii_1_1_model.html",
+"class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html#ab2f55eaf183f9447d31f112cf18b4796",
+"class_logic_layer_1_1_models_1_1blob__arena___lobby.html#a22a5fed3cc0b4efed30e76bc781b4388",
+"class_toggle_component.html",
+"interface_logic_layer_1_1_models_1_1_i_bet.html#a5997ccc974e7f2e669c05eac795dd8ea",
+"interface_web_g_l_support_1_1_i_input_field.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blobert Arena: NotificationComponentManager Class Reference</title>
+<title>Blob Arena: NotificationComponentManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Blobert Arena<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
    </div>
   </td>
  </tr>
@@ -102,6 +101,7 @@ $(function(){initNavTree('class_notification_component_manager.html',''); initRe
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_notification_component_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">NotificationComponentManager Class Reference</div></div>
 </div><!--header-->
@@ -109,9 +109,13 @@ $(function(){initNavTree('class_notification_component_manager.html',''); initRe
 <div class="dynheader">
 Inheritance diagram for NotificationComponentManager:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_notification_component_manager.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_notification_component_manager__inherit__graph.png" border="0" usemap="#a_notification_component_manager_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for NotificationComponentManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_notification_component_manager__coll__graph.png" border="0" usemap="#a_notification_component_manager_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -122,316 +126,65 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4dc7a0f33353106c1b9d762efd5ba5c6" id="r_a4dc7a0f33353106c1b9d762efd5ba5c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dc7a0f33353106c1b9d762efd5ba5c6">ButtonType</a> { <a class="el" href="#a4dc7a0f33353106c1b9d762efd5ba5c6ad382816a3cbeed082c9e216e7392eed1">Green</a>
-, <a class="el" href="#a4dc7a0f33353106c1b9d762efd5ba5c6aee38e4d5dd68c4e440825018d549cb47">Red</a>
+<tr class="memitem:a4dc7a0f33353106c1b9d762efd5ba5c6" id="r_a4dc7a0f33353106c1b9d762efd5ba5c6"><td class="memItemLeft" align="right" valign="top"><a id="a4dc7a0f33353106c1b9d762efd5ba5c6" name="a4dc7a0f33353106c1b9d762efd5ba5c6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ButtonType</b> { <b>Green</b>
+, <b>Red</b>
  }</td></tr>
 <tr class="separator:a4dc7a0f33353106c1b9d762efd5ba5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a232070374e6159e6ab17662d15ea54c0" id="r_a232070374e6159e6ab17662d15ea54c0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a232070374e6159e6ab17662d15ea54c0">BackgroundColour</a> { <a class="el" href="#a232070374e6159e6ab17662d15ea54c0a9594eec95be70e7b1710f730fdda33d9">Blue</a>
-, <a class="el" href="#a232070374e6159e6ab17662d15ea54c0aee38e4d5dd68c4e440825018d549cb47">Red</a>
+<tr class="memitem:a232070374e6159e6ab17662d15ea54c0" id="r_a232070374e6159e6ab17662d15ea54c0"><td class="memItemLeft" align="right" valign="top"><a id="a232070374e6159e6ab17662d15ea54c0" name="a232070374e6159e6ab17662d15ea54c0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BackgroundColour</b> { <b>Blue</b>
+, <b>Red</b>
  }</td></tr>
 <tr class="separator:a232070374e6159e6ab17662d15ea54c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab44b66bb4f34272d79578e52c256ea83" id="r_ab44b66bb4f34272d79578e52c256ea83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab44b66bb4f34272d79578e52c256ea83">OnMenuChanged</a> (<a class="el" href="class_menu.html">Menu</a> menu)</td></tr>
+<tr class="memitem:ab44b66bb4f34272d79578e52c256ea83" id="r_ab44b66bb4f34272d79578e52c256ea83"><td class="memItemLeft" align="right" valign="top"><a id="ab44b66bb4f34272d79578e52c256ea83" name="ab44b66bb4f34272d79578e52c256ea83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMenuChanged</b> (<a class="el" href="class_menu.html">Menu</a> menu)</td></tr>
 <tr class="separator:ab44b66bb4f34272d79578e52c256ea83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d326d8b4f36ab75c5362ea275f0b077" id="r_a1d326d8b4f36ab75c5362ea275f0b077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d326d8b4f36ab75c5362ea275f0b077">AddNotification</a> (<a class="el" href="struct_notification_component_manager_1_1_notification_object_setup.html">NotificationObjectSetup</a> notiObjectStruct)</td></tr>
+<tr class="memitem:a1d326d8b4f36ab75c5362ea275f0b077" id="r_a1d326d8b4f36ab75c5362ea275f0b077"><td class="memItemLeft" align="right" valign="top"><a id="a1d326d8b4f36ab75c5362ea275f0b077" name="a1d326d8b4f36ab75c5362ea275f0b077"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddNotification</b> (<a class="el" href="struct_notification_component_manager_1_1_notification_object_setup.html">NotificationObjectSetup</a> notiObjectStruct)</td></tr>
 <tr class="separator:a1d326d8b4f36ab75c5362ea275f0b077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98c907f9d351dad12010aee447adbc4b" id="r_a98c907f9d351dad12010aee447adbc4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98c907f9d351dad12010aee447adbc4b">AddHighPriorityNotification</a> (<a class="el" href="struct_notification_component_manager_1_1_notification_object_setup.html">NotificationObjectSetup</a> notiObjectStruct)</td></tr>
+<tr class="memitem:a98c907f9d351dad12010aee447adbc4b" id="r_a98c907f9d351dad12010aee447adbc4b"><td class="memItemLeft" align="right" valign="top"><a id="a98c907f9d351dad12010aee447adbc4b" name="a98c907f9d351dad12010aee447adbc4b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddHighPriorityNotification</b> (<a class="el" href="struct_notification_component_manager_1_1_notification_object_setup.html">NotificationObjectSetup</a> notiObjectStruct)</td></tr>
 <tr class="separator:a98c907f9d351dad12010aee447adbc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ef9b0b8fbe933ecb9250afe6283563e" id="r_a9ef9b0b8fbe933ecb9250afe6283563e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ef9b0b8fbe933ecb9250afe6283563e">DeleteCurrentNotification</a> ()</td></tr>
+<tr class="memitem:a9ef9b0b8fbe933ecb9250afe6283563e" id="r_a9ef9b0b8fbe933ecb9250afe6283563e"><td class="memItemLeft" align="right" valign="top"><a id="a9ef9b0b8fbe933ecb9250afe6283563e" name="a9ef9b0b8fbe933ecb9250afe6283563e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteCurrentNotification</b> ()</td></tr>
 <tr class="separator:a9ef9b0b8fbe933ecb9250afe6283563e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bfd00512b9bab8a104934ce01d22527" id="r_a8bfd00512b9bab8a104934ce01d22527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bfd00512b9bab8a104934ce01d22527">ClearNotificationQueue</a> ()</td></tr>
+<tr class="memitem:a8bfd00512b9bab8a104934ce01d22527" id="r_a8bfd00512b9bab8a104934ce01d22527"><td class="memItemLeft" align="right" valign="top"><a id="a8bfd00512b9bab8a104934ce01d22527" name="a8bfd00512b9bab8a104934ce01d22527"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearNotificationQueue</b> ()</td></tr>
 <tr class="separator:a8bfd00512b9bab8a104934ce01d22527"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9558e9a9ecd36d261e9b979e77c5a088" id="r_a9558e9a9ecd36d261e9b979e77c5a088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9558e9a9ecd36d261e9b979e77c5a088">ForceNextNotification</a> ()</td></tr>
+<tr class="memitem:a9558e9a9ecd36d261e9b979e77c5a088" id="r_a9558e9a9ecd36d261e9b979e77c5a088"><td class="memItemLeft" align="right" valign="top"><a id="a9558e9a9ecd36d261e9b979e77c5a088" name="a9558e9a9ecd36d261e9b979e77c5a088"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ForceNextNotification</b> ()</td></tr>
 <tr class="separator:a9558e9a9ecd36d261e9b979e77c5a088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c1697ef2eb07bd7172678074766a8bf" id="r_a3c1697ef2eb07bd7172678074766a8bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c1697ef2eb07bd7172678074766a8bf">HasPendingNotifications</a> ()</td></tr>
+<tr class="memitem:a3c1697ef2eb07bd7172678074766a8bf" id="r_a3c1697ef2eb07bd7172678074766a8bf"><td class="memItemLeft" align="right" valign="top"><a id="a3c1697ef2eb07bd7172678074766a8bf" name="a3c1697ef2eb07bd7172678074766a8bf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasPendingNotifications</b> ()</td></tr>
 <tr class="separator:a3c1697ef2eb07bd7172678074766a8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f3d012fb08414115dd88e30d960ce65" id="r_a3f3d012fb08414115dd88e30d960ce65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f3d012fb08414115dd88e30d960ce65">GetPendingNotificationCount</a> ()</td></tr>
+<tr class="memitem:a3f3d012fb08414115dd88e30d960ce65" id="r_a3f3d012fb08414115dd88e30d960ce65"><td class="memItemLeft" align="right" valign="top"><a id="a3f3d012fb08414115dd88e30d960ce65" name="a3f3d012fb08414115dd88e30d960ce65"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPendingNotificationCount</b> ()</td></tr>
 <tr class="separator:a3f3d012fb08414115dd88e30d960ce65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fd8aa5694334626811a7e42cb58d64" id="r_a04fd8aa5694334626811a7e42cb58d64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04fd8aa5694334626811a7e42cb58d64">CreateErrorNotification</a> (string message, bool highPrio)</td></tr>
+<tr class="memitem:a04fd8aa5694334626811a7e42cb58d64" id="r_a04fd8aa5694334626811a7e42cb58d64"><td class="memItemLeft" align="right" valign="top"><a id="a04fd8aa5694334626811a7e42cb58d64" name="a04fd8aa5694334626811a7e42cb58d64"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateErrorNotification</b> (string message, bool highPrio)</td></tr>
 <tr class="separator:a04fd8aa5694334626811a7e42cb58d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adb331ee009bcdd35355a9eb33a39d71a" id="r_adb331ee009bcdd35355a9eb33a39d71a"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb331ee009bcdd35355a9eb33a39d71a">ButtonPrefabs</a></td></tr>
+<tr class="memitem:adb331ee009bcdd35355a9eb33a39d71a" id="r_adb331ee009bcdd35355a9eb33a39d71a"><td class="memItemLeft" align="right" valign="top"><a id="adb331ee009bcdd35355a9eb33a39d71a" name="adb331ee009bcdd35355a9eb33a39d71a"></a>
+GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><b>ButtonPrefabs</b></td></tr>
 <tr class="separator:adb331ee009bcdd35355a9eb33a39d71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7361799cab70cb3ba72724c069172e52" id="r_a7361799cab70cb3ba72724c069172e52"><td class="memItemLeft" align="right" valign="top">Sprite[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7361799cab70cb3ba72724c069172e52">BackgroundColours</a></td></tr>
+<tr class="memitem:a7361799cab70cb3ba72724c069172e52" id="r_a7361799cab70cb3ba72724c069172e52"><td class="memItemLeft" align="right" valign="top"><a id="a7361799cab70cb3ba72724c069172e52" name="a7361799cab70cb3ba72724c069172e52"></a>
+Sprite[]&#160;</td><td class="memItemRight" valign="bottom"><b>BackgroundColours</b></td></tr>
 <tr class="separator:a7361799cab70cb3ba72724c069172e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd63135acb2affb17da1bed2de57fc7f" id="r_abd63135acb2affb17da1bed2de57fc7f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd63135acb2affb17da1bed2de57fc7f">_timerPerNotification</a> = 10f</td></tr>
+<tr class="memitem:abd63135acb2affb17da1bed2de57fc7f" id="r_abd63135acb2affb17da1bed2de57fc7f"><td class="memItemLeft" align="right" valign="top"><a id="abd63135acb2affb17da1bed2de57fc7f" name="abd63135acb2affb17da1bed2de57fc7f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>_timerPerNotification</b> = 10f</td></tr>
 <tr class="separator:abd63135acb2affb17da1bed2de57fc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a913ceaa474b6941b57ff88913695d551" id="r_a913ceaa474b6941b57ff88913695d551"><td class="memItemLeft" align="right" valign="top"><a id="a913ceaa474b6941b57ff88913695d551" name="a913ceaa474b6941b57ff88913695d551"></a>
+static <a class="el" href="class_notification_component_manager.html">NotificationComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b></td></tr>
+<tr class="separator:a913ceaa474b6941b57ff88913695d551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00013">13</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a232070374e6159e6ab17662d15ea54c0" name="a232070374e6159e6ab17662d15ea54c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a232070374e6159e6ab17662d15ea54c0">&#9670;&#160;</a></span>BackgroundColour</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a232070374e6159e6ab17662d15ea54c0">NotificationComponentManager.BackgroundColour</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a232070374e6159e6ab17662d15ea54c0a9594eec95be70e7b1710f730fdda33d9" name="a232070374e6159e6ab17662d15ea54c0a9594eec95be70e7b1710f730fdda33d9"></a>Blue&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a232070374e6159e6ab17662d15ea54c0aee38e4d5dd68c4e440825018d549cb47" name="a232070374e6159e6ab17662d15ea54c0aee38e4d5dd68c4e440825018d549cb47"></a>Red&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00041">41</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4dc7a0f33353106c1b9d762efd5ba5c6" name="a4dc7a0f33353106c1b9d762efd5ba5c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dc7a0f33353106c1b9d762efd5ba5c6">&#9670;&#160;</a></span>ButtonType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a4dc7a0f33353106c1b9d762efd5ba5c6">NotificationComponentManager.ButtonType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4dc7a0f33353106c1b9d762efd5ba5c6ad382816a3cbeed082c9e216e7392eed1" name="a4dc7a0f33353106c1b9d762efd5ba5c6ad382816a3cbeed082c9e216e7392eed1"></a>Green&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4dc7a0f33353106c1b9d762efd5ba5c6aee38e4d5dd68c4e440825018d549cb47" name="a4dc7a0f33353106c1b9d762efd5ba5c6aee38e4d5dd68c4e440825018d549cb47"></a>Red&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00021">21</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a98c907f9d351dad12010aee447adbc4b" name="a98c907f9d351dad12010aee447adbc4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98c907f9d351dad12010aee447adbc4b">&#9670;&#160;</a></span>AddHighPriorityNotification()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.AddHighPriorityNotification </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_notification_component_manager_1_1_notification_object_setup.html">NotificationObjectSetup</a></td>          <td class="paramname"><span class="paramname"><em>notiObjectStruct</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00120">120</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a1d326d8b4f36ab75c5362ea275f0b077" name="a1d326d8b4f36ab75c5362ea275f0b077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d326d8b4f36ab75c5362ea275f0b077">&#9670;&#160;</a></span>AddNotification()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.AddNotification </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_notification_component_manager_1_1_notification_object_setup.html">NotificationObjectSetup</a></td>          <td class="paramname"><span class="paramname"><em>notiObjectStruct</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00112">112</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a8bfd00512b9bab8a104934ce01d22527" name="a8bfd00512b9bab8a104934ce01d22527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bfd00512b9bab8a104934ce01d22527">&#9670;&#160;</a></span>ClearNotificationQueue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.ClearNotificationQueue </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00351">351</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a04fd8aa5694334626811a7e42cb58d64" name="a04fd8aa5694334626811a7e42cb58d64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04fd8aa5694334626811a7e42cb58d64">&#9670;&#160;</a></span>CreateErrorNotification()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.CreateErrorNotification </td>
-          <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>highPrio</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00390">390</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a9ef9b0b8fbe933ecb9250afe6283563e" name="a9ef9b0b8fbe933ecb9250afe6283563e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ef9b0b8fbe933ecb9250afe6283563e">&#9670;&#160;</a></span>DeleteCurrentNotification()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.DeleteCurrentNotification </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00330">330</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a9558e9a9ecd36d261e9b979e77c5a088" name="a9558e9a9ecd36d261e9b979e77c5a088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9558e9a9ecd36d261e9b979e77c5a088">&#9670;&#160;</a></span>ForceNextNotification()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.ForceNextNotification </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00357">357</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3f3d012fb08414115dd88e30d960ce65" name="a3f3d012fb08414115dd88e30d960ce65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f3d012fb08414115dd88e30d960ce65">&#9670;&#160;</a></span>GetPendingNotificationCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int NotificationComponentManager.GetPendingNotificationCount </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00377">377</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3c1697ef2eb07bd7172678074766a8bf" name="a3c1697ef2eb07bd7172678074766a8bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c1697ef2eb07bd7172678074766a8bf">&#9670;&#160;</a></span>HasPendingNotifications()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool NotificationComponentManager.HasPendingNotifications </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00371">371</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab44b66bb4f34272d79578e52c256ea83" name="ab44b66bb4f34272d79578e52c256ea83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab44b66bb4f34272d79578e52c256ea83">&#9670;&#160;</a></span>OnMenuChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NotificationComponentManager.OnMenuChanged </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_menu.html">Menu</a></td>          <td class="paramname"><span class="paramname"><em>menu</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00100">100</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="abd63135acb2affb17da1bed2de57fc7f" name="abd63135acb2affb17da1bed2de57fc7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd63135acb2affb17da1bed2de57fc7f">&#9670;&#160;</a></span>_timerPerNotification</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float NotificationComponentManager._timerPerNotification = 10f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00080">80</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a7361799cab70cb3ba72724c069172e52" name="a7361799cab70cb3ba72724c069172e52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7361799cab70cb3ba72724c069172e52">&#9670;&#160;</a></span>BackgroundColours</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite [] NotificationComponentManager.BackgroundColours</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00070">70</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="adb331ee009bcdd35355a9eb33a39d71a" name="adb331ee009bcdd35355a9eb33a39d71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb331ee009bcdd35355a9eb33a39d71a">&#9670;&#160;</a></span>ButtonPrefabs</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject [] NotificationComponentManager.ButtonPrefabs</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_notification_component_manager_8cs_source.html#l00068">68</a> of file <a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>UI/Components/<a class="el" href="_notification_component_manager_8cs_source.html">NotificationComponentManager.cs</a></li>
+<li>Bloberts/Scripts/UI/Components/Notification/<b>NotificationComponentManager.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

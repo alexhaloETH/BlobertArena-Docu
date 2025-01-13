@@ -1,0 +1,13 @@
+digraph "ParrelSync.ClonesManager.GetOriginalProjectPath"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ParrelSync.ClonesManager.\lGetOriginalProjectPath",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Returns the path to the original project. If currently open project is the original,..."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ParrelSync.ClonesManager.\lDeleteClone",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a4fb10663eae8478877e3b6ca880deee8",tooltip="Deletes the clone of the currently open project, if such exists."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ParrelSync.ClonesManager.\lOpenProject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_parrel_sync_1_1_clones_manager.html#a70e7ed16c35d3a6a461cdfc4524e1693",tooltip="Opens a project located at the given path (if one exists)."];
+}

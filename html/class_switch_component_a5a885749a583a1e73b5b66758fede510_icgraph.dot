@@ -1,0 +1,11 @@
+digraph "SwitchComponent.SwitchToState"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="SwitchComponent.SwitchTo\lState",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Switches the button to a specific state, optionally invoking the corresponding event."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="SwitchComponent.OnClickUp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_switch_component.html#af6af65648c0befa5b7b183080e608dab",tooltip="Handles the behavior when the button is released. Toggles the button's state and triggers the corresp..."];
+}

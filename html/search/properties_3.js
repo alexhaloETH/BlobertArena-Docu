@@ -1,11 +1,4 @@
 var searchData=
 [
-  ['challengeid_0',['challengeId',['../class_in_lobby_ongoing_lobby_list_page_element.html#a8c01b8ecd7f3215cf9942d33bbc8004b',1,'InLobbyOngoingLobbyListPageElement.challengeId'],['../class_inv_sent_on_going_lobby_list_page_element.html#a9571a771e5b29ff3213927dc7d18de6c',1,'InvSentOnGoingLobbyListPageElement.challengeId'],['../class_on_going_battle_lobby_list_page_elemenet.html#a08c34fe5f7ba869524fe6eb86793fc5f',1,'OnGoingBattleLobbyListPageElemenet.challengeId'],['../class_received_inv_lobby_list_page_element.html#a6fb0113b25621f35a620984c68d3ea08',1,'ReceivedInvLobbyListPageElement.challengeId'],['../interface_i_lobby_list_element.html#a919833e81c2d7531dfe6df14cdf88d80',1,'ILobbyListElement.challengeId']]],
-  ['collection_5faddress_1',['collection_address',['../class_combatant_info_1_1_combatant_info_data_query.html#aee28a82e47fe1821981e67f3d2c7802f',1,'CombatantInfo.CombatantInfoDataQuery.collection_address'],['../class_pv_p_challenge_invite_1_1_pv_p_challenge_invite_data_query.html#a8008d0af4f92e0f978eabb090cb09fa7',1,'PvPChallengeInvite.PvPChallengeInviteDataQuery.collection_address'],['../class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query.html#a9032625216934a59edf7860125782c0d',1,'PvPChallengeScore.PvPChallengeScoreDataQuery.collection_address']]],
-  ['combat_5fid_2',['combat_id',['../class_combatant_info_1_1_combatant_info_data_query.html#ab2b07f401ba7f659f1a9de87ce86bd03',1,'CombatantInfo::CombatantInfoDataQuery']]],
-  ['combatant_3',['combatant',['../class_pv_p_challenge_invite_1_1_pv_p_challenge_invite_data_query.html#a9fcf1f65df812190b098a612594a813b',1,'PvPChallengeInvite::PvPChallengeInviteDataQuery']]],
-  ['commitment_4',['commitment',['../class_commitment_1_1_commitment_data_query.html#a3b7a262ca91d26983b9c9ed9f1b36633',1,'Commitment::CommitmentDataQuery']]],
-  ['critical_5',['critical',['../class_logic_layer_1_1_query_1_1_damage_data.html#a45c2c13a011b72a013be678797abd1ae',1,'LogicLayer::Query::DamageData']]],
-  ['current_5fconsecutive_5fwins_6',['current_consecutive_wins',['../class_pv_p_challenge_score_1_1_pv_p_challenge_score_data_query.html#ab330aa338e3d9fd5e0ace49c74f752cb',1,'PvPChallengeScore::PvPChallengeScoreDataQuery']]],
-  ['custom_7',['Custom',['../class_logic_layer_1_1_query_1_1_token_trait_data.html#acc441b2737573c4cbcf5888568f2f5d6',1,'LogicLayer::Query::TokenTraitData']]]
+  ['loop_0',['Loop',['../class_gif_player.html#a072d338b80ccad9d648da8f8a5f0c9c1',1,'GifPlayer']]]
 ];

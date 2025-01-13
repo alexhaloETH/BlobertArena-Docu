@@ -1,0 +1,18 @@
+digraph "Bloberts/Scripts/UI/Components/BlobDex"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_87cc03029c4ec6f21ab385a6bf609d9d {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Components", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_87cc03029c4ec6f21ab385a6bf609d9d.html",tooltip=""]
+  subgraph clusterdir_f538152c8ce8122b285f7fda0a3145fd {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_f538152c8ce8122b285f7fda0a3145fd.html",tooltip=""]
+    dir_f538152c8ce8122b285f7fda0a3145fd [shape=plaintext, label="BlobDex"];
+  dir_5f95debb4f4d621c45aecde65f3494ad [label="BlobDexList", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5f95debb4f4d621c45aecde65f3494ad.html",tooltip=""];
+  dir_8bc717dba8ec3657755215b64d851c70 [label="Components", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_8bc717dba8ec3657755215b64d851c70.html",tooltip=""];
+  dir_1ad831a690a07581953e672c46c2c9dc [label="DataViewers", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_1ad831a690a07581953e672c46c2c9dc.html",tooltip=""];
+  }
+  }
+}

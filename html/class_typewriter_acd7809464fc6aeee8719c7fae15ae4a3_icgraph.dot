@@ -1,0 +1,13 @@
+digraph "Typewriter.StopWaitingTextAnimation"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Typewriter.StopWaitingText\lAnimation",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Stops the waiting animation, also either keeps (default) or discards the text."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Typewriter.ClearText",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_typewriter.html#a6546b15c2a91fc79312cc1993d5d5d27",tooltip="Removes the end of text object (if any) and clears the text."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Typewriter.SetTextToType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_typewriter.html#a804822a1567a06e38b45491a717c8c9f",tooltip="Sets a string that will be typed according to the set typing speed. An optional callback Action can b..."];
+}

@@ -1,0 +1,13 @@
+digraph "BlobertArena.Animations.AmmaAnimationController.GetTextureFunctionInput"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="BlobertArena.Animations.\lAmmaAnimationController.GetTexture\lFunctionInput",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves the texture function input for the specified fighter and animation state."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="BlobertArena.Animations.\lAmmaAnimationController.GetAttack\lNameForFighter",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#abd50c5bcaf80fb30784c9f832003d702",tooltip="Retrieves the attack name for the specified fighter and animation state."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="BlobertArena.Animations.\lAmmaAnimationController.GetFighter\lScriptableObject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#ab29f312341f6af609fda04442126852a",tooltip="Retrieves the AmmaAnimationData instance for the specified fighter index."];
+}

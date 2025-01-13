@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blobert Arena: QueryHelper Class Reference</title>
+<title>Blob Arena: QueryHelper Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Blobert Arena<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
    </div>
   </td>
  </tr>
@@ -103,29 +102,37 @@ $(function(){initNavTree('class_query_helper.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">QueryHelper Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helper class for constructing various types of queries for interacting with <a class="el" href="namespace_dojo.html">Dojo</a> models.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for QueryHelper:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_query_helper.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_query_helper__inherit__graph.png" border="0" usemap="#a_query_helper_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for QueryHelper:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_query_helper__coll__graph.png" border="0" usemap="#a_query_helper_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af7ca5c42433dbc2e03ce22e0618a4d64" id="r_af7ca5c42433dbc2e03ce22e0618a4d64"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7ca5c42433dbc2e03ce22e0618a4d64">CreateKeysModelQuery</a> (<a class="el" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>[] keys, dojo.PatternMatching pattern, string modelName, uint limit=1000, uint offset=0)</td></tr>
-<tr class="memdesc:af7ca5c42433dbc2e03ce22e0618a4d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed len all the keys are given var len not all of them are given.  <br /></td></tr>
-<tr class="separator:af7ca5c42433dbc2e03ce22e0618a4d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ea08d0ddef7db031b486192f2999ae" id="r_a95ea08d0ddef7db031b486192f2999ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95ea08d0ddef7db031b486192f2999ae">CreateMemberClauseQuery</a> (string model, string member, dojo.ComparisonOperator operator_, Primitive value, uint limit=1000, uint offset=0)</td></tr>
-<tr class="separator:a95ea08d0ddef7db031b486192f2999ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31696192245cf6c83f5e4542feee64b2" id="r_a31696192245cf6c83f5e4542feee64b2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31696192245cf6c83f5e4542feee64b2">CreateCompositeClauseQuery</a> (dojo.LogicalOperator operator_, Clause[] clauses, uint limit=1000, uint offset=0)</td></tr>
-<tr class="separator:a31696192245cf6c83f5e4542feee64b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e9f750faed438afa934e42ca7819b1" id="r_a84e9f750faed438afa934e42ca7819b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_dojo_1_1_torii_1_1_keys_clause.html">KeysClause</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84e9f750faed438afa934e42ca7819b1">CreateKeysClause</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>[] keys, dojo.PatternMatching pattern, string[] models)</td></tr>
+<tr class="memdesc:a84e9f750faed438afa934e42ca7819b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a KeysClause with the specified keys, pattern, and models.  <br /></td></tr>
+<tr class="separator:a84e9f750faed438afa934e42ca7819b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf830105af898916c74f170b27fe3242" id="r_abf830105af898916c74f170b27fe3242"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_dojo_1_1_torii_1_1_member_clause.html">MemberClause</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf830105af898916c74f170b27fe3242">CreateMemberClause</a> (string model, string member, dojo.ComparisonOperator operator_, <a class="el" href="struct_dojo_1_1_torii_1_1_member_value.html">MemberValue</a> value)</td></tr>
+<tr class="memdesc:abf830105af898916c74f170b27fe3242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a MemberClause for querying specific members of a model.  <br /></td></tr>
+<tr class="separator:abf830105af898916c74f170b27fe3242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d96270d4412fe54e80390da9e2b96b" id="r_a35d96270d4412fe54e80390da9e2b96b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_dojo_1_1_torii_1_1_composite_clause.html">CompositeClause</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35d96270d4412fe54e80390da9e2b96b">CreateCompositeClause</a> (dojo.LogicalOperator operator_, <a class="el" href="struct_dojo_1_1_torii_1_1_clause.html">Clause</a>[] clauses)</td></tr>
+<tr class="memdesc:a35d96270d4412fe54e80390da9e2b96b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a CompositeClause combining multiple clauses with a logical operator.  <br /></td></tr>
+<tr class="separator:a35d96270d4412fe54e80390da9e2b96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_query_helper_8cs_source.html#l00006">6</a> of file <a class="el" href="_query_helper_8cs_source.html">QueryHelper.cs</a>.</p>
+<div class="textblock"><p>Helper class for constructing various types of queries for interacting with <a class="el" href="namespace_dojo.html">Dojo</a> models. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a31696192245cf6c83f5e4542feee64b2" name="a31696192245cf6c83f5e4542feee64b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31696192245cf6c83f5e4542feee64b2">&#9670;&#160;</a></span>CreateCompositeClauseQuery()</h2>
+<a id="a35d96270d4412fe54e80390da9e2b96b" name="a35d96270d4412fe54e80390da9e2b96b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d96270d4412fe54e80390da9e2b96b">&#9670;&#160;</a></span>CreateCompositeClause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,24 +141,14 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a> QueryHelper.CreateCompositeClauseQuery </td>
+          <td class="memname">static <a class="el" href="struct_dojo_1_1_torii_1_1_composite_clause.html">CompositeClause</a> QueryHelper.CreateCompositeClause </td>
           <td>(</td>
           <td class="paramtype">dojo.LogicalOperator</td>          <td class="paramname"><span class="paramname"><em>operator_</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Clause[]</td>          <td class="paramname"><span class="paramname"><em>clauses</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1000</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>offset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_dojo_1_1_torii_1_1_clause.html">Clause</a>[]</td>          <td class="paramname"><span class="paramname"><em>clauses</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -161,12 +158,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_query_helper_8cs_source.html#l00043">43</a> of file <a class="el" href="_query_helper_8cs_source.html">QueryHelper.cs</a>.</p>
+<p>Creates a CompositeClause combining multiple clauses with a logical operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operator_</td><td>The logical operator to combine the clauses.</td></tr>
+    <tr><td class="paramname">clauses</td><td>The array of clauses to combine.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A constructed CompositeClause.</dd></dl>
 
 </div>
 </div>
-<a id="af7ca5c42433dbc2e03ce22e0618a4d64" name="af7ca5c42433dbc2e03ce22e0618a4d64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7ca5c42433dbc2e03ce22e0618a4d64">&#9670;&#160;</a></span>CreateKeysModelQuery()</h2>
+<a id="a84e9f750faed438afa934e42ca7819b1" name="a84e9f750faed438afa934e42ca7819b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e9f750faed438afa934e42ca7819b1">&#9670;&#160;</a></span>CreateKeysClause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,9 +180,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a> QueryHelper.CreateKeysModelQuery </td>
+          <td class="memname">static <a class="el" href="struct_dojo_1_1_torii_1_1_keys_clause.html">KeysClause</a> QueryHelper.CreateKeysClause </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_view_equipped_attacks_blob_dex_component_8cs.html#a04fcbbbbb88c5b1e47388f419576f399">FieldElement</a>[]</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>[]</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -187,17 +192,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>modelName</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1000</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>offset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">string[]</td>          <td class="paramname"><span class="paramname"><em>models</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -207,25 +202,21 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fixed len all the keys are given var len not all of them are given. </p>
+<p>Creates a KeysClause with the specified keys, pattern, and models. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">keys</td><td></td></tr>
-    <tr><td class="paramname">pattern</td><td></td></tr>
-    <tr><td class="paramname">modelName</td><td></td></tr>
-    <tr><td class="paramname">limit</td><td></td></tr>
-    <tr><td class="paramname">offset</td><td></td></tr>
+    <tr><td class="paramname">keys</td><td>An array of keys for the clause.</td></tr>
+    <tr><td class="paramname">pattern</td><td>The pattern matching type.</td></tr>
+    <tr><td class="paramname">models</td><td>An array of model names for the clause.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_query_helper_8cs_source.html#l00017">17</a> of file <a class="el" href="_query_helper_8cs_source.html">QueryHelper.cs</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A constructed KeysClause.</dd></dl>
 
 </div>
 </div>
-<a id="a95ea08d0ddef7db031b486192f2999ae" name="a95ea08d0ddef7db031b486192f2999ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95ea08d0ddef7db031b486192f2999ae">&#9670;&#160;</a></span>CreateMemberClauseQuery()</h2>
+<a id="abf830105af898916c74f170b27fe3242" name="abf830105af898916c74f170b27fe3242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf830105af898916c74f170b27fe3242">&#9670;&#160;</a></span>CreateMemberClause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +225,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="_attack_result_8cs.html#a680846c413970a24b7783196259823ae">Query</a> QueryHelper.CreateMemberClauseQuery </td>
+          <td class="memname">static <a class="el" href="struct_dojo_1_1_torii_1_1_member_clause.html">MemberClause</a> QueryHelper.CreateMemberClause </td>
           <td>(</td>
           <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
         </tr>
@@ -251,17 +242,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Primitive</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1000</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>offset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_dojo_1_1_torii_1_1_member_value.html">MemberValue</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -271,12 +252,22 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_query_helper_8cs_source.html#l00032">32</a> of file <a class="el" href="_query_helper_8cs_source.html">QueryHelper.cs</a>.</p>
+<p>Creates a MemberClause for querying specific members of a model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model</td><td>The name of the model.</td></tr>
+    <tr><td class="paramname">member</td><td>The member field to query.</td></tr>
+    <tr><td class="paramname">operator_</td><td>The comparison operator to use.</td></tr>
+    <tr><td class="paramname">value</td><td>The value to compare against.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A constructed MemberClause.</dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LogicLayer/Dojo/<a class="el" href="_query_helper_8cs_source.html">QueryHelper.cs</a></li>
+<li>Bloberts/Scripts/LogicLayer/Dojo/<b>QueryHelper.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

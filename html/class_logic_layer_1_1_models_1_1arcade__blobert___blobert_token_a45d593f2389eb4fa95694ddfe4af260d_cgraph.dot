@@ -1,0 +1,11 @@
+digraph "LogicLayer.Models.arcade_blobert_BlobertToken.GetBlobertShortId"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="LogicLayer.Models.arcade\l_blobert_BlobertToken.GetBlobert\lShortId",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves a short identifier for the Blobert."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="LogicLayer.Models.arcade\l_blobert_BlobertToken.GetId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html#a56e2c3452b153fae7cad24a43d6888ce",tooltip="Retrieves the unique ID of the Blobert token."];
+}

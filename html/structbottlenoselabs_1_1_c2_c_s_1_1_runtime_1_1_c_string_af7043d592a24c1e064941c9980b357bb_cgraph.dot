@@ -1,0 +1,11 @@
+digraph "bottlenoselabs.C2CS.Runtime.CString.FromString"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="bottlenoselabs.C2CS.Runtime.\lCString.FromString",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Converts a UTF-16 string to a C style string (one dimensional byte array terminated by a 0x0) by allo..."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="bottlenoselabs.C2CS.Runtime.\lCString.CString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structbottlenoselabs_1_1_c2_c_s_1_1_runtime_1_1_c_string.html#aeaa533ca15213c5ab220cf7c3966474b",tooltip="Initializes a new instance of the CString struct."];
+}

@@ -1,0 +1,19 @@
+digraph "Dojo/Runtime"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_04155d8e8c73150a264fbf8445f74cf2 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="Dojo", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_04155d8e8c73150a264fbf8445f74cf2.html",tooltip=""]
+  subgraph clusterdir_b74c00b151480e83728ab43b205a8053 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_b74c00b151480e83728ab43b205a8053.html",tooltip=""]
+    dir_b74c00b151480e83728ab43b205a8053 [shape=plaintext, label="Runtime"];
+  dir_7025c2a8cb531579bc83318f52845670 [label="bindings", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7025c2a8cb531579bc83318f52845670.html",tooltip=""];
+  dir_fca509a2eef4bb4cd3f92a50acd22d0e [label="Config", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_fca509a2eef4bb4cd3f92a50acd22d0e.html",tooltip=""];
+  dir_3958590978ad1040b49a7a2ef3d72573 [label="Starknet", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_3958590978ad1040b49a7a2ef3d72573.html",tooltip=""];
+  dir_5d833e32f737c8b6f6b9c303d7db9d52 [label="Torii", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5d833e32f737c8b6f6b9c303d7db9d52.html",tooltip=""];
+  }
+  }
+}

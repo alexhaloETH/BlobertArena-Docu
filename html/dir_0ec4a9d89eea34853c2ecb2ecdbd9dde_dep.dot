@@ -1,0 +1,27 @@
+digraph "Bloberts/Scripts/UI/Pages"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_05b9da9c231dc04fb68445786587af22 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="UI", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_05b9da9c231dc04fb68445786587af22.html",tooltip=""]
+  subgraph clusterdir_0ec4a9d89eea34853c2ecb2ecdbd9dde {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_0ec4a9d89eea34853c2ecb2ecdbd9dde.html",tooltip=""]
+    dir_0ec4a9d89eea34853c2ecb2ecdbd9dde [shape=plaintext, label="Pages"];
+  dir_d1e9fd50d48c396051fd7d3fc4fc8839 [label="BattlePage", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d1e9fd50d48c396051fd7d3fc4fc8839.html",tooltip=""];
+  dir_ab8c98e501c80b560a9720aabb46be3b [label="FightMenuPage", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ab8c98e501c80b560a9720aabb46be3b.html",tooltip=""];
+  dir_7c58061d80d298dd492d8c299a2e78d4 [label="LeaderBoard", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7c58061d80d298dd492d8c299a2e78d4.html",tooltip=""];
+  dir_5d60c3faaaa468e57014485af02dc055 [label="LobbyMainMenu", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5d60c3faaaa468e57014485af02dc055.html",tooltip=""];
+  dir_d1cd8bc74d06d0f12f8682a1bd62727b [label="LobbyView", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d1cd8bc74d06d0f12f8682a1bd62727b.html",tooltip=""];
+  dir_e830a8bff76ac115e1776348e9961fb0 [label="LoginScreen", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e830a8bff76ac115e1776348e9961fb0.html",tooltip=""];
+  dir_78b4e4c7eed2cfae72d7983a92286f8b [label="LoginToMainMenu", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_78b4e4c7eed2cfae72d7983a92286f8b.html",tooltip=""];
+  dir_20bd70a33f0323cd88ad7caab0fdb3a2 [label="MainMenu", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_20bd70a33f0323cd88ad7caab0fdb3a2.html",tooltip=""];
+  dir_750c32a98b3fcb53a8a4c6f490c2a840 [label="SelectBlobPage", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_750c32a98b3fcb53a8a4c6f490c2a840.html",tooltip=""];
+  dir_69b3d79f943dbce52564363f3b14c2a8 [label="SendInvite", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_69b3d79f943dbce52564363f3b14c2a8.html",tooltip=""];
+  dir_ad22c88717df6f7a642ea025f8a0cd31 [label="ThemeSelector", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ad22c88717df6f7a642ea025f8a0cd31.html",tooltip=""];
+  dir_2c62479d9a4c61e88303c2ef8579ddb8 [label="Tournament", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_2c62479d9a4c61e88303c2ef8579ddb8.html",tooltip=""];
+  }
+  }
+}

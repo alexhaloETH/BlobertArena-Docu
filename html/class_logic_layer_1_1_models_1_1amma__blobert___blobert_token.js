@@ -1,0 +1,26 @@
+var class_logic_layer_1_1_models_1_1amma__blobert___blobert_token =
+[
+    [ "DebugData", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#abb87e19a003656cb5784e62ecf112f54", null ],
+    [ "GetAllAttacksEquipped", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a8e00d9430670f741aebf8cc71f2d3095", null ],
+    [ "GetAllItems", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a36096bd3cdfdf74a79bb1199b979a055", null ],
+    [ "GetAttackStructFromSavedAttacks", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a8d317be646506d40c1f4d79a1910e4c9", null ],
+    [ "GetAttributes", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a42be61c995b28d3c2f6a756d92231726", null ],
+    [ "GetBaseStats", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ae33151471a6ea1c3d11b2e352a2b7744", null ],
+    [ "GetBlobertShortId", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a96fd8482b249297c59d42c8a0728fa68", null ],
+    [ "GetBlobertType", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ab82abc529cbcef28adea6e875ec36ef2", null ],
+    [ "GetCollectionAddress", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ac70a9cb88960c7ab8bda8c649aa2ef53", null ],
+    [ "GetId", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a51ae22dec448578377a67ba2b1abdf6f", null ],
+    [ "GetInstance< T >", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ad28c4782224d02b16d9522dc1aea0478", null ],
+    [ "GetMaxHealth", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a2a010c6cf04e32bb6e5a74d113010fdf", null ],
+    [ "GetNftType", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#aa9ec2f937b1f5d58097c36ed1ca310bd", null ],
+    [ "GetOwner", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a240fbdf0048d611dfd0da8a2c6c9aa9f", null ],
+    [ "GetTraits", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a5e47f4f9c5e8efce63cfc364912fa61d", null ],
+    [ "GetTraitToAttackMap", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a1be2e0bd1988772cbf5a0ae5c5639102", null ],
+    [ "GetTraitToItem", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ab36f289e03da1a80e8bf73491d56924d", null ],
+    [ "GetU256TokenId", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a24d73949c45c32bd75cdfae5275cfac3", null ],
+    [ "IsAddressOwner", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#af9b919241853135684d5f92933266e61", null ],
+    [ "IsAllowedToEquipAttacks", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a4efc103eae4bb356d6a09371d2d307a7", null ],
+    [ "IsCustom", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ab5a77caac3660383e90b8cb102faa7e3", null ],
+    [ "RemoveEquippedAttack", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a7249be448bce23735707e1b6fd25f27f", null ],
+    [ "SaveBlobertAttacks", "class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a0a04ffdaf06abb50f2d3fd374f817a7e", null ]
+];

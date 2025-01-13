@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blobert Arena: TopBarButtonComponent Class Reference</title>
+<title>Blob Arena: TopBarButtonComponent Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Blobert Arena<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
    </div>
   </td>
  </tr>
@@ -100,6 +99,7 @@ $(function(){initNavTree('class_top_bar_button_component.html',''); initResizabl
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_top_bar_button_component-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TopBarButtonComponent Class Reference</div></div>
@@ -108,226 +108,65 @@ $(function(){initNavTree('class_top_bar_button_component.html',''); initResizabl
 <div class="dynheader">
 Inheritance diagram for TopBarButtonComponent:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_top_bar_button_component.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_top_bar_button_component__inherit__graph.png" border="0" usemap="#a_top_bar_button_component_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for TopBarButtonComponent:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_top_bar_button_component__coll__graph.png" border="0" usemap="#a_top_bar_button_component_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8263f849a14f382736954c7d1b7f2a77" id="r_a8263f849a14f382736954c7d1b7f2a77"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a> { <br />
-&#160;&#160;<a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a6222a1fb813893bee88128fa2a0ef37c">ArrowBack</a>
-, <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a5c9efb22b1843651d92b3da74c4d4bb5">ExitGamePopUp</a>
-, <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a45eb5db19c035c55642965187d5a297b">SettingsButton</a>
-, <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a8cfa2c85d367f92e56e91593ea817941">BugButton</a>
+<tr class="memitem:a8263f849a14f382736954c7d1b7f2a77" id="r_a8263f849a14f382736954c7d1b7f2a77"><td class="memItemLeft" align="right" valign="top"><a id="a8263f849a14f382736954c7d1b7f2a77" name="a8263f849a14f382736954c7d1b7f2a77"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TopBarItem</b> { <br />
+&#160;&#160;<b>ArrowBack</b>
+, <b>ExitGamePopUp</b>
+, <b>SettingsButton</b>
+, <b>BugButton</b>
 , <br />
-&#160;&#160;<a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a1f4da964f8eab62e96e8cfe406e44364">Rules</a>
-, <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77af08a3a2446dc0da4285a9607561055e2">AccountSection</a>
-, <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a4cc2bf0c07a25c4376b99c057dde0577">SwitchGame</a>
-, <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77a6ab9a295c00f945cf4881fd7667a0334">Spacer</a>
+&#160;&#160;<b>Rules</b>
+, <b>AccountSection</b>
+, <b>SwitchGame</b>
+, <b>Spacer</b>
 <br />
  }</td></tr>
 <tr class="separator:a8263f849a14f382736954c7d1b7f2a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78192a7ec64c2f26c5f39167e43e3e04" id="r_a78192a7ec64c2f26c5f39167e43e3e04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78192a7ec64c2f26c5f39167e43e3e04">ToggleObject</a> (<a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a> item, bool show)</td></tr>
+<tr class="memitem:a78192a7ec64c2f26c5f39167e43e3e04" id="r_a78192a7ec64c2f26c5f39167e43e3e04"><td class="memItemLeft" align="right" valign="top"><a id="a78192a7ec64c2f26c5f39167e43e3e04" name="a78192a7ec64c2f26c5f39167e43e3e04"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleObject</b> (TopBarItem item, bool show)</td></tr>
 <tr class="separator:a78192a7ec64c2f26c5f39167e43e3e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd6764fdfc07635facdb399735b48b8b" id="r_afd6764fdfc07635facdb399735b48b8b"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd6764fdfc07635facdb399735b48b8b">GetObject</a> (<a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a> item)</td></tr>
+<tr class="memitem:afd6764fdfc07635facdb399735b48b8b" id="r_afd6764fdfc07635facdb399735b48b8b"><td class="memItemLeft" align="right" valign="top"><a id="afd6764fdfc07635facdb399735b48b8b" name="afd6764fdfc07635facdb399735b48b8b"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>GetObject</b> (TopBarItem item)</td></tr>
 <tr class="separator:afd6764fdfc07635facdb399735b48b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44ad772c266cd935cb12b4e42f6b34ad" id="r_a44ad772c266cd935cb12b4e42f6b34ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44ad772c266cd935cb12b4e42f6b34ad">GetObjectState</a> (<a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a> item)</td></tr>
+<tr class="memitem:a44ad772c266cd935cb12b4e42f6b34ad" id="r_a44ad772c266cd935cb12b4e42f6b34ad"><td class="memItemLeft" align="right" valign="top"><a id="a44ad772c266cd935cb12b4e42f6b34ad" name="a44ad772c266cd935cb12b4e42f6b34ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetObjectState</b> (TopBarItem item)</td></tr>
 <tr class="separator:a44ad772c266cd935cb12b4e42f6b34ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f40c1e1591ae5a5d2b393922cab77e0" id="r_a1f40c1e1591ae5a5d2b393922cab77e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f40c1e1591ae5a5d2b393922cab77e0">MoveItem</a> (<a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a> item, bool moveToLeft)</td></tr>
+<tr class="memitem:a1f40c1e1591ae5a5d2b393922cab77e0" id="r_a1f40c1e1591ae5a5d2b393922cab77e0"><td class="memItemLeft" align="right" valign="top"><a id="a1f40c1e1591ae5a5d2b393922cab77e0" name="a1f40c1e1591ae5a5d2b393922cab77e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MoveItem</b> (TopBarItem item, bool moveToLeft)</td></tr>
 <tr class="separator:a1f40c1e1591ae5a5d2b393922cab77e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9571b40028e67fab3cb0429263238df" id="r_aa9571b40028e67fab3cb0429263238df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9571b40028e67fab3cb0429263238df">OnBugReportButtonPressed</a> ()</td></tr>
+<tr class="memitem:aa9571b40028e67fab3cb0429263238df" id="r_aa9571b40028e67fab3cb0429263238df"><td class="memItemLeft" align="right" valign="top"><a id="aa9571b40028e67fab3cb0429263238df" name="aa9571b40028e67fab3cb0429263238df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnBugReportButtonPressed</b> ()</td></tr>
 <tr class="separator:aa9571b40028e67fab3cb0429263238df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c912b004c928a53bff0b47c2aeadada" id="r_a7c912b004c928a53bff0b47c2aeadada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c912b004c928a53bff0b47c2aeadada">OnRefresh</a> ()</td></tr>
+<tr class="memitem:a7c912b004c928a53bff0b47c2aeadada" id="r_a7c912b004c928a53bff0b47c2aeadada"><td class="memItemLeft" align="right" valign="top"><a id="a7c912b004c928a53bff0b47c2aeadada" name="a7c912b004c928a53bff0b47c2aeadada"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRefresh</b> ()</td></tr>
 <tr class="separator:a7c912b004c928a53bff0b47c2aeadada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a08c347780c3e4e94ff2d3c711a65dc97" id="r_a08c347780c3e4e94ff2d3c711a65dc97"><td class="memItemLeft" align="right" valign="top"><a id="a08c347780c3e4e94ff2d3c711a65dc97" name="a08c347780c3e4e94ff2d3c711a65dc97"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableTopBar</b> (bool enable=true)</td></tr>
+<tr class="separator:a08c347780c3e4e94ff2d3c711a65dc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a094e6d6ccc05451ef6d34432957d83e7" id="r_a094e6d6ccc05451ef6d34432957d83e7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_top_bar_button_component.html">TopBarButtonComponent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a094e6d6ccc05451ef6d34432957d83e7">Instance</a><code> [get]</code></td></tr>
+<tr class="memitem:a094e6d6ccc05451ef6d34432957d83e7" id="r_a094e6d6ccc05451ef6d34432957d83e7"><td class="memItemLeft" align="right" valign="top"><a id="a094e6d6ccc05451ef6d34432957d83e7" name="a094e6d6ccc05451ef6d34432957d83e7"></a>
+static <a class="el" href="class_top_bar_button_component.html">TopBarButtonComponent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code> [get]</code></td></tr>
 <tr class="separator:a094e6d6ccc05451ef6d34432957d83e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00003">3</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a8263f849a14f382736954c7d1b7f2a77" name="a8263f849a14f382736954c7d1b7f2a77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8263f849a14f382736954c7d1b7f2a77">&#9670;&#160;</a></span>TopBarItem</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarButtonComponent.TopBarItem</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a6222a1fb813893bee88128fa2a0ef37c" name="a8263f849a14f382736954c7d1b7f2a77a6222a1fb813893bee88128fa2a0ef37c"></a>ArrowBack&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a5c9efb22b1843651d92b3da74c4d4bb5" name="a8263f849a14f382736954c7d1b7f2a77a5c9efb22b1843651d92b3da74c4d4bb5"></a>ExitGamePopUp&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a45eb5db19c035c55642965187d5a297b" name="a8263f849a14f382736954c7d1b7f2a77a45eb5db19c035c55642965187d5a297b"></a>SettingsButton&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a8cfa2c85d367f92e56e91593ea817941" name="a8263f849a14f382736954c7d1b7f2a77a8cfa2c85d367f92e56e91593ea817941"></a>BugButton&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a1f4da964f8eab62e96e8cfe406e44364" name="a8263f849a14f382736954c7d1b7f2a77a1f4da964f8eab62e96e8cfe406e44364"></a>Rules&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77af08a3a2446dc0da4285a9607561055e2" name="a8263f849a14f382736954c7d1b7f2a77af08a3a2446dc0da4285a9607561055e2"></a>AccountSection&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a4cc2bf0c07a25c4376b99c057dde0577" name="a8263f849a14f382736954c7d1b7f2a77a4cc2bf0c07a25c4376b99c057dde0577"></a>SwitchGame&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8263f849a14f382736954c7d1b7f2a77a6ab9a295c00f945cf4881fd7667a0334" name="a8263f849a14f382736954c7d1b7f2a77a6ab9a295c00f945cf4881fd7667a0334"></a>Spacer&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00014">14</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="afd6764fdfc07635facdb399735b48b8b" name="afd6764fdfc07635facdb399735b48b8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd6764fdfc07635facdb399735b48b8b">&#9670;&#160;</a></span>GetObject()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject TopBarButtonComponent.GetObject </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00062">62</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="a44ad772c266cd935cb12b4e42f6b34ad" name="a44ad772c266cd935cb12b4e42f6b34ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ad772c266cd935cb12b4e42f6b34ad">&#9670;&#160;</a></span>GetObjectState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool TopBarButtonComponent.GetObjectState </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00067">67</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="a1f40c1e1591ae5a5d2b393922cab77e0" name="a1f40c1e1591ae5a5d2b393922cab77e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f40c1e1591ae5a5d2b393922cab77e0">&#9670;&#160;</a></span>MoveItem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TopBarButtonComponent.MoveItem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>moveToLeft</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00072">72</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="aa9571b40028e67fab3cb0429263238df" name="aa9571b40028e67fab3cb0429263238df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9571b40028e67fab3cb0429263238df">&#9670;&#160;</a></span>OnBugReportButtonPressed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TopBarButtonComponent.OnBugReportButtonPressed </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00084">84</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="a7c912b004c928a53bff0b47c2aeadada" name="a7c912b004c928a53bff0b47c2aeadada"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c912b004c928a53bff0b47c2aeadada">&#9670;&#160;</a></span>OnRefresh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TopBarButtonComponent.OnRefresh </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00089">89</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<a id="a78192a7ec64c2f26c5f39167e43e3e04" name="a78192a7ec64c2f26c5f39167e43e3e04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78192a7ec64c2f26c5f39167e43e3e04">&#9670;&#160;</a></span>ToggleObject()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TopBarButtonComponent.ToggleObject </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a8263f849a14f382736954c7d1b7f2a77">TopBarItem</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>show</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00057">57</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="a094e6d6ccc05451ef6d34432957d83e7" name="a094e6d6ccc05451ef6d34432957d83e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a094e6d6ccc05451ef6d34432957d83e7">&#9670;&#160;</a></span>Instance</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_top_bar_button_component.html">TopBarButtonComponent</a> TopBarButtonComponent.Instance</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_top_bar_button_component_8cs_source.html#l00005">5</a> of file <a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>UI/Components/<a class="el" href="_top_bar_button_component_8cs_source.html">TopBarButtonComponent.cs</a></li>
+<li>Bloberts/Scripts/UI/Components/TopBar/<b>TopBarButtonComponent.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
