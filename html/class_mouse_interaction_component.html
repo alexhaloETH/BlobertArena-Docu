@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -97,6 +97,7 @@ $(function(){initNavTree('class_mouse_interaction_component.html',''); initResiz
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_mouse_interaction_component-members.html">List of all members</a>  </div>
@@ -114,6 +115,21 @@ Collaboration diagram for MouseInteractionComponent:</div>
 <div class="center"><img src="class_mouse_interaction_component__coll__graph.png" border="0" usemap="#a_mouse_interaction_component_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4477725263ca6134c5090bd29828c70d" id="r_a4477725263ca6134c5090bd29828c70d"><td class="memItemLeft" align="right" valign="top"><a id="a4477725263ca6134c5090bd29828c70d" name="a4477725263ca6134c5090bd29828c70d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MouseInteractionEvent</b> { <br />
+&#160;&#160;<b>OnPointerUp</b>
+, <b>OnPointerDown</b>
+, <b>OnClick</b>
+, <b>OnRightClick</b>
+, <br />
+&#160;&#160;<b>OnMiddleClick</b>
+, <b>OnPointerEnter</b>
+, <b>OnPointerExit</b>
+<br />
+ }</td></tr>
+<tr class="separator:a4477725263ca6134c5090bd29828c70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeef7ff92dd25f3efbfb10befd1d4ec5b" id="r_aeef7ff92dd25f3efbfb10befd1d4ec5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef7ff92dd25f3efbfb10befd1d4ec5b">OnPointerClick</a> (PointerEventData eventData)</td></tr>
@@ -131,6 +147,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7556e797837a1cc7b307711a5f70db67" id="r_a7556e797837a1cc7b307711a5f70db67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7556e797837a1cc7b307711a5f70db67">OnPointerExit</a> (PointerEventData eventData)</td></tr>
 <tr class="memdesc:a7556e797837a1cc7b307711a5f70db67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer exit events (when the pointer moves off the component). Updates hover state, invokes the m_OnPointerExit event, and manages cursor state.  <br /></td></tr>
 <tr class="separator:a7556e797837a1cc7b307711a5f70db67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4682eadf6e187c5e299ca5ec7c2b3f96" id="r_a4682eadf6e187c5e299ca5ec7c2b3f96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4682eadf6e187c5e299ca5ec7c2b3f96">ClearEventListeners</a> (MouseInteractionEvent eventType)</td></tr>
+<tr class="memdesc:a4682eadf6e187c5e299ca5ec7c2b3f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all listeners from the specified event.  <br /></td></tr>
+<tr class="separator:a4682eadf6e187c5e299ca5ec7c2b3f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5c026280676d572a67de1f3b5d0f5b" id="r_a9b5c026280676d572a67de1f3b5d0f5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5c026280676d572a67de1f3b5d0f5b">AddEventListener</a> (MouseInteractionEvent eventType, UnityAction action)</td></tr>
+<tr class="memdesc:a9b5c026280676d572a67de1f3b5d0f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a listener to the specified event.  <br /></td></tr>
+<tr class="separator:a9b5c026280676d572a67de1f3b5d0f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -148,6 +170,61 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>InteractableClick</b>
 <tr class="separator:ad819b9a4d7a7051cab0b0a724de543ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9b5c026280676d572a67de1f3b5d0f5b" name="a9b5c026280676d572a67de1f3b5d0f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5c026280676d572a67de1f3b5d0f5b">&#9670;&#160;</a></span>AddEventListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MouseInteractionComponent.AddEventListener </td>
+          <td>(</td>
+          <td class="paramtype">MouseInteractionEvent</td>          <td class="paramname"><span class="paramname"><em>eventType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnityAction</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a listener to the specified event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventType</td><td>The type of event to add the listener to.</td></tr>
+    <tr><td class="paramname">action</td><td>The UnityAction to add as a listener.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4682eadf6e187c5e299ca5ec7c2b3f96" name="a4682eadf6e187c5e299ca5ec7c2b3f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4682eadf6e187c5e299ca5ec7c2b3f96">&#9670;&#160;</a></span>ClearEventListeners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MouseInteractionComponent.ClearEventListeners </td>
+          <td>(</td>
+          <td class="paramtype">MouseInteractionEvent</td>          <td class="paramname"><span class="paramname"><em>eventType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all listeners from the specified event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventType</td><td>The type of event to clear.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aeef7ff92dd25f3efbfb10befd1d4ec5b" name="aeef7ff92dd25f3efbfb10befd1d4ec5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeef7ff92dd25f3efbfb10befd1d4ec5b">&#9670;&#160;</a></span>OnPointerClick()</h2>
 

@@ -35,7 +35,7 @@ digraph "IDebugPrintOut"
   Node1 -> Node15 [id="edge14_Node000001_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node15 [id="Node000015",label="LogicLayer.Models.blob\l_arena_GameInfo",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___game_info.html",tooltip="Dojo model, Info about the game, used to dictate the state of the game, if only one fo the fiels in t..."];
   Node1 -> Node16 [id="edge15_Node000001_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node16 [id="Node000016",label="LogicLayer.Models.blob\l_arena_Initiator",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___initiator.html",tooltip="Dojo model, TODO."];
+  Node16 [id="Node000016",label="LogicLayer.Models.blob\l_arena_Initiator",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___initiator.html",tooltip="Dojo model, This is the user dojo_initiator that actually starts the game so this is necessary."];
   Node1 -> Node17 [id="edge16_Node000001_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node17 [id="Node000017",label="LogicLayer.Models.blob\l_arena_LastTimestamp",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___last_timestamp.html",tooltip="Dojo Models, (to confirm) this mdoel should have the timestamp of when the last action was done,..."];
   Node1 -> Node18 [id="edge17_Node000001_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];

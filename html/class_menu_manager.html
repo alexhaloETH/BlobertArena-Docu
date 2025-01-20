@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,8 @@ $(function(){initNavTree('class_menu_manager.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#events">Events</a> &#124;
@@ -116,14 +117,35 @@ Collaboration diagram for MenuManager:</div>
 <div class="center"><img src="class_menu_manager__coll__graph.png" border="0" usemap="#a_menu_manager_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a93307896152357fc2ea7c248e107aff2" id="r_a93307896152357fc2ea7c248e107aff2"><td class="memItemLeft" align="right" valign="top"><a id="a93307896152357fc2ea7c248e107aff2" name="a93307896152357fc2ea7c248e107aff2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenMenu</b> (<a class="el" href="class_menu.html">Menu</a> menu)</td></tr>
-<tr class="separator:a93307896152357fc2ea7c248e107aff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb507ae8d08bda9faf1ce05f7163d6ea" id="r_adb507ae8d08bda9faf1ce05f7163d6ea"><td class="memItemLeft" align="right" valign="top"><a id="adb507ae8d08bda9faf1ce05f7163d6ea" name="adb507ae8d08bda9faf1ce05f7163d6ea"></a>
-<a class="el" href="class_menu.html">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentMenu</b> ()</td></tr>
-<tr class="separator:adb507ae8d08bda9faf1ce05f7163d6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aadb9639ee1740692427470f8441da2d5" id="r_aadb9639ee1740692427470f8441da2d5"><td class="memItemLeft" align="right" valign="top"><a id="aadb9639ee1740692427470f8441da2d5" name="aadb9639ee1740692427470f8441da2d5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MenuPages</b> { <br />
+&#160;&#160;<b>ThemeSelector</b> = 0
+, <b>Login</b>
+, <b>MainMenu</b>
+, <b>FirstRoll</b>
+, <br />
+&#160;&#160;<b>FightMenu</b>
+, <b>Leaderboards</b>
+, <b>Combat</b>
+<br />
+ }</td></tr>
+<tr class="separator:aadb9639ee1740692427470f8441da2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1a168a140cbd6135ce7ca66301336951" id="r_a1a168a140cbd6135ce7ca66301336951"><td class="memItemLeft" align="right" valign="top"><a id="a1a168a140cbd6135ce7ca66301336951" name="a1a168a140cbd6135ce7ca66301336951"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenMenu</b> (<a class="el" href="class_menu.html">Menu</a> menu)</td></tr>
+<tr class="separator:a1a168a140cbd6135ce7ca66301336951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151cf1eae33d038851b2a4f5a20a6643" id="r_a151cf1eae33d038851b2a4f5a20a6643"><td class="memItemLeft" align="right" valign="top"><a id="a151cf1eae33d038851b2a4f5a20a6643" name="a151cf1eae33d038851b2a4f5a20a6643"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenMenu</b> (MenuPages menuPage)</td></tr>
+<tr class="separator:a151cf1eae33d038851b2a4f5a20a6643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca235b490bdf14171eba064ce2e1d07" id="r_a3ca235b490bdf14171eba064ce2e1d07"><td class="memItemLeft" align="right" valign="top"><a id="a3ca235b490bdf14171eba064ce2e1d07" name="a3ca235b490bdf14171eba064ce2e1d07"></a>
+static <a class="el" href="class_menu.html">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentMenu</b> ()</td></tr>
+<tr class="separator:a3ca235b490bdf14171eba064ce2e1d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb8eb8c7a6faac9380a47e11ba2c10d" id="r_affb8eb8c7a6faac9380a47e11ba2c10d"><td class="memItemLeft" align="right" valign="top"><a id="affb8eb8c7a6faac9380a47e11ba2c10d" name="affb8eb8c7a6faac9380a47e11ba2c10d"></a>
+static DynamicOverlayButton.ButtonState&#160;</td><td class="memItemRight" valign="bottom"><b>GetDynamicButtonStateOfCurrentMenu</b> ()</td></tr>
+<tr class="separator:affb8eb8c7a6faac9380a47e11ba2c10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>

@@ -12,4 +12,7 @@ digraph "FightSubMenu"
   Node4 -> Node3 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="Menu",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_menu.html",tooltip=" "];
   Node2 -> Node4 [id="edge4_Node000004_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node4 [id="edge5_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_PageButtonState",fontcolor="grey" ];
+  Node5 [id="Node000005",label="DynamicOverlayButton",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_dynamic_overlay_button.html",tooltip=" "];
+  Node2 -> Node5 [id="edge6_Node000005_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

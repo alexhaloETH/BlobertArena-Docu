@@ -10,7 +10,5 @@ digraph "LogicLayer.Models.WalletBlobert"
   Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="IBlobertToken",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_blobert_token.html",tooltip=" "];
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" dojo_id\ndojo_owner",fontcolor="grey" ];
-  Node4 [id="Node000004",label="Dojo.Starknet.FieldElement",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_dojo_1_1_starknet_1_1_field_element.html",tooltip=" "];
-  Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="ISerializationCallbackReceiver",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 [id="Node000004",label="Starknet",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

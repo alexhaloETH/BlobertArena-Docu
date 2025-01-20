@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -119,15 +119,13 @@ Collaboration diagram for BlobertArena.ThemeManager.GameBackgroundComponent:</di
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a79c483feb499775b764b343d4201a765" id="r_a79c483feb499775b764b343d4201a765"><td class="memItemLeft" align="right" valign="top"><a id="a79c483feb499775b764b343d4201a765" name="a79c483feb499775b764b343d4201a765"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BackgroundImage</b> { <br />
-&#160;&#160;<b>EntranceArena</b>
-, <b>EntranceArenaTournament</b>
-, <b>FightArena</b>
-, <b>Leaderboard</b>
+&#160;&#160;<b>StartPage</b>
+, <b>FightLobby</b>
+, <b>ArenaEntrance</b>
+, <b>Arena</b>
 , <br />
-&#160;&#160;<b>LobbyBackground</b>
-, <b>StartPage</b>
-, <b>TournamentsMenu</b>
-, <b>TournamentsView</b>
+&#160;&#160;<b>Tournament</b>
+, <b>TournamentBlue</b>
 <br />
  }</td></tr>
 <tr class="separator:a79c483feb499775b764b343d4201a765"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +147,12 @@ static BackgroundImage&#160;</td><td class="memItemRight" valign="bottom"><b>Get
 <tr class="memitem:af7fecc4ada24d3ce0bfcbb94b09ed700" id="r_af7fecc4ada24d3ce0bfcbb94b09ed700"><td class="memItemLeft" align="right" valign="top"><a id="af7fecc4ada24d3ce0bfcbb94b09ed700" name="af7fecc4ada24d3ce0bfcbb94b09ed700"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleLogo</b> (bool toggle)</td></tr>
 <tr class="separator:af7fecc4ada24d3ce0bfcbb94b09ed700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68ac60fe5e5460239383e186d841aa9" id="r_af68ac60fe5e5460239383e186d841aa9"><td class="memItemLeft" align="right" valign="top"><a id="af68ac60fe5e5460239383e186d841aa9" name="af68ac60fe5e5460239383e186d841aa9"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>StartLogoAnimation</b> ()</td></tr>
+<tr class="separator:af68ac60fe5e5460239383e186d841aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044dddb9051cfe091b9010e63b26457d" id="r_a044dddb9051cfe091b9010e63b26457d"><td class="memItemLeft" align="right" valign="top"><a id="a044dddb9051cfe091b9010e63b26457d" name="a044dddb9051cfe091b9010e63b26457d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetLogoPosition</b> ()</td></tr>
+<tr class="separator:a044dddb9051cfe091b9010e63b26457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>

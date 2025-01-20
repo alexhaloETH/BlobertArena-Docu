@@ -12,8 +12,8 @@ digraph "Bloberts/Scripts/LogicLayer"
     dir_b07e4147b2f6ad1c2e4af01903ecec6a [shape=plaintext, label="LogicLayer"];
   dir_7c586fa019a76421fd54a84231b032b5 [label="AutomationScripts", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7c586fa019a76421fd54a84231b032b5.html",tooltip=""];
   dir_29d19aec12139c2d0129b4d13a8599d8 [label="Dojo", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_29d19aec12139c2d0129b4d13a8599d8.html",tooltip=""];
-  dir_9e600ec738b33dc5438694ab84e0a7ae [label="Interfaces", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_9e600ec738b33dc5438694ab84e0a7ae.html",tooltip=""];
   dir_c3fb0a21605318887ad5a978f85b7524 [label="Managers", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_c3fb0a21605318887ad5a978f85b7524.html",tooltip=""];
+  dir_99ce51526e00ca6220712bbfd5ac2fe8 [label="OnChainUtils", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_99ce51526e00ca6220712bbfd5ac2fe8.html",tooltip=""];
   dir_6fec9a69fc1f4526bf7913dbf7dfe0bf [label="ServerCommunication", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6fec9a69fc1f4526bf7913dbf7dfe0bf.html",tooltip=""];
   }
   }

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="Dojo.Starknet.StarknetInterop.\lCallHelper",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_dojo_1_1_starknet_1_1_starknet_interop_1_1_call_helper.html",tooltip=" "];
+  Node0 [id="Node000000",label="LobbyActionsContract.Accept\lResponseStruct",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_lobby_actions_contract_1_1_accept_response_struct.html",tooltip="Created: Combat State."];
 }

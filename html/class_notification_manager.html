@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -97,8 +97,10 @@ $(function(){initNavTree('class_notification_manager.html',''); initResizable(tr
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_notification_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">NotificationManager Class Reference</div></div>
@@ -115,6 +117,11 @@ Collaboration diagram for NotificationManager:</div>
 <div class="center"><img src="class_notification_manager__coll__graph.png" border="0" usemap="#a_notification_manager_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_notification_manager_1_1_notification_data.html">NotificationData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a78b60006440a6f5aef7c0a4a93b4091e" id="r_a78b60006440a6f5aef7c0a4a93b4091e"><td class="memItemLeft" align="right" valign="top"><a id="a78b60006440a6f5aef7c0a4a93b4091e" name="a78b60006440a6f5aef7c0a4a93b4091e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>NotificationType</b> { <br />
@@ -130,15 +137,37 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a78b60006440a6f5aef7c0a4a93b4091e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cc4e2bedb502c77e02c6dfe2fdb097" id="r_a95cc4e2bedb502c77e02c6dfe2fdb097"><td class="memItemLeft" align="right" valign="top"><a id="a95cc4e2bedb502c77e02c6dfe2fdb097" name="a95cc4e2bedb502c77e02c6dfe2fdb097"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>NotificationFlags</b> { <br />
+&#160;&#160;<b>None</b> = 0
+, <b>Invites</b> = 1 &lt;&lt; 0
+, <b>Tournament</b> = 1 &lt;&lt; 1
+, <b>Leaderboard</b> = 1 &lt;&lt; 2
+, <br />
+&#160;&#160;<b>Achievements</b> = 1 &lt;&lt; 3
+<br />
+ }</td></tr>
+<tr class="separator:a95cc4e2bedb502c77e02c6dfe2fdb097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab665f2ec3e471fce13417cd9800d58f0" id="r_ab665f2ec3e471fce13417cd9800d58f0"><td class="memItemLeft" align="right" valign="top"><a id="ab665f2ec3e471fce13417cd9800d58f0" name="ab665f2ec3e471fce13417cd9800d58f0"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>CreatePopupNotification</b> (NotificationType notificationType, string message)</td></tr>
-<tr class="separator:ab665f2ec3e471fce13417cd9800d58f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8defe9db8280f8d83796ea28886ed62a" id="r_a8defe9db8280f8d83796ea28886ed62a"><td class="memItemLeft" align="right" valign="top"><a id="a8defe9db8280f8d83796ea28886ed62a" name="a8defe9db8280f8d83796ea28886ed62a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleNotificationFilter</b> (NotificationFlags flag, bool toggle)</td></tr>
+<tr class="separator:a8defe9db8280f8d83796ea28886ed62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c24afd7ecf332b0338409c40e08eaca" id="r_a6c24afd7ecf332b0338409c40e08eaca"><td class="memItemLeft" align="right" valign="top"><a id="a6c24afd7ecf332b0338409c40e08eaca" name="a6c24afd7ecf332b0338409c40e08eaca"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleNotifications</b> (bool toggle)</td></tr>
+<tr class="separator:a6c24afd7ecf332b0338409c40e08eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbc5efa9d79c311d8daa1726fc71eeb" id="r_a6cbc5efa9d79c311d8daa1726fc71eeb"><td class="memItemLeft" align="right" valign="top"><a id="a6cbc5efa9d79c311d8daa1726fc71eeb" name="a6cbc5efa9d79c311d8daa1726fc71eeb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateNotification</b> (NotificationType notificationType, string message)</td></tr>
+<tr class="separator:a6cbc5efa9d79c311d8daa1726fc71eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e62a7d18a22f5385df7c06d01411cc9" id="r_a6e62a7d18a22f5385df7c06d01411cc9"><td class="memItemLeft" align="right" valign="top"><a id="a6e62a7d18a22f5385df7c06d01411cc9" name="a6e62a7d18a22f5385df7c06d01411cc9"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>NotificationIsClosed</b> ()</td></tr>
 <tr class="separator:a6e62a7d18a22f5385df7c06d01411cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aca16e0816664da8b3788e30c3b4b1d7c" id="r_aca16e0816664da8b3788e30c3b4b1d7c"><td class="memItemLeft" align="right" valign="top"><a id="aca16e0816664da8b3788e30c3b4b1d7c" name="aca16e0816664da8b3788e30c3b4b1d7c"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NOTIFICATIONS</b> = 30</td></tr>
+<tr class="separator:aca16e0816664da8b3788e30c3b4b1d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>

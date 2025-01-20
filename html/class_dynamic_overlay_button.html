@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -117,8 +117,7 @@ Collaboration diagram for DynamicOverlayButton:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a25dda31bbd9f89ed1871305ee1515daa" id="r_a25dda31bbd9f89ed1871305ee1515daa"><td class="memItemLeft" align="right" valign="top"><a id="a25dda31bbd9f89ed1871305ee1515daa" name="a25dda31bbd9f89ed1871305ee1515daa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ButtonState</b> { <b>Hidden</b> = 0
-, <b>NotificationActive</b>
-, <b>NotificationInactive</b>
+, <b>Notification</b>
 , <b>Close</b>
  }</td></tr>
 <tr class="separator:a25dda31bbd9f89ed1871305ee1515daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +133,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleDynamicButton</
 <tr class="memitem:a48f3e126619f265856f5652cb4f0bf3a" id="r_a48f3e126619f265856f5652cb4f0bf3a"><td class="memItemLeft" align="right" valign="top"><a id="a48f3e126619f265856f5652cb4f0bf3a" name="a48f3e126619f265856f5652cb4f0bf3a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCloseAction</b> (Action closeAction)</td></tr>
 <tr class="separator:a48f3e126619f265856f5652cb4f0bf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae289fd47a6e3013945a32418297fe7c6" id="r_ae289fd47a6e3013945a32418297fe7c6"><td class="memItemLeft" align="right" valign="top"><a id="ae289fd47a6e3013945a32418297fe7c6" name="ae289fd47a6e3013945a32418297fe7c6"></a>
+ButtonState&#160;</td><td class="memItemRight" valign="bottom"><b>GetButtonState</b> ()</td></tr>
+<tr class="separator:ae289fd47a6e3013945a32418297fe7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d729d5db654ab256dc227f46fc0c01" id="r_a30d729d5db654ab256dc227f46fc0c01"><td class="memItemLeft" align="right" valign="top"><a id="a30d729d5db654ab256dc227f46fc0c01" name="a30d729d5db654ab256dc227f46fc0c01"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>IncrementNewNotificationCounter</b> ()</td></tr>
+<tr class="separator:a30d729d5db654ab256dc227f46fc0c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3d28484564af04505e4a741bd96c8e" id="r_afc3d28484564af04505e4a741bd96c8e"><td class="memItemLeft" align="right" valign="top"><a id="afc3d28484564af04505e4a741bd96c8e" name="afc3d28484564af04505e4a741bd96c8e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetNewNotificationCounter</b> ()</td></tr>
+<tr class="separator:afc3d28484564af04505e4a741bd96c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Bloberts/Scripts/UI/Components/<b>DynamicOverlayButton.cs</b></li>

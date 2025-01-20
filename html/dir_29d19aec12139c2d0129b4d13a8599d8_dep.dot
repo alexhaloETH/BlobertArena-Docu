@@ -10,8 +10,8 @@ digraph "Bloberts/Scripts/LogicLayer/Dojo"
   subgraph clusterdir_29d19aec12139c2d0129b4d13a8599d8 {
     graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_29d19aec12139c2d0129b4d13a8599d8.html",tooltip=""]
     dir_29d19aec12139c2d0129b4d13a8599d8 [shape=plaintext, label="Dojo"];
+  dir_fa09d3021f74772d8d48c3ebcac67674 [label="Contracts", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_fa09d3021f74772d8d48c3ebcac67674.html",tooltip=""];
   dir_4d21c3a5c94132c2d2fde10f2d4cf5f7 [label="Models", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_4d21c3a5c94132c2d2fde10f2d4cf5f7.html",tooltip=""];
-  dir_6ca1228c8b32c6b8072c478956f52d57 [label="Transactions", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6ca1228c8b32c6b8072c478956f52d57.html",tooltip=""];
   dir_9e4261a9525cff0c0a335e1b3fa80c2c [label="Variants", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_9e4261a9525cff0c0a335e1b3fa80c2c.html",tooltip=""];
   }
   }

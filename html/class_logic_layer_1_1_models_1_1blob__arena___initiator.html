@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___initiato
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="namespace_dojo.html">Dojo</a> model, TODO.  
+<p>Dojo model, This is the user dojo_initiator that actually starts the game so this is necessary.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_Initiator:</div>
@@ -131,42 +131,35 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e8d7c51fc982a88755061318fcea38e" id="r_a3e8d7c51fc982a88755061318fcea38e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e8d7c51fc982a88755061318fcea38e">OnUpdate</a> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
+<tr class="memitem:a3e8d7c51fc982a88755061318fcea38e" id="r_a3e8d7c51fc982a88755061318fcea38e"><td class="memItemLeft" align="right" valign="top"><a id="a3e8d7c51fc982a88755061318fcea38e" name="a3e8d7c51fc982a88755061318fcea38e"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:a3e8d7c51fc982a88755061318fcea38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab30024230612b704055b3f062043920b" id="r_ab30024230612b704055b3f062043920b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab30024230612b704055b3f062043920b">GetGameId</a> ()</td></tr>
+<tr class="memitem:ab30024230612b704055b3f062043920b" id="r_ab30024230612b704055b3f062043920b"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab30024230612b704055b3f062043920b">GetGameId</a> ()</td></tr>
 <tr class="memdesc:ab30024230612b704055b3f062043920b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the game identifier associated with the initiator.  <br /></td></tr>
 <tr class="separator:ab30024230612b704055b3f062043920b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad79f42451bc482218dbdd89d3e5111a2" id="r_ad79f42451bc482218dbdd89d3e5111a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad79f42451bc482218dbdd89d3e5111a2">GetInitiator</a> ()</td></tr>
+<tr class="memitem:ad79f42451bc482218dbdd89d3e5111a2" id="r_ad79f42451bc482218dbdd89d3e5111a2"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad79f42451bc482218dbdd89d3e5111a2">GetInitiator</a> ()</td></tr>
 <tr class="memdesc:ad79f42451bc482218dbdd89d3e5111a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the identifier of the initiator.  <br /></td></tr>
 <tr class="separator:ad79f42451bc482218dbdd89d3e5111a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9fc81b23bf5172538f5fba4fb17c241" id="r_ab9fc81b23bf5172538f5fba4fb17c241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9fc81b23bf5172538f5fba4fb17c241">IsGameIdMatch</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> gameId)</td></tr>
+<tr class="memitem:ab9fc81b23bf5172538f5fba4fb17c241" id="r_ab9fc81b23bf5172538f5fba4fb17c241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9fc81b23bf5172538f5fba4fb17c241">IsGameIdMatch</a> (FieldElement gameId)</td></tr>
 <tr class="memdesc:ab9fc81b23bf5172538f5fba4fb17c241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided game identifier matches the stored game identifier.  <br /></td></tr>
 <tr class="separator:ab9fc81b23bf5172538f5fba4fb17c241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98538328f5a5e6b004c1762582b18f0b" id="r_a98538328f5a5e6b004c1762582b18f0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98538328f5a5e6b004c1762582b18f0b">IsInitiatorMatch</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> initiatorId)</td></tr>
+<tr class="memitem:a98538328f5a5e6b004c1762582b18f0b" id="r_a98538328f5a5e6b004c1762582b18f0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98538328f5a5e6b004c1762582b18f0b">IsInitiatorMatch</a> (FieldElement initiatorId)</td></tr>
 <tr class="memdesc:a98538328f5a5e6b004c1762582b18f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided initiator identifier matches the stored initiator's identifier.  <br /></td></tr>
 <tr class="separator:a98538328f5a5e6b004c1762582b18f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ff03bb1348f2ca16c6421a926eec0b1" id="r_a7ff03bb1348f2ca16c6421a926eec0b1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ff03bb1348f2ca16c6421a926eec0b1">DebugData</a> ()</td></tr>
 <tr class="memdesc:a7ff03bb1348f2ca16c6421a926eec0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:a7ff03bb1348f2ca16c6421a926eec0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance" id="r_a7c3749c1edfe030ddfd1ba0efdbfac59"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
-<tr class="separator:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_logic_layer_1_1_models_1_1_i_initiator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_logic_layer_1_1_models_1_1_i_initiator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html">LogicLayer.Models.IInitiator</a></td></tr>
 <tr class="inherit_header pub_methods_interface_i_debug_print_out"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_i_debug_print_out')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_i_debug_print_out.html">IDebugPrintOut</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acbb6ad8314a6b4296e3d1e16b84363fb" id="r_acbb6ad8314a6b4296e3d1e16b84363fb"><td class="memItemLeft" align="right" valign="top"><a id="acbb6ad8314a6b4296e3d1e16b84363fb" name="acbb6ad8314a6b4296e3d1e16b84363fb"></a>
-<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_game_id</b></td></tr>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_game_id</b></td></tr>
 <tr class="separator:acbb6ad8314a6b4296e3d1e16b84363fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25b08c2a32e76093387e18f9520eaab" id="r_aa25b08c2a32e76093387e18f9520eaab"><td class="memItemLeft" align="right" valign="top"><a id="aa25b08c2a32e76093387e18f9520eaab" name="aa25b08c2a32e76093387e18f9520eaab"></a>
-<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_initiator</b></td></tr>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_initiator</b></td></tr>
 <tr class="separator:aa25b08c2a32e76093387e18f9520eaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance" id="r_a7b3bf64101387597100bb65d6b433041"><td class="memItemLeft" align="right" valign="top">
-UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdated</b> = new UnityEvent()</td></tr>
-<tr class="separator:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -174,16 +167,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:af74aa2405fe0e83dc0cb8ada3073f3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a066de212ba62c74478533227191924f3" id="r_a066de212ba62c74478533227191924f3"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a066de212ba62c74478533227191924f3">MemberQueryMapping</a></td></tr>
 <tr class="separator:a066de212ba62c74478533227191924f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header properties_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance" id="r_a8daacfdd15cbcb90ad373f74fb0e7040"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b><code> [get]</code></td></tr>
-<tr class="separator:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespace_dojo.html">Dojo</a> model, TODO. </p>
+<div class="textblock"><p>Dojo model, This is the user dojo_initiator that actually starts the game so this is necessary. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7ff03bb1348f2ca16c6421a926eec0b1" name="a7ff03bb1348f2ca16c6421a926eec0b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ff03bb1348f2ca16c6421a926eec0b1">&#9670;&#160;</a></span>DebugData()</h2>
@@ -214,7 +200,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blob_arena_Initiator.GetGameId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_Initiator.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -236,7 +222,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blob_arena_Initiator.GetInitiator </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_Initiator.GetInitiator </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -260,7 +246,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blob_arena_Initiator.IsGameIdMatch </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>gameId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>gameId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -288,7 +274,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blob_arena_Initiator.IsInitiatorMatch </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>initiatorId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>initiatorId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -304,33 +290,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if the initiator ID matches, otherwise false.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html#a213c4b3e570a46fa2f33db629c6ba03c">LogicLayer.Models.IInitiator</a>.</p>
-
-</div>
-</div>
-<a id="a3e8d7c51fc982a88755061318fcea38e" name="a3e8d7c51fc982a88755061318fcea38e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e8d7c51fc982a88755061318fcea38e">&#9670;&#160;</a></span>OnUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void LogicLayer.Models.blob_arena_Initiator.OnUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a>.</p>
 
 </div>
 </div>

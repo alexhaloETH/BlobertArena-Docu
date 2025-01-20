@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -118,13 +118,20 @@ Collaboration diagram for CharacterStatsVisualizerComponent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab62fba90fa9d1d9949287de75fb38269" id="r_ab62fba90fa9d1d9949287de75fb38269"><td class="memItemLeft" align="right" valign="top"><a id="ab62fba90fa9d1d9949287de75fb38269" name="ab62fba90fa9d1d9949287de75fb38269"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeComponent</b> (<a class="el" href="interface_i_nft_type.html">INftType</a> nftType)</td></tr>
-<tr class="separator:ab62fba90fa9d1d9949287de75fb38269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d52a58340e6a5bc76132acb0cb4957c" id="r_a7d52a58340e6a5bc76132acb0cb4957c"><td class="memItemLeft" align="right" valign="top"><a id="a7d52a58340e6a5bc76132acb0cb4957c" name="a7d52a58340e6a5bc76132acb0cb4957c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeComponent</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> nftType)</td></tr>
+<tr class="separator:a7d52a58340e6a5bc76132acb0cb4957c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86400851c196bc366764867299ccfe4a" id="r_a86400851c196bc366764867299ccfe4a"><td class="memItemLeft" align="right" valign="top"><a id="a86400851c196bc366764867299ccfe4a" name="a86400851c196bc366764867299ccfe4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CompareBlobert</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> originalBlobert, <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> compareTo)</td></tr>
+<tr class="separator:a86400851c196bc366764867299ccfe4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53466fb66b8df6e05cf551d682e7cd9" id="r_ad53466fb66b8df6e05cf551d682e7cd9"><td class="memItemLeft" align="right" valign="top"><a id="ad53466fb66b8df6e05cf551d682e7cd9" name="ad53466fb66b8df6e05cf551d682e7cd9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CompareAttack</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_attack.html">IAttack</a> attack, bool receiver)</td></tr>
+<tr class="separator:ad53466fb66b8df6e05cf551d682e7cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component is responsible for displaying the values of a Blobert in the UI. </p>
-<p>Need to figure out on how to do the equation for the values off chain so we done have to fetch data </p>
+<p>This component can also compare two bloberts stats and show the &gt;&gt; when necessary</p>
+<p>TODO: this needs an implementation with the attack effect so we have everything in one place, as right now this takes 2 blobberts and compares but would be nice if it also took just an attack and shows with arrows which stats the attack deals with </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Bloberts/Scripts/UI/Components/CharacterStatsVisualizer/<b>CharacterStatsVisualizerComponent.cs</b></li>
 </ul>

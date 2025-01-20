@@ -1,5 +1,6 @@
 var interface_logic_layer_1_1_models_1_1_i_attack =
 [
+    [ "AggregateStats", "interface_logic_layer_1_1_models_1_1_i_attack.html#a08bf9094139545440f62471ba5532f74", null ],
     [ "GetAccuracy", "interface_logic_layer_1_1_models_1_1_i_attack.html#a5f5c32682652c1b8167af62cbe480da4", null ],
     [ "GetAnim", "interface_logic_layer_1_1_models_1_1_i_attack.html#a444e896cead5a8b57f78f0cb4342df39", null ],
     [ "GetAttackType", "interface_logic_layer_1_1_models_1_1_i_attack.html#aae796a046e937b7761b562463b55500b", null ],

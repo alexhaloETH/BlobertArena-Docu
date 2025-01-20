@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___combat_s
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="namespace_dojo.html">Dojo</a> model, Quick way to get state of the combat, this is spawned only the moment that a fight actually starts.  
+<p>Dojo model, Quick way to get state of the combat, this is spawned only the moment that a fight actually starts.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_CombatState:</div>
@@ -132,9 +132,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab55fd2129c07e9a0000de24b0ac8820e" id="r_ab55fd2129c07e9a0000de24b0ac8820e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab55fd2129c07e9a0000de24b0ac8820e">OnUpdate</a> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
+<tr class="memitem:ab55fd2129c07e9a0000de24b0ac8820e" id="r_ab55fd2129c07e9a0000de24b0ac8820e"><td class="memItemLeft" align="right" valign="top"><a id="ab55fd2129c07e9a0000de24b0ac8820e" name="ab55fd2129c07e9a0000de24b0ac8820e"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:ab55fd2129c07e9a0000de24b0ac8820e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b81d9e06ce4a684810f55923a0e9567" id="r_a3b81d9e06ce4a684810f55923a0e9567"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b81d9e06ce4a684810f55923a0e9567">GetId</a> ()</td></tr>
+<tr class="memitem:a3b81d9e06ce4a684810f55923a0e9567" id="r_a3b81d9e06ce4a684810f55923a0e9567"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b81d9e06ce4a684810f55923a0e9567">GetId</a> ()</td></tr>
 <tr class="memdesc:a3b81d9e06ce4a684810f55923a0e9567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique identifier for the combat state.  <br /></td></tr>
 <tr class="separator:a3b81d9e06ce4a684810f55923a0e9567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab470273db74c0025a6b96342063d3f8d" id="r_ab470273db74c0025a6b96342063d3f8d"><td class="memItemLeft" align="right" valign="top">Phase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab470273db74c0025a6b96342063d3f8d">GetPhase</a> ()</td></tr>
@@ -143,26 +144,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2025893b48acbaf706e5fed6baf997b6" id="r_a2025893b48acbaf706e5fed6baf997b6"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2025893b48acbaf706e5fed6baf997b6">GetRound</a> ()</td></tr>
 <tr class="memdesc:a2025893b48acbaf706e5fed6baf997b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current round number of the combat.  <br /></td></tr>
 <tr class="separator:a2025893b48acbaf706e5fed6baf997b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d063f515087dd4933d1a448d0bc823" id="r_ae2d063f515087dd4933d1a448d0bc823"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2d063f515087dd4933d1a448d0bc823">IsIdMatch</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> id)</td></tr>
+<tr class="memitem:ae2d063f515087dd4933d1a448d0bc823" id="r_ae2d063f515087dd4933d1a448d0bc823"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2d063f515087dd4933d1a448d0bc823">IsIdMatch</a> (FieldElement id)</td></tr>
 <tr class="memdesc:ae2d063f515087dd4933d1a448d0bc823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided identifier matches the combat state's identifier.  <br /></td></tr>
 <tr class="separator:ae2d063f515087dd4933d1a448d0bc823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5e9ff5954e819ae518609c371a30a7" id="r_a9a5e9ff5954e819ae518609c371a30a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a5e9ff5954e819ae518609c371a30a7">GetWinnerIfEnded</a> ()</td></tr>
+<tr class="memitem:a9a5e9ff5954e819ae518609c371a30a7" id="r_a9a5e9ff5954e819ae518609c371a30a7"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a5e9ff5954e819ae518609c371a30a7">GetWinnerIfEnded</a> ()</td></tr>
 <tr class="memdesc:a9a5e9ff5954e819ae518609c371a30a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the combat phase has ended and retrieves the winner's identifier if available.  <br /></td></tr>
 <tr class="separator:a9a5e9ff5954e819ae518609c371a30a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce9b3a7df20fea6cfed37cb4a5361f0" id="r_a7ce9b3a7df20fea6cfed37cb4a5361f0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ce9b3a7df20fea6cfed37cb4a5361f0">DebugData</a> ()</td></tr>
 <tr class="memdesc:a7ce9b3a7df20fea6cfed37cb4a5361f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:a7ce9b3a7df20fea6cfed37cb4a5361f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance" id="r_a7c3749c1edfe030ddfd1ba0efdbfac59"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
-<tr class="separator:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_logic_layer_1_1_models_1_1_i_combat_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_logic_layer_1_1_models_1_1_i_combat_state')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html">LogicLayer.Models.ICombatState</a></td></tr>
 <tr class="inherit_header pub_methods_interface_i_debug_print_out"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_i_debug_print_out')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_i_debug_print_out.html">IDebugPrintOut</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:abafd1a94c5054db4589a0e67b977e508" id="r_abafd1a94c5054db4589a0e67b977e508"><td class="memItemLeft" align="right" valign="top"><a id="abafd1a94c5054db4589a0e67b977e508" name="abafd1a94c5054db4589a0e67b977e508"></a>
-<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_id</b></td></tr>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_id</b></td></tr>
 <tr class="separator:abafd1a94c5054db4589a0e67b977e508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3410e4296d5ce88abb7cb154d2ce797b" id="r_a3410e4296d5ce88abb7cb154d2ce797b"><td class="memItemLeft" align="right" valign="top"><a id="a3410e4296d5ce88abb7cb154d2ce797b" name="a3410e4296d5ce88abb7cb154d2ce797b"></a>
 Phase&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_phase</b></td></tr>
@@ -170,10 +167,6 @@ Phase&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_phase</b></td><
 <tr class="memitem:ab315b1f97277c43c0c0fb2cf1e82d653" id="r_ab315b1f97277c43c0c0fb2cf1e82d653"><td class="memItemLeft" align="right" valign="top"><a id="ab315b1f97277c43c0c0fb2cf1e82d653" name="ab315b1f97277c43c0c0fb2cf1e82d653"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_round</b></td></tr>
 <tr class="separator:ab315b1f97277c43c0c0fb2cf1e82d653"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance" id="r_a7b3bf64101387597100bb65d6b433041"><td class="memItemLeft" align="right" valign="top">
-UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdated</b> = new UnityEvent()</td></tr>
-<tr class="separator:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -181,16 +174,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aee51e53d7ce016d78ec4600ba9dd6d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91085a997938285a14145bf1d1772868" id="r_a91085a997938285a14145bf1d1772868"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91085a997938285a14145bf1d1772868">MemberQueryMapping</a></td></tr>
 <tr class="separator:a91085a997938285a14145bf1d1772868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header properties_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance" id="r_a8daacfdd15cbcb90ad373f74fb0e7040"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b><code> [get]</code></td></tr>
-<tr class="separator:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespace_dojo.html">Dojo</a> model, Quick way to get state of the combat, this is spawned only the moment that a fight actually starts. </p>
+<div class="textblock"><p>Dojo model, Quick way to get state of the combat, this is spawned only the moment that a fight actually starts. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7ce9b3a7df20fea6cfed37cb4a5361f0" name="a7ce9b3a7df20fea6cfed37cb4a5361f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ce9b3a7df20fea6cfed37cb4a5361f0">&#9670;&#160;</a></span>DebugData()</h2>
@@ -211,11 +197,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>data to debug</dd></dl>
 
 <p>Implements <a class="el" href="interface_i_debug_print_out.html#ac1b54d10c92b85d55afdbf0d1ed30062">IDebugPrintOut</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_layer_1_1_models_1_1blob__arena___combat_state_a7ce9b3a7df20fea6cfed37cb4a5361f0_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1blob__arena___combat_state_a7ce9b3a7df20fea6cfed37cb4a5361f0_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -226,7 +207,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blob_arena_CombatState.GetId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_CombatState.GetId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -292,7 +273,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blob_arena_CombatState.GetWinnerIfEnded </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_CombatState.GetWinnerIfEnded </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -304,11 +285,6 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the winner's identifier if the phase is ended, otherwise null.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html#ab3aa95f3d67667b84d6e1bfea9aad337">LogicLayer.Models.ICombatState</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_layer_1_1_models_1_1blob__arena___combat_state_a9a5e9ff5954e819ae518609c371a30a7_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1blob__arena___combat_state_a9a5e9ff5954e819ae518609c371a30a7_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -321,7 +297,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool LogicLayer.Models.blob_arena_CombatState.IsIdMatch </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -337,33 +313,6 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>True if the IDs match, otherwise false.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html#a2d868248111e7a2bc9589d91760c1acf">LogicLayer.Models.ICombatState</a>.</p>
-
-</div>
-</div>
-<a id="ab55fd2129c07e9a0000de24b0ac8820e" name="ab55fd2129c07e9a0000de24b0ac8820e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab55fd2129c07e9a0000de24b0ac8820e">&#9670;&#160;</a></span>OnUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void LogicLayer.Models.blob_arena_CombatState.OnUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a>.</p>
 
 </div>
 </div>

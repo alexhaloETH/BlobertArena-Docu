@@ -5,7 +5,5 @@ var searchData=
   ['detailedattackoutcome_2',['DetailedAttackOutcome',['../struct_logic_layer_1_1_models_1_1_detailed_attack_outcome.html',1,'LogicLayer::Models']]],
   ['dojodata_3',['DojoData',['../class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data.html',1,'LogicLayer::Models::LocalDataModel']]],
   ['dojodataserializable_4',['DojoDataSerializable',['../class_logic_layer_1_1_models_1_1_local_data_model_1_1_dojo_data_serializable.html',1,'LogicLayer::Models::LocalDataModel']]],
-  ['domain_5',['Domain',['../class_dojo_1_1_starknet_1_1_domain.html',1,'Dojo::Starknet']]],
-  ['dropdownmainmenu_6',['DropdownMainMenu',['../class_dropdown_main_menu.html',1,'']]],
-  ['dynamicoverlaybutton_7',['DynamicOverlayButton',['../class_dynamic_overlay_button.html',1,'']]]
+  ['dynamicoverlaybutton_5',['DynamicOverlayButton',['../class_dynamic_overlay_button.html',1,'']]]
 ];

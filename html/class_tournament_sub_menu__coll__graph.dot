@@ -14,4 +14,7 @@ digraph "TournamentSubMenu"
   Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node5 [id="Node000005",label="Menu",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_menu.html",tooltip=" "];
   Node3 -> Node5 [id="edge5_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node5 [id="edge6_Node000005_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_PageButtonState",fontcolor="grey" ];
+  Node6 [id="Node000006",label="DynamicOverlayButton",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_dynamic_overlay_button.html",tooltip=" "];
+  Node3 -> Node6 [id="edge7_Node000006_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blobert___attack_slot.
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="namespace_dojo.html">Dojo</a> model, The attack slot dictates the attacks available for each of the items the blobert.  
+<p>Dojo model, The attack slot dictates the attacks available for each of the items the blobert.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blobert_AttackSlot:</div>
@@ -133,33 +133,30 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a07fd5718c86686c3eaf1d0e9ca89b249" id="r_a07fd5718c86686c3eaf1d0e9ca89b249"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07fd5718c86686c3eaf1d0e9ca89b249">OnUpdate</a> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
+<tr class="memitem:a07fd5718c86686c3eaf1d0e9ca89b249" id="r_a07fd5718c86686c3eaf1d0e9ca89b249"><td class="memItemLeft" align="right" valign="top"><a id="a07fd5718c86686c3eaf1d0e9ca89b249" name="a07fd5718c86686c3eaf1d0e9ca89b249"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:a07fd5718c86686c3eaf1d0e9ca89b249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e8ae7958c956dff175f506053ab041a" id="r_a0e8ae7958c956dff175f506053ab041a"><td class="memItemLeft" align="right" valign="top">BlobertItemKey&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e8ae7958c956dff175f506053ab041a">GetItemKey</a> ()</td></tr>
 <tr class="memdesc:a0e8ae7958c956dff175f506053ab041a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique key associated with the attack slot.  <br /></td></tr>
 <tr class="separator:a0e8ae7958c956dff175f506053ab041a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb36f495c3f3857ae5e9c7e49ab3e354" id="r_afb36f495c3f3857ae5e9c7e49ab3e354"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb36f495c3f3857ae5e9c7e49ab3e354">GetSlot</a> ()</td></tr>
+<tr class="memitem:afb36f495c3f3857ae5e9c7e49ab3e354" id="r_afb36f495c3f3857ae5e9c7e49ab3e354"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb36f495c3f3857ae5e9c7e49ab3e354">GetSlot</a> ()</td></tr>
 <tr class="memdesc:afb36f495c3f3857ae5e9c7e49ab3e354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the slot where the item is placed.  <br /></td></tr>
 <tr class="separator:afb36f495c3f3857ae5e9c7e49ab3e354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eca5493fa832e24f33d88d5e1bc4471" id="r_a5eca5493fa832e24f33d88d5e1bc4471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eca5493fa832e24f33d88d5e1bc4471">GetAttackId</a> ()</td></tr>
+<tr class="memitem:a5eca5493fa832e24f33d88d5e1bc4471" id="r_a5eca5493fa832e24f33d88d5e1bc4471"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eca5493fa832e24f33d88d5e1bc4471">GetAttackId</a> ()</td></tr>
 <tr class="memdesc:a5eca5493fa832e24f33d88d5e1bc4471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the attack associated with this slot.  <br /></td></tr>
 <tr class="separator:a5eca5493fa832e24f33d88d5e1bc4471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0f604608bcc251162a99fa6644c07c" id="r_adc0f604608bcc251162a99fa6644c07c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc0f604608bcc251162a99fa6644c07c">IsItemKeyMatch</a> (BlobertItemKey itemKey)</td></tr>
 <tr class="memdesc:adc0f604608bcc251162a99fa6644c07c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided item key matches the attack slot's unique key.  <br /></td></tr>
 <tr class="separator:adc0f604608bcc251162a99fa6644c07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb17ec26efc44a364caaced3167669ba" id="r_adb17ec26efc44a364caaced3167669ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb17ec26efc44a364caaced3167669ba">IsSlotMatch</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> slot)</td></tr>
+<tr class="memitem:adb17ec26efc44a364caaced3167669ba" id="r_adb17ec26efc44a364caaced3167669ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb17ec26efc44a364caaced3167669ba">IsSlotMatch</a> (FieldElement slot)</td></tr>
 <tr class="memdesc:adb17ec26efc44a364caaced3167669ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided slot ID matches the attack slot's unique slot ID.  <br /></td></tr>
 <tr class="separator:adb17ec26efc44a364caaced3167669ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec910c97034e9af3a8d502edf69444fe" id="r_aec910c97034e9af3a8d502edf69444fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec910c97034e9af3a8d502edf69444fe">IsAttackIdMatch</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> attackId)</td></tr>
+<tr class="memitem:aec910c97034e9af3a8d502edf69444fe" id="r_aec910c97034e9af3a8d502edf69444fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec910c97034e9af3a8d502edf69444fe">IsAttackIdMatch</a> (FieldElement attackId)</td></tr>
 <tr class="memdesc:aec910c97034e9af3a8d502edf69444fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided attack ID matches the attack slot's unique attack ID.  <br /></td></tr>
 <tr class="separator:aec910c97034e9af3a8d502edf69444fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af726065d9ec0b9fdb1576f85230ac16f" id="r_af726065d9ec0b9fdb1576f85230ac16f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af726065d9ec0b9fdb1576f85230ac16f">DebugData</a> ()</td></tr>
 <tr class="memdesc:af726065d9ec0b9fdb1576f85230ac16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:af726065d9ec0b9fdb1576f85230ac16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance" id="r_a7c3749c1edfe030ddfd1ba0efdbfac59"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
-<tr class="separator:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_logic_layer_1_1_models_1_1_i_attack_slot"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_logic_layer_1_1_models_1_1_i_attack_slot')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_attack_slot.html">LogicLayer.Models.IAttackSlot</a></td></tr>
 <tr class="inherit_header pub_methods_interface_i_debug_print_out"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_i_debug_print_out')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_i_debug_print_out.html">IDebugPrintOut</a></td></tr>
 </table><table class="memberdecls">
@@ -169,15 +166,11 @@ Public Attributes</h2></td></tr>
 BlobertItemKey&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_itemKey</b></td></tr>
 <tr class="separator:abfad549c6ade9543eb66cef0946a1e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67537be5b584625fceeb270780afa5f5" id="r_a67537be5b584625fceeb270780afa5f5"><td class="memItemLeft" align="right" valign="top"><a id="a67537be5b584625fceeb270780afa5f5" name="a67537be5b584625fceeb270780afa5f5"></a>
-<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_slot</b></td></tr>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_slot</b></td></tr>
 <tr class="separator:a67537be5b584625fceeb270780afa5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70f0a76cc8afc0176c869d30f3e204bb" id="r_a70f0a76cc8afc0176c869d30f3e204bb"><td class="memItemLeft" align="right" valign="top"><a id="a70f0a76cc8afc0176c869d30f3e204bb" name="a70f0a76cc8afc0176c869d30f3e204bb"></a>
-<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_attackId</b></td></tr>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_attackId</b></td></tr>
 <tr class="separator:a70f0a76cc8afc0176c869d30f3e204bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance" id="r_a7b3bf64101387597100bb65d6b433041"><td class="memItemLeft" align="right" valign="top">
-UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdated</b> = new UnityEvent()</td></tr>
-<tr class="separator:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -185,16 +178,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a9d11422bd13c0c82dd291acc813b7a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d4af78e8b661ddede94a25065bbf961" id="r_a4d4af78e8b661ddede94a25065bbf961"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d4af78e8b661ddede94a25065bbf961">MemberQueryMapping</a></td></tr>
 <tr class="separator:a4d4af78e8b661ddede94a25065bbf961"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header properties_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance" id="r_a8daacfdd15cbcb90ad373f74fb0e7040"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b><code> [get]</code></td></tr>
-<tr class="separator:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespace_dojo.html">Dojo</a> model, The attack slot dictates the attacks available for each of the items the blobert. </p>
+<div class="textblock"><p>Dojo model, The attack slot dictates the attacks available for each of the items the blobert. </p>
 <p>This implementation is specific for the Arcade non unique bloberts </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af726065d9ec0b9fdb1576f85230ac16f" name="af726065d9ec0b9fdb1576f85230ac16f"></a>
@@ -226,7 +212,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blobert_AttackSlot.GetAttackId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blobert_AttackSlot.GetAttackId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -270,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blobert_AttackSlot.GetSlot </td>
+          <td class="memname">FieldElement LogicLayer.Models.blobert_AttackSlot.GetSlot </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -294,7 +280,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blobert_AttackSlot.IsAttackIdMatch </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>attackId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>attackId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -350,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blobert_AttackSlot.IsSlotMatch </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -366,33 +352,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if the slot IDs match, otherwise false.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_attack_slot.html#ace1970ef84c871b6f89254e54b866dee">LogicLayer.Models.IAttackSlot</a>.</p>
-
-</div>
-</div>
-<a id="a07fd5718c86686c3eaf1d0e9ca89b249" name="a07fd5718c86686c3eaf1d0e9ca89b249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07fd5718c86686c3eaf1d0e9ca89b249">&#9670;&#160;</a></span>OnUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void LogicLayer.Models.blobert_AttackSlot.OnUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a>.</p>
 
 </div>
 </div>

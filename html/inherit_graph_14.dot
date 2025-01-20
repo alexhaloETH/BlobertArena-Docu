@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="BlobertArena.Animations.\lCharacterAnimationManager.Texture\lFunctionInput",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_texture_function_input.html",tooltip="Represents the input data for a texture function in an animation."];
+  Node0 [id="Node000000",label="BlobertArena.Animations.\lCharacterAnimationManager.Tween\lCallbackSystem",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_blobert_arena_1_1_animations_1_1_character_animation_manager_1_1_tween_callback_system.html",tooltip="Represents a tween callback system for animation frames."];
 }

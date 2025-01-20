@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="BlobertTraitsEnum.Traits",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_blobert_traits_enum_1_1_traits.html",tooltip=" "];
+  Node0 [id="Node000000",label="BuildScript",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_build_script.html",tooltip=" "];
 }

@@ -1,6 +1,7 @@
 var class_logic_layer_1_1_models_1_1blob__arena___combatant_token =
 [
     [ "DebugData", "class_logic_layer_1_1_models_1_1blob__arena___combatant_token.html#a48c885ceae8513e9e5743b5cba506a09", null ],
+    [ "GetBlobertTokenInterface", "class_logic_layer_1_1_models_1_1blob__arena___combatant_token.html#acf1c5349d0a992b25d13fc2ed2a548f9", null ],
     [ "GetCollectionAddress", "class_logic_layer_1_1_models_1_1blob__arena___combatant_token.html#a1ebb183d31fa35d2375acba05ea196ae", null ],
     [ "GetId", "class_logic_layer_1_1_models_1_1blob__arena___combatant_token.html#a93c5a685c2f3ee05d5d32c03e9b5eb45", null ],
     [ "GetTokenIdFieldElement", "class_logic_layer_1_1_models_1_1blob__arena___combatant_token.html#a7af4e5539fff7d69877cc654a2296b6e", null ],

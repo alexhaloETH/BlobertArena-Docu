@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="Dojo.Torii.ToriiClient",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_dojo_1_1_torii_1_1_torii_client.html",tooltip=" "];
+  Node0 [id="Node000000",label="LogicLayer.Query.Edge\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_query_1_1_edge.html",tooltip=" "];
 }

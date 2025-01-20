@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="BetActionsContract.Release\lFundsStruct",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_bet_actions_contract_1_1_release_funds_struct.html",tooltip=" "];
+  Node0 [id="Node000000",label="BetActionsContract.Revoke\lReleaseStruct",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_bet_actions_contract_1_1_revoke_release_struct.html",tooltip=" "];
 }

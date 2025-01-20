@@ -9,4 +9,7 @@ digraph "BottomBar"
   Node2 [id="Node000002",label="Menu",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_menu.html",tooltip=" "];
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [id="edge3_Node000002_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_PageButtonState",fontcolor="grey" ];
+  Node4 [id="Node000004",label="DynamicOverlayButton",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_dynamic_overlay_button.html",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

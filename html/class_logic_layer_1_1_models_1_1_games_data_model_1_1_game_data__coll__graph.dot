@@ -15,16 +15,16 @@ digraph "LogicLayer.Models.GamesDataModel.GameData"
   Node5 -> Node3 [id="edge4_Node000003_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" GameInfo",fontcolor="grey" ];
   Node5 [id="Node000005",label="LogicLayer.Models.IGameInfo",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_game_info.html",tooltip=" "];
   Node6 -> Node5 [id="edge5_Node000005_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" combatantOne",fontcolor="grey" ];
-  Node6 [id="Node000006",label="Dojo.Starknet.FieldElement",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_dojo_1_1_starknet_1_1_field_element.html",tooltip=" "];
-  Node7 -> Node6 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="ISerializationCallbackReceiver",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node8 -> Node3 [id="edge7_Node000003_Node000008",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" Initiator",fontcolor="grey" ];
-  Node8 [id="Node000008",label="LogicLayer.Models.IInitiator",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_initiator.html",tooltip=" "];
-  Node9 -> Node1 [id="edge8_Node000001_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" CombatStateData",fontcolor="grey" ];
-  Node9 [id="Node000009",label="LogicLayer.Models.GamesData\lModel.CombatStateData",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_games_data_model_1_1_combat_state_data.html",tooltip=" "];
-  Node10 -> Node1 [id="edge9_Node000001_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" BetGameData",fontcolor="grey" ];
-  Node10 [id="Node000010",label="LogicLayer.Models.GamesData\lModel.BetGameData",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_games_data_model_1_1_bet_game_data.html",tooltip=" "];
-  Node11 -> Node10 [id="edge10_Node000010_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" Bet",fontcolor="grey" ];
-  Node11 [id="Node000011",label="LogicLayer.Models.IBet",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_bet.html",tooltip=" "];
-  Node6 -> Node1 [id="edge11_Node000001_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" admin\ntokenIdAdmin\nwinner",fontcolor="grey" ];
+  Node6 [id="Node000006",label="Starknet",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [id="edge6_Node000003_Node000007",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" Initiator",fontcolor="grey" ];
+  Node7 [id="Node000007",label="LogicLayer.Models.IInitiator",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_initiator.html",tooltip=" "];
+  Node8 -> Node1 [id="edge7_Node000001_Node000008",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" CombatStateData",fontcolor="grey" ];
+  Node8 [id="Node000008",label="LogicLayer.Models.GamesData\lModel.CombatStateData",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_games_data_model_1_1_combat_state_data.html",tooltip=" "];
+  Node9 -> Node1 [id="edge8_Node000001_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" BetGameData",fontcolor="grey" ];
+  Node9 [id="Node000009",label="LogicLayer.Models.GamesData\lModel.BetGameData",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_games_data_model_1_1_bet_game_data.html",tooltip=" "];
+  Node10 -> Node9 [id="edge9_Node000009_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" Bet",fontcolor="grey" ];
+  Node10 [id="Node000010",label="LogicLayer.Models.IBet",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_bet.html",tooltip=" "];
+  Node6 -> Node1 [id="edge10_Node000001_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" admin\nwinner",fontcolor="grey" ];
+  Node11 -> Node1 [id="edge11_Node000001_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" tokenIdAdmin",fontcolor="grey" ];
+  Node11 [id="Node000011",label="LogicLayer.Models.IBlobert\lToken",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_blobert_token.html",tooltip=" "];
 }

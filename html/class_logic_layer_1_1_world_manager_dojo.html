@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -131,16 +131,19 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>AddEntity</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveEntity</b> (string key)</td></tr>
 <tr class="separator:a0ccfa3d3036a3a2e249d6dcecff6d083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a052cc3b8f24e62ea5626ed6ec6efcecf" id="r_a052cc3b8f24e62ea5626ed6ec6efcecf"><td class="memItemLeft" align="right" valign="top"><a id="a052cc3b8f24e62ea5626ed6ec6efcecf" name="a052cc3b8f24e62ea5626ed6ec6efcecf"></a>
-async Task&lt; byte[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Publish</b> (<a class="el" href="class_dojo_1_1_starknet_1_1_typed_data.html">TypedData</a> typedData, <a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>[] signature)</td></tr>
+async Task&lt; byte[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Publish</b> (TypedData typedData, FieldElement[] signature)</td></tr>
 <tr class="separator:a052cc3b8f24e62ea5626ed6ec6efcecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5164240d276e312c40aa8d56f14409cb" id="r_a5164240d276e312c40aa8d56f14409cb"><td class="memItemLeft" align="right" valign="top"><a id="a5164240d276e312c40aa8d56f14409cb" name="a5164240d276e312c40aa8d56f14409cb"></a>
 async Task&#160;</td><td class="memItemRight" valign="bottom"><b>LoadData</b> (bool loadAll)</td></tr>
 <tr class="separator:a5164240d276e312c40aa8d56f14409cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f27b1409c5faf9fcf19a5b1354f854" id="r_a40f27b1409c5faf9fcf19a5b1354f854"><td class="memItemLeft" align="right" valign="top"><a id="a40f27b1409c5faf9fcf19a5b1354f854" name="a40f27b1409c5faf9fcf19a5b1354f854"></a>
+async Task&#160;</td><td class="memItemRight" valign="bottom"><b>LoadAllStaticData</b> ()</td></tr>
+<tr class="separator:a40f27b1409c5faf9fcf19a5b1354f854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e3f5be4f4463bcea3ad7af2e32d5c1" id="r_a09e3f5be4f4463bcea3ad7af2e32d5c1"><td class="memItemLeft" align="right" valign="top"><a id="a09e3f5be4f4463bcea3ad7af2e32d5c1" name="a09e3f5be4f4463bcea3ad7af2e32d5c1"></a>
-async Task&lt; List&lt; <a class="el" href="class_dojo_1_1_torii_1_1_entity.html">Entity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FetchEntitiesByBatch</b> (<a class="el" href="class_dojo_1_1_torii_1_1_query.html">Dojo.Torii.Query</a> query)</td></tr>
+async Task&lt; List&lt; Entity &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FetchEntitiesByBatch</b> (Dojo.Torii.Query query)</td></tr>
 <tr class="separator:a09e3f5be4f4463bcea3ad7af2e32d5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec95fb06ee9c86b1210b8969d7a03547" id="r_aec95fb06ee9c86b1210b8969d7a03547"><td class="memItemLeft" align="right" valign="top"><a id="aec95fb06ee9c86b1210b8969d7a03547" name="aec95fb06ee9c86b1210b8969d7a03547"></a>
-async Task&lt; List&lt; <a class="el" href="class_dojo_1_1_torii_1_1_entity.html">Entity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>StandardEntityFetch</b> (<a class="el" href="class_dojo_1_1_torii_1_1_query.html">Dojo.Torii.Query</a> query)</td></tr>
+async Task&lt; List&lt; Entity &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>StandardEntityFetch</b> (Dojo.Torii.Query query)</td></tr>
 <tr class="separator:aec95fb06ee9c86b1210b8969d7a03547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -149,13 +152,13 @@ Public Attributes</h2></td></tr>
 <a class="el" href="class_logic_layer_1_1_synchro_manager_dojo.html">SynchroManagerDojo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>synchronizationMaster</b></td></tr>
 <tr class="separator:a40e3f19b5ccafc3151ae72b152a50e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c7d19c97bc9d711197e0d94c3517c85" id="r_a5c7d19c97bc9d711197e0d94c3517c85"><td class="memItemLeft" align="right" valign="top"><a id="a5c7d19c97bc9d711197e0d94c3517c85" name="a5c7d19c97bc9d711197e0d94c3517c85"></a>
-<a class="el" href="class_dojo_1_1_torii_1_1_torii_client.html">ToriiClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toriiClient</b></td></tr>
+ToriiClient&#160;</td><td class="memItemRight" valign="bottom"><b>toriiClient</b></td></tr>
 <tr class="separator:a5c7d19c97bc9d711197e0d94c3517c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6a9be4ddefa4a63d029b990fc7230c" id="r_a4e6a9be4ddefa4a63d029b990fc7230c"><td class="memItemLeft" align="right" valign="top"><a id="a4e6a9be4ddefa4a63d029b990fc7230c" name="a4e6a9be4ddefa4a63d029b990fc7230c"></a>
-<a class="el" href="class_dojo_1_1_torii_1_1_torii_wasm_client.html">ToriiWasmClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>wasmClient</b></td></tr>
+ToriiWasmClient&#160;</td><td class="memItemRight" valign="bottom"><b>wasmClient</b></td></tr>
 <tr class="separator:a4e6a9be4ddefa4a63d029b990fc7230c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fee369d5bfc8b953ce2c5541e917c2" id="r_a69fee369d5bfc8b953ce2c5541e917c2"><td class="memItemLeft" align="right" valign="top"><a id="a69fee369d5bfc8b953ce2c5541e917c2" name="a69fee369d5bfc8b953ce2c5541e917c2"></a>
-<a class="el" href="class_dojo_1_1_world_manager_data.html">WorldManagerData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojoConfig</b></td></tr>
+WorldManagerData&#160;</td><td class="memItemRight" valign="bottom"><b>dojoConfig</b></td></tr>
 <tr class="separator:a69fee369d5bfc8b953ce2c5541e917c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>

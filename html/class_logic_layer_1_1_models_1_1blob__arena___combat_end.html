@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___combat_e
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="namespace_dojo.html">Dojo</a> Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser.  
+<p>Dojo Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_CombatEnd:</div>
@@ -133,7 +133,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af7a9a1145e2f2c404990dbe73228e5cb" id="r_af7a9a1145e2f2c404990dbe73228e5cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7a9a1145e2f2c404990dbe73228e5cb">GetGameId</a> ()</td></tr>
+<tr class="memitem:af7a9a1145e2f2c404990dbe73228e5cb" id="r_af7a9a1145e2f2c404990dbe73228e5cb"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7a9a1145e2f2c404990dbe73228e5cb">GetGameId</a> ()</td></tr>
 <tr class="memdesc:af7a9a1145e2f2c404990dbe73228e5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the id of the game.  <br /></td></tr>
 <tr class="separator:af7a9a1145e2f2c404990dbe73228e5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80f70b775d5fb61406cddf5c5ed5563f" id="r_a80f70b775d5fb61406cddf5c5ed5563f"><td class="memItemLeft" align="right" valign="top">Player&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f70b775d5fb61406cddf5c5ed5563f">GetWinner</a> ()</td></tr>
@@ -145,32 +145,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab20f1f359a39207e1d16590d4cb588eb" id="r_ab20f1f359a39207e1d16590d4cb588eb"><td class="memItemLeft" align="right" valign="top">WinVia&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20f1f359a39207e1d16590d4cb588eb">GetVia</a> ()</td></tr>
 <tr class="memdesc:ab20f1f359a39207e1d16590d4cb588eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the method by which the combat was won.  <br /></td></tr>
 <tr class="separator:ab20f1f359a39207e1d16590d4cb588eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a852d546bec523b5fd5368d6874971f02" id="r_a852d546bec523b5fd5368d6874971f02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a852d546bec523b5fd5368d6874971f02">IsGameIdMatch</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> gameId)</td></tr>
+<tr class="memitem:a852d546bec523b5fd5368d6874971f02" id="r_a852d546bec523b5fd5368d6874971f02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a852d546bec523b5fd5368d6874971f02">IsGameIdMatch</a> (FieldElement gameId)</td></tr>
 <tr class="memdesc:a852d546bec523b5fd5368d6874971f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided game ID matches the current game ID.  <br /></td></tr>
 <tr class="separator:a852d546bec523b5fd5368d6874971f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a50dd245b32d194fba9a748cdeac031" id="r_a8a50dd245b32d194fba9a748cdeac031"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a50dd245b32d194fba9a748cdeac031">IsWinner</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> playerId)</td></tr>
+<tr class="memitem:a8a50dd245b32d194fba9a748cdeac031" id="r_a8a50dd245b32d194fba9a748cdeac031"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a50dd245b32d194fba9a748cdeac031">IsWinner</a> (FieldElement playerId)</td></tr>
 <tr class="memdesc:a8a50dd245b32d194fba9a748cdeac031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided player ID matches the winner's ID.  <br /></td></tr>
 <tr class="separator:a8a50dd245b32d194fba9a748cdeac031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270c20e6f50c2fa8725e7f925175a5de" id="r_a270c20e6f50c2fa8725e7f925175a5de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270c20e6f50c2fa8725e7f925175a5de">IsLoser</a> (<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> playerId)</td></tr>
+<tr class="memitem:a270c20e6f50c2fa8725e7f925175a5de" id="r_a270c20e6f50c2fa8725e7f925175a5de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270c20e6f50c2fa8725e7f925175a5de">IsLoser</a> (FieldElement playerId)</td></tr>
 <tr class="memdesc:a270c20e6f50c2fa8725e7f925175a5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided player ID matches the loser's ID.  <br /></td></tr>
 <tr class="separator:a270c20e6f50c2fa8725e7f925175a5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ce4c50e962531b5b2fdaeb1f14dce1b" id="r_a6ce4c50e962531b5b2fdaeb1f14dce1b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ce4c50e962531b5b2fdaeb1f14dce1b">DebugData</a> ()</td></tr>
 <tr class="memdesc:a6ce4c50e962531b5b2fdaeb1f14dce1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:a6ce4c50e962531b5b2fdaeb1f14dce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance" id="r_a7c3749c1edfe030ddfd1ba0efdbfac59"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
-<tr class="separator:a7c3749c1edfe030ddfd1ba0efdbfac59 inherit pub_methods_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeb2a4737cf03dbd6c4ee3b0b772f8cb inherit pub_methods_class_dojo_1_1_model_instance" id="r_aeeb2a4737cf03dbd6c4ee3b0b772f8cb"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a> model)</td></tr>
-<tr class="separator:aeeb2a4737cf03dbd6c4ee3b0b772f8cb inherit pub_methods_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_logic_layer_1_1_models_1_1_i_combat_end"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_logic_layer_1_1_models_1_1_i_combat_end')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_end.html">LogicLayer.Models.ICombatEnd</a></td></tr>
 <tr class="inherit_header pub_methods_interface_i_debug_print_out"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_i_debug_print_out')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_i_debug_print_out.html">IDebugPrintOut</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5c2785aa4dc6899fa06ac2c1442d864b" id="r_a5c2785aa4dc6899fa06ac2c1442d864b"><td class="memItemLeft" align="right" valign="top"><a id="a5c2785aa4dc6899fa06ac2c1442d864b" name="a5c2785aa4dc6899fa06ac2c1442d864b"></a>
-<a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_gameId</b></td></tr>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_gameId</b></td></tr>
 <tr class="separator:a5c2785aa4dc6899fa06ac2c1442d864b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac246c4dea177b1d8316dd27d4e23ae8f" id="r_ac246c4dea177b1d8316dd27d4e23ae8f"><td class="memItemLeft" align="right" valign="top"><a id="ac246c4dea177b1d8316dd27d4e23ae8f" name="ac246c4dea177b1d8316dd27d4e23ae8f"></a>
 Player&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_winner</b></td></tr>
@@ -181,10 +174,6 @@ Player&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_loser</b></td>
 <tr class="memitem:a3d0c6cf0819b938a271a149329efcd93" id="r_a3d0c6cf0819b938a271a149329efcd93"><td class="memItemLeft" align="right" valign="top"><a id="a3d0c6cf0819b938a271a149329efcd93" name="a3d0c6cf0819b938a271a149329efcd93"></a>
 WinVia&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_via</b></td></tr>
 <tr class="separator:a3d0c6cf0819b938a271a149329efcd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance" id="r_a7b3bf64101387597100bb65d6b433041"><td class="memItemLeft" align="right" valign="top">
-UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdated</b> = new UnityEvent()</td></tr>
-<tr class="separator:a7b3bf64101387597100bb65d6b433041 inherit pub_attribs_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -192,16 +181,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a13c2c6e368f6f24d647904bd94cc979a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7252fecab3a0ecec196c2121ea9f5d" id="r_abc7252fecab3a0ecec196c2121ea9f5d"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc7252fecab3a0ecec196c2121ea9f5d">MemberQueryMapping</a></td></tr>
 <tr class="separator:abc7252fecab3a0ecec196c2121ea9f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header properties_class_dojo_1_1_model_instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_dojo_1_1_model_instance')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_dojo_1_1_model_instance.html">Dojo.ModelInstance</a></td></tr>
-<tr class="memitem:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance" id="r_a8daacfdd15cbcb90ad373f74fb0e7040"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_dojo_1_1_torii_1_1_model.html">Model</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b><code> [get]</code></td></tr>
-<tr class="separator:a8daacfdd15cbcb90ad373f74fb0e7040 inherit properties_class_dojo_1_1_model_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespace_dojo.html">Dojo</a> Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser. </p>
+<div class="textblock"><p>Dojo Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser. </p>
 <p>TODO: create a static for this to query the player straight away, the problem si that the winner and looser are not fieldelements they are a struct so when querying we need to do player.player, this due to it being a standard feature and complex query needs to be made into a function </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6ce4c50e962531b5b2fdaeb1f14dce1b" name="a6ce4c50e962531b5b2fdaeb1f14dce1b"></a>
@@ -233,7 +215,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a> LogicLayer.Models.blob_arena_CombatEnd.GetGameId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_CombatEnd.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -323,7 +305,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blob_arena_CombatEnd.IsGameIdMatch </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>gameId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>gameId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -351,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blob_arena_CombatEnd.IsLoser </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>playerId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>playerId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -379,7 +361,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool LogicLayer.Models.blob_arena_CombatEnd.IsWinner </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_dojo_1_1_starknet_1_1_field_element.html">FieldElement</a></td>          <td class="paramname"><span class="paramname"><em>playerId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>playerId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
