@@ -1,17 +1,20 @@
 var searchData=
 [
   ['reactcommunicationcomponent_0',['ReactCommunicationComponent',['../class_react_communication_component.html',1,'']]],
-  ['receivedinvlobbylistpageelement_1',['ReceivedInvLobbyListPageElement',['../class_received_inv_lobby_list_page_element.html',1,'']]],
-  ['rejectinvitestruct_2',['RejectInviteStruct',['../struct_lobby_actions_contract_1_1_reject_invite_struct.html',1,'LobbyActionsContract']]],
-  ['rejectresponsestruct_3',['RejectResponseStruct',['../struct_lobby_actions_contract_1_1_reject_response_struct.html',1,'LobbyActionsContract']]],
-  ['rejectstruct_4',['RejectStruct',['../struct_bet_actions_contract_1_1_reject_struct.html',1,'BetActionsContract']]],
-  ['releasefundsstruct_5',['ReleaseFundsStruct',['../struct_bet_actions_contract_1_1_release_funds_struct.html',1,'BetActionsContract']]],
-  ['rescindinvitestruct_6',['RescindInviteStruct',['../struct_lobby_actions_contract_1_1_rescind_invite_struct.html',1,'LobbyActionsContract']]],
-  ['rescindresponsestruct_7',['RescindResponseStruct',['../struct_lobby_actions_contract_1_1_rescind_response_struct.html',1,'LobbyActionsContract']]],
-  ['respondinvitestruct_8',['RespondInviteStruct',['../struct_lobby_actions_contract_1_1_respond_invite_struct.html',1,'LobbyActionsContract']]],
-  ['revealattackstruct_9',['RevealAttackStruct',['../struct_game_actions_contract_1_1_reveal_attack_struct.html',1,'GameActionsContract']]],
-  ['revokereleasestruct_10',['RevokeReleaseStruct',['../struct_bet_actions_contract_1_1_revoke_release_struct.html',1,'BetActionsContract']]],
-  ['revokestruct_11',['RevokeStruct',['../struct_bet_actions_contract_1_1_revoke_struct.html',1,'BetActionsContract']]],
-  ['rulespopup_12',['RulesPopup',['../class_rules_popup.html',1,'']]],
-  ['runroundstruct_13',['RunRoundStruct',['../struct_game_actions_contract_1_1_run_round_struct.html',1,'GameActionsContract']]]
+  ['rejectinvitestruct_1',['RejectInviteStruct',['../struct_lobby_actions_contract_1_1_reject_invite_struct.html',1,'LobbyActionsContract']]],
+  ['rejectresponsestruct_2',['RejectResponseStruct',['../struct_lobby_actions_contract_1_1_reject_response_struct.html',1,'LobbyActionsContract']]],
+  ['rejectstruct_3',['RejectStruct',['../struct_betsy_actions_contract_1_1_reject_struct.html',1,'BetsyActionsContract']]],
+  ['releasefundsstruct_4',['ReleaseFundsStruct',['../struct_betsy_actions_contract_1_1_release_funds_struct.html',1,'BetsyActionsContract']]],
+  ['rescindinvitestruct_5',['RescindInviteStruct',['../struct_lobby_actions_contract_1_1_rescind_invite_struct.html',1,'LobbyActionsContract']]],
+  ['rescindresponsestruct_6',['RescindResponseStruct',['../struct_lobby_actions_contract_1_1_rescind_response_struct.html',1,'LobbyActionsContract']]],
+  ['respondinvitestruct_7',['RespondInviteStruct',['../struct_lobby_actions_contract_1_1_respond_invite_struct.html',1,'LobbyActionsContract']]],
+  ['revealattackstruct_8',['RevealAttackStruct',['../struct_game_actions_contract_1_1_reveal_attack_struct.html',1,'GameActionsContract']]],
+  ['revokereleasestruct_9',['RevokeReleaseStruct',['../struct_betsy_actions_contract_1_1_revoke_release_struct.html',1,'BetsyActionsContract']]],
+  ['revokestruct_10',['RevokeStruct',['../struct_betsy_actions_contract_1_1_revoke_struct.html',1,'BetsyActionsContract']]],
+  ['roundanimation_11',['RoundAnimation',['../struct_logic_layer_1_1_models_1_1_types_1_1_round_animation.html',1,'LogicLayer::Models::Types']]],
+  ['roundevent_12',['RoundEvent',['../struct_logic_layer_1_1_models_1_1_types_1_1_round_event.html',1,'LogicLayer::Models::Types']]],
+  ['roundoutcomecombatpagecomponent_13',['RoundOutcomeCombatPageComponent',['../class_round_outcome_combat_page_component.html',1,'']]],
+  ['rulespopup_14',['RulesPopup',['../class_rules_popup.html',1,'']]],
+  ['rulestopicscontainer_15',['RulesTopicsContainer',['../class_rules_topics_container.html',1,'']]],
+  ['runroundstruct_16',['RunRoundStruct',['../struct_game_actions_contract_1_1_run_round_struct.html',1,'GameActionsContract']]]
 ];

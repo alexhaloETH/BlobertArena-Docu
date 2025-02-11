@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -107,7 +107,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1amma__blobert___blober
 </div><!--header-->
 <div class="contents">
 
-<p>Dojo Model, the blobert is the main character of the game.  
+<p>Dojo Model, the blobert is the main character of the game specific implementation for AMMA.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.amma_blobert_BlobertToken:</div>
@@ -153,10 +153,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac70a9cb88960c7ab8bda8c649aa2ef53" id="r_ac70a9cb88960c7ab8bda8c649aa2ef53"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac70a9cb88960c7ab8bda8c649aa2ef53">GetCollectionAddress</a> ()</td></tr>
 <tr class="memdesc:ac70a9cb88960c7ab8bda8c649aa2ef53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the collection address of the Blobert contract address.  <br /></td></tr>
 <tr class="separator:ac70a9cb88960c7ab8bda8c649aa2ef53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a106a1f7a3169d979d4522b61745e6" id="r_ae4a106a1f7a3169d979d4522b61745e6"><td class="memItemLeft" align="right" valign="top">List&lt;(int value, int max)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a106a1f7a3169d979d4522b61745e6">GetBaseStatsAgainstMax</a> ()</td></tr>
+<tr class="memdesc:ae4a106a1f7a3169d979d4522b61745e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stats in relations to the max possible.  <br /></td></tr>
+<tr class="separator:ae4a106a1f7a3169d979d4522b61745e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9b919241853135684d5f92933266e61" id="r_af9b919241853135684d5f92933266e61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b919241853135684d5f92933266e61">IsAddressOwner</a> (FieldElement user)</td></tr>
 <tr class="memdesc:af9b919241853135684d5f92933266e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided address matches the owner's address of the token.  <br /></td></tr>
 <tr class="separator:af9b919241853135684d5f92933266e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24d73949c45c32bd75cdfae5275cfac3" id="r_a24d73949c45c32bd75cdfae5275cfac3"><td class="memItemLeft" align="right" valign="top">U256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d73949c45c32bd75cdfae5275cfac3">GetU256TokenId</a> ()</td></tr>
+<tr class="memitem:a24d73949c45c32bd75cdfae5275cfac3" id="r_a24d73949c45c32bd75cdfae5275cfac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_u256.html">U256</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d73949c45c32bd75cdfae5275cfac3">GetU256TokenId</a> ()</td></tr>
 <tr class="memdesc:a24d73949c45c32bd75cdfae5275cfac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the U256 format of the blobert id.  <br /></td></tr>
 <tr class="separator:a24d73949c45c32bd75cdfae5275cfac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051e55f4c37c320dafd999315fa77f28" id="r_a051e55f4c37c320dafd999315fa77f28"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a051e55f4c37c320dafd999315fa77f28">GetTraitsArr</a> ()</td></tr>
@@ -171,9 +174,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96fd8482b249297c59d42c8a0728fa68" id="r_a96fd8482b249297c59d42c8a0728fa68"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96fd8482b249297c59d42c8a0728fa68">GetBlobertShortId</a> (bool fullName, string prefix=&quot;#&quot;)</td></tr>
 <tr class="memdesc:a96fd8482b249297c59d42c8a0728fa68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a short identifier for the Blobert.  <br /></td></tr>
 <tr class="separator:a96fd8482b249297c59d42c8a0728fa68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab82abc529cbcef28adea6e875ec36ef2" id="r_ab82abc529cbcef28adea6e875ec36ef2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab82abc529cbcef28adea6e875ec36ef2">GetBlobertType</a> ()</td></tr>
-<tr class="memdesc:ab82abc529cbcef28adea6e875ec36ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the type of the Blobert.  <br /></td></tr>
-<tr class="separator:ab82abc529cbcef28adea6e875ec36ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694c2a491691d05dfc4fd3f9a96fc72f" id="r_a694c2a491691d05dfc4fd3f9a96fc72f"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a694c2a491691d05dfc4fd3f9a96fc72f">GetBlobertElement</a> ()</td></tr>
+<tr class="memdesc:a694c2a491691d05dfc4fd3f9a96fc72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the sprite attached to the blobert type.  <br /></td></tr>
+<tr class="separator:a694c2a491691d05dfc4fd3f9a96fc72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d31864387993f45bd184023e38bb5f3" id="r_a7d31864387993f45bd184023e38bb5f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d31864387993f45bd184023e38bb5f3">IsBlobertTheSame</a> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> otherBlobert)</td></tr>
 <tr class="separator:a7d31864387993f45bd184023e38bb5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fb3c20b73503a037858527942517896" id="r_a8fb3c20b73503a037858527942517896"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fb3c20b73503a037858527942517896">IsBlobertTheSame</a> (FieldElement otherBlobertId)</td></tr>
@@ -184,7 +187,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a010c6cf04e32bb6e5a74d113010fdf" id="r_a2a010c6cf04e32bb6e5a74d113010fdf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a010c6cf04e32bb6e5a74d113010fdf">GetMaxHealth</a> ()</td></tr>
 <tr class="memdesc:a2a010c6cf04e32bb6e5a74d113010fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the maximum health of the Blobert based on the stats.  <br /></td></tr>
 <tr class="separator:a2a010c6cf04e32bb6e5a74d113010fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae33151471a6ea1c3d11b2e352a2b7744" id="r_ae33151471a6ea1c3d11b2e352a2b7744"><td class="memItemLeft" align="right" valign="top">TStats&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae33151471a6ea1c3d11b2e352a2b7744">GetBaseStats</a> ()</td></tr>
+<tr class="memitem:ae33151471a6ea1c3d11b2e352a2b7744" id="r_ae33151471a6ea1c3d11b2e352a2b7744"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_t_stats.html">TStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae33151471a6ea1c3d11b2e352a2b7744">GetBaseStats</a> ()</td></tr>
 <tr class="memdesc:ae33151471a6ea1c3d11b2e352a2b7744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the base stats of the Blobert.  <br /></td></tr>
 <tr class="separator:ae33151471a6ea1c3d11b2e352a2b7744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36096bd3cdfdf74a79bb1199b979a055" id="r_a36096bd3cdfdf74a79bb1199b979a055"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_item.html">IBlobertItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36096bd3cdfdf74a79bb1199b979a055">GetAllItems</a> ()</td></tr>
@@ -228,17 +231,17 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab31d0d386d95e6e7b1e2bcf34360ff2c" id="r_ab31d0d386d95e6e7b1e2bcf34360ff2c"><td class="memItemLeft" align="right" valign="top"><a id="ab31d0d386d95e6e7b1e2bcf34360ff2c" name="ab31d0d386d95e6e7b1e2bcf34360ff2c"></a>
-static async Task&lt; List&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FightersAllowedToMintAsync</b> (FieldElement addressOfUser)</td></tr>
+<tr class="memitem:ab31d0d386d95e6e7b1e2bcf34360ff2c" id="r_ab31d0d386d95e6e7b1e2bcf34360ff2c"><td class="memItemLeft" align="right" valign="top">static async Task&lt; List&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31d0d386d95e6e7b1e2bcf34360ff2c">FightersAllowedToMintAsync</a> (FieldElement addressOfUser)</td></tr>
+<tr class="memdesc:ab31d0d386d95e6e7b1e2bcf34360ff2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this wallet can actually mint the given blobert.  <br /></td></tr>
 <tr class="separator:ab31d0d386d95e6e7b1e2bcf34360ff2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37a39362e9e70aee2d3e3f430ab18f79" id="r_a37a39362e9e70aee2d3e3f430ab18f79"><td class="memItemLeft" align="right" valign="top"><a id="a37a39362e9e70aee2d3e3f430ab18f79" name="a37a39362e9e70aee2d3e3f430ab18f79"></a>
-static string&#160;</td><td class="memItemRight" valign="bottom"><b>GetShortNameFromFighterId</b> (int fighterId)</td></tr>
+<tr class="memitem:a37a39362e9e70aee2d3e3f430ab18f79" id="r_a37a39362e9e70aee2d3e3f430ab18f79"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37a39362e9e70aee2d3e3f430ab18f79">GetShortNameFromFighterId</a> (int fighterId)</td></tr>
+<tr class="memdesc:a37a39362e9e70aee2d3e3f430ab18f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the short name of each fighter.  <br /></td></tr>
 <tr class="separator:a37a39362e9e70aee2d3e3f430ab18f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab54ad438138eba5f5c3175880514be9b" id="r_ab54ad438138eba5f5c3175880514be9b"><td class="memItemLeft" align="right" valign="top"><a id="ab54ad438138eba5f5c3175880514be9b" name="ab54ad438138eba5f5c3175880514be9b"></a>
-static string&#160;</td><td class="memItemRight" valign="bottom"><b>GetFullNameFromFighterId</b> (int fighterId)</td></tr>
+<tr class="memitem:ab54ad438138eba5f5c3175880514be9b" id="r_ab54ad438138eba5f5c3175880514be9b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54ad438138eba5f5c3175880514be9b">GetFullNameFromFighterId</a> (int fighterId)</td></tr>
+<tr class="memdesc:ab54ad438138eba5f5c3175880514be9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the full name of each fighter.  <br /></td></tr>
 <tr class="separator:ab54ad438138eba5f5c3175880514be9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeac09b2b8093c0fb11a75ff894aa097" id="r_adeac09b2b8093c0fb11a75ff894aa097"><td class="memItemLeft" align="right" valign="top"><a id="adeac09b2b8093c0fb11a75ff894aa097" name="adeac09b2b8093c0fb11a75ff894aa097"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetFighterIdFromName</b> (string name)</td></tr>
+<tr class="memitem:adeac09b2b8093c0fb11a75ff894aa097" id="r_adeac09b2b8093c0fb11a75ff894aa097"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeac09b2b8093c0fb11a75ff894aa097">GetFighterIdFromName</a> (string name)</td></tr>
+<tr class="memdesc:adeac09b2b8093c0fb11a75ff894aa097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go From name to id.  <br /></td></tr>
 <tr class="separator:adeac09b2b8093c0fb11a75ff894aa097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -261,8 +264,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:af561de19593cc0ee1dea31407d469c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dojo Model, the blobert is the main character of the game. </p>
-<p>specific implementation for AMMA </p>
+<div class="textblock"><p>Dojo Model, the blobert is the main character of the game specific implementation for AMMA. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abb87e19a003656cb5784e62ecf112f54" name="abb87e19a003656cb5784e62ecf112f54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb87e19a003656cb5784e62ecf112f54">&#9670;&#160;</a></span>DebugData()</h2>
@@ -283,6 +285,50 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>data to debug</dd></dl>
 
 <p>Implements <a class="el" href="interface_i_debug_print_out.html#ac1b54d10c92b85d55afdbf0d1ed30062">IDebugPrintOut</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_abb87e19a003656cb5784e62ecf112f54_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_abb87e19a003656cb5784e62ecf112f54_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab31d0d386d95e6e7b1e2bcf34360ff2c" name="ab31d0d386d95e6e7b1e2bcf34360ff2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31d0d386d95e6e7b1e2bcf34360ff2c">&#9670;&#160;</a></span>FightersAllowedToMintAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static async Task&lt; List&lt; int &gt; &gt; LogicLayer.Models.amma_blobert_BlobertToken.FightersAllowedToMintAsync </td>
+          <td>(</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>addressOfUser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if this wallet can actually mint the given blobert. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addressOfUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab31d0d386d95e6e7b1e2bcf34360ff2c_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab31d0d386d95e6e7b1e2bcf34360ff2c_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -305,6 +351,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A list of <a class="el" href="interface_logic_layer_1_1_models_1_1_i_attack.html">IAttack</a> objects representing the equipped attacks.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a5ae040ccbafd39363e40365a407ee1f9">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a8e00d9430670f741aebf8cc71f2d3095_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a8e00d9430670f741aebf8cc71f2d3095_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -327,6 +378,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A list of <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_item.html">IBlobertItem</a> objects representing the items.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a383a41eb6376c3a42c392a21f746084f">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a36096bd3cdfdf74a79bb1199b979a055_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a36096bd3cdfdf74a79bb1199b979a055_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -355,6 +411,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A list of <a class="el" href="struct_lobby_actions_contract_1_1_attack_struct_chain_input.html">LobbyActionsContract.AttackStructChainInput</a> objects representing the attack structure.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a27f2e9ef4e7f23300b2d198249349521">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a8d317be646506d40c1f4d79a1910e4c9_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a8d317be646506d40c1f4d79a1910e4c9_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -377,6 +438,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The TokenAttributes object containing the token's attributes.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a195e133f5e6d6d658a42e060b8a0f3e2">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a42be61c995b28d3c2f6a756d92231726_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a42be61c995b28d3c2f6a756d92231726_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -387,7 +453,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TStats LogicLayer.Models.amma_blobert_BlobertToken.GetBaseStats </td>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_t_stats.html">TStats</a> LogicLayer.Models.amma_blobert_BlobertToken.GetBaseStats </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -399,6 +465,70 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The TStats object containing the base stats.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#aa487007d574b67da277ea01fe5f1911e">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ae33151471a6ea1c3d11b2e352a2b7744_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ae33151471a6ea1c3d11b2e352a2b7744_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ae33151471a6ea1c3d11b2e352a2b7744_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ae33151471a6ea1c3d11b2e352a2b7744_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae4a106a1f7a3169d979d4522b61745e6" name="ae4a106a1f7a3169d979d4522b61745e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a106a1f7a3169d979d4522b61745e6">&#9670;&#160;</a></span>GetBaseStatsAgainstMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;(int value, int max)&gt; LogicLayer.Models.amma_blobert_BlobertToken.GetBaseStatsAgainstMax </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the stats in relations to the max possible. </p>
+<dl class="section return"><dt>Returns</dt><dd>Touple</dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a4ae14cb7b88c2c2c30256920f0579470">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ae4a106a1f7a3169d979d4522b61745e6_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ae4a106a1f7a3169d979d4522b61745e6_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a694c2a491691d05dfc4fd3f9a96fc72f" name="a694c2a491691d05dfc4fd3f9a96fc72f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a694c2a491691d05dfc4fd3f9a96fc72f">&#9670;&#160;</a></span>GetBlobertElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite LogicLayer.Models.amma_blobert_BlobertToken.GetBlobertElement </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the sprite attached to the blobert type. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing the Blobert type.</dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#ab583f86d3ee1244c18675870deb555a7">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a694c2a491691d05dfc4fd3f9a96fc72f_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a694c2a491691d05dfc4fd3f9a96fc72f_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -432,28 +562,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A string representing the short identifier.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a7a3f27dfae6184e54802e348bf955556">LogicLayer.Models.IBlobertToken</a>.</p>
-
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a96fd8482b249297c59d42c8a0728fa68_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a96fd8482b249297c59d42c8a0728fa68_cgraph" alt=""/></div>
 </div>
-</div>
-<a id="ab82abc529cbcef28adea6e875ec36ef2" name="ab82abc529cbcef28adea6e875ec36ef2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab82abc529cbcef28adea6e875ec36ef2">&#9670;&#160;</a></span>GetBlobertType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int LogicLayer.Models.amma_blobert_BlobertToken.GetBlobertType </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieves the type of the Blobert. </p>
-<dl class="section return"><dt>Returns</dt><dd>An integer representing the Blobert type.</dd></dl>
-
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a54641fef8ba4d13099d32daafd29ce51">LogicLayer.Models.IBlobertToken</a>.</p>
 
 </div>
 </div>
@@ -476,6 +589,85 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the collection address.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#af7586468b12224c6c25b25171ca6c2e9">LogicLayer.Models.IBlobertToken</a>.</p>
+
+</div>
+</div>
+<a id="adeac09b2b8093c0fb11a75ff894aa097" name="adeac09b2b8093c0fb11a75ff894aa097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeac09b2b8093c0fb11a75ff894aa097">&#9670;&#160;</a></span>GetFighterIdFromName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int LogicLayer.Models.amma_blobert_BlobertToken.GetFighterIdFromName </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Go From name to id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab54ad438138eba5f5c3175880514be9b" name="ab54ad438138eba5f5c3175880514be9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54ad438138eba5f5c3175880514be9b">&#9670;&#160;</a></span>GetFullNameFromFighterId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string LogicLayer.Models.amma_blobert_BlobertToken.GetFullNameFromFighterId </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fighterId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the full name of each fighter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fighterId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab54ad438138eba5f5c3175880514be9b_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab54ad438138eba5f5c3175880514be9b_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -556,6 +748,16 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>An integer representing the maximum health.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#af39fe5befd0674d39d98d296f5171a79">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a2a010c6cf04e32bb6e5a74d113010fdf_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a2a010c6cf04e32bb6e5a74d113010fdf_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a2a010c6cf04e32bb6e5a74d113010fdf_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a2a010c6cf04e32bb6e5a74d113010fdf_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -600,6 +802,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Ovr Value</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a5d0b1ca22dda723dcaa796df508317b4">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a42bd5b5d1ca23b7bf5fdfe0058db3c13_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a42bd5b5d1ca23b7bf5fdfe0058db3c13_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -622,6 +829,45 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the owner's ID.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#aa7881eeb7d3e98752c12a17ae51411c6">LogicLayer.Models.IBlobertToken</a>.</p>
+
+</div>
+</div>
+<a id="a37a39362e9e70aee2d3e3f430ab18f79" name="a37a39362e9e70aee2d3e3f430ab18f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a39362e9e70aee2d3e3f430ab18f79">&#9670;&#160;</a></span>GetShortNameFromFighterId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string LogicLayer.Models.amma_blobert_BlobertToken.GetShortNameFromFighterId </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fighterId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the short name of each fighter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fighterId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a37a39362e9e70aee2d3e3f430ab18f79_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a37a39362e9e70aee2d3e3f430ab18f79_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -688,6 +934,16 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A dictionary mapping traits to lists of attacks.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a58e128328bc61d83ba626e60348c396c">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a1be2e0bd1988772cbf5a0ae5c5639102_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a1be2e0bd1988772cbf5a0ae5c5639102_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a1be2e0bd1988772cbf5a0ae5c5639102_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a1be2e0bd1988772cbf5a0ae5c5639102_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -710,6 +966,16 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A dictionary mapping traits name (not item name) to items.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a7afde0468f67ed7e137164467e4191f6">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab36f289e03da1a80e8bf73491d56924d_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab36f289e03da1a80e8bf73491d56924d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab36f289e03da1a80e8bf73491d56924d_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_ab36f289e03da1a80e8bf73491d56924d_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -720,7 +986,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">U256 LogicLayer.Models.amma_blobert_BlobertToken.GetU256TokenId </td>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_u256.html">U256</a> LogicLayer.Models.amma_blobert_BlobertToken.GetU256TokenId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -902,6 +1168,11 @@ Static Public Attributes</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html#ad793671785175b06aa325c6768882e6b">LogicLayer.Models.IBlobertToken</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a0a04ffdaf06abb50f2d3fd374f817a7e_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1amma__blobert___blobert_token_a0a04ffdaf06abb50f2d3fd374f817a7e_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -927,7 +1198,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.Id, <span class="stringliteral">&quot;id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.Id, <span class="stringliteral">&quot;id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -954,13 +1225,13 @@ Static Public Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
 <div class="line">            { ValidQueryMembers.Id, <span class="stringliteral">&quot;id&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.Owner, <span class="stringliteral">&quot;owner&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.Owner, <span class="stringliteral">&quot;owner&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/AMMABlobert/<b>BlobertToken.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/AMMABlobert/<b>BlobertToken.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

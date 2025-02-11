@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -99,7 +99,9 @@ $(function(){initNavTree('class_fight_menu_page.html',''); initResizable(true); 
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_fight_menu_page-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">FightMenuPage Class Reference</div></div>
 </div><!--header-->
@@ -123,7 +125,8 @@ Public Types</h2></td></tr>
 , <b>YourFights</b>
 , <b>Arcade</b>
 , <br />
-&#160;&#160;<b>None</b>
+&#160;&#160;<b>PrepareToFight</b>
+, <b>None</b> = 127
 <br />
  }</td></tr>
 <tr class="separator:ad98ea83da98aad3f1702e374265dc4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,21 +137,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a25db79b92dbddf285236fa420767f5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a600f53ac129d4deebd19a97d32ee3fc4" id="r_a600f53ac129d4deebd19a97d32ee3fc4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a600f53ac129d4deebd19a97d32ee3fc4">Close</a> ()</td></tr>
 <tr class="separator:a600f53ac129d4deebd19a97d32ee3fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a830cc289c8357dce72bba3611796cf32" id="r_a830cc289c8357dce72bba3611796cf32"><td class="memItemLeft" align="right" valign="top"><a id="a830cc289c8357dce72bba3611796cf32" name="a830cc289c8357dce72bba3611796cf32"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BackToFightMainMenu</b> ()</td></tr>
-<tr class="separator:a830cc289c8357dce72bba3611796cf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b4dc60cbd127a91427a4aca63eabec" id="r_a08b4dc60cbd127a91427a4aca63eabec"><td class="memItemLeft" align="right" valign="top"><a id="a08b4dc60cbd127a91427a4aca63eabec" name="a08b4dc60cbd127a91427a4aca63eabec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TournamentButtonClicked</b> ()</td></tr>
-<tr class="separator:a08b4dc60cbd127a91427a4aca63eabec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18bf8e09c1a3120b1452c09ba9ac9161" id="r_a18bf8e09c1a3120b1452c09ba9ac9161"><td class="memItemLeft" align="right" valign="top"><a id="a18bf8e09c1a3120b1452c09ba9ac9161" name="a18bf8e09c1a3120b1452c09ba9ac9161"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ChallengeButtonClicked</b> ()</td></tr>
-<tr class="separator:a18bf8e09c1a3120b1452c09ba9ac9161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46da1e726c9bd043d52f89723e05c051" id="r_a46da1e726c9bd043d52f89723e05c051"><td class="memItemLeft" align="right" valign="top"><a id="a46da1e726c9bd043d52f89723e05c051" name="a46da1e726c9bd043d52f89723e05c051"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>YourFightsButtonClicked</b> ()</td></tr>
-<tr class="separator:a46da1e726c9bd043d52f89723e05c051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f5c6c7ef2b5c6fe6fece2d13cbf16ac" id="r_a5f5c6c7ef2b5c6fe6fece2d13cbf16ac"><td class="memItemLeft" align="right" valign="top"><a id="a5f5c6c7ef2b5c6fe6fece2d13cbf16ac" name="a5f5c6c7ef2b5c6fe6fece2d13cbf16ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ArcadeButtonClicked</b> ()</td></tr>
-<tr class="separator:a5f5c6c7ef2b5c6fe6fece2d13cbf16ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52cad237356fa0383977d48c1387d063" id="r_a52cad237356fa0383977d48c1387d063"><td class="memItemLeft" align="right" valign="top"><a id="a52cad237356fa0383977d48c1387d063" name="a52cad237356fa0383977d48c1387d063"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTournamentButtonClicked</b> ()</td></tr>
+<tr class="separator:a52cad237356fa0383977d48c1387d063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bfb2053be51a6ee01c93778bb44984" id="r_af6bfb2053be51a6ee01c93778bb44984"><td class="memItemLeft" align="right" valign="top"><a id="af6bfb2053be51a6ee01c93778bb44984" name="af6bfb2053be51a6ee01c93778bb44984"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnChallengeButtonClicked</b> ()</td></tr>
+<tr class="separator:af6bfb2053be51a6ee01c93778bb44984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bb8b4f86bcb1b6c6594d4ece5be01a" id="r_a97bb8b4f86bcb1b6c6594d4ece5be01a"><td class="memItemLeft" align="right" valign="top"><a id="a97bb8b4f86bcb1b6c6594d4ece5be01a" name="a97bb8b4f86bcb1b6c6594d4ece5be01a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnYourFightsButtonClicked</b> ()</td></tr>
+<tr class="separator:a97bb8b4f86bcb1b6c6594d4ece5be01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee46607407747f03a64269713c13ac2" id="r_aaee46607407747f03a64269713c13ac2"><td class="memItemLeft" align="right" valign="top"><a id="aaee46607407747f03a64269713c13ac2" name="aaee46607407747f03a64269713c13ac2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnArcadeButtonClicked</b> ()</td></tr>
+<tr class="separator:aaee46607407747f03a64269713c13ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab891c6ccb9ca13fc530ed79dc5859156" id="r_ab891c6ccb9ca13fc530ed79dc5859156"><td class="memItemLeft" align="right" valign="top"><a id="ab891c6ccb9ca13fc530ed79dc5859156" name="ab891c6ccb9ca13fc530ed79dc5859156"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>TestCombatPage</b> ()</td></tr>
 <tr class="separator:ab891c6ccb9ca13fc530ed79dc5859156"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +157,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>TestCombatPage</b> ()
 DynamicOverlayButton.ButtonState&#160;</td><td class="memItemRight" valign="bottom"><b>GetDynamicButtonStateOfPage</b> ()</td></tr>
 <tr class="separator:a4dfccc75b226f47703ccbf3d9264990f inherit pub_methods_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6a55cd76fd29d2fa55a28d6468a66328" id="r_a6a55cd76fd29d2fa55a28d6468a66328"><td class="memItemLeft" align="right" valign="top"><a id="a6a55cd76fd29d2fa55a28d6468a66328" name="a6a55cd76fd29d2fa55a28d6468a66328"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>BackToFightMainMenu</b> ()</td></tr>
+<tr class="separator:a6a55cd76fd29d2fa55a28d6468a66328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646f2f096b36e9db04c0966f84ac7f8a" id="r_a646f2f096b36e9db04c0966f84ac7f8a"><td class="memItemLeft" align="right" valign="top"><a id="a646f2f096b36e9db04c0966f84ac7f8a" name="a646f2f096b36e9db04c0966f84ac7f8a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenPrepareToFightPage</b> (GamesDataModel.GameData gameData)</td></tr>
+<tr class="separator:a646f2f096b36e9db04c0966f84ac7f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:adb21707ce3bff2d93c826e0ae38c7578" id="r_adb21707ce3bff2d93c826e0ae38c7578"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb21707ce3bff2d93c826e0ae38c7578">Awake</a> ()</td></tr>
@@ -164,6 +173,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af43e1844143bf12b9bcb35e3da447cbf" id="r_af43e1844143bf12b9bcb35e3da447cbf"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af43e1844143bf12b9bcb35e3da447cbf">Start</a> ()</td></tr>
 <tr class="separator:af43e1844143bf12b9bcb35e3da447cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_menu"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_menu')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_menu.html">Menu</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:abef38e6455129302a6ce032ec238b762" id="r_abef38e6455129302a6ce032ec238b762"><td class="memItemLeft" align="right" valign="top"><a id="abef38e6455129302a6ce032ec238b762" name="abef38e6455129302a6ce032ec238b762"></a>
+static <a class="el" href="class_fight_menu_page.html">FightMenuPage</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code> [get]</code></td></tr>
+<tr class="separator:abef38e6455129302a6ce032ec238b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_menu"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_menu')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_menu.html">Menu</a></td></tr>
+<tr class="memitem:af434e1f483fb63a55fd1b9a5e5da12fc inherit properties_class_menu" id="r_af434e1f483fb63a55fd1b9a5e5da12fc"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsOpen</b><code> [get, protected set]</code></td></tr>
+<tr class="separator:af434e1f483fb63a55fd1b9a5e5da12fc inherit properties_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36b006b917d71b89defc701fb6ceb642 inherit properties_class_menu" id="r_a36b006b917d71b89defc701fb6ceb642"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReturnable</b> = true<code> [get, protected set]</code></td></tr>
+<tr class="separator:a36b006b917d71b89defc701fb6ceb642 inherit properties_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723939c7a0b7722ac226634e132c71b6 inherit properties_class_menu" id="r_a723939c7a0b7722ac226634e132c71b6"><td class="memItemLeft" align="right" valign="top">
+string&#160;</td><td class="memItemRight" valign="bottom"><b>MenuName</b> = &quot;&quot;<code> [get, protected set]</code></td></tr>
+<tr class="separator:a723939c7a0b7722ac226634e132c71b6 inherit properties_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -178,16 +203,6 @@ DynamicOverlayButton.ButtonState&#160;</td><td class="memItemRight" valign="bott
 <tr class="memitem:a98d31e7530b956790acd9a419ab0dd06 inherit pro_attribs_class_menu" id="r_a98d31e7530b956790acd9a419ab0dd06"><td class="memItemLeft" align="right" valign="top">
 CanvasGroup&#160;</td><td class="memItemRight" valign="bottom"><b>m_CanvasGroup</b> = null</td></tr>
 <tr class="separator:a98d31e7530b956790acd9a419ab0dd06 inherit pro_attribs_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header properties_class_menu"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_menu')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_menu.html">Menu</a></td></tr>
-<tr class="memitem:af434e1f483fb63a55fd1b9a5e5da12fc inherit properties_class_menu" id="r_af434e1f483fb63a55fd1b9a5e5da12fc"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsOpen</b><code> [get, protected set]</code></td></tr>
-<tr class="separator:af434e1f483fb63a55fd1b9a5e5da12fc inherit properties_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b006b917d71b89defc701fb6ceb642 inherit properties_class_menu" id="r_a36b006b917d71b89defc701fb6ceb642"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReturnable</b> = true<code> [get, protected set]</code></td></tr>
-<tr class="separator:a36b006b917d71b89defc701fb6ceb642 inherit properties_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a723939c7a0b7722ac226634e132c71b6 inherit properties_class_menu" id="r_a723939c7a0b7722ac226634e132c71b6"><td class="memItemLeft" align="right" valign="top">
-string&#160;</td><td class="memItemRight" valign="bottom"><b>MenuName</b> = &quot;&quot;<code> [get, protected set]</code></td></tr>
-<tr class="separator:a723939c7a0b7722ac226634e132c71b6 inherit properties_class_menu"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="adb21707ce3bff2d93c826e0ae38c7578" name="adb21707ce3bff2d93c826e0ae38c7578"></a>
@@ -299,7 +314,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>MenuName</b> = &quo
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/UI/Pages/FightMenuPage/<b>FightMenuPage.cs</b></li>
+<li>UI/Pages/FightMenuPage/<b>FightMenuPage.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

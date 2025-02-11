@@ -7,5 +7,7 @@ digraph "LogicLayer.Models.amma_blobert_BlobertToken.GetAttributes"
   rankdir="RL";
   Node1 [id="Node000001",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetAttributes",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves the attributes of the Blobert token."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetBlobert\lShortId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a96fd8482b249297c59d42c8a0728fa68",tooltip="Retrieves a short identifier for the Blobert."];
+  Node2 [id="Node000002",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetBlobert\lElement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a694c2a491691d05dfc4fd3f9a96fc72f",tooltip="Retrieves the sprite attached to the blobert type."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetBlobert\lShortId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a96fd8482b249297c59d42c8a0728fa68",tooltip="Retrieves a short identifier for the Blobert."];
 }

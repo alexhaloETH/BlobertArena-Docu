@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -97,13 +97,14 @@ $(function(){initNavTree('class_typewriter.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_typewriter-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Typewriter Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Add this function to any GameObject that has a TMP_Text component, and then call the <a class="el" href="#a804822a1567a06e38b45491a717c8c9f" title="Sets a string that will be typed according to the set typing speed. An optional callback Action can b...">SetTextToType()</a> function.  
+<p>Add this function to any GameObject that has a TMP_Text component, and then call the <a class="el" href="#aca8a8dbcccbdac5077cfde310734c31c" title="Sets a string that will be typed according to the set typing speed. An optional callback Action can b...">SetTextToType()</a> function.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Typewriter:</div>
@@ -116,18 +117,19 @@ Collaboration diagram for Typewriter:</div>
 <div class="center"><img src="class_typewriter__coll__graph.png" border="0" usemap="#a_typewriter_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a10bd861534f43b578f10d73bdf6ba979" id="r_a10bd861534f43b578f10d73bdf6ba979"><td class="memItemLeft" align="right" valign="top"><a id="a10bd861534f43b578f10d73bdf6ba979" name="a10bd861534f43b578f10d73bdf6ba979"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TypewriterEffects</b> { <b>None</b> = 0
+, <b>Ellipses</b>
+, <b>AnimatedArrow</b>
+ }</td></tr>
+<tr class="separator:a10bd861534f43b578f10d73bdf6ba979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a804822a1567a06e38b45491a717c8c9f" id="r_a804822a1567a06e38b45491a717c8c9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a804822a1567a06e38b45491a717c8c9f">SetTextToType</a> (string text, Action callback=null)</td></tr>
-<tr class="memdesc:a804822a1567a06e38b45491a717c8c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a string that will be typed according to the set typing speed. An optional callback Action can be specified that will be executed once the typing is over.  <br /></td></tr>
-<tr class="separator:a804822a1567a06e38b45491a717c8c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91239c236e40828b9f326a7ac7ce4d6" id="r_ac91239c236e40828b9f326a7ac7ce4d6"><td class="memItemLeft" align="right" valign="top"><a id="ac91239c236e40828b9f326a7ac7ce4d6" name="ac91239c236e40828b9f326a7ac7ce4d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StartWaitingTextAnimation</b> ()</td></tr>
-<tr class="memdesc:ac91239c236e40828b9f326a7ac7ce4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the waiting animation that will create an animated ellipses at the end of the text. <br /></td></tr>
-<tr class="separator:ac91239c236e40828b9f326a7ac7ce4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd7809464fc6aeee8719c7fae15ae4a3" id="r_acd7809464fc6aeee8719c7fae15ae4a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd7809464fc6aeee8719c7fae15ae4a3">StopWaitingTextAnimation</a> (bool keepText=true)</td></tr>
-<tr class="memdesc:acd7809464fc6aeee8719c7fae15ae4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the waiting animation, also either keeps (default) or discards the text.  <br /></td></tr>
-<tr class="separator:acd7809464fc6aeee8719c7fae15ae4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8a8dbcccbdac5077cfde310734c31c" id="r_aca8a8dbcccbdac5077cfde310734c31c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8a8dbcccbdac5077cfde310734c31c">SetTextToType</a> (string text, TypewriterEffects effect=TypewriterEffects.None, Action callback=null)</td></tr>
+<tr class="memdesc:aca8a8dbcccbdac5077cfde310734c31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a string that will be typed according to the set typing speed. An optional callback Action can be specified that will be executed once the typing is over.  <br /></td></tr>
+<tr class="separator:aca8a8dbcccbdac5077cfde310734c31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad769c3323f0413b48a6a19634d8a1b7f" id="r_ad769c3323f0413b48a6a19634d8a1b7f"><td class="memItemLeft" align="right" valign="top"><a id="ad769c3323f0413b48a6a19634d8a1b7f" name="ad769c3323f0413b48a6a19634d8a1b7f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SkipTyping</b> ()</td></tr>
 <tr class="memdesc:ad769c3323f0413b48a6a19634d8a1b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips the typewriting animation, revealing the full text. <br /></td></tr>
@@ -139,13 +141,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SkipTyping</b> ()</td
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearText</b> ()</td></tr>
 <tr class="memdesc:a6546b15c2a91fc79312cc1993d5d5d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the end of text object (if any) and clears the text. <br /></td></tr>
 <tr class="separator:a6546b15c2a91fc79312cc1993d5d5d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e24abcfe2f39cde9428103ccb1a89e" id="r_a50e24abcfe2f39cde9428103ccb1a89e"><td class="memItemLeft" align="right" valign="top"><a id="a50e24abcfe2f39cde9428103ccb1a89e" name="a50e24abcfe2f39cde9428103ccb1a89e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PlaceObjectAtTheEndOfText</b> ()</td></tr>
-<tr class="memdesc:a50e24abcfe2f39cde9428103ccb1a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the object referenced in the class at the end of the text. <br /></td></tr>
-<tr class="separator:a50e24abcfe2f39cde9428103ccb1a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Add this function to any GameObject that has a TMP_Text component, and then call the <a class="el" href="#a804822a1567a06e38b45491a717c8c9f" title="Sets a string that will be typed according to the set typing speed. An optional callback Action can b...">SetTextToType()</a> function. </p>
+<div class="textblock"><p>Add this function to any GameObject that has a TMP_Text component, and then call the <a class="el" href="#aca8a8dbcccbdac5077cfde310734c31c" title="Sets a string that will be typed according to the set typing speed. An optional callback Action can b...">SetTextToType()</a> function. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acd7c7115a1189fff9e5453e6540c3a05" name="acd7c7115a1189fff9e5453e6540c3a05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd7c7115a1189fff9e5453e6540c3a05">&#9670;&#160;</a></span>IsTyping()</h2>
@@ -167,8 +165,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PlaceObjectAtTheEndOf
 
 </div>
 </div>
-<a id="a804822a1567a06e38b45491a717c8c9f" name="a804822a1567a06e38b45491a717c8c9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a804822a1567a06e38b45491a717c8c9f">&#9670;&#160;</a></span>SetTextToType()</h2>
+<a id="aca8a8dbcccbdac5077cfde310734c31c" name="aca8a8dbcccbdac5077cfde310734c31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8a8dbcccbdac5077cfde310734c31c">&#9670;&#160;</a></span>SetTextToType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +175,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PlaceObjectAtTheEndOf
           <td class="memname">void Typewriter.SetTextToType </td>
           <td>(</td>
           <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TypewriterEffects</td>          <td class="paramname"><span class="paramname"><em>effect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">TypewriterEffects::None</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -190,6 +193,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PlaceObjectAtTheEndOf
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>The text that will be typed</td></tr>
+    <tr><td class="paramname">effect</td><td>A special effect that is applied when the typing is done</td></tr>
     <tr><td class="paramname">callback</td><td>The action that will be executed once the typing is over</td></tr>
   </table>
   </dd>
@@ -197,33 +201,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PlaceObjectAtTheEndOf
 
 </div>
 </div>
-<a id="acd7809464fc6aeee8719c7fae15ae4a3" name="acd7809464fc6aeee8719c7fae15ae4a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd7809464fc6aeee8719c7fae15ae4a3">&#9670;&#160;</a></span>StopWaitingTextAnimation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Typewriter.StopWaitingTextAnimation </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>keepText</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stops the waiting animation, also either keeps (default) or discards the text. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">keepText</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/UI/Components/GeneralUiComponents/TextBehaviours/<b>Typewriter.cs</b></li>
+<li>UI/Components/GeneralUiComponents/TextBehaviours/<b>Typewriter.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -10,4 +10,6 @@ digraph "LogicLayer.Models.WalletBlobert.GetAllItems"
   Node2 [id="Node000002",label="LogicLayer.Models.Wallet\lBlobert.GetBaseStats",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_wallet_blobert.html#a25d78c5b74f162e5a2f7ee291e21bb7f",tooltip="Retrieves the base stats of the Blobert."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="LogicLayer.Models.Wallet\lBlobert.GetMaxHealth",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_wallet_blobert.html#a0679e5696e427d9371a529b6c6a56f71",tooltip="Retrieves the maximum health of the Blobert based on the stats."];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="LogicLayer.Models.Wallet\lBlobert.GetOVRValue",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_wallet_blobert.html#a51bf987061a70c76b456c5cdc674f97a",tooltip="Calculate the OVR Value of the Blobert Based on its stats."];
 }

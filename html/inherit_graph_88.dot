@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="dojo_bindings.dojo.Clause\l_ANONYMOUS_FIELD1_ANONYMOUS_FIELD2",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structdojo__bindings_1_1dojo_1_1_clause___a_n_o_n_y_m_o_u_s___f_i_e_l_d1___a_n_o_n_y_m_o_u_s___f_i_e_l_d2.html",tooltip=" "];
+  Node0 [id="Node000000",label="PvpAdminActionsContract.\lSetWinnerStruct",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_pvp_admin_actions_contract_1_1_set_winner_struct.html",tooltip=" "];
 }

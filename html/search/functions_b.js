@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['pause_0',['Pause',['../class_gif_player.html#a84bee19388cd7d2f26b5402ec2e3fd2a',1,'GifPlayer']]],
-  ['pauseanimation_1',['PauseAnimation',['../class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#a58beca5c7e80c181ffd35a9cfca1c29c',1,'BlobertArena::Animations::CharacterAnimationManager']]],
-  ['pingpong_2',['PingPong',['../class_ui_components_1_1_slider_1_1_slider_animator_component.html#a42636e9826ac13f629812674e83c0062',1,'UiComponents::Slider::SliderAnimatorComponent']]],
-  ['placeobjectattheendoftext_3',['PlaceObjectAtTheEndOfText',['../class_typewriter.html#a50e24abcfe2f39cde9428103ccb1a89e',1,'Typewriter']]],
-  ['play_4',['Play',['../class_gif_player.html#adc2cef4692f23eeef706ccecd6b73269',1,'GifPlayer']]],
-  ['playanimation_5',['PlayAnimation',['../class_animation_base.html#afd2e27a5e366fbb91a33e96556bb9e2d',1,'AnimationBase']]],
-  ['playcombatblobarena_6',['PlayCombatBlobArena',['../class_audio_manager.html#adeee63c2f8187e7219adadd594965d84',1,'AudioManager.PlayCombatBlobArena(AudioEffects.CombatBlobArena effect)'],['../class_audio_manager.html#a9cee78cace2f158331e2efce4897ebda',1,'AudioManager.PlayCombatBlobArena(int index)']]],
-  ['playcombatcommon_7',['PlayCombatCommon',['../class_audio_manager.html#a757c769ea35a476dfcf6c36799f97524',1,'AudioManager']]],
-  ['playcombatspecial_8',['PlayCombatSpecial',['../class_audio_manager.html#a52d45840e617a16e41c00f546312bcf8',1,'AudioManager']]],
-  ['playeffect_9',['PlayEffect',['../class_audio_manager.html#a0f8a1f0986be63bcac2309dc70dac7f5',1,'AudioManager']]],
-  ['playmusic_10',['PlayMusic',['../class_audio_manager.html#a52dc330b550c1967a54990e39b4f6034',1,'AudioManager']]],
-  ['playvocal_11',['PlayVocal',['../class_audio_manager.html#a8e228a27a7585498802ae37c4ebf6e77',1,'AudioManager']]]
+  ['onbuttonclicked_0',['OnButtonClicked',['../class_standard_button.html#a084fed369b7b63e6f3a1e6c0d6765783',1,'StandardButton']]],
+  ['onclickdown_1',['OnClickDown',['../class_switch_component.html#a24bbd39bdff8e5c883b3586b7ddf4141',1,'SwitchComponent']]],
+  ['onclickup_2',['OnClickUp',['../class_switch_component.html#af6af65648c0befa5b7b183080e608dab',1,'SwitchComponent']]],
+  ['oneshotinsult_3',['OneShotInsult',['../class_speach_bubble.html#a61fdfbb068cdad7013e8856081ca6795',1,'SpeachBubble']]],
+  ['onpointerclick_4',['OnPointerClick',['../class_toggle_component.html#a8f113949d342477339bdd27336b4bbd8',1,'ToggleComponent.OnPointerClick()'],['../class_mouse_interaction_component.html#aeef7ff92dd25f3efbfb10befd1d4ec5b',1,'MouseInteractionComponent.OnPointerClick(PointerEventData eventData)']]],
+  ['onpointerdown_5',['OnPointerDown',['../class_mouse_interaction_component.html#a0d4cf3aa0130e50339b2e056a346516a',1,'MouseInteractionComponent']]],
+  ['onpointerenter_6',['OnPointerEnter',['../class_mouse_interaction_component.html#a7e2ca34db50bccca9db00a13a128ec0f',1,'MouseInteractionComponent']]],
+  ['onpointerexit_7',['OnPointerExit',['../class_mouse_interaction_component.html#a7556e797837a1cc7b307711a5f70db67',1,'MouseInteractionComponent']]],
+  ['onpointerup_8',['OnPointerUp',['../class_mouse_interaction_component.html#ab06bc642c210ba73a9cb944efefb1e2a',1,'MouseInteractionComponent']]],
+  ['onskinchange_9',['OnSkinChange',['../class_switch_component.html#abb4d9cb64b3642161d239ebb27a2c5f4',1,'SwitchComponent.OnSkinChange()'],['../class_toggle_component.html#a1e1bdcaa860ca6acc300ca60bcc47a82',1,'ToggleComponent.OnSkinChange()']]]
 ];

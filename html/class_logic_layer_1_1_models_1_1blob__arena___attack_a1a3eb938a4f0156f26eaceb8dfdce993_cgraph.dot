@@ -1,0 +1,23 @@
+digraph "LogicLayer.Models.blob_arena_Attack.GetAttackAnimation"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="LogicLayer.Models.blob\l_arena_Attack.GetAttackAnimation",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Get the animation data bound to an attack, this is usually used when in combination with the round ev..."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="BlobertArena.Animations.\lAmmaAnimationController.Check\lAttackName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blobert_arena_1_1_animations_1_1_amma_animation_controller.html#a72a237c0e469115ade29280c6218497b",tooltip="Checks the attack name for duplicates and appends the fighter ID if necessary."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="LogicLayer.Models.IBlobert\lToken.GetAttributes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a195e133f5e6d6d658a42e060b8a0f3e2",tooltip="Retrieves the attributes of the Blobert token."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="LogicLayer.Models.blob\l_arena_Attack.GetItemOfAttack",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___attack.html#ad819ea35f5d6a04fb159ba0ad68f3bac",tooltip="Get the item Data from which this attack is from."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="LogicLayer.Models.blob\l_arena_Attack.GetId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___attack.html#a3bbaedfd29ee5c6c8e5d94f651145b88",tooltip="Retrieves the unique ID of the attack."];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="LogicLayer.Models.blob\l_arena_Attack.GetName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blob__arena___attack.html#a084cd9a6c21aa3ddde447ec32ec5033c",tooltip="Retrieves the name of the attack."];
+  Node1 -> Node7 [id="edge6_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="LogicLayer.Models.IBlobert\lItem.GetName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_blobert_item.html#a12d2eb523c61b5a951ba22c6f97d87f2",tooltip="Retrieves the name associated with the Blobert item."];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="LogicLayer.Models.IBlobert\lToken.GetNftType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a801531d6aaba0ed118e4398d58ee8516",tooltip="Retrieves the NFT type of the Blobert token."];
+}

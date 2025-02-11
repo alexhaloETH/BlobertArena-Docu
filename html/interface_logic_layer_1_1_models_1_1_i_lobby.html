@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -98,6 +98,7 @@ $(function(){initNavTree('interface_logic_layer_1_1_models_1_1_i_lobby.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="interface_logic_layer_1_1_models_1_1_i_lobby-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.ILobby Interface Reference</div></div>
 </div><!--header-->
@@ -110,9 +111,9 @@ Inheritance diagram for LogicLayer.Models.ILobby:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abd2ee8a579223ec9baa1ebde064f1d91" id="r_abd2ee8a579223ec9baa1ebde064f1d91"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd2ee8a579223ec9baa1ebde064f1d91">GetId</a> ()</td></tr>
-<tr class="memdesc:abd2ee8a579223ec9baa1ebde064f1d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the lobby.  <br /></td></tr>
-<tr class="separator:abd2ee8a579223ec9baa1ebde064f1d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba3da842cbcc2c89dd71e8144bf18aa" id="r_abba3da842cbcc2c89dd71e8144bf18aa"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abba3da842cbcc2c89dd71e8144bf18aa">GetGameId</a> ()</td></tr>
+<tr class="memdesc:abba3da842cbcc2c89dd71e8144bf18aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the lobby.  <br /></td></tr>
+<tr class="separator:abba3da842cbcc2c89dd71e8144bf18aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a6b5c576426adb6d29a17d7d8d1e67" id="r_ae0a6b5c576426adb6d29a17d7d8d1e67"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0a6b5c576426adb6d29a17d7d8d1e67">GetReceiver</a> ()</td></tr>
 <tr class="memdesc:ae0a6b5c576426adb6d29a17d7d8d1e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the ID of the guest within the lobby.  <br /></td></tr>
 <tr class="separator:ae0a6b5c576426adb6d29a17d7d8d1e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,16 +126,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9cdb4f71c635c2e43fc5d1841ef4e849" id="r_a9cdb4f71c635c2e43fc5d1841ef4e849"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cdb4f71c635c2e43fc5d1841ef4e849">IsReceiverMatch</a> (FieldElement receiver)</td></tr>
 <tr class="memdesc:a9cdb4f71c635c2e43fc5d1841ef4e849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided guest ID matches the ID of the guest within the lobby.  <br /></td></tr>
 <tr class="separator:a9cdb4f71c635c2e43fc5d1841ef4e849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:a4020dce3cfb13a426d321837d83e017e" id="r_a4020dce3cfb13a426d321837d83e017e"><td class="memItemLeft" align="right" valign="top"><a id="a4020dce3cfb13a426d321837d83e017e" name="a4020dce3cfb13a426d321837d83e017e"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:a4020dce3cfb13a426d321837d83e017e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abd2ee8a579223ec9baa1ebde064f1d91" name="abd2ee8a579223ec9baa1ebde064f1d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd2ee8a579223ec9baa1ebde064f1d91">&#9670;&#160;</a></span>GetId()</h2>
+<a id="abba3da842cbcc2c89dd71e8144bf18aa" name="abba3da842cbcc2c89dd71e8144bf18aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba3da842cbcc2c89dd71e8144bf18aa">&#9670;&#160;</a></span>GetGameId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FieldElement LogicLayer.Models.ILobby.GetId </td>
+          <td class="memname">FieldElement LogicLayer.Models.ILobby.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -145,7 +152,12 @@ Public Member Functions</h2></td></tr>
 <p>Retrieves the unique ID of the lobby. </p>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the lobby's unique ID.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___lobby.html#afdfcc44f72766c04942eb3248056c31e">LogicLayer.Models.blob_arena_Lobby</a>.</p>
+<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___lobby.html#a8a47348398c26aa852d25c0dd8d6ce2f">LogicLayer.Models.blob_arena_Lobby</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_logic_layer_1_1_models_1_1_i_lobby_abba3da842cbcc2c89dd71e8144bf18aa_icgraph.png" border="0" usemap="#ainterface_logic_layer_1_1_models_1_1_i_lobby_abba3da842cbcc2c89dd71e8144bf18aa_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -218,6 +230,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if the lobby is open, false otherwise.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___lobby.html#af854ac04619b61ff797c59bb52f560b5">LogicLayer.Models.blob_arena_Lobby</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_logic_layer_1_1_models_1_1_i_lobby_aed58535f2069854a0e75163008fec32d_icgraph.png" border="0" usemap="#ainterface_logic_layer_1_1_models_1_1_i_lobby_aed58535f2069854a0e75163008fec32d_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -250,7 +267,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/ModelsInterfaces/<b>ILobby.cs</b></li>
+<li>LogicLayer/Dojo/Models/ModelsInterfaces/<b>ILobby.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

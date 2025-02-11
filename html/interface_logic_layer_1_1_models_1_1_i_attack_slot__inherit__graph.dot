@@ -6,7 +6,7 @@ digraph "LogicLayer.Models.IAttackSlot"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [id="Node000001",label="LogicLayer.Models.IAttackSlot",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="this is a test of a summary"];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="LogicLayer.Models.amma\l_blobert_AttackSlot",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___attack_slot.html",tooltip="Dojo model, The attack slot dictates the attacks available for each of the items the blobert."];
+  Node2 [id="Node000002",label="LogicLayer.Models.amma\l_blobert_AttackSlot",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___attack_slot.html",tooltip="Dojo model, The attack slot dictates the attacks available for each of the items the blobert This imp..."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="LogicLayer.Models.blobert\l_AttackSlot",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blobert___attack_slot.html",tooltip="Dojo model, The attack slot dictates the attacks available for each of the items the blobert."];
 }

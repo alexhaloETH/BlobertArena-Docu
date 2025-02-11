@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -99,16 +99,15 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1_games_data_model_1_1_
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="#events">Events</a> &#124;
 <a href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.GamesDataModel.GameData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for LogicLayer.Models.GamesDataModel.GameData:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data__inherit__graph.png" border="0" usemap="#a_logic_layer_8_models_8_games_data_model_8_game_data_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+
+<p>Class that holds the whole of the data about a game in progress.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for LogicLayer.Models.GamesDataModel.GameData:</div>
 <div class="dyncontent">
@@ -117,122 +116,197 @@ Collaboration diagram for LogicLayer.Models.GamesDataModel.GameData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a47014ec32e39487762851c2ef671e937" id="r_a47014ec32e39487762851c2ef671e937"><td class="memItemLeft" align="right" valign="top"><a id="a47014ec32e39487762851c2ef671e937" name="a47014ec32e39487762851c2ef671e937"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddGameData</b> (string key, <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data.html">GameData</a> gameData)</td></tr>
-<tr class="separator:a47014ec32e39487762851c2ef671e937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7972ce4a1674485b5f03274326e491d0" id="r_a7972ce4a1674485b5f03274326e491d0"><td class="memItemLeft" align="right" valign="top"><a id="a7972ce4a1674485b5f03274326e491d0" name="a7972ce4a1674485b5f03274326e491d0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GameData</b> (<a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_state_data.html">GameStateData</a> gameState, <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_combat_state_data.html">CombatStateData</a> combatState, <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_bet_game_data.html">BetGameData</a> betGame)</td></tr>
-<tr class="separator:a7972ce4a1674485b5f03274326e491d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9296c0ba534929ccfcf1300495cadfca" id="r_a9296c0ba534929ccfcf1300495cadfca"><td class="memItemLeft" align="right" valign="top"><a id="a9296c0ba534929ccfcf1300495cadfca" name="a9296c0ba534929ccfcf1300495cadfca"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GameData</b> (FieldElement gameId)</td></tr>
-<tr class="separator:a9296c0ba534929ccfcf1300495cadfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09638235f83d1b47f60e017aea8414f8" id="r_a09638235f83d1b47f60e017aea8414f8"><td class="memItemLeft" align="right" valign="top"><a id="a09638235f83d1b47f60e017aea8414f8" name="a09638235f83d1b47f60e017aea8414f8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GameData</b> (<a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___lobby.html">blob_arena_Lobby</a> lobbyData)</td></tr>
-<tr class="separator:a09638235f83d1b47f60e017aea8414f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97afc1c1be4c7e988182298b990923e8" id="r_a97afc1c1be4c7e988182298b990923e8"><td class="memItemLeft" align="right" valign="top"><a id="a97afc1c1be4c7e988182298b990923e8" name="a97afc1c1be4c7e988182298b990923e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteCachedData</b> ()</td></tr>
-<tr class="separator:a97afc1c1be4c7e988182298b990923e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad713bec340df95c8d840f048c756c6c2" id="r_ad713bec340df95c8d840f048c756c6c2"><td class="memItemLeft" align="right" valign="top"><a id="ad713bec340df95c8d840f048c756c6c2" name="ad713bec340df95c8d840f048c756c6c2"></a>
-CombatState&#160;</td><td class="memItemRight" valign="bottom"><b>EvaluateCombatState</b> ()</td></tr>
-<tr class="separator:ad713bec340df95c8d840f048c756c6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa60b7ef95f8f87402841111b96aee11" id="r_afa60b7ef95f8f87402841111b96aee11"><td class="memItemLeft" align="right" valign="top">GameState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa60b7ef95f8f87402841111b96aee11">EvaluateGameState</a> ()</td></tr>
-<tr class="memdesc:afa60b7ef95f8f87402841111b96aee11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current state of the game.  <br /></td></tr>
-<tr class="separator:afa60b7ef95f8f87402841111b96aee11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a211a8839540009f4eacd1bbd0c90789b" id="r_a211a8839540009f4eacd1bbd0c90789b"><td class="memItemLeft" align="right" valign="top">AccountParticipation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a211a8839540009f4eacd1bbd0c90789b">GetParticipationState</a> (FieldElement player)</td></tr>
-<tr class="memdesc:a211a8839540009f4eacd1bbd0c90789b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns What role the user has in the given game.  <br /></td></tr>
-<tr class="separator:a211a8839540009f4eacd1bbd0c90789b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c0eec7e35bf5fd98ba6e6bb35241f9a" id="r_a7c0eec7e35bf5fd98ba6e6bb35241f9a"><td class="memItemLeft" align="right" valign="top"><a id="a7c0eec7e35bf5fd98ba6e6bb35241f9a" name="a7c0eec7e35bf5fd98ba6e6bb35241f9a"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentTurn</b> ()</td></tr>
-<tr class="separator:a7c0eec7e35bf5fd98ba6e6bb35241f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00323adf8f2556cd482e46282e74046c" id="r_a00323adf8f2556cd482e46282e74046c"><td class="memItemLeft" align="right" valign="top"><a id="a00323adf8f2556cd482e46282e74046c" name="a00323adf8f2556cd482e46282e74046c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsBet</b> ()</td></tr>
-<tr class="separator:a00323adf8f2556cd482e46282e74046c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a149f06b04d10653d6c8e11bcd2fb3294" id="r_a149f06b04d10653d6c8e11bcd2fb3294"><td class="memItemLeft" align="right" valign="top">BlobertTraitsEnum.NFTTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a149f06b04d10653d6c8e11bcd2fb3294">GetGameType</a> ()</td></tr>
-<tr class="memdesc:a149f06b04d10653d6c8e11bcd2fb3294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of blobert used in the fight and therefore the fight it self, if its an AMMA fight or Arcade for example.  <br /></td></tr>
-<tr class="separator:a149f06b04d10653d6c8e11bcd2fb3294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae8ead33978a4e548e623382d72fd05e" id="r_aae8ead33978a4e548e623382d72fd05e"><td class="memItemLeft" align="right" valign="top"><a id="aae8ead33978a4e548e623382d72fd05e" name="aae8ead33978a4e548e623382d72fd05e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateGameData</b> (GameObject gameObject)</td></tr>
-<tr class="separator:aae8ead33978a4e548e623382d72fd05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca35ac41655b11baba2aecdca5cf6864" id="r_aca35ac41655b11baba2aecdca5cf6864"><td class="memItemLeft" align="right" valign="top"><a id="aca35ac41655b11baba2aecdca5cf6864" name="aca35ac41655b11baba2aecdca5cf6864"></a>
-CombatState&#160;</td><td class="memItemRight" valign="bottom"><b>GetCombatantCombatState</b> (<a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_combatant_data.html">CombatantData</a> combatant)</td></tr>
-<tr class="separator:aca35ac41655b11baba2aecdca5cf6864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a248a3d7bb36fa182d9b094efd45ea851" id="r_a248a3d7bb36fa182d9b094efd45ea851"><td class="memItemLeft" align="right" valign="top"><a id="a248a3d7bb36fa182d9b094efd45ea851" name="a248a3d7bb36fa182d9b094efd45ea851"></a>
-FieldElement FieldElement loser&#160;</td><td class="memItemRight" valign="bottom"><b>GetWinnerAndLoser</b> ()</td></tr>
-<tr class="separator:a248a3d7bb36fa182d9b094efd45ea851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2ecc02e5d41f298e4d5063d7c1253a3" id="r_ab2ecc02e5d41f298e4d5063d7c1253a3"><td class="memItemLeft" align="right" valign="top"><a id="ab2ecc02e5d41f298e4d5063d7c1253a3" name="ab2ecc02e5d41f298e4d5063d7c1253a3"></a>
-async Task&lt; AttackResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAttackResult</b> (int round)</td></tr>
-<tr class="separator:ab2ecc02e5d41f298e4d5063d7c1253a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5685e8dcfeebc425afbfcc3449f9b3d" id="r_ac5685e8dcfeebc425afbfcc3449f9b3d"><td class="memItemLeft" align="right" valign="top"><a id="ac5685e8dcfeebc425afbfcc3449f9b3d" name="ac5685e8dcfeebc425afbfcc3449f9b3d"></a>
-async Task&lt; List&lt; AttackResult &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGameHistory</b> ()</td></tr>
-<tr class="separator:ac5685e8dcfeebc425afbfcc3449f9b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab625b584ee5e57063d4074d019ea44a8" id="r_ab625b584ee5e57063d4074d019ea44a8"><td class="memItemLeft" align="right" valign="top"><a id="ab625b584ee5e57063d4074d019ea44a8" name="ab625b584ee5e57063d4074d019ea44a8"></a>
-<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> tokenIdGuest&#160;</td><td class="memItemRight" valign="bottom"><b>GetCombatantTokens</b> ()</td></tr>
-<tr class="separator:ab625b584ee5e57063d4074d019ea44a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75072515b8c6f42f89783cb411740a4d" id="r_a75072515b8c6f42f89783cb411740a4d"><td class="memItemLeft" align="right" valign="top"><a id="a75072515b8c6f42f89783cb411740a4d" name="a75072515b8c6f42f89783cb411740a4d"></a>
-async Task&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1_i_available_attack.html">IAvailableAttack</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAvailableAttacks</b> (FieldElement combatant)</td></tr>
-<tr class="separator:a75072515b8c6f42f89783cb411740a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f9ffa0923dabfd5f15ca90c4cd23f83" id="r_a7f9ffa0923dabfd5f15ca90c4cd23f83"><td class="memItemLeft" align="right" valign="top"><a id="a7f9ffa0923dabfd5f15ca90c4cd23f83" name="a7f9ffa0923dabfd5f15ca90c4cd23f83"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>GetGameId</b> ()</td></tr>
+<tr class="memitem:a4efdfe392b5709d241aab44a10162afe" id="r_a4efdfe392b5709d241aab44a10162afe"><td class="memItemLeft" align="right" valign="top"><a id="a4efdfe392b5709d241aab44a10162afe" name="a4efdfe392b5709d241aab44a10162afe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GameData</b> ()</td></tr>
+<tr class="memdesc:a4efdfe392b5709d241aab44a10162afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. <br /></td></tr>
+<tr class="separator:a4efdfe392b5709d241aab44a10162afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4467b16149331db9508d32480b9376d5" id="r_a4467b16149331db9508d32480b9376d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4467b16149331db9508d32480b9376d5">AddReferencesViaGameObject</a> (GameObject gameObject)</td></tr>
+<tr class="memdesc:a4467b16149331db9508d32480b9376d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds references from a provided GameObject to populate the game data.  <br /></td></tr>
+<tr class="separator:a4467b16149331db9508d32480b9376d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669af4e74e2005f3a6257a0997079637" id="r_a669af4e74e2005f3a6257a0997079637"><td class="memItemLeft" align="right" valign="top">FightState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669af4e74e2005f3a6257a0997079637">EvaluateCombatStateInRespectTo</a> (FieldElement player)</td></tr>
+<tr class="memdesc:a669af4e74e2005f3a6257a0997079637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the combat state based on a given player.  <br /></td></tr>
+<tr class="separator:a669af4e74e2005f3a6257a0997079637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed755f0e94bb3ca3e8921d37b40a3d6" id="r_aeed755f0e94bb3ca3e8921d37b40a3d6"><td class="memItemLeft" align="right" valign="top">InvitationState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeed755f0e94bb3ca3e8921d37b40a3d6">EvaluateGameState</a> ()</td></tr>
+<tr class="memdesc:aeed755f0e94bb3ca3e8921d37b40a3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the overall game/Inivitation state.  <br /></td></tr>
+<tr class="separator:aeed755f0e94bb3ca3e8921d37b40a3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e7b94e96d3c06e73e1fc0a00186b4d" id="r_a44e7b94e96d3c06e73e1fc0a00186b4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44e7b94e96d3c06e73e1fc0a00186b4d">IsEnoughToDictateState</a> ()</td></tr>
+<tr class="memdesc:a44e7b94e96d3c06e73e1fc0a00186b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there is enough information to determine the game state.  <br /></td></tr>
+<tr class="separator:a44e7b94e96d3c06e73e1fc0a00186b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9ffa0923dabfd5f15ca90c4cd23f83" id="r_a7f9ffa0923dabfd5f15ca90c4cd23f83"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f9ffa0923dabfd5f15ca90c4cd23f83">GetGameId</a> ()</td></tr>
+<tr class="memdesc:a7f9ffa0923dabfd5f15ca90c4cd23f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique game ID.  <br /></td></tr>
 <tr class="separator:a7f9ffa0923dabfd5f15ca90c4cd23f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace7b726b8c58cd534096d8658a083d72" id="r_ace7b726b8c58cd534096d8658a083d72"><td class="memItemLeft" align="right" valign="top"><a id="ace7b726b8c58cd534096d8658a083d72" name="ace7b726b8c58cd534096d8658a083d72"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>GetGuest</b> ()</td></tr>
-<tr class="separator:ace7b726b8c58cd534096d8658a083d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77206ad383c5e8731ed9f9102009724" id="r_ac77206ad383c5e8731ed9f9102009724"><td class="memItemLeft" align="right" valign="top"><a id="ac77206ad383c5e8731ed9f9102009724" name="ac77206ad383c5e8731ed9f9102009724"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>GetAdmin</b> ()</td></tr>
-<tr class="separator:ac77206ad383c5e8731ed9f9102009724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25116a342252a975837e64f6d6fc5efa" id="r_a25116a342252a975837e64f6d6fc5efa"><td class="memItemLeft" align="right" valign="top"><a id="a25116a342252a975837e64f6d6fc5efa" name="a25116a342252a975837e64f6d6fc5efa"></a>
-FieldElement FieldElement guest&#160;</td><td class="memItemRight" valign="bottom"><b>GetAdminAndGuest</b> ()</td></tr>
-<tr class="separator:a25116a342252a975837e64f6d6fc5efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a817acca267727ee413555b3d53cf0551" id="r_a817acca267727ee413555b3d53cf0551"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a817acca267727ee413555b3d53cf0551">DebugData</a> ()</td></tr>
-<tr class="memdesc:a817acca267727ee413555b3d53cf0551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
-<tr class="separator:a817acca267727ee413555b3d53cf0551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_interface_i_debug_print_out"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_i_debug_print_out')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_i_debug_print_out.html">IDebugPrintOut</a></td></tr>
+<tr class="memitem:ab1b86c89c39d778958e3c861710bec3a" id="r_ab1b86c89c39d778958e3c861710bec3a"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1b86c89c39d778958e3c861710bec3a">GetSender</a> ()</td></tr>
+<tr class="memdesc:ab1b86c89c39d778958e3c861710bec3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the sender (admin) of the game.  <br /></td></tr>
+<tr class="separator:ab1b86c89c39d778958e3c861710bec3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0b09a96be1d0b5d159410e05e47cb8" id="r_a9f0b09a96be1d0b5d159410e05e47cb8"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0b09a96be1d0b5d159410e05e47cb8">GetReciever</a> ()</td></tr>
+<tr class="memdesc:a9f0b09a96be1d0b5d159410e05e47cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the receiver (guest) of the game.  <br /></td></tr>
+<tr class="separator:a9f0b09a96be1d0b5d159410e05e47cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c6d32eac87ecb8d58f9cb6accf4fe0" id="r_aa3c6d32eac87ecb8d58f9cb6accf4fe0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3c6d32eac87ecb8d58f9cb6accf4fe0">IsInitiator</a> (FieldElement player)</td></tr>
+<tr class="memdesc:aa3c6d32eac87ecb8d58f9cb6accf4fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if a given player is the initiator of the game.  <br /></td></tr>
+<tr class="separator:aa3c6d32eac87ecb8d58f9cb6accf4fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00323adf8f2556cd482e46282e74046c" id="r_a00323adf8f2556cd482e46282e74046c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00323adf8f2556cd482e46282e74046c">IsBet</a> ()</td></tr>
+<tr class="memdesc:a00323adf8f2556cd482e46282e74046c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the game is a betting game.  <br /></td></tr>
+<tr class="separator:a00323adf8f2556cd482e46282e74046c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05794732cacac9e7c471d9000387eda" id="r_af05794732cacac9e7c471d9000387eda"><td class="memItemLeft" align="right" valign="top"><a id="af05794732cacac9e7c471d9000387eda" name="af05794732cacac9e7c471d9000387eda"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> opponent&#160;</td><td class="memItemRight" valign="bottom"><b>GetCombatantBlobTokensSorted</b> (FieldElement inRespectTo)</td></tr>
+<tr class="separator:af05794732cacac9e7c471d9000387eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2524590f504749130c19e531c6a0ed46" id="r_a2524590f504749130c19e531c6a0ed46"><td class="memItemLeft" align="right" valign="top"><a id="a2524590f504749130c19e531c6a0ed46" name="a2524590f504749130c19e531c6a0ed46"></a>
+FieldElement FieldElement opponent&#160;</td><td class="memItemRight" valign="bottom"><b>GetCombatantTokensSorted</b> (FieldElement inRespectTo)</td></tr>
+<tr class="separator:a2524590f504749130c19e531c6a0ed46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218a7bb1ed15adb208eaaab57a81cece" id="r_a218a7bb1ed15adb208eaaab57a81cece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a218a7bb1ed15adb208eaaab57a81cece">GetSenderBlobertToken</a> ()</td></tr>
+<tr class="memdesc:a218a7bb1ed15adb208eaaab57a81cece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the Blobert token of the sender.  <br /></td></tr>
+<tr class="separator:a218a7bb1ed15adb208eaaab57a81cece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5df2868d40e9766c2679cc9a469dbea" id="r_aa5df2868d40e9766c2679cc9a469dbea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5df2868d40e9766c2679cc9a469dbea">GetReceiverBlobertToken</a> ()</td></tr>
+<tr class="memdesc:aa5df2868d40e9766c2679cc9a469dbea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the Blobert token of the receiver.  <br /></td></tr>
+<tr class="separator:aa5df2868d40e9766c2679cc9a469dbea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48884c48e21ff368e3d1be48fda1f7e6" id="r_a48884c48e21ff368e3d1be48fda1f7e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48884c48e21ff368e3d1be48fda1f7e6">GetBlobertOfPlayer</a> (FieldElement player)</td></tr>
+<tr class="memdesc:a48884c48e21ff368e3d1be48fda1f7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the Blobert token of a specific player.  <br /></td></tr>
+<tr class="separator:a48884c48e21ff368e3d1be48fda1f7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a3a300e73a98a583a3b468eeb13518" id="r_a93a3a300e73a98a583a3b468eeb13518"><td class="memItemLeft" align="right" valign="top">AccountParticipation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93a3a300e73a98a583a3b468eeb13518">GetPlayerParticipationState</a> (FieldElement player)</td></tr>
+<tr class="memdesc:a93a3a300e73a98a583a3b468eeb13518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the participation state of a player in the game.  <br /></td></tr>
+<tr class="separator:a93a3a300e73a98a583a3b468eeb13518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90dce8b51f83e89ff00c62a753139748" id="r_a90dce8b51f83e89ff00c62a753139748"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90dce8b51f83e89ff00c62a753139748">GetOpponentOf</a> (FieldElement player)</td></tr>
+<tr class="memdesc:a90dce8b51f83e89ff00c62a753139748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the opponent of a given player.  <br /></td></tr>
+<tr class="separator:a90dce8b51f83e89ff00c62a753139748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b1b54c88594a1ae99bebca77823355" id="r_ae3b1b54c88594a1ae99bebca77823355"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_logic_layer_1_1_models_1_1_combatant_data_model_1_1_combatant_data.html">CombatantDataModel.CombatantData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b1b54c88594a1ae99bebca77823355">GetPlayerObject</a> (FieldElement player)</td></tr>
+<tr class="memdesc:ae3b1b54c88594a1ae99bebca77823355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the combatant data of a specific player.  <br /></td></tr>
+<tr class="separator:ae3b1b54c88594a1ae99bebca77823355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa309f15254c3d5e6c903df66bfe478ce" id="r_aa309f15254c3d5e6c903df66bfe478ce"><td class="memItemLeft" align="right" valign="top"><a id="aa309f15254c3d5e6c903df66bfe478ce" name="aa309f15254c3d5e6c903df66bfe478ce"></a>
+FieldElement FieldElement loser&#160;</td><td class="memItemRight" valign="bottom"><b>GetWinnerAndLoserAddress</b> ()</td></tr>
+<tr class="separator:aa309f15254c3d5e6c903df66bfe478ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a5060cbcffaa73fb16bd0f4b095b1e" id="r_a85a5060cbcffaa73fb16bd0f4b095b1e"><td class="memItemLeft" align="right" valign="top"><a id="a85a5060cbcffaa73fb16bd0f4b095b1e" name="a85a5060cbcffaa73fb16bd0f4b095b1e"></a>
+FieldElement FieldElement loser&#160;</td><td class="memItemRight" valign="bottom"><b>GetWinnerAndLoserCombatant</b> ()</td></tr>
+<tr class="separator:a85a5060cbcffaa73fb16bd0f4b095b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149f06b04d10653d6c8e11bcd2fb3294" id="r_a149f06b04d10653d6c8e11bcd2fb3294"><td class="memItemLeft" align="right" valign="top">BlobertTraitsEnum.NFTTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a149f06b04d10653d6c8e11bcd2fb3294">GetGameType</a> ()</td></tr>
+<tr class="memdesc:a149f06b04d10653d6c8e11bcd2fb3294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the game type based on the Bloberts in the game.  <br /></td></tr>
+<tr class="separator:a149f06b04d10653d6c8e11bcd2fb3294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53d7f54553f96c35a1f5994d2398292" id="r_aa53d7f54553f96c35a1f5994d2398292"><td class="memItemLeft" align="right" valign="top"><a id="aa53d7f54553f96c35a1f5994d2398292" name="aa53d7f54553f96c35a1f5994d2398292"></a>
+IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><b>GetTheCombatEnd</b> (Action&lt; bool &gt; callback)</td></tr>
+<tr class="separator:aa53d7f54553f96c35a1f5994d2398292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a99aef72dce541f049b1f829dc9a82e29" id="r_a99aef72dce541f049b1f829dc9a82e29"><td class="memItemLeft" align="right" valign="top"><a id="a99aef72dce541f049b1f829dc9a82e29" name="a99aef72dce541f049b1f829dc9a82e29"></a>
-<a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_state_data.html">GameStateData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GameStateData</b></td></tr>
-<tr class="separator:a99aef72dce541f049b1f829dc9a82e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8887ff317ee4bfda107c3f095672306f" id="r_a8887ff317ee4bfda107c3f095672306f"><td class="memItemLeft" align="right" valign="top"><a id="a8887ff317ee4bfda107c3f095672306f" name="a8887ff317ee4bfda107c3f095672306f"></a>
-<a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_combat_state_data.html">CombatStateData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CombatStateData</b></td></tr>
-<tr class="separator:a8887ff317ee4bfda107c3f095672306f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a4077b500f8d33b65d8ebd343b5f6e" id="r_a13a4077b500f8d33b65d8ebd343b5f6e"><td class="memItemLeft" align="right" valign="top"><a id="a13a4077b500f8d33b65d8ebd343b5f6e" name="a13a4077b500f8d33b65d8ebd343b5f6e"></a>
-<a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_bet_game_data.html">BetGameData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BetGameData</b></td></tr>
-<tr class="separator:a13a4077b500f8d33b65d8ebd343b5f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77b698d168bc64dbf7840488e0665ca8" id="r_a77b698d168bc64dbf7840488e0665ca8"><td class="memItemLeft" align="right" valign="top"><a id="a77b698d168bc64dbf7840488e0665ca8" name="a77b698d168bc64dbf7840488e0665ca8"></a>
-GameState&#160;</td><td class="memItemRight" valign="bottom"><b>GameState</b></td></tr>
-<tr class="separator:a77b698d168bc64dbf7840488e0665ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97aae66131d250e22069c0ce7ee5c3ce" id="r_a97aae66131d250e22069c0ce7ee5c3ce"><td class="memItemLeft" align="right" valign="top"><a id="a97aae66131d250e22069c0ce7ee5c3ce" name="a97aae66131d250e22069c0ce7ee5c3ce"></a>
-CombatState&#160;</td><td class="memItemRight" valign="bottom"><b>CombatState</b></td></tr>
-<tr class="separator:a97aae66131d250e22069c0ce7ee5c3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae697a0e3f41e51ded3dfab13851f6181" id="r_ae697a0e3f41e51ded3dfab13851f6181"><td class="memItemLeft" align="right" valign="top"><a id="ae697a0e3f41e51ded3dfab13851f6181" name="ae697a0e3f41e51ded3dfab13851f6181"></a>
-AccountParticipation&#160;</td><td class="memItemRight" valign="bottom"><b>AccountParticipation</b></td></tr>
-<tr class="separator:ae697a0e3f41e51ded3dfab13851f6181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af54879b3006be72dae168d5d4e1f922c" id="r_af54879b3006be72dae168d5d4e1f922c"><td class="memItemLeft" align="right" valign="top"><a id="af54879b3006be72dae168d5d4e1f922c" name="af54879b3006be72dae168d5d4e1f922c"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>winner</b></td></tr>
-<tr class="separator:af54879b3006be72dae168d5d4e1f922c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347822b1e19a3d9780a0dc4f56c9df86" id="r_a347822b1e19a3d9780a0dc4f56c9df86"><td class="memItemLeft" align="right" valign="top"><a id="a347822b1e19a3d9780a0dc4f56c9df86" name="a347822b1e19a3d9780a0dc4f56c9df86"></a>
-<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tokenIdAdmin</b></td></tr>
-<tr class="separator:a347822b1e19a3d9780a0dc4f56c9df86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9be14be1a42e1aef1de00326557d8761" id="r_a9be14be1a42e1aef1de00326557d8761"><td class="memItemLeft" align="right" valign="top"><a id="a9be14be1a42e1aef1de00326557d8761" name="a9be14be1a42e1aef1de00326557d8761"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>admin</b></td></tr>
-<tr class="separator:a9be14be1a42e1aef1de00326557d8761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062adcb85cb89e114dbcfbb11fac2b99" id="r_a062adcb85cb89e114dbcfbb11fac2b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a062adcb85cb89e114dbcfbb11fac2b99">self</a></td></tr>
+<tr class="memdesc:a062adcb85cb89e114dbcfbb11fac2b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> sorted in respect to the user given, self will be the blobert of the user and opponent its opponent.  <br /></td></tr>
+<tr class="separator:a062adcb85cb89e114dbcfbb11fac2b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65d4d702ad9aa7dbf77894f94acd054" id="r_aa65d4d702ad9aa7dbf77894f94acd054"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa65d4d702ad9aa7dbf77894f94acd054">self</a></td></tr>
+<tr class="memdesc:aa65d4d702ad9aa7dbf77894f94acd054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the combatant id sorted in respect to the user given, self will be the combatant if of the user and opponent its opponent.  <br /></td></tr>
+<tr class="separator:aa65d4d702ad9aa7dbf77894f94acd054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53876feaf5bf96892951f4a415c9ab2" id="r_ad53876feaf5bf96892951f4a415c9ab2"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad53876feaf5bf96892951f4a415c9ab2">winner</a></td></tr>
+<tr class="memdesc:ad53876feaf5bf96892951f4a415c9ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the winner and loser of the combat.  <br /></td></tr>
+<tr class="separator:ad53876feaf5bf96892951f4a415c9ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a42b8691cbad13545d551fda9124fb69e" id="r_a42b8691cbad13545d551fda9124fb69e"><td class="memItemLeft" align="right" valign="top"><a id="a42b8691cbad13545d551fda9124fb69e" name="a42b8691cbad13545d551fda9124fb69e"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_lobby.html">ILobby</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Lobby</b><code> [get, set]</code></td></tr>
+<tr class="separator:a42b8691cbad13545d551fda9124fb69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9053a32478c485161775cf5d54e10f1" id="r_ab9053a32478c485161775cf5d54e10f1"><td class="memItemLeft" align="right" valign="top"><a id="ab9053a32478c485161775cf5d54e10f1" name="ab9053a32478c485161775cf5d54e10f1"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html">IInitiator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Initiator</b><code> [get, set]</code></td></tr>
+<tr class="separator:ab9053a32478c485161775cf5d54e10f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580f8bb8c3637f227618cd6fabd34cb7" id="r_a580f8bb8c3637f227618cd6fabd34cb7"><td class="memItemLeft" align="right" valign="top"><a id="a580f8bb8c3637f227618cd6fabd34cb7" name="a580f8bb8c3637f227618cd6fabd34cb7"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_game_info.html">IGameInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GameInfo</b><code> [get, set]</code></td></tr>
+<tr class="separator:a580f8bb8c3637f227618cd6fabd34cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac7850cc7cad99765b35c29c3670c41" id="r_a6ac7850cc7cad99765b35c29c3670c41"><td class="memItemLeft" align="right" valign="top"><a id="a6ac7850cc7cad99765b35c29c3670c41" name="a6ac7850cc7cad99765b35c29c3670c41"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_lobby_created.html">ILobbyCreated</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lobbyCreated</b><code> [get, set]</code></td></tr>
+<tr class="separator:a6ac7850cc7cad99765b35c29c3670c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c2a18ca12c9555ae60a76ed495bcfb" id="r_aa3c2a18ca12c9555ae60a76ed495bcfb"><td class="memItemLeft" align="right" valign="top"><a id="aa3c2a18ca12c9555ae60a76ed495bcfb" name="aa3c2a18ca12c9555ae60a76ed495bcfb"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html">ICombatState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CombatState</b><code> [get, set]</code></td></tr>
+<tr class="separator:aa3c2a18ca12c9555ae60a76ed495bcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309f5f316df0f32d282d786399cd8c77" id="r_a309f5f316df0f32d282d786399cd8c77"><td class="memItemLeft" align="right" valign="top"><a id="a309f5f316df0f32d282d786399cd8c77" name="a309f5f316df0f32d282d786399cd8c77"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_end.html">ICombatEnd</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CombatEnd</b><code> [get, set]</code></td></tr>
+<tr class="separator:a309f5f316df0f32d282d786399cd8c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3096201abb4002b33e1fc188a0ce85" id="r_abc3096201abb4002b33e1fc188a0ce85"><td class="memItemLeft" align="right" valign="top"><a id="abc3096201abb4002b33e1fc188a0ce85" name="abc3096201abb4002b33e1fc188a0ce85"></a>
+<a class="el" href="interface_logic_layer_1_1_models_1_1_i_bet.html">IBet</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Bet</b><code> [get, set]</code></td></tr>
+<tr class="separator:abc3096201abb4002b33e1fc188a0ce85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d44ac43f963079dff1f3d681469f3db" id="r_a8d44ac43f963079dff1f3d681469f3db"><td class="memItemLeft" align="right" valign="top"><a id="a8d44ac43f963079dff1f3d681469f3db" name="a8d44ac43f963079dff1f3d681469f3db"></a>
+List&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html">IRoundResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>RoundResults</b><code> [get, set]</code></td></tr>
+<tr class="separator:a8d44ac43f963079dff1f3d681469f3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dde56d8e3904d7b9516f384727ad5c" id="r_af2dde56d8e3904d7b9516f384727ad5c"><td class="memItemLeft" align="right" valign="top"><a id="af2dde56d8e3904d7b9516f384727ad5c" name="af2dde56d8e3904d7b9516f384727ad5c"></a>
+InvitationState&#160;</td><td class="memItemRight" valign="bottom"><b>InvitationState</b><code> [get, set]</code></td></tr>
+<tr class="separator:af2dde56d8e3904d7b9516f384727ad5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488727067923d807ab5ab17b94b13e83" id="r_a488727067923d807ab5ab17b94b13e83"><td class="memItemLeft" align="right" valign="top"><a id="a488727067923d807ab5ab17b94b13e83" name="a488727067923d807ab5ab17b94b13e83"></a>
+FightState&#160;</td><td class="memItemRight" valign="bottom"><b>FightState</b><code> [get, set]</code></td></tr>
+<tr class="separator:a488727067923d807ab5ab17b94b13e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
-<tr class="memitem:a93827f5f5f7aaae1cc4c846964249cb3" id="r_a93827f5f5f7aaae1cc4c846964249cb3"><td class="memItemLeft" align="right" valign="top"><a id="a93827f5f5f7aaae1cc4c846964249cb3" name="a93827f5f5f7aaae1cc4c846964249cb3"></a>
-Action&lt; <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data.html">GameData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnGameDataUpdate</b></td></tr>
-<tr class="separator:a93827f5f5f7aaae1cc4c846964249cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5ec757b49e79ae258705f2b7fda359" id="r_afa5ec757b49e79ae258705f2b7fda359"><td class="memItemLeft" align="right" valign="top"><a id="afa5ec757b49e79ae258705f2b7fda359" name="afa5ec757b49e79ae258705f2b7fda359"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnGameStateUpdated</b></td></tr>
+<tr class="separator:afa5ec757b49e79ae258705f2b7fda359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a817acca267727ee413555b3d53cf0551" name="a817acca267727ee413555b3d53cf0551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a817acca267727ee413555b3d53cf0551">&#9670;&#160;</a></span>DebugData()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that holds the whole of the data about a game in progress. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4467b16149331db9508d32480b9376d5" name="a4467b16149331db9508d32480b9376d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4467b16149331db9508d32480b9376d5">&#9670;&#160;</a></span>AddReferencesViaGameObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string LogicLayer.Models.GamesDataModel.GameData.DebugData </td>
+          <td class="memname">void LogicLayer.Models.GamesDataModel.GameData.AddReferencesViaGameObject </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds references from a provided GameObject to populate the game data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameObject</td><td>The GameObject containing components.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a4467b16149331db9508d32480b9376d5_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a4467b16149331db9508d32480b9376d5_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a669af4e74e2005f3a6257a0997079637" name="a669af4e74e2005f3a6257a0997079637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669af4e74e2005f3a6257a0997079637">&#9670;&#160;</a></span>EvaluateCombatStateInRespectTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FightState LogicLayer.Models.GamesDataModel.GameData.EvaluateCombatStateInRespectTo </td>
+          <td>(</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the combat state based on a given player. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player whose state is evaluated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The evaluated FightState</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a669af4e74e2005f3a6257a0997079637_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a669af4e74e2005f3a6257a0997079637_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aeed755f0e94bb3ca3e8921d37b40a3d6" name="aeed755f0e94bb3ca3e8921d37b40a3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed755f0e94bb3ca3e8921d37b40a3d6">&#9670;&#160;</a></span>EvaluateGameState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InvitationState LogicLayer.Models.GamesDataModel.GameData.EvaluateGameState </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -240,21 +314,60 @@ Action&lt; <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model
       </table>
 </div><div class="memdoc">
 
-<p>Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs. </p>
-<dl class="section return"><dt>Returns</dt><dd>data to debug</dd></dl>
-
-<p>Implements <a class="el" href="interface_i_debug_print_out.html#ac1b54d10c92b85d55afdbf0d1ed30062">IDebugPrintOut</a>.</p>
+<p>Evaluates the overall game/Inivitation state. </p>
+<dl class="section return"><dt>Returns</dt><dd>The evaluated InvitationState</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aeed755f0e94bb3ca3e8921d37b40a3d6_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aeed755f0e94bb3ca3e8921d37b40a3d6_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aeed755f0e94bb3ca3e8921d37b40a3d6_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aeed755f0e94bb3ca3e8921d37b40a3d6_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="afa60b7ef95f8f87402841111b96aee11" name="afa60b7ef95f8f87402841111b96aee11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa60b7ef95f8f87402841111b96aee11">&#9670;&#160;</a></span>EvaluateGameState()</h2>
+<a id="a48884c48e21ff368e3d1be48fda1f7e6" name="a48884c48e21ff368e3d1be48fda1f7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48884c48e21ff368e3d1be48fda1f7e6">&#9670;&#160;</a></span>GetBlobertOfPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GameState LogicLayer.Models.GamesDataModel.GameData.EvaluateGameState </td>
+          <td class="memname"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> LogicLayer.Models.GamesDataModel.GameData.GetBlobertOfPlayer </td>
+          <td>(</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the Blobert token of a specific player. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player whose token is retrieved.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The player's Blobert token.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a48884c48e21ff368e3d1be48fda1f7e6_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a48884c48e21ff368e3d1be48fda1f7e6_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a7f9ffa0923dabfd5f15ca90c4cd23f83" name="a7f9ffa0923dabfd5f15ca90c4cd23f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f9ffa0923dabfd5f15ca90c4cd23f83">&#9670;&#160;</a></span>GetGameId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FieldElement LogicLayer.Models.GamesDataModel.GameData.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -262,8 +375,13 @@ Action&lt; <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model
       </table>
 </div><div class="memdoc">
 
-<p>Returns the current state of the game. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Retrieves the unique game ID. </p>
+<dl class="section return"><dt>Returns</dt><dd>The game ID as a FieldElement</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a7f9ffa0923dabfd5f15ca90c4cd23f83_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a7f9ffa0923dabfd5f15ca90c4cd23f83_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -282,19 +400,24 @@ Action&lt; <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model
       </table>
 </div><div class="memdoc">
 
-<p>Returns the type of blobert used in the fight and therefore the fight it self, if its an AMMA fight or Arcade for example. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Retrieves the game type based on the Bloberts in the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>The type of the game.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a149f06b04d10653d6c8e11bcd2fb3294_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a149f06b04d10653d6c8e11bcd2fb3294_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="a211a8839540009f4eacd1bbd0c90789b" name="a211a8839540009f4eacd1bbd0c90789b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a211a8839540009f4eacd1bbd0c90789b">&#9670;&#160;</a></span>GetParticipationState()</h2>
+<a id="a90dce8b51f83e89ff00c62a753139748" name="a90dce8b51f83e89ff00c62a753139748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90dce8b51f83e89ff00c62a753139748">&#9670;&#160;</a></span>GetOpponentOf()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">AccountParticipation LogicLayer.Models.GamesDataModel.GameData.GetParticipationState </td>
+          <td class="memname">FieldElement LogicLayer.Models.GamesDataModel.GameData.GetOpponentOf </td>
           <td>(</td>
           <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
           <td></td>
@@ -302,10 +425,307 @@ Action&lt; <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model
       </table>
 </div><div class="memdoc">
 
-<p>This returns What role the user has in the given game. </p>
+<p>Retrieves the opponent of a given player. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td></td></tr>
+    <tr><td class="paramname">player</td><td>The player whose opponent is needed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The opponent as a FieldElement</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a90dce8b51f83e89ff00c62a753139748_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a90dce8b51f83e89ff00c62a753139748_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a90dce8b51f83e89ff00c62a753139748_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a90dce8b51f83e89ff00c62a753139748_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae3b1b54c88594a1ae99bebca77823355" name="ae3b1b54c88594a1ae99bebca77823355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b1b54c88594a1ae99bebca77823355">&#9670;&#160;</a></span>GetPlayerObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logic_layer_1_1_models_1_1_combatant_data_model_1_1_combatant_data.html">CombatantDataModel.CombatantData</a> LogicLayer.Models.GamesDataModel.GameData.GetPlayerObject </td>
+          <td>(</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the combatant data of a specific player. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player whose data is retrieved.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The player's combatant data.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ae3b1b54c88594a1ae99bebca77823355_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ae3b1b54c88594a1ae99bebca77823355_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ae3b1b54c88594a1ae99bebca77823355_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ae3b1b54c88594a1ae99bebca77823355_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a93a3a300e73a98a583a3b468eeb13518" name="a93a3a300e73a98a583a3b468eeb13518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a3a300e73a98a583a3b468eeb13518">&#9670;&#160;</a></span>GetPlayerParticipationState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AccountParticipation LogicLayer.Models.GamesDataModel.GameData.GetPlayerParticipationState </td>
+          <td>(</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines the participation state of a player in the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player to evaluate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The player's participation state.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a93a3a300e73a98a583a3b468eeb13518_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a93a3a300e73a98a583a3b468eeb13518_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a93a3a300e73a98a583a3b468eeb13518_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a93a3a300e73a98a583a3b468eeb13518_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa5df2868d40e9766c2679cc9a469dbea" name="aa5df2868d40e9766c2679cc9a469dbea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5df2868d40e9766c2679cc9a469dbea">&#9670;&#160;</a></span>GetReceiverBlobertToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> LogicLayer.Models.GamesDataModel.GameData.GetReceiverBlobertToken </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the Blobert token of the receiver. </p>
+<dl class="section return"><dt>Returns</dt><dd>The receiver's Blobert token.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aa5df2868d40e9766c2679cc9a469dbea_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aa5df2868d40e9766c2679cc9a469dbea_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aa5df2868d40e9766c2679cc9a469dbea_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aa5df2868d40e9766c2679cc9a469dbea_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9f0b09a96be1d0b5d159410e05e47cb8" name="a9f0b09a96be1d0b5d159410e05e47cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0b09a96be1d0b5d159410e05e47cb8">&#9670;&#160;</a></span>GetReciever()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FieldElement LogicLayer.Models.GamesDataModel.GameData.GetReciever </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the receiver (guest) of the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>The receiver as a FieldElement</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a9f0b09a96be1d0b5d159410e05e47cb8_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a9f0b09a96be1d0b5d159410e05e47cb8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a9f0b09a96be1d0b5d159410e05e47cb8_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a9f0b09a96be1d0b5d159410e05e47cb8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab1b86c89c39d778958e3c861710bec3a" name="ab1b86c89c39d778958e3c861710bec3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b86c89c39d778958e3c861710bec3a">&#9670;&#160;</a></span>GetSender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FieldElement LogicLayer.Models.GamesDataModel.GameData.GetSender </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the sender (admin) of the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>The sender as a FieldElement</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ab1b86c89c39d778958e3c861710bec3a_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ab1b86c89c39d778958e3c861710bec3a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ab1b86c89c39d778958e3c861710bec3a_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_ab1b86c89c39d778958e3c861710bec3a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a218a7bb1ed15adb208eaaab57a81cece" name="a218a7bb1ed15adb208eaaab57a81cece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a218a7bb1ed15adb208eaaab57a81cece">&#9670;&#160;</a></span>GetSenderBlobertToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> LogicLayer.Models.GamesDataModel.GameData.GetSenderBlobertToken </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the Blobert token of the sender. </p>
+<dl class="section return"><dt>Returns</dt><dd>The receiver's Blobert token.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a218a7bb1ed15adb208eaaab57a81cece_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a218a7bb1ed15adb208eaaab57a81cece_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a00323adf8f2556cd482e46282e74046c" name="a00323adf8f2556cd482e46282e74046c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00323adf8f2556cd482e46282e74046c">&#9670;&#160;</a></span>IsBet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogicLayer.Models.GamesDataModel.GameData.IsBet </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if the game is a betting game. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the game involves betting, otherwise false.</dd></dl>
+
+</div>
+</div>
+<a id="a44e7b94e96d3c06e73e1fc0a00186b4d" name="a44e7b94e96d3c06e73e1fc0a00186b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e7b94e96d3c06e73e1fc0a00186b4d">&#9670;&#160;</a></span>IsEnoughToDictateState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogicLayer.Models.GamesDataModel.GameData.IsEnoughToDictateState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if there is enough information to determine the game state. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if enough data is available; otherwise, false.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a44e7b94e96d3c06e73e1fc0a00186b4d_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_a44e7b94e96d3c06e73e1fc0a00186b4d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa3c6d32eac87ecb8d58f9cb6accf4fe0" name="aa3c6d32eac87ecb8d58f9cb6accf4fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c6d32eac87ecb8d58f9cb6accf4fe0">&#9670;&#160;</a></span>IsInitiator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogicLayer.Models.GamesDataModel.GameData.IsInitiator </td>
+          <td>(</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if a given player is the initiator of the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the player is the initiator, otherwise false.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aa3c6d32eac87ecb8d58f9cb6accf4fe0_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data_aa3c6d32eac87ecb8d58f9cb6accf4fe0_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a062adcb85cb89e114dbcfbb11fac2b99" name="a062adcb85cb89e114dbcfbb11fac2b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062adcb85cb89e114dbcfbb11fac2b99">&#9670;&#160;</a></span>self <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> LogicLayer.Models.GamesDataModel.GameData.self</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> sorted in respect to the user given, self will be the blobert of the user and opponent its opponent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inRespectTo</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -313,8 +733,50 @@ Action&lt; <a class="el" href="class_logic_layer_1_1_models_1_1_games_data_model
 
 </div>
 </div>
+<a id="aa65d4d702ad9aa7dbf77894f94acd054" name="aa65d4d702ad9aa7dbf77894f94acd054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65d4d702ad9aa7dbf77894f94acd054">&#9670;&#160;</a></span>self <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FieldElement LogicLayer.Models.GamesDataModel.GameData.self</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the combatant id sorted in respect to the user given, self will be the combatant if of the user and opponent its opponent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inRespectTo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad53876feaf5bf96892951f4a415c9ab2" name="ad53876feaf5bf96892951f4a415c9ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53876feaf5bf96892951f4a415c9ab2">&#9670;&#160;</a></span>winner</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FieldElement LogicLayer.Models.GamesDataModel.GameData.winner</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the winner and loser of the combat. </p>
+<p>Retrieves the winner and loser combatants.</p>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing winner and loser addresses.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing winner and loser combatants.</dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Managers/<b>GamesDataModel.cs</b></li>
+<li>LogicLayer/Managers/DataModels/<b>GamesDataModel.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

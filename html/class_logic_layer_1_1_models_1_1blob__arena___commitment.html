@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___commitme
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="class_logic_layer_1_1_models_1_1blob__arena___commitment-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.blob_arena_Commitment Class Reference</div></div>
 </div><!--header-->
@@ -163,6 +164,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:acb0e633881739f7f2a58c0fe631e2626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af54cde70e72bf0809c579e67644b463c" id="r_af54cde70e72bf0809c579e67644b463c"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af54cde70e72bf0809c579e67644b463c">MemberQueryMapping</a></td></tr>
 <tr class="separator:af54cde70e72bf0809c579e67644b463c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:acc96c1a227a93c65fb1de47e9c45b183" id="r_acc96c1a227a93c65fb1de47e9c45b183"><td class="memItemLeft" align="right" valign="top"><a id="acc96c1a227a93c65fb1de47e9c45b183" name="acc96c1a227a93c65fb1de47e9c45b183"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdated</b></td></tr>
+<tr class="separator:acc96c1a227a93c65fb1de47e9c45b183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header events_interface_i_commitment"><td colspan="2" onclick="javascript:dynsection.toggleInherit('events_interface_i_commitment')"><img src="closed.png" alt="-"/>&#160;Events inherited from <a class="el" href="interface_i_commitment.html">ICommitment</a></td></tr>
+<tr class="memitem:a5c793345758607afcdffe19ba3a1f97d inherit events_interface_i_commitment" id="r_a5c793345758607afcdffe19ba3a1f97d"><td class="memItemLeft" align="right" valign="top">
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdated</b></td></tr>
+<tr class="separator:a5c793345758607afcdffe19ba3a1f97d inherit events_interface_i_commitment"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dojo model, Commitment is a model that holds the hash the user has commited the moment the user chooses his attack, if the dojo_commitment variable is blank/empty/0 that means the user has yet to decided an attack for that round. </p>
@@ -287,7 +298,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.Id, <span class="stringliteral">&quot;id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.Id, <span class="stringliteral">&quot;id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -314,13 +325,13 @@ Static Public Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
 <div class="line">            { ValidQueryMembers.Id, <span class="stringliteral">&quot;id&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.Commitment, <span class="stringliteral">&quot;commitment&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.Commitment, <span class="stringliteral">&quot;commitment&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>Commitment.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>Commitment.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

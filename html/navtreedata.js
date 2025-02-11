@@ -26,7 +26,13 @@ var NAVTREE =
 [
   [ "Blob Arena", "index.html", [
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -46,11 +52,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_logic_layer_1_1_models_1_1amma__blobert___attack_slot.html#a8649aae7d227a084bd626b2ea8711bbb",
-"class_logic_layer_1_1_models_1_1blob__arena___combat_end.html#af7a9a1145e2f2c404990dbe73228e5cb",
-"class_quick_fight_component.html",
-"interface_logic_layer_1_1_models_1_1_i_bet.html#a6e84a87dbc0a3d266fdcb8246b75fe1d",
-"interface_logic_layer_1_1_models_1_1_i_round_result.html#ac34c019adf7cb5c3c731310306146209"
+"class_logic_layer_1_1_models_1_1_wallet_blobert.html#afc4723e72ce8ca54a0b93208ce730408",
+"class_logic_layer_1_1_models_1_1blob__arena___attack_last_used.html#a312359e68697485f59e2ccf3be5802d5",
+"class_logic_layer_1_1_query_1_1_entity.html",
+"interface_logic_layer_1_1_models_1_1_i_attack.html#ad116a992d1fd88a048854d9f5f73b624",
+"interface_logic_layer_1_1_models_1_1_i_combatant_token.html#a08db43f454dee835ed74daad0bb257d0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

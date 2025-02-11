@@ -8,4 +8,6 @@ digraph "BlobertArena.Animations.AmmaAnimationController.GetTextureFunctionInput
   Node1 [id="Node000001",label="BlobertArena.Animations.\lAmmaAnimationController.GetTexture\lFunctionInput",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves the texture function input for the specified fighter and animation state."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="BlobertArena.Animations.\lCharacterAnimationManager.Initilize\lComponentQuick",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#ac905799fa321dc90a03db24cf7ab4f73",tooltip="Initializes the component quickly based on the character and animation encode."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="BlobDexInfoContainerComponent.\lInitializeComponent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blob_dex_info_container_component.html#a9143bf2e501626314c7b8649b797de63",tooltip="Initialize the component when a new blob is selected."];
 }

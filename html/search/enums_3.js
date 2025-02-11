@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directionbutton_0',['DirectionButton',['../class_current_mode_component.html#a7eefd89965d0d1eaa4deb9b873bf7c0d',1,'CurrentModeComponent']]]
+  ['winviatype_0',['WinViaType',['../namespace_logic_layer_1_1_models_1_1_types.html#af5876998b9d19fd258b41978453537a4',1,'LogicLayer::Models::Types']]]
 ];

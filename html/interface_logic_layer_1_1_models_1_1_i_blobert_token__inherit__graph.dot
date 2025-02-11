@@ -9,7 +9,7 @@ digraph "LogicLayer.Models.IBlobertToken"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="LogicLayer.Models.Wallet\lBlobert",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_wallet_blobert.html",tooltip="Class specific to the real NFT blobert, this should connect to the wallet and fetch the data using th..."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="LogicLayer.Models.amma\l_blobert_BlobertToken",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html",tooltip="Dojo Model, the blobert is the main character of the game."];
+  Node3 [id="Node000003",label="LogicLayer.Models.amma\l_blobert_BlobertToken",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html",tooltip="Dojo Model, the blobert is the main character of the game specific implementation for AMMA."];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="LogicLayer.Models.arcade\l_blobert_BlobertToken",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html",tooltip="Dojo Model, the blobert is the main character of the game."];
+  Node4 [id="Node000004",label="LogicLayer.Models.arcade\l_blobert_BlobertToken",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html",tooltip="Dojo Model, the blobert is the main character of the game specific implementation for normal bloberts..."];
 }

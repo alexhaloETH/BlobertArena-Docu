@@ -7,5 +7,5 @@ digraph "LogicLayer.Models.IBlobertToken.GetTraitToItem"
   rankdir="RL";
   Node1 [id="Node000001",label="LogicLayer.Models.IBlobert\lToken.GetTraitToItem",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves a map of traits name to items associated with the Blobert."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="LogicLayer.Models.IAttack.\lGetAnim",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_attack.html#a444e896cead5a8b57f78f0cb4342df39",tooltip="Retrieves the animation sprites for the attack based on the blobert data and other parameters."];
+  Node2 [id="Node000002",label="BlobDexInfoContainerComponent.\lInitializeComponent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blob_dex_info_container_component.html#a9143bf2e501626314c7b8649b797de63",tooltip="Initialize the component when a new blob is selected."];
 }

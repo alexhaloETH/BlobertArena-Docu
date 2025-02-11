@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -119,8 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a019bba0eb281b7c622ab1563ff149ec8" id="r_a019bba0eb281b7c622ab1563ff149ec8"><td class="memItemLeft" align="right" valign="top"><a id="a019bba0eb281b7c622ab1563ff149ec8" name="a019bba0eb281b7c622ab1563ff149ec8"></a>
 async Task&#160;</td><td class="memItemRight" valign="bottom"><b>StartQuickFightProcessAsync</b> ()</td></tr>
 <tr class="separator:a019bba0eb281b7c622ab1563ff149ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f0d87c6f05c45f14260fa933254fa5a" id="r_a1f0d87c6f05c45f14260fa933254fa5a"><td class="memItemLeft" align="right" valign="top"><a id="a1f0d87c6f05c45f14260fa933254fa5a" name="a1f0d87c6f05c45f14260fa933254fa5a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>FindIndexByName</b> (string name)</td></tr>
+<tr class="memitem:a1f0d87c6f05c45f14260fa933254fa5a" id="r_a1f0d87c6f05c45f14260fa933254fa5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f0d87c6f05c45f14260fa933254fa5a">FindIndexByName</a> (string name)</td></tr>
+<tr class="memdesc:a1f0d87c6f05c45f14260fa933254fa5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is a way to skip the user if we already queried its data to save on performance  <br /></td></tr>
 <tr class="separator:a1f0d87c6f05c45f14260fa933254fa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927a863d1cbb9ee065181761f9837ffc" id="r_a927a863d1cbb9ee065181761f9837ffc"><td class="memItemLeft" align="right" valign="top"><a id="a927a863d1cbb9ee065181761f9837ffc" name="a927a863d1cbb9ee065181761f9837ffc"></a>
 async Task&lt; List&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTokenIdsAsync</b> (FieldElement ownerAddress, bool isCustom)</td></tr>
@@ -129,11 +129,38 @@ async Task&lt; List&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a133d945cca060c156404a259fd5f7cc4" id="r_a133d945cca060c156404a259fd5f7cc4"><td class="memItemLeft" align="right" valign="top"><a id="a133d945cca060c156404a259fd5f7cc4" name="a133d945cca060c156404a259fd5f7cc4"></a>
-List&lt;(string Name, List&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> &gt; Blobs)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>NameToBlobsIdList</b> = new List&lt;(string, List&lt;<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a>&gt;)&gt;()</td></tr>
+List&lt;(string Name, List&lt; <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> &gt; Blobs)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>NameToBlobsIdList</b> = new()</td></tr>
 <tr class="separator:a133d945cca060c156404a259fd5f7cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1f0d87c6f05c45f14260fa933254fa5a" name="a1f0d87c6f05c45f14260fa933254fa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f0d87c6f05c45f14260fa933254fa5a">&#9670;&#160;</a></span>FindIndexByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int QuickFightComponent.FindIndexByName </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>this is a way to skip the user if we already queried its data to save on performance </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/UI/Components/QuickFights/<b>QuickFightComponent.cs</b></li>
+<li>UI/Components/QuickFights/<b>QuickFightComponent.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -103,7 +103,7 @@ $(function(){initNavTree('class_character_stats_visualizer_component.html',''); 
 </div><!--header-->
 <div class="contents">
 
-<p>This component is responsible for displaying the values of a Blobert in the UI.  
+<p>This component is responsible for displaying the values of a Blobert in the UI. This component can also compare two bloberts stats and show the &gt;&gt; when necessary TODO: this needs an implementation with the attack effect so we have everything in one place, as right now this takes 2 bloberts and compares but would be nice if it also took just an attack and shows with arrows which stats the attack deals with.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CharacterStatsVisualizerComponent:</div>
@@ -118,22 +118,29 @@ Collaboration diagram for CharacterStatsVisualizerComponent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d52a58340e6a5bc76132acb0cb4957c" id="r_a7d52a58340e6a5bc76132acb0cb4957c"><td class="memItemLeft" align="right" valign="top"><a id="a7d52a58340e6a5bc76132acb0cb4957c" name="a7d52a58340e6a5bc76132acb0cb4957c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeComponent</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> nftType)</td></tr>
-<tr class="separator:a7d52a58340e6a5bc76132acb0cb4957c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7677e78d35fd15fa424371142de1d69" id="r_ab7677e78d35fd15fa424371142de1d69"><td class="memItemLeft" align="right" valign="top"><a id="ab7677e78d35fd15fa424371142de1d69" name="ab7677e78d35fd15fa424371142de1d69"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeComponent</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> blobertToken)</td></tr>
+<tr class="separator:ab7677e78d35fd15fa424371142de1d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86400851c196bc366764867299ccfe4a" id="r_a86400851c196bc366764867299ccfe4a"><td class="memItemLeft" align="right" valign="top"><a id="a86400851c196bc366764867299ccfe4a" name="a86400851c196bc366764867299ccfe4a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>CompareBlobert</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> originalBlobert, <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> compareTo)</td></tr>
 <tr class="separator:a86400851c196bc366764867299ccfe4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad53466fb66b8df6e05cf551d682e7cd9" id="r_ad53466fb66b8df6e05cf551d682e7cd9"><td class="memItemLeft" align="right" valign="top"><a id="ad53466fb66b8df6e05cf551d682e7cd9" name="ad53466fb66b8df6e05cf551d682e7cd9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>CompareAttack</b> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_attack.html">IAttack</a> attack, bool receiver)</td></tr>
 <tr class="separator:ad53466fb66b8df6e05cf551d682e7cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2018ae12389e320041130929ff26c85c" id="r_a2018ae12389e320041130929ff26c85c"><td class="memItemLeft" align="right" valign="top"><a id="a2018ae12389e320041130929ff26c85c" name="a2018ae12389e320041130929ff26c85c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ShowBuffs</b> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> stats)</td></tr>
+<tr class="separator:a2018ae12389e320041130929ff26c85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cd2689f35835024ab25799068205ac" id="r_ae8cd2689f35835024ab25799068205ac"><td class="memItemLeft" align="right" valign="top"><a id="ae8cd2689f35835024ab25799068205ac" name="ae8cd2689f35835024ab25799068205ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HideTextObjects</b> (bool hide=true)</td></tr>
+<tr class="separator:ae8cd2689f35835024ab25799068205ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee6ea70e12332637b08f82841129087" id="r_adee6ea70e12332637b08f82841129087"><td class="memItemLeft" align="right" valign="top"><a id="adee6ea70e12332637b08f82841129087" name="adee6ea70e12332637b08f82841129087"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ManualSettingOfData</b> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> stats, bool changeAppearance=true)</td></tr>
+<tr class="separator:adee6ea70e12332637b08f82841129087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This component is responsible for displaying the values of a Blobert in the UI. </p>
-<p>This component can also compare two bloberts stats and show the &gt;&gt; when necessary</p>
-<p>TODO: this needs an implementation with the attack effect so we have everything in one place, as right now this takes 2 blobberts and compares but would be nice if it also took just an attack and shows with arrows which stats the attack deals with </p>
+<div class="textblock"><p>This component is responsible for displaying the values of a Blobert in the UI. This component can also compare two bloberts stats and show the &gt;&gt; when necessary TODO: this needs an implementation with the attack effect so we have everything in one place, as right now this takes 2 bloberts and compares but would be nice if it also took just an attack and shows with arrows which stats the attack deals with. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/UI/Components/CharacterStatsVisualizer/<b>CharacterStatsVisualizerComponent.cs</b></li>
+<li>UI/Components/CharacterStatsVisualizer/<b>CharacterStatsVisualizerComponent.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

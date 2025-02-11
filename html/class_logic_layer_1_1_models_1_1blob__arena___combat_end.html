@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___combat_e
 </div><!--header-->
 <div class="contents">
 
-<p>Dojo Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser.  
+<p>Dojo Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser TODO: create a static for this to query the player straight away, the problem si that the winner and looser are not fieldelements they are a struct so when querying we need to do player.player, this due to it being a standard feature and complex query needs to be made into a function.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_CombatEnd:</div>
@@ -133,18 +133,21 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aae81aee7ba85d482f40fa54bf9367098" id="r_aae81aee7ba85d482f40fa54bf9367098"><td class="memItemLeft" align="right" valign="top"><a id="aae81aee7ba85d482f40fa54bf9367098" name="aae81aee7ba85d482f40fa54bf9367098"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="separator:aae81aee7ba85d482f40fa54bf9367098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7a9a1145e2f2c404990dbe73228e5cb" id="r_af7a9a1145e2f2c404990dbe73228e5cb"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7a9a1145e2f2c404990dbe73228e5cb">GetGameId</a> ()</td></tr>
 <tr class="memdesc:af7a9a1145e2f2c404990dbe73228e5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the id of the game.  <br /></td></tr>
 <tr class="separator:af7a9a1145e2f2c404990dbe73228e5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f70b775d5fb61406cddf5c5ed5563f" id="r_a80f70b775d5fb61406cddf5c5ed5563f"><td class="memItemLeft" align="right" valign="top">Player&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f70b775d5fb61406cddf5c5ed5563f">GetWinner</a> ()</td></tr>
+<tr class="memitem:a80f70b775d5fb61406cddf5c5ed5563f" id="r_a80f70b775d5fb61406cddf5c5ed5563f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f70b775d5fb61406cddf5c5ed5563f">GetWinner</a> ()</td></tr>
 <tr class="memdesc:a80f70b775d5fb61406cddf5c5ed5563f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the player who won the combat.  <br /></td></tr>
 <tr class="separator:a80f70b775d5fb61406cddf5c5ed5563f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16cf90f613d05ed8b442645e50b0a28" id="r_ab16cf90f613d05ed8b442645e50b0a28"><td class="memItemLeft" align="right" valign="top">Player&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16cf90f613d05ed8b442645e50b0a28">GetLoser</a> ()</td></tr>
+<tr class="memitem:ab16cf90f613d05ed8b442645e50b0a28" id="r_ab16cf90f613d05ed8b442645e50b0a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16cf90f613d05ed8b442645e50b0a28">GetLoser</a> ()</td></tr>
 <tr class="memdesc:ab16cf90f613d05ed8b442645e50b0a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the player who lost the combat.  <br /></td></tr>
 <tr class="separator:ab16cf90f613d05ed8b442645e50b0a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20f1f359a39207e1d16590d4cb588eb" id="r_ab20f1f359a39207e1d16590d4cb588eb"><td class="memItemLeft" align="right" valign="top">WinVia&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20f1f359a39207e1d16590d4cb588eb">GetVia</a> ()</td></tr>
-<tr class="memdesc:ab20f1f359a39207e1d16590d4cb588eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the method by which the combat was won.  <br /></td></tr>
-<tr class="separator:ab20f1f359a39207e1d16590d4cb588eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb414d24a65ee4ff159a1b97dcf8011c" id="r_aeb414d24a65ee4ff159a1b97dcf8011c"><td class="memItemLeft" align="right" valign="top">WinVia&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb414d24a65ee4ff159a1b97dcf8011c">GetWinningMethodVia</a> ()</td></tr>
+<tr class="memdesc:aeb414d24a65ee4ff159a1b97dcf8011c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the method by which the combat was won.  <br /></td></tr>
+<tr class="separator:aeb414d24a65ee4ff159a1b97dcf8011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a852d546bec523b5fd5368d6874971f02" id="r_a852d546bec523b5fd5368d6874971f02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a852d546bec523b5fd5368d6874971f02">IsGameIdMatch</a> (FieldElement gameId)</td></tr>
 <tr class="memdesc:a852d546bec523b5fd5368d6874971f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided game ID matches the current game ID.  <br /></td></tr>
 <tr class="separator:a852d546bec523b5fd5368d6874971f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,15 +168,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5c2785aa4dc6899fa06ac2c1442d864b" id="r_a5c2785aa4dc6899fa06ac2c1442d864b"><td class="memItemLeft" align="right" valign="top"><a id="a5c2785aa4dc6899fa06ac2c1442d864b" name="a5c2785aa4dc6899fa06ac2c1442d864b"></a>
 FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_gameId</b></td></tr>
 <tr class="separator:a5c2785aa4dc6899fa06ac2c1442d864b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac246c4dea177b1d8316dd27d4e23ae8f" id="r_ac246c4dea177b1d8316dd27d4e23ae8f"><td class="memItemLeft" align="right" valign="top"><a id="ac246c4dea177b1d8316dd27d4e23ae8f" name="ac246c4dea177b1d8316dd27d4e23ae8f"></a>
-Player&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_winner</b></td></tr>
-<tr class="separator:ac246c4dea177b1d8316dd27d4e23ae8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60388cf12b4cf6909c19652c95c14104" id="r_a60388cf12b4cf6909c19652c95c14104"><td class="memItemLeft" align="right" valign="top"><a id="a60388cf12b4cf6909c19652c95c14104" name="a60388cf12b4cf6909c19652c95c14104"></a>
-Player&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_loser</b></td></tr>
+<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_loser</b></td></tr>
 <tr class="separator:a60388cf12b4cf6909c19652c95c14104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d0c6cf0819b938a271a149329efcd93" id="r_a3d0c6cf0819b938a271a149329efcd93"><td class="memItemLeft" align="right" valign="top"><a id="a3d0c6cf0819b938a271a149329efcd93" name="a3d0c6cf0819b938a271a149329efcd93"></a>
 WinVia&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_via</b></td></tr>
 <tr class="separator:a3d0c6cf0819b938a271a149329efcd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac246c4dea177b1d8316dd27d4e23ae8f" id="r_ac246c4dea177b1d8316dd27d4e23ae8f"><td class="memItemLeft" align="right" valign="top"><a id="ac246c4dea177b1d8316dd27d4e23ae8f" name="ac246c4dea177b1d8316dd27d4e23ae8f"></a>
+<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_winner</b></td></tr>
+<tr class="separator:ac246c4dea177b1d8316dd27d4e23ae8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -183,8 +186,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:abc7252fecab3a0ecec196c2121ea9f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dojo Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser. </p>
-<p>TODO: create a static for this to query the player straight away, the problem si that the winner and looser are not fieldelements they are a struct so when querying we need to do player.player, this due to it being a standard feature and complex query needs to be made into a function </p>
+<div class="textblock"><p>Dojo Event (to double check), emitted at the end of the game to have a comprehensive leaderboard of the winner and looser TODO: create a static for this to query the player straight away, the problem si that the winner and looser are not fieldelements they are a struct so when querying we need to do player.player, this due to it being a standard feature and complex query needs to be made into a function. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6ce4c50e962531b5b2fdaeb1f14dce1b" name="a6ce4c50e962531b5b2fdaeb1f14dce1b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ce4c50e962531b5b2fdaeb1f14dce1b">&#9670;&#160;</a></span>DebugData()</h2>
@@ -237,7 +239,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Player LogicLayer.Models.blob_arena_CombatEnd.GetLoser </td>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_player.html">Player</a> LogicLayer.Models.blob_arena_CombatEnd.GetLoser </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -252,28 +254,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab20f1f359a39207e1d16590d4cb588eb" name="ab20f1f359a39207e1d16590d4cb588eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab20f1f359a39207e1d16590d4cb588eb">&#9670;&#160;</a></span>GetVia()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">WinVia LogicLayer.Models.blob_arena_CombatEnd.GetVia </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the method by which the combat was won. </p>
-<dl class="section return"><dt>Returns</dt><dd>The method of victory as a WinVia.</dd></dl>
-
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_end.html#a9228be71e678341ca6d36e5db513815c">LogicLayer.Models.ICombatEnd</a>.</p>
-
-</div>
-</div>
 <a id="a80f70b775d5fb61406cddf5c5ed5563f" name="a80f70b775d5fb61406cddf5c5ed5563f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80f70b775d5fb61406cddf5c5ed5563f">&#9670;&#160;</a></span>GetWinner()</h2>
 
@@ -281,7 +261,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Player LogicLayer.Models.blob_arena_CombatEnd.GetWinner </td>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_player.html">Player</a> LogicLayer.Models.blob_arena_CombatEnd.GetWinner </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -293,6 +273,28 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The winning player.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_end.html#abd55300ead38ca0dfe65710ec40367da">LogicLayer.Models.ICombatEnd</a>.</p>
+
+</div>
+</div>
+<a id="aeb414d24a65ee4ff159a1b97dcf8011c" name="aeb414d24a65ee4ff159a1b97dcf8011c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb414d24a65ee4ff159a1b97dcf8011c">&#9670;&#160;</a></span>GetWinningMethodVia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinVia LogicLayer.Models.blob_arena_CombatEnd.GetWinningMethodVia </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the method by which the combat was won. </p>
+<dl class="section return"><dt>Returns</dt><dd>The method of victory as a WinVia.</dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_end.html#abaacd84fbf94a819f6c054d6e5711a03">LogicLayer.Models.ICombatEnd</a>.</p>
 
 </div>
 </div>
@@ -402,7 +404,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.GameId, <span class="stringliteral">&quot;game_id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.GameId, <span class="stringliteral">&quot;game_id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -431,13 +433,13 @@ Static Public Attributes</h2></td></tr>
 <div class="line">            { ValidQueryMembers.GameId, <span class="stringliteral">&quot;game_id&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.Winner, <span class="stringliteral">&quot;winner&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.Loser, <span class="stringliteral">&quot;loser&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.Via, <span class="stringliteral">&quot;via&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.Via, <span class="stringliteral">&quot;via&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>CombatEnd.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>CombatEnd.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

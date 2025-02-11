@@ -2,7 +2,7 @@ var searchData=
 [
   ['aboutpopup_0',['AboutPopup',['../class_about_popup.html',1,'']]],
   ['acceptresponsestruct_1',['AcceptResponseStruct',['../struct_lobby_actions_contract_1_1_accept_response_struct.html',1,'LobbyActionsContract']]],
-  ['acceptstruct_2',['AcceptStruct',['../struct_bet_actions_contract_1_1_accept_struct.html',1,'BetActionsContract']]],
+  ['acceptstruct_2',['AcceptStruct',['../struct_betsy_actions_contract_1_1_accept_struct.html',1,'BetsyActionsContract']]],
   ['affectdata_3',['AffectData',['../class_logic_layer_1_1_query_1_1_affect_data.html',1,'LogicLayer::Query']]],
   ['amma_5fblobert_5fattackslot_4',['amma_blobert_AttackSlot',['../class_logic_layer_1_1_models_1_1amma__blobert___attack_slot.html',1,'LogicLayer::Models']]],
   ['amma_5fblobert_5fblobertitem_5',['amma_blobert_BlobertItem',['../class_logic_layer_1_1_models_1_1amma__blobert___blobert_item.html',1,'LogicLayer::Models']]],
@@ -14,15 +14,17 @@ var searchData=
   ['animationdataeditor_11',['AnimationDataEditor',['../class_animation_data_editor.html',1,'']]],
   ['animationdatatraitblobert_12',['AnimationDataTraitBlobert',['../struct_blobert_arena_1_1_animations_1_1_blobert_animation_controller_1_1_animation_data_trait_blobert.html',1,'BlobertArena::Animations::BlobertAnimationController']]],
   ['animationentry_13',['AnimationEntry',['../struct_blobert_arena_1_1_animations_1_1_animation_entry.html',1,'BlobertArena::Animations']]],
-  ['approvereleasestruct_14',['ApproveReleaseStruct',['../struct_bet_actions_contract_1_1_approve_release_struct.html',1,'BetActionsContract']]],
+  ['approvereleasestruct_14',['ApproveReleaseStruct',['../struct_betsy_actions_contract_1_1_approve_release_struct.html',1,'BetsyActionsContract']]],
   ['arcade_5fblobert_5fbloberttoken_15',['arcade_blobert_BlobertToken',['../class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html',1,'LogicLayer::Models']]],
   ['arcadesubmenu_16',['ArcadeSubMenu',['../class_arcade_sub_menu.html',1,'']]],
   ['arrowinteractiontext_17',['ArrowInteractionText',['../class_arrow_interaction_text.html',1,'']]],
   ['attackanimdata_18',['AttackAnimData',['../struct_logic_layer_1_1_static_data_model_1_1_attack_anim_data.html',1,'LogicLayer::StaticDataModel']]],
-  ['attackstructchaininput_19',['AttackStructChainInput',['../struct_lobby_actions_contract_1_1_attack_struct_chain_input.html',1,'LobbyActionsContract']]],
-  ['audiomanager_20',['AudioManager',['../class_audio_manager.html',1,'']]],
-  ['availableattacklistcomponent_21',['AvailableAttackListComponent',['../class_available_attack_list_component.html',1,'']]],
-  ['availableattacklistelement_22',['AvailableAttackListElement',['../class_available_attack_list_element.html',1,'']]],
-  ['availablebloblistcomponent_23',['AvailableBlobListComponent',['../class_available_blob_list_component.html',1,'']]],
-  ['availablebloblistelement_24',['AvailableBlobListElement',['../class_available_blob_list_element.html',1,'']]]
+  ['attackresult_19',['AttackResult',['../struct_logic_layer_1_1_models_1_1_types_1_1_attack_result.html',1,'LogicLayer::Models::Types']]],
+  ['attackstatsparentcomponent_20',['AttackStatsParentComponent',['../class_attack_stats_parent_component.html',1,'']]],
+  ['attackstructchaininput_21',['AttackStructChainInput',['../struct_lobby_actions_contract_1_1_attack_struct_chain_input.html',1,'LobbyActionsContract']]],
+  ['audiomanager_22',['AudioManager',['../class_audio_manager.html',1,'']]],
+  ['availableattacklistcomponent_23',['AvailableAttackListComponent',['../class_available_attack_list_component.html',1,'']]],
+  ['availableattacklistelement_24',['AvailableAttackListElement',['../class_available_attack_list_element.html',1,'']]],
+  ['availablebloblistcomponent_25',['AvailableBlobListComponent',['../class_available_blob_list_component.html',1,'']]],
+  ['availablebloblistelement_26',['AvailableBlobListElement',['../class_available_blob_list_element.html',1,'']]]
 ];

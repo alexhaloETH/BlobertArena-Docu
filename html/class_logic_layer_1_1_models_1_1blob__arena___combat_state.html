@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___combat_s
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="class_logic_layer_1_1_models_1_1blob__arena___combat_state-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.blob_arena_CombatState Class Reference</div></div>
 </div><!--header-->
@@ -135,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab55fd2129c07e9a0000de24b0ac8820e" id="r_ab55fd2129c07e9a0000de24b0ac8820e"><td class="memItemLeft" align="right" valign="top"><a id="ab55fd2129c07e9a0000de24b0ac8820e" name="ab55fd2129c07e9a0000de24b0ac8820e"></a>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:ab55fd2129c07e9a0000de24b0ac8820e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b81d9e06ce4a684810f55923a0e9567" id="r_a3b81d9e06ce4a684810f55923a0e9567"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b81d9e06ce4a684810f55923a0e9567">GetId</a> ()</td></tr>
-<tr class="memdesc:a3b81d9e06ce4a684810f55923a0e9567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique identifier for the combat state.  <br /></td></tr>
-<tr class="separator:a3b81d9e06ce4a684810f55923a0e9567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf738b9b88081d01f00650a51bb5423b" id="r_abf738b9b88081d01f00650a51bb5423b"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf738b9b88081d01f00650a51bb5423b">GetGameId</a> ()</td></tr>
+<tr class="memdesc:abf738b9b88081d01f00650a51bb5423b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique identifier for the combat state.  <br /></td></tr>
+<tr class="separator:abf738b9b88081d01f00650a51bb5423b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab470273db74c0025a6b96342063d3f8d" id="r_ab470273db74c0025a6b96342063d3f8d"><td class="memItemLeft" align="right" valign="top">Phase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab470273db74c0025a6b96342063d3f8d">GetPhase</a> ()</td></tr>
 <tr class="memdesc:ab470273db74c0025a6b96342063d3f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current phase of the combat.  <br /></td></tr>
 <tr class="separator:ab470273db74c0025a6b96342063d3f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +175,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aee51e53d7ce016d78ec4600ba9dd6d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91085a997938285a14145bf1d1772868" id="r_a91085a997938285a14145bf1d1772868"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91085a997938285a14145bf1d1772868">MemberQueryMapping</a></td></tr>
 <tr class="separator:a91085a997938285a14145bf1d1772868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:afc23bdf64c33a3f92eb163b63ca92c92" id="r_afc23bdf64c33a3f92eb163b63ca92c92"><td class="memItemLeft" align="right" valign="top"><a id="afc23bdf64c33a3f92eb163b63ca92c92" name="afc23bdf64c33a3f92eb163b63ca92c92"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:afc23bdf64c33a3f92eb163b63ca92c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header events_interface_logic_layer_1_1_models_1_1_i_combat_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('events_interface_logic_layer_1_1_models_1_1_i_combat_state')"><img src="closed.png" alt="-"/>&#160;Events inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html">LogicLayer.Models.ICombatState</a></td></tr>
+<tr class="memitem:a9445b0045102aee61beaf9d4a302aa17 inherit events_interface_logic_layer_1_1_models_1_1_i_combat_state" id="r_a9445b0045102aee61beaf9d4a302aa17"><td class="memItemLeft" align="right" valign="top">
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:a9445b0045102aee61beaf9d4a302aa17 inherit events_interface_logic_layer_1_1_models_1_1_i_combat_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dojo model, Quick way to get state of the combat, this is spawned only the moment that a fight actually starts. </p>
@@ -197,17 +208,22 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>data to debug</dd></dl>
 
 <p>Implements <a class="el" href="interface_i_debug_print_out.html#ac1b54d10c92b85d55afdbf0d1ed30062">IDebugPrintOut</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1blob__arena___combat_state_a7ce9b3a7df20fea6cfed37cb4a5361f0_cgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1blob__arena___combat_state_a7ce9b3a7df20fea6cfed37cb4a5361f0_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="a3b81d9e06ce4a684810f55923a0e9567" name="a3b81d9e06ce4a684810f55923a0e9567"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b81d9e06ce4a684810f55923a0e9567">&#9670;&#160;</a></span>GetId()</h2>
+<a id="abf738b9b88081d01f00650a51bb5423b" name="abf738b9b88081d01f00650a51bb5423b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf738b9b88081d01f00650a51bb5423b">&#9670;&#160;</a></span>GetGameId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FieldElement LogicLayer.Models.blob_arena_CombatState.GetId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_CombatState.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -218,7 +234,7 @@ Static Public Attributes</h2></td></tr>
 <p>Retrieves the unique identifier for the combat state. </p>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the combat state's unique identifier.</dd></dl>
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html#a5673845efea04a98feb986c69bf60b0c">LogicLayer.Models.ICombatState</a>.</p>
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html#af6ae139953168d2ec22949350ae8b4c5">LogicLayer.Models.ICombatState</a>.</p>
 
 </div>
 </div>
@@ -285,6 +301,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the winner's identifier if the phase is ended, otherwise null.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_combat_state.html#ab3aa95f3d67667b84d6e1bfea9aad337">LogicLayer.Models.ICombatState</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_logic_layer_1_1_models_1_1blob__arena___combat_state_a9a5e9ff5954e819ae518609c371a30a7_icgraph.png" border="0" usemap="#aclass_logic_layer_1_1_models_1_1blob__arena___combat_state_a9a5e9ff5954e819ae518609c371a30a7_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -372,7 +393,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>CombatState.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>CombatState.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

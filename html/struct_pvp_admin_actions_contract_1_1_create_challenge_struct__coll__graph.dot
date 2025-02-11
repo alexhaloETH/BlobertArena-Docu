@@ -7,4 +7,7 @@ digraph "PvpAdminActionsContract.CreateChallengeStruct"
   Node1 [id="Node000001",label="PvpAdminActionsContract.\lCreateChallengeStruct",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" collectionAddressA\ncollectionAddressB\nplayerA\nplayerB",fontcolor="grey" ];
   Node2 [id="Node000002",label="Starknet",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" tokenAId\ntokenBId",fontcolor="grey" ];
+  Node3 [id="Node000003",label="LogicLayer.Models.Types.U256",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$struct_logic_layer_1_1_models_1_1_types_1_1_u256.html",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000003_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" high\nlow",fontcolor="grey" ];
 }

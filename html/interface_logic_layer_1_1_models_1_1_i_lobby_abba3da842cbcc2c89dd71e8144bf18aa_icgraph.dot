@@ -1,0 +1,11 @@
+digraph "LogicLayer.Models.ILobby.GetGameId"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="LogicLayer.Models.ILobby.\lGetGameId",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves the unique ID of the lobby."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="LogicLayer.Models.GamesData\lModel.GameData.GetGameId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data.html#a7f9ffa0923dabfd5f15ca90c4cd23f83",tooltip="Retrieves the unique game ID."];
+}

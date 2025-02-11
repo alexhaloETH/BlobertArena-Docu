@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___round_re
 </div><!--header-->
 <div class="contents">
 
-<p>Dojo event sent at the end of the run round method for PVP, Containse a sorted array of the attacks that where used for that round.  
+<p>Dojo event sent at the end of the run round method for PVP, Conatins a sorted array of the attacks that where used for that round.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_RoundResult:</div>
@@ -121,10 +121,11 @@ Collaboration diagram for LogicLayer.Models.blob_arena_RoundResult:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a6cd871c78f755fa0d0c0cda5595fa5c4" id="r_a6cd871c78f755fa0d0c0cda5595fa5c4"><td class="memItemLeft" align="right" valign="top"><a id="a6cd871c78f755fa0d0c0cda5595fa5c4" name="a6cd871c78f755fa0d0c0cda5595fa5c4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ValidQueryKeys</b> { <b>CombatantId</b> = 0
+<tr class="memitem:a6cd871c78f755fa0d0c0cda5595fa5c4" id="r_a6cd871c78f755fa0d0c0cda5595fa5c4"><td class="memItemLeft" align="right" valign="top"><a id="a6cd871c78f755fa0d0c0cda5595fa5c4" name="a6cd871c78f755fa0d0c0cda5595fa5c4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ValidQueryKeys</b> { <b>CombatId</b> = 0
+, <b>Round</b> = 1
  }</td></tr>
 <tr class="separator:a6cd871c78f755fa0d0c0cda5595fa5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa1ed3ef13f73b888697f2c900c1b794" id="r_aaa1ed3ef13f73b888697f2c900c1b794"><td class="memItemLeft" align="right" valign="top"><a id="aaa1ed3ef13f73b888697f2c900c1b794" name="aaa1ed3ef13f73b888697f2c900c1b794"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ValidQueryMembers</b> { <b>CombatantId</b> = 0
+<tr class="memitem:aaa1ed3ef13f73b888697f2c900c1b794" id="r_aaa1ed3ef13f73b888697f2c900c1b794"><td class="memItemLeft" align="right" valign="top"><a id="aaa1ed3ef13f73b888697f2c900c1b794" name="aaa1ed3ef13f73b888697f2c900c1b794"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ValidQueryMembers</b> { <b>CombatId</b> = 0
 , <b>Round</b> = 1
 , <b>Attack</b> = 2
  }</td></tr>
@@ -135,30 +136,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a268b62213b33de3e2ec992623360f750" id="r_a268b62213b33de3e2ec992623360f750"><td class="memItemLeft" align="right" valign="top"><a id="a268b62213b33de3e2ec992623360f750" name="a268b62213b33de3e2ec992623360f750"></a>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:a268b62213b33de3e2ec992623360f750"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa16dd7d4da41f36975cd888288dc9136" id="r_aa16dd7d4da41f36975cd888288dc9136"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa16dd7d4da41f36975cd888288dc9136">GetCombatantId</a> ()</td></tr>
-<tr class="separator:aa16dd7d4da41f36975cd888288dc9136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8bb25d471673b659a6a236abf2ff50" id="r_a0a8bb25d471673b659a6a236abf2ff50"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a8bb25d471673b659a6a236abf2ff50">GetCombatId</a> ()</td></tr>
+<tr class="memdesc:a0a8bb25d471673b659a6a236abf2ff50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the combat this round result is bound to.  <br /></td></tr>
+<tr class="separator:a0a8bb25d471673b659a6a236abf2ff50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b38675b517b31541bbaebbd9dfc5e99" id="r_a2b38675b517b31541bbaebbd9dfc5e99"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b38675b517b31541bbaebbd9dfc5e99">GetRound</a> ()</td></tr>
+<tr class="memdesc:a2b38675b517b31541bbaebbd9dfc5e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the round this result is bound to  <br /></td></tr>
 <tr class="separator:a2b38675b517b31541bbaebbd9dfc5e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd03615a83fd4c773ef80b51ff59f343" id="r_abd03615a83fd4c773ef80b51ff59f343"><td class="memItemLeft" align="right" valign="top">AttackOutcomes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd03615a83fd4c773ef80b51ff59f343">GetAttacks</a> ()</td></tr>
-<tr class="separator:abd03615a83fd4c773ef80b51ff59f343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a2b9f4283bddeee8971ca8a423747d" id="r_a08a2b9f4283bddeee8971ca8a423747d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08a2b9f4283bddeee8971ca8a423747d">IsCombatantIdMatch</a> (FieldElement combatantId)</td></tr>
-<tr class="separator:a08a2b9f4283bddeee8971ca8a423747d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b5f31ec1a977dc5d6361076b65a0a7" id="r_a02b5f31ec1a977dc5d6361076b65a0a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_detailed_attack_outcome.html">DetailedAttackOutcome</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b5f31ec1a977dc5d6361076b65a0a7">GetDetailedAttackOutcomes</a> ()</td></tr>
-<tr class="memdesc:a02b5f31ec1a977dc5d6361076b65a0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetches a comprehensive view of the attack outcomes, including detailed breakdowns of effects.  <br /></td></tr>
-<tr class="separator:a02b5f31ec1a977dc5d6361076b65a0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b1af1f75f12afaf4307467c8444f8d" id="r_ac4b1af1f75f12afaf4307467c8444f8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_attack_result.html">AttackResult</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b1af1f75f12afaf4307467c8444f8d">GetAttacks</a> ()</td></tr>
+<tr class="separator:ac4b1af1f75f12afaf4307467c8444f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee91a19c5c1f01868a01874bb618599a" id="r_aee91a19c5c1f01868a01874bb618599a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee91a19c5c1f01868a01874bb618599a">IsCombatIdMatch</a> (FieldElement combatantId)</td></tr>
+<tr class="memdesc:aee91a19c5c1f01868a01874bb618599a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the combat id given is matching.  <br /></td></tr>
+<tr class="separator:aee91a19c5c1f01868a01874bb618599a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab04dc93ed3fa11434ebef2d1fa7ce9" id="r_a2ab04dc93ed3fa11434ebef2d1fa7ce9"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_round_event.html">RoundEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ab04dc93ed3fa11434ebef2d1fa7ce9">GenerateRoundSummary</a> ()</td></tr>
+<tr class="memdesc:a2ab04dc93ed3fa11434ebef2d1fa7ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sorted list of RoundEvent with all the events that happened in that fight.  <br /></td></tr>
+<tr class="separator:a2ab04dc93ed3fa11434ebef2d1fa7ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_logic_layer_1_1_models_1_1_i_round_result"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_logic_layer_1_1_models_1_1_i_round_result')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html">LogicLayer.Models.IRoundResult</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9b86333a650834af8047a891206d6238" id="r_a9b86333a650834af8047a891206d6238"><td class="memItemLeft" align="right" valign="top"><a id="a9b86333a650834af8047a891206d6238" name="a9b86333a650834af8047a891206d6238"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_combatantId</b></td></tr>
-<tr class="separator:a9b86333a650834af8047a891206d6238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379c4b67cdc410be7071dd8961aa9cc0" id="r_a379c4b67cdc410be7071dd8961aa9cc0"><td class="memItemLeft" align="right" valign="top"><a id="a379c4b67cdc410be7071dd8961aa9cc0" name="a379c4b67cdc410be7071dd8961aa9cc0"></a>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_combatId</b></td></tr>
+<tr class="separator:a379c4b67cdc410be7071dd8961aa9cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31be1c7c575382e182e7e5590ecac1d3" id="r_a31be1c7c575382e182e7e5590ecac1d3"><td class="memItemLeft" align="right" valign="top"><a id="a31be1c7c575382e182e7e5590ecac1d3" name="a31be1c7c575382e182e7e5590ecac1d3"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_round</b></td></tr>
 <tr class="separator:a31be1c7c575382e182e7e5590ecac1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a992d2ea61b9f40c2e5eb2d00cec4cc65" id="r_a992d2ea61b9f40c2e5eb2d00cec4cc65"><td class="memItemLeft" align="right" valign="top"><a id="a992d2ea61b9f40c2e5eb2d00cec4cc65" name="a992d2ea61b9f40c2e5eb2d00cec4cc65"></a>
-AttackOutcomes&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_attacks</b></td></tr>
-<tr class="separator:a992d2ea61b9f40c2e5eb2d00cec4cc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0a6d3e96dfc5d695d8af9d5e83e77c" id="r_a0f0a6d3e96dfc5d695d8af9d5e83e77c"><td class="memItemLeft" align="right" valign="top"><a id="a0f0a6d3e96dfc5d695d8af9d5e83e77c" name="a0f0a6d3e96dfc5d695d8af9d5e83e77c"></a>
+<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_attack_result.html">AttackResult</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_attacks</b></td></tr>
+<tr class="separator:a0f0a6d3e96dfc5d695d8af9d5e83e77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -168,17 +172,38 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a90a42b566f23eb6e158e69abf2c13a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dojo event sent at the end of the run round method for PVP, Containse a sorted array of the attacks that where used for that round. </p>
-<p>TODO: currently unused on the backend and front end due to some issue on the database </p>
+<div class="textblock"><p>Dojo event sent at the end of the run round method for PVP, Conatins a sorted array of the attacks that where used for that round. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="abd03615a83fd4c773ef80b51ff59f343" name="abd03615a83fd4c773ef80b51ff59f343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd03615a83fd4c773ef80b51ff59f343">&#9670;&#160;</a></span>GetAttacks()</h2>
+<a id="a2ab04dc93ed3fa11434ebef2d1fa7ce9" name="a2ab04dc93ed3fa11434ebef2d1fa7ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab04dc93ed3fa11434ebef2d1fa7ce9">&#9670;&#160;</a></span>GenerateRoundSummary()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">AttackOutcomes LogicLayer.Models.blob_arena_RoundResult.GetAttacks </td>
+          <td class="memname">List&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_round_event.html">RoundEvent</a> &gt; LogicLayer.Models.blob_arena_RoundResult.GenerateRoundSummary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a sorted list of RoundEvent with all the events that happened in that fight. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html#a858379ec82659dae69498997fade79f4">LogicLayer.Models.IRoundResult</a>.</p>
+
+</div>
+</div>
+<a id="ac4b1af1f75f12afaf4307467c8444f8d" name="ac4b1af1f75f12afaf4307467c8444f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b1af1f75f12afaf4307467c8444f8d">&#9670;&#160;</a></span>GetAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_attack_result.html">AttackResult</a>[] LogicLayer.Models.blob_arena_RoundResult.GetAttacks </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -190,14 +215,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa16dd7d4da41f36975cd888288dc9136" name="aa16dd7d4da41f36975cd888288dc9136"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa16dd7d4da41f36975cd888288dc9136">&#9670;&#160;</a></span>GetCombatantId()</h2>
+<a id="a0a8bb25d471673b659a6a236abf2ff50" name="a0a8bb25d471673b659a6a236abf2ff50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8bb25d471673b659a6a236abf2ff50">&#9670;&#160;</a></span>GetCombatId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FieldElement LogicLayer.Models.blob_arena_RoundResult.GetCombatantId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_RoundResult.GetCombatId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -205,29 +230,10 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html">LogicLayer.Models.IRoundResult</a>.</p>
+<p>Get the combat this round result is bound to. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-</div>
-</div>
-<a id="a02b5f31ec1a977dc5d6361076b65a0a7" name="a02b5f31ec1a977dc5d6361076b65a0a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02b5f31ec1a977dc5d6361076b65a0a7">&#9670;&#160;</a></span>GetDetailedAttackOutcomes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_detailed_attack_outcome.html">DetailedAttackOutcome</a> LogicLayer.Models.blob_arena_RoundResult.GetDetailedAttackOutcomes </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fetches a comprehensive view of the attack outcomes, including detailed breakdowns of effects. </p>
-<dl class="section return"><dt>Returns</dt><dd>A structured view containing detailed attack outcomes, including effect results.</dd></dl>
-
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html#ac34c019adf7cb5c3c731310306146209">LogicLayer.Models.IRoundResult</a>.</p>
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html#a085ad6864c4a442f27f9e838dbd8e252">LogicLayer.Models.IRoundResult</a>.</p>
 
 </div>
 </div>
@@ -246,18 +252,21 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html">LogicLayer.Models.IRoundResult</a>.</p>
+<p>get the round this result is bound to </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html#ab21a21e2dac891e0d27e3368027b66de">LogicLayer.Models.IRoundResult</a>.</p>
 
 </div>
 </div>
-<a id="a08a2b9f4283bddeee8971ca8a423747d" name="a08a2b9f4283bddeee8971ca8a423747d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08a2b9f4283bddeee8971ca8a423747d">&#9670;&#160;</a></span>IsCombatantIdMatch()</h2>
+<a id="aee91a19c5c1f01868a01874bb618599a" name="aee91a19c5c1f01868a01874bb618599a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee91a19c5c1f01868a01874bb618599a">&#9670;&#160;</a></span>IsCombatIdMatch()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool LogicLayer.Models.blob_arena_RoundResult.IsCombatantIdMatch </td>
+          <td class="memname">bool LogicLayer.Models.blob_arena_RoundResult.IsCombatIdMatch </td>
           <td>(</td>
           <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>combatantId</em></span></td><td>)</td>
           <td></td>
@@ -265,7 +274,16 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html">LogicLayer.Models.IRoundResult</a>.</p>
+<p>Checks if the combat id given is matching. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">combatantId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_round_result.html#a73aef0bf6f936d09c128f67e6ef53a1d">LogicLayer.Models.IRoundResult</a>.</p>
 
 </div>
 </div>
@@ -291,7 +309,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.CombatantId, <span class="stringliteral">&quot;combatant_id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.CombatId, <span class="stringliteral">&quot;combat_id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.Round, <span class="stringliteral">&quot;round&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -317,15 +336,15 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryMembers.CombatantId, <span class="stringliteral">&quot;combatant_id&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.CombatId, <span class="stringliteral">&quot;combat_id&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.Round, <span class="stringliteral">&quot;round&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.Attack, <span class="stringliteral">&quot;attacks&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.Attack, <span class="stringliteral">&quot;attacks&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>RoundResult.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>RoundResult.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

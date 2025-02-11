@@ -1,0 +1,13 @@
+digraph "LogicLayer.Models.GamesDataModel.GameData.GetGameType"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="LogicLayer.Models.GamesData\lModel.GameData.GetGameType",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves the game type based on the Bloberts in the game."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="LogicLayer.Models.IBlobert\lToken.GetNftType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a801531d6aaba0ed118e4398d58ee8516",tooltip="Retrieves the NFT type of the Blobert token."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="LogicLayer.Models.GamesData\lModel.GameData.GetSenderBlobertToken",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1_games_data_model_1_1_game_data.html#a218a7bb1ed15adb208eaaab57a81cece",tooltip="Retrieves the Blobert token of the sender."];
+}

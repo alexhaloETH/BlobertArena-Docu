@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -98,6 +98,7 @@ $(function(){initNavTree('interface_logic_layer_1_1_models_1_1_i_combat_state.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="interface_logic_layer_1_1_models_1_1_i_combat_state-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.ICombatState Interface Reference</div></div>
 </div><!--header-->
@@ -110,9 +111,9 @@ Inheritance diagram for LogicLayer.Models.ICombatState:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5673845efea04a98feb986c69bf60b0c" id="r_a5673845efea04a98feb986c69bf60b0c"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5673845efea04a98feb986c69bf60b0c">GetId</a> ()</td></tr>
-<tr class="memdesc:a5673845efea04a98feb986c69bf60b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique identifier for the combat state.  <br /></td></tr>
-<tr class="separator:a5673845efea04a98feb986c69bf60b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ae139953168d2ec22949350ae8b4c5" id="r_af6ae139953168d2ec22949350ae8b4c5"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6ae139953168d2ec22949350ae8b4c5">GetGameId</a> ()</td></tr>
+<tr class="memdesc:af6ae139953168d2ec22949350ae8b4c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique identifier for the combat state.  <br /></td></tr>
+<tr class="separator:af6ae139953168d2ec22949350ae8b4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9810c3badbe30a6006092f10863edda4" id="r_a9810c3badbe30a6006092f10863edda4"><td class="memItemLeft" align="right" valign="top">Phase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9810c3badbe30a6006092f10863edda4">GetPhase</a> ()</td></tr>
 <tr class="memdesc:a9810c3badbe30a6006092f10863edda4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current phase of the combat.  <br /></td></tr>
 <tr class="separator:a9810c3badbe30a6006092f10863edda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,16 +126,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3aa95f3d67667b84d6e1bfea9aad337" id="r_ab3aa95f3d67667b84d6e1bfea9aad337"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3aa95f3d67667b84d6e1bfea9aad337">GetWinnerIfEnded</a> ()</td></tr>
 <tr class="memdesc:ab3aa95f3d67667b84d6e1bfea9aad337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the combat phase has ended and retrieves the winner's identifier if available.  <br /></td></tr>
 <tr class="separator:ab3aa95f3d67667b84d6e1bfea9aad337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:a9445b0045102aee61beaf9d4a302aa17" id="r_a9445b0045102aee61beaf9d4a302aa17"><td class="memItemLeft" align="right" valign="top"><a id="a9445b0045102aee61beaf9d4a302aa17" name="a9445b0045102aee61beaf9d4a302aa17"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:a9445b0045102aee61beaf9d4a302aa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5673845efea04a98feb986c69bf60b0c" name="a5673845efea04a98feb986c69bf60b0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5673845efea04a98feb986c69bf60b0c">&#9670;&#160;</a></span>GetId()</h2>
+<a id="af6ae139953168d2ec22949350ae8b4c5" name="af6ae139953168d2ec22949350ae8b4c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ae139953168d2ec22949350ae8b4c5">&#9670;&#160;</a></span>GetGameId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FieldElement LogicLayer.Models.ICombatState.GetId </td>
+          <td class="memname">FieldElement LogicLayer.Models.ICombatState.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -145,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <p>Retrieves the unique identifier for the combat state. </p>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the combat state's unique identifier.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___combat_state.html#a3b81d9e06ce4a684810f55923a0e9567">LogicLayer.Models.blob_arena_CombatState</a>.</p>
+<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___combat_state.html#abf738b9b88081d01f00650a51bb5423b">LogicLayer.Models.blob_arena_CombatState</a>.</p>
 
 </div>
 </div>
@@ -168,6 +175,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The Phase enumeration value representing the combat's current phase.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___combat_state.html#ab470273db74c0025a6b96342063d3f8d">LogicLayer.Models.blob_arena_CombatState</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_logic_layer_1_1_models_1_1_i_combat_state_a9810c3badbe30a6006092f10863edda4_icgraph.png" border="0" usemap="#ainterface_logic_layer_1_1_models_1_1_i_combat_state_a9810c3badbe30a6006092f10863edda4_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -244,7 +256,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/ModelsInterfaces/<b>ICombatState.cs</b></li>
+<li>LogicLayer/Dojo/Models/ModelsInterfaces/<b>ICombatState.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

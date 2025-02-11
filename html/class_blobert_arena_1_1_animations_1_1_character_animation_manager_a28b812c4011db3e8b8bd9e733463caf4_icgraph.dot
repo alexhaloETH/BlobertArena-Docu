@@ -10,4 +10,6 @@ digraph "BlobertArena.Animations.CharacterAnimationManager.InitializeComponent"
   Node2 [id="Node000002",label="BlobertArena.Animations.\lCharacterAnimationManager.Initialize\lComponent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#abf6f3fbcd1272a7d58af6de988c83571",tooltip="Initializes the component with the given sprites list and character type."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="BlobertArena.Animations.\lCharacterAnimationManager.Initilize\lComponentQuick",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#ac905799fa321dc90a03db24cf7ab4f73",tooltip="Initializes the component quickly based on the character and animation encode."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="BlobDexInfoContainerComponent.\lInitializeComponent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_blob_dex_info_container_component.html#a9143bf2e501626314c7b8649b797de63",tooltip="Initialize the component when a new blob is selected."];
 }

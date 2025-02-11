@@ -33,7 +33,7 @@ digraph "Popup"
   Node1 -> Node14 [id="edge13_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node14 [id="Node000014",label="ProfilePanel",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_profile_panel.html",tooltip="Manager class to the player profile panel (wallet / username)"];
   Node1 -> Node15 [id="edge14_Node000001_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="QuickFiightPanel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_quick_fiight_panel.html",tooltip=" "];
+  Node15 [id="Node000015",label="QuickFightPanel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_quick_fight_panel.html",tooltip=" "];
   Node1 -> Node16 [id="edge15_Node000001_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node16 [id="Node000016",label="RulesPopup",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_rules_popup.html",tooltip=" "];
   Node1 -> Node17 [id="edge16_Node000001_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];

@@ -4,5 +4,6 @@ var namespace_logic_layer =
     [ "Models", "namespace_logic_layer_1_1_models.html", "namespace_logic_layer_1_1_models" ],
     [ "Query", "namespace_logic_layer_1_1_query.html", "namespace_logic_layer_1_1_query" ],
     [ "SynchroManagerDojo", "class_logic_layer_1_1_synchro_manager_dojo.html", null ],
+    [ "TokenData", "class_logic_layer_1_1_token_data.html", "class_logic_layer_1_1_token_data" ],
     [ "WorldManagerDojo", "class_logic_layer_1_1_world_manager_dojo.html", null ]
 ];

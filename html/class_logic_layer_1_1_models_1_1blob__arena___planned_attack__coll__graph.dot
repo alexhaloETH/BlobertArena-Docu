@@ -8,7 +8,7 @@ digraph "LogicLayer.Models.blob_arena_PlannedAttack"
   Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="ModelInstance",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="IPlannedAttack",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_planned_attack.html",tooltip=" "];
+  Node3 [id="Node000003",label="IPlannedAttack",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$interface_logic_layer_1_1_models_1_1_i_planned_attack.html",tooltip="Planned attack is not used anymore in the front end logic and can be ignored."];
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="IDebugPrintOut",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$interface_i_debug_print_out.html",tooltip="interface for mass debugging of a class"];
   Node5 -> Node1 [id="edge4_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" dojo_attackId\ndojo_combatantId\ndojo_target",fontcolor="grey" ];

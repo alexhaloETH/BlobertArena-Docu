@@ -2,12 +2,13 @@ var interface_logic_layer_1_1_models_1_1_i_attack =
 [
     [ "AggregateStats", "interface_logic_layer_1_1_models_1_1_i_attack.html#a08bf9094139545440f62471ba5532f74", null ],
     [ "GetAccuracy", "interface_logic_layer_1_1_models_1_1_i_attack.html#a5f5c32682652c1b8167af62cbe480da4", null ],
-    [ "GetAnim", "interface_logic_layer_1_1_models_1_1_i_attack.html#a444e896cead5a8b57f78f0cb4342df39", null ],
+    [ "GetAttackAnimation", "interface_logic_layer_1_1_models_1_1_i_attack.html#a1c5507ad59112d371f9cb8ebbc79a580", null ],
     [ "GetAttackType", "interface_logic_layer_1_1_models_1_1_i_attack.html#aae796a046e937b7761b562463b55500b", null ],
     [ "GetCooldown", "interface_logic_layer_1_1_models_1_1_i_attack.html#ad01a43a0ce9bb573a9b068a2171884b2", null ],
     [ "GetDamageAffects", "interface_logic_layer_1_1_models_1_1_i_attack.html#ac531b00f69130c71bb3c3f535369d3e7", null ],
     [ "GetHealthAffects", "interface_logic_layer_1_1_models_1_1_i_attack.html#ad335d35ea2e46d4263024623bfebb63b", null ],
     [ "GetId", "interface_logic_layer_1_1_models_1_1_i_attack.html#a7aa7614e2a634596178d10f852d254d5", null ],
+    [ "GetItemOfAttack", "interface_logic_layer_1_1_models_1_1_i_attack.html#aaa6adc5d9184589258b92f3195daf43c", null ],
     [ "GetItemParent", "interface_logic_layer_1_1_models_1_1_i_attack.html#a39157ff4ca5ca5ac8d39bf06e4c88b84", null ],
     [ "GetName", "interface_logic_layer_1_1_models_1_1_i_attack.html#af73d25226604125784835b34ff9eda3c", null ],
     [ "GetOpponentDamageAffects", "interface_logic_layer_1_1_models_1_1_i_attack.html#a5911bac9073f1e7218b6f3df3f34d49f", null ],
@@ -19,5 +20,6 @@ var interface_logic_layer_1_1_models_1_1_i_attack =
     [ "GetSpeed", "interface_logic_layer_1_1_models_1_1_i_attack.html#a3088083a25f89360ac23206b97e53631", null ],
     [ "GetStatAffects", "interface_logic_layer_1_1_models_1_1_i_attack.html#aee0b89089770f0b6f7b3332f9621bc5f", null ],
     [ "GetStatsAffects", "interface_logic_layer_1_1_models_1_1_i_attack.html#adc70670218557c4d0f240b25d5db98ef", null ],
+    [ "GetStatsAgainstMax", "interface_logic_layer_1_1_models_1_1_i_attack.html#a1363df8d8b1e3932e7449c9c0ff32f11", null ],
     [ "GetStunAffects", "interface_logic_layer_1_1_models_1_1_i_attack.html#aeae908e27a03485c103705192f8d5903", null ]
 ];

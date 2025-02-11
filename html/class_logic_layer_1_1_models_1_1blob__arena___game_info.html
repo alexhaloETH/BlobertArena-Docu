@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___game_inf
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="class_logic_layer_1_1_models_1_1blob__arena___game_info-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.blob_arena_GameInfo Class Reference</div></div>
 </div><!--header-->
@@ -136,9 +137,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a427ee3bcff7dc973b6b20f4754cfea" id="r_a2a427ee3bcff7dc973b6b20f4754cfea"><td class="memItemLeft" align="right" valign="top"><a id="a2a427ee3bcff7dc973b6b20f4754cfea" name="a2a427ee3bcff7dc973b6b20f4754cfea"></a>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:a2a427ee3bcff7dc973b6b20f4754cfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22589667360142533ab7b29cad64af56" id="r_a22589667360142533ab7b29cad64af56"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22589667360142533ab7b29cad64af56">GetCombatId</a> ()</td></tr>
-<tr class="memdesc:a22589667360142533ab7b29cad64af56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the combat associated with the game.  <br /></td></tr>
-<tr class="separator:a22589667360142533ab7b29cad64af56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ea9270bbe61b7901e1fdd11d640fc3" id="r_a72ea9270bbe61b7901e1fdd11d640fc3"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72ea9270bbe61b7901e1fdd11d640fc3">GetGameId</a> ()</td></tr>
+<tr class="memdesc:a72ea9270bbe61b7901e1fdd11d640fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the combat associated with the game.  <br /></td></tr>
+<tr class="separator:a72ea9270bbe61b7901e1fdd11d640fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bbe3ff890ec0c19dc4910fe6ce1c84e" id="r_a2bbe3ff890ec0c19dc4910fe6ce1c84e"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bbe3ff890ec0c19dc4910fe6ce1c84e">GetOwner</a> ()</td></tr>
 <tr class="memdesc:a2bbe3ff890ec0c19dc4910fe6ce1c84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the game's owner.  <br /></td></tr>
 <tr class="separator:a2bbe3ff890ec0c19dc4910fe6ce1c84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,9 +157,15 @@ override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b>
 <tr class="memitem:a2fcfd9f80314785a179a2c4d26657424" id="r_a2fcfd9f80314785a179a2c4d26657424"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fcfd9f80314785a179a2c4d26657424">IsCombatantIdMatch</a> (FieldElement combatantId)</td></tr>
 <tr class="memdesc:a2fcfd9f80314785a179a2c4d26657424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided combatant ID matches any of the unique combatant IDs in the game.  <br /></td></tr>
 <tr class="separator:a2fcfd9f80314785a179a2c4d26657424"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3960c5c9e65bf608e43e9c6d35b5b442" id="r_a3960c5c9e65bf608e43e9c6d35b5b442"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3960c5c9e65bf608e43e9c6d35b5b442">IsToupleFilled</a> ()</td></tr>
-<tr class="memdesc:a3960c5c9e65bf608e43e9c6d35b5b442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if both combatant IDs have been assigned.  <br /></td></tr>
-<tr class="separator:a3960c5c9e65bf608e43e9c6d35b5b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5753c9a1b15f42a460cd10f91bbaa132" id="r_a5753c9a1b15f42a460cd10f91bbaa132"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5753c9a1b15f42a460cd10f91bbaa132">IsCombatantsTupleFilled</a> ()</td></tr>
+<tr class="memdesc:a5753c9a1b15f42a460cd10f91bbaa132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if both combatant IDs have been assigned.  <br /></td></tr>
+<tr class="separator:a5753c9a1b15f42a460cd10f91bbaa132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880e0ac4f1e334fe7027d8c98f46666b" id="r_a880e0ac4f1e334fe7027d8c98f46666b"><td class="memItemLeft" align="right" valign="top"><a id="a880e0ac4f1e334fe7027d8c98f46666b" name="a880e0ac4f1e334fe7027d8c98f46666b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>AreCombatantsPresent</b> ()</td></tr>
+<tr class="separator:a880e0ac4f1e334fe7027d8c98f46666b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c40aa5b17104afbd60e272ec866aba0" id="r_a6c40aa5b17104afbd60e272ec866aba0"><td class="memItemLeft" align="right" valign="top"><a id="a6c40aa5b17104afbd60e272ec866aba0" name="a6c40aa5b17104afbd60e272ec866aba0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>AreTouplesSpawned</b> ()</td></tr>
+<tr class="separator:a6c40aa5b17104afbd60e272ec866aba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121db820ce2fd45653e10fe8a23ce525" id="r_a121db820ce2fd45653e10fe8a23ce525"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a121db820ce2fd45653e10fe8a23ce525">DebugData</a> ()</td></tr>
 <tr class="memdesc:a121db820ce2fd45653e10fe8a23ce525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:a121db820ce2fd45653e10fe8a23ce525"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +200,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:af02a30436caac9455df65d98b13891eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37430ef5e5ab2a912105030b56561e81" id="r_a37430ef5e5ab2a912105030b56561e81"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37430ef5e5ab2a912105030b56561e81">MemberQueryMapping</a></td></tr>
 <tr class="separator:a37430ef5e5ab2a912105030b56561e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:a5db026c0871f2237ac8ecfd1212c2252" id="r_a5db026c0871f2237ac8ecfd1212c2252"><td class="memItemLeft" align="right" valign="top"><a id="a5db026c0871f2237ac8ecfd1212c2252" name="a5db026c0871f2237ac8ecfd1212c2252"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:a5db026c0871f2237ac8ecfd1212c2252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header events_interface_logic_layer_1_1_models_1_1_i_game_info"><td colspan="2" onclick="javascript:dynsection.toggleInherit('events_interface_logic_layer_1_1_models_1_1_i_game_info')"><img src="closed.png" alt="-"/>&#160;Events inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_game_info.html">LogicLayer.Models.IGameInfo</a></td></tr>
+<tr class="memitem:ad5606269a93014c44ff361ac50f7f9a5 inherit events_interface_logic_layer_1_1_models_1_1_i_game_info" id="r_ad5606269a93014c44ff361ac50f7f9a5"><td class="memItemLeft" align="right" valign="top">
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:ad5606269a93014c44ff361ac50f7f9a5 inherit events_interface_logic_layer_1_1_models_1_1_i_game_info"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dojo model, Info about the game, used to dictate the state of the game, if only one fo the fiels in the tuple is filled in that means we are in the invite state, whereas if both are filled in we are in the lobby or further on states. </p>
@@ -238,14 +255,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a22589667360142533ab7b29cad64af56" name="a22589667360142533ab7b29cad64af56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22589667360142533ab7b29cad64af56">&#9670;&#160;</a></span>GetCombatId()</h2>
+<a id="a72ea9270bbe61b7901e1fdd11d640fc3" name="a72ea9270bbe61b7901e1fdd11d640fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ea9270bbe61b7901e1fdd11d640fc3">&#9670;&#160;</a></span>GetGameId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FieldElement LogicLayer.Models.blob_arena_GameInfo.GetCombatId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_GameInfo.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -256,7 +273,7 @@ Static Public Attributes</h2></td></tr>
 <p>Retrieves the unique ID of the combat associated with the game. </p>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the combat's unique ID.</dd></dl>
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_game_info.html#a7cc12d09fc52de795a78f7536eed035c">LogicLayer.Models.IGameInfo</a>.</p>
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_game_info.html#addc66dbd6ba88c8ca509b1a45b65f83d">LogicLayer.Models.IGameInfo</a>.</p>
 
 </div>
 </div>
@@ -332,6 +349,28 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5753c9a1b15f42a460cd10f91bbaa132" name="a5753c9a1b15f42a460cd10f91bbaa132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5753c9a1b15f42a460cd10f91bbaa132">&#9670;&#160;</a></span>IsCombatantsTupleFilled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogicLayer.Models.blob_arena_GameInfo.IsCombatantsTupleFilled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if both combatant IDs have been assigned. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if both combatant IDs are filled; otherwise, false.</dd></dl>
+
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_game_info.html#a3117fb9c8a52c8018ac13e1e3d7fea2b">LogicLayer.Models.IGameInfo</a>.</p>
+
+</div>
+</div>
 <a id="aff6dd7183409a4ee46a16698db0e5524" name="aff6dd7183409a4ee46a16698db0e5524"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff6dd7183409a4ee46a16698db0e5524">&#9670;&#160;</a></span>IsCombatIdMatch()</h2>
 
@@ -388,28 +427,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3960c5c9e65bf608e43e9c6d35b5b442" name="a3960c5c9e65bf608e43e9c6d35b5b442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3960c5c9e65bf608e43e9c6d35b5b442">&#9670;&#160;</a></span>IsToupleFilled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool LogicLayer.Models.blob_arena_GameInfo.IsToupleFilled </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks if both combatant IDs have been assigned. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if both combatant IDs are filled; otherwise, false.</dd></dl>
-
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_game_info.html#a62a432770c1c616c49ad746724649819">LogicLayer.Models.IGameInfo</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="af02a30436caac9455df65d98b13891eb" name="af02a30436caac9455df65d98b13891eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af02a30436caac9455df65d98b13891eb">&#9670;&#160;</a></span>KeyQueryMapping</h2>
@@ -432,7 +449,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.CombatId, <span class="stringliteral">&quot;combat_id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.CombatId, <span class="stringliteral">&quot;combat_id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -461,13 +478,13 @@ Static Public Attributes</h2></td></tr>
 <div class="line">            { ValidQueryMembers.CombatId, <span class="stringliteral">&quot;combat_id&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.Owner, <span class="stringliteral">&quot;owner&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.TimeLimit, <span class="stringliteral">&quot;time_limit&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.CombatantIds, <span class="stringliteral">&quot;combatant_ids&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.CombatantIds, <span class="stringliteral">&quot;combatant_ids&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>GameInfo.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>GameInfo.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

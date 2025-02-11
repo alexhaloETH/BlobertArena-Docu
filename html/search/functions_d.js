@@ -1,27 +1,6 @@
 var searchData=
 [
-  ['saveblobertattacks_0',['SaveBlobertAttacks',['../class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a0a04ffdaf06abb50f2d3fd374f817a7e',1,'LogicLayer.Models.amma_blobert_BlobertToken.SaveBlobertAttacks()'],['../class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html#a7e7b49b252bbeebebcd72966cb0be937',1,'LogicLayer.Models.arcade_blobert_BlobertToken.SaveBlobertAttacks()'],['../interface_logic_layer_1_1_models_1_1_i_blobert_token.html#ad793671785175b06aa325c6768882e6b',1,'LogicLayer.Models.IBlobertToken.SaveBlobertAttacks()'],['../class_logic_layer_1_1_models_1_1_wallet_blobert.html#af651542553c5f98986266375f0044ed2',1,'LogicLayer.Models.WalletBlobert.SaveBlobertAttacks()']]],
-  ['savevolumelevels_1',['SaveVolumeLevels',['../class_audio_manager.html#a4721d70e8856cb761c6603efde609ff9',1,'AudioManager']]],
-  ['setbubblefacing_2',['SetBubbleFacing',['../class_speach_bubble.html#a2813b8f035297864b490f04c38d96960',1,'SpeachBubble']]],
-  ['setcolor_3',['SetColor',['../struct_blobert_arena_1_1_theme_manager_1_1_color_mapping.html#a33ecda8ee9f358bb3292f58679ae6092',1,'BlobertArena.ThemeManager.ColorMapping.SetColor()'],['../class_blobert_arena_1_1_theme_manager_1_1_color_palette_theme_manager.html#a7eee8f45b38d2a0dfca4c2629cf38483',1,'BlobertArena.ThemeManager.ColorPaletteThemeManager.SetColor()']]],
-  ['seteffectsvolume_4',['SetEffectsVolume',['../class_audio_manager.html#a991b1f8c657562e6581bb3269673ef61',1,'AudioManager']]],
-  ['setlifetimeanddelay_5',['SetLifetimeAndDelay',['../class_speach_bubble.html#ab4d5a973e03afb1a0814eea05fe2d7d1',1,'SpeachBubble']]],
-  ['setmusicvolume_6',['SetMusicVolume',['../class_audio_manager.html#add05f438dc5539268686059b3515afa2',1,'AudioManager']]],
-  ['setnewsprites_7',['SetNewSprites',['../class_standard_button.html#a8b1acb5bca3b8f372cb77481d0033ee3',1,'StandardButton']]],
-  ['setpercentage_8',['SetPercentage',['../class_ui_components_1_1_slider_1_1_slider_animator_component.html#acd0ce9c8b13a9b0aac8d4cf9251fb1eb',1,'UiComponents::Slider::SliderAnimatorComponent']]],
-  ['setspeedanimation_9',['SetSpeedAnimation',['../class_blobert_arena_1_1_animations_1_1_character_animation_manager.html#a7d410cd021a330508110e6fb9fc9dfec',1,'BlobertArena::Animations::CharacterAnimationManager']]],
-  ['settexttotype_10',['SetTextToType',['../class_typewriter.html#a804822a1567a06e38b45491a717c8c9f',1,'Typewriter']]],
-  ['settogglestate_11',['SetToggleState',['../class_toggle_component.html#a3229fb93f121b7f8485f2827b9263403',1,'ToggleComponent']]],
-  ['settrait_12',['SetTrait',['../class_logic_layer_1_1_fetch_blobert_wallet_data_1_1_n_f_t_item.html#afab242584b88d3dbd9be6ca6ee5df268',1,'LogicLayer::FetchBlobertWalletData::NFTItem']]],
-  ['setupanimation_13',['SetUpAnimation',['../class_animation_base.html#af5b61b6988236dbb8c7af2d7f4be9925',1,'AnimationBase']]],
-  ['setvalue_14',['SetValue',['../class_ui_components_1_1_slider_1_1_slider_animator_component.html#ab9a88e0a7551e3d3aaba48d451241d10',1,'UiComponents::Slider::SliderAnimatorComponent']]],
-  ['setxpbar_15',['SetXpBar',['../class_xp_bar.html#ada3e26d418a60624e6338fce196553ff',1,'XpBar']]],
-  ['shake_16',['Shake',['../class_ui_components_1_1_slider_1_1_slider_animator_component.html#a700f12046f89d6b85c9574707ee03fd5',1,'UiComponents::Slider::SliderAnimatorComponent']]],
-  ['showname_17',['ShowName',['../class_s_n_s_username_text_component.html#a1384ebdbc0fad76b77c88844b6a8c69a',1,'SNSUsernameTextComponent']]],
-  ['skiptyping_18',['SkipTyping',['../class_typewriter.html#ad769c3323f0413b48a6a19634d8a1b7f',1,'Typewriter']]],
-  ['spawnsingleprefab_19',['SpawnSinglePrefab',['../class_game_state_spawner.html#ab6052043c545d8aaab9ffe2765fd8779',1,'GameStateSpawner']]],
-  ['startwaitingtextanimation_20',['StartWaitingTextAnimation',['../class_typewriter.html#ac91239c236e40828b9f326a7ac7ce4d6',1,'Typewriter']]],
-  ['stopwaitingtextanimation_21',['StopWaitingTextAnimation',['../class_typewriter.html#acd7809464fc6aeee8719c7fae15ae4a3',1,'Typewriter']]],
-  ['storeactivetournamentdata_22',['StoreActiveTournamentData',['../class_tournament_list_page_behaviour.html#a3c49fe8356b332b057aec0b71a05c4f7',1,'TournamentListPageBehaviour']]],
-  ['switchtostate_23',['SwitchToState',['../class_switch_component.html#a5a885749a583a1e73b5b66758fede510',1,'SwitchComponent']]]
+  ['removeequippedattack_0',['RemoveEquippedAttack',['../class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a7249be448bce23735707e1b6fd25f27f',1,'LogicLayer.Models.amma_blobert_BlobertToken.RemoveEquippedAttack()'],['../class_logic_layer_1_1_models_1_1arcade__blobert___blobert_token.html#ad3c79b8f2bfcb4892d3082e4254c99a7',1,'LogicLayer.Models.arcade_blobert_BlobertToken.RemoveEquippedAttack()'],['../interface_logic_layer_1_1_models_1_1_i_blobert_token.html#a9160113e94adec09170f2a34a32c340a',1,'LogicLayer.Models.IBlobertToken.RemoveEquippedAttack()'],['../class_logic_layer_1_1_models_1_1_wallet_blobert.html#a30401da178ed1c6137d1252405cca9be',1,'LogicLayer.Models.WalletBlobert.RemoveEquippedAttack()']]],
+  ['resetanimation_1',['ResetAnimation',['../class_animation_base.html#ada25713bd7582febf640cc06b792fc2b',1,'AnimationBase.ResetAnimation()'],['../class_gif_player.html#a92f3dcc5920a9a03fc5ca23de44e2a7c',1,'GifPlayer.ResetAnimation()']]],
+  ['resetbubble_2',['ResetBubble',['../class_speach_bubble.html#a1089ce1202165d1683d19d121738ab19',1,'SpeachBubble']]]
 ];

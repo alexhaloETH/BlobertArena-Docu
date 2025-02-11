@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1amma__blobert___attack
 </div><!--header-->
 <div class="contents">
 
-<p>Dojo model, The attack slot dictates the attacks available for each of the items the blobert.  
+<p>Dojo model, The attack slot dictates the attacks available for each of the items the blobert This implementation is specific for the AMMMA bloberts.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.amma_blobert_AttackSlot:</div>
@@ -162,15 +162,15 @@ override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6dc80af9667c100468e744177ccbcde0" id="r_a6dc80af9667c100468e744177ccbcde0"><td class="memItemLeft" align="right" valign="top"><a id="a6dc80af9667c100468e744177ccbcde0" name="a6dc80af9667c100468e744177ccbcde0"></a>
-BlobertItemKey&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_itemKey</b></td></tr>
-<tr class="separator:a6dc80af9667c100468e744177ccbcde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7858214dbffffc82b99c6568d0e2d7f5" id="r_a7858214dbffffc82b99c6568d0e2d7f5"><td class="memItemLeft" align="right" valign="top"><a id="a7858214dbffffc82b99c6568d0e2d7f5" name="a7858214dbffffc82b99c6568d0e2d7f5"></a>
 FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_slot</b></td></tr>
 <tr class="separator:a7858214dbffffc82b99c6568d0e2d7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2304bd38d226d02152122483fe9526" id="r_a1a2304bd38d226d02152122483fe9526"><td class="memItemLeft" align="right" valign="top"><a id="a1a2304bd38d226d02152122483fe9526" name="a1a2304bd38d226d02152122483fe9526"></a>
 FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_attackId</b></td></tr>
 <tr class="separator:a1a2304bd38d226d02152122483fe9526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc80af9667c100468e744177ccbcde0" id="r_a6dc80af9667c100468e744177ccbcde0"><td class="memItemLeft" align="right" valign="top"><a id="a6dc80af9667c100468e744177ccbcde0" name="a6dc80af9667c100468e744177ccbcde0"></a>
+BlobertItemKey&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_itemKey</b></td></tr>
+<tr class="separator:a6dc80af9667c100468e744177ccbcde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -180,8 +180,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a460498607d79e8eed41cf3612b4f00ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dojo model, The attack slot dictates the attacks available for each of the items the blobert. </p>
-<p>This implementation is specific for the AMMMA bloberts </p>
+<div class="textblock"><p>Dojo model, The attack slot dictates the attacks available for each of the items the blobert This implementation is specific for the AMMMA bloberts. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8639b0bc10a1f34433d4825eeaaaf740" name="a8639b0bc10a1f34433d4825eeaaaf740"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8639b0bc10a1f34433d4825eeaaaf740">&#9670;&#160;</a></span>DebugData()</h2>
@@ -378,7 +377,7 @@ Static Public Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
 <div class="line">            { ValidQueryKeys.ItemKey, <span class="stringliteral">&quot;item_key&quot;</span> },</div>
-<div class="line">            { ValidQueryKeys.Slot, <span class="stringliteral">&quot;slot&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.Slot, <span class="stringliteral">&quot;slot&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -406,13 +405,13 @@ Static Public Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            { ValidQueryMembers.ItemKey, <span class="stringliteral">&quot;item_key&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.Slot, <span class="stringliteral">&quot;slot&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.AttackId, <span class="stringliteral">&quot;attack_id&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.AttackId, <span class="stringliteral">&quot;attack_id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/AMMABlobert/<b>AttackSlot.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/AMMABlobert/<b>AttackSlot.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

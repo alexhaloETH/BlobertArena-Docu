@@ -7,6 +7,7 @@ var class_logic_layer_1_1_models_1_1blobert___blobert_item =
     [ "GetName", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a2f8a446ce51e7f84e37547cb94464cac", null ],
     [ "GetSeedItemValue", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#aa87d227e35c5c5cfe912b9fe0b05016b", null ],
     [ "GetStats", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a564625adee4e4034b76048f9de73f28e", null ],
+    [ "GetTraitName", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a8102122bb9fe6419db5bf8701d0591e3", null ],
     [ "IsCustomKey", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a35aa93b968d5ed773ecc467ebee73217", null ],
     [ "IsKeyMatch", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a4ba8df59cee8398ff5038500d8b45b24", null ],
     [ "IsSeedKey", "class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a04d0bb5a5145b44bd1b9e2fe4b27e632", null ]

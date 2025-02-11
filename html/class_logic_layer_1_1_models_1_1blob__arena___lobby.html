@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___lobby.ht
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="class_logic_layer_1_1_models_1_1blob__arena___lobby-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.blob_arena_Lobby Class Reference</div></div>
 </div><!--header-->
@@ -135,9 +136,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0745c59a3fe747fa74250e96385f1bab" id="r_a0745c59a3fe747fa74250e96385f1bab"><td class="memItemLeft" align="right" valign="top"><a id="a0745c59a3fe747fa74250e96385f1bab" name="a0745c59a3fe747fa74250e96385f1bab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
 <tr class="separator:a0745c59a3fe747fa74250e96385f1bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdfcc44f72766c04942eb3248056c31e" id="r_afdfcc44f72766c04942eb3248056c31e"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdfcc44f72766c04942eb3248056c31e">GetId</a> ()</td></tr>
-<tr class="memdesc:afdfcc44f72766c04942eb3248056c31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the lobby.  <br /></td></tr>
-<tr class="separator:afdfcc44f72766c04942eb3248056c31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1ed8dd799ecfcdbadb79645ed583d8" id="r_a7f1ed8dd799ecfcdbadb79645ed583d8"><td class="memItemLeft" align="right" valign="top"><a id="a7f1ed8dd799ecfcdbadb79645ed583d8" name="a7f1ed8dd799ecfcdbadb79645ed583d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SpawnEventAttached</b> ()</td></tr>
+<tr class="separator:a7f1ed8dd799ecfcdbadb79645ed583d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02df415f272901bb98a55da14671032d" id="r_a02df415f272901bb98a55da14671032d"><td class="memItemLeft" align="right" valign="top"><a id="a02df415f272901bb98a55da14671032d" name="a02df415f272901bb98a55da14671032d"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
+<tr class="separator:a02df415f272901bb98a55da14671032d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a47348398c26aa852d25c0dd8d6ce2f" id="r_a8a47348398c26aa852d25c0dd8d6ce2f"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a47348398c26aa852d25c0dd8d6ce2f">GetGameId</a> ()</td></tr>
+<tr class="memdesc:a8a47348398c26aa852d25c0dd8d6ce2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the lobby.  <br /></td></tr>
+<tr class="separator:a8a47348398c26aa852d25c0dd8d6ce2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab424e4b392491eef1a604d8771073b9b" id="r_ab424e4b392491eef1a604d8771073b9b"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab424e4b392491eef1a604d8771073b9b">GetReceiver</a> ()</td></tr>
 <tr class="memdesc:ab424e4b392491eef1a604d8771073b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the ID of the guest within the lobby.  <br /></td></tr>
 <tr class="separator:ab424e4b392491eef1a604d8771073b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +181,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a8b7ef16148e1970aa360ce182d066875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a1feebcaaa71b2a67e9e84a92941ce" id="r_a15a1feebcaaa71b2a67e9e84a92941ce"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15a1feebcaaa71b2a67e9e84a92941ce">MemberQueryMapping</a></td></tr>
 <tr class="separator:a15a1feebcaaa71b2a67e9e84a92941ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:afc70708141de85b09595bfafedd9eef3" id="r_afc70708141de85b09595bfafedd9eef3"><td class="memItemLeft" align="right" valign="top"><a id="afc70708141de85b09595bfafedd9eef3" name="afc70708141de85b09595bfafedd9eef3"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:afc70708141de85b09595bfafedd9eef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header events_interface_logic_layer_1_1_models_1_1_i_lobby"><td colspan="2" onclick="javascript:dynsection.toggleInherit('events_interface_logic_layer_1_1_models_1_1_i_lobby')"><img src="closed.png" alt="-"/>&#160;Events inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_lobby.html">LogicLayer.Models.ILobby</a></td></tr>
+<tr class="memitem:a4020dce3cfb13a426d321837d83e017e inherit events_interface_logic_layer_1_1_models_1_1_i_lobby" id="r_a4020dce3cfb13a426d321837d83e017e"><td class="memItemLeft" align="right" valign="top">
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdate</b></td></tr>
+<tr class="separator:a4020dce3cfb13a426d321837d83e017e inherit events_interface_logic_layer_1_1_models_1_1_i_lobby"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DOjo model, main object that dictates the participants of the game, here we get the id that then brnaches to everything else about the game. </p>
@@ -200,14 +217,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afdfcc44f72766c04942eb3248056c31e" name="afdfcc44f72766c04942eb3248056c31e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdfcc44f72766c04942eb3248056c31e">&#9670;&#160;</a></span>GetId()</h2>
+<a id="a8a47348398c26aa852d25c0dd8d6ce2f" name="a8a47348398c26aa852d25c0dd8d6ce2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a47348398c26aa852d25c0dd8d6ce2f">&#9670;&#160;</a></span>GetGameId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FieldElement LogicLayer.Models.blob_arena_Lobby.GetId </td>
+          <td class="memname">FieldElement LogicLayer.Models.blob_arena_Lobby.GetGameId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -218,7 +235,7 @@ Static Public Attributes</h2></td></tr>
 <p>Retrieves the unique ID of the lobby. </p>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the lobby's unique ID.</dd></dl>
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_lobby.html#abd2ee8a579223ec9baa1ebde064f1d91">LogicLayer.Models.ILobby</a>.</p>
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_lobby.html#abba3da842cbcc2c89dd71e8144bf18aa">LogicLayer.Models.ILobby</a>.</p>
 
 </div>
 </div>
@@ -378,7 +395,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>Lobby.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>Lobby.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

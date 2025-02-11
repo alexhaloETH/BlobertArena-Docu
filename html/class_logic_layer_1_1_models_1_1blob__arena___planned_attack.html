@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -101,12 +101,13 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___planned_
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="class_logic_layer_1_1_models_1_1blob__arena___planned_attack-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogicLayer.Models.blob_arena_PlannedAttack Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Dojo model created after the reveal call, this holds the non hashed components used before the run round checks the data.  
+<p>Dojo model created after the reveal call, this holds the non hashed components used before the run round checks the data This model is not used anymore in the front end logic.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_PlannedAttack:</div>
@@ -132,6 +133,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae2596ee5b940cabf57b39f5233d28864" id="r_ae2596ee5b940cabf57b39f5233d28864"><td class="memItemLeft" align="right" valign="top"><a id="ae2596ee5b940cabf57b39f5233d28864" name="ae2596ee5b940cabf57b39f5233d28864"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
+<tr class="separator:ae2596ee5b940cabf57b39f5233d28864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42659bff268ae56d4c2170446c9b3d42" id="r_a42659bff268ae56d4c2170446c9b3d42"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42659bff268ae56d4c2170446c9b3d42">GetCombatantId</a> ()</td></tr>
 <tr class="memdesc:a42659bff268ae56d4c2170446c9b3d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the combatant ID associated with the planned attack.  <br /></td></tr>
 <tr class="separator:a42659bff268ae56d4c2170446c9b3d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,9 +159,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b85c1c6b4025124b91255afda0fac31" id="r_a0b85c1c6b4025124b91255afda0fac31"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b85c1c6b4025124b91255afda0fac31">DebugData</a> ()</td></tr>
 <tr class="memdesc:a0b85c1c6b4025124b91255afda0fac31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:a0b85c1c6b4025124b91255afda0fac31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2596ee5b940cabf57b39f5233d28864" id="r_ae2596ee5b940cabf57b39f5233d28864"><td class="memItemLeft" align="right" valign="top"><a id="ae2596ee5b940cabf57b39f5233d28864" name="ae2596ee5b940cabf57b39f5233d28864"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
-<tr class="separator:ae2596ee5b940cabf57b39f5233d28864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_logic_layer_1_1_models_1_1_i_planned_attack"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_logic_layer_1_1_models_1_1_i_planned_attack')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_logic_layer_1_1_models_1_1_i_planned_attack.html">LogicLayer.Models.IPlannedAttack</a></td></tr>
 <tr class="inherit_header pub_methods_interface_i_debug_print_out"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interface_i_debug_print_out')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_i_debug_print_out.html">IDebugPrintOut</a></td></tr>
 </table><table class="memberdecls">
@@ -179,9 +180,15 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a3d8681ff183109605855647e96557347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8389d8c4c5d1cea478058ae1d32140f5" id="r_a8389d8c4c5d1cea478058ae1d32140f5"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; ValidQueryMembers, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8389d8c4c5d1cea478058ae1d32140f5">MemberQueryMapping</a></td></tr>
 <tr class="separator:a8389d8c4c5d1cea478058ae1d32140f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:ad29600a4eefd825f6e0a06b140d31e83" id="r_ad29600a4eefd825f6e0a06b140d31e83"><td class="memItemLeft" align="right" valign="top"><a id="ad29600a4eefd825f6e0a06b140d31e83" name="ad29600a4eefd825f6e0a06b140d31e83"></a>
+Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnModelUpdated</b></td></tr>
+<tr class="separator:ad29600a4eefd825f6e0a06b140d31e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dojo model created after the reveal call, this holds the non hashed components used before the run round checks the data. </p>
+<div class="textblock"><p>Dojo model created after the reveal call, this holds the non hashed components used before the run round checks the data This model is not used anymore in the front end logic. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0b85c1c6b4025124b91255afda0fac31" name="a0b85c1c6b4025124b91255afda0fac31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b85c1c6b4025124b91255afda0fac31">&#9670;&#160;</a></span>DebugData()</h2>
@@ -396,7 +403,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.Id, <span class="stringliteral">&quot;id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.Id, <span class="stringliteral">&quot;id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -424,13 +431,13 @@ Static Public Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            { ValidQueryMembers.Id, <span class="stringliteral">&quot;id&quot;</span> },</div>
 <div class="line">            { ValidQueryMembers.Attack, <span class="stringliteral">&quot;attack&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.Target, <span class="stringliteral">&quot;target&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.Target, <span class="stringliteral">&quot;target&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>PlannedAttack.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>PlannedAttack.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

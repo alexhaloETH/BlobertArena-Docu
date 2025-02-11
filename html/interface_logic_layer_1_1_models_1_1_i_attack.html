@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -126,53 +126,59 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af73d25226604125784835b34ff9eda3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the name of the attack.  <br /></td></tr>
 <tr class="separator:af73d25226604125784835b34ff9eda3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09f4cde28cfcf15d8dd294f16044b137" id="r_a09f4cde28cfcf15d8dd294f16044b137"><td class="memItemLeft" align="right" valign="top"><a id="a09f4cde28cfcf15d8dd294f16044b137" name="a09f4cde28cfcf15d8dd294f16044b137"></a>
-Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bool onHit)</td></tr>
+<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bool onHit)</td></tr>
 <tr class="separator:a09f4cde28cfcf15d8dd294f16044b137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39157ff4ca5ca5ac8d39bf06e4c88b84" id="r_a39157ff4ca5ca5ac8d39bf06e4c88b84"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39157ff4ca5ca5ac8d39bf06e4c88b84">GetItemParent</a> ()</td></tr>
 <tr class="memdesc:a39157ff4ca5ca5ac8d39bf06e4c88b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the parent item ID associated with the attack.  <br /></td></tr>
 <tr class="separator:a39157ff4ca5ca5ac8d39bf06e4c88b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a444e896cead5a8b57f78f0cb4342df39" id="r_a444e896cead5a8b57f78f0cb4342df39"><td class="memItemLeft" align="right" valign="top">List&lt; Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a444e896cead5a8b57f78f0cb4342df39">GetAnim</a> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> blobertData, bool receiver=false, string namePrefix=&quot;&quot;)</td></tr>
-<tr class="memdesc:a444e896cead5a8b57f78f0cb4342df39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the animation sprites for the attack based on the blobert data and other parameters.  <br /></td></tr>
-<tr class="separator:a444e896cead5a8b57f78f0cb4342df39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae796a046e937b7761b562463b55500b" id="r_aae796a046e937b7761b562463b55500b"><td class="memItemLeft" align="right" valign="top">StaticDataModel.AttackType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae796a046e937b7761b562463b55500b">GetAttackType</a> ()</td></tr>
 <tr class="memdesc:aae796a046e937b7761b562463b55500b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the type of the attack.  <br /></td></tr>
 <tr class="separator:aae796a046e937b7761b562463b55500b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6ceda7055f9ff67e5d4c134b5c29705" id="r_af6ceda7055f9ff67e5d4c134b5c29705"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Target.Opponent &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6ceda7055f9ff67e5d4c134b5c29705">GetOpponents</a> (Effect[] effects)</td></tr>
+<tr class="memitem:af6ceda7055f9ff67e5d4c134b5c29705" id="r_af6ceda7055f9ff67e5d4c134b5c29705"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Target.Opponent &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6ceda7055f9ff67e5d4c134b5c29705">GetOpponents</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:af6ceda7055f9ff67e5d4c134b5c29705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all opponents from the given array of effects.  <br /></td></tr>
 <tr class="separator:af6ceda7055f9ff67e5d4c134b5c29705"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1666bd48fa0f15f537e804db40e8efa2" id="r_a1666bd48fa0f15f537e804db40e8efa2"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Target.Player &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1666bd48fa0f15f537e804db40e8efa2">GetPlayers</a> (Effect[] effects)</td></tr>
+<tr class="memitem:a1666bd48fa0f15f537e804db40e8efa2" id="r_a1666bd48fa0f15f537e804db40e8efa2"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Target.Player &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1666bd48fa0f15f537e804db40e8efa2">GetPlayers</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:a1666bd48fa0f15f537e804db40e8efa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all player targets from the given array of effects.  <br /></td></tr>
 <tr class="separator:a1666bd48fa0f15f537e804db40e8efa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac531b00f69130c71bb3c3f535369d3e7" id="r_ac531b00f69130c71bb3c3f535369d3e7"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; IDamage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac531b00f69130c71bb3c3f535369d3e7">GetDamageAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:a1363df8d8b1e3932e7449c9c0ff32f11" id="r_a1363df8d8b1e3932e7449c9c0ff32f11"><td class="memItemLeft" align="right" valign="top">List&lt;(int value, int max)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1363df8d8b1e3932e7449c9c0ff32f11">GetStatsAgainstMax</a> ()</td></tr>
+<tr class="memdesc:a1363df8d8b1e3932e7449c9c0ff32f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stats in relations to the max possible.  <br /></td></tr>
+<tr class="separator:a1363df8d8b1e3932e7449c9c0ff32f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac531b00f69130c71bb3c3f535369d3e7" id="r_ac531b00f69130c71bb3c3f535369d3e7"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_damage.html">IDamage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac531b00f69130c71bb3c3f535369d3e7">GetDamageAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:ac531b00f69130c71bb3c3f535369d3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Damage affects from the given array of effects.  <br /></td></tr>
 <tr class="separator:ac531b00f69130c71bb3c3f535369d3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc70670218557c4d0f240b25d5db98ef" id="r_adc70670218557c4d0f240b25d5db98ef"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; StatsI8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc70670218557c4d0f240b25d5db98ef">GetStatsAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:adc70670218557c4d0f240b25d5db98ef" id="r_adc70670218557c4d0f240b25d5db98ef"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc70670218557c4d0f240b25d5db98ef">GetStatsAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:adc70670218557c4d0f240b25d5db98ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Stats affects (StatsI8) from the given array of effects.  <br /></td></tr>
 <tr class="separator:adc70670218557c4d0f240b25d5db98ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee0b89089770f0b6f7b3332f9621bc5f" id="r_aee0b89089770f0b6f7b3332f9621bc5f"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; IStat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee0b89089770f0b6f7b3332f9621bc5f">GetStatAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:aee0b89089770f0b6f7b3332f9621bc5f" id="r_aee0b89089770f0b6f7b3332f9621bc5f"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_stat.html">IStat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee0b89089770f0b6f7b3332f9621bc5f">GetStatAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:aee0b89089770f0b6f7b3332f9621bc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Stat affects (IStat) from the given array of effects.  <br /></td></tr>
 <tr class="separator:aee0b89089770f0b6f7b3332f9621bc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeae908e27a03485c103705192f8d5903" id="r_aeae908e27a03485c103705192f8d5903"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeae908e27a03485c103705192f8d5903">GetStunAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:aeae908e27a03485c103705192f8d5903" id="r_aeae908e27a03485c103705192f8d5903"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeae908e27a03485c103705192f8d5903">GetStunAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:aeae908e27a03485c103705192f8d5903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Stun affects from the given array of effects.  <br /></td></tr>
 <tr class="separator:aeae908e27a03485c103705192f8d5903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad335d35ea2e46d4263024623bfebb63b" id="r_ad335d35ea2e46d4263024623bfebb63b"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad335d35ea2e46d4263024623bfebb63b">GetHealthAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:ad335d35ea2e46d4263024623bfebb63b" id="r_ad335d35ea2e46d4263024623bfebb63b"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad335d35ea2e46d4263024623bfebb63b">GetHealthAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:ad335d35ea2e46d4263024623bfebb63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Health affects from the given array of effects.  <br /></td></tr>
 <tr class="separator:ad335d35ea2e46d4263024623bfebb63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5911bac9073f1e7218b6f3df3f34d49f" id="r_a5911bac9073f1e7218b6f3df3f34d49f"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; IDamage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5911bac9073f1e7218b6f3df3f34d49f">GetOpponentDamageAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:a5911bac9073f1e7218b6f3df3f34d49f" id="r_a5911bac9073f1e7218b6f3df3f34d49f"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_damage.html">IDamage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5911bac9073f1e7218b6f3df3f34d49f">GetOpponentDamageAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:a5911bac9073f1e7218b6f3df3f34d49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Damage affects for opponent targets from the given array of effects.  <br /></td></tr>
 <tr class="separator:a5911bac9073f1e7218b6f3df3f34d49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63809633b33102c6de0d8271e9b6be9d" id="r_a63809633b33102c6de0d8271e9b6be9d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; IDamage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63809633b33102c6de0d8271e9b6be9d">GetPlayerDamageAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:a63809633b33102c6de0d8271e9b6be9d" id="r_a63809633b33102c6de0d8271e9b6be9d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_damage.html">IDamage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63809633b33102c6de0d8271e9b6be9d">GetPlayerDamageAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:a63809633b33102c6de0d8271e9b6be9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Damage affects for player targets from the given array of effects.  <br /></td></tr>
 <tr class="separator:a63809633b33102c6de0d8271e9b6be9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bcf8181825eeb0280788d9dcbb0b442" id="r_a7bcf8181825eeb0280788d9dcbb0b442"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; StatsI8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bcf8181825eeb0280788d9dcbb0b442">GetOpponentStatsAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:a7bcf8181825eeb0280788d9dcbb0b442" id="r_a7bcf8181825eeb0280788d9dcbb0b442"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bcf8181825eeb0280788d9dcbb0b442">GetOpponentStatsAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:a7bcf8181825eeb0280788d9dcbb0b442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Stats affects (StatsI8) for opponent targets from the given array of effects.  <br /></td></tr>
 <tr class="separator:a7bcf8181825eeb0280788d9dcbb0b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad116a992d1fd88a048854d9f5f73b624" id="r_ad116a992d1fd88a048854d9f5f73b624"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; StatsI8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad116a992d1fd88a048854d9f5f73b624">GetPlayerStatsAffects</a> (Effect[] effects)</td></tr>
+<tr class="memitem:ad116a992d1fd88a048854d9f5f73b624" id="r_ad116a992d1fd88a048854d9f5f73b624"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad116a992d1fd88a048854d9f5f73b624">GetPlayerStatsAffects</a> (<a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[] effects)</td></tr>
 <tr class="memdesc:ad116a992d1fd88a048854d9f5f73b624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all Stats affects (StatsI8) for player targets from the given array of effects.  <br /></td></tr>
 <tr class="separator:ad116a992d1fd88a048854d9f5f73b624"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08bf9094139545440f62471ba5532f74" id="r_a08bf9094139545440f62471ba5532f74"><td class="memItemLeft" align="right" valign="top">StatsI8?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08bf9094139545440f62471ba5532f74">AggregateStats</a> (IEnumerable&lt; StatsI8 &gt; statsList)</td></tr>
-<tr class="memdesc:a08bf9094139545440f62471ba5532f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Util to create a struct from the Affect for neatness sake.  <br /></td></tr>
+<tr class="memitem:a08bf9094139545440f62471ba5532f74" id="r_a08bf9094139545440f62471ba5532f74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08bf9094139545440f62471ba5532f74">AggregateStats</a> (IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt; statsList)</td></tr>
+<tr class="memdesc:a08bf9094139545440f62471ba5532f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Util to create a struct from the Affect for neatness’ sake.  <br /></td></tr>
 <tr class="separator:a08bf9094139545440f62471ba5532f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5507ad59112d371f9cb8ebbc79a580" id="r_a1c5507ad59112d371f9cb8ebbc79a580"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_round_animation.html">RoundAnimation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5507ad59112d371f9cb8ebbc79a580">GetAttackAnimation</a> (<a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> attacker, <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> reciever, bool IsAttackerBack)</td></tr>
+<tr class="memdesc:a1c5507ad59112d371f9cb8ebbc79a580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the animation data bound to an attack, this is usually used when in combination with the round event.  <br /></td></tr>
+<tr class="separator:a1c5507ad59112d371f9cb8ebbc79a580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6adc5d9184589258b92f3195daf43c" id="r_aaa6adc5d9184589258b92f3195daf43c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_item.html">IBlobertItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa6adc5d9184589258b92f3195daf43c">GetItemOfAttack</a> ()</td></tr>
+<tr class="memdesc:aaa6adc5d9184589258b92f3195daf43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the item Data from which this attack is from.  <br /></td></tr>
+<tr class="separator:aaa6adc5d9184589258b92f3195daf43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a08bf9094139545440f62471ba5532f74" name="a08bf9094139545440f62471ba5532f74"></a>
@@ -182,15 +188,15 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">StatsI8? LogicLayer.Models.IAttack.AggregateStats </td>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a>? LogicLayer.Models.IAttack.AggregateStats </td>
           <td>(</td>
-          <td class="paramtype">IEnumerable&lt; StatsI8 &gt;</td>          <td class="paramname"><span class="paramname"><em>statsList</em></span></td><td>)</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>statsList</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Util to create a struct from the Affect for neatness sake. </p>
+<p>Util to create a struct from the Affect for neatness’ sake. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">statsList</td><td></td></tr>
@@ -223,40 +229,42 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 
 </div>
 </div>
-<a id="a444e896cead5a8b57f78f0cb4342df39" name="a444e896cead5a8b57f78f0cb4342df39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a444e896cead5a8b57f78f0cb4342df39">&#9670;&#160;</a></span>GetAnim()</h2>
+<a id="a1c5507ad59112d371f9cb8ebbc79a580" name="a1c5507ad59112d371f9cb8ebbc79a580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5507ad59112d371f9cb8ebbc79a580">&#9670;&#160;</a></span>GetAttackAnimation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt; Sprite &gt; LogicLayer.Models.IAttack.GetAnim </td>
+          <td class="memname"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_round_animation.html">RoundAnimation</a> LogicLayer.Models.IAttack.GetAttackAnimation </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a></td>          <td class="paramname"><span class="paramname"><em>blobertData</em></span>, </td>
+          <td class="paramtype"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a></td>          <td class="paramname"><span class="paramname"><em>attacker</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>receiver</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+          <td class="paramtype"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a></td>          <td class="paramname"><span class="paramname"><em>reciever</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>namePrefix</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>IsAttackerBack</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieves the animation sprites for the attack based on the blobert data and other parameters. </p>
+<p>Get the animation data bound to an attack, this is usually used when in combination with the round event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blobertData</td><td>The <a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_token.html">IBlobertToken</a> data used for determining the animation.</td></tr>
-    <tr><td class="paramname">receiver</td><td>A boolean indicating whether the animation is for the receiver.</td></tr>
-    <tr><td class="paramname">namePrefix</td><td>A string prefix to add to the animation name.</td></tr>
+    <tr><td class="paramname">attacker</td><td></td></tr>
+    <tr><td class="paramname">reciever</td><td></td></tr>
+    <tr><td class="paramname">IsAttackerBack</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A list of Sprite objects representing the animation.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___attack.html#a1a3eb938a4f0156f26eaceb8dfdce993">LogicLayer.Models.blob_arena_Attack</a>.</p>
 
 </div>
 </div>
@@ -311,9 +319,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; IDamage &gt; LogicLayer.Models.IAttack.GetDamageAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_damage.html">IDamage</a> &gt; LogicLayer.Models.IAttack.GetDamageAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -341,7 +349,7 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
         <tr>
           <td class="memname">IEnumerable&lt; short &gt; LogicLayer.Models.IAttack.GetHealthAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -379,6 +387,33 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the attack's unique ID.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___attack.html#a3bbaedfd29ee5c6c8e5d94f651145b88">LogicLayer.Models.blob_arena_Attack</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_logic_layer_1_1_models_1_1_i_attack_a7aa7614e2a634596178d10f852d254d5_icgraph.png" border="0" usemap="#ainterface_logic_layer_1_1_models_1_1_i_attack_a7aa7614e2a634596178d10f852d254d5_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aaa6adc5d9184589258b92f3195daf43c" name="aaa6adc5d9184589258b92f3195daf43c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6adc5d9184589258b92f3195daf43c">&#9670;&#160;</a></span>GetItemOfAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_logic_layer_1_1_models_1_1_i_blobert_item.html">IBlobertItem</a> LogicLayer.Models.IAttack.GetItemOfAttack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the item Data from which this attack is from. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___attack.html#ad819ea35f5d6a04fb159ba0ad68f3bac">LogicLayer.Models.blob_arena_Attack</a>.</p>
 
 </div>
 </div>
@@ -399,6 +434,11 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 
 <p>Retrieves the parent item ID associated with the attack. </p>
 <dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the parent item's unique ID.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_logic_layer_1_1_models_1_1_i_attack_a39157ff4ca5ca5ac8d39bf06e4c88b84_cgraph.png" border="0" usemap="#ainterface_logic_layer_1_1_models_1_1_i_attack_a39157ff4ca5ca5ac8d39bf06e4c88b84_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -431,9 +471,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; IDamage &gt; LogicLayer.Models.IAttack.GetOpponentDamageAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_damage.html">IDamage</a> &gt; LogicLayer.Models.IAttack.GetOpponentDamageAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -461,7 +501,7 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
         <tr>
           <td class="memname">IEnumerable&lt; Target.Opponent &gt; LogicLayer.Models.IAttack.GetOpponents </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -487,9 +527,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; StatsI8 &gt; LogicLayer.Models.IAttack.GetOpponentStatsAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt; LogicLayer.Models.IAttack.GetOpponentStatsAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -515,9 +555,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; IDamage &gt; LogicLayer.Models.IAttack.GetPlayerDamageAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_damage.html">IDamage</a> &gt; LogicLayer.Models.IAttack.GetPlayerDamageAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -545,7 +585,7 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
         <tr>
           <td class="memname">IEnumerable&lt; Target.Player &gt; LogicLayer.Models.IAttack.GetPlayers </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -571,9 +611,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; StatsI8 &gt; LogicLayer.Models.IAttack.GetPlayerStatsAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt; LogicLayer.Models.IAttack.GetPlayerStatsAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -621,9 +661,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; IStat &gt; LogicLayer.Models.IAttack.GetStatAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_i_stat.html">IStat</a> &gt; LogicLayer.Models.IAttack.GetStatAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -649,9 +689,9 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt; StatsI8 &gt; LogicLayer.Models.IAttack.GetStatsAffects </td>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_stats_i8.html">StatsI8</a> &gt; LogicLayer.Models.IAttack.GetStatsAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -670,6 +710,28 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 
 </div>
 </div>
+<a id="a1363df8d8b1e3932e7449c9c0ff32f11" name="a1363df8d8b1e3932e7449c9c0ff32f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1363df8d8b1e3932e7449c9c0ff32f11">&#9670;&#160;</a></span>GetStatsAgainstMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;(int value, int max)&gt; LogicLayer.Models.IAttack.GetStatsAgainstMax </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the stats in relations to the max possible. </p>
+<dl class="section return"><dt>Returns</dt><dd>Touple</dd></dl>
+
+<p>Implemented in <a class="el" href="class_logic_layer_1_1_models_1_1blob__arena___attack.html#a84f588db6a7f5620cf4cbefc872d9c3f">LogicLayer.Models.blob_arena_Attack</a>.</p>
+
+</div>
+</div>
 <a id="aeae908e27a03485c103705192f8d5903" name="aeae908e27a03485c103705192f8d5903"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeae908e27a03485c103705192f8d5903">&#9670;&#160;</a></span>GetStunAffects()</h2>
 
@@ -679,7 +741,7 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
         <tr>
           <td class="memname">IEnumerable&lt; byte &gt; LogicLayer.Models.IAttack.GetStunAffects </td>
           <td>(</td>
-          <td class="paramtype">Effect[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_logic_layer_1_1_models_1_1_types_1_1_effect.html">Effect</a>[]</td>          <td class="paramname"><span class="paramname"><em>effects</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -699,7 +761,7 @@ Effect[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffect</b> (bo
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/ModelsInterfaces/<b>IAttack.cs</b></li>
+<li>LogicLayer/Dojo/Models/ModelsInterfaces/<b>IAttack.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,11 @@
+digraph "LogicLayer.Models.blobert_BlobertItem.GetKey"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="LogicLayer.Models.blobert\l_BlobertItem.GetKey",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves the unique key of the Blobert item."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="LogicLayer.Models.blobert\l_BlobertItem.GetTraitName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1blobert___blobert_item.html#a8102122bb9fe6419db5bf8701d0591e3",tooltip="Get the name of the Trait bound to the item."];
+}

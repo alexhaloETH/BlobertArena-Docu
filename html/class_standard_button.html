@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -100,6 +100,7 @@ $(function(){initNavTree('class_standard_button.html',''); initResizable(true); 
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_standard_button-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">StandardButton Class Reference</div></div>
 </div><!--header-->
@@ -123,78 +124,43 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ae17c9f4b53638066da33e8e23781ab22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the behavior of the button upon interaction.  <a href="#ae17c9f4b53638066da33e8e23781ab22">More...</a><br /></td></tr>
 <tr class="separator:ae17c9f4b53638066da33e8e23781ab22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512b423d79fa7363e1702be2c306621e" id="r_a512b423d79fa7363e1702be2c306621e"><td class="memItemLeft" align="right" valign="top"><a id="a512b423d79fa7363e1702be2c306621e" name="a512b423d79fa7363e1702be2c306621e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ButtonColor</b> { <b>StandardColourScheme</b> = 0
+, <b>AlternativeColourScheme</b> = 1
+ }</td></tr>
+<tr class="separator:a512b423d79fa7363e1702be2c306621e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aebe420a42117eed470fa54cb8fa5f2f8" id="r_aebe420a42117eed470fa54cb8fa5f2f8"><td class="memItemLeft" align="right" valign="top"><a id="aebe420a42117eed470fa54cb8fa5f2f8" name="aebe420a42117eed470fa54cb8fa5f2f8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPointerEnter</b> ()</td></tr>
-<tr class="memdesc:aebe420a42117eed470fa54cb8fa5f2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer enter events, updates sprite to hover state, and plays hover sound. <br /></td></tr>
-<tr class="separator:aebe420a42117eed470fa54cb8fa5f2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef6e622e4e6e8c660b7c88ec1834f35" id="r_a5ef6e622e4e6e8c660b7c88ec1834f35"><td class="memItemLeft" align="right" valign="top"><a id="a5ef6e622e4e6e8c660b7c88ec1834f35" name="a5ef6e622e4e6e8c660b7c88ec1834f35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPointerExit</b> ()</td></tr>
-<tr class="memdesc:a5ef6e622e4e6e8c660b7c88ec1834f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer exit events, resets sprite to the default state if applicable. <br /></td></tr>
-<tr class="separator:a5ef6e622e4e6e8c660b7c88ec1834f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf46218ccbfbbc80e6e73e6a83a476bb" id="r_acf46218ccbfbbc80e6e73e6a83a476bb"><td class="memItemLeft" align="right" valign="top"><a id="acf46218ccbfbbc80e6e73e6a83a476bb" name="acf46218ccbfbbc80e6e73e6a83a476bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPointerDown</b> ()</td></tr>
-<tr class="memdesc:acf46218ccbfbbc80e6e73e6a83a476bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer down (click) events, triggers click actions, and updates state based on behavior. <br /></td></tr>
-<tr class="separator:acf46218ccbfbbc80e6e73e6a83a476bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6a13bd814af8b3cf3f6b6e30a00f01a" id="r_aa6a13bd814af8b3cf3f6b6e30a00f01a"><td class="memItemLeft" align="right" valign="top"><a id="aa6a13bd814af8b3cf3f6b6e30a00f01a" name="aa6a13bd814af8b3cf3f6b6e30a00f01a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPointerUp</b> ()</td></tr>
-<tr class="memdesc:aa6a13bd814af8b3cf3f6b6e30a00f01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer up events, updates sprite state based on hover or default state. <br /></td></tr>
-<tr class="separator:aa6a13bd814af8b3cf3f6b6e30a00f01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a577e3e82a27966b0ecbf87b69c6ec7e2" id="r_a577e3e82a27966b0ecbf87b69c6ec7e2"><td class="memItemLeft" align="right" valign="top"><a id="a577e3e82a27966b0ecbf87b69c6ec7e2" name="a577e3e82a27966b0ecbf87b69c6ec7e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LockInteractable</b> ()</td></tr>
-<tr class="memdesc:a577e3e82a27966b0ecbf87b69c6ec7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the button, making it non-interactive. <br /></td></tr>
-<tr class="separator:a577e3e82a27966b0ecbf87b69c6ec7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ae6a0887c41770e7dd90359dcc2a40d" id="r_a6ae6a0887c41770e7dd90359dcc2a40d"><td class="memItemLeft" align="right" valign="top"><a id="a6ae6a0887c41770e7dd90359dcc2a40d" name="a6ae6a0887c41770e7dd90359dcc2a40d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UnlockInteractable</b> ()</td></tr>
-<tr class="memdesc:a6ae6a0887c41770e7dd90359dcc2a40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks the button, restoring interactivity and updating the sprite state. <br /></td></tr>
-<tr class="separator:a6ae6a0887c41770e7dd90359dcc2a40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0ad56b3cc228c0bc2bed090f70514ba" id="r_aa0ad56b3cc228c0bc2bed090f70514ba"><td class="memItemLeft" align="right" valign="top"><a id="aa0ad56b3cc228c0bc2bed090f70514ba" name="aa0ad56b3cc228c0bc2bed090f70514ba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LockButton</b> (bool resetTexture=false)</td></tr>
-<tr class="memdesc:aa0ad56b3cc228c0bc2bed090f70514ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the button and optionally resets the texture to the default sprite. <br /></td></tr>
-<tr class="separator:aa0ad56b3cc228c0bc2bed090f70514ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9789e05db5b1d6dd7c482abb4d89a84c" id="r_a9789e05db5b1d6dd7c482abb4d89a84c"><td class="memItemLeft" align="right" valign="top"><a id="a9789e05db5b1d6dd7c482abb4d89a84c" name="a9789e05db5b1d6dd7c482abb4d89a84c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UnlockButton</b> ()</td></tr>
-<tr class="memdesc:a9789e05db5b1d6dd7c482abb4d89a84c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks the button and restores full transparency. <br /></td></tr>
-<tr class="separator:a9789e05db5b1d6dd7c482abb4d89a84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7dc6af7c09725627e78e940393b42f1" id="r_ae7dc6af7c09725627e78e940393b42f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7dc6af7c09725627e78e940393b42f1">RefreshImage</a> (Sprite sprite=null)</td></tr>
-<tr class="memdesc:ae7dc6af7c09725627e78e940393b42f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refreshes the button's sprite. If a specific sprite is provided, it sets that sprite. Otherwise, it resets the button's sprite to the default state.  <br /></td></tr>
-<tr class="separator:ae7dc6af7c09725627e78e940393b42f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1acb5bca3b8f372cb77481d0033ee3" id="r_a8b1acb5bca3b8f372cb77481d0033ee3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1acb5bca3b8f372cb77481d0033ee3">SetNewSprites</a> (StandardButtonType.ButtonColor color)</td></tr>
-<tr class="memdesc:a8b1acb5bca3b8f372cb77481d0033ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets new sprites based on the button color configuration.  <br /></td></tr>
-<tr class="separator:a8b1acb5bca3b8f372cb77481d0033ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6531a75629707048d939d79e3402c0d9" id="r_a6531a75629707048d939d79e3402c0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6531a75629707048d939d79e3402c0d9">SetButtonColorScheme</a> (ButtonColor colorScheme)</td></tr>
+<tr class="memdesc:a6531a75629707048d939d79e3402c0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets and updates a button's colour scheme. Doesn't get executed if the current scheme matches the provided parameter.  <br /></td></tr>
+<tr class="separator:a6531a75629707048d939d79e3402c0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084fed369b7b63e6f3a1e6c0d6765783" id="r_a084fed369b7b63e6f3a1e6c0d6765783"><td class="memItemLeft" align="right" valign="top"><a id="a084fed369b7b63e6f3a1e6c0d6765783" name="a084fed369b7b63e6f3a1e6c0d6765783"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnButtonClicked</b> ()</td></tr>
+<tr class="memdesc:a084fed369b7b63e6f3a1e6c0d6765783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer down (click) events, triggers click actions, and updates state based on behavior. <br /></td></tr>
+<tr class="separator:a084fed369b7b63e6f3a1e6c0d6765783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3e2368b9a0cd6a529b3b66838a525e" id="r_a7f3e2368b9a0cd6a529b3b66838a525e"><td class="memItemLeft" align="right" valign="top"><a id="a7f3e2368b9a0cd6a529b3b66838a525e" name="a7f3e2368b9a0cd6a529b3b66838a525e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LockButton</b> (bool Lock)</td></tr>
+<tr class="memdesc:a7f3e2368b9a0cd6a529b3b66838a525e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the button, making it non-interactive. <br /></td></tr>
+<tr class="separator:a7f3e2368b9a0cd6a529b3b66838a525e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d9ec24a8887a5f91c19dc6a1091022" id="r_aa7d9ec24a8887a5f91c19dc6a1091022"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d9ec24a8887a5f91c19dc6a1091022">HideButton</a> (bool hide=true)</td></tr>
+<tr class="memdesc:aa7d9ec24a8887a5f91c19dc6a1091022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides/Reveals the button.  <br /></td></tr>
+<tr class="separator:aa7d9ec24a8887a5f91c19dc6a1091022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceb2e030bd9be139226000774f245c3c" id="r_aceb2e030bd9be139226000774f245c3c"><td class="memItemLeft" align="right" valign="top"><a id="aceb2e030bd9be139226000774f245c3c" name="aceb2e030bd9be139226000774f245c3c"></a>
 TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>GetText</b> ()</td></tr>
 <tr class="memdesc:aceb2e030bd9be139226000774f245c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the TextMeshPro text associated with the button. <br /></td></tr>
 <tr class="separator:aceb2e030bd9be139226000774f245c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7d9ec24a8887a5f91c19dc6a1091022" id="r_aa7d9ec24a8887a5f91c19dc6a1091022"><td class="memItemLeft" align="right" valign="top"><a id="aa7d9ec24a8887a5f91c19dc6a1091022" name="aa7d9ec24a8887a5f91c19dc6a1091022"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HideButton</b> (bool hide=true)</td></tr>
-<tr class="separator:aa7d9ec24a8887a5f91c19dc6a1091022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7d350f10bb50f049c63ce2b88fb51bbd" id="r_a7d350f10bb50f049c63ce2b88fb51bbd"><td class="memItemLeft" align="right" valign="top"><a id="a7d350f10bb50f049c63ce2b88fb51bbd" name="a7d350f10bb50f049c63ce2b88fb51bbd"></a>
-Sprite&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultSprite</b></td></tr>
-<tr class="separator:a7d350f10bb50f049c63ce2b88fb51bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac722511a2b0fb79405a2f2bb7e6a9bcb" id="r_ac722511a2b0fb79405a2f2bb7e6a9bcb"><td class="memItemLeft" align="right" valign="top"><a id="ac722511a2b0fb79405a2f2bb7e6a9bcb" name="ac722511a2b0fb79405a2f2bb7e6a9bcb"></a>
-Sprite&#160;</td><td class="memItemRight" valign="bottom"><b>OnHoverSprite</b></td></tr>
-<tr class="separator:ac722511a2b0fb79405a2f2bb7e6a9bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087903d0d03cfeed19fa800bdc28cf6b" id="r_a087903d0d03cfeed19fa800bdc28cf6b"><td class="memItemLeft" align="right" valign="top"><a id="a087903d0d03cfeed19fa800bdc28cf6b" name="a087903d0d03cfeed19fa800bdc28cf6b"></a>
-Sprite&#160;</td><td class="memItemRight" valign="bottom"><b>OnClickSprite</b></td></tr>
-<tr class="separator:a087903d0d03cfeed19fa800bdc28cf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40233bd87df06497a25fcf1cd7d65e7c" id="r_a40233bd87df06497a25fcf1cd7d65e7c"><td class="memItemLeft" align="right" valign="top"><a id="a40233bd87df06497a25fcf1cd7d65e7c" name="a40233bd87df06497a25fcf1cd7d65e7c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>DelaySeconds</b> = 0.5f</td></tr>
-<tr class="separator:a40233bd87df06497a25fcf1cd7d65e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a8a3b9e5fccdab17beb250577653e0" id="r_a61a8a3b9e5fccdab17beb250577653e0"><td class="memItemLeft" align="right" valign="top"><a id="a61a8a3b9e5fccdab17beb250577653e0" name="a61a8a3b9e5fccdab17beb250577653e0"></a>
-<a class="el" href="#ae17c9f4b53638066da33e8e23781ab22">ButtonBehavior</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentButtonBehavior</b></td></tr>
-<tr class="separator:a61a8a3b9e5fccdab17beb250577653e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01aa548e701d40cd2c9324541e115e0b" id="r_a01aa548e701d40cd2c9324541e115e0b"><td class="memItemLeft" align="right" valign="top"><a id="a01aa548e701d40cd2c9324541e115e0b" name="a01aa548e701d40cd2c9324541e115e0b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IgnoreThemeChanges</b> = false</td></tr>
+<tr class="separator:a01aa548e701d40cd2c9324541e115e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
 <tr class="memitem:a46a3af5c95ce0bc7de64c31b148358b7" id="r_a46a3af5c95ce0bc7de64c31b148358b7"><td class="memItemLeft" align="right" valign="top"><a id="a46a3af5c95ce0bc7de64c31b148358b7" name="a46a3af5c95ce0bc7de64c31b148358b7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLocked</b> = false</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLocked</b> = false<code> [get]</code></td></tr>
 <tr class="separator:a46a3af5c95ce0bc7de64c31b148358b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b278cce651684ca74aecc0da59aa075" id="r_a9b278cce651684ca74aecc0da59aa075"><td class="memItemLeft" align="right" valign="top"><a id="a9b278cce651684ca74aecc0da59aa075" name="a9b278cce651684ca74aecc0da59aa075"></a>
-UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnClickCalls</b></td></tr>
-<tr class="separator:a9b278cce651684ca74aecc0da59aa075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ae17c9f4b53638066da33e8e23781ab22" name="ae17c9f4b53638066da33e8e23781ab22"></a>
@@ -219,50 +185,50 @@ UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnClickCalls</b
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7dc6af7c09725627e78e940393b42f1" name="ae7dc6af7c09725627e78e940393b42f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7dc6af7c09725627e78e940393b42f1">&#9670;&#160;</a></span>RefreshImage()</h2>
+<a id="aa7d9ec24a8887a5f91c19dc6a1091022" name="aa7d9ec24a8887a5f91c19dc6a1091022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d9ec24a8887a5f91c19dc6a1091022">&#9670;&#160;</a></span>HideButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StandardButton.RefreshImage </td>
+          <td class="memname">void StandardButton.HideButton </td>
           <td>(</td>
-          <td class="paramtype">Sprite</td>          <td class="paramname"><span class="paramname"><em>sprite</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>hide</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Refreshes the button's sprite. If a specific sprite is provided, it sets that sprite. Otherwise, it resets the button's sprite to the default state. </p>
+<p>Hides/Reveals the button. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sprite</td><td>The sprite to set. If null, the DefaultSprite is used.</td></tr>
+    <tr><td class="paramname">hide</td><td>Default true, if set to false the function reveals the button</td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a8b1acb5bca3b8f372cb77481d0033ee3" name="a8b1acb5bca3b8f372cb77481d0033ee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b1acb5bca3b8f372cb77481d0033ee3">&#9670;&#160;</a></span>SetNewSprites()</h2>
+<a id="a6531a75629707048d939d79e3402c0d9" name="a6531a75629707048d939d79e3402c0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6531a75629707048d939d79e3402c0d9">&#9670;&#160;</a></span>SetButtonColorScheme()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StandardButton.SetNewSprites </td>
+          <td class="memname">void StandardButton.SetButtonColorScheme </td>
           <td>(</td>
-          <td class="paramtype">StandardButtonType.ButtonColor</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td class="paramtype">ButtonColor</td>          <td class="paramname"><span class="paramname"><em>colorScheme</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets new sprites based on the button color configuration. </p>
+<p>Sets and updates a button's colour scheme. Doesn't get executed if the current scheme matches the provided parameter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">color</td><td>The button color configuration.</td></tr>
+    <tr><td class="paramname">colorScheme</td><td>The expected colour scheme</td></tr>
   </table>
   </dd>
 </dl>
@@ -270,7 +236,7 @@ UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>OnClickCalls</b
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/UI/Components/Buttons/<b>StandardButton.cs</b></li>
+<li>UI/Components/Buttons/<b>StandardButton.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

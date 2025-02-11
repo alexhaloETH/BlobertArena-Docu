@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.2</span>
+   <div id="projectname">Blob Arena<span id="projectnumber">&#160;1.1.4</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ $(function(){initNavTree('class_logic_layer_1_1_models_1_1blob__arena___initiato
 </div><!--header-->
 <div class="contents">
 
-<p>Dojo model, This is the user dojo_initiator that actually starts the game so this is necessary.  
+<p>Dojo model, This is the user dojo_initiator this is needed as it dictates who can actually start the combat.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LogicLayer.Models.blob_arena_Initiator:</div>
@@ -135,17 +135,17 @@ Public Member Functions</h2></td></tr>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (Model model)</td></tr>
 <tr class="separator:a3e8d7c51fc982a88755061318fcea38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30024230612b704055b3f062043920b" id="r_ab30024230612b704055b3f062043920b"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab30024230612b704055b3f062043920b">GetGameId</a> ()</td></tr>
-<tr class="memdesc:ab30024230612b704055b3f062043920b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the game identifier associated with the initiator.  <br /></td></tr>
+<tr class="memdesc:ab30024230612b704055b3f062043920b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the game id associated with the initiator.  <br /></td></tr>
 <tr class="separator:ab30024230612b704055b3f062043920b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad79f42451bc482218dbdd89d3e5111a2" id="r_ad79f42451bc482218dbdd89d3e5111a2"><td class="memItemLeft" align="right" valign="top">FieldElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad79f42451bc482218dbdd89d3e5111a2">GetInitiator</a> ()</td></tr>
-<tr class="memdesc:ad79f42451bc482218dbdd89d3e5111a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the identifier of the initiator.  <br /></td></tr>
+<tr class="memdesc:ad79f42451bc482218dbdd89d3e5111a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the id of the initiator.  <br /></td></tr>
 <tr class="separator:ad79f42451bc482218dbdd89d3e5111a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9fc81b23bf5172538f5fba4fb17c241" id="r_ab9fc81b23bf5172538f5fba4fb17c241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9fc81b23bf5172538f5fba4fb17c241">IsGameIdMatch</a> (FieldElement gameId)</td></tr>
-<tr class="memdesc:ab9fc81b23bf5172538f5fba4fb17c241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided game identifier matches the stored game identifier.  <br /></td></tr>
+<tr class="memdesc:ab9fc81b23bf5172538f5fba4fb17c241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided game id matches the stored game id.  <br /></td></tr>
 <tr class="separator:ab9fc81b23bf5172538f5fba4fb17c241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98538328f5a5e6b004c1762582b18f0b" id="r_a98538328f5a5e6b004c1762582b18f0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98538328f5a5e6b004c1762582b18f0b">IsInitiatorMatch</a> (FieldElement initiatorId)</td></tr>
-<tr class="memdesc:a98538328f5a5e6b004c1762582b18f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided initiator identifier matches the stored initiator's identifier.  <br /></td></tr>
-<tr class="separator:a98538328f5a5e6b004c1762582b18f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c0243f17c250a83ea5905b4f0b4554" id="r_a00c0243f17c250a83ea5905b4f0b4554"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00c0243f17c250a83ea5905b4f0b4554">IsPlayerInitiator</a> (FieldElement contractAddress)</td></tr>
+<tr class="memdesc:a00c0243f17c250a83ea5905b4f0b4554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided initiator id matches the stored initiator's id.  <br /></td></tr>
+<tr class="separator:a00c0243f17c250a83ea5905b4f0b4554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ff03bb1348f2ca16c6421a926eec0b1" id="r_a7ff03bb1348f2ca16c6421a926eec0b1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ff03bb1348f2ca16c6421a926eec0b1">DebugData</a> ()</td></tr>
 <tr class="memdesc:a7ff03bb1348f2ca16c6421a926eec0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a string of debug data based on the class. Nice way to compile everything together instead of always rewriting the same debug.Logs.  <br /></td></tr>
 <tr class="separator:a7ff03bb1348f2ca16c6421a926eec0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,9 +154,9 @@ override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:acbb6ad8314a6b4296e3d1e16b84363fb" id="r_acbb6ad8314a6b4296e3d1e16b84363fb"><td class="memItemLeft" align="right" valign="top"><a id="acbb6ad8314a6b4296e3d1e16b84363fb" name="acbb6ad8314a6b4296e3d1e16b84363fb"></a>
-FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_game_id</b></td></tr>
-<tr class="separator:acbb6ad8314a6b4296e3d1e16b84363fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845680f5ccd666199ffe6d4f02e6292c" id="r_a845680f5ccd666199ffe6d4f02e6292c"><td class="memItemLeft" align="right" valign="top"><a id="a845680f5ccd666199ffe6d4f02e6292c" name="a845680f5ccd666199ffe6d4f02e6292c"></a>
+FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_gameId</b></td></tr>
+<tr class="separator:a845680f5ccd666199ffe6d4f02e6292c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25b08c2a32e76093387e18f9520eaab" id="r_aa25b08c2a32e76093387e18f9520eaab"><td class="memItemLeft" align="right" valign="top"><a id="aa25b08c2a32e76093387e18f9520eaab" name="aa25b08c2a32e76093387e18f9520eaab"></a>
 FieldElement&#160;</td><td class="memItemRight" valign="bottom"><b>dojo_initiator</b></td></tr>
 <tr class="separator:aa25b08c2a32e76093387e18f9520eaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,7 +169,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a066de212ba62c74478533227191924f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dojo model, This is the user dojo_initiator that actually starts the game so this is necessary. </p>
+<div class="textblock"><p>Dojo model, This is the user dojo_initiator this is needed as it dictates who can actually start the combat. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7ff03bb1348f2ca16c6421a926eec0b1" name="a7ff03bb1348f2ca16c6421a926eec0b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ff03bb1348f2ca16c6421a926eec0b1">&#9670;&#160;</a></span>DebugData()</h2>
@@ -208,8 +208,8 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieves the game identifier associated with the initiator. </p>
-<dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the game's identifier.</dd></dl>
+<p>Retrieves the game id associated with the initiator. </p>
+<dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the game's id.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html#ad4e0eac5319200f78d64a8c8e3c6f021">LogicLayer.Models.IInitiator</a>.</p>
 
@@ -230,8 +230,8 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieves the identifier of the initiator. </p>
-<dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the initiator's identifier.</dd></dl>
+<p>Retrieves the id of the initiator. </p>
+<dl class="section return"><dt>Returns</dt><dd>The FieldElement representing the initiator's id.</dd></dl>
 
 <p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html#a0264015b0cb842daa5a7844a8f13af87">LogicLayer.Models.IInitiator</a>.</p>
 
@@ -252,7 +252,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if the provided game identifier matches the stored game identifier. </p>
+<p>Checks if the provided game id matches the stored game id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gameId</td><td>The FieldElement representing a game ID to compare.</td></tr>
@@ -265,31 +265,31 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a98538328f5a5e6b004c1762582b18f0b" name="a98538328f5a5e6b004c1762582b18f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98538328f5a5e6b004c1762582b18f0b">&#9670;&#160;</a></span>IsInitiatorMatch()</h2>
+<a id="a00c0243f17c250a83ea5905b4f0b4554" name="a00c0243f17c250a83ea5905b4f0b4554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c0243f17c250a83ea5905b4f0b4554">&#9670;&#160;</a></span>IsPlayerInitiator()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool LogicLayer.Models.blob_arena_Initiator.IsInitiatorMatch </td>
+          <td class="memname">bool LogicLayer.Models.blob_arena_Initiator.IsPlayerInitiator </td>
           <td>(</td>
-          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>initiatorId</em></span></td><td>)</td>
+          <td class="paramtype">FieldElement</td>          <td class="paramname"><span class="paramname"><em>contractAddress</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if the provided initiator identifier matches the stored initiator's identifier. </p>
+<p>Checks if the provided initiator id matches the stored initiator's id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">initiatorId</td><td>The FieldElement representing an initiator ID to compare.</td></tr>
+    <tr><td class="paramname">contractAddress</td><td>The FieldElement representing an initiator ID to compare.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the initiator ID matches, otherwise false.</dd></dl>
 
-<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html#a213c4b3e570a46fa2f33db629c6ba03c">LogicLayer.Models.IInitiator</a>.</p>
+<p>Implements <a class="el" href="interface_logic_layer_1_1_models_1_1_i_initiator.html#a49b0b49b65c2cffdd119adbf8f59bdb4">LogicLayer.Models.IInitiator</a>.</p>
 
 </div>
 </div>
@@ -315,7 +315,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
-<div class="line">            { ValidQueryKeys.GameId, <span class="stringliteral">&quot;game_id&quot;</span> },</div>
+<div class="line">            { ValidQueryKeys.GameId, <span class="stringliteral">&quot;game_id&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -342,13 +342,13 @@ Static Public Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
 <div class="line">        {</div>
 <div class="line">            { ValidQueryMembers.GameId, <span class="stringliteral">&quot;game_id&quot;</span> },</div>
-<div class="line">            { ValidQueryMembers.Initiator, <span class="stringliteral">&quot;initiator&quot;</span> },</div>
+<div class="line">            { ValidQueryMembers.Initiator, <span class="stringliteral">&quot;initiator&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Bloberts/Scripts/LogicLayer/Dojo/Models/BlobArena/<b>Initiator.gen.cs</b></li>
+<li>LogicLayer/Dojo/Models/BlobArena/<b>Initiator.gen.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

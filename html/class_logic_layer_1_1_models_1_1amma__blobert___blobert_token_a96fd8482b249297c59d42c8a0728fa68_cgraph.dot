@@ -8,4 +8,8 @@ digraph "LogicLayer.Models.amma_blobert_BlobertToken.GetBlobertShortId"
   Node1 [id="Node000001",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetBlobert\lShortId",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Retrieves a short identifier for the Blobert."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetAttributes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a42be61c995b28d3c2f6a756d92231726",tooltip="Retrieves the attributes of the Blobert token."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetFull\lNameFromFighterId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#ab54ad438138eba5f5c3175880514be9b",tooltip="Get the full name of each fighter."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="LogicLayer.Models.amma\l_blobert_BlobertToken.GetShort\lNameFromFighterId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_logic_layer_1_1_models_1_1amma__blobert___blobert_token.html#a37a39362e9e70aee2d3e3f430ab18f79",tooltip="Get the short name of each fighter."];
 }
